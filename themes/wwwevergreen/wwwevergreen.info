@@ -1,0 +1,57 @@
+name = www.evergreen.edu
+description = A custom experimental template, created for The Evergreen State College.
+core = 7.x
+ 
+stylesheets[all][] = css/style.css
+;Justin's styles downloaded from github
+stylesheets[all][] = css/build/screen.css
+;Scripts & stylesheets added by Naomi for home page and slick slider
+stylesheets[all][] = css/home.css
+stylesheets[all][] = css/slick.css
+scripts[] = js/slick.min.js
+scripts[] = js/slick-home-init.js
+
+
+; regions in order
+
+regions[page_top] = Page Top
+regions[header_dropdowns] = Non-Evergreen.edu Search and Related
+regions[section_title] = Section Title
+regions[section_nav] = Section Navigation
+regions[help] = Help
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[secondary_content] = Secondary Content
+regions[footer] = Non-Evergreen.edu Footer
+regions[background_image] = Background Image
+regions[page_bottom] = Page Bottom
+
+
+; core regions that may not be removed: page_top, content, page_bottom
+; optional default regions enabled: highlighted, help, footer
+
+; optional default regions not enabled: 
+;regions[header] = Header
+;regions[sidebar_first] = Sidebar First
+;regions[sidebar_second] = Sidebar Second
+;regions[user_menu] = User Menu (built-in Drupal thing)
+
+; custom region commented because it doesn't actually do anything
+;regions[primary_content] = Primary Content 
+
+; note: "As a general rule, consider using a region when content needs to be moved between regions or rearranged in the Blocks interface. When content doesn’t need to be controlled via the Blocks interface, and it is risky for it to be there, consider hardcoding it in template files so it can’t be affected by actions taken in the Blocks interface."
+
+
+; custom theme features!
+
+features[] = logo
+features[] = name
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+
+; theme setting defaults
+settings[evergreen_blocks] = 1
+

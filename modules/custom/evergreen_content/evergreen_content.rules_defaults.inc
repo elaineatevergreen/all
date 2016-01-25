@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * evergreen_content.rules_defaults.inc
+ */
+
+/**
+ * Implements hook_default_rules_configuration().
+ */
+function evergreen_content_default_rules_configuration() {
+  $items = array();
+  $items['rules_generate_section_home_page'] = entity_import('rules_config', '{ "rules_generate_section_home_page" : {
+      "LABEL" : "Generate Section Home Page",
+      "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
+      "OWNER" : "rules",
+      "TAGS" : [ "Site Creation" ],
+      "REQUIRES" : [ "rules", "taxonomy" ],
+      "ON" : { "taxonomy_term_insert--site_sections" : { "bundle" : "site_sections" } },
+      "DO" : [
+        { "entity_create" : {
+            "USING" : {
+              "type" : "node",
+              "param_type" : "basic_page",
+              "param_title" : "[term:field-long-name]",
+              "param_author" : [ "site:current-user" ]
+            },
+            "PROVIDE" : { "entity_created" : { "entity_created" : "Created entity" } }
+          }
+        },
+        { "data_set" : { "data" : [ "entity-created:field-site-section" ], "value" : [ "term" ] } }
+      ]
+    }
+  }');
+  $items['rules_log_out_with_cas_after_logging_out'] = entity_import('rules_config', '{ "rules_log_out_with_cas_after_logging_out" : {
+      "LABEL" : "Log out with CAS after logging out",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules" ],
+      "ON" : { "user_logout" : [] },
+      "DO" : [ { "redirect" : { "url" : "caslogout" } } ]
+    }
+  }');
+  return $items;
+}
