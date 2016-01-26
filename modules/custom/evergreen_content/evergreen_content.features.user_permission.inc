@@ -805,6 +805,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear people_directory feeds'.
+  $permissions['clear people_directory feeds'] = array(
+    'name' => 'clear people_directory feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear scholarship_import feeds'.
   $permissions['clear scholarship_import feeds'] = array(
     'name' => 'clear scholarship_import feeds',
@@ -1953,6 +1960,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'import people_directory feeds'.
+  $permissions['import people_directory feeds'] = array(
+    'name' => 'import people_directory feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import scholarship_import feeds'.
   $permissions['import scholarship_import feeds'] = array(
     'name' => 'import scholarship_import feeds',
@@ -2139,6 +2153,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'tamper people_directory'.
+  $permissions['tamper people_directory'] = array(
+    'name' => 'tamper people_directory',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper scholarship_import'.
   $permissions['tamper scholarship_import'] = array(
     'name' => 'tamper scholarship_import',
@@ -2172,6 +2193,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock people_directory feeds'.
+  $permissions['unlock people_directory feeds'] = array(
+    'name' => 'unlock people_directory feeds',
+    'roles' => array(),
     'module' => 'feeds',
   );
 
