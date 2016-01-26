@@ -7137,6 +7137,56 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-webform-body'.
+  $field_instances['node-webform-body'] = array(
+    'bundle' => 'webform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'body',
+    'label' => 'Instructions',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-webform-field_site_section'.
   $field_instances['node-webform-field_site_section'] = array(
     'bundle' => 'webform',
@@ -7146,9 +7196,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -7483,6 +7532,7 @@ function evergreen_content_field_default_field_instances() {
   t('Include dollar sign and number awarded.');
   t('Include the full URL of your Facebook page or group.');
   t('Include the very basic criteria; shown on the overview page for applicants.');
+  t('Instructions');
   t('Interests');
   t('Intro');
   t('Is Faculty');

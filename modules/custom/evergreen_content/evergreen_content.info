@@ -422,6 +422,7 @@ features[field_instance][] = node-student_group-field_group_categories
 features[field_instance][] = node-student_group-field_image
 features[field_instance][] = node-student_group-field_meetings
 features[field_instance][] = node-student_group-field_websites
+features[field_instance][] = node-webform-body
 features[field_instance][] = node-webform-field_site_section
 features[field_instance][] = taxonomy_term-site_sections-field_background_image
 features[field_instance][] = taxonomy_term-site_sections-field_long_name
