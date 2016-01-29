@@ -28,7 +28,7 @@ deans,Academic Deans,old
 dining,Dining,new
 directories,Directories,new
 diversity,Office for Diversity Affairs and Equal Opportunity,old
-employment,EmploymentHuman Resource Services,mixed
+employment,Employment,new
 evaluations,Narrative Evaluations,new
 eveningweekend,Evening and Weekend Studies,new
 facilities,Facilities,old
@@ -42,7 +42,6 @@ gallery,Evergreen Gallery,old
 gearup,GEAR UP Program,old
 geoduck,Geoducks,new
 give,Giving to Evergreen,new
-gothere,Study Abroad,old
 graduation,Graduation,new
 health,Health & Counseling Services,old
 housing,Housing,new
@@ -71,8 +70,7 @@ policeservices,Police Services,new
 president,The Office of the President,inprogress
 provost,The Vice President for Academic Affairs and Provost's Office,old
 purchasing,Purchasing,new
-reccenter,The Costantino Recreation Center (CRC),old
-recreation,Recreation,old
+recreation,Recreation,new
 registration,Registration & Records,new
 scholarships,Undergraduate Scholarships,new
 sponsoredresearch,Academic Grants,old
@@ -89,7 +87,6 @@ sustainability,The Office of Sustainability,old
 sustainableinfrastructure,Center for Sustainable Infrastructure,new
 tacoma,The Tacoma Program,new
 technology,Technology for Students,new
-titleIX,Title IX at Evergreen,old
 tour,Tours and Maps,new
 tribal,Tribal: Reservation-Based Community Determined Program,old
 trio,TRiO Student Support Services,old
@@ -108,7 +105,6 @@ copyright,Copyright,new
 dmca,DMCA,new
 elearningforeducators,eLearning for Educators,new
 electronicmedia,Electronic Media,new
-native,Native Programs,old
 publicrecords,Public Records,new
 salt,SALT,new
 sciencesupport,Science Support,new
@@ -120,6 +116,10 @@ lists,Email Lists,old
 performingarts,Performing Arts,old
 streams,Streaming Video,old
 telecom,Telecom,old
-titleix,Title IX,old
 k12outreach,K-12 Outreach,old
 humanresources,Human Resources,new
+schedules,Room & Class Schedules,new
+titleix,Title IX,old
+mathcenter,Quantitative & Symbolic Reasoning Center (QuaSR),old
+graduatestudies,Graduate Studies,new
+govrelations,Governmental Relations,new

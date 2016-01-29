@@ -52,6 +52,32 @@ function evergreen_content_filter_default_formats() {
     ),
   );
 
+  // Exported format: Full HTML.
+  $formats['full_html'] = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'cache' => 0,
+    'status' => 1,
+    'weight' => 0,
+    'filters' => array(
+      'insert_view' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
+  );
+
   // Exported format: Plain text.
   $formats['plain_text'] = array(
     'format' => 'plain_text',

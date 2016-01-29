@@ -12,26 +12,6 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['bean-directories'] = array(
-    'cache' => 1,
-    'custom' => 0,
-    'delta' => 'directories',
-    'module' => 'bean',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => 'background_image',
-        'status' => 1,
-        'theme' => 'wwwevergreen',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 1,
-  );
-
   $export['block-directory_section_title'] = array(
     'cache' => -1,
     'custom' => 0,

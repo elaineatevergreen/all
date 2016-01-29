@@ -3617,6 +3617,23 @@ function evergreen_content_views_default_views() {
 
   /* Display: Section Background Block */
   $handler = $view->new_display('block', 'Section Background Block', 'block');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Background Image */
+  $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_background_image']['label'] = '';
+  $handler->display->display_options['fields']['field_background_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_background_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_background_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_background_image']['empty'] = '<img src="http://www.evergreen.edu/_inc/images/hero.jpg"/>';
+  $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_background_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
 
   /* Display: Section Title Block */
   $handler = $view->new_display('block', 'Section Title Block', 'block_1');

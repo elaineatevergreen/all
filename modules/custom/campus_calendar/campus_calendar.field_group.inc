@@ -81,7 +81,9 @@ function campus_calendar_field_group_info() {
       0 => 'body',
       1 => 'field_category',
       2 => 'field_image',
-      3 => 'title',
+      3 => 'field_format',
+      4 => 'field_sponsored_by',
+      5 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
