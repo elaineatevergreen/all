@@ -1,0 +1,12 @@
+deploy_adminweb:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -Eu banner bin/ci_deploy_collab.sh
+  tags:
+    - adminweb
+  only:
+    - dev
+    - master
+
+
