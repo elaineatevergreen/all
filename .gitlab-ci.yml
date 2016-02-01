@@ -1,0 +1,45 @@
+build_dev:
+  stage: build
+  script:
+    - sudo -u banner bin/ci_build.sh
+  tags:
+    - bandevjs
+  only:
+    - dev
+build_test:
+  stage: build
+  script:
+    - sudo -u banner bin/ci_build.sh
+  tags:
+    - bantestjs
+  only:
+    - test
+build_prod:
+  stage: build
+  script:
+    - sudo -u banner bin/ci_build.sh
+  tags:
+    - banprodjs
+  only:
+    - master
+deploy_adminappsdev:
+  stage: deploy
+  tags:
+    - adminappsdev
+  only:
+    - dev
+  script:
+    - chmod uog+x bin/*
+    - sudo -Eu banner bin/ci_deploy_adminweb.sh
+deploy_adminweb:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -Eu banner bin/ci_deploy_adminweb.sh
+  tags:
+    - adminweb
+  only:
+    - test
+    - master
+
+
