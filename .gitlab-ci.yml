@@ -2,7 +2,7 @@ deploy_adminweb:
   stage: deploy
   script:
     - chmod uog+x bin/*
-    - sudo -Eu banner bin/ci_deploy_collab.sh
+    - sudo -Eu banner bin/ci_deploy.sh
   tags:
     - adminweb
   only:
