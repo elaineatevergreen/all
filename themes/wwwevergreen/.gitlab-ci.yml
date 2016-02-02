@@ -1,0 +1,10 @@
+deploy_adminweb:
+  stage: deploy
+  script:
+    - "sync_project.sh /var/data_files/collabtest/code/foo"
+    - "drush_cc.sh /var/data_files/collabtest/code/www7 css-js"
+  tags:
+    - adminweb
+  only:
+    - master
+
