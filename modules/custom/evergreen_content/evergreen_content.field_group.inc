@@ -1,0 +1,876 @@
+<?php
+/**
+ * @file
+ * evergreen_content.field_group.inc
+ */
+
+/**
+ * Implements hook_field_group_info().
+ */
+function evergreen_content_field_group_info() {
+  $field_groups = array();
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_applicant|node|scholarship|form';
+  $field_group->group_name = 'group_applicant';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'scholarship';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Applicant Criteria',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_deadline',
+      1 => 'field_new_or_current',
+      2 => 'field_class_standing',
+      3 => 'field_need_based',
+      4 => 'field_fafsa_or_wasfa_required',
+      5 => 'field_under_represented',
+      6 => 'field_short_description',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-applicant field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_applicant|node|scholarship|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|directory_individual|form';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '15',
+    'children' => array(
+      0 => 'group_identity',
+      1 => 'group_contact',
+      2 => 'group_faculty',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_basics|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|scholarship|form';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'scholarship';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '4',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_tuition_award',
+      2 => 'field_common_application',
+      3 => 'field_amount',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-basics field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_basics|node|scholarship|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|taxonomy_term|site_sections|form';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'site_sections';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_top';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_background_image',
+      1 => 'field_long_name',
+      2 => 'field_section_contact_info',
+      3 => 'name',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_basics|taxonomy_term|site_sections|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_bio|node|profile|form';
+  $field_group->group_name = 'group_bio';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Biographical Details',
+    'weight' => '34',
+    'children' => array(
+      0 => 'field_first_name',
+      1 => 'field_last_name',
+      2 => 'field_roles',
+      3 => 'field_current_profession',
+      4 => 'field_hometown',
+      5 => 'field_current_location',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-bio field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_bio|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact|node|directory_individual|default';
+  $field_group->group_name = 'group_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Contact Information',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_alternate_phone',
+      1 => 'field_building_alt',
+      2 => 'field_email',
+      3 => 'field_fax',
+      4 => 'field_location_off_campus',
+      5 => 'field_mailstop',
+      6 => 'field_phone',
+      7 => 'field_room',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Contact Information',
+      'instance_settings' => array(
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_contact|node|directory_individual|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact|node|directory_individual|form';
+  $field_group->group_name = 'group_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_basics';
+  $field_group->data = array(
+    'label' => 'Contact Information',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_alternate_phone',
+      1 => 'field_building',
+      2 => 'field_building_alt',
+      3 => 'field_email',
+      4 => 'field_fax',
+      5 => 'field_location_off_campus',
+      6 => 'field_mailstop',
+      7 => 'field_phone',
+      8 => 'field_room',
+      9 => 'field_website',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'label' => 'Contact Information',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'id' => '',
+        'classes' => 'group-contact field-group-htab',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups['group_contact|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact|node|student_group|form';
+  $field_group->group_name = 'group_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'student_group';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Contact Information',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_email',
+      1 => 'field_websites',
+      2 => 'field_meetings',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-contact field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_contact|node|student_group|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_content|node|profile|form';
+  $field_group->group_name = 'group_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Articles & Images',
+    'weight' => '36',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_image',
+      2 => 'field_related_pieces',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-content field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_content|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_custom|node|directory_office|form';
+  $field_group->group_name = 'group_custom';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_office';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Website-Specific Content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_facebook',
+      2 => 'field_hours',
+      3 => 'field_site_section',
+      4 => 'field_twitter',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-custom field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_custom|node|directory_office|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_description|node|library_database|form';
+  $field_group->group_name = 'group_description';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'library_database';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Description',
+    'weight' => '4',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_resource_type',
+      2 => 'field_resource_subject',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-description field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_description|node|library_database|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_description|node|student_group|form';
+  $field_group->group_name = 'group_description';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'student_group';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Description',
+    'weight' => '4',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_image',
+      2 => 'field_group_categories',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-description field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_description|node|student_group|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_donor|node|scholarship|form';
+  $field_group->group_name = 'group_donor';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'scholarship';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Donor Info',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_funding_status',
+      1 => 'field_cashnet_code',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-donor field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_donor|node|scholarship|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_faculty|node|directory_individual|form';
+  $field_group->group_name = 'group_faculty';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_basics';
+  $field_group->data = array(
+    'label' => 'Faculty Information',
+    'weight' => '18',
+    'children' => array(
+      0 => 'field_expertise',
+      1 => 'field_interests',
+      2 => 'field_background',
+      3 => 'field_is_faculty',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-faculty field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_faculty|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_group|node|basic_page|form';
+  $field_group->group_name = 'group_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'basic_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group',
+    'weight' => '10',
+    'children' => array(
+      0 => 'group_primary',
+      1 => 'group_secondary',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-group field-group-htabs',
+      ),
+    ),
+  );
+  $field_groups['group_group|node|basic_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_group|node|profile|form';
+  $field_group->group_name = 'group_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_bio',
+      1 => 'group_studies',
+      2 => 'group_content',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-group field-group-htabs',
+      ),
+    ),
+  );
+  $field_groups['group_group|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_group|node|student_group|form';
+  $field_group->group_name = 'group_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'student_group';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group',
+    'weight' => '2',
+    'children' => array(
+      0 => 'group_description',
+      1 => 'group_contact',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-group field-group-htabs',
+      ),
+    ),
+  );
+  $field_groups['group_group|node|student_group|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_identity|node|directory_individual|form';
+  $field_group->group_name = 'group_identity';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_basics';
+  $field_group->data = array(
+    'label' => 'Identity',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_first_name',
+      1 => 'field_job_title',
+      2 => 'field_last_name',
+      3 => 'field_cas_name',
+      4 => 'field_headshot',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_identity|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_imported|node|directory_office|form';
+  $field_group->group_name = 'group_imported';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_office';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Imported Content',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_alternate_phone',
+      1 => 'field_building_alt',
+      2 => 'field_email',
+      3 => 'field_fax',
+      4 => 'field_mailstop',
+      5 => 'field_phone',
+      6 => 'field_room',
+      7 => 'field_websites',
+      8 => 'field_members',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'Imported Content',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-imported field-group-tab',
+        'description' => 'Don\'t override this unless you know what you\'re doing!',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups['group_imported|node|directory_office|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link|node|library_database|form';
+  $field_group->group_name = 'group_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'library_database';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_resource_link',
+      1 => 'field_proxy',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-link field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_link|node|library_database|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_location_on_campus|node|event|form';
+  $field_group->group_name = 'group_location_on_campus';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Location: On Campus',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_building',
+      1 => 'field_room',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-location-on-campus field-group-fieldset',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_location_on_campus|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_navigation|taxonomy_term|site_sections|form';
+  $field_group->group_name = 'group_navigation';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'site_sections';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_top';
+  $field_group->data = array(
+    'label' => 'Navigation',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_section_navigation',
+      1 => 'description',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_navigation|taxonomy_term|site_sections|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_nav|node|home_page|form';
+  $field_group->group_name = 'group_nav';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'home_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Prospective Student Nav',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_section_navigation',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-nav field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_nav|node|home_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_primary|node|basic_page|form';
+  $field_group->group_name = 'group_primary';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'basic_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Primary Content',
+    'weight' => '2',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_intro',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_primary|node|basic_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_secondary|node|basic_page|form';
+  $field_group->group_name = 'group_secondary';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'basic_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Secondary Content',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_secondary_content',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_secondary|node|basic_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_social|node|directory_office|default';
+  $field_group->group_name = 'group_social';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_office';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Social Media Connections',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_facebook',
+      1 => 'field_twitter',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Social Media Connections',
+      'instance_settings' => array(
+        'classes' => 'group-social field-group-html-element',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'dt',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_social|node|directory_office|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_studies|node|profile|form';
+  $field_group->group_name = 'group_studies';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Studies',
+    'weight' => '35',
+    'children' => array(
+      0 => 'field_degrees',
+      1 => 'field_other_institutions',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-studies field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_studies|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_top|taxonomy_term|site_sections|form';
+  $field_group->group_name = 'group_top';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'site_sections';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Top Level',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_basics',
+      1 => 'group_navigation',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-top field-group-htabs',
+      ),
+    ),
+  );
+  $field_groups['group_top|taxonomy_term|site_sections|form'] = $field_group;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Applicant Criteria');
+  t('Articles & Images');
+  t('Basics');
+  t('Biographical Details');
+  t('Contact Information');
+  t('Description');
+  t('Donor Info');
+  t('Faculty Information');
+  t('Identity');
+  t('Imported Content');
+  t('Link');
+  t('Location: On Campus');
+  t('Navigation');
+  t('Primary Content');
+  t('Prospective Student Nav');
+  t('Secondary Content');
+  t('Social Media Connections');
+  t('Studies');
+  t('Top Level');
+  t('Website-Specific Content');
+  t('group');
+
+  return $field_groups;
+}
