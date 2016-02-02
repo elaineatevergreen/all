@@ -154,15 +154,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'block',
   );
 
-  // Exported permission: 'administer cer settings'.
-  $permissions['administer cer settings'] = array(
-    'name' => 'administer cer settings',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'cer',
-  );
-
   // Exported permission: 'administer contact forms'.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
