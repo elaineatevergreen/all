@@ -235,7 +235,7 @@ function campus_calendar_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 9,
+      'weight' => 1,
     ),
   );
 
