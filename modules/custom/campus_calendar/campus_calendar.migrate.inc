@@ -13,6 +13,10 @@ function campus_calendar_migrate_api() {
 				'class_name' => 'CategoryMigration',
 				'group_name' => 'events',
 			), //end of the Categories migration
+			'Formats' => array( 
+				'class_name' => 'FormatMigration',
+				'group_name' => 'events',
+			), //end of the formats migration
 		), //end of the migrations array
 	); //end of the main array
 };
