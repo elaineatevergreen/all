@@ -160,6 +160,13 @@ function campus_calendar_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: 'administer ckeditor'.
+  $permissions['administer ckeditor'] = array(
+    'name' => 'administer ckeditor',
+    'roles' => array(),
+    'module' => 'ckeditor',
+  );
+
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -535,6 +542,13 @@ function campus_calendar_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: 'customize ckeditor'.
+  $permissions['customize ckeditor'] = array(
+    'name' => 'customize ckeditor',
+    'roles' => array(),
+    'module' => 'ckeditor',
+  );
+
   // Exported permission: 'customize shortcut links'.
   $permissions['customize shortcut links'] = array(
     'name' => 'customize shortcut links',
@@ -662,6 +676,13 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete terms in calendar_categories'.
   $permissions['delete terms in calendar_categories'] = array(
     'name' => 'delete terms in calendar_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in event_types'.
+  $permissions['delete terms in event_types'] = array(
+    'name' => 'delete terms in event_types',
     'roles' => array(),
     'module' => 'taxonomy',
   );
@@ -847,6 +868,13 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'edit terms in calendar_categories'.
   $permissions['edit terms in calendar_categories'] = array(
     'name' => 'edit terms in calendar_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in event_types'.
+  $permissions['edit terms in event_types'] = array(
+    'name' => 'edit terms in event_types',
     'roles' => array(),
     'module' => 'taxonomy',
   );

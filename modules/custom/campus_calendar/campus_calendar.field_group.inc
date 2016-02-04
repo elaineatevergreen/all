@@ -80,8 +80,8 @@ function campus_calendar_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_category',
-      2 => 'field_image',
-      3 => 'field_format',
+      2 => 'field_format',
+      3 => 'field_image',
       4 => 'field_sponsored_by',
       5 => 'title',
     ),
