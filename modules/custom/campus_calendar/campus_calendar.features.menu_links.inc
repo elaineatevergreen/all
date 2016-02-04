@@ -150,26 +150,6 @@ function campus_calendar_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-campus-calendar_for-testing-calendar-ish-view:calendar-node-field-event-date.
-  $menu_links['menu-campus-calendar_for-testing-calendar-ish-view:calendar-node-field-event-date'] = array(
-    'menu_name' => 'menu-campus-calendar',
-    'link_path' => 'calendar-node-field-event-date',
-    'router_path' => 'calendar-node-field-event-date',
-    'link_title' => 'For testing: Calendar-ish View',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-campus-calendar_for-testing-calendar-ish-view:calendar-node-field-event-date',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-    'customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -179,7 +159,6 @@ function campus_calendar_menu_default_menu_links() {
   t('Campus Life');
   t('Class Schedules');
   t('Costs & Aid');
-  t('For testing: Calendar-ish View');
   t('Home');
 
   return $menu_links;
