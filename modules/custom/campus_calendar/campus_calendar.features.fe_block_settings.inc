@@ -82,10 +82,10 @@ function campus_calendar_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'section_nav',
+        'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => 0,
+        'weight' => -16,
       ),
     ),
     'title' => '',
@@ -122,8 +122,8 @@ function campus_calendar_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'secondary_content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -14,
       ),

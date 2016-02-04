@@ -843,7 +843,7 @@ function campus_calendar_views_default_views() {
         'bef_select_all_none' => 0,
         'bef_collapsible' => 0,
         'is_secondary' => 0,
-        'any_label' => '',
+        'any_label' => 'If all categories are unchecked, all items will be selected',
         'bef_filter_description' => '',
         'tokens' => array(
           'available' => array(
@@ -999,6 +999,16 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['value'] = array(
+    1 => '1',
+    2 => '2',
+    3 => '3',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+    7 => '7',
+    8 => '8',
+  );
   $handler->display->display_options['filters']['field_category_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_category_tid']['expose']['operator_id'] = 'field_category_tid_op';
   $handler->display->display_options['filters']['field_category_tid']['expose']['label'] = 'Category';
