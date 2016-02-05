@@ -82,8 +82,8 @@ function campus_calendar_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'section_nav',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -16,
       ),
@@ -105,7 +105,7 @@ function campus_calendar_default_fe_block_settings() {
         'region' => 'secondary_content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -15,
+        'weight' => -16,
       ),
     ),
     'title' => 'Search Events',
@@ -145,7 +145,7 @@ function campus_calendar_default_fe_block_settings() {
         'region' => 'secondary_content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -16,
+        'weight' => -17,
       ),
     ),
     'title' => '',

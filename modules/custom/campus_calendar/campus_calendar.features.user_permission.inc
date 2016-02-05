@@ -10,6 +10,15 @@
 function campus_calendar_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access admin theme'.
+  $permissions['access admin theme'] = array(
+    'name' => 'access admin theme',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_theme',
+  );
+
   // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -163,7 +172,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'ckeditor',
   );
 
@@ -504,7 +515,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'clear google_calendar_ical feeds'.
   $permissions['clear google_calendar_ical feeds'] = array(
     'name' => 'clear google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -529,7 +542,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -545,7 +560,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'customize ckeditor'.
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'ckeditor',
   );
 
@@ -598,7 +615,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -651,7 +670,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -799,7 +820,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -852,7 +875,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -891,7 +916,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'import google_calendar_ical feeds'.
   $permissions['import google_calendar_ical feeds'] = array(
     'name' => 'import google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -1011,7 +1038,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'unlock google_calendar_ical feeds'.
   $permissions['unlock google_calendar_ical feeds'] = array(
     'name' => 'unlock google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 

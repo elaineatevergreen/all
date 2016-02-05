@@ -51,6 +51,10 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   /* Sort criterion: Content: Date -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
@@ -70,6 +74,16 @@ function campus_calendar_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Category (field_category) */
+  $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['value'] = array(
+    14 => '14',
+    5 => '5',
+  );
+  $handler->display->display_options['filters']['field_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'calendar_categories';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -842,7 +856,7 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'long_notime',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -876,6 +890,124 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'holidays';
+
+  /* Display: Academic Calendar Page */
+  $handler = $view->new_display('page', 'Academic Calendar Page', 'page_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Academic Calendar';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_event_date' => 'field_event_date',
+    'body' => 'field_event_date',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_event_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Event';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'strong';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'longdate',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['field_api_classes'] = TRUE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Date - end date (field_event_date:value2) */
+  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value2']['group'] = 1;
+  $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Format (field_format) */
+  $handler->display->display_options['filters']['field_format_tid']['id'] = 'field_format_tid';
+  $handler->display->display_options['filters']['field_format_tid']['table'] = 'field_data_field_format';
+  $handler->display->display_options['filters']['field_format_tid']['field'] = 'field_format_tid';
+  $handler->display->display_options['filters']['field_format_tid']['value'] = array(
+    0 => '15',
+  );
+  $handler->display->display_options['filters']['field_format_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_format_tid']['vocabulary'] = 'event_types';
+  /* Filter criterion: Content: Category (field_category) */
+  $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['value'] = array(
+    14 => '14',
+    5 => '5',
+  );
+  $handler->display->display_options['filters']['field_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'calendar_categories';
+  $handler->display->display_options['path'] = 'academic';
   $export['calendar'] = $view;
 
   $view = new view();
@@ -1018,6 +1150,360 @@ function campus_calendar_views_default_views() {
     'default' => 0,
   );
   $export['calendar_category_taxonomy_term'] = $view;
+
+  $view = new view();
+  $view->name = 'calendar_date_browser';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Calendar Date Browser';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_category_tid' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'day';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['pager']['options']['skip_empty_pages'] = 0;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_event_date' => 'field_event_date',
+    'title' => 'title',
+    'field_building' => 'title',
+    'field_room' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_event_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '<br/>',
+      'empty_column' => 0,
+    ),
+    'field_building' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_room' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = 'Time';
+  $handler->display->display_options['fields']['field_event_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'medium',
+    'fromto' => 'value',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
+  );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Building */
+  $handler->display->display_options['fields']['field_building']['id'] = 'field_building';
+  $handler->display->display_options['fields']['field_building']['table'] = 'field_data_field_building';
+  $handler->display->display_options['fields']['field_building']['field'] = 'field_building';
+  $handler->display->display_options['fields']['field_building']['label'] = '';
+  $handler->display->display_options['fields']['field_building']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_building']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
+  /* Field: Content: Room */
+  $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
+  $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['label'] = '';
+  $handler->display->display_options['fields']['field_room']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_room']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_room']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_room']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_room']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Date -  start date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
+  $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  /* Filter criterion: Content: Category (field_category) */
+  $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_category_tid']['expose']['operator_id'] = 'field_category_tid_op';
+  $handler->display->display_options['filters']['field_category_tid']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_category_tid']['expose']['operator'] = 'field_category_tid_op';
+  $handler->display->display_options['filters']['field_category_tid']['expose']['identifier'] = 'field_category_tid';
+  $handler->display->display_options['filters']['field_category_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'calendar_categories';
+  $handler->display->display_options['filters']['field_category_tid']['error_message'] = FALSE;
+
+  /* Display: Day Page */
+  $handler = $view->new_display('page', 'Day Page', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Today at Evergreen';
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = 'Time';
+  $handler->display->display_options['fields']['field_event_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'time',
+    'fromto' => 'value',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
+  );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Building */
+  $handler->display->display_options['fields']['field_building']['id'] = 'field_building';
+  $handler->display->display_options['fields']['field_building']['table'] = 'field_data_field_building';
+  $handler->display->display_options['fields']['field_building']['field'] = 'field_building';
+  $handler->display->display_options['fields']['field_building']['label'] = '';
+  $handler->display->display_options['fields']['field_building']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_building']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
+  /* Field: Content: Room */
+  $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
+  $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['label'] = '';
+  $handler->display->display_options['fields']['field_room']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_room']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_room']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_room']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_room']['field_api_classes'] = TRUE;
+  $handler->display->display_options['path'] = 'day';
+
+  /* Display: Month Block */
+  $handler = $view->new_display('block', 'Month Block', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'tinymonth';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['pager']['options']['skip_empty_pages'] = 0;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'calendar_style';
+  $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '1';
+  $handler->display->display_options['style_options']['with_weekno'] = '0';
+  $handler->display->display_options['style_options']['multiday_theme'] = '1';
+  $handler->display->display_options['style_options']['theme_style'] = '1';
+  $handler->display->display_options['style_options']['max_items'] = '1';
+  $handler->display->display_options['style_options']['max_items_behavior'] = 'hide';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'article' => '#ffffff',
+    'page' => '#ffffff',
+    'event' => '#ffffff',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['block_description'] = 'Month Calendar (small)';
+
+  /* Display: Month Page */
+  $handler = $view->new_display('page', 'Month Page', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Today at Evergreen';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['options']['date_id'] = 'month';
+  $handler->display->display_options['pager']['options']['link_format'] = 'clean';
+  $handler->display->display_options['pager']['options']['skip_empty_pages'] = 0;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Date: Date (node) */
+  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
+  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
+  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+  );
+  $handler->display->display_options['path'] = 'month';
+  $export['calendar_date_browser'] = $view;
 
   return $export;
 }
