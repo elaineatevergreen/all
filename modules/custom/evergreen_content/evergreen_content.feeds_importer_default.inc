@@ -93,21 +93,24 @@ function evergreen_content_feeds_importer_default() {
       'plugin_key' => 'FeedsXPathParserXML',
       'config' => array(
         'sources' => array(
-          'xpathparser:0' => '@username',
+          'xpathparser:0' => '@user_name',
           'xpathparser:1' => 'bio',
           'xpathparser:2' => 'expertise',
           'xpathparser:3' => 'interests',
+          'xpathparser:4' => 'name',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
           'xpathparser:1' => 0,
           'xpathparser:2' => 0,
           'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
         ),
         'context' => '/instructors/faculty',
         'exp' => array(
           'errors' => 0,
           'debug' => array(
+            'xpathparser:4' => 'xpathparser:4',
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
@@ -115,7 +118,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:3' => 0,
           ),
         ),
-        'allow_override' => 1,
+        'allow_override' => 0,
       ),
     ),
     'processor' => array(
@@ -128,7 +131,7 @@ function evergreen_content_feeds_importer_default() {
           0 => array(
             'source' => 'xpathparser:0',
             'target' => 'guid',
-            'unique' => 1,
+            'unique' => 0,
           ),
           1 => array(
             'source' => 'xpathparser:1',
@@ -145,9 +148,14 @@ function evergreen_content_feeds_importer_default() {
             'target' => 'field_interests',
             'unique' => FALSE,
           ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'title',
+            'unique' => 1,
+          ),
         ),
         'update_existing' => '2',
-        'update_non_existent' => 'skip',
+        'update_non_existent' => 'unpublish',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'directory_individual',
@@ -307,6 +315,8 @@ function evergreen_content_feeds_importer_default() {
         'use_pubsubhubbub' => FALSE,
         'designated_hub' => '',
         'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
       ),
     ),
     'parser' => array(
@@ -325,6 +335,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:10' => 'name',
           'xpathparser:11' => 'fax',
           'xpathparser:12' => 'location',
+          'xpathparser:13' => 'email',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -339,6 +350,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:10' => 0,
           'xpathparser:11' => 0,
           'xpathparser:12' => 0,
+          'xpathparser:13' => 0,
         ),
         'context' => '/people/person',
         'exp' => array(
@@ -357,6 +369,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:9' => 0,
             'xpathparser:10' => 0,
             'xpathparser:11' => 0,
+            'xpathparser:13' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -429,11 +442,17 @@ function evergreen_content_feeds_importer_default() {
             'target' => 'field_building_alt',
             'unique' => FALSE,
           ),
+          12 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_cas_name',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'directory_individual',
+        'update_non_existent' => 'unpublish',
       ),
     ),
     'content_type' => '',
