@@ -138,6 +138,7 @@ features[feeds_importer][] = faculty_directory
 features[feeds_importer][] = office_directory
 features[feeds_importer][] = people_directory
 features[feeds_importer][] = scholarship_import
+features[feeds_tamper][] = faculty_directory-blank_source_1-default_value
 features[feeds_tamper][] = office_directory-xpathparser_10-trim
 features[feeds_tamper][] = office_directory-xpathparser_12-find_replace_regex
 features[feeds_tamper][] = office_directory-xpathparser_9-find_replace_regex

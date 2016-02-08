@@ -153,6 +153,11 @@ function evergreen_content_feeds_importer_default() {
             'target' => 'title',
             'unique' => 1,
           ),
+          5 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_is_faculty',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'update_non_existent' => 'unpublish',
