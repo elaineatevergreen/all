@@ -29,6 +29,7 @@ dependencies[] = entity_token
 dependencies[] = entity_view_mode
 dependencies[] = entityqueue
 dependencies[] = entityreference
+dependencies[] = entityreference_feeds
 dependencies[] = environment_indicator
 dependencies[] = fe_block
 dependencies[] = features
