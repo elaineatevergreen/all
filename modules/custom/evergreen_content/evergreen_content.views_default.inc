@@ -2217,6 +2217,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_members']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_members']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_members']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_members']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_members']['settings'] = array(
     'link' => 1,
   );

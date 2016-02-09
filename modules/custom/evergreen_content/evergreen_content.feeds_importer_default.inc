@@ -206,6 +206,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 'fax',
           'xpathparser:12' => 'location',
           'xpathparser:13' => 'url',
+          'xpathparser:14' => 'members/people/person/name',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -217,6 +218,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 0,
           'xpathparser:12' => 0,
           'xpathparser:13' => 0,
+          'xpathparser:14' => 0,
         ),
         'context' => '/offices/office',
         'exp' => array(
@@ -232,6 +234,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:11' => 0,
             'xpathparser:12' => 0,
             'xpathparser:13' => 0,
+            'xpathparser:14' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -287,6 +290,11 @@ function evergreen_content_feeds_importer_default() {
           8 => array(
             'source' => 'xpathparser:13',
             'target' => 'field_websites:url',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'xpathparser:14',
+            'target' => 'field_members:label',
             'unique' => FALSE,
           ),
         ),
