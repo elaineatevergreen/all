@@ -208,6 +208,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:13' => 'url',
           'xpathparser:14' => 'members/people/person/name',
           'xpathparser:15' => 'reference',
+          'xpathparser:16' => 'members/offices/office/name',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -221,6 +222,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:13' => 0,
           'xpathparser:14' => 0,
           'xpathparser:15' => 0,
+          'xpathparser:16' => 0,
         ),
         'context' => '/offices/office',
         'exp' => array(
@@ -238,6 +240,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:13' => 0,
             'xpathparser:14' => 0,
             'xpathparser:15' => 0,
+            'xpathparser:16' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -303,6 +306,11 @@ function evergreen_content_feeds_importer_default() {
           10 => array(
             'source' => 'xpathparser:15',
             'target' => 'field_reference:label',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'xpathparser:16',
+            'target' => 'field_related_offices:label',
             'unique' => FALSE,
           ),
         ),

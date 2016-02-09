@@ -581,6 +581,7 @@ function evergreen_content_field_group_info() {
       7 => 'field_room',
       8 => 'field_websites',
       9 => 'field_reference',
+      10 => 'field_related_offices',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

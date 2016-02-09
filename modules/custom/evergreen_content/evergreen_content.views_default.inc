@@ -2098,6 +2098,9 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_reference' => 'field_reference',
+  );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -2110,6 +2113,18 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Content: Reference */
+  $handler->display->display_options['fields']['field_reference']['id'] = 'field_reference';
+  $handler->display->display_options['fields']['field_reference']['table'] = 'field_data_field_reference';
+  $handler->display->display_options['fields']['field_reference']['field'] = 'field_reference';
+  $handler->display->display_options['fields']['field_reference']['label'] = 'See';
+  $handler->display->display_options['fields']['field_reference']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_reference']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_reference']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_reference']['settings'] = array(
+    'link' => 1,
+  );
   /* Field: Content: Building */
   $handler->display->display_options['fields']['field_building_alt']['id'] = 'field_building_alt';
   $handler->display->display_options['fields']['field_building_alt']['table'] = 'field_data_field_building_alt';
@@ -2207,6 +2222,22 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_websites']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_websites']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_websites']['delta_offset'] = '0';
+  /* Field: Content: Related Offices */
+  $handler->display->display_options['fields']['field_related_offices']['id'] = 'field_related_offices';
+  $handler->display->display_options['fields']['field_related_offices']['table'] = 'field_data_field_related_offices';
+  $handler->display->display_options['fields']['field_related_offices']['field'] = 'field_related_offices';
+  $handler->display->display_options['fields']['field_related_offices']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_related_offices']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_related_offices']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_offices']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_related_offices']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_related_offices']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_related_offices']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_related_offices']['settings'] = array(
+    'link' => 1,
+  );
+  $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
   /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
@@ -2223,18 +2254,6 @@ function evergreen_content_views_default_views() {
   );
   $handler->display->display_options['fields']['field_members']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_members']['multi_type'] = 'ul';
-  /* Field: Content: Reference */
-  $handler->display->display_options['fields']['field_reference']['id'] = 'field_reference';
-  $handler->display->display_options['fields']['field_reference']['table'] = 'field_data_field_reference';
-  $handler->display->display_options['fields']['field_reference']['field'] = 'field_reference';
-  $handler->display->display_options['fields']['field_reference']['label'] = 'See';
-  $handler->display->display_options['fields']['field_reference']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_reference']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_reference']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_reference']['settings'] = array(
-    'link' => 1,
-  );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Title */
   $handler->display->display_options['arguments']['title']['id'] = 'title';

@@ -4247,6 +4247,52 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-directory_office-field_related_offices'.
+  $field_instances['node-directory_office-field_related_offices'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Links to sub-offices or other related offices.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_related_offices',
+    'label' => 'Related Offices',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 16,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_office-field_room'.
   $field_instances['node-directory_office-field_room'] = array(
     'bundle' => 'directory_office',
@@ -7588,6 +7634,7 @@ function evergreen_content_field_default_field_instances() {
   t('Last name');
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
+  t('Links to sub-offices or other related offices.');
   t('Location');
   t('Location Off Campus');
   t('Location: Off Campus');
@@ -7616,6 +7663,7 @@ function evergreen_content_field_default_field_instances() {
   t('Proxy');
   t('Queue items');
   t('Reference');
+  t('Related Offices');
   t('Related Pieces');
   t('Resource Link');
   t('Resource Subject');
