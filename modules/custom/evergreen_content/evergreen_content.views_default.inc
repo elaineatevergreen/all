@@ -1430,7 +1430,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -1656,7 +1656,7 @@ function evergreen_content_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
 
   /* Display: People Page */
-  $handler = $view->new_display('page', 'People Page', 'page_1');
+  $handler = $view->new_display('page', 'People Page', 'people_page');
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -1694,7 +1694,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['path'] = 'directory/people';
 
   /* Display: People A-Z Index */
-  $handler = $view->new_display('attachment', 'People A-Z Index', 'attachment_1');
+  $handler = $view->new_display('attachment', 'People A-Z Index', 'people_index');
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -1799,9 +1799,15 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['arguments']['field_last_name_value']['glossary'] = TRUE;
   $handler->display->display_options['arguments']['field_last_name_value']['limit'] = '1';
   $handler->display->display_options['displays'] = array(
-    'default' => 'default',
-    'block' => 'block',
     'page_1' => 'page_1',
+    'page_4' => 'page_4',
+    'default' => 0,
+    'block' => 0,
+    'staff_table' => 0,
+    'staff_list' => 0,
+    'page_2' => 0,
+    'page_3' => 0,
+    'block_1' => 0,
   );
   $handler->display->display_options['inherit_arguments'] = FALSE;
 
@@ -2082,7 +2088,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['arguments']['guid']['break_phrase'] = TRUE;
 
   /* Display: Office Page */
-  $handler = $view->new_display('page', 'Office Page', 'page_2');
+  $handler = $view->new_display('page', 'Office Page', 'office_page');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -2287,7 +2293,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['path'] = 'directory/offices';
 
   /* Display: Office A-Z Index */
-  $handler = $view->new_display('attachment', 'Office A-Z Index', 'attachment_2');
+  $handler = $view->new_display('attachment', 'Office A-Z Index', 'office_index');
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -2484,16 +2490,19 @@ function evergreen_content_views_default_views() {
   );
   $handler->display->display_options['displays'] = array(
     'page_2' => 'page_2',
+    'page_4' => 'page_4',
     'default' => 0,
     'block' => 0,
     'page_1' => 0,
     'staff_table' => 0,
     'staff_list' => 0,
+    'page_3' => 0,
+    'block_1' => 0,
   );
   $handler->display->display_options['inherit_arguments'] = FALSE;
 
   /* Display: Faculty Page */
-  $handler = $view->new_display('page', 'Faculty Page', 'page_3');
+  $handler = $view->new_display('page', 'Faculty Page', 'faculty_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Faculty Directory';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -2656,7 +2665,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['path'] = 'faculty';
 
   /* Display: Faculty not in directory */
-  $handler = $view->new_display('block', 'Faculty not in directory', 'block_1');
+  $handler = $view->new_display('block', 'Faculty not in directory', 'faculty_missing_directory');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
