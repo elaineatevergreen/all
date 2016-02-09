@@ -319,6 +319,24 @@ function evergreen_content_user_default_permissions() {
     'module' => 'context_ui',
   );
 
+  // Exported permission: 'administer custom search'.
+  $permissions['administer custom search'] = array(
+    'name' => 'administer custom search',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'custom_search',
+  );
+
+  // Exported permission: 'administer custom search blocks'.
+  $permissions['administer custom search blocks'] = array(
+    'name' => 'administer custom search blocks',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'custom_search_blocks',
+  );
+
   // Exported permission: 'administer entity view modes'.
   $permissions['administer entity view modes'] = array(
     'name' => 'administer entity view modes',
@@ -2235,6 +2253,28 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'ctools',
+  );
+
+  // Exported permission: 'use custom search'.
+  $permissions['use custom search'] = array(
+    'name' => 'use custom search',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'custom_search',
+  );
+
+  // Exported permission: 'use custom search blocks'.
+  $permissions['use custom search blocks'] = array(
+    'name' => 'use custom search blocks',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'custom_search_blocks',
   );
 
   // Exported permission: 'use ipe with page manager'.

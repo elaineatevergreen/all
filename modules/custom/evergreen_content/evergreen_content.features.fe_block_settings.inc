@@ -32,6 +32,26 @@ function evergreen_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['custom_search_blocks-1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 1,
+    'module' => 'custom_search_blocks',
+    'node_types' => array(),
+    'pages' => 'directory*',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['search-form'] = array(
     'cache' => -1,
     'custom' => 0,
