@@ -4201,6 +4201,52 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-directory_office-field_reference'.
+  $field_instances['node-directory_office-field_reference'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_reference',
+    'label' => 'Reference',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 15,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_office-field_room'.
   $field_instances['node-directory_office-field_room'] = array(
     'bundle' => 'directory_office',
@@ -7569,6 +7615,7 @@ function evergreen_content_field_default_field_instances() {
   t('Primary Content');
   t('Proxy');
   t('Queue items');
+  t('Reference');
   t('Related Pieces');
   t('Resource Link');
   t('Resource Subject');
@@ -7610,6 +7657,7 @@ function evergreen_content_field_default_field_instances() {
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
   t('This is a number indicating both the year and the quarter/term. Ie, 201610 = Fall 2015; 201620 = Winter 2016.');
   t('This is independent of whether the scholarship is need-based.');
+  t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
   t('This means one or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('This needs to be parsed from the options sent in the XML.');
