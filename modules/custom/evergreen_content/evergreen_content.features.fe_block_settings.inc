@@ -38,7 +38,7 @@ function evergreen_content_default_fe_block_settings() {
     'delta' => 1,
     'module' => 'custom_search_blocks',
     'node_types' => array(),
-    'pages' => 'directory*',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -49,7 +49,7 @@ function evergreen_content_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 1,
+    'visibility' => 0,
   );
 
   $export['search-form'] = array(

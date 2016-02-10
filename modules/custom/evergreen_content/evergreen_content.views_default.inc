@@ -1598,12 +1598,14 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_phone]<br/>
 [field_alternate_phone]<br/>
 [field_fax]';
-  /* Field: Content: Last name */
+  /* Field: Last Name First Initial */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['label'] = 'Last initial';
+  $handler->display->display_options['fields']['field_last_name']['ui_name'] = 'Last Name First Initial';
+  $handler->display->display_options['fields']['field_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_last_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_last_name']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_last_name']['settings'] = array(
     'trim_length' => '1',
@@ -1672,24 +1674,6 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'directory_individual' => 'directory_individual',
-  );
-  /* Filter criterion: Global: Combine fields filter */
-  $handler->display->display_options['filters']['combine']['id'] = 'combine';
-  $handler->display->display_options['filters']['combine']['table'] = 'views';
-  $handler->display->display_options['filters']['combine']['field'] = 'combine';
-  $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by name or title';
-  $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
-  $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
-  $handler->display->display_options['filters']['combine']['fields'] = array(
-    'title' => 'title',
-    'field_job_title' => 'field_job_title',
   );
   $handler->display->display_options['path'] = 'directory/people';
 
@@ -1781,8 +1765,9 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'People';
-  $handler->display->display_options['header']['area']['format'] = 'plain_text';
+  $handler->display->display_options['header']['area']['label'] = 'Index Header';
+  $handler->display->display_options['header']['area']['content'] = '<h4 class="alpha-label">People</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Last name (field_last_name) */
   $handler->display->display_options['arguments']['field_last_name_value']['id'] = 'field_last_name_value';
@@ -1798,6 +1783,27 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_last_name_value']['glossary'] = TRUE;
   $handler->display->display_options['arguments']['field_last_name_value']['limit'] = '1';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'directory_individual' => 'directory_individual',
+  );
+  /* Filter criterion: Content: Last name (field_last_name) */
+  $handler->display->display_options['filters']['field_last_name_value']['id'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'not empty';
   $handler->display->display_options['displays'] = array(
     'people_page' => 'people_page',
     'default' => 0,
@@ -2114,20 +2120,25 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Reference */
   $handler->display->display_options['fields']['field_reference']['id'] = 'field_reference';
   $handler->display->display_options['fields']['field_reference']['table'] = 'field_data_field_reference';
   $handler->display->display_options['fields']['field_reference']['field'] = 'field_reference';
-  $handler->display->display_options['fields']['field_reference']['label'] = 'See';
+  $handler->display->display_options['fields']['field_reference']['label'] = '';
+  $handler->display->display_options['fields']['field_reference']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_reference']['alter']['text'] = '[title]: See [field_reference]';
   $handler->display->display_options['fields']['field_reference']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_reference']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = 'h2';
   $handler->display->display_options['fields']['field_reference']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_reference']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_reference']['empty'] = '[title]';
   $handler->display->display_options['fields']['field_reference']['settings'] = array(
     'link' => 1,
   );
@@ -2203,11 +2214,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_fax']['element_label_class'] = 'dir-key';
   $handler->display->display_options['fields']['field_fax']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_fax']['hide_empty'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Office First Initial */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['label'] = 'Office Title First Initial';
+  $handler->display->display_options['fields']['title_1']['ui_name'] = 'Office First Initial';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['max_length'] = '1';
   $handler->display->display_options['fields']['title_1']['alter']['word_boundary'] = FALSE;
@@ -2380,8 +2392,9 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Offices';
-  $handler->display->display_options['header']['area']['format'] = 'plain_text';
+  $handler->display->display_options['header']['area']['label'] = 'Index Header';
+  $handler->display->display_options['header']['area']['content'] = '<h4 class="alpha-label">Offices & Groups</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -2488,6 +2501,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'directory_office' => 'directory_office',
   );
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'longerthan';
+  $handler->display->display_options['filters']['title']['value'] = '0';
   $handler->display->display_options['displays'] = array(
     'office_page' => 'office_page',
     'default' => 0,
