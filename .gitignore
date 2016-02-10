@@ -1,2 +1,2 @@
-modules/contrib/*
+modules/contrib/**
 .idea
