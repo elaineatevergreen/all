@@ -233,7 +233,7 @@ function evergreen_content_default_fe_block_settings() {
       4 => 'home_page',
       5 => 'webform',
     ),
-    'pages' => '',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -258,7 +258,7 @@ function evergreen_content_default_fe_block_settings() {
       2 => 'event',
       3 => 'webform',
     ),
-    'pages' => 'directories',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -307,11 +307,10 @@ function evergreen_content_default_fe_block_settings() {
     'node_types' => array(
       0 => 'article',
       1 => 'basic_page',
-      2 => 'directory_individual',
-      3 => 'event',
-      4 => 'webform',
+      2 => 'event',
+      3 => 'webform',
     ),
-    'pages' => '',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
