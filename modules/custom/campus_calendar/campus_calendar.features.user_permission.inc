@@ -169,6 +169,15 @@ function campus_calendar_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: 'administer cas'.
+  $permissions['administer cas'] = array(
+    'name' => 'administer cas',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'cas',
+  );
+
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
