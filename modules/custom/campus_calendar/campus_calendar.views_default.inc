@@ -1649,6 +1649,7 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
@@ -1738,7 +1739,7 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['fields']['field_room']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_room']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_room']['field_api_classes'] = TRUE;
-  $handler->display->display_options['path'] = 'day';
+  $handler->display->display_options['path'] = 'events/day';
 
   /* Display: Month Block */
   $handler = $view->new_display('block', 'Month Block', 'block_1');
@@ -1819,6 +1820,7 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
   $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
+  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
@@ -1925,6 +1927,7 @@ function campus_calendar_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
@@ -1982,7 +1985,7 @@ function campus_calendar_views_default_views() {
   );
   $handler->display->display_options['filters']['field_format_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_format_tid']['vocabulary'] = 'event_types';
-  $handler->display->display_options['path'] = 'month';
+  $handler->display->display_options['path'] = 'events/month';
   $export['calendar_date_browser'] = $view;
 
   return $export;

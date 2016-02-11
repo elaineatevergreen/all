@@ -259,7 +259,7 @@ calendar-date-browser',
     'delta' => '9813bc929be0ad92b8104bd809bcbbfb',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'month/*',
+    'pages' => 'events/month*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -379,7 +379,8 @@ calendar-date-browser',
     'delta' => 'calendar_date_browser-block_1',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '<front>',
+    'pages' => '<front>
+events/day*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
