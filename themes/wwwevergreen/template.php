@@ -29,6 +29,11 @@ function wwwevergreen_field__field_display_name(&$variables) {
 	return $output;
 }
 
+//makes sure headshots appearing in content have the right class.
+//function wwwevergreen_field__field_headshot(&$variables){
+	
+//};
+
 //this reformats the field so that the last four digits are bolded if it's an evergreen number.
 //people like that for some reason. :)
 function wwwevergreen_field__field_phone(&$variables) {
