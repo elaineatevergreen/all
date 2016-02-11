@@ -1,0 +1,7 @@
+name = Field Group DL
+description = Provides a definition list field group display formatter.
+package = Fields
+dependencies[] = field_group
+core = 7.x
+version = 7.x-1.x-dev
+
