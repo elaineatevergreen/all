@@ -99,3 +99,33 @@ $show_label = isset($group->format_settings['instance_settings']['show_label']) 
     $element['#suffix'] = '</dl></div>';
 
 }
+
+/**
+ * Implements hook_field_group_build_pre_render_alter().
+ *
+ * Function that fungates as last resort where you can alter things. It is
+ * expected that when you need this function, you have most likely a very custom
+ * case or it is a fix that can be put in field_group core.
+ *
+ * @param Array $elements by address.
+ */
+function field_group_dl_field_group_build_pre_render_alter(& $element) {
+
+  // Prepare variables.
+  $display = isset($element['#view_mode']);
+  $groups = array_keys($element['#groups']);
+
+  // Example from field_group itself to unset empty elements.
+  if ($display) {
+    foreach (element_children($element) as $name) {
+      if (in_array($name, $groups)) {
+	      //how do I wrap each label in a dt and each item in a dd?
+        /*if (field_group_field_group_is_empty($element[$name], $groups)) {
+          unset($element[$name]);
+        }*/
+      }
+    }
+  }
+
+
+}
