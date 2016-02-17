@@ -39,7 +39,7 @@ function learning_community_directory_feeds_importer_default() {
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'expire' => '-1',
-        'author' => '0',
+        'author' => '1',
         'authorize' => 0,
         'mappings' => array(
           0 => array(
