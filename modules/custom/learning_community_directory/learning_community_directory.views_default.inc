@@ -36,41 +36,71 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '10, 25, 50, 75, 100';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
-    'field_address_locality' => 'field_address_locality',
     'field_address_administrative_area' => 'field_address_administrative_area',
+    'field_public_or_private' => 'field_public_or_private',
+    'field_two_or_four_year' => 'field_two_or_four_year',
   );
-  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['style_options']['default'] = 'title';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_address_administrative_area' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_public_or_private' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_two_or_four_year' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'Name';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Field: Address - Locality (i.e. City) */
-  $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
-  $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
-  $handler->display->display_options['fields']['field_address_locality']['label'] = '';
-  $handler->display->display_options['fields']['field_address_locality']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_address_locality']['element_label_colon'] = FALSE;
   /* Field: Field: Address - Administrative area (i.e. State / Province) */
   $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
-  $handler->display->display_options['fields']['field_address_administrative_area']['label'] = '';
-  $handler->display->display_options['fields']['field_address_administrative_area']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'State/Province';
   $handler->display->display_options['fields']['field_address_administrative_area']['alter']['text'] = '([field_address_locality], [field_address_administrative_area])';
   $handler->display->display_options['fields']['field_address_administrative_area']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
+  /* Field: Content: Public or independent */
+  $handler->display->display_options['fields']['field_public_or_private']['id'] = 'field_public_or_private';
+  $handler->display->display_options['fields']['field_public_or_private']['table'] = 'field_data_field_public_or_private';
+  $handler->display->display_options['fields']['field_public_or_private']['field'] = 'field_public_or_private';
+  /* Field: Content: Two or four year */
+  $handler->display->display_options['fields']['field_two_or_four_year']['id'] = 'field_two_or_four_year';
+  $handler->display->display_options['fields']['field_two_or_four_year']['table'] = 'field_data_field_two_or_four_year';
+  $handler->display->display_options['fields']['field_two_or_four_year']['field'] = 'field_two_or_four_year';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
