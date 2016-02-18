@@ -1789,6 +1789,7 @@ function evergreen_content_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'directory_individual' => 'directory_individual',
           'directory_office' => 'directory_office',
         ),
       ),

@@ -355,7 +355,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:0' => 'phone_alt',
           'xpathparser:1' => 'email_addressable',
           'xpathparser:2' => 'name',
-          'xpathparser:3' => 'email',
+          'xpathparser:3' => 'name',
           'xpathparser:4' => 'title',
           'xpathparser:5' => 'name',
           'xpathparser:6' => 'mailstop',
@@ -365,6 +365,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 'fax',
           'xpathparser:12' => 'location',
           'xpathparser:13' => 'email',
+          'xpathparser:14' => 'reference/text()',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -380,12 +381,12 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 0,
           'xpathparser:12' => 0,
           'xpathparser:13' => 0,
+          'xpathparser:14' => 0,
         ),
         'context' => '/people/person',
         'exp' => array(
           'errors' => 1,
           'debug' => array(
-            'xpathparser:12' => 'xpathparser:12',
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
@@ -398,7 +399,9 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:9' => 0,
             'xpathparser:10' => 0,
             'xpathparser:11' => 0,
+            'xpathparser:12' => 0,
             'xpathparser:13' => 0,
+            'xpathparser:14' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -474,6 +477,11 @@ function evergreen_content_feeds_importer_default() {
           12 => array(
             'source' => 'xpathparser:13',
             'target' => 'field_cas_name',
+            'unique' => FALSE,
+          ),
+          13 => array(
+            'source' => 'xpathparser:14',
+            'target' => 'field_reference:label',
             'unique' => FALSE,
           ),
         ),
