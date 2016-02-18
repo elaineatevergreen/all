@@ -333,6 +333,142 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'office_directory_facility';
+  $feeds_importer->config = array(
+    'name' => 'Office Directory - Facility',
+    'description' => 'These items are sub-sections of offices.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => 'phone_alt',
+          'xpathparser:1' => 'email_addressable',
+          'xpathparser:6' => 'mailstop',
+          'xpathparser:7' => 'phone',
+          'xpathparser:9' => 'location',
+          'xpathparser:10' => 'name',
+          'xpathparser:11' => 'fax',
+          'xpathparser:12' => 'location',
+          'xpathparser:13' => 'url',
+        ),
+        'rawXML' => array(
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:6' => 0,
+          'xpathparser:7' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
+          'xpathparser:12' => 0,
+          'xpathparser:13' => 0,
+        ),
+        'context' => '/offices/office/members/facilities/facility',
+        'exp' => array(
+          'errors' => 1,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
+            'xpathparser:12' => 0,
+            'xpathparser:13' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'field_alternate_phone:url',
+            'unique' => FALSE,
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'field_email',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_mailstop',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_phone:url',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_room',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'title',
+            'unique' => 1,
+          ),
+          6 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'field_fax:url',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'xpathparser:12',
+            'target' => 'field_building_alt',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_websites:url',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_facility',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'directory_office',
+        'update_non_existent' => 'skip',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['office_directory_facility'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'people_directory';
   $feeds_importer->config = array(
     'name' => 'People Directory',

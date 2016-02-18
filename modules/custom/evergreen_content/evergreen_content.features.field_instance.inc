@@ -1234,6 +1234,225 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-alumni_of_note-body'.
+  $field_instances['node-alumni_of_note-body'] = array(
+    'bundle' => 'alumni_of_note',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-alumni_of_note-field_email'.
+  $field_instances['node-alumni_of_note-field_email'] = array(
+    'bundle' => 'alumni_of_note',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 35,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-alumni_of_note-field_site_section'.
+  $field_instances['node-alumni_of_note-field_site_section'] = array(
+    'bundle' => 'alumni_of_note',
+    'default_value' => array(
+      0 => array(
+        'tid' => 260,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This should always be "Alumni Programs" unless there\'s a really good reason.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 33,
+    ),
+    'workbench_access_field' => 1,
+  );
+
+  // Exported field_instance: 'node-alumni_of_note-field_websites'.
+  $field_instances['node-alumni_of_note-field_websites'] = array(
+    'bundle' => 'alumni_of_note',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_websites',
+    'label' => 'Websites',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'description_display' => 'after',
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 37,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
@@ -7813,6 +8032,7 @@ function evergreen_content_field_default_field_instances() {
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should ALWAYS be <em>library</em>.');
   t('This should ONLY EVER be the "Home Page" section.');
+  t('This should always be "Alumni Programs" unless there\'s a really good reason.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('Time Offered');

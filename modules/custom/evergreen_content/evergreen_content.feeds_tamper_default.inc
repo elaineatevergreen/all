@@ -77,6 +77,70 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory_facility-blank_source_1-default_value';
+  $feeds_tamper->importer = 'office_directory_facility';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['office_directory_facility-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory_facility-xpathparser_10-trim';
+  $feeds_tamper->importer = 'office_directory_facility';
+  $feeds_tamper->source = 'xpathparser:10';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim whitespace';
+  $export['office_directory_facility-xpathparser_10-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory_facility-xpathparser_12-find_replace_regex';
+  $feeds_tamper->importer = 'office_directory_facility';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/ ([ABCDE]-)?[0-9]+([A-Z])*/',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'REGEX to remove Room';
+  $export['office_directory_facility-xpathparser_12-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory_facility-xpathparser_9-find_replace_regex';
+  $feeds_tamper->importer = 'office_directory_facility';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/[a-zA-Z ]* /',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'REGEX to remove Building';
+  $export['office_directory_facility-xpathparser_9-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'people_directory-xpathparser_12-find_replace_regex';
   $feeds_tamper->importer = 'people_directory';
   $feeds_tamper->source = 'xpathparser:12';
