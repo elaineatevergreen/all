@@ -4022,6 +4022,52 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-directory_office-field_facility'.
+  $field_instances['node-directory_office-field_facility'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Is this a "facility" that belongs to an office? If it is, it won\'t be displayed independently.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_facility',
+    'label' => 'Facility',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_office-field_fax'.
   $field_instances['node-directory_office-field_fax'] = array(
     'bundle' => 'directory_office',
@@ -7649,6 +7695,7 @@ function evergreen_content_field_default_field_instances() {
   t('Expertise');
   t('FAFSA or WASFA Required');
   t('Facebook');
+  t('Facility');
   t('Faculty');
   t('Fax');
   t('First name');
@@ -7681,6 +7728,7 @@ function evergreen_content_field_default_field_instances() {
   t('Interests');
   t('Intro');
   t('Is Faculty');
+  t('Is this a "facility" that belongs to an office? If it is, it won\'t be displayed independently.');
   t('Job Title');
   t('Just a short description. In the future, there will also be an option to select from the standard Fields of Study list.');
   t('Just enter the part of the URL <em>after</em> "itemcode=".');

@@ -309,7 +309,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Website-Specific Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'body',
       1 => 'field_facebook',
@@ -569,7 +569,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Imported Content',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_alternate_phone',
       1 => 'field_building_alt',
