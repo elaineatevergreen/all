@@ -4241,6 +4241,52 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-directory_office-field_facilities'.
+  $field_instances['node-directory_office-field_facilities'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_facilities',
+    'label' => 'Facilities',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 15,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_office-field_facility'.
   $field_instances['node-directory_office-field_facility'] = array(
     'bundle' => 'directory_office',
@@ -4559,7 +4605,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -4605,7 +4651,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -7914,6 +7960,7 @@ function evergreen_content_field_default_field_instances() {
   t('Expertise');
   t('FAFSA or WASFA Required');
   t('Facebook');
+  t('Facilities');
   t('Facility');
   t('Faculty');
   t('Fax');

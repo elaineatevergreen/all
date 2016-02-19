@@ -582,6 +582,7 @@ function evergreen_content_field_group_info() {
       8 => 'field_websites',
       9 => 'field_reference',
       10 => 'field_related_offices',
+      11 => 'field_facilities',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
