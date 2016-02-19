@@ -1379,7 +1379,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 33,
     ),
-    'workbench_access_field' => 1,
+    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-alumni_of_note-field_websites'.
