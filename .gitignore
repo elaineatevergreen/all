@@ -1,3 +1,9 @@
+#================
+#
+# Drupal Nonsense
+#
+#================
+
 modules/contrib/**
 .idea
 modules/contrib/webform_validation/webform_validation.install
@@ -5,13 +11,6 @@ modules/contrib/webform_validation/webform_validation.module
 modules/contrib/webform_validation/webform_validation.validators.inc
 modules/contrib/webform_validation/webform_validation.info
 modules/contrib/webform_validation/webform_validation.admin.inc
-#================
-#
-# Drupal Nonsense
-#
-#================
-
-modules/contrib
 
 #=============
 #
