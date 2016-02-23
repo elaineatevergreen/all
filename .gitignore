@@ -5,3 +5,6 @@ modules/contrib/webform_validation/webform_validation.module
 modules/contrib/webform_validation/webform_validation.validators.inc
 modules/contrib/webform_validation/webform_validation.info
 modules/contrib/webform_validation/webform_validation.admin.inc
+feeds.pages.inc
+modules/contrib/feeds/feeds_news/feeds_news.info
+/modules/contrib
