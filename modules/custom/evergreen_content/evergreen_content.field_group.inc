@@ -309,7 +309,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Website-Specific Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'body',
       1 => 'field_facebook',
@@ -569,17 +569,20 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Imported Content',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_alternate_phone',
       1 => 'field_building_alt',
       2 => 'field_email',
       3 => 'field_fax',
       4 => 'field_mailstop',
-      5 => 'field_phone',
-      6 => 'field_room',
-      7 => 'field_websites',
-      8 => 'field_members',
+      5 => 'field_members',
+      6 => 'field_phone',
+      7 => 'field_room',
+      8 => 'field_websites',
+      9 => 'field_reference',
+      10 => 'field_related_offices',
+      11 => 'field_facilities',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

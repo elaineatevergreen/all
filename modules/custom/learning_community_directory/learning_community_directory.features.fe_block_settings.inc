@@ -21,18 +21,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'stark',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => 'footer',
         'status' => 1,
@@ -53,18 +41,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'stark',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -85,18 +61,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'stark',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => 'header_dropdowns',
         'status' => 1,
@@ -117,18 +81,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'stark',
-        'weight' => -8,
-      ),
       'wwwevergreen' => array(
         'region' => 'content',
         'status' => 1,
@@ -149,18 +101,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'stark',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -181,18 +121,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 1,
-      ),
-      'stark' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'stark',
-        'weight' => -8,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -213,18 +141,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'stark',
-        'weight' => -9,
-      ),
       'wwwevergreen' => array(
         'region' => 'section_nav',
         'status' => 1,
@@ -245,18 +161,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'stark',
-        'weight' => -10,
-      ),
       'wwwevergreen' => array(
         'region' => 'content',
         'status' => 1,
@@ -277,18 +181,6 @@ function learning_community_directory_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'stark' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'stark',
-        'weight' => -6,
-      ),
       'wwwevergreen' => array(
         'region' => 'content',
         'status' => 1,

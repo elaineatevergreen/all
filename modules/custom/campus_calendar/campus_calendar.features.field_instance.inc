@@ -196,6 +196,49 @@ function campus_calendar_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_flyer'.
+  $field_instances['node-event-field_flyer'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => 'Upload a PDF of your flier that people can download and print.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_flyer',
+    'label' => 'Flyer',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 0,
+      'file_directory' => 'fliers',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_format'.
   $field_instances['node-event-field_format'] = array(
     'bundle' => 'event',
@@ -439,6 +482,7 @@ function campus_calendar_field_default_field_instances() {
   t('Choose the format of the event. If the event includes more than one, choose the most relevant type.');
   t('Date');
   t('Description');
+  t('Flyer');
   t('Format');
   t('If your event is being held in Sem II, include the building (A, B, C, D, or E) here. You can also use this field for locations not listed above: Red Square, dorms, etc.');
   t('Image');
@@ -448,6 +492,7 @@ function campus_calendar_field_default_field_instances() {
   t('Select the topic of the event. You may select more than one subject as appropriate.');
   t('Sponsored By');
   t('The name of the department or series, ie, "Career Center" or "Geoducks @ Nite" (this could also maybe be a dropdown, or a select/other?)');
+  t('Upload a PDF of your flier that people can download and print.');
   t('You can upload a single image to be displayed with your event description.');
 
   return $field_instances;

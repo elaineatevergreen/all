@@ -10,6 +10,15 @@
 function campus_calendar_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access admin theme'.
+  $permissions['access admin theme'] = array(
+    'name' => 'access admin theme',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_theme',
+  );
+
   // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -158,6 +167,24 @@ function campus_calendar_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'block',
+  );
+
+  // Exported permission: 'administer cas'.
+  $permissions['administer cas'] = array(
+    'name' => 'administer cas',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'cas',
+  );
+
+  // Exported permission: 'administer ckeditor'.
+  $permissions['administer ckeditor'] = array(
+    'name' => 'administer ckeditor',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ckeditor',
   );
 
   // Exported permission: 'administer content types'.
@@ -497,7 +524,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'clear google_calendar_ical feeds'.
   $permissions['clear google_calendar_ical feeds'] = array(
     'name' => 'clear google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -522,7 +551,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -533,6 +564,15 @@ function campus_calendar_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'customize ckeditor'.
+  $permissions['customize ckeditor'] = array(
+    'name' => 'customize ckeditor',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'ckeditor',
   );
 
   // Exported permission: 'customize shortcut links'.
@@ -584,7 +624,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -637,7 +679,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -662,6 +706,13 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'delete terms in calendar_categories'.
   $permissions['delete terms in calendar_categories'] = array(
     'name' => 'delete terms in calendar_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in event_types'.
+  $permissions['delete terms in event_types'] = array(
+    'name' => 'delete terms in event_types',
     'roles' => array(),
     'module' => 'taxonomy',
   );
@@ -778,7 +829,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -831,7 +884,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -851,6 +906,13 @@ function campus_calendar_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in event_types'.
+  $permissions['edit terms in event_types'] = array(
+    'name' => 'edit terms in event_types',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'generate features'.
   $permissions['generate features'] = array(
     'name' => 'generate features',
@@ -863,7 +925,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'import google_calendar_ical feeds'.
   $permissions['import google_calendar_ical feeds'] = array(
     'name' => 'import google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -983,7 +1047,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'unlock google_calendar_ical feeds'.
   $permissions['unlock google_calendar_ical feeds'] = array(
     'name' => 'unlock google_calendar_ical feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
