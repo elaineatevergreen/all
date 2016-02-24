@@ -33,8 +33,10 @@ function evergreen_content_feeds_importer_default() {
       'config' => array(
         'sources' => array(
           'xpathparser:0' => 'title',
+          'xpathparser:1' => 'description',
         ),
         'rawXML' => array(
+          'xpathparser:1' => 'xpathparser:1',
           'xpathparser:0' => 0,
         ),
         'context' => 'programs/program',
@@ -43,6 +45,7 @@ function evergreen_content_feeds_importer_default() {
           'debug' => array(
             'context' => 0,
             'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -58,6 +61,12 @@ function evergreen_content_feeds_importer_default() {
           0 => array(
             'source' => 'xpathparser:0',
             'target' => 'title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'body',
             'unique' => FALSE,
           ),
         ),
