@@ -3268,7 +3268,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'media';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'element-list';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entityqueue: Node Queue */
   $handler->display->display_options['relationships']['entityqueue_relationship']['id'] = 'entityqueue_relationship';
@@ -3279,6 +3284,21 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['relationships']['entityqueue_relationship']['queues'] = array(
     'magazine' => 'magazine',
     'winter_2016' => 0,
+  );
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_image']['element_wrapper_class'] = 'media-img';
+  $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -3301,34 +3321,39 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['queue']['relationship'] = 'entityqueue_relationship';
   $handler->display->display_options['fields']['queue']['label'] = 'Top Level Queue Name';
   $handler->display->display_options['fields']['queue']['exclude'] = TRUE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_image']['field_api_classes'] = TRUE;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_type'] = '0';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
-  );
+  /* Field: Content: Byline */
+  $handler->display->display_options['fields']['field_byline']['id'] = 'field_byline';
+  $handler->display->display_options['fields']['field_byline']['table'] = 'field_data_field_byline';
+  $handler->display->display_options['fields']['field_byline']['field'] = 'field_byline';
+  $handler->display->display_options['fields']['field_byline']['label'] = '';
+  $handler->display->display_options['fields']['field_byline']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_byline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_byline']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_byline']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_byline']['field_api_classes'] = TRUE;
+  /* Field: Content: Blurb */
+  $handler->display->display_options['fields']['field_blurb']['id'] = 'field_blurb';
+  $handler->display->display_options['fields']['field_blurb']['table'] = 'field_data_field_blurb';
+  $handler->display->display_options['fields']['field_blurb']['field'] = 'field_blurb';
+  $handler->display->display_options['fields']['field_blurb']['label'] = '';
+  $handler->display->display_options['fields']['field_blurb']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_blurb']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_blurb']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_blurb']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_blurb']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h3>[title]</h3>
+<p class="caption">[field_byline]</p>
+<p>[field_blurb]</p>';
+  $handler->display->display_options['fields']['nothing']['element_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'media-body';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Contextual filter: Subqueue: Name */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'entityqueue_subqueue';
@@ -3362,8 +3387,44 @@ function evergreen_content_views_default_views() {
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Images and Blurbs */
+  $handler = $view->new_display('block', 'Images and Blurbs', 'blurbs');
+
+  /* Display: Simple List */
+  $handler = $view->new_display('block', 'Simple List', 'simple');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Subqueue: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'entityqueue_subqueue';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'entityqueue_relationship';
+  $handler->display->display_options['fields']['name']['label'] = 'Subqueue Name';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  /* Field: Subqueue: Queue Name */
+  $handler->display->display_options['fields']['queue']['id'] = 'queue';
+  $handler->display->display_options['fields']['queue']['table'] = 'entityqueue_subqueue';
+  $handler->display->display_options['fields']['queue']['field'] = 'queue';
+  $handler->display->display_options['fields']['queue']['relationship'] = 'entityqueue_relationship';
+  $handler->display->display_options['fields']['queue']['label'] = 'Top Level Queue Name';
+  $handler->display->display_options['fields']['queue']['exclude'] = TRUE;
   $export['magazine'] = $view;
 
   $view = new view();
