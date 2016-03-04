@@ -297,7 +297,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'administer contact forms'.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'contact',
   );
 
@@ -826,7 +828,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'clear people_directory feeds'.
   $permissions['clear people_directory feeds'] = array(
     'name' => 'clear people_directory feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -898,7 +902,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create catalog_entry content'.
   $permissions['create catalog_entry content'] = array(
     'name' => 'create catalog_entry content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -933,7 +939,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create evergreen_magazine entityqueue'.
   $permissions['create evergreen_magazine entityqueue'] = array(
     'name' => 'create evergreen_magazine entityqueue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'entityqueue',
   );
 
@@ -959,7 +967,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create home_page_hero content'.
   $permissions['create home_page_hero content'] = array(
     'name' => 'create home_page_hero content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1095,7 +1105,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete any catalog_entry content'.
   $permissions['delete any catalog_entry content'] = array(
     'name' => 'delete any catalog_entry content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1148,7 +1160,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete any home_page_hero content'.
   $permissions['delete any home_page_hero content'] = array(
     'name' => 'delete any home_page_hero content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1228,7 +1242,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete evergreen_magazine entityqueue'.
   $permissions['delete evergreen_magazine entityqueue'] = array(
     'name' => 'delete evergreen_magazine entityqueue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'entityqueue',
   );
 
@@ -1274,7 +1290,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete own catalog_entry content'.
   $permissions['delete own catalog_entry content'] = array(
     'name' => 'delete own catalog_entry content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1328,7 +1346,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete own home_page_hero content'.
   $permissions['delete own home_page_hero content'] = array(
     'name' => 'delete own home_page_hero content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1581,7 +1601,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit any catalog_entry content'.
   $permissions['edit any catalog_entry content'] = array(
     'name' => 'edit any catalog_entry content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1635,7 +1657,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit any home_page_hero content'.
   $permissions['edit any home_page_hero content'] = array(
     'name' => 'edit any home_page_hero content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1763,7 +1787,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit own catalog_entry content'.
   $permissions['edit own catalog_entry content'] = array(
     'name' => 'edit own catalog_entry content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1818,7 +1844,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit own home_page_hero content'.
   $permissions['edit own home_page_hero content'] = array(
     'name' => 'edit own home_page_hero content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1981,7 +2009,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'import people_directory feeds'.
   $permissions['import people_directory feeds'] = array(
     'name' => 'import people_directory feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -2174,7 +2204,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'tamper people_directory'.
   $permissions['tamper people_directory'] = array(
     'name' => 'tamper people_directory',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
@@ -2217,7 +2249,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock people_directory feeds'.
   $permissions['unlock people_directory feeds'] = array(
     'name' => 'unlock people_directory feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -2233,7 +2267,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'update evergreen_magazine entityqueue'.
   $permissions['update evergreen_magazine entityqueue'] = array(
     'name' => 'update evergreen_magazine entityqueue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'entityqueue',
   );
 
