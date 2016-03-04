@@ -17,7 +17,7 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->name = 'Test/Collabtest';
   $environment->regexurl = 'collabtest.*';
   $environment->settings = array(
-    'color' => '#f3971c',
+    'color' => '#888888',
     'text_color' => '#ffffff',
     'weight' => '',
     'position' => 'top',
@@ -30,9 +30,9 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'live_collab';
   $environment->name = 'Live/Collab';
-  $environment->regexurl = 'collab.*';
+  $environment->regexurl = 'collab\\..*';
   $environment->settings = array(
-    'color' => '#93be95',
+    'color' => '#a9a9a9',
     'text_color' => '#ffffff',
     'weight' => '',
     'position' => 'top',
