@@ -16,5 +16,5 @@ if [ "$STAGE"=='dev' ] ; then
   deploy_d7_theme themes/wwwevergreen $COLLAB_CODE/www7
   deploy_d7_custom_module modules/custom/evergreen_content $COLLAB_CODE/www7
   deploy_d7_custom_module modules/custom/campus_calendar $COLLAB_CODE/www7
-  #run_site_updates $COLLAB_CODE/www7 site_updates_www
+  run_site_updates $COLLAB_CODE/www7 site_updates_www
 fi
