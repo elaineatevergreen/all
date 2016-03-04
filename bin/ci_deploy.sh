@@ -1,6 +1,6 @@
 #!/bin/bash
 # Source adminweb environment.
-. /opt/evergreen/ods/bin/adminweb_build_environment.sh
+. /opt/evergreen/ods/bin/collab_build_environment.sh
 . drupal_deploy_functions.sh
 . d7_migrations.sh
 # Deploy Themes
