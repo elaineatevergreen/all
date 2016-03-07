@@ -48,48 +48,58 @@ function learning_community_directory_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
-            'source' => 'institutionWebsite',
-            'target' => 'field_institution_website:url',
-            'unique' => FALSE,
-          ),
-          2 => array(
-            'source' => 'Public/Independent',
-            'target' => 'field_public_or_private',
-            'unique' => FALSE,
-          ),
-          3 => array(
-            'source' => '2Or4Year',
-            'target' => 'field_two_or_four_year',
-            'unique' => FALSE,
-          ),
-          4 => array(
-            'source' => 'StudentsServed',
-            'target' => 'field_population_served',
-            'unique' => FALSE,
-          ),
-          5 => array(
-            'source' => 'zipcode',
-            'target' => 'field_address:postal_code',
-            'unique' => FALSE,
-          ),
-          6 => array(
-            'source' => 'state',
-            'target' => 'field_address:administrative_area',
-            'unique' => FALSE,
-          ),
-          7 => array(
-            'source' => 'city',
-            'target' => 'field_address:locality',
-            'unique' => FALSE,
-          ),
-          8 => array(
             'source' => 'address',
             'target' => 'field_address:thoroughfare',
             'unique' => FALSE,
           ),
-          9 => array(
+          2 => array(
+            'source' => 'city',
+            'target' => 'field_address:locality',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'state',
+            'target' => 'field_address:administrative_area',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'zipcode',
+            'target' => 'field_address:postal_code',
+            'unique' => FALSE,
+          ),
+          5 => array(
             'source' => 'country',
             'target' => 'field_address:country',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'institutionWebsite',
+            'target' => 'field_institution_website:url',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'institutionType_PublicOrIndependent',
+            'target' => 'field_public_or_private',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'institutionType_2Or4Year',
+            'target' => 'field_two_or_four_year',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'institutionType_StudentsServed',
+            'target' => 'field_population_served',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'undergradEnrollment_Fulltime',
+            'target' => 'field_full_time_enrollment',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'undergradEnrollment_Parttime',
+            'target' => 'field_part_time_enrollment',
             'unique' => FALSE,
           ),
         ),
