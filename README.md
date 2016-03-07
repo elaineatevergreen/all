@@ -25,6 +25,7 @@ scripts in site_updates_collab_
 * collab.evergreen.edu.splash - Copy of the default site config 
 * collab.evergreen.edu.surveys - Campus surveys
 * collab.evergreen.edu.wacenter - Old Washington center site 
+* collabetest.evergreen.edu.washingtoncenter - New washington center site. 
 
 # Collab Sites (www7)
 The following sites are using the www7 code tree and are updated by 
