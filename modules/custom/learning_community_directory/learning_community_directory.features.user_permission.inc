@@ -429,14 +429,18 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'clear institutions feeds'.
   $permissions['clear institutions feeds'] = array(
     'name' => 'clear institutions feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
   // Exported permission: 'create basic_page content'.
   $permissions['create basic_page content'] = array(
     'name' => 'create basic_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -470,7 +474,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'delete any basic_page content'.
   $permissions['delete any basic_page content'] = array(
     'name' => 'delete any basic_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -497,7 +503,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'delete own basic_page content'.
   $permissions['delete own basic_page content'] = array(
     'name' => 'delete own basic_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -533,7 +541,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'edit any basic_page content'.
   $permissions['edit any basic_page content'] = array(
     'name' => 'edit any basic_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -560,7 +570,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'edit own basic_page content'.
   $permissions['edit own basic_page content'] = array(
     'name' => 'edit own basic_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -607,7 +619,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'import institutions feeds'.
   $permissions['import institutions feeds'] = array(
     'name' => 'import institutions feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -689,7 +703,9 @@ function learning_community_directory_user_default_permissions() {
   // Exported permission: 'unlock institutions feeds'.
   $permissions['unlock institutions feeds'] = array(
     'name' => 'unlock institutions feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
