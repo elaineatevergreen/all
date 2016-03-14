@@ -1280,7 +1280,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 3,
     ),
   );
 
@@ -1327,7 +1327,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 35,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -1367,7 +1367,7 @@ function evergreen_content_field_default_field_instances() {
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_site_section',
     'label' => 'Site Section',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
@@ -1377,9 +1377,9 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 1,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-alumni_of_note-field_websites'.
@@ -1448,7 +1448,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 37,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
