@@ -132,6 +132,7 @@ features[fe_block_settings][] = search-form
 features[fe_block_settings][] = system-navigation
 features[fe_block_settings][] = system-powered-by
 features[fe_block_settings][] = views-alerts-block
+features[fe_block_settings][] = views-alumni_directories-update
 features[fe_block_settings][] = views-blog-home
 features[fe_block_settings][] = views-calendar-home
 features[fe_block_settings][] = views-home_page_hero-block
