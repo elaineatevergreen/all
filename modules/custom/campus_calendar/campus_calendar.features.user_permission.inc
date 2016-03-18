@@ -214,6 +214,15 @@ function campus_calendar_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'administer feeds_tamper'.
+  $permissions['administer feeds_tamper'] = array(
+    'name' => 'administer feeds_tamper',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'administer fieldgroups'.
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
@@ -519,6 +528,13 @@ function campus_calendar_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'clear academic_calendar_csv feeds'.
+  $permissions['clear academic_calendar_csv feeds'] = array(
+    'name' => 'clear academic_calendar_csv feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'clear google_calendar_ical feeds'.
@@ -922,6 +938,13 @@ function campus_calendar_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'import academic_calendar_csv feeds'.
+  $permissions['import academic_calendar_csv feeds'] = array(
+    'name' => 'import academic_calendar_csv feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import google_calendar_ical feeds'.
   $permissions['import google_calendar_ical feeds'] = array(
     'name' => 'import google_calendar_ical feeds',
@@ -1042,6 +1065,31 @@ function campus_calendar_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'shortcut',
+  );
+
+  // Exported permission: 'tamper academic_calendar_csv'.
+  $permissions['tamper academic_calendar_csv'] = array(
+    'name' => 'tamper academic_calendar_csv',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper google_calendar_ical'.
+  $permissions['tamper google_calendar_ical'] = array(
+    'name' => 'tamper google_calendar_ical',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'unlock academic_calendar_csv feeds'.
+  $permissions['unlock academic_calendar_csv feeds'] = array(
+    'name' => 'unlock academic_calendar_csv feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'unlock google_calendar_ical feeds'.
