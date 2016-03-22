@@ -70,7 +70,7 @@ function wwwevergreen_field__field_phone(&$variables) {
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
-  if ($vars['view']->name == 'calendar') {
+  /*if ($vars['view']->name == 'calendar') {
     // get var from GET
     $obj_type = $_GET['category'];
     if (isset($obj_type)) {
@@ -84,7 +84,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
       };
       //update title
       $vars['view']->build_info['title'] = $tax_name;
-    };
+    };*/
 }
 
 //this combines the building and room fields in Directory Office into a single field
