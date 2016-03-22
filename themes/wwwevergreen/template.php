@@ -63,6 +63,30 @@ function wwwevergreen_field__field_phone(&$variables) {
   return $output;
 }
 
+/**
+ * THEME_PREPROCESS_VIEWS_VIEW
+ * @param type $vars
+ * Adds category to title for the calendar. I hope. Taken from https://www.drupal.org/node/658566#comment-8278349
+ * 
+ */
+function wwwevergreen_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'calendar') {
+    // get var from GET
+    $obj_type = $_GET['category'];
+    if (isset($obj_type)) {
+      // obj_type is the taxonomy term, get taxonomy term name
+      $tax_name=taxonomy_term_load($obj_type)->name;
+      // if taxonomy term have parents
+      $tax_parent = taxonomy_get_parents_all($obj_type);
+      if (isset($tax_parent[1])) {
+        // add parent name to taxonomy term name
+        $tax_name =  $tax_parent[1]->name . ', ' . $tax_name;
+      }
+      //update title
+      $vars['view']->build_info['title'] = $tax_name;
+    }
+}
+
 //this combines the building and room fields in Directory Office into a single field
 //see http://drupal.stackexchange.com/questions/59770/what-is-best-way-to-combine-multiple-fields-in-template-preprocess
 /*function wwwevergreen_preprocess_node(&$variables) {
