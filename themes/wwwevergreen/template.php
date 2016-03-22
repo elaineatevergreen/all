@@ -84,6 +84,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
       };
       //update title
       $vars['view']->build_info['title'] = $tax_name;
+      $vars['view']->build_info['title'] = "hello world";
     }
   }
 }
