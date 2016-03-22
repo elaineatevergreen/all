@@ -107,14 +107,6 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'alumni_of_note' => array(
-      'name' => t('Alumni of Note'),
-      'base' => 'node_content',
-      'description' => t('Use an <em>Alumni of Note</em> when adding someone to an alumni directory. These entries can be connected to <em>Profiles</em> as well.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'article' => array(
       'name' => t('News or Blog Post'),
       'base' => 'node_content',
