@@ -81,10 +81,10 @@ function wwwevergreen_preprocess_views_view(&$vars) {
       if (isset($tax_parent[1])) {
         // add parent name to taxonomy term name
         $tax_name =  $tax_parent[1]->name . ', ' . $tax_name;
-      }
+      };
       //update title
       $vars['view']->build_info['title'] = $tax_name;
-    }
+    };
 }
 
 //this combines the building and room fields in Directory Office into a single field
