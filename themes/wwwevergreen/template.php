@@ -78,7 +78,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 			// obj_type is the taxonomy term, get taxonomy term name
 				$cat_name=taxonomy_term_load($category)->name;
 				//update title
-				$vars['view']->build_info['title'] = $tax_name;
+				$vars['view']->build_info['title'] = $cat_name;
       		}; //end foreach
     	}; //end if set
     }; //end if view
