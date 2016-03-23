@@ -74,14 +74,14 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     // get var from GET
     	$categories = $_GET['category'];
 		if (isset($categories)) {
-	    	foreach($categories as $category)
+	    	foreach($categories as $category) {
 			// obj_type is the taxonomy term, get taxonomy term name
 				$cat_name=taxonomy_term_load($category)->name;
 				//update title
 				$vars['view']->build_info['title'] = $tax_name;
-      		} //end foreach
-    	} //end if set
-    } //end if view
+      		}; //end foreach
+    	}; //end if set
+    }; //end if view
     //$vars['view']->build_info['title'] = "hello world";
 }
 
