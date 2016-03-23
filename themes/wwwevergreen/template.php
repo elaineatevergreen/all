@@ -80,7 +80,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 				//update title
 				//$vars['view']->build_info['title'] = $cat_name;
       		}; //end foreach
-      		if(count$cat_names == 1) { 
+      		if(count($cat_names) == 1) { 
 	      		$nice_cat_names = $cat_names[0]; 
 	      		$s = 'ies';
 	      	} else {
