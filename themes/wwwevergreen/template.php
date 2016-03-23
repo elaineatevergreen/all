@@ -87,7 +87,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 		      	$nice_cat_names = implode(', ', $cat_names);
 		      	$s = 'y';
 	      	}
-      		$vars['view']->build_info['header'] = "Categor$s: $nice_cat_names";
+      		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
     	}; //end if set
     }; //end if view
 }
