@@ -76,13 +76,20 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 		if (isset($categories)) {
 	    	foreach($categories as $category) {
 			// obj_type is the taxonomy term, get taxonomy term name
-				$cat_name=taxonomy_term_load($category)->name;
+				$cat_names[]=taxonomy_term_load($category)->name;
 				//update title
-				$vars['view']->build_info['title'] = $cat_name;
+				//$vars['view']->build_info['title'] = $cat_name;
       		}; //end foreach
+      		if(count$cat_names == 1) { 
+	      		$nice_cat_names = $cat_names[0]; 
+	      		$s = 'ies';
+	      	} else {
+		      	$nice_cat_names = implode(', ', $cat_names);
+		      	$s = 'y';
+	      	}
+      		$vars['view']->build_info['header'] = "Categor$s: $nice_cat_names";
     	}; //end if set
     }; //end if view
-    //$vars['view']->build_info['title'] = "hello world";
 }
 
 //this combines the building and room fields in Directory Office into a single field
