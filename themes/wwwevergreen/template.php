@@ -82,10 +82,10 @@ function wwwevergreen_preprocess_views_view(&$vars) {
       		}; //end foreach
       		if(count($cat_names) == 1) { 
 	      		$nice_cat_names = $cat_names[0]; 
-	      		$s = 'ies';
+	      		$s = 'y';
 	      	} else {
 		      	$nice_cat_names = implode(', ', $cat_names);
-		      	$s = 'y';
+		      	$s = 'ies';
 	      	}
       		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
     	}; //end if set
