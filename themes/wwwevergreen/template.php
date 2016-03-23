@@ -70,24 +70,19 @@ function wwwevergreen_field__field_phone(&$variables) {
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
-  if ($vars['view']->name == 'calendar') {
+	if ($vars['view']->name == 'calendar') {
     // get var from GET
-    $obj_type = $_GET['category'];
-    if (isset($obj_type)) {
-      // obj_type is the taxonomy term, get taxonomy term name
-      $tax_name=taxonomy_term_load($obj_type)->name;
-      // if taxonomy term have parents
-      $tax_parent = taxonomy_get_parents_all($obj_type);
-      if (isset($tax_parent[1])) {
-        // add parent name to taxonomy term name
-        $tax_name =  $tax_parent[1]->name . ', ' . $tax_name;
-      };
-      //update title
-      $vars['view']->build_info['title'] = $tax_name;
-      $vars['view']->build_info['title'] = "hello world";
-    }
-    $vars['view']->build_info['title'] = "hello world";
-  }
+    	$categories = $_GET['category'];
+		if (isset($categories)) {
+	    	foreach($categories as $category)
+			// obj_type is the taxonomy term, get taxonomy term name
+				$cat_name=taxonomy_term_load($category)->name;
+				//update title
+				$vars['view']->build_info['title'] = $tax_name;
+      		} //end foreach
+    	} //end if set
+    } //end if view
+    //$vars['view']->build_info['title'] = "hello world";
 }
 
 //this combines the building and room fields in Directory Office into a single field
