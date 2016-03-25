@@ -533,7 +533,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'clear academic_calendar_csv feeds'.
   $permissions['clear academic_calendar_csv feeds'] = array(
     'name' => 'clear academic_calendar_csv feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -560,6 +562,7 @@ function campus_calendar_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -941,7 +944,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'import academic_calendar_csv feeds'.
   $permissions['import academic_calendar_csv feeds'] = array(
     'name' => 'import academic_calendar_csv feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -1088,7 +1093,9 @@ function campus_calendar_user_default_permissions() {
   // Exported permission: 'unlock academic_calendar_csv feeds'.
   $permissions['unlock academic_calendar_csv feeds'] = array(
     'name' => 'unlock academic_calendar_csv feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 

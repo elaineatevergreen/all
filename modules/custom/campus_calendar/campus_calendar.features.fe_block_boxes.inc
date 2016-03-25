@@ -12,9 +12,9 @@ function campus_calendar_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'HTML outlining upcoming school years. NOT AUTOMATIC.';
-  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'academicyears';
-  $fe_block_boxes->body = '<p><strong>2015-16</strong></p>
+  $fe_block_boxes->body = '<h3>2015-16</h3>
 
 <ul>
 	<li>Fall Quarter: September 28, 2015–December 18, 2015</li>
@@ -23,7 +23,7 @@ function campus_calendar_default_fe_block_boxes() {
 	<li>Summer Quarter: June 20, 2016–September 2, 2016</li>
 </ul>
 
-<p><strong>2016-17</strong></p>
+<h3>2016-17</h3>
 
 <ul>
 	<li>Fall Quarter: September 26, 2016 –December 16, 2016</li>
@@ -55,7 +55,7 @@ function campus_calendar_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Fake menu with correct HTML.';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'pseudomenu';
-  $fe_block_boxes->body = '<ul class="element-list"><li><input id="collapse-1" name="accordion-group" type="radio"><h4 class="accordion-h tertiary-nav-h"><label class="accordion-dismiss" for="collapse-all">Calendars</label><label class="accordion-toggle" for="collapse-1">Calendars</label></h4><div class="accordion-body"><ul class="accordion-inner tertiary-nav-list"><li><a href="/calendar">Campus Events Calendar</a></li><li><a href="/calendar/academic">Academic Calendar at-a-Glance</a></li><li><a href="/calendar/holidays">Holidays</a></li></ul></div></li><li><input id="collapse-2" name="accordion-group" type="radio"><h4 class="accordion-h tertiary-nav-h"><label class="accordion-dismiss" for="collapse-all">Instructions</label><label class="accordion-toggle" for="collapse-2">Instructions</label></h4><div class="accordion-body"><ul class="accordion-inner tertiary-nav-list"><li><a href="calendardescriptions.htm">Calendar Descriptions </a></li><li><a href="submissionguidelines.htm">Submission Guidelines </a></li><li><a href="using.htm">Using the Campus Calendar</a></li></ul></div></li></ul>';
+  $fe_block_boxes->body = '<ul class="element-list"><li><input id="collapse-1" name="accordion-group" type="radio"><h4 class="accordion-h tertiary-nav-h"><label class="accordion-dismiss" for="collapse-all">Calendars</label><label class="accordion-toggle" for="collapse-1">Calendars</label></h4><div class="accordion-body"><ul class="accordion-inner tertiary-nav-list"><li><a href="/calendar">Campus Events Calendar</a></li><li><a href="/calendar/academic">Academic Calendar at-a-Glance</a></li><li><a href="/calendar/events/month">Events by Month</a></li><li><a href="/calendar/category">Events by Category</a></li><li><a href="/calendar/holidays">Holidays</a></li></ul></div></li><li><input id="collapse-2" name="accordion-group" type="radio"><h4 class="accordion-h tertiary-nav-h"><label class="accordion-dismiss" for="collapse-all">Instructions</label><label class="accordion-toggle" for="collapse-2">Instructions</label></h4><div class="accordion-body"><ul class="accordion-inner tertiary-nav-list"><li><a href="descriptions">Categories & Formats </a></li><li><a href="/calendar/guidelines">Submission Guidelines </a></li></ul></div></li></ul>';
 
   $export['pseudomenu'] = $fe_block_boxes;
 

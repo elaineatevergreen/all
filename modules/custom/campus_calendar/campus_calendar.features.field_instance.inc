@@ -167,6 +167,7 @@ function campus_calendar_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_event_date',
     'label' => 'Date',
     'required' => 0,
@@ -187,6 +188,7 @@ function campus_calendar_field_default_field_instances() {
         'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'repeat_collapsed' => 1,
         'text_parts' => array(),
         'year_range' => '-1:+1',
@@ -248,9 +250,8 @@ function campus_calendar_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'teaser' => array(
