@@ -29,6 +29,11 @@ function wwwevergreen_field__field_display_name(&$variables) {
 	return $output;
 }
 
+//makes sure headshots appearing in content have the right class.
+//function wwwevergreen_field__field_headshot(&$variables){
+	
+//};
+
 //this reformats the field so that the last four digits are bolded if it's an evergreen number.
 //people like that for some reason. :)
 function wwwevergreen_field__field_phone(&$variables) {
@@ -57,6 +62,55 @@ function wwwevergreen_field__field_phone(&$variables) {
 
   return $output;
 }
+
+/**
+ * THEME_PREPROCESS_VIEWS_VIEW
+ * @param type $vars
+ * Adds category to title for the calendar. I hope. Taken from https://www.drupal.org/node/658566#comment-8278349
+ * 
+ */
+function wwwevergreen_preprocess_views_view(&$vars) {
+	if ($vars['view']->name == 'calendar') {
+    // get var from GET
+    	$categories = $_GET['category'];
+		if (isset($categories)) {
+	    	foreach($categories as $category) {
+			// obj_type is the taxonomy term, get taxonomy term name
+				$cat_names[]=taxonomy_term_load($category)->name;
+				//update title
+				//$vars['view']->build_info['title'] = $cat_name;
+      		}; //end foreach
+      		if(count($cat_names) == 1) { 
+	      		$nice_cat_names = $cat_names[0]; 
+	      		$s = 'y';
+	      	} else {
+		      	$nice_cat_names = implode(', ', $cat_names);
+		      	$s = 'ies';
+	      	}
+      		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
+    	}; //end if set
+    }; //end if view
+}
+
+/**
+ * Implements hook_form_alter().
+   Stupid Views bug. https://www.drupal.org/node/339384#comment-10588874
+ */
+function wwwevergreen_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+
+    case 'views_exposed_form':
+      // Temporarily fix BUG: https://www.drupal.org/node/339384
+      foreach($form AS $key => $element) {
+        if (is_array($element) && isset($element['#description'])) {
+          unset($form[$key]['#description']);
+        }
+      };
+     break;
+
+  }
+}
+
 
 //this combines the building and room fields in Directory Office into a single field
 //see http://drupal.stackexchange.com/questions/59770/what-is-best-way-to-combine-multiple-fields-in-template-preprocess

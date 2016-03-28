@@ -32,6 +32,26 @@ function evergreen_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['custom_search_blocks-1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 1,
+    'module' => 'custom_search_blocks',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['search-form'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -108,6 +128,26 @@ function evergreen_content_default_fe_block_settings() {
         'status' => 1,
         'theme' => 'wwwevergreen',
         'weight' => -25,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-alumni_directories-update'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'alumni_directories-update',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'secondary_content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -213,7 +253,7 @@ function evergreen_content_default_fe_block_settings() {
       4 => 'home_page',
       5 => 'webform',
     ),
-    'pages' => '',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -238,7 +278,7 @@ function evergreen_content_default_fe_block_settings() {
       2 => 'event',
       3 => 'webform',
     ),
-    'pages' => 'directories',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -287,11 +327,10 @@ function evergreen_content_default_fe_block_settings() {
     'node_types' => array(
       0 => 'article',
       1 => 'basic_page',
-      2 => 'directory_individual',
-      3 => 'event',
-      4 => 'webform',
+      2 => 'event',
+      3 => 'webform',
     ),
-    'pages' => '',
+    'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(

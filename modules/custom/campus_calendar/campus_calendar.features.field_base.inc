@@ -123,6 +123,29 @@ function campus_calendar_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_flyer'.
+  $field_bases['field_flyer'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_flyer',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_format'.
   $field_bases['field_format'] = array(
     'active' => 1,
