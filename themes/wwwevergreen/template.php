@@ -92,6 +92,26 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     }; //end if view
 }
 
+/**
+ * Implements hook_form_alter().
+   Stupid Views bug. https://www.drupal.org/node/339384#comment-10588874
+ */
+function wwwevergreen_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+
+    case 'views_exposed_form':
+      // Temporarily fix BUG: https://www.drupal.org/node/339384
+      foreach($form AS $key => $element) {
+        if (is_array($element) && isset($element['#description'])) {
+          unset($form[$key]['#description']);
+        }
+      };
+     break;
+
+  }
+}
+
+
 //this combines the building and room fields in Directory Office into a single field
 //see http://drupal.stackexchange.com/questions/59770/what-is-best-way-to-combine-multiple-fields-in-template-preprocess
 /*function wwwevergreen_preprocess_node(&$variables) {
