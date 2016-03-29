@@ -1105,9 +1105,13 @@ return($term); ';
   /* Display: Home List */
   $handler = $view->new_display('block', 'Home List', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Upcoming Events';
+  $handler->display->display_options['title'] = 'Featured Events';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '7';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1118,30 +1122,64 @@ return($term); ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'month_day',
-    'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-  );
-  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Month */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['ui_name'] = 'Month';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'month',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
+  );
+  $handler->display->display_options['fields']['field_event_date_1']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['delta_offset'] = '0';
+  /* Field: Day */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['ui_name'] = 'Day';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'day',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media media-column"><div class="media-img"><div class="calendar-dt"><span class="calendar-month">[field_event_date_1]</span> <span class="calendar-day">[field_event_date]</span></div></div><div class="media-body"><p>[title]</p></div></div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Type */
