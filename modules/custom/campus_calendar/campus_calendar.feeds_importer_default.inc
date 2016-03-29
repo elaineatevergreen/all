@@ -43,31 +43,36 @@ function campus_calendar_feeds_importer_default() {
         'authorize' => 1,
         'mappings' => array(
           0 => array(
+            'source' => 'Quarter',
+            'target' => 'field_academic_quarter',
+            'unique' => FALSE,
+          ),
+          1 => array(
             'source' => 'Title',
             'target' => 'title',
             'unique' => 1,
           ),
-          1 => array(
+          2 => array(
             'source' => 'Start',
             'target' => 'field_event_date:start',
             'unique' => FALSE,
           ),
-          2 => array(
+          3 => array(
             'source' => 'End',
             'target' => 'field_event_date:end',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'Description',
             'target' => 'body',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'Format',
             'target' => 'field_format',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'Category',
             'target' => 'field_category',
             'unique' => FALSE,

@@ -18,7 +18,7 @@ function campus_calendar_default_fe_block_settings() {
     'machine_name' => 'academicyears',
     'module' => 'block',
     'node_types' => array(),
-    'pages' => 'academic',
+    'pages' => 'academic*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
