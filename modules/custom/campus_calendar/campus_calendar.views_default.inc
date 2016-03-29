@@ -303,7 +303,6 @@ return($term); ';
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
-  $handler->display->display_options['filters']['tid']['expose']['description'] = 'Select one or more topics.';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'category';
   $handler->display->display_options['filters']['tid']['expose']['multiple'] = TRUE;
@@ -322,7 +321,6 @@ return($term); ';
   $handler->display->display_options['filters']['field_format_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_format_tid']['expose']['operator_id'] = 'field_format_tid_op';
   $handler->display->display_options['filters']['field_format_tid']['expose']['label'] = 'Format';
-  $handler->display->display_options['filters']['field_format_tid']['expose']['description'] = 'Select the types of events.';
   $handler->display->display_options['filters']['field_format_tid']['expose']['operator'] = 'field_format_tid_op';
   $handler->display->display_options['filters']['field_format_tid']['expose']['identifier'] = 'format';
   $handler->display->display_options['filters']['field_format_tid']['expose']['multiple'] = TRUE;
@@ -599,12 +597,13 @@ return($term); ';
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
-      'label' => 'Add category or format',
+      'label' => 'Category/Format/Quarter',
       'settings' => array(
         'show_all_tokens' => 1,
         'display_values' => array(
           'event::field_category' => 'event::field_category',
           'event::field_format' => 'event::field_format',
+          'event::field_academic_quarter' => 'event::field_academic_quarter',
         ),
       ),
     ),
@@ -1109,6 +1108,8 @@ return($term); ';
   $handler->display->display_options['title'] = 'Featured Upcoming Events';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -1116,12 +1117,6 @@ return($term); ';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'An <a href="homexml">XML file</a> is also available with this information for use in Cascade Server.';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
@@ -1145,6 +1140,8 @@ return($term); ';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Type */
@@ -1166,6 +1163,11 @@ return($term); ';
   $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
   $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: iCal Feed per Item */
   $handler = $view->new_display('feed', 'iCal Feed per Item', 'feed_2');
@@ -1267,7 +1269,7 @@ return($term); ';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Campus is closed for the following holidays.
 
-A list of <a href="/calendar/holidays/past">past holidays (Sept 2015–)</a> is also available.';
+A list of <a href="/calendar/holidays/past">past holidays</a> (starting September 2015) is also available.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -1378,12 +1380,6 @@ A list of <a href="/calendar/holidays/past">past holidays (Sept 2015–)</a> is 
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'See <a href="/calendar/academic/past">past Academic Calendar dates (Feb 2016–)</a>.';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -1424,6 +1420,21 @@ A list of <a href="/calendar/holidays/past">past holidays (Sept 2015–)</a> is 
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Academic Quarter (field_academic_quarter) */
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['id'] = 'field_academic_quarter_value';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['table'] = 'field_data_field_academic_quarter';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['field'] = 'field_academic_quarter_value';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['title'] = '%1 Academic Calendar';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['limit'] = '0';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['case'] = 'ucfirst';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['path_case'] = 'lower';
+  $handler->display->display_options['arguments']['field_academic_quarter_value']['transform_dash'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Type */
@@ -2421,7 +2432,7 @@ A list of <a href="/calendar/holidays/past">past holidays (Sept 2015–)</a> is 
   /* Display: Month Page */
   $handler = $view->new_display('page', 'Month Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Campus Events Calendar';
+  $handler->display->display_options['title'] = 'Events by Month';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';

@@ -91,7 +91,7 @@ function campus_calendar_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
         'custom_settings' => FALSE,
@@ -228,7 +228,7 @@ function campus_calendar_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_event_pattern';
-  $strongarm->value = 'event/[node:title]';
+  $strongarm->value = '[node:field_event_date]/[node:title]';
   $export['pathauto_node_event_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -489,6 +489,13 @@ function campus_calendar_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_calendar_categories_pattern';
   $strongarm->value = 'category/[term:name]';
   $export['pathauto_taxonomy_term_calendar_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_event_types_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_event_types_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

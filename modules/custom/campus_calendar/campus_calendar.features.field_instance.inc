@@ -22,7 +22,7 @@ function campus_calendar_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -33,6 +33,13 @@ function campus_calendar_field_default_field_instances() {
         'trim_length' => 600,
         'type' => 'text_summary_or_trimmed',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -55,6 +62,50 @@ function campus_calendar_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_academic_quarter'.
+  $field_instances['node-event-field_academic_quarter'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This information only needs to be added to items that appear on the Academic Calendar at a Glance.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_academic_quarter',
+    'label' => 'Academic Quarter',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => -3,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_building'.
   $field_instances['node-event-field_building'] = array(
     'bundle' => 'event',
@@ -67,13 +118,20 @@ function campus_calendar_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -104,13 +162,20 @@ function campus_calendar_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -144,11 +209,11 @@ function campus_calendar_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -161,6 +226,21 @@ function campus_calendar_field_default_field_instances() {
           'multiple_to' => '',
           'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'url',
+          'fromto' => 'value',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+          'show_repeat_rule' => 'hide',
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -205,11 +285,11 @@ function campus_calendar_field_default_field_instances() {
     'description' => 'Upload a PDF of your flier that people can download and print.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -217,15 +297,22 @@ function campus_calendar_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 9,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_flyer',
     'label' => 'Flyer',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
-      'description_field' => 0,
-      'file_directory' => 'fliers',
+      'description_field' => 1,
+      'file_directory' => 'events/fliers',
       'file_extensions' => 'pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -252,13 +339,19 @@ function campus_calendar_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -281,9 +374,25 @@ function campus_calendar_field_default_field_instances() {
   $field_instances['node-event-field_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'You can upload a single image to be displayed with your event description.',
+    'description' => 'You can upload a single image to be displayed with your event description. It will be resized to 345 pixels wide.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'standard__345px_wide_',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
@@ -293,21 +402,16 @@ function campus_calendar_field_default_field_instances() {
         'type' => 'image',
         'weight' => 4,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'figure',
     'field_name' => 'field_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'events/images',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -356,13 +460,25 @@ function campus_calendar_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -408,13 +524,20 @@ function campus_calendar_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -444,11 +567,11 @@ function campus_calendar_field_default_field_instances() {
     'description' => 'The name of the department or series, ie, "Career Center" or "Geoducks @ Nite" (this could also maybe be a dropdown, or a select/other?)',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -456,10 +579,18 @@ function campus_calendar_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'p',
     'field_name' => 'field_sponsored_by',
-    'label' => 'Sponsored By',
+    'label' => 'Sponsored by',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -478,6 +609,7 @@ function campus_calendar_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Academic Quarter');
   t('Building');
   t('Category');
   t('Choose the format of the event. If the event includes more than one, choose the most relevant type.');
@@ -491,10 +623,11 @@ function campus_calendar_field_default_field_instances() {
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
   t('Room');
   t('Select the topic of the event. You may select more than one subject as appropriate.');
-  t('Sponsored By');
+  t('Sponsored by');
   t('The name of the department or series, ie, "Career Center" or "Geoducks @ Nite" (this could also maybe be a dropdown, or a select/other?)');
+  t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('Upload a PDF of your flier that people can download and print.');
-  t('You can upload a single image to be displayed with your event description.');
+  t('You can upload a single image to be displayed with your event description. It will be resized to 345 pixels wide.');
 
   return $field_instances;
 }
