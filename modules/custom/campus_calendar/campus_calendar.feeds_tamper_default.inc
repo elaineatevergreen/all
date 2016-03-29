@@ -55,6 +55,21 @@ function campus_calendar_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'academic_calendar_csv-published-default_value';
+  $feeds_tamper->importer = 'academic_calendar_csv';
+  $feeds_tamper->source = 'Published';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Publish by default';
+  $export['academic_calendar_csv-published-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'academic_calendar_csv-start-strtotime_start';
   $feeds_tamper->importer = 'academic_calendar_csv';
   $feeds_tamper->source = 'Start';
