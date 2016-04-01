@@ -42,7 +42,7 @@ function campus_calendar_node_info() {
       'title_label' => t('Title'),
       'help' => t('<p>Evergreen\'s Campus Calendars provide a comprehensive list of college-sponsored events on campus. <strong>Posting an event on the Campus Calendars does not reserve space for the event.</strong></p>
 <p>Before you post an event:</p>
-<ul><li>Review the submission guidelines.</li>
+<ul><li><a href="/calendar/guidelines">Review the submission guidelines.</a></li>
 <li><a href="http://www.evergreen.edu/facilities/spacescheduling.htm">Reserve your space with Evergreen Facilities</a></li></ul>'),
     ),
   );
