@@ -26,10 +26,10 @@ function campus_calendar_default_fe_block_boxes() {
 <h3>2016-17</h3>
 
 <ul>
-	<li><a href="/calendar/academic/fall-2016">Fall Quarter</a>:: September 26, 2016 –December 16, 2016</li>
-	<li><a href="/calendar/academic/winter-2017">Winter Quarter</a>:: January 9, 2017–March 24, 2017</li>
-	<li><a href="/calendar/academic/spring-2017">Spring Quarter</a>:: April 3, 2017–June 16, 2017</li>
-	<li><a href="/calendar/academic/summer-2017">Summer Quarter</a>:: June 26, 2017–September 8, 2017</li>
+	<li><a href="/calendar/academic/fall-2016">Fall Quarter</a>: September 26, 2016 –December 16, 2016</li>
+	<li><a href="/calendar/academic/winter-2017">Winter Quarter</a>: January 9, 2017–March 24, 2017</li>
+	<li><a href="/calendar/academic/spring-2017">Spring Quarter</a>: April 3, 2017–June 16, 2017</li>
+	<li><a href="/calendar/academic/summer-2017">Summer Quarter</a>: June 26, 2017–September 8, 2017</li>
 </ul>
 
 <p>See <a href="/calendar/academic/past">past Academic Calendar dates</a> (starting February 2016).</p>
