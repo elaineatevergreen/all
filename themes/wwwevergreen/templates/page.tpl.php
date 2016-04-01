@@ -86,7 +86,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	<header class="row" role="banner">
 		
 		
-		<div class="header-dropdown">
+		<div class="header-dropdowns">
 			<?php if ($evergreen_blocks == 1): ?>
 			<div>
 				<input id="internal-users-flag" name="header-toggle" type="checkbox"/> 
