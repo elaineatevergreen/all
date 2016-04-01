@@ -115,9 +115,15 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					</div>
 				</div>
 			<?php 
+			//if this isn't using our search field and tabs, then render block in region as set in Structure > Blocks
 			else: 
-				print render($page['header_dropdowns']); 
-			endif; ?>
+			?>
+				<div class="header-dropdown">
+					<?php print render($page['header_dropdowns']);  ?>
+				</div>
+			<?php 
+			endif; //end check for whether it's using our stuff
+			?>
 		</div>
 		
 		<div class="page-header">
