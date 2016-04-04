@@ -61,3 +61,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 modules/contrib/security_review/IGNOREME.txt
+modules/contrib/field_collection/field_collection.install

@@ -2349,6 +2349,48 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_related_field'.
+  $field_instances['node-catalog_entry-field_related_field'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_related_field',
+    'label' => 'Fields of Study',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 25,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_special_expenses'.
   $field_instances['node-catalog_entry-field_special_expenses'] = array(
     'bundle' => 'catalog_entry',
@@ -8220,6 +8262,7 @@ function evergreen_content_field_default_field_instances() {
   t('Facility');
   t('Faculty');
   t('Fax');
+  t('Fields of Study');
   t('First name');
   t('For most scholarships, this will be February 1 each year.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
