@@ -1328,13 +1328,9 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-article-field_byline'.
   $field_instances['node-article-field_byline'] = array(
     'bundle' => 'article',
-    'default_value' => array(
-      0 => array(
-        'value' => '[current-user:field-display-name]',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If not you, then write who this article should be credited to.',
+    'description' => 'Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1351,7 +1347,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'p',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_byline',
     'label' => 'Byline',
     'required' => 0,
@@ -8239,7 +8235,6 @@ function evergreen_content_field_default_field_instances() {
   t('Hometown');
   t('Hours');
   t('How did your Evergreen education help you?');
-  t('If not you, then write who this article should be credited to.');
   t('If there is a single "canonical" biography that we use throughout the site, enter it here. Otherwise, use the Related Pieces field to link to magazine articles, etc.');
   t('If they are an alumnus, where do they live now?');
   t('If this is referring to another person (new name, nickname, etc)...');
@@ -8355,6 +8350,7 @@ function evergreen_content_field_default_field_instances() {
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
   t('Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.');
+  t('Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.');
   t('Variable Credit Options');
   t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Website');
