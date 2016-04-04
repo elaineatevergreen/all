@@ -480,7 +480,7 @@ function evergreen_content_strongarm() {
           'weight' => '4',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '3',
         ),
       ),
       'display' => array(),

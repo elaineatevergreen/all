@@ -76,6 +76,41 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_basics|node|catalog_entry|form';
+  $field_group->group_name = 'group_basics';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Basics',
+    'weight' => '0',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_cmd_id',
+      2 => 'field_faculty',
+      3 => 'field_offering_type',
+      4 => 'field_preparatory_for',
+      5 => 'field_status_date',
+      6 => 'field_related_field',
+      7 => 'title',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-basics field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_basics|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_basics|node|directory_individual|form';
   $field_group->group_name = 'group_basics';
   $field_group->entity_type = 'node';
@@ -749,6 +784,39 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_misc|node|catalog_entry|form';
+  $field_group->group_name = 'group_misc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Misc Options',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_next_offered',
+      1 => 'field_prerequisites',
+      2 => 'field_special_expenses',
+      3 => 'field_study_abroad',
+      4 => 'field_upper_division',
+      5 => 'field_variable_credit_options',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-misc field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_misc|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_navigation|taxonomy_term|site_sections|form';
   $field_group->group_name = 'group_navigation';
   $field_group->entity_type = 'taxonomy_term';
@@ -944,6 +1012,43 @@ function evergreen_content_field_group_info() {
   );
   $field_groups['group_top|taxonomy_term|site_sections|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_whowhenwhere|node|catalog_entry|form';
+  $field_group->group_name = 'group_whowhenwhere';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Who, When, and Where',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_advertised_schedule',
+      1 => 'field_class_standing',
+      2 => 'field_grad_or_undergrad',
+      3 => 'field_location',
+      4 => 'field_maximum_enrollment',
+      5 => 'field_off_campus_location',
+      6 => 'field_online_learning',
+      7 => 'field_percent_freshman',
+      8 => 'field_terms',
+      9 => 'field_time_offered',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-whowhenwhere field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_whowhenwhere|node|catalog_entry|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Alumni Directories');
@@ -961,6 +1066,7 @@ function evergreen_content_field_group_info() {
   t('Imported Content');
   t('Link');
   t('Location: On Campus');
+  t('Misc Options');
   t('Navigation');
   t('Primary Content');
   t('Prospective Student Nav');
@@ -969,6 +1075,7 @@ function evergreen_content_field_group_info() {
   t('Studies');
   t('Top Level');
   t('Website-Specific Content');
+  t('Who, When, and Where');
   t('group');
 
   return $field_groups;
