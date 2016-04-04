@@ -216,7 +216,7 @@ function evergreen_content_default_fe_block_settings() {
         'weight' => -24,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
