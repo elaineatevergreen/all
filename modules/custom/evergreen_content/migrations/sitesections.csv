@@ -16,7 +16,8 @@ campuslife,Campus Life,new
 career,Career Center,new
 carenetwork,"CARE Network: Conflict Assistance, Resources & Empowerment",old
 catalog,Academic Catalog,new
-ccam,CCAM,otherchildrenscenter,Children's Center,oldcivicengagement,Civic Engagement Institute,new
+ccam,CCAM,other
+childrenscenter,Children's Center,oldcivicengagement,Civic Engagement Institute,new
 classschedules,Class Schedules,new
 committee,Committees & DTFs,old
 communitybasedlearning,Center for Community-Based Learning and Action,old
@@ -35,7 +36,7 @@ elearningforeducators,eLearning for Educators,new
 electronicmedia,Electronic Media,new
 employment,Employment,new
 evaluations,Evaluations,new
-eveningandweekend,Evening and Weekend Programs,new
+eveningweekend,Evening and Weekend Programs,new
 events,Events at Evergreen,mixed
 facilities,Facilities,old
 faculty,Faculty Directory,new
@@ -120,6 +121,7 @@ trio,TRiO,old
 trustees,Trustees,old
 veterans,Veterans Resource Center,new
 violenceprevention,Office of Sexual Violence Prevention (OSVP),old
+wacla,Washington Coalition for the Liberal Arts,new
 webpayment,Web Payment,new
 webresources,Web Resources,new
 writingcenter,The Writing Center,old
