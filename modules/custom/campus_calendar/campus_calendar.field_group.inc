@@ -87,14 +87,12 @@ function campus_calendar_field_group_info() {
       'label' => 'Image float',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'image',
+        'classes' => 'supplement',
         'element' => 'figure',
         'show_label' => '0',
         'label_element' => 'div',
         'attributes' => '',
-        'required_fields' => 1,
       ),
-      'formatter' => '',
     ),
   );
   $field_groups['group_image|node|event|default'] = $field_group;
