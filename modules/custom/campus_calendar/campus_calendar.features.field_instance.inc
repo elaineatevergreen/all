@@ -60,7 +60,7 @@ function campus_calendar_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -1,
+      'weight' => -2,
     ),
   );
 
@@ -96,6 +96,7 @@ function campus_calendar_field_default_field_instances() {
     'label' => 'Academic Quarter',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -103,7 +104,7 @@ function campus_calendar_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -3,
+      'weight' => -1,
     ),
   );
 
@@ -112,7 +113,7 @@ function campus_calendar_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If the building or outdoor space is not in this list, enter it in <em>Room or Other</em>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -141,6 +142,7 @@ function campus_calendar_field_default_field_instances() {
     'label' => 'Building',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -186,6 +188,7 @@ function campus_calendar_field_default_field_instances() {
     'label' => 'Category',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -201,7 +204,7 @@ function campus_calendar_field_default_field_instances() {
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select <em>Show End Date</em> to add an end time or date.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -259,6 +262,7 @@ function campus_calendar_field_default_field_instances() {
       'default_value2' => 'blank',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'weight' => -4,
@@ -271,7 +275,7 @@ function campus_calendar_field_default_field_instances() {
         'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'no_fieldset' => 0,
+        'no_fieldset' => 1,
         'repeat_collapsed' => 1,
         'text_parts' => array(),
         'year_range' => '-1:+1',
@@ -285,7 +289,7 @@ function campus_calendar_field_default_field_instances() {
   $field_instances['node-event-field_flyer'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'Upload a PDF of your flier that people can download and print.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -314,6 +318,7 @@ function campus_calendar_field_default_field_instances() {
     'label' => 'Flyer',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'description_field' => 1,
       'file_directory' => 'events/fliers',
       'file_extensions' => 'pdf',
@@ -327,7 +332,7 @@ function campus_calendar_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -358,10 +363,12 @@ function campus_calendar_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_format',
     'label' => 'Format',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -377,7 +384,7 @@ function campus_calendar_field_default_field_instances() {
   $field_instances['node-event-field_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'You can upload a single image to be displayed with your event description. It will be resized to 345 pixels wide.',
+    'description' => 'Your image will be resized to 345 pixels wide and displayed with your event description.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -414,6 +421,7 @@ function campus_calendar_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'description_display' => 'before',
       'file_directory' => 'events/images',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -442,7 +450,7 @@ function campus_calendar_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 0,
+      'weight' => -1,
     ),
   );
 
@@ -521,7 +529,7 @@ function campus_calendar_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If your event is being held in Sem II, include the building (A, B, C, D, or E) here. You can also use this field for locations not listed above: Red Square, dorms, etc.',
+    'description' => 'If your event is being held in Sem II, include the building (A, B, C, D, or E) here.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -547,9 +555,10 @@ function campus_calendar_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_room',
-    'label' => 'Room',
+    'label' => 'Room or Other',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -569,7 +578,7 @@ function campus_calendar_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The name of the department or series, ie, "Career Center" or "Geoducks @ Nite" (this could also maybe be a dropdown, or a select/other?)',
+    'description' => 'The name of the department or series, ie, "Career Center" or "Geoducks @ Nite".',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -598,6 +607,7 @@ function campus_calendar_field_default_field_instances() {
     'label' => 'Sponsored by',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -608,7 +618,7 @@ function campus_calendar_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => -3,
     ),
   );
 
@@ -622,17 +632,18 @@ function campus_calendar_field_default_field_instances() {
   t('Description');
   t('Flyer');
   t('Format');
-  t('If your event is being held in Sem II, include the building (A, B, C, D, or E) here. You can also use this field for locations not listed above: Red Square, dorms, etc.');
+  t('If the building or outdoor space is not in this list, enter it in <em>Room or Other</em>');
+  t('If your event is being held in Sem II, include the building (A, B, C, D, or E) here.');
   t('Image');
   t('Location: Off Campus');
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
-  t('Room');
+  t('Room or Other');
+  t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select the topic of the event. You may select more than one subject as appropriate.');
   t('Sponsored by');
-  t('The name of the department or series, ie, "Career Center" or "Geoducks @ Nite" (this could also maybe be a dropdown, or a select/other?)');
+  t('The name of the department or series, ie, "Career Center" or "Geoducks @ Nite".');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
-  t('Upload a PDF of your flier that people can download and print.');
-  t('You can upload a single image to be displayed with your event description. It will be resized to 345 pixels wide.');
+  t('Your image will be resized to 345 pixels wide and displayed with your event description.');
 
   return $field_instances;
 }
