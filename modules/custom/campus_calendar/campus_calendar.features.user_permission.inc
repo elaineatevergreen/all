@@ -588,6 +588,7 @@ function campus_calendar_user_default_permissions() {
   $permissions['clear academic_calendar_csv feeds'] = array(
     'name' => 'clear academic_calendar_csv feeds',
     'roles' => array(
+      'academic calendar' => 'academic calendar',
       'administrator' => 'administrator',
     ),
     'module' => 'feeds',
@@ -999,6 +1000,7 @@ function campus_calendar_user_default_permissions() {
   $permissions['import academic_calendar_csv feeds'] = array(
     'name' => 'import academic_calendar_csv feeds',
     'roles' => array(
+      'academic calendar' => 'academic calendar',
       'administrator' => 'administrator',
     ),
     'module' => 'feeds',
@@ -1084,6 +1086,7 @@ function campus_calendar_user_default_permissions() {
     'name' => 'replicate entities',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar approval' => 'calendar approval',
     ),
     'module' => 'replicate_ui',
   );
@@ -1148,6 +1151,7 @@ function campus_calendar_user_default_permissions() {
   $permissions['unlock academic_calendar_csv feeds'] = array(
     'name' => 'unlock academic_calendar_csv feeds',
     'roles' => array(
+      'academic calendar' => 'academic calendar',
       'administrator' => 'administrator',
     ),
     'module' => 'feeds',

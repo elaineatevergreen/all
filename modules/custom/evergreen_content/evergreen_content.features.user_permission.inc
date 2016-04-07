@@ -438,6 +438,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'administer google analytics'.
+  $permissions['administer google analytics'] = array(
+    'name' => 'administer google analytics',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -798,6 +807,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'clear catalog feeds'.
+  $permissions['clear catalog feeds'] = array(
+    'name' => 'clear catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear e2campus feeds'.
   $permissions['clear e2campus feeds'] = array(
     'name' => 'clear e2campus feeds',
@@ -816,9 +834,25 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear fields_of_study_import feeds'.
+  $permissions['clear fields_of_study_import feeds'] = array(
+    'name' => 'clear fields_of_study_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear office_directory feeds'.
   $permissions['clear office_directory feeds'] = array(
     'name' => 'clear office_directory feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'clear office_directory_facility feeds'.
+  $permissions['clear office_directory_facility feeds'] = array(
+    'name' => 'clear office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -943,6 +977,15 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'entityqueue',
+  );
+
+  // Exported permission: 'create field_of_study content'.
+  $permissions['create field_of_study content'] = array(
+    'name' => 'create field_of_study content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'create files'.
@@ -1148,6 +1191,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any field_of_study content'.
+  $permissions['delete any field_of_study content'] = array(
+    'name' => 'delete any field_of_study content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any home_page content'.
   $permissions['delete any home_page content'] = array(
     'name' => 'delete any home_page content',
@@ -1334,6 +1386,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own field_of_study content'.
+  $permissions['delete own field_of_study content'] = array(
+    'name' => 'delete own field_of_study content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own home_page content'.
   $permissions['delete own home_page content'] = array(
     'name' => 'delete own home_page content',
@@ -1451,6 +1512,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in faculty_directory_categories'.
+  $permissions['delete terms in faculty_directory_categories'] = array(
+    'name' => 'delete terms in faculty_directory_categories',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1645,6 +1713,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any field_of_study content'.
+  $permissions['edit any field_of_study content'] = array(
+    'name' => 'edit any field_of_study content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any home_page content'.
   $permissions['edit any home_page content'] = array(
     'name' => 'edit any home_page content',
@@ -1832,6 +1909,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own field_of_study content'.
+  $permissions['edit own field_of_study content'] = array(
+    'name' => 'edit own field_of_study content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own home_page content'.
   $permissions['edit own home_page content'] = array(
     'name' => 'edit own home_page content',
@@ -1943,6 +2029,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in faculty_directory_categories'.
+  $permissions['edit terms in faculty_directory_categories'] = array(
+    'name' => 'edit terms in faculty_directory_categories',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in site_sections'.
   $permissions['edit terms in site_sections'] = array(
     'name' => 'edit terms in site_sections',
@@ -1970,6 +2063,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'import catalog feeds'.
+  $permissions['import catalog feeds'] = array(
+    'name' => 'import catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import e2campus feeds'.
   $permissions['import e2campus feeds'] = array(
     'name' => 'import e2campus feeds',
@@ -1988,6 +2090,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'import fields_of_study_import feeds'.
+  $permissions['import fields_of_study_import feeds'] = array(
+    'name' => 'import fields_of_study_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import media'.
   $permissions['import media'] = array(
     'name' => 'import media',
@@ -2000,6 +2109,15 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'import office_directory feeds'.
   $permissions['import office_directory feeds'] = array(
     'name' => 'import office_directory feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import office_directory_facility feeds'.
+  $permissions['import office_directory_facility feeds'] = array(
+    'name' => 'import office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -2099,6 +2217,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'pathauto',
   );
 
+  // Exported permission: 'opt-in or out of tracking'.
+  $permissions['opt-in or out of tracking'] = array(
+    'name' => 'opt-in or out of tracking',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
@@ -2174,6 +2301,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'tamper catalog'.
+  $permissions['tamper catalog'] = array(
+    'name' => 'tamper catalog',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper e2campus'.
   $permissions['tamper e2campus'] = array(
     'name' => 'tamper e2campus',
@@ -2192,9 +2328,25 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'tamper fields_of_study_import'.
+  $permissions['tamper fields_of_study_import'] = array(
+    'name' => 'tamper fields_of_study_import',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper office_directory'.
   $permissions['tamper office_directory'] = array(
     'name' => 'tamper office_directory',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper office_directory_facility'.
+  $permissions['tamper office_directory_facility'] = array(
+    'name' => 'tamper office_directory_facility',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -2219,6 +2371,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'unlock catalog feeds'.
+  $permissions['unlock catalog feeds'] = array(
+    'name' => 'unlock catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'unlock e2campus feeds'.
   $permissions['unlock e2campus feeds'] = array(
     'name' => 'unlock e2campus feeds',
@@ -2237,9 +2398,25 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'unlock fields_of_study_import feeds'.
+  $permissions['unlock fields_of_study_import feeds'] = array(
+    'name' => 'unlock fields_of_study_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'unlock office_directory feeds'.
   $permissions['unlock office_directory feeds'] = array(
     'name' => 'unlock office_directory feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock office_directory_facility feeds'.
+  $permissions['unlock office_directory_facility feeds'] = array(
+    'name' => 'unlock office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -2271,6 +2448,15 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'entityqueue',
+  );
+
+  // Exported permission: 'use PHP for tracking visibility'.
+  $permissions['use PHP for tracking visibility'] = array(
+    'name' => 'use PHP for tracking visibility',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'use advanced search'.

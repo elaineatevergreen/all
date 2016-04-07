@@ -10,6 +10,12 @@
 function campus_calendar_user_default_roles() {
   $roles = array();
 
+  // Exported role: academic calendar.
+  $roles['academic calendar'] = array(
+    'name' => 'academic calendar',
+    'weight' => 4,
+  );
+
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',

@@ -1328,13 +1328,9 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-article-field_byline'.
   $field_instances['node-article-field_byline'] = array(
     'bundle' => 'article',
-    'default_value' => array(
-      0 => array(
-        'value' => '[current-user:field-display-name]',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If not you, then write who this article should be credited to.',
+    'description' => 'Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1351,7 +1347,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'p',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_byline',
     'label' => 'Byline',
     'required' => 0,
@@ -1715,7 +1711,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 11,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1763,7 +1759,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1803,7 +1799,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -1852,7 +1848,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 0,
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
@@ -1898,7 +1894,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 13,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -1938,7 +1934,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 1,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -1978,7 +1974,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -2027,7 +2023,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -2075,7 +2071,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 22,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -2123,7 +2119,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 20,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -2203,7 +2199,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -2252,7 +2248,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -2300,7 +2296,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -2348,7 +2344,49 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_related_field'.
+  $field_instances['node-catalog_entry-field_related_field'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_related_field',
+    'label' => 'Fields of Study',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -2396,7 +2434,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 19,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -2505,7 +2543,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 23,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -2547,7 +2585,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 15,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -2587,7 +2625,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -2635,7 +2673,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 21,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -2684,7 +2722,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -8224,6 +8262,7 @@ function evergreen_content_field_default_field_instances() {
   t('Facility');
   t('Faculty');
   t('Fax');
+  t('Fields of Study');
   t('First name');
   t('For most scholarships, this will be February 1 each year.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
@@ -8239,7 +8278,6 @@ function evergreen_content_field_default_field_instances() {
   t('Hometown');
   t('Hours');
   t('How did your Evergreen education help you?');
-  t('If not you, then write who this article should be credited to.');
   t('If there is a single "canonical" biography that we use throughout the site, enter it here. Otherwise, use the Related Pieces field to link to magazine articles, etc.');
   t('If they are an alumnus, where do they live now?');
   t('If this is referring to another person (new name, nickname, etc)...');
@@ -8355,6 +8393,7 @@ function evergreen_content_field_default_field_instances() {
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
   t('Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.');
+  t('Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.');
   t('Variable Credit Options');
   t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Website');

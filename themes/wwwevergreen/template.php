@@ -29,6 +29,37 @@ function wwwevergreen_field__field_display_name(&$variables) {
 	return $output;
 }
 
+//rewriting the submitted by/date line
+//good tips here https://www.drupal.org/node/1072640#comment-6295608
+//also http://drupal.stackexchange.com/questions/11215/how-to-load-a-user-field-in-template-preprocess-comment
+function wwwevergreen_preprocess_node(&$variables) {
+  if ($variables['submitted']) {
+	//check for all the possible alternate names
+	//get the node's byline field
+	$node_byline = field_get_items('node', $variables['node'], 'field_byline');
+	$byline = $node_byline[0]['value'];
+	//get the author's display name
+	$author = user_load($variables['node']->uid);
+	$author_display_name = field_get_items('user', $author, 'field_display_name');
+	$display_name = $author_display_name[0]['value'];
+	//a future improvement: link the author display name to the profile and then show all the articles on that page
+	
+	//decide which name to use
+	if($byline != '') { 
+		$posted_name = $byline; 
+	} elseif($display_name != '') {
+		$posted_name = $display_name;
+	} else { 
+		$posted_name = $variables['name']; //if none of those things exist, just use the normal username
+	};
+	
+	//build the submitted by text
+    $variables['submitted'] = t('Written by !username on !datetime', array('!username' => $posted_name, '!datetime' => format_date($variables['node']->created, 'custom', 'F j, Y \a\t g:i a')));
+  }
+}
+
+
+
 //makes sure headshots appearing in content have the right class.
 //function wwwevergreen_field__field_headshot(&$variables){
 	

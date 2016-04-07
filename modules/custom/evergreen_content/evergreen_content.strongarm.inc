@@ -480,7 +480,7 @@ function evergreen_content_strongarm() {
           'weight' => '4',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '3',
         ),
       ),
       'display' => array(),
@@ -1208,6 +1208,16 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_field_of_study';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_field_of_study'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_home_page';
   $strongarm->value = array(
     0 => 'status',
@@ -1327,6 +1337,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_field_of_study';
+  $strongarm->value = '1';
+  $export['node_preview_field_of_study'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_home_page';
   $strongarm->value = '1';
   $export['node_preview_home_page'] = $strongarm;
@@ -1421,6 +1438,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_submitted_event';
   $strongarm->value = 0;
   $export['node_submitted_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_field_of_study';
+  $strongarm->value = 0;
+  $export['node_submitted_field_of_study'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
