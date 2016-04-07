@@ -2294,7 +2294,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
@@ -2394,7 +2394,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
@@ -2467,7 +2467,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
@@ -2574,7 +2574,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
@@ -2718,7 +2718,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
@@ -2816,7 +2816,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_building']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_building']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_building']['field_api_classes'] = TRUE;
-  /* Field: Content: Room */
+  /* Field: Content: Room or Other */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';

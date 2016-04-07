@@ -25,6 +25,7 @@ function campus_calendar_field_group_info() {
     'children' => array(
       0 => 'field_category',
       1 => 'field_format',
+      2 => 'field_academic_quarter',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -201,10 +202,11 @@ function campus_calendar_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'body',
-      1 => 'field_image',
-      2 => 'field_sponsored_by',
-      3 => 'field_flyer',
-      4 => 'title',
+      1 => 'field_event_date',
+      2 => 'field_image',
+      3 => 'field_sponsored_by',
+      4 => 'field_flyer',
+      5 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

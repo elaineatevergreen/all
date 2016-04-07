@@ -27,7 +27,7 @@ function campus_calendar_default_rules_configuration() {
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "4" : "4" } },
             "subject" : "Campus Calendar: new event submitted ",
-            "message" : "An event has been submitted by [site:current-user]. Go to http:\\/\\/collabtest.evergreen.edu\\/calendar\\/admin\\/workbench\\/needs-review to review all new events."
+            "message" : "An event has been submitted by [site:current-user]. \\r\\n\\r\\n[node:title]\\r\\n[node:field-event-date:value]\\r\\nCategory(ies): [node:field_category]\\r\\nFormat: [node:field_format]\\r\\n\\r\\nGo to http:\\/\\/collabtest.evergreen.edu\\/calendar\\/admin\\/workbench\\/needs-review to review all new events."
           }
         },
         { "drupal_message" : { "message" : "Thank you for submitting your event: [node:title]. A moderator will review your information and publish it to the calendar." } }
