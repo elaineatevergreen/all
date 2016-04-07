@@ -333,26 +333,6 @@ calendar-date-browser',
     'visibility' => 1,
   );
 
-  $export['views-calendar-block_3'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'calendar-block_3',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'wwwevergreen',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['views-calendar-category_menu'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -370,6 +350,28 @@ calendar-date-browser',
       ),
     ),
     'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-calendar-ical_link'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'calendar-ical_link',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'event',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
     'visibility' => 0,
   );
 
