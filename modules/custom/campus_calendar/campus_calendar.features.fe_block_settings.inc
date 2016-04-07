@@ -259,7 +259,7 @@ calendar-date-browser',
     'delta' => '9813bc929be0ad92b8104bd809bcbbfb',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'events/month/*',
+    'pages' => 'events/month*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -269,7 +269,7 @@ calendar-date-browser',
         'weight' => -16,
       ),
     ),
-    'title' => 'Filter Events by Category or Format',
+    'title' => 'Filter Events',
     'visibility' => 1,
   );
 
