@@ -27,6 +27,20 @@ function campus_calendar_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_longdate';
+  $strongarm->value = 'F j, Y';
+  $export['date_format_longdate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_longmonthday';
+  $strongarm->value = 'F j';
+  $export['date_format_longmonthday'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_long_notime';
   $strongarm->value = 'l, F j, Y';
   $export['date_format_long_notime'] = $strongarm;
