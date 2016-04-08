@@ -32,6 +32,26 @@ function campus_calendar_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['block-ical_link'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'ical_link',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'secondary_content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => -19,
+      ),
+    ),
+    'title' => 'Add Events to Your Calendar',
+    'visibility' => 0,
+  );
+
   $export['block-placeholder_background'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -105,7 +125,7 @@ function campus_calendar_default_fe_block_settings() {
         'region' => 'secondary_content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -20,
+        'weight' => -21,
       ),
     ),
     'title' => '<none>',
@@ -165,7 +185,7 @@ function campus_calendar_default_fe_block_settings() {
         'region' => 'secondary_content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -19,
+        'weight' => -20,
       ),
     ),
     'title' => 'Search Events',

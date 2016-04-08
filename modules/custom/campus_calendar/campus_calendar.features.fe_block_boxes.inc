@@ -38,6 +38,15 @@ function campus_calendar_default_fe_block_boxes() {
   $export['academicyears'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'iCal Link';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'ical_link';
+  $fe_block_boxes->body = '<p><a href="/calendar/event/all/ical.ics">Export the Campus Calendar in iCal format</a> and add events to your Google, Outlook, or other personal calendar.</p>
+';
+
+  $export['ical_link'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Background Image';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'placeholder_background';
