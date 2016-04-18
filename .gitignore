@@ -64,3 +64,4 @@ $RECYCLE.BIN/
 modules/contrib/security_review/IGNOREME.txt
 modules/contrib/field_collection/field_collection.install
 modules/contrib/features
+features.module
