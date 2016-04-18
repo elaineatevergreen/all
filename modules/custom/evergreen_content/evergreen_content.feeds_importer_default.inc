@@ -34,10 +34,14 @@ function evergreen_content_feeds_importer_default() {
         'sources' => array(
           'xpathparser:0' => 'title',
           'xpathparser:1' => 'description',
+          'xpathparser:2' => '',
+          'xpathparser:3' => 'time_of_day',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
           'xpathparser:0' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
         ),
         'context' => 'programs/program',
         'exp' => array(
@@ -46,6 +50,8 @@ function evergreen_content_feeds_importer_default() {
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -68,6 +74,19 @@ function evergreen_content_feeds_importer_default() {
             'source' => 'xpathparser:1',
             'target' => 'body',
             'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_class_standing',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_time_offered',
+            'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'insert_new' => '1',
