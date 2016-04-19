@@ -4,6 +4,7 @@
 #
 #================
 modules/contrib
+modules/contrib/[^.]*
 
 #=============
 #
@@ -62,3 +63,5 @@ $RECYCLE.BIN/
 *.lnk
 modules/contrib/security_review/IGNOREME.txt
 modules/contrib/field_collection/field_collection.install
+modules/contrib/features
+features.module
