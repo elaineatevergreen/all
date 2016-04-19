@@ -13,6 +13,34 @@ function campus_calendar_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_attachments|node|event|form';
+  $field_group->group_name = 'group_attachments';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Attachments',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'field_flyer',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-attachments field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_attachments|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_categories|node|event|form';
   $field_group->group_name = 'group_categories';
   $field_group->entity_type = 'node';
@@ -21,7 +49,7 @@ function campus_calendar_field_group_info() {
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_category',
       1 => 'field_format',
@@ -29,12 +57,13 @@ function campus_calendar_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Categories',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-categories field-group-htab',
         'required_fields' => 1,
+        'classes' => 'group-categories field-group-htab',
+        'description' => 'Not sure what category or format to use? See the <a href="/calendar/descriptions">Descriptions</a> for more details.',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_categories|node|event|form'] = $field_group;
@@ -54,8 +83,8 @@ function campus_calendar_field_group_info() {
     'children' => array(
       0 => 'group_categories',
       1 => 'group_what',
-      2 => 'group_when',
-      3 => 'group_where',
+      2 => 'group_where',
+      3 => 'group_attachments',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -201,10 +230,8 @@ function campus_calendar_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_event_date',
-      2 => 'field_image',
-      3 => 'field_sponsored_by',
-      4 => 'field_flyer',
-      5 => 'title',
+      2 => 'field_sponsored_by',
+      3 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -259,7 +286,7 @@ function campus_calendar_field_group_info() {
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
     'label' => 'Where',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_location_off_campus',
       1 => 'group_location_on_campus',
@@ -279,6 +306,7 @@ function campus_calendar_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Attachments');
   t('Categories');
   t('Image float');
   t('Location: On Campus');
