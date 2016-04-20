@@ -246,6 +246,10 @@ function evergreen_content_strongarm() {
         'label' => 'Full Name',
         'custom settings' => 1,
       ),
+      'contact_block' => array(
+        'label' => 'Contact Block',
+        'custom settings' => 1,
+      ),
     ),
   );
   $export['entity_view_modes'] = $strongarm;
@@ -326,6 +330,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -374,6 +381,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -420,6 +430,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -473,6 +486,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -520,6 +536,9 @@ function evergreen_content_strongarm() {
       ),
       'diff_standard' => array(
         'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -572,6 +591,9 @@ function evergreen_content_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -597,6 +619,9 @@ function evergreen_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -636,6 +661,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -689,6 +717,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -711,6 +742,9 @@ function evergreen_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -737,6 +771,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -761,6 +798,9 @@ function evergreen_content_strongarm() {
       'full_name' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -783,6 +823,9 @@ function evergreen_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -831,6 +874,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
         'custom_settings' => FALSE,
       ),
     ),
