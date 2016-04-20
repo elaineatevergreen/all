@@ -1552,15 +1552,12 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value2']['group'] = 1;
   $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
-  /* Filter criterion: Content: Format (field_format) */
-  $handler->display->display_options['filters']['field_format_tid']['id'] = 'field_format_tid';
-  $handler->display->display_options['filters']['field_format_tid']['table'] = 'field_data_field_format';
-  $handler->display->display_options['filters']['field_format_tid']['field'] = 'field_format_tid';
-  $handler->display->display_options['filters']['field_format_tid']['value'] = array(
-    0 => '15',
-  );
-  $handler->display->display_options['filters']['field_format_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_format_tid']['vocabulary'] = 'event_types';
+  /* Filter criterion: Content: Academic Quarter (field_academic_quarter) */
+  $handler->display->display_options['filters']['field_academic_quarter_value']['id'] = 'field_academic_quarter_value';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['table'] = 'field_data_field_academic_quarter';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['field'] = 'field_academic_quarter_value';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['group'] = 1;
   /* Filter criterion: Content: Category (field_category) */
   $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
@@ -1577,6 +1574,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['path'] = 'academic';
 
   /* Display: Academic Calendar Export */
@@ -1910,15 +1908,12 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Format (field_format) */
-  $handler->display->display_options['filters']['field_format_tid']['id'] = 'field_format_tid';
-  $handler->display->display_options['filters']['field_format_tid']['table'] = 'field_data_field_format';
-  $handler->display->display_options['filters']['field_format_tid']['field'] = 'field_format_tid';
-  $handler->display->display_options['filters']['field_format_tid']['value'] = array(
-    0 => '15',
-  );
-  $handler->display->display_options['filters']['field_format_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_format_tid']['vocabulary'] = 'event_types';
+  /* Filter criterion: Content: Academic Quarter (field_academic_quarter) */
+  $handler->display->display_options['filters']['field_academic_quarter_value']['id'] = 'field_academic_quarter_value';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['table'] = 'field_data_field_academic_quarter';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['field'] = 'field_academic_quarter_value';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_academic_quarter_value']['group'] = 1;
   /* Filter criterion: Content: Category (field_category) */
   $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
@@ -1935,6 +1930,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['path'] = 'academic/all';
   $export['calendar'] = $view;
 
