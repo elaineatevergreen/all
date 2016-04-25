@@ -48,7 +48,7 @@ foreach ($node->webform['components'] as $key => $component) {
    if (isset($submission->data[$key][0])) {
     //if ($node->webform['components'][$key]['type'] == 'number') {
       //if ($submission->data[$key][0] > 0) {
-        print '<p>testing2: '.$node->webform['components'][$key]['form_key'].' ' . ($submission->data[$key][0]);
+        //print '<p>testing2: '.$node->webform['components'][$key]['form_key'].' ' . ($submission->data[$key][0]);
       //}
     //}
   }
