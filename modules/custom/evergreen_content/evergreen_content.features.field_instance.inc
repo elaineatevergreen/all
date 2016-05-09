@@ -2734,6 +2734,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -2784,6 +2791,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'In the XML from the CMD, this is the "bio", but it\'s really just their educational background.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -2838,6 +2852,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2882,6 +2902,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -2935,6 +2962,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'this is used for lots of connecting and prepopulating stuff, or at least I think it will be.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2988,6 +3021,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'email',
@@ -3035,6 +3075,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Comes automatically from the CMD, where it\'s a free-form field.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -3089,6 +3136,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -3139,6 +3193,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3191,6 +3251,16 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'At the moment, only used for faculty. May be expanded to staff as well?',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'image',
@@ -3263,6 +3333,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Comes from the CMD.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -3321,6 +3398,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'When the import is run from the CMD, this value should be set to 1.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3368,6 +3451,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -3420,6 +3509,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3474,6 +3569,18 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 13,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'addressfield',
@@ -3537,6 +3644,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -3590,6 +3704,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -3640,6 +3761,15 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If this is referring to another person (new name, nickname, etc)...',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -3692,6 +3822,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -3745,6 +3882,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'inline',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'link',
@@ -3816,6 +3960,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Use this field sparingly for things like most commonly used forms or additional contact details.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -3870,6 +4021,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'phone',
@@ -3914,6 +4072,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -3962,6 +4127,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'email',
@@ -4003,6 +4175,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Include the full URL of your Facebook page or group.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
@@ -4067,6 +4246,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -4117,6 +4302,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Is this a "facility" that belongs to an office? If it is, it won\'t be displayed independently.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
@@ -4159,6 +4350,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'phone',
@@ -4203,6 +4401,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -4251,6 +4456,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -4298,6 +4509,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'These should come in via the Migration....',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -4344,6 +4561,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'phone',
@@ -4390,6 +4614,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -4436,6 +4666,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Links to sub-offices or other related offices.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -4482,6 +4718,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -4534,6 +4777,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'This field is used to assign an office to the Contact Us section of the website.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4574,6 +4823,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
@@ -4638,6 +4894,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
