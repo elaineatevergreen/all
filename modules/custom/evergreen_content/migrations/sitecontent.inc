@@ -154,9 +154,11 @@ class NewsMigration extends XMLMigration {
     // "fields" from an XML feed, so we pass an explicit list of source fields
     $fields = array(
       'title' => t('title'),
+      'startdate' => t('startdate'),
       'primary' => t('primary'),
       'summary' => t('summary'),
       'url' => t('url'),
+      'featureimage' => t('featureimage'),
     );
     	
     	//find the correct folder and get the XML
@@ -206,17 +208,24 @@ class NewsMigration extends XMLMigration {
 		
 		$this->addFieldMapping('title', 'title')->xpath('title');
 		
+		$this->addFieldMapping('created', 'startdate')->xpath('startdate');
+		
 		//the primary content and blurb have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary');
 		$this->addFieldMapping('body:format')->defaultValue('basic_tags');
 		$this->addFieldMapping('field_blurb','summary');
 		
+		//featured image
+		$this->addFieldMapping('field_image', 'featureimage')->xpath('featureimage');
+		
 
 		/* site set by default for news items */
 		$this->addFieldMapping('field_site_section')->defaultValue('news');
+		$this->addFieldMapping('field_byline')->defaultValue('Evergreen Communications Office');
 		
 		//this needs to have the first slash removed to work properly!
 		$this->addFieldMapping('path','url');
+		$this->addFieldMapping('pathauto')->defaultValue('0');
 		
 		//eventually this should belong to a specific user in Cascade...
 		$this->addFieldMapping('uid')->defaultValue('1'); //because I don't like migrated items belonging to Anon.
