@@ -5228,7 +5228,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_section_contact_info']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_section_contact_info']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_section_contact_info']['settings'] = array(
-    'view_mode' => 'contact_block',
+    'view_mode' => 'default',
     'links' => 1,
   );
   $handler->display->display_options['fields']['field_section_contact_info']['field_api_classes'] = TRUE;

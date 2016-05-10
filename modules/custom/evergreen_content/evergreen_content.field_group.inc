@@ -971,11 +971,8 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Social Media Connections',
-    'weight' => '10',
-    'children' => array(
-      0 => 'field_facebook',
-      1 => 'field_twitter',
-    ),
+    'weight' => '25',
+    'children' => array(),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Social Media Connections',

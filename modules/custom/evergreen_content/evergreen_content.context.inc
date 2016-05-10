@@ -63,14 +63,6 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
-    'node_taxonomy' => array(
-      'values' => array(
-        279 => 279,
-      ),
-      'options' => array(
-        'node_form' => '1',
-      ),
-    ),
     'views' => array(
       'values' => array(
         'directory' => 'directory',
@@ -90,12 +82,6 @@ function evergreen_content_context_default_contexts() {
           'module' => 'bean',
           'delta' => 'directory-menu',
           'region' => 'section_nav',
-          'weight' => '-10',
-        ),
-        'custom_search_blocks-1' => array(
-          'module' => 'custom_search_blocks',
-          'delta' => '1',
-          'region' => 'content',
           'weight' => '-10',
         ),
         'bean-directories' => array(
