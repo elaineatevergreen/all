@@ -14,7 +14,7 @@ function evergreen_content_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'catalog';
-  $context->description = '';
+  $context->description = 'Used in place of Workbench Access to set blocks for the Catalog index';
   $context->tag = '';
   $context->conditions = array(
     'views' => array(
@@ -29,7 +29,7 @@ function evergreen_content_context_default_contexts() {
         'views--exp-catalog-page' => array(
           'module' => 'views',
           'delta' => '-exp-catalog-page',
-          'region' => 'section_nav',
+          'region' => 'secondary_content',
           'weight' => '-10',
         ),
       ),
@@ -41,6 +41,10 @@ function evergreen_content_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Used in place of Workbench Access to set blocks for the Catalog index');
   $export['catalog'] = $context;
 
   $context = new stdClass();
