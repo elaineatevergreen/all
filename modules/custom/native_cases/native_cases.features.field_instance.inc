@@ -22,7 +22,7 @@ function native_cases_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -64,11 +64,11 @@ function native_cases_field_default_field_instances() {
     'description' => 'In the format "John Doe".',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -107,10 +107,10 @@ function native_cases_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -151,7 +151,7 @@ function native_cases_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -202,14 +202,10 @@ function native_cases_field_default_field_instances() {
     'description' => 'This image will be used with the description, and on the home page if the case study is featured there.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 3,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -269,10 +265,10 @@ function native_cases_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,10 +309,10 @@ function native_cases_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
