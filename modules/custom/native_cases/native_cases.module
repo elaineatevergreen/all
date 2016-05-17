@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Native Cases feature.
+ */
+
+include_once 'native_cases.features.inc';
