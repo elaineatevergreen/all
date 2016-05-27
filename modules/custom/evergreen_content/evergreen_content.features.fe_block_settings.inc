@@ -38,7 +38,9 @@ function evergreen_content_default_fe_block_settings() {
     'delta' => 1,
     'module' => 'custom_search_blocks',
     'node_types' => array(),
-    'pages' => 'directory',
+    'pages' => 'directory
+directory/offices
+directory/people',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -48,7 +50,7 @@ function evergreen_content_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 1,
   );
 

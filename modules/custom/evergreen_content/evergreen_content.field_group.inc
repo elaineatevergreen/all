@@ -93,7 +93,8 @@ function evergreen_content_field_group_info() {
       4 => 'field_preparatory_for',
       5 => 'field_status_date',
       6 => 'field_related_field',
-      7 => 'title',
+      7 => 'field_credits',
+      8 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -902,6 +903,38 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_quarters|node|catalog_entry|form';
+  $field_group->group_name = 'group_quarters';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Quarters',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_academic_year',
+      1 => 'field_quarters_offered',
+      2 => 'field_quarters_open',
+      3 => 'field_begin_term',
+      4 => 'field_term_details',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-quarters field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_quarters|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_secondary|node|basic_page|form';
   $field_group->group_name = 'group_secondary';
   $field_group->entity_type = 'node';
@@ -938,11 +971,8 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Social Media Connections',
-    'weight' => '10',
-    'children' => array(
-      0 => 'field_facebook',
-      1 => 'field_twitter',
-    ),
+    'weight' => '25',
+    'children' => array(),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Social Media Connections',
@@ -1033,8 +1063,7 @@ function evergreen_content_field_group_info() {
       5 => 'field_off_campus_location',
       6 => 'field_online_learning',
       7 => 'field_percent_freshman',
-      8 => 'field_terms',
-      9 => 'field_time_offered',
+      8 => 'field_time_offered',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1070,6 +1099,7 @@ function evergreen_content_field_group_info() {
   t('Navigation');
   t('Primary Content');
   t('Prospective Student Nav');
+  t('Quarters');
   t('Secondary Content');
   t('Social Media Connections');
   t('Studies');

@@ -461,6 +461,88 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['arguments']['field_site_section_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_site_section_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['path'] = 'blogs/%';
+
+  /* Display: Main News Archive */
+  $handler = $view->new_display('page', 'Main News Archive', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'News Archive';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'created_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Year */
+  $handler->display->display_options['fields']['created_1']['id'] = 'created_1';
+  $handler->display->display_options['fields']['created_1']['table'] = 'node';
+  $handler->display->display_options['fields']['created_1']['field'] = 'created';
+  $handler->display->display_options['fields']['created_1']['ui_name'] = 'Year';
+  $handler->display->display_options['fields']['created_1']['label'] = '';
+  $handler->display->display_options['fields']['created_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_1']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created_1']['custom_date_format'] = 'Y';
+  $handler->display->display_options['fields']['created_1']['second_date_format'] = 'long';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: Site Section (field_site_section) */
+  $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
+    0 => '583',
+  );
+  $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
+  $handler->display->display_options['path'] = 'news/archive';
   $export['blog'] = $view;
 
   $view = new view();
@@ -1067,7 +1149,7 @@ function evergreen_content_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Academic Catalog (2015-16 Undergrad)';
+  $handler->display->display_options['title'] = 'Undergraduate Academic Catalog';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1084,98 +1166,9 @@ function evergreen_content_views_default_views() {
       'any_label' => NULL,
       'filter_rewrite_values' => NULL,
     ),
-    'field_class_standing_value' => array(
+    'pager' => array(
       'bef_format' => 'default',
-      'more_options' => array(
-        'bef_select_all_none' => FALSE,
-        'bef_collapsible' => 0,
-        'is_secondary' => 0,
-        'any_label' => '',
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            'secondary_label' => NULL,
-            'collapsible_label' => NULL,
-            'combine_rewrite' => NULL,
-            'reset_label' => NULL,
-            'bef_filter_description' => NULL,
-            'any_label' => NULL,
-            'filter_rewrite_values' => NULL,
-          ),
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-          'filter_rewrite_values' => NULL,
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-        ),
-        'secondary_label' => NULL,
-        'collapsible_label' => NULL,
-        'combine_rewrite' => NULL,
-        'reset_label' => NULL,
-        'filter_rewrite_values' => NULL,
-      ),
-      'secondary_label' => NULL,
-      'collapsible_label' => NULL,
-      'combine_rewrite' => NULL,
-      'reset_label' => NULL,
-      'bef_filter_description' => NULL,
-      'any_label' => NULL,
-      'filter_rewrite_values' => NULL,
-    ),
-    'field_time_offered_value' => array(
-      'bef_format' => 'bef',
-      'more_options' => array(
-        'bef_select_all_none' => FALSE,
-        'bef_collapsible' => 0,
-        'is_secondary' => 0,
-        'any_label' => '',
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            'secondary_label' => NULL,
-            'collapsible_label' => NULL,
-            'combine_rewrite' => NULL,
-            'reset_label' => NULL,
-            'bef_filter_description' => NULL,
-            'any_label' => NULL,
-            'filter_rewrite_values' => NULL,
-          ),
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-          'filter_rewrite_values' => NULL,
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-        ),
-        'secondary_label' => NULL,
-        'collapsible_label' => NULL,
-        'combine_rewrite' => NULL,
-        'reset_label' => NULL,
-        'filter_rewrite_values' => NULL,
-      ),
+      'is_secondary' => 0,
       'secondary_label' => NULL,
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
@@ -1232,6 +1225,168 @@ function evergreen_content_views_default_views() {
       'any_label' => NULL,
       'filter_rewrite_values' => NULL,
     ),
+    'field_credits_value' => array(
+      'bef_format' => 'bef_slider',
+      'slider_options' => array(
+        'bef_slider_min' => '2',
+        'bef_slider_max' => '16',
+        'bef_slider_step' => '2',
+        'bef_slider_animate' => '',
+        'bef_slider_orientation' => 'horizontal',
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'bef_filter_description' => NULL,
+        'any_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_time_offered_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_location_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
     'secondary_label' => NULL,
     'collapsible_label' => NULL,
     'combine_rewrite' => NULL,
@@ -1243,10 +1398,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'full_html';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = array(
@@ -1353,20 +1510,6 @@ function evergreen_content_views_default_views() {
   );
   $handler->display->display_options['fields']['field_faculty']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_faculty']['separator'] = '; ';
-  /* Field: Content: Terms */
-  $handler->display->display_options['fields']['field_terms']['id'] = 'field_terms';
-  $handler->display->display_options['fields']['field_terms']['table'] = 'field_data_field_terms';
-  $handler->display->display_options['fields']['field_terms']['field'] = 'field_terms';
-  $handler->display->display_options['fields']['field_terms']['label'] = 'Quarters Offered';
-  $handler->display->display_options['fields']['field_terms']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_terms']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_terms']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_terms']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_terms']['settings'] = array(
-    'view_mode' => 'summary',
-  );
-  $handler->display->display_options['fields']['field_terms']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_terms']['field_api_classes'] = TRUE;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -1378,6 +1521,19 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  /* Field: Content: Credits */
+  $handler->display->display_options['fields']['field_credits']['id'] = 'field_credits';
+  $handler->display->display_options['fields']['field_credits']['table'] = 'field_data_field_credits';
+  $handler->display->display_options['fields']['field_credits']['field'] = 'field_credits';
+  $handler->display->display_options['fields']['field_credits']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_credits']['delta_offset'] = '0';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -1397,43 +1553,12 @@ function evergreen_content_views_default_views() {
     'catalog_entry' => 'catalog_entry',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Class Standing (field_class_standing) */
-  $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
-  $handler->display->display_options['filters']['field_class_standing_value']['table'] = 'field_data_field_class_standing';
-  $handler->display->display_options['filters']['field_class_standing_value']['field'] = 'field_class_standing_value';
-  $handler->display->display_options['filters']['field_class_standing_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_class_standing_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_class_standing_value']['expose']['operator_id'] = 'field_class_standing_value_op';
-  $handler->display->display_options['filters']['field_class_standing_value']['expose']['label'] = 'Class Standing';
-  $handler->display->display_options['filters']['field_class_standing_value']['expose']['operator'] = 'field_class_standing_value_op';
-  $handler->display->display_options['filters']['field_class_standing_value']['expose']['identifier'] = 'field_class_standing_value';
-  $handler->display->display_options['filters']['field_class_standing_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Content: Time Offered (field_time_offered) */
-  $handler->display->display_options['filters']['field_time_offered_value']['id'] = 'field_time_offered_value';
-  $handler->display->display_options['filters']['field_time_offered_value']['table'] = 'field_data_field_time_offered';
-  $handler->display->display_options['filters']['field_time_offered_value']['field'] = 'field_time_offered_value';
-  $handler->display->display_options['filters']['field_time_offered_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['operator_id'] = 'field_time_offered_value_op';
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['label'] = 'Offered During';
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['operator'] = 'field_time_offered_value_op';
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['identifier'] = 'field_time_offered_value';
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_time_offered_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
   /* Filter criterion: Global: Combine fields filter */
   $handler->display->display_options['filters']['combine']['id'] = 'combine';
   $handler->display->display_options['filters']['combine']['table'] = 'views';
   $handler->display->display_options['filters']['combine']['field'] = 'combine';
   $handler->display->display_options['filters']['combine']['operator'] = 'contains';
+  $handler->display->display_options['filters']['combine']['group'] = 1;
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search title/description';
@@ -1448,6 +1573,55 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['combine']['fields'] = array(
     'title' => 'title',
     'body' => 'body',
+  );
+  /* Filter criterion: Content: Credits (field_credits) */
+  $handler->display->display_options['filters']['field_credits_value']['id'] = 'field_credits_value';
+  $handler->display->display_options['filters']['field_credits_value']['table'] = 'field_data_field_credits';
+  $handler->display->display_options['filters']['field_credits_value']['field'] = 'field_credits_value';
+  $handler->display->display_options['filters']['field_credits_value']['operator'] = 'between';
+  $handler->display->display_options['filters']['field_credits_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_credits_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_credits_value']['expose']['operator_id'] = 'field_credits_value_op';
+  $handler->display->display_options['filters']['field_credits_value']['expose']['label'] = 'Credits';
+  $handler->display->display_options['filters']['field_credits_value']['expose']['operator'] = 'field_credits_value_op';
+  $handler->display->display_options['filters']['field_credits_value']['expose']['identifier'] = 'field_credits_value';
+  $handler->display->display_options['filters']['field_credits_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Time Offered (field_time_offered) */
+  $handler->display->display_options['filters']['field_time_offered_value']['id'] = 'field_time_offered_value';
+  $handler->display->display_options['filters']['field_time_offered_value']['table'] = 'field_data_field_time_offered';
+  $handler->display->display_options['filters']['field_time_offered_value']['field'] = 'field_time_offered_value';
+  $handler->display->display_options['filters']['field_time_offered_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_time_offered_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['operator_id'] = 'field_time_offered_value_op';
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['label'] = 'Offered During';
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['operator'] = 'field_time_offered_value_op';
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['identifier'] = 'field_time_offered_value';
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_time_offered_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Location (field_location) */
+  $handler->display->display_options['filters']['field_location_value']['id'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['table'] = 'field_data_field_location';
+  $handler->display->display_options['filters']['field_location_value']['field'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator_id'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['identifier'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
   );
 
   /* Display: Page */
@@ -5079,7 +5253,6 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_section_navigation']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_section_navigation']['empty'] = ' ';
   $handler->display->display_options['fields']['field_section_navigation']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_section_navigation']['type'] = 'field_collection_view';
   $handler->display->display_options['fields']['field_section_navigation']['settings'] = array(
     'edit' => '',
     'delete' => '',
@@ -5137,7 +5310,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_section_contact_info']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_section_contact_info']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_section_contact_info']['settings'] = array(
-    'view_mode' => 'contact_block',
+    'view_mode' => 'default',
     'links' => 1,
   );
   $handler->display->display_options['fields']['field_section_contact_info']['field_api_classes'] = TRUE;
