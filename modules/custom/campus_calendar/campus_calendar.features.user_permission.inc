@@ -1039,6 +1039,7 @@ function campus_calendar_user_default_permissions() {
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'calendar approval' => 'calendar approval',
     ),
     'module' => 'workbench_moderation',
