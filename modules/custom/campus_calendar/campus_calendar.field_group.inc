@@ -71,6 +71,70 @@ function campus_calendar_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_description|node|event|default';
+  $field_group->group_name = 'group_description';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Description Wrapper',
+    'weight' => '4',
+    'children' => array(
+      0 => 'body',
+      1 => 'group_image',
+      2 => 'group_sponsor',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Description Wrapper',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'event-description',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_description|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|event|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_event_date',
+      1 => 'field_location_off_campus',
+      2 => 'group_on_campus',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'event-details',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_group|node|event|form';
   $field_group->group_name = 'group_group';
   $field_group->entity_type = 'node';
@@ -81,10 +145,10 @@ function campus_calendar_field_group_info() {
     'label' => 'group',
     'weight' => '2',
     'children' => array(
-      0 => 'group_categories',
-      1 => 'group_what',
-      2 => 'group_where',
-      3 => 'group_attachments',
+      0 => 'group_where',
+      1 => 'group_attachments',
+      2 => 'group_categories',
+      3 => 'group_what',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -104,7 +168,7 @@ function campus_calendar_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_description';
   $field_group->data = array(
     'label' => 'Image float',
     'weight' => '4',
@@ -162,10 +226,10 @@ function campus_calendar_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => 'Location: On Campus',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_building',
       1 => 'field_room',
@@ -175,8 +239,8 @@ function campus_calendar_field_group_info() {
       'label' => 'Location: On Campus',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-on-campus field-group-html-element',
-        'element' => 'p',
+        'classes' => '',
+        'element' => 'div',
         'show_label' => '0',
         'label_element' => 'div',
         'attributes' => '',
@@ -193,10 +257,10 @@ function campus_calendar_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_description';
   $field_group->data = array(
     'label' => 'Sponsor',
-    'weight' => '0',
+    'weight' => '6',
     'children' => array(
       0 => 'field_sponsored_by',
     ),
@@ -205,7 +269,7 @@ function campus_calendar_field_group_info() {
       'label' => 'Sponsor',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'event-sponsor',
         'element' => 'p',
         'show_label' => '0',
         'label_element' => 'div',
@@ -296,9 +360,8 @@ function campus_calendar_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => 'group-where field-group-htab',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -308,6 +371,8 @@ function campus_calendar_field_group_info() {
   // Included for use with string extractors like potx.
   t('Attachments');
   t('Categories');
+  t('Description Wrapper');
+  t('Details');
   t('Image float');
   t('Location: On Campus');
   t('Sponsor');
