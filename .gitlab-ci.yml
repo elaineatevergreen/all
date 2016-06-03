@@ -2,7 +2,7 @@ deploy_key:
   stage: deploy
   script:
     - chmod uog+x bin/*
-    - sudo -Eu banner bin/ci_deploy.sh
+    - sudo -EHu banner bin/ci_deploy.sh
   tags:
     - key
   only:
