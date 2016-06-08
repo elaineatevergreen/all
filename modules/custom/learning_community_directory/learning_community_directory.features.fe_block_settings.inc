@@ -142,8 +142,8 @@ function learning_community_directory_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'section_nav',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -11,
       ),
@@ -162,10 +162,30 @@ function learning_community_directory_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
+        'region' => 'secondary_content',
         'status' => 1,
         'theme' => 'wwwevergreen',
         'weight' => -10,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views--exp-program_search-page'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-program_search-page',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'section_nav',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -177,7 +197,9 @@ function learning_community_directory_default_fe_block_settings() {
     'custom' => 0,
     'delta' => 'programs_at_institution-block',
     'module' => 'views',
-    'node_types' => array(),
+    'node_types' => array(
+      0 => 'institution',
+    ),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -188,7 +210,7 @@ function learning_community_directory_default_fe_block_settings() {
         'weight' => -8,
       ),
     ),
-    'title' => '',
+    'title' => 'Learning Communities',
     'visibility' => 0,
   );
 
