@@ -43,6 +43,7 @@ function native_cases_feeds_importer_default() {
           'xpathparser:8' => 'system-data-structure/item/featured',
           'xpathparser:9' => 'system-data-structure/item/image/path',
           'xpathparser:10' => 'system-data-structure/item/document/file/path',
+          'xpathparser:11' => 'last-modified',
         ),
         'rawXML' => array(
           'xpathparser:7' => 0,
@@ -56,6 +57,7 @@ function native_cases_feeds_importer_default() {
           'xpathparser:8' => 0,
           'xpathparser:9' => 0,
           'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
         ),
         'context' => '/system-index-block/system-page',
         'exp' => array(
@@ -73,6 +75,7 @@ function native_cases_feeds_importer_default() {
             'xpathparser:6' => 0,
             'xpathparser:8' => 0,
             'xpathparser:9' => 0,
+            'xpathparser:11' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -148,6 +151,12 @@ function native_cases_feeds_importer_default() {
           10 => array(
             'source' => 'xpathparser:10',
             'target' => 'field_documents:uri',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'created',
             'unique' => FALSE,
           ),
         ),

@@ -182,9 +182,13 @@ function learning_community_directory_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'institution-listing';
+  $handler->display->display_options['path'] = 'directory/institutions';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Institution Listing';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'menu-directory-navigation';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['institution_listing'] = $view;
 
   $view = new view();
@@ -230,7 +234,6 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
     2 => 'AND',
@@ -272,31 +275,31 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['filters']['field_address_administrative_area']['table'] = 'field_data_field_address';
   $handler->display->display_options['filters']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
   $handler->display->display_options['filters']['field_address_administrative_area']['relationship'] = 'field_institution_target_id';
+  $handler->display->display_options['filters']['field_address_administrative_area']['operator'] = 'contains';
   $handler->display->display_options['filters']['field_address_administrative_area']['group'] = 1;
   $handler->display->display_options['filters']['field_address_administrative_area']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['operator_id'] = 'field_address_administrative_area_op';
-  $handler->display->display_options['filters']['field_address_administrative_area']['expose']['label'] = 'Address - Administrative area (i.e. State / Province)';
+  $handler->display->display_options['filters']['field_address_administrative_area']['expose']['label'] = 'State or Province Name';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['operator'] = 'field_address_administrative_area_op';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['identifier'] = 'field_address_administrative_area';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    3 => 0,
     4 => 0,
+    3 => 0,
   );
-  $handler->display->display_options['filters']['field_address_administrative_area']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_address_administrative_area']['group_info']['label'] = 'State or Province';
+  $handler->display->display_options['filters']['field_address_administrative_area']['group_info']['label'] = 'State or Province Name';
   $handler->display->display_options['filters']['field_address_administrative_area']['group_info']['identifier'] = 'field_address_administrative_area';
   $handler->display->display_options['filters']['field_address_administrative_area']['group_info']['group_items'] = array(
     1 => array(
-      'title' => 'Oregon',
+      'title' => '',
       'operator' => '=',
-      'value' => 'OR',
+      'value' => '',
     ),
     2 => array(
-      'title' => 'Washington',
+      'title' => '',
       'operator' => '=',
-      'value' => 'WA',
+      'value' => '',
     ),
     3 => array(
       'title' => '',
@@ -454,9 +457,14 @@ function learning_community_directory_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'program-search';
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'directory/programs';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Program Search';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'menu-directory-navigation';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['program_search'] = $view;
 
   $view = new view();
@@ -489,7 +497,7 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'Learning Community';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Sort criterion: Content: Title */

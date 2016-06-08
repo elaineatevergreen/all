@@ -29,6 +29,13 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'access all webform results'.
+  $permissions['access all webform results'] = array(
+    'name' => 'access all webform results',
+    'roles' => array(),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -47,6 +54,20 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'access own webform results'.
+  $permissions['access own webform results'] = array(
+    'name' => 'access own webform results',
+    'roles' => array(),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access own webform submissions'.
+  $permissions['access own webform submissions'] = array(
+    'name' => 'access own webform submissions',
+    'roles' => array(),
+    'module' => 'webform',
   );
 
   // Exported permission: 'access rules debug'.
@@ -190,6 +211,13 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'administer feeds_tamper'.
+  $permissions['administer feeds_tamper'] = array(
+    'name' => 'administer feeds_tamper',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'administer fieldgroups'.
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
@@ -244,6 +272,15 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'pathauto',
+  );
+
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
@@ -269,6 +306,15 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'administer shortcuts'.
+  $permissions['administer shortcuts'] = array(
+    'name' => 'administer shortcuts',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'shortcut',
   );
 
   // Exported permission: 'administer site configuration'.
@@ -435,6 +481,13 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear programs feeds'.
+  $permissions['clear programs feeds'] = array(
+    'name' => 'clear programs feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'create basic_page content'.
   $permissions['create basic_page content'] = array(
     'name' => 'create basic_page content',
@@ -471,6 +524,29 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: 'create webform content'.
+  $permissions['create webform content'] = array(
+    'name' => 'create webform content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'customize shortcut links'.
+  $permissions['customize shortcut links'] = array(
+    'name' => 'customize shortcut links',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'shortcut',
+  );
+
+  // Exported permission: 'delete all webform submissions'.
+  $permissions['delete all webform submissions'] = array(
+    'name' => 'delete all webform submissions',
+    'roles' => array(),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete any basic_page content'.
   $permissions['delete any basic_page content'] = array(
     'name' => 'delete any basic_page content',
@@ -497,6 +573,13 @@ function learning_community_directory_user_default_permissions() {
       'LC staff' => 'LC staff',
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any webform content'.
+  $permissions['delete any webform content'] = array(
+    'name' => 'delete any webform content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -529,6 +612,20 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own webform content'.
+  $permissions['delete own webform content'] = array(
+    'name' => 'delete own webform content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own webform submissions'.
+  $permissions['delete own webform submissions'] = array(
+    'name' => 'delete own webform submissions',
+    'roles' => array(),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
@@ -536,6 +633,13 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit all webform submissions'.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(),
+    'module' => 'webform',
   );
 
   // Exported permission: 'edit any basic_page content'.
@@ -564,6 +668,13 @@ function learning_community_directory_user_default_permissions() {
       'LC staff' => 'LC staff',
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any webform content'.
+  $permissions['edit any webform content'] = array(
+    'name' => 'edit any webform content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -598,6 +709,20 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own webform content'.
+  $permissions['edit own webform content'] = array(
+    'name' => 'edit own webform content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own webform submissions'.
+  $permissions['edit own webform submissions'] = array(
+    'name' => 'edit own webform submissions',
+    'roles' => array(),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'edit user restriction rules'.
   $permissions['edit user restriction rules'] = array(
     'name' => 'edit user restriction rules',
@@ -605,6 +730,13 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user_restrictions',
+  );
+
+  // Exported permission: 'edit webform components'.
+  $permissions['edit webform components'] = array(
+    'name' => 'edit webform components',
+    'roles' => array(),
+    'module' => 'webform',
   );
 
   // Exported permission: 'generate features'.
@@ -622,6 +754,13 @@ function learning_community_directory_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import programs feeds'.
+  $permissions['import programs feeds'] = array(
+    'name' => 'import programs feeds',
+    'roles' => array(),
     'module' => 'feeds',
   );
 
@@ -663,6 +802,15 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'pathauto',
+  );
+
   // Exported permission: 'rename features'.
   $permissions['rename features'] = array(
     'name' => 'rename features',
@@ -700,12 +848,42 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'switch shortcut sets'.
+  $permissions['switch shortcut sets'] = array(
+    'name' => 'switch shortcut sets',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'shortcut',
+  );
+
+  // Exported permission: 'tamper institutions'.
+  $permissions['tamper institutions'] = array(
+    'name' => 'tamper institutions',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper programs'.
+  $permissions['tamper programs'] = array(
+    'name' => 'tamper programs',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'unlock institutions feeds'.
   $permissions['unlock institutions feeds'] = array(
     'name' => 'unlock institutions feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock programs feeds'.
+  $permissions['unlock programs feeds'] = array(
+    'name' => 'unlock programs feeds',
+    'roles' => array(),
     'module' => 'feeds',
   );
 
