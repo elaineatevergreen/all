@@ -18,6 +18,7 @@ regions[page_top] = Page Top
 regions[header_dropdowns] = Non-Evergreen.edu Search and Related
 regions[section_title] = Section Title
 regions[section_nav] = Section Navigation
+regions[filters] = Form Filters
 regions[help] = Help
 regions[highlighted] = Highlighted
 regions[content] = Content
