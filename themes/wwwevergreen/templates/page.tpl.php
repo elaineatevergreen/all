@@ -206,6 +206,16 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					
 					print render($page['section_nav']); 
 				?>
+				<?php 
+					
+					/* 
+					
+						This is for stuff outside of the <nav> element 
+					
+					*/
+					
+					print render($page['filters']); 
+				?>
 			</div>
 	
 	    <div id="primary-content-wrapper" class="primary-content-wrapper unit-4-7">
