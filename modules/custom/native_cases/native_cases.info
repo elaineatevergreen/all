@@ -57,6 +57,7 @@ features[feeds_importer][] = taxonomy
 features[feeds_importer][] = themes
 features[feeds_importer][] = tribes
 features[feeds_tamper][] = case_study-xpathparser_10-rewrite
+features[feeds_tamper][] = case_study-xpathparser_3-html_entity_decode
 features[feeds_tamper][] = case_study-xpathparser_8-convert_boolean
 features[feeds_tamper][] = case_study-xpathparser_9-rewrite
 features[field_base][] = body
