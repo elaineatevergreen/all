@@ -43,7 +43,7 @@ function native_cases_feeds_importer_default() {
           'xpathparser:8' => 'system-data-structure/item/featured',
           'xpathparser:9' => 'system-data-structure/item/image/path',
           'xpathparser:10' => 'system-data-structure/item/document/file/path',
-          'xpathparser:11' => 'last-modified',
+          'xpathparser:11' => '',
         ),
         'rawXML' => array(
           'xpathparser:7' => 0,
@@ -63,7 +63,6 @@ function native_cases_feeds_importer_default() {
         'exp' => array(
           'errors' => 1,
           'debug' => array(
-            'xpathparser:10' => 'xpathparser:10',
             'context' => 0,
             'xpathparser:7' => 0,
             'xpathparser:1' => 0,
@@ -75,6 +74,7 @@ function native_cases_feeds_importer_default() {
             'xpathparser:6' => 0,
             'xpathparser:8' => 0,
             'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
             'xpathparser:11' => 0,
           ),
         ),

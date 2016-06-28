@@ -27,6 +27,18 @@ function native_cases_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'case_study-xpathparser_3-html_entity_decode';
+  $feeds_tamper->importer = 'case_study';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'html_entity_decode';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'HTML entity decode';
+  $export['case_study-xpathparser_3-html_entity_decode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'case_study-xpathparser_8-convert_boolean';
   $feeds_tamper->importer = 'case_study';
   $feeds_tamper->source = 'xpathparser:8';

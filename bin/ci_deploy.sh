@@ -7,6 +7,7 @@ set -e
 # Deploy Themes
 deploy_d7_theme themes/wwwevergreen $COLLAB_CODE/drupal7
 deploy_d7_module modules/custom/learning_community_directory $COLLAB_CODE/drupal7
+deploy_d7_module modules/custom/native_cases $COLLAB_CODE/drupal7
 run_site_updates $COLLAB_CODE/drupal7 site_updates_collab
 # www deployment.
 # Required Libraries
