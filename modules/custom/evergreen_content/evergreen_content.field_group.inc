@@ -547,6 +547,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_external|node|blurb|form';
+  $field_group->group_name = 'group_external';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blurb';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details for External Links',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_publication_title',
+      1 => 'field_article_author',
+      2 => 'field_pitched',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-external field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_external|node|blurb|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_faculty|node|directory_individual|form';
   $field_group->group_name = 'group_faculty';
   $field_group->entity_type = 'node';
@@ -1088,6 +1118,7 @@ function evergreen_content_field_group_info() {
   t('Biographical Details');
   t('Contact Information');
   t('Description');
+  t('Details for External Links');
   t('Donor Info');
   t('Entrepreneur Info');
   t('Faculty Information');

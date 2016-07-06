@@ -83,12 +83,33 @@ function evergreen_content_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
+  // Exported permission: 'access environment indicator collabtest'.
+  $permissions['access environment indicator collabtest'] = array(
+    'name' => 'access environment indicator collabtest',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
   // Exported permission: 'access environment indicator default_environment'.
   $permissions['access environment indicator default_environment'] = array(
     'name' => 'access environment indicator default_environment',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator live_collab'.
+  $permissions['access environment indicator live_collab'] = array(
+    'name' => 'access environment indicator live_collab',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator localhost'.
+  $permissions['access environment indicator localhost'] = array(
+    'name' => 'access environment indicator localhost',
+    'roles' => array(),
     'module' => 'environment_indicator',
   );
 
@@ -933,6 +954,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create blurb content'.
+  $permissions['create blurb content'] = array(
+    'name' => 'create blurb content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create catalog_entry content'.
   $permissions['create catalog_entry content'] = array(
     'name' => 'create catalog_entry content',
@@ -1145,6 +1173,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any blurb content'.
+  $permissions['delete any blurb content'] = array(
+    'name' => 'delete any blurb content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any catalog_entry content'.
   $permissions['delete any catalog_entry content'] = array(
     'name' => 'delete any catalog_entry content',
@@ -1336,6 +1371,13 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
       'site editor' => 'site editor',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own blurb content'.
+  $permissions['delete own blurb content'] = array(
+    'name' => 'delete own blurb content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1666,6 +1708,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any blurb content'.
+  $permissions['edit any blurb content'] = array(
+    'name' => 'edit any blurb content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any catalog_entry content'.
   $permissions['edit any catalog_entry content'] = array(
     'name' => 'edit any catalog_entry content',
@@ -1858,6 +1907,13 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
       'site editor' => 'site editor',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own blurb content'.
+  $permissions['edit own blurb content'] = array(
+    'name' => 'edit own blurb content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2263,11 +2319,12 @@ function evergreen_content_user_default_permissions() {
     'module' => 'security_review',
   );
 
-  // Exported permission: 'schedule (un)publishing of nodes'.
-  $permissions['schedule (un)publishing of nodes'] = array(
-    'name' => 'schedule (un)publishing of nodes',
+  // Exported permission: 'schedule publishing of nodes'.
+  $permissions['schedule publishing of nodes'] = array(
+    'name' => 'schedule publishing of nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'site editor' => 'site editor',
     ),
     'module' => 'scheduler',
   );
