@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Updates for security.
 drush up --yes
-drush --yes @sites updb
+drush --yes @sites cc all
