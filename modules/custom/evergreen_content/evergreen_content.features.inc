@@ -123,6 +123,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => t('Before you create a new page, consider: who is this page for? Is that your site\'s main audience? How is this information related to the rest of the page on your site?'),
     ),
+    'blurb' => array(
+      'name' => t('Blurb'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>blurb</em> to create a special highlight on an article on the website, a link from another site, or a social media mention.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'catalog_entry' => array(
       'name' => t('Catalog Entry'),
       'base' => 'node_content',
