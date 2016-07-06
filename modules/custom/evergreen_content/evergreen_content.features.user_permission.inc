@@ -83,12 +83,33 @@ function evergreen_content_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
+  // Exported permission: 'access environment indicator collabtest'.
+  $permissions['access environment indicator collabtest'] = array(
+    'name' => 'access environment indicator collabtest',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
   // Exported permission: 'access environment indicator default_environment'.
   $permissions['access environment indicator default_environment'] = array(
     'name' => 'access environment indicator default_environment',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator live_collab'.
+  $permissions['access environment indicator live_collab'] = array(
+    'name' => 'access environment indicator live_collab',
+    'roles' => array(),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator localhost'.
+  $permissions['access environment indicator localhost'] = array(
+    'name' => 'access environment indicator localhost',
+    'roles' => array(),
     'module' => 'environment_indicator',
   );
 
