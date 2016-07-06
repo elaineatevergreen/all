@@ -2284,11 +2284,12 @@ function evergreen_content_user_default_permissions() {
     'module' => 'security_review',
   );
 
-  // Exported permission: 'schedule (un)publishing of nodes'.
-  $permissions['schedule (un)publishing of nodes'] = array(
-    'name' => 'schedule (un)publishing of nodes',
+  // Exported permission: 'schedule publishing of nodes'.
+  $permissions['schedule publishing of nodes'] = array(
+    'name' => 'schedule publishing of nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'site editor' => 'site editor',
     ),
     'module' => 'scheduler',
   );
