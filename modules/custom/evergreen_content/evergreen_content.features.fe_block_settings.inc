@@ -136,26 +136,6 @@ directory/people',
     'visibility' => 0,
   );
 
-  $export['views-alumni_directories-update'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'alumni_directories-update',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => 'secondary_content',
-        'status' => 1,
-        'theme' => 'wwwevergreen',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['views-blog-home'] = array(
     'cache' => -1,
     'custom' => 0,

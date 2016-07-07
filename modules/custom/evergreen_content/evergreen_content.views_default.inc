@@ -446,6 +446,60 @@ function evergreen_content_views_default_views() {
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
   $handler->display->display_options['path'] = 'news/archive';
+
+  /* Display: Story Picker */
+  $handler = $view->new_display('page', 'Story Picker', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'All Articles & Blog Posts';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Site Section */
+  $handler->display->display_options['fields']['field_site_section']['id'] = 'field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['label'] = '';
+  $handler->display->display_options['fields']['field_site_section']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_site_section']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_site_section']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_site_section']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_site_section']['field_api_classes'] = TRUE;
+  /* Field: Content: Updated date */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['date_format'] = 'long';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  $handler->display->display_options['path'] = 'admin/story-picker';
   $export['blog'] = $view;
 
   $view = new view();
