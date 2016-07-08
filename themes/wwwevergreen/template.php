@@ -104,7 +104,8 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 	if ($vars['view']->name == 'calendar' and in_array('category', $_GET)) {
     // get var from GET
     	$categories = $_GET['category'];
-	    foreach($categories as $category) {
+    	if(is_array($categories)){
+	    	foreach($categories as $category) {
 			$cat_names[]=taxonomy_term_load($category)->name;
       	}; //end foreach
 	  	if(count($cat_names) == 1) { 
@@ -114,7 +115,9 @@ function wwwevergreen_preprocess_views_view(&$vars) {
 		    $nice_cat_names = implode(', ', $cat_names);
 			$s = 'ies';
 		} // end pluralizing
-		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";    	
+		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
+    	}
+	        	
     }; //end if view and category set
 }
 
