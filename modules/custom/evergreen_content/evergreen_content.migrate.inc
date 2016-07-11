@@ -7,9 +7,10 @@ function evergreen_content_migrate_api() {
 			'sites' => array(
 				'title' => t('Sites'),
 			),
+		),
 		'migrations' => array(
 			//site content
-			'SiteSections' => array( 
+			'Sections' => array( 
 				'class_name' => 'SiteSectionMigration',
 				'group_name' => 'sites',
 			), //end of the SiteSection migration
@@ -22,7 +23,5 @@ function evergreen_content_migrate_api() {
 				'group_name' => 'sites',
 			), //end of the News migration
 		), //end of the migrations array
-	
-		),
 	); //end of the main array
 };
