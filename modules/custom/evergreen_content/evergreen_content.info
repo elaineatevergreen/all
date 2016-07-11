@@ -100,7 +100,6 @@ dependencies[] = views_bulk_operations
 dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = webform
-dependencies[] = webform_layout
 dependencies[] = webform_phone
 dependencies[] = webform_validation
 dependencies[] = workbench
