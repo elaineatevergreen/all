@@ -97,6 +97,7 @@ dependencies[] = toolbar
 dependencies[] = user
 dependencies[] = views
 dependencies[] = views_bulk_operations
+dependencies[] = views_data_export
 dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = webform
