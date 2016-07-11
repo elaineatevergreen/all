@@ -1128,6 +1128,4 @@ features_exclude[variable][menu_parent_field_of_study] = menu_parent_field_of_st
 files[] = migrations/evergreen.inc
 files[] = migrations/sitesections.inc
 files[] = migrations/sitecontent.inc
-files[] = migrations/directories.inc
-files[] = migrations/catalog.inc
 no autodetect = 1
