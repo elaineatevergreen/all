@@ -280,7 +280,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
-    0 => '189',
+    0 => '583',
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
 
@@ -450,7 +450,7 @@ function evergreen_content_views_default_views() {
   /* Display: Story Picker */
   $handler = $view->new_display('page', 'Story Picker', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'All Articles & Blog Posts';
+  $handler->display->display_options['title'] = 'Articles & Blog Posts elsewhere on the site';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
@@ -476,6 +476,24 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::node_promote_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 1,
+      'override_label' => 0,
+      'label' => '',
+    ),
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -499,6 +517,39 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['date_format'] = 'long';
   $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  /* Field: Content: Promoted to front page */
+  $handler->display->display_options['fields']['promote']['id'] = 'promote';
+  $handler->display->display_options['fields']['promote']['table'] = 'node';
+  $handler->display->display_options['fields']['promote']['field'] = 'promote';
+  $handler->display->display_options['fields']['promote']['not'] = 0;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Site Section (field_site_section) */
+  $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
+  $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
+  $handler->display->display_options['arguments']['field_site_section_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_site_section_tid']['title'] = '%1 news';
+  $handler->display->display_options['arguments']['field_site_section_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_site_section_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_site_section_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_site_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['path'] = 'admin/story-picker';
   $export['blog'] = $view;
 
