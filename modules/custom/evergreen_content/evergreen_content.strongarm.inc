@@ -470,7 +470,7 @@ function evergreen_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'path' => array(
           'weight' => '0',
@@ -1081,6 +1081,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_field_of_study';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_field_of_study'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_home_page';
   $strongarm->value = array();
   $export['menu_options_home_page'] = $strongarm;
@@ -1194,6 +1203,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'menu_parent_event';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_field_of_study';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_field_of_study'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

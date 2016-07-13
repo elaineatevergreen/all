@@ -46,6 +46,38 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_article_info|node|blurb|form';
+  $field_group->group_name = 'group_article_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blurb';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Article Information',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_article_link',
+      1 => 'field_publication_title',
+      2 => 'field_article_author',
+      3 => 'field_article_date',
+      4 => 'field_pitched',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-article-info field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_article_info|node|blurb|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_author|node|profile|form';
   $field_group->group_name = 'group_author';
   $field_group->entity_type = 'node';
@@ -759,6 +791,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_internal_info|node|blurb|form';
+  $field_group->group_name = 'group_internal_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blurb';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Our Annotations',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_description_plain',
+      1 => 'field_site_section',
+      2 => 'title',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-internal-info field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_internal_info|node|blurb|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_link|node|library_database|form';
   $field_group->group_name = 'group_link';
   $field_group->entity_type = 'node';
@@ -1112,6 +1174,7 @@ function evergreen_content_field_group_info() {
   // Included for use with string extractors like potx.
   t('Alumni Directories');
   t('Applicant Criteria');
+  t('Article Information');
   t('Articles & Images');
   t('Author Info');
   t('Basics');
@@ -1128,6 +1191,7 @@ function evergreen_content_field_group_info() {
   t('Location: On Campus');
   t('Misc Options');
   t('Navigation');
+  t('Our Annotations');
   t('Primary Content');
   t('Prospective Student Nav');
   t('Quarters');

@@ -1314,7 +1314,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -1376,13 +1376,13 @@ function evergreen_content_field_default_field_instances() {
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'no_fieldset' => 0,
+        'no_fieldset' => 1,
         'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 6,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -1430,7 +1430,7 @@ function evergreen_content_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1454,7 +1454,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -1509,7 +1509,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -1551,7 +1551,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Pitched',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1561,7 +1561,7 @@ function evergreen_content_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 5,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -1616,7 +1616,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -1626,7 +1626,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'blurb',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the News section or home page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1654,7 +1654,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Site Section',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1662,9 +1662,9 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
-    'workbench_access_field' => 1,
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-catalog_entry-body'.
@@ -5505,6 +5505,156 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => TRUE,
   );
 
+  // Exported field_instance: 'node-field_of_study-body'.
+  $field_instances['node-field_of_study-body'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Blurb',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-field_of_study-field_faculty_directory_subject_'.
+  $field_instances['node-field_of_study-field_faculty_directory_subject_'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This helps connect the field of study to faculty who teach in that area.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_faculty_directory_subject_',
+    'label' => 'Faculty directory subject area',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 35,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_related_field'.
+  $field_instances['node-field_of_study-field_related_field'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the "parent" of this field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_field',
+    'label' => 'Related field',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 34,
+    ),
+  );
+
   // Exported field_instance: 'node-home_page-body'.
   $field_instances['node-home_page-body'] = array(
     'bundle' => 'home_page',
@@ -8696,6 +8846,7 @@ function evergreen_content_field_default_field_instances() {
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
   t('Academic Year');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
+  t('Add this information if the blurb should be displayed on a site section in addition to the News section or home page.');
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');
@@ -8759,6 +8910,7 @@ function evergreen_content_field_default_field_instances() {
   t('Facilities');
   t('Facility');
   t('Faculty');
+  t('Faculty directory subject area');
   t('Fax');
   t('Fields of Study');
   t('First name');
@@ -8837,6 +8989,7 @@ function evergreen_content_field_default_field_instances() {
   t('Reference');
   t('Related Offices');
   t('Related Pieces');
+  t('Related field');
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
@@ -8848,6 +9001,7 @@ function evergreen_content_field_default_field_instances() {
   t('Section Navigation');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
   t('Select the types of resources that can be found at the link.');
@@ -8870,6 +9024,7 @@ function evergreen_content_field_default_field_instances() {
   t('This content appears at the top of the page below the introductory paragraph. You can add boxes, captions, or pull quotes by copying from the <a href="http://www.evergreen.edu/webresources/snippets.htm" target="_blank">Snippets page (new window)</a>.');
   t('This field determines whether this scholarship is displayed to potential donors and if so, how it\'s highlighted. Unchecking all the options removes this scholarship from lists shown for potential donors.');
   t('This field is used to assign an office to the Contact Us section of the website.');
+  t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
   t('This is independent of whether the scholarship is need-based.');
