@@ -47,6 +47,7 @@ ferpa,Family Educational Rights and Privacy Act (FERPA),old
 financeadmin,Finance and Administration,old
 financialaid,Financial Aid,new
 financialreports,Annual Financial Reports,old
+financialservices,Financial Services (Bursar),new
 foundation,The Foundation,new
 gallery,Evergreen Gallery,new
 gateways,Gateways for Incarcerated Youth,new
@@ -95,7 +96,7 @@ purchasing,Purchasing,new
 recreation,Recreation,new
 registration,Registration & Records,new
 salt,SALT,new
-schedules,Schedules,new
+schedules,Room and Class Schedules,new
 scholarships,Undergraduate Scholarships & Tuition Awards,new
 sciencesupport,Science Support Center,new
 sponsoredresearch,Academic Grants,old
@@ -122,6 +123,5 @@ trustees,Trustees,old
 veterans,Veterans Resource Center,new
 violenceprevention,Office of Sexual Violence Prevention (OSVP),old
 wacla,Washington Coalition for the Liberal Arts,new
-webpayment,Web Payment,new
 webresources,Web Resources,new
 writingcenter,The Writing Center,old
