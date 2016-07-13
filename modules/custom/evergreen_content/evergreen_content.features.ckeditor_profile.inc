@@ -14,7 +14,7 @@ function evergreen_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'PasteFromWord\',\'Format\',\'Styles\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'linkit\',\'Unlink\',\'Media\',\'-\',\'Maximize\']
+    [\'PasteFromWord\',\'Format\',\'Styles\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'Outdent\',\'Indent\',\'-\',\'linkit\',\'Unlink\',\'Media\',\'-\',\'Maximize\']
 ]',
         'expand' => 't',
         'default' => 't',
