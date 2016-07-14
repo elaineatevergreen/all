@@ -5360,8 +5360,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -5381,6 +5385,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_meetings']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_meetings']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_meetings']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_meetings']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_meetings']['field_api_classes'] = TRUE;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
@@ -5390,6 +5395,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_email']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_email']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_email']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_email']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_email']['field_api_classes'] = TRUE;
   /* Field: Content: Websites */
@@ -5400,6 +5406,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_websites']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_websites']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_websites']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_websites']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_websites']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_websites']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_websites']['field_api_classes'] = TRUE;
@@ -5407,7 +5414,6 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -5426,6 +5432,47 @@ function evergreen_content_views_default_views() {
 
   /* Display: All Groups */
   $handler = $view->new_display('block', 'All Groups', 'all');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'student_group' => 'student_group',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Global: Combine fields filter */
+  $handler->display->display_options['filters']['combine']['id'] = 'combine';
+  $handler->display->display_options['filters']['combine']['table'] = 'views';
+  $handler->display->display_options['filters']['combine']['field'] = 'combine';
+  $handler->display->display_options['filters']['combine']['operator'] = 'contains';
+  $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['combine']['expose']['description'] = 'Search by title or description';
+  $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['combine']['fields'] = array(
+    'title' => 'title',
+    'body' => 'body',
+  );
 
   /* Display: Governance */
   $handler = $view->new_display('block', 'Governance', 'governance');
@@ -5475,6 +5522,32 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+
+  /* Display: Recreation */
+  $handler = $view->new_display('block', 'Recreation', 'recreation');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'student_group' => 'student_group',
+  );
+  /* Filter criterion: Content: Group Categories (field_group_categories) */
+  $handler->display->display_options['filters']['field_group_categories_value']['id'] = 'field_group_categories_value';
+  $handler->display->display_options['filters']['field_group_categories_value']['table'] = 'field_data_field_group_categories';
+  $handler->display->display_options['filters']['field_group_categories_value']['field'] = 'field_group_categories_value';
+  $handler->display->display_options['filters']['field_group_categories_value']['value'] = array(
+    'Recreation/Athletics' => 'Recreation/Athletics',
+  );
   $export['student_groups'] = $view;
 
   return $export;
