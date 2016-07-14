@@ -222,5 +222,20 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->description = 'REGEX to remove Building';
   $export['people_directory-xpathparser_9-find_replace_regex'] = $feeds_tamper;
 
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'student_group_import-meeting_location-rewrite';
+  $feeds_tamper->importer = 'student_group_import';
+  $feeds_tamper->source = 'Meeting Location';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => '[meeting times]
+[meeting location]',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Combine meeting time and location';
+  $export['student_group_import-meeting_location-rewrite'] = $feeds_tamper;
+
   return $export;
 }

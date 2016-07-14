@@ -169,6 +169,7 @@ features[feeds_tamper][] = people_directory-xpathparser_12-find_replace_regex
 features[feeds_tamper][] = people_directory-xpathparser_2-find_replace_regex
 features[feeds_tamper][] = people_directory-xpathparser_5-find_replace_regex
 features[feeds_tamper][] = people_directory-xpathparser_9-find_replace_regex
+features[feeds_tamper][] = student_group_import-meeting_location-rewrite
 features[field_base][] = body
 features[field_base][] = eq_node
 features[field_base][] = field_academic_year

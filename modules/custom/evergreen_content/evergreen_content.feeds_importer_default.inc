@@ -1014,6 +1014,7 @@ function evergreen_content_feeds_importer_default() {
             'source' => 'Title',
             'target' => 'title',
             'unique' => 1,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'Websites',
@@ -1032,6 +1033,23 @@ function evergreen_content_feeds_importer_default() {
             'target' => 'body',
             'unique' => FALSE,
             'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Meeting Times',
+            'target' => 'Temporary target 1',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'Meeting Location',
+            'target' => 'field_meetings',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'Group Categories',
+            'target' => 'field_group_categories',
+            'unique' => FALSE,
           ),
         ),
         'insert_new' => '1',

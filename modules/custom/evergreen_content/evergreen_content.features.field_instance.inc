@@ -8314,7 +8314,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'student_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Right now this only identified Governance groups; contact the Web Team if you want to set additional categories.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -8330,6 +8330,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'p',
     'field_name' => 'field_group_categories',
@@ -8993,7 +8994,6 @@ function evergreen_content_field_default_field_instances() {
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
-  t('Right now this only identified Governance groups; contact the Web Team if you want to set additional categories.');
   t('Roles');
   t('Room');
   t('Secondary Content');
