@@ -919,6 +919,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear student_group_import feeds'.
+  $permissions['clear student_group_import feeds'] = array(
+    'name' => 'clear student_group_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'context ajax block access'.
   $permissions['context ajax block access'] = array(
     'name' => 'context ajax block access',
@@ -2243,6 +2250,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'import student_group_import feeds'.
+  $permissions['import student_group_import feeds'] = array(
+    'name' => 'import student_group_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
@@ -2479,6 +2493,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'tamper student_group_import'.
+  $permissions['tamper student_group_import'] = array(
+    'name' => 'tamper student_group_import',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'unlock catalog feeds'.
   $permissions['unlock catalog feeds'] = array(
     'name' => 'unlock catalog feeds',
@@ -2548,6 +2569,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock student_group_import feeds'.
+  $permissions['unlock student_group_import feeds'] = array(
+    'name' => 'unlock student_group_import feeds',
+    'roles' => array(),
     'module' => 'feeds',
   );
 
