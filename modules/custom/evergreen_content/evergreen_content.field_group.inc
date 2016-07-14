@@ -576,8 +576,8 @@ function evergreen_content_field_group_info() {
   );
   $field_groups['group_entrepreneur|node|profile|form'] = $field_group;
 
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+/*  $field_group = new stdClass();
+  $field_group->disabled = FALSE; // Edit this to true to make a default field_group disabled initially
   $field_group->api_version = 1;
   $field_group->identifier = 'group_external|node|blurb|form';
   $field_group->group_name = 'group_external';
@@ -604,7 +604,7 @@ function evergreen_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_external|node|blurb|form'] = $field_group;
+  $field_groups['group_external|node|blurb|form'] = $field_group;*/
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
