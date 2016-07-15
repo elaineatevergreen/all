@@ -306,6 +306,7 @@ function evergreen_content_field_group_info() {
       0 => 'field_calendar_categories',
       1 => 'field_site_section',
       2 => 'field_event_format',
+      3 => 'field_academic_quarter',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

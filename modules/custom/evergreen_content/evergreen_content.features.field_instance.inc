@@ -5234,6 +5234,47 @@ function evergreen_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_academic_quarter'.
+  $field_instances['node-event-field_academic_quarter'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This information only needs to be added to items that appear on the Academic Calendar at a Glance.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_academic_quarter',
+    'label' => 'Academic Quarter',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-event-field_building'.
   $field_instances['node-event-field_building'] = array(
     'bundle' => 'event',
@@ -5643,12 +5684,13 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_site_section',
     'is_property' => 1,
     'label' => 'Site Section',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'description_display' => 'after',
       'user_register_form' => FALSE,
@@ -5658,9 +5700,9 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 4,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-event-field_sponsored_by'.
@@ -9052,6 +9094,7 @@ function evergreen_content_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
+  t('Academic Quarter');
   t('Academic Year');
   t('Add a flyer if you would like people to print out information to post.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
@@ -9241,6 +9284,7 @@ function evergreen_content_field_default_field_instances() {
   t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
+  t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is independent of whether the scholarship is need-based.');
   t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');

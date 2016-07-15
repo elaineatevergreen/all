@@ -1596,6 +1596,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in event_formats'.
+  $permissions['delete terms in event_formats'] = array(
+    'name' => 'delete terms in event_formats',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in faculty_directory_categories'.
   $permissions['delete terms in faculty_directory_categories'] = array(
     'name' => 'delete terms in faculty_directory_categories',
@@ -2130,6 +2137,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in event_formats'.
+  $permissions['edit terms in event_formats'] = array(
+    'name' => 'edit terms in event_formats',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 

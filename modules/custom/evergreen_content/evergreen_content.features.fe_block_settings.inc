@@ -158,28 +158,6 @@ directory/people',
     'visibility' => 0,
   );
 
-  $export['views-calendar-home'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'calendar-home',
-    'module' => 'views',
-    'node_types' => array(
-      0 => 'home_page',
-    ),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'wwwevergreen',
-        'weight' => -20,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['views-home_page_hero-block'] = array(
     'cache' => -1,
     'custom' => 0,

@@ -62,6 +62,40 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_academic_quarter'.
+  $field_bases['field_academic_quarter'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_academic_quarter',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Winter 2016' => 'Winter 2016',
+        'Spring 2016' => 'Spring 2016',
+        'Summer 2016' => 'Summer 2016',
+        'Fall 2016' => 'Fall 2016',
+        'Winter 2017' => 'Winter 2017',
+        'Spring 2017' => 'Spring 2017',
+        'Summer 2017' => 'Summer 2017',
+        'Fall 2017' => 'Fall 2017',
+        'Winter 2018' => 'Winter 2018',
+        'Spring 2018' => 'Spring 2018',
+        'Summer 2018' => 'Summer 2018',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_academic_year'.
   $field_bases['field_academic_year'] = array(
     'active' => 1,
