@@ -2203,8 +2203,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_alert_pattern';
+  $strongarm->value = 'alert/[node:title]';
+  $export['pathauto_node_alert_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:field-site-section:name]/post/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2213,6 +2220,20 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_basic_page_pattern';
   $strongarm->value = '[node:field-site-section:name]/[node:title]';
   $export['pathauto_node_basic_page_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_blurb_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_blurb_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_catalog_entry_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_catalog_entry_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2232,8 +2253,22 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_event_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'campuscalendar/event/[node:title]';
   $export['pathauto_node_event_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_field_of_study_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_field_of_study_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_home_page_hero_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_home_page_hero_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2281,7 +2316,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_webform_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:field-site-section:name]/[node:title]';
   $export['pathauto_node_webform_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2297,6 +2332,27 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_calendar_categories_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_calendar_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_database_of_databases_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_database_of_databases_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_event_formats_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_event_formats_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_faculty_directory_categories_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_faculty_directory_categories_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
