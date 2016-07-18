@@ -101,26 +101,24 @@ function wwwevergreen_field__field_phone(&$variables) {
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
-	if ($vars['view']->name == 'calendar') {
+	if ($vars['view']->name == 'calendar' and in_array('category', $_GET)) {
     // get var from GET
     	$categories = $_GET['category'];
-		if (isset($categories)) {
+    	if(is_array($categories)){
 	    	foreach($categories as $category) {
-			// obj_type is the taxonomy term, get taxonomy term name
-				$cat_names[]=taxonomy_term_load($category)->name;
-				//update title
-				//$vars['view']->build_info['title'] = $cat_name;
-      		}; //end foreach
-      		if(count($cat_names) == 1) { 
-	      		$nice_cat_names = $cat_names[0]; 
-	      		$s = 'y';
-	      	} else {
-		      	$nice_cat_names = implode(', ', $cat_names);
-		      	$s = 'ies';
-	      	}
-      		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
-    	}; //end if set
-    }; //end if view
+			$cat_names[]=taxonomy_term_load($category)->name;
+      	}; //end foreach
+	  	if(count($cat_names) == 1) { 
+	      	$nice_cat_names = $cat_names[0]; 
+		  	$s = 'y';
+	    } else {
+		    $nice_cat_names = implode(', ', $cat_names);
+			$s = 'ies';
+		} // end pluralizing
+		$vars['view']->build_info['title'] = "Events by Categor$s: $nice_cat_names";
+    	}
+	        	
+    }; //end if view and category set
 }
 
 /**

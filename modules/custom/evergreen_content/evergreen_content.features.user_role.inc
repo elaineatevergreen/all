@@ -22,5 +22,11 @@ function evergreen_content_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: student groups.
+  $roles['student groups'] = array(
+    'name' => 'student groups',
+    'weight' => 4,
+  );
+
   return $roles;
 }

@@ -46,6 +46,66 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_article_info|node|blurb|form';
+  $field_group->group_name = 'group_article_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blurb';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Article Information',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_article_link',
+      1 => 'field_publication_title',
+      2 => 'field_article_author',
+      3 => 'field_article_date',
+      4 => 'field_pitched',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-article-info field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_article_info|node|blurb|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_attachments|node|event|form';
+  $field_group->group_name = 'group_attachments';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Attachments',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'field_flyer',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-attachments field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_attachments|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_author|node|profile|form';
   $field_group->group_name = 'group_author';
   $field_group->entity_type = 'node';
@@ -229,6 +289,36 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_bio|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_categories|node|event|form';
+  $field_group->group_name = 'group_categories';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Categories',
+    'weight' => '15',
+    'children' => array(
+      0 => 'field_calendar_categories',
+      1 => 'field_site_section',
+      2 => 'field_event_format',
+      3 => 'field_academic_quarter',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-categories field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_categories|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -547,36 +637,6 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_external|node|blurb|form';
-  $field_group->group_name = 'group_external';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'blurb';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Details for External Links',
-    'weight' => '7',
-    'children' => array(
-      0 => 'field_publication_title',
-      1 => 'field_article_author',
-      2 => 'field_pitched',
-    ),
-    'format_type' => 'fieldset',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-external field-group-fieldset',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_external|node|blurb|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_faculty|node|directory_individual|form';
   $field_group->group_name = 'group_faculty';
   $field_group->entity_type = 'node';
@@ -630,6 +690,35 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_group|node|basic_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_group|node|event|form';
+  $field_group->group_name = 'group_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group',
+    'weight' => '8',
+    'children' => array(
+      0 => 'group_what',
+      1 => 'group_where',
+      2 => 'group_categories',
+      3 => 'group_attachments',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-group field-group-htabs',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_group|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -759,6 +848,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_internal_info|node|blurb|form';
+  $field_group->group_name = 'group_internal_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blurb';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Our Annotations',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_description_plain',
+      1 => 'field_site_section',
+      2 => 'title',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-internal-info field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_internal_info|node|blurb|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_link|node|library_database|form';
   $field_group->group_name = 'group_link';
   $field_group->entity_type = 'node';
@@ -792,7 +911,7 @@ function evergreen_content_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_where';
   $field_group->data = array(
     'label' => 'Location: On Campus',
     'weight' => '6',
@@ -1075,6 +1194,64 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_what|node|event|form';
+  $field_group->group_name = 'group_what';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'What',
+    'weight' => '12',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_event_date',
+      2 => 'field_sponsored_by',
+      3 => 'title',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-what field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_what|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_where|node|event|form';
+  $field_group->group_name = 'group_where';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_group';
+  $field_group->data = array(
+    'label' => 'Where',
+    'weight' => '13',
+    'children' => array(
+      0 => 'field_location_off_campus',
+      1 => 'group_location_on_campus',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-where field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_where|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_whowhenwhere|node|catalog_entry|form';
   $field_group->group_name = 'group_whowhenwhere';
   $field_group->entity_type = 'node';
@@ -1112,13 +1289,15 @@ function evergreen_content_field_group_info() {
   // Included for use with string extractors like potx.
   t('Alumni Directories');
   t('Applicant Criteria');
+  t('Article Information');
   t('Articles & Images');
+  t('Attachments');
   t('Author Info');
   t('Basics');
   t('Biographical Details');
+  t('Categories');
   t('Contact Information');
   t('Description');
-  t('Details for External Links');
   t('Donor Info');
   t('Entrepreneur Info');
   t('Faculty Information');
@@ -1128,6 +1307,7 @@ function evergreen_content_field_group_info() {
   t('Location: On Campus');
   t('Misc Options');
   t('Navigation');
+  t('Our Annotations');
   t('Primary Content');
   t('Prospective Student Nav');
   t('Quarters');
@@ -1136,6 +1316,8 @@ function evergreen_content_field_group_info() {
   t('Studies');
   t('Top Level');
   t('Website-Specific Content');
+  t('What');
+  t('Where');
   t('Who, When, and Where');
   t('group');
 
