@@ -1098,6 +1098,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'body',
@@ -1119,7 +1120,7 @@ function evergreen_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 25,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -1197,6 +1198,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_secondary_content',
@@ -1217,7 +1219,7 @@ function evergreen_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 25,
       ),
       'type' => 'text_textarea',
       'weight' => 3,
