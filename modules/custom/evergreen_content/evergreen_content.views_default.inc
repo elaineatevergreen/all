@@ -959,7 +959,7 @@ return($term); ';
   );
   $handler->display->display_options['filters']['field_event_format_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_format_tid']['vocabulary'] = 'event_formats';
-  $handler->display->display_options['path'] = 'category';
+  $handler->display->display_options['path'] = 'campuscalendar/category';
 
   /* Display: Bulk Editing Page */
   $handler = $view->new_display('page', 'Bulk Editing Page', 'page_1');
@@ -1373,7 +1373,7 @@ return($term); ';
   );
   $handler->display->display_options['filters']['field_event_format_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_format_tid']['vocabulary'] = 'event_formats';
-  $handler->display->display_options['path'] = 'bulk-edit';
+  $handler->display->display_options['path'] = 'campuscalendar/bulk-edit';
 
   /* Display: No Category Page */
   $handler = $view->new_display('page', 'No Category Page', 'page_2');
@@ -1511,7 +1511,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = '-2 weeks';
-  $handler->display->display_options['path'] = 'no-category';
+  $handler->display->display_options['path'] = 'campuscalendar/no-category';
 
   /* Display: Date browser */
   $handler = $view->new_display('date_nav', 'Date browser', 'date_nav_1');
@@ -1525,7 +1525,7 @@ return($term); ';
   $handler->display->display_options['row_options']['date_field'] = 'field_data_field_event_date.field_event_date_value';
   $handler->display->display_options['row_options']['summary_field'] = 'default_title';
   $handler->display->display_options['row_options']['location_field'] = 'field_data_field_room.field_room';
-  $handler->display->display_options['path'] = 'ical';
+  $handler->display->display_options['path'] = 'campuscalendar/ical';
 
   /* Display: Attachment */
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
@@ -1975,7 +1975,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
-  $handler->display->display_options['path'] = 'holidays';
+  $handler->display->display_options['path'] = 'campuscalendar/holidays';
 
   /* Display: Academic Calendar Page */
   $handler = $view->new_display('page', 'Academic Calendar Page', 'page_4');
@@ -2135,7 +2135,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['path'] = 'academic';
+  $handler->display->display_options['path'] = 'campuscalendar/academic';
 
   /* Display: Academic Calendar Export */
   $handler = $view->new_display('views_data_export', 'Academic Calendar Export', 'views_data_export_2');
@@ -2354,7 +2354,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
     0 => '5',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['vocabulary'] = 'calendar_categories';
-  $handler->display->display_options['path'] = 'holidays/past';
+  $handler->display->display_options['path'] = 'campuscalendar/holidays/past';
 
   /* Display: Past Academic Calendar Page */
   $handler = $view->new_display('page', 'Past Academic Calendar Page', 'page_6');
@@ -2490,7 +2490,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_academic_quarter_value']['field'] = 'field_academic_quarter_value';
   $handler->display->display_options['filters']['field_academic_quarter_value']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_academic_quarter_value']['group'] = 1;
-  $handler->display->display_options['path'] = 'academic/all';
+  $handler->display->display_options['path'] = 'campuscalendar/academic/all';
 
   /* Display: Tuition Deadlines */
   $handler = $view->new_display('page', 'Tuition Deadlines', 'page_7');
@@ -2661,7 +2661,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['title_2']['operator'] = 'contains';
   $handler->display->display_options['filters']['title_2']['value'] = 'date of instruction';
   $handler->display->display_options['filters']['title_2']['group'] = 2;
-  $handler->display->display_options['path'] = 'tuition-deadlines';
+  $handler->display->display_options['path'] = 'campuscalendar/tuition-deadlines';
 
   /* Display: Home List - all */
   $handler = $view->new_display('block', 'Home List - all', 'block_3');
@@ -3076,7 +3076,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_event_format_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_event_format_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_format_tid']['vocabulary'] = 'event_formats';
-  $handler->display->display_options['path'] = 'community';
+  $handler->display->display_options['path'] = 'campuscalendar/community';
 
   /* Display: Site Section Event Headlines */
   $handler = $view->new_display('block', 'Site Section Event Headlines', 'headlines');
