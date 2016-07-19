@@ -54,7 +54,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Article Information',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_article_link',
       1 => 'field_publication_title',
@@ -856,7 +856,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Our Annotations',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_description_plain',
       1 => 'field_site_section',
@@ -864,13 +864,14 @@ function evergreen_content_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Our Annotations',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-internal-info field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-internal-info field-group-fieldset',
+        'description' => 'This title and description will be shown to website visitors.',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_internal_info|node|blurb|form'] = $field_group;

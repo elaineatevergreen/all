@@ -5006,7 +5006,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'directory_office',
     'default_value' => array(
       0 => array(
-        'tid' => 27,
+        'tid' => 659,
       ),
     ),
     'deleted' => 0,
@@ -5031,6 +5031,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_site_section',
@@ -5048,7 +5049,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 0,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-directory_office-field_twitter'.
