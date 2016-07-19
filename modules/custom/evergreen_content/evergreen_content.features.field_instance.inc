@@ -1573,7 +1573,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'blurb',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1599,10 +1599,10 @@ function evergreen_content_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_publication_title',
-    'label' => 'Publication Title',
+    'label' => 'News Outlet',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -1628,7 +1628,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'blurb',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the News section or home page.',
+    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the News section or home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/".',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1660,10 +1660,13 @@ function evergreen_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 5,
     ),
     'workbench_access_field' => 0,
@@ -9096,12 +9099,13 @@ function evergreen_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
+  t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
   t('Academic Quarter');
   t('Academic Year');
   t('Add a flyer if you would like people to print out information to post.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
-  t('Add this information if the blurb should be displayed on a site section in addition to the News section or home page.');
+  t('Add this information if the blurb should be displayed on a site section in addition to the News section or home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/".');
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');
@@ -9224,6 +9228,7 @@ function evergreen_content_field_default_field_instances() {
   t('Navigation');
   t('Need-Based');
   t('New or Current');
+  t('News Outlet');
   t('Off Campus Location');
   t('Offering Type');
   t('On larger screens, this text will appear on the right side of the screen. On smaller screens and in audio interfaces, it will be read below the primary content.');
@@ -9238,7 +9243,6 @@ function evergreen_content_field_default_field_instances() {
   t('Prerequisites');
   t('Primary Content');
   t('Proxy');
-  t('Publication Title');
   t('Publication Type');
   t('Publications');
   t('Quarters Offered');
