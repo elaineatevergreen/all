@@ -859,7 +859,7 @@ function evergreen_content_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_description_plain',
-      1 => 'field_site_section',
+      1 => 'field_add_to_sections',
       2 => 'title',
     ),
     'format_type' => 'fieldset',

@@ -1247,6 +1247,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_site_section',
@@ -1264,7 +1265,107 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 1,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
+  );
+
+  // Exported field_instance: 'node-blurb-field_add_to_sections'.
+  $field_instances['node-blurb-field_add_to_sections'] = array(
+    'bundle' => 'blurb',
+    'default_value' => array(
+      0 => array(
+        'tid' => 709,
+        'vid' => 3,
+        'name' => 'news',
+        'description' => NULL,
+        'format' => 'plain_text',
+        'weight' => 0,
+        'vocabulary_machine_name' => 'site_sections',
+        'field_background_image' => array(),
+        'field_long_name' => array(
+          'und' => array(
+            0 => array(
+              'value' => 'News & Events',
+              'format' => NULL,
+              'safe_value' => 'News &amp; Events',
+            ),
+          ),
+        ),
+        'field_section_contact_info' => array(),
+        'field_section_navigation' => array(),
+        'rdf_mapping' => array(
+          'description' => array(
+            'predicates' => array(
+              0 => 'skos:definition',
+            ),
+          ),
+          'name' => array(
+            'predicates' => array(
+              0 => 'rdfs:label',
+              1 => 'skos:prefLabel',
+            ),
+          ),
+          'parent' => array(
+            'predicates' => array(
+              0 => 'skos:broader',
+            ),
+            'type' => 'rel',
+          ),
+          'rdftype' => array(
+            0 => 'skos:Concept',
+          ),
+          'vid' => array(
+            'predicates' => array(
+              0 => 'skos:inScheme',
+            ),
+            'type' => 'rel',
+          ),
+        ),
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/". Commas between site section names.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_add_to_sections',
+    'label' => 'Add to Sections',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-blurb-field_article_author'.
@@ -1618,55 +1719,6 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-blurb-field_site_section'.
-  $field_instances['node-blurb-field_site_section'] = array(
-    'bundle' => 'blurb',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the News section or home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/".',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_site_section',
-    'label' => 'Site Section',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
       'weight' => 5,
     ),
     'workbench_access_field' => 0,
@@ -9105,7 +9157,8 @@ function evergreen_content_field_default_field_instances() {
   t('Academic Year');
   t('Add a flyer if you would like people to print out information to post.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
-  t('Add this information if the blurb should be displayed on a site section in addition to the News section or home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/".');
+  t('Add this information if the blurb should be displayed on a site section in addition to the home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/". Commas between site section names.');
+  t('Add to Sections');
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');

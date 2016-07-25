@@ -1014,6 +1014,9 @@ function evergreen_content_strongarm() {
         'path' => array(
           'weight' => '0',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
