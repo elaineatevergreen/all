@@ -929,7 +929,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'clear student_group_import feeds'.
   $permissions['clear student_group_import feeds'] = array(
     'name' => 'clear student_group_import feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -986,7 +988,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
     'module' => 'node',
@@ -1102,6 +1103,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1327,6 +1329,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1541,6 +1544,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1624,7 +1628,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete terms in event_formats'.
   $permissions['delete terms in event_formats'] = array(
     'name' => 'delete terms in event_formats',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1893,6 +1899,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -2108,6 +2115,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -2182,7 +2190,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit terms in event_formats'.
   $permissions['edit terms in event_formats'] = array(
     'name' => 'edit terms in event_formats',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -2307,7 +2317,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'import student_group_import feeds'.
   $permissions['import student_group_import feeds'] = array(
     'name' => 'import student_group_import feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -2557,7 +2569,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'tamper student_group_import'.
   $permissions['tamper student_group_import'] = array(
     'name' => 'tamper student_group_import',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
@@ -2636,7 +2650,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock student_group_import feeds'.
   $permissions['unlock student_group_import feeds'] = array(
     'name' => 'unlock student_group_import feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -3001,6 +3017,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
     ),
     'module' => 'system',
   );
