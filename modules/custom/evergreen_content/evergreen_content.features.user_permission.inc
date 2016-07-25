@@ -611,6 +611,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer redirects'.
+  $permissions['administer redirects'] = array(
+    'name' => 'administer redirects',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'redirect',
+  );
+
   // Exported permission: 'administer rules'.
   $permissions['administer rules'] = array(
     'name' => 'administer rules',
@@ -854,9 +863,36 @@ function evergreen_content_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'clear calendar_categories feeds'.
+  $permissions['clear calendar_categories feeds'] = array(
+    'name' => 'clear calendar_categories feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'clear calendar_formats feeds'.
+  $permissions['clear calendar_formats feeds'] = array(
+    'name' => 'clear calendar_formats feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear catalog feeds'.
   $permissions['clear catalog feeds'] = array(
     'name' => 'clear catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'clear catalog_terms feeds'.
+  $permissions['clear catalog_terms feeds'] = array(
+    'name' => 'clear catalog_terms feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -1069,6 +1105,16 @@ function evergreen_content_user_default_permissions() {
       'student groups' => 'student groups',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'create gallery content'.
+  $permissions['create gallery content'] = array(
+    'name' => 'create gallery content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'create home_page content'.
@@ -1288,6 +1334,16 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any gallery content'.
+  $permissions['delete any gallery content'] = array(
+    'name' => 'delete any gallery content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any home_page content'.
   $permissions['delete any home_page content'] = array(
     'name' => 'delete any home_page content',
@@ -1496,6 +1552,16 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own field_of_study content',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own gallery content'.
+  $permissions['delete own gallery content'] = array(
+    'name' => 'delete own gallery content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
     ),
     'module' => 'node',
   );
@@ -1858,6 +1924,16 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any gallery content'.
+  $permissions['edit any gallery content'] = array(
+    'name' => 'edit any gallery content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any home_page content'.
   $permissions['edit any home_page content'] = array(
     'name' => 'edit any home_page content',
@@ -2071,6 +2147,16 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own gallery content'.
+  $permissions['edit own gallery content'] = array(
+    'name' => 'edit own gallery content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own home_page content'.
   $permissions['edit own home_page content'] = array(
     'name' => 'edit own home_page content',
@@ -2233,9 +2319,36 @@ function evergreen_content_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: 'import calendar_categories feeds'.
+  $permissions['import calendar_categories feeds'] = array(
+    'name' => 'import calendar_categories feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import calendar_formats feeds'.
+  $permissions['import calendar_formats feeds'] = array(
+    'name' => 'import calendar_formats feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import catalog feeds'.
   $permissions['import catalog feeds'] = array(
     'name' => 'import catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import catalog_terms feeds'.
+  $permissions['import catalog_terms feeds'] = array(
+    'name' => 'import catalog_terms feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -2494,9 +2607,36 @@ function evergreen_content_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'tamper calendar_categories'.
+  $permissions['tamper calendar_categories'] = array(
+    'name' => 'tamper calendar_categories',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper calendar_formats'.
+  $permissions['tamper calendar_formats'] = array(
+    'name' => 'tamper calendar_formats',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper catalog'.
   $permissions['tamper catalog'] = array(
     'name' => 'tamper catalog',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper catalog_terms'.
+  $permissions['tamper catalog_terms'] = array(
+    'name' => 'tamper catalog_terms',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -2575,9 +2715,36 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'unlock calendar_categories feeds'.
+  $permissions['unlock calendar_categories feeds'] = array(
+    'name' => 'unlock calendar_categories feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock calendar_formats feeds'.
+  $permissions['unlock calendar_formats feeds'] = array(
+    'name' => 'unlock calendar_formats feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'unlock catalog feeds'.
   $permissions['unlock catalog feeds'] = array(
     'name' => 'unlock catalog feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock catalog_terms feeds'.
+  $permissions['unlock catalog_terms feeds'] = array(
+    'name' => 'unlock catalog_terms feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
