@@ -13,6 +13,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|location|form';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About the Building',
+    'weight' => '3',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_square_footage',
+      2 => 'field_building_history',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_about|node|location|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_applicant|node|scholarship|form';
   $field_group->group_name = 'group_applicant';
   $field_group->entity_type = 'node';
@@ -968,6 +998,35 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_names|node|location|form';
+  $field_group->group_name = 'group_names';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Additional Names',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_abbreviated_building_name',
+      1 => 'field_official_name',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-names field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_names|node|location|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_navigation|taxonomy_term|site_sections|form';
   $field_group->group_name = 'group_navigation';
   $field_group->entity_type = 'taxonomy_term';
@@ -1288,6 +1347,8 @@ function evergreen_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About the Building');
+  t('Additional Names');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Article Information');

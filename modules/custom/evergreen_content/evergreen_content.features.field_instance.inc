@@ -7026,6 +7026,353 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => TRUE,
   );
 
+  // Exported field_instance: 'node-location-body'.
+  $field_instances['node-location-body'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Include the summary of uses of the building as well as any more detailed descriptions available.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'body',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'display_summary' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 7,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-location-field_abbreviated_building_name'.
+  $field_instances['node-location-field_abbreviated_building_name'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'In the future, we might be able to use this to feed all references to locations on campus. If we\'re lucky.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_abbreviated_building_name',
+    'label' => 'Abbreviated Building Name',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-location-field_building_history'.
+  $field_instances['node-location-field_building_history'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_building_history',
+    'label' => 'Building History',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-location-field_maps'.
+  $field_instances['node-location-field_maps'] = array(
+    'bundle' => 'location',
+    'deleted' => 0,
+    'description' => 'These may include floor plans or exterior maps.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_maps',
+    'label' => 'Maps',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 1,
+      'file_directory' => 'tour/docs',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_2' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-location-field_official_name'.
+  $field_instances['node-location-field_official_name'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_official_name',
+    'label' => 'Official Name',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-location-field_square_footage'.
+  $field_instances['node-location-field_square_footage'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_square_footage',
+    'label' => 'Square Footage',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-profile-body'.
   $field_instances['node-profile-body'] = array(
     'bundle' => 'profile',
@@ -9380,6 +9727,7 @@ function evergreen_content_field_default_field_instances() {
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
+  t('Abbreviated Building Name');
   t('Academic Quarter');
   t('Academic Year');
   t('Add a flyer if you would like people to print out information to post.');
@@ -9409,6 +9757,7 @@ function evergreen_content_field_default_field_instances() {
   t('Blurb');
   t('Body');
   t('Building');
+  t('Building History');
   t('Business Address');
   t('Business Description');
   t('Business Name');
@@ -9458,6 +9807,7 @@ function evergreen_content_field_default_field_instances() {
   t('First name');
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
+  t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Grad or Undergrad');
@@ -9479,9 +9829,11 @@ function evergreen_content_field_default_field_instances() {
   t('Image');
   t('In the XML from the CMD, this is the "bio", but it\'s really just their educational background.');
   t('In the form "2016-17", pls.');
+  t('In the future, we might be able to use this to feed all references to locations on campus. If we\'re lucky.');
   t('In theory, any faculty member should be in the campus directory? Hoping to use the email value as a bridge when importing. [fingers crossed]');
   t('Include dollar sign and number awarded.');
   t('Include the full URL of your Facebook page or group.');
+  t('Include the summary of uses of the building as well as any more detailed descriptions available.');
   t('Include the very basic criteria; shown on the overview page for applicants.');
   t('Instructions');
   t('Interests');
@@ -9501,6 +9853,7 @@ function evergreen_content_field_default_field_instances() {
   t('Location: Off Campus');
   t('Long name');
   t('Mailstop');
+  t('Maps');
   t('Maximum Enrollment');
   t('May be offered again in');
   t('Meetings');
@@ -9513,6 +9866,7 @@ function evergreen_content_field_default_field_instances() {
   t('News Outlet');
   t('Off Campus Location');
   t('Offering Type');
+  t('Official Name');
   t('On larger screens, this text will appear on the right side of the screen. On smaller screens and in audio interfaces, it will be read below the primary content.');
   t('Online Learning');
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
@@ -9556,6 +9910,7 @@ function evergreen_content_field_default_field_instances() {
   t('Site Section');
   t('Special Expenses');
   t('Sponsored By');
+  t('Square Footage');
   t('Status Date');
   t('Study Abroad');
   t('Subjects Studied');
@@ -9563,6 +9918,7 @@ function evergreen_content_field_default_field_instances() {
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".');
+  t('These may include floor plans or exterior maps.');
   t('These should come in via the Migration....');
   t('This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!');
   t('This can be a basic description of the group\'s regular meeting times: <em>Thursdays, 3-5pm, Red Square or Library Atrium (weather permitting)</em>. If you want the group meetings on the Campus Calendar, you\'ll need to use a recurring event. (I\'m still thinking about how to connect a group to an event. Can\'t do it yet.)');
@@ -9574,6 +9930,7 @@ function evergreen_content_field_default_field_instances() {
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
+  t('This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.');
   t('This is independent of whether the scholarship is need-based.');
   t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');

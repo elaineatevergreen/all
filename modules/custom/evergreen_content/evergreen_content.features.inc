@@ -203,6 +203,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Name'),
       'help' => '',
     ),
+    'location' => array(
+      'name' => t('Location'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>location</em> to share information about a building or other facility on campus.'),
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
     'profile' => array(
       'name' => t('Profile'),
       'base' => 'node_content',
