@@ -7232,7 +7232,7 @@ function evergreen_content_field_default_field_instances() {
       'description_display' => 'before',
       'description_field' => 1,
       'file_directory' => 'tour/docs',
-      'file_extensions' => 'txt',
+      'file_extensions' => 'pdf jpg jpeg png',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
