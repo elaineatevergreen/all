@@ -3507,15 +3507,11 @@ return($term); ';
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Content: Credits */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_credits']['id'] = 'field_credits';
   $handler->display->display_options['fields']['field_credits']['table'] = 'field_data_field_credits';
   $handler->display->display_options['fields']['field_credits']['field'] = 'field_credits';
-  $handler->display->display_options['fields']['field_credits']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
-  );
-  $handler->display->display_options['fields']['field_credits']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_credits']['label'] = 'Credits';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
@@ -3560,11 +3556,16 @@ return($term); ';
     'title' => 'title',
     'body' => 'body',
   );
-  /* Filter criterion: Content: Credits (field_credits) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_credits_value']['id'] = 'field_credits_value';
   $handler->display->display_options['filters']['field_credits_value']['table'] = 'field_data_field_credits';
   $handler->display->display_options['filters']['field_credits_value']['field'] = 'field_credits_value';
   $handler->display->display_options['filters']['field_credits_value']['operator'] = 'between';
+  $handler->display->display_options['filters']['field_credits_value']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+  );
   $handler->display->display_options['filters']['field_credits_value']['group'] = 1;
   $handler->display->display_options['filters']['field_credits_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_credits_value']['expose']['operator_id'] = 'field_credits_value_op';

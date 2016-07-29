@@ -817,21 +817,6 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_credits'.
-  $field_bases['field_credits'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_credits',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'number_integer',
-  );
-
   // Exported field_base: 'field_current_location'.
   $field_bases['field_current_location'] = array(
     'active' => 1,
@@ -1092,6 +1077,27 @@ function evergreen_content_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_emergency_message',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_end_term'.
+  $field_bases['field_end_term'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_end_term',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1530,13 +1536,13 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_grad_or_undergrad'.
-  $field_bases['field_grad_or_undergrad'] = array(
+  // Exported field_base: 'field_graduate_program'.
+  $field_bases['field_graduate_program'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_grad_or_undergrad',
+    'field_name' => 'field_graduate_program',
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -1546,7 +1552,6 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'UG' => 'Undergraduate',
         'MES' => 'Master of Environmental Studies',
         'MPA' => 'Master of Public Administration',
         'MIT' => 'Master in Teaching',
@@ -2051,6 +2056,21 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_maximum_credits'.
+  $field_bases['field_maximum_credits'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_maximum_credits',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_maximum_enrollment'.
   $field_bases['field_maximum_enrollment'] = array(
     'active' => 1,
@@ -2123,6 +2143,21 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_minimum_credits'.
+  $field_bases['field_minimum_credits'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_minimum_credits',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_need_based'.
   $field_bases['field_need_based'] = array(
     'active' => 1,
@@ -2193,6 +2228,21 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_number_of_quarters'.
+  $field_bases['field_number_of_quarters'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_number_of_quarters',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_off_campus_location'.
@@ -3247,6 +3297,31 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_undergrad'.
+  $field_bases['field_undergrad'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_undergrad',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_upper_division'.
