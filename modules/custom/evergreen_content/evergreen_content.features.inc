@@ -54,6 +54,46 @@ function evergreen_content_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_date_custom_date_formats().
+ */
+function evergreen_content_fe_date_custom_date_formats() {
+  $custom_date_formats = array();
+  $custom_date_formats['F Y'] = 'F Y';
+  $custom_date_formats['F j, Y'] = 'F j, Y';
+  $custom_date_formats['M'] = 'M';
+  $custom_date_formats['Y'] = 'Y';
+  $custom_date_formats['Y-m-d'] = 'Y-m-d';
+  $custom_date_formats['g:i a'] = 'g:i a';
+  $custom_date_formats['j'] = 'j';
+  $custom_date_formats['l, F j, Y'] = 'l, F j, Y';
+  return $custom_date_formats;
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function evergreen_content_date_format_types() {
+  $format_types = array();
+  // Exported date format type: day
+  $format_types['day'] = 'Day';
+  // Exported date format type: long_notime
+  $format_types['long_notime'] = 'Long/NoTime';
+  // Exported date format type: longdate
+  $format_types['longdate'] = 'LongDate';
+  // Exported date format type: month
+  $format_types['month'] = 'Month';
+  // Exported date format type: month_year
+  $format_types['month_year'] = 'Month/Year';
+  // Exported date format type: time
+  $format_types['time'] = 'Time';
+  // Exported date format type: url
+  $format_types['url'] = 'URL';
+  // Exported date format type: year
+  $format_types['year'] = 'Year';
+  return $format_types;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function evergreen_content_image_default_styles() {
