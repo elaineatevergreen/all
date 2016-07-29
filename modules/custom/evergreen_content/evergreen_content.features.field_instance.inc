@@ -1986,7 +1986,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 20,
     ),
     'workbench_access_field' => 0,
   );
@@ -2075,7 +2075,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 17,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -2300,7 +2300,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 20,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -2399,7 +2399,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 19,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -2595,7 +2595,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 21,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -2675,7 +2675,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -2724,7 +2724,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 18,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -3187,7 +3187,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 19,
     ),
     'workbench_access_field' => 0,
   );

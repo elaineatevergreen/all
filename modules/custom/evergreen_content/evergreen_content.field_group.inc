@@ -183,10 +183,9 @@ function evergreen_content_field_group_info() {
       4 => 'field_preparatory_for',
       5 => 'field_status_date',
       6 => 'field_related_field',
-      7 => 'field_credits',
-      8 => 'field_minimum_credits',
-      9 => 'field_maximum_credits',
-      10 => 'title',
+      7 => 'field_minimum_credits',
+      8 => 'field_maximum_credits',
+      9 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
