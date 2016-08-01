@@ -531,6 +531,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'menu',
   );
 
+  // Exported permission: 'administer meta tags'.
+  $permissions['administer meta tags'] = array(
+    'name' => 'administer meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'administer module filter'.
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',
@@ -2039,6 +2048,661 @@ function evergreen_content_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit meta tag: abstract'.
+  $permissions['edit meta tag: abstract'] = array(
+    'name' => 'edit meta tag: abstract',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:author'.
+  $permissions['edit meta tag: article:author'] = array(
+    'name' => 'edit meta tag: article:author',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:expiration_time'.
+  $permissions['edit meta tag: article:expiration_time'] = array(
+    'name' => 'edit meta tag: article:expiration_time',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:modified_time'.
+  $permissions['edit meta tag: article:modified_time'] = array(
+    'name' => 'edit meta tag: article:modified_time',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:published_time'.
+  $permissions['edit meta tag: article:published_time'] = array(
+    'name' => 'edit meta tag: article:published_time',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:publisher'.
+  $permissions['edit meta tag: article:publisher'] = array(
+    'name' => 'edit meta tag: article:publisher',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:section'.
+  $permissions['edit meta tag: article:section'] = array(
+    'name' => 'edit meta tag: article:section',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: article:tag'.
+  $permissions['edit meta tag: article:tag'] = array(
+    'name' => 'edit meta tag: article:tag',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: author'.
+  $permissions['edit meta tag: author'] = array(
+    'name' => 'edit meta tag: author',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: book:author'.
+  $permissions['edit meta tag: book:author'] = array(
+    'name' => 'edit meta tag: book:author',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: book:isbn'.
+  $permissions['edit meta tag: book:isbn'] = array(
+    'name' => 'edit meta tag: book:isbn',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: book:release_date'.
+  $permissions['edit meta tag: book:release_date'] = array(
+    'name' => 'edit meta tag: book:release_date',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: book:tag'.
+  $permissions['edit meta tag: book:tag'] = array(
+    'name' => 'edit meta tag: book:tag',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: cache-control'.
+  $permissions['edit meta tag: cache-control'] = array(
+    'name' => 'edit meta tag: cache-control',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: canonical'.
+  $permissions['edit meta tag: canonical'] = array(
+    'name' => 'edit meta tag: canonical',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: content-language'.
+  $permissions['edit meta tag: content-language'] = array(
+    'name' => 'edit meta tag: content-language',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: description'.
+  $permissions['edit meta tag: description'] = array(
+    'name' => 'edit meta tag: description',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: expires'.
+  $permissions['edit meta tag: expires'] = array(
+    'name' => 'edit meta tag: expires',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: generator'.
+  $permissions['edit meta tag: generator'] = array(
+    'name' => 'edit meta tag: generator',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: geo.placename'.
+  $permissions['edit meta tag: geo.placename'] = array(
+    'name' => 'edit meta tag: geo.placename',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: geo.position'.
+  $permissions['edit meta tag: geo.position'] = array(
+    'name' => 'edit meta tag: geo.position',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: geo.region'.
+  $permissions['edit meta tag: geo.region'] = array(
+    'name' => 'edit meta tag: geo.region',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: icbm'.
+  $permissions['edit meta tag: icbm'] = array(
+    'name' => 'edit meta tag: icbm',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: image_src'.
+  $permissions['edit meta tag: image_src'] = array(
+    'name' => 'edit meta tag: image_src',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: keywords'.
+  $permissions['edit meta tag: keywords'] = array(
+    'name' => 'edit meta tag: keywords',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: news_keywords'.
+  $permissions['edit meta tag: news_keywords'] = array(
+    'name' => 'edit meta tag: news_keywords',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:audio'.
+  $permissions['edit meta tag: og:audio'] = array(
+    'name' => 'edit meta tag: og:audio',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:audio:secure_url'.
+  $permissions['edit meta tag: og:audio:secure_url'] = array(
+    'name' => 'edit meta tag: og:audio:secure_url',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:audio:type'.
+  $permissions['edit meta tag: og:audio:type'] = array(
+    'name' => 'edit meta tag: og:audio:type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:country_name'.
+  $permissions['edit meta tag: og:country_name'] = array(
+    'name' => 'edit meta tag: og:country_name',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:description'.
+  $permissions['edit meta tag: og:description'] = array(
+    'name' => 'edit meta tag: og:description',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:determiner'.
+  $permissions['edit meta tag: og:determiner'] = array(
+    'name' => 'edit meta tag: og:determiner',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:email'.
+  $permissions['edit meta tag: og:email'] = array(
+    'name' => 'edit meta tag: og:email',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:fax_number'.
+  $permissions['edit meta tag: og:fax_number'] = array(
+    'name' => 'edit meta tag: og:fax_number',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:image'.
+  $permissions['edit meta tag: og:image'] = array(
+    'name' => 'edit meta tag: og:image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:image:height'.
+  $permissions['edit meta tag: og:image:height'] = array(
+    'name' => 'edit meta tag: og:image:height',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:image:type'.
+  $permissions['edit meta tag: og:image:type'] = array(
+    'name' => 'edit meta tag: og:image:type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:image:url'.
+  $permissions['edit meta tag: og:image:url'] = array(
+    'name' => 'edit meta tag: og:image:url',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:image:width'.
+  $permissions['edit meta tag: og:image:width'] = array(
+    'name' => 'edit meta tag: og:image:width',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:latitude'.
+  $permissions['edit meta tag: og:latitude'] = array(
+    'name' => 'edit meta tag: og:latitude',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:locale:alternate'.
+  $permissions['edit meta tag: og:locale:alternate'] = array(
+    'name' => 'edit meta tag: og:locale:alternate',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:title'.
+  $permissions['edit meta tag: og:title'] = array(
+    'name' => 'edit meta tag: og:title',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:type'.
+  $permissions['edit meta tag: og:type'] = array(
+    'name' => 'edit meta tag: og:type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:updated_time'.
+  $permissions['edit meta tag: og:updated_time'] = array(
+    'name' => 'edit meta tag: og:updated_time',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: profile:first_name'.
+  $permissions['edit meta tag: profile:first_name'] = array(
+    'name' => 'edit meta tag: profile:first_name',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: profile:gender'.
+  $permissions['edit meta tag: profile:gender'] = array(
+    'name' => 'edit meta tag: profile:gender',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: profile:last_name'.
+  $permissions['edit meta tag: profile:last_name'] = array(
+    'name' => 'edit meta tag: profile:last_name',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: rating'.
+  $permissions['edit meta tag: rating'] = array(
+    'name' => 'edit meta tag: rating',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: standout'.
+  $permissions['edit meta tag: standout'] = array(
+    'name' => 'edit meta tag: standout',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:country'.
+  $permissions['edit meta tag: twitter:app:country'] = array(
+    'name' => 'edit meta tag: twitter:app:country',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:id:googleplay'.
+  $permissions['edit meta tag: twitter:app:id:googleplay'] = array(
+    'name' => 'edit meta tag: twitter:app:id:googleplay',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:name:googleplay'.
+  $permissions['edit meta tag: twitter:app:name:googleplay'] = array(
+    'name' => 'edit meta tag: twitter:app:name:googleplay',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:url:googleplay'.
+  $permissions['edit meta tag: twitter:app:url:googleplay'] = array(
+    'name' => 'edit meta tag: twitter:app:url:googleplay',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:creator'.
+  $permissions['edit meta tag: twitter:creator'] = array(
+    'name' => 'edit meta tag: twitter:creator',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:creator:id'.
+  $permissions['edit meta tag: twitter:creator:id'] = array(
+    'name' => 'edit meta tag: twitter:creator:id',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:data1'.
+  $permissions['edit meta tag: twitter:data1'] = array(
+    'name' => 'edit meta tag: twitter:data1',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:data2'.
+  $permissions['edit meta tag: twitter:data2'] = array(
+    'name' => 'edit meta tag: twitter:data2',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:description'.
+  $permissions['edit meta tag: twitter:description'] = array(
+    'name' => 'edit meta tag: twitter:description',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image'.
+  $permissions['edit meta tag: twitter:image'] = array(
+    'name' => 'edit meta tag: twitter:image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image0'.
+  $permissions['edit meta tag: twitter:image0'] = array(
+    'name' => 'edit meta tag: twitter:image0',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image1'.
+  $permissions['edit meta tag: twitter:image1'] = array(
+    'name' => 'edit meta tag: twitter:image1',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image2'.
+  $permissions['edit meta tag: twitter:image2'] = array(
+    'name' => 'edit meta tag: twitter:image2',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image3'.
+  $permissions['edit meta tag: twitter:image3'] = array(
+    'name' => 'edit meta tag: twitter:image3',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image:alt'.
+  $permissions['edit meta tag: twitter:image:alt'] = array(
+    'name' => 'edit meta tag: twitter:image:alt',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site editor' => 'site editor',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image:height'.
+  $permissions['edit meta tag: twitter:image:height'] = array(
+    'name' => 'edit meta tag: twitter:image:height',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:image:width'.
+  $permissions['edit meta tag: twitter:image:width'] = array(
+    'name' => 'edit meta tag: twitter:image:width',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:label1'.
+  $permissions['edit meta tag: twitter:label1'] = array(
+    'name' => 'edit meta tag: twitter:label1',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:label2'.
+  $permissions['edit meta tag: twitter:label2'] = array(
+    'name' => 'edit meta tag: twitter:label2',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:actor'.
+  $permissions['edit meta tag: video:actor'] = array(
+    'name' => 'edit meta tag: video:actor',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:actor:role'.
+  $permissions['edit meta tag: video:actor:role'] = array(
+    'name' => 'edit meta tag: video:actor:role',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:director'.
+  $permissions['edit meta tag: video:director'] = array(
+    'name' => 'edit meta tag: video:director',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tags'.
+  $permissions['edit meta tags'] = array(
+    'name' => 'edit meta tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit own alert content'.
   $permissions['edit own alert content'] = array(
     'name' => 'edit own alert content',
@@ -2961,6 +3625,16 @@ function evergreen_content_user_default_permissions() {
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format extended_tags'.
+  $permissions['use text format extended_tags'] = array(
+    'name' => 'use text format extended_tags',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
     ),
     'module' => 'filter',
   );
