@@ -1255,8 +1255,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1275,7 +1273,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1285,7 +1282,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any blurb content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1331,8 +1327,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1351,7 +1345,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any gallery content',
     'roles' => array(
       'administrator' => 'administrator',
-      'advanced editor' => 'advanced editor',
     ),
     'module' => 'node',
   );
@@ -1397,7 +1390,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any profile content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1425,7 +1417,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any student_group content',
     'roles' => array(
       'administrator' => 'administrator',
-      'student groups' => 'student groups',
     ),
     'module' => 'node',
   );
@@ -1444,7 +1435,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1473,8 +1463,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own article content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1495,7 +1483,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1505,7 +1492,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own blurb content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1553,8 +1539,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -1573,7 +1557,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own gallery content',
     'roles' => array(
       'administrator' => 'administrator',
-      'advanced editor' => 'advanced editor',
     ),
     'module' => 'node',
   );
@@ -1622,7 +1605,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own profile content',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
     ),
     'module' => 'node',
   );
@@ -1641,7 +1623,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own student_group content',
     'roles' => array(
       'administrator' => 'administrator',
-      'student groups' => 'student groups',
     ),
     'module' => 'node',
   );
@@ -1662,7 +1643,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
