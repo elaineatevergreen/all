@@ -1334,6 +1334,7 @@ features[views_view][] = secondary_content
 features[views_view][] = site_section_background
 features[views_view][] = student_groups
 features[views_view][] = workbench_moderation_content_with_recycling_
+features[views_view][] = workbench_recent_content_with_recycling_
 features[workbench_moderation_states][] = recycled
 features[workbench_moderation_transitions][] = published:recycled
 files[] = migrations/evergreen.inc
