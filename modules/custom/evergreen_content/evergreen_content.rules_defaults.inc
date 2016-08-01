@@ -41,5 +41,24 @@ function evergreen_content_default_rules_configuration() {
       "DO" : [ { "redirect" : { "url" : "caslogout" } } ]
     }
   }');
+  $items['rules_move_to_recycling_bin'] = entity_import('rules_config', '{ "rules_move_to_recycling_bin" : {
+      "LABEL" : "Move to Recycling Bin",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "workbench" ],
+      "REQUIRES" : [ "workbench_moderation", "rules" ],
+      "ON" : { "workbench_moderation_transition_update" : [] },
+      "IF" : [
+        { "contents_current_state" : {
+            "node" : [ "workbench-moderation-transition:feed-node" ],
+            "moderation_state" : "recycled"
+          }
+        }
+      ],
+      "DO" : [
+        { "node_unpublish" : { "node" : [ "workbench-moderation-transition:feed-node" ] } }
+      ]
+    }
+  }');
   return $items;
 }
