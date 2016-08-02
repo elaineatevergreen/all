@@ -1976,6 +1976,33 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_location_category'.
+  $field_bases['field_location_category'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_location_category',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Campus Core' => 'Campus Core',
+        'Maintenance' => 'Maintenance',
+        'Organic Farm' => 'Organic Farm',
+        'Student Residences' => 'Student Residences',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_location_off_campus'.
   $field_bases['field_location_off_campus'] = array(
     'active' => 1,

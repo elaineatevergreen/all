@@ -639,15 +639,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'rules',
   );
 
-  // Exported permission: 'administer scheduler'.
-  $permissions['administer scheduler'] = array(
-    'name' => 'administer scheduler',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'scheduler',
-  );
-
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',

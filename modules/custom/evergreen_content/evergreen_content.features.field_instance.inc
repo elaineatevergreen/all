@@ -7395,6 +7395,53 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-location-field_location_category'.
+  $field_instances['node-location-field_location_category'] = array(
+    'bundle' => 'location',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field helps organize the buildings so people can find what they need quickly!',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_location_category',
+    'label' => 'Location Category',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-location-field_maps'.
   $field_instances['node-location-field_maps'] = array(
     'bundle' => 'location',
@@ -7456,7 +7503,7 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -10048,6 +10095,7 @@ function evergreen_content_field_default_field_instances() {
   t('Links');
   t('Links to sub-offices or other related offices.');
   t('Location');
+  t('Location Category');
   t('Location Off Campus');
   t('Location: Off Campus');
   t('Long name');
@@ -10131,6 +10179,7 @@ function evergreen_content_field_default_field_instances() {
   t('This can include Facebook pages.');
   t('This content appears at the top of the page below the introductory paragraph. You can add boxes, captions, or pull quotes by copying from the <a href="http://www.evergreen.edu/webresources/snippets.htm" target="_blank">Snippets page (new window)</a>.');
   t('This field determines whether this scholarship is displayed to potential donors and if so, how it\'s highlighted. Unchecking all the options removes this scholarship from lists shown for potential donors.');
+  t('This field helps organize the buildings so people can find what they need quickly!');
   t('This field is used to assign an office to the Contact Us section of the website.');
   t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');

@@ -1480,10 +1480,13 @@ function evergreen_content_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '6',
+        ),
+        'metatags' => array(
+          'weight' => '7',
         ),
       ),
       'display' => array(),
@@ -1986,8 +1989,9 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_article';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_article'] = $strongarm;
 
@@ -2604,146 +2608,6 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_expand_fieldset_alert';
-  $strongarm->value = '1';
-  $export['scheduler_expand_fieldset_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_expand_fieldset_basic_page';
-  $strongarm->value = '0';
-  $export['scheduler_expand_fieldset_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_enable_alert';
-  $strongarm->value = 1;
-  $export['scheduler_publish_enable_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_enable_basic_page';
-  $strongarm->value = 1;
-  $export['scheduler_publish_enable_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_past_date_alert';
-  $strongarm->value = 'publish';
-  $export['scheduler_publish_past_date_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_past_date_basic_page';
-  $strongarm->value = 'publish';
-  $export['scheduler_publish_past_date_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_required_alert';
-  $strongarm->value = 0;
-  $export['scheduler_publish_required_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_required_basic_page';
-  $strongarm->value = 0;
-  $export['scheduler_publish_required_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_revision_alert';
-  $strongarm->value = 0;
-  $export['scheduler_publish_revision_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_revision_basic_page';
-  $strongarm->value = 1;
-  $export['scheduler_publish_revision_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_touch_alert';
-  $strongarm->value = 1;
-  $export['scheduler_publish_touch_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_publish_touch_basic_page';
-  $strongarm->value = 0;
-  $export['scheduler_publish_touch_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_enable_alert';
-  $strongarm->value = 1;
-  $export['scheduler_unpublish_enable_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_enable_basic_page';
-  $strongarm->value = 1;
-  $export['scheduler_unpublish_enable_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_required_alert';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_required_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_required_basic_page';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_required_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_revision_alert';
-  $strongarm->value = 0;
-  $export['scheduler_unpublish_revision_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_unpublish_revision_basic_page';
-  $strongarm->value = 1;
-  $export['scheduler_unpublish_revision_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_use_vertical_tabs_alert';
-  $strongarm->value = '0';
-  $export['scheduler_use_vertical_tabs_alert'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'scheduler_use_vertical_tabs_basic_page';
-  $strongarm->value = '0';
-  $export['scheduler_use_vertical_tabs_basic_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
   $strongarm->value = '';
   $export['site_default_country'] = $strongarm;
@@ -2880,7 +2744,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_article';
-  $strongarm->value = 'draft';
+  $strongarm->value = 'published';
   $export['workbench_moderation_default_state_article'] = $strongarm;
 
   $strongarm = new stdClass();

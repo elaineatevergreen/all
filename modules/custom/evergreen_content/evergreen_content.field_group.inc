@@ -21,7 +21,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About the Building',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'body',
       1 => 'field_square_footage',
@@ -1007,7 +1007,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Additional Names',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_abbreviated_building_name',
       1 => 'field_official_name',

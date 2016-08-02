@@ -13,6 +13,51 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'campus_locations-abbreviated_building_name-trim';
+  $feeds_tamper->importer = 'campus_locations';
+  $feeds_tamper->source = 'Abbreviated Building Name';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim whitespace';
+  $export['campus_locations-abbreviated_building_name-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'campus_locations-official_name-trim';
+  $feeds_tamper->importer = 'campus_locations';
+  $feeds_tamper->source = 'Official Name';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim whitespace';
+  $export['campus_locations-official_name-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'campus_locations-title-trim';
+  $feeds_tamper->importer = 'campus_locations';
+  $feeds_tamper->source = 'Title';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim whitespace';
+  $export['campus_locations-title-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'catalog-xpathparser_7-explode';
   $feeds_tamper->importer = 'catalog';
   $feeds_tamper->source = 'xpathparser:7';
