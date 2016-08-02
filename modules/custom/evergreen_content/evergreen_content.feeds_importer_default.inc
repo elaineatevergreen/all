@@ -135,6 +135,93 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'campus_locations';
+  $feeds_importer->config = array(
+    'name' => 'Campus Locations',
+    'description' => 'Means we only have to input this info once!',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Nid',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Title',
+            'target' => 'title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'Official Name',
+            'target' => 'field_official_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'Abbreviated Building Name',
+            'target' => 'field_abbreviated_building_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Description',
+            'target' => 'body',
+            'format' => 'full_html',
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'Location Category',
+            'target' => 'field_location_category',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'location',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['campus_locations'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'catalog';
   $feeds_importer->config = array(
     'name' => 'Catalog',
@@ -272,104 +359,6 @@ function evergreen_content_feeds_importer_default() {
     'process_in_background' => 0,
   );
   $export['catalog'] = $feeds_importer;
-
-  $feeds_importer = new stdClass();
-  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
-  $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'catalog_terms';
-  $feeds_importer->config = array(
-    'name' => 'Catalog Terms',
-    'description' => 'separate importer just for the terms?',
-    'fetcher' => array(
-      'plugin_key' => 'FeedsHTTPFetcher',
-      'config' => array(
-        'auto_detect_feeds' => FALSE,
-        'use_pubsubhubbub' => FALSE,
-        'designated_hub' => '',
-        'request_timeout' => NULL,
-        'auto_scheme' => 'http',
-        'accept_invalid_cert' => FALSE,
-      ),
-    ),
-    'parser' => array(
-      'plugin_key' => 'FeedsXPathParserXML',
-      'config' => array(
-        'sources' => array(
-          'xpathparser:0' => 'quarters/term/@term',
-          'xpathparser:1' => '@id',
-          'xpathparser:2' => '',
-          'xpathparser:3' => '@id',
-        ),
-        'rawXML' => array(
-          'xpathparser:0' => 0,
-          'xpathparser:1' => 0,
-          'xpathparser:2' => 0,
-          'xpathparser:3' => 0,
-        ),
-        'context' => '/programs/program',
-        'exp' => array(
-          'errors' => 1,
-          'debug' => array(
-            'xpathparser:0' => 'xpathparser:0',
-            'xpathparser:3' => 'xpathparser:3',
-            'context' => 0,
-            'xpathparser:1' => 0,
-            'xpathparser:2' => 0,
-          ),
-        ),
-        'allow_override' => 0,
-      ),
-    ),
-    'processor' => array(
-      'plugin_key' => 'FeedsFieldCollectionProcessor',
-      'config' => array(
-        'field_name' => 'field_terms',
-        'host_entity_type' => 'node',
-        'is_field' => 1,
-        'guid_field_name' => 'field_cmd_id',
-        'identifier_field_name' => 'guid',
-        'mappings' => array(
-          0 => array(
-            'source' => 'xpathparser:0',
-            'target' => 'field_term_name',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          1 => array(
-            'source' => 'xpathparser:1',
-            'target' => 'host_entity_guid',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          2 => array(
-            'source' => 'xpathparser:2',
-            'target' => 'field_credits',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          3 => array(
-            'source' => 'xpathparser:3',
-            'target' => 'guid',
-            'unique' => 1,
-          ),
-        ),
-        'insert_new' => '1',
-        'update_existing' => '0',
-        'update_non_existent' => 'skip',
-        'input_format' => 'plain_text',
-        'skip_hash_check' => 0,
-        'bundle' => 'field_terms',
-        'language' => 'und',
-      ),
-    ),
-    'content_type' => '',
-    'update' => 0,
-    'import_period' => '-1',
-    'expire_period' => 3600,
-    'import_on_create' => 1,
-    'process_in_background' => 0,
-  );
-  $export['catalog_terms'] = $feeds_importer;
 
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
