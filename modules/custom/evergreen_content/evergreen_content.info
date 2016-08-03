@@ -1038,6 +1038,7 @@ features[user_permission][] = view workbench access information
 features[user_permission][] = view workbench taxonomy pages
 features[user_role][] = administrator
 features[user_role][] = advanced editor
+features[user_role][] = calendar review
 features[user_role][] = news promoter
 features[user_role][] = site editor
 features[user_role][] = student groups

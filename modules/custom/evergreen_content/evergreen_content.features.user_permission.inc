@@ -15,8 +15,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student groups' => 'student groups',
     ),
     'module' => 'system',
   );
@@ -72,6 +74,11 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
+      'student groups' => 'student groups',
     ),
     'module' => 'contextual',
   );
@@ -221,6 +228,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access toolbar',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -251,6 +260,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -263,6 +274,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access workbench access by role',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -1892,6 +1905,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any event content',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -3129,6 +3143,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3141,6 +3156,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3192,6 +3208,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
+      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
     'module' => 'node',
@@ -3535,6 +3553,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'use media wysiwyg',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3624,6 +3644,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'use workbench_media add form',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3636,6 +3657,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3648,6 +3671,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3660,6 +3685,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view all unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3731,6 +3758,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view moderation history',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3743,6 +3772,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view moderation messages',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3768,6 +3799,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -3820,8 +3853,11 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student groups' => 'student groups',
     ),
     'module' => 'node',
   );
@@ -3841,8 +3877,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'administrator' => 'administrator',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student groups' => 'student groups',
     ),
     'module' => 'system',
   );
