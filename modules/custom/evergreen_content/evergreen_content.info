@@ -1037,6 +1037,7 @@ features[user_permission][] = view scheduled content
 features[user_permission][] = view the administration theme
 features[user_permission][] = view workbench access information
 features[user_permission][] = view workbench taxonomy pages
+features[user_role][] = academics editor
 features[user_role][] = administrator
 features[user_role][] = advanced editor
 features[user_role][] = calendar review

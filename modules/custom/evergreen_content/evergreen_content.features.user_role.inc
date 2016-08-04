@@ -10,6 +10,12 @@
 function evergreen_content_user_default_roles() {
   $roles = array();
 
+  // Exported role: academics editor.
+  $roles['academics editor'] = array(
+    'name' => 'academics editor',
+    'weight' => 8,
+  );
+
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
