@@ -951,6 +951,7 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
@@ -1541,6 +1542,7 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
@@ -3007,6 +3009,7 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 0,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
