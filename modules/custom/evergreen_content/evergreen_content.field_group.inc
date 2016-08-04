@@ -338,6 +338,7 @@ function evergreen_content_field_group_info() {
       1 => 'field_site_section',
       2 => 'field_event_format',
       3 => 'field_academic_quarter',
+      4 => 'field_add_to_sections',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

@@ -1261,6 +1261,9 @@ function evergreen_content_strongarm() {
         'redirect' => array(
           'weight' => '7',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
       ),
       'display' => array(),
     ),

@@ -5645,6 +5645,50 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-event-field_add_to_sections'.
+  $field_instances['node-event-field_add_to_sections'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select one or more sites where this event might be displayed. Note: the site\'s manager will review this post before it goes live.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_add_to_sections',
+    'label' => 'Site Section(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 5,
     ),
     'workbench_access_field' => 0,
@@ -10150,6 +10194,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select one or more sites where this event might be displayed. Note: the site\'s manager will review this post before it goes live.');
   t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
@@ -10159,6 +10204,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select which office in the directory should be associated with this site section. In order for the site editors to update the information, the office will also need to be assigned to this site.');
   t('Short Description');
   t('Site Section');
+  t('Site Section(s)');
   t('Special Expenses');
   t('Sponsored By');
   t('Square Footage');
