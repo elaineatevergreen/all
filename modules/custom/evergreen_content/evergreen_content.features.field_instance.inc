@@ -6082,48 +6082,6 @@ function evergreen_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_site_section'.
-  $field_instances['node-event-field_site_section'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Select what section this page belongs to. That will set its site title, navigation, and background.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_site_section',
-    'is_property' => 1,
-    'label' => 'Site Section',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 4,
-    ),
-    'workbench_access_field' => 1,
-  );
-
   // Exported field_instance: 'node-event-field_sponsored_by'.
   $field_instances['node-event-field_sponsored_by'] = array(
     'bundle' => 'event',

@@ -505,7 +505,6 @@ features[field_instance][] = node-event-field_flyer
 features[field_instance][] = node-event-field_image
 features[field_instance][] = node-event-field_location_off_campus
 features[field_instance][] = node-event-field_room
-features[field_instance][] = node-event-field_site_section
 features[field_instance][] = node-event-field_sponsored_by
 features[field_instance][] = node-field_of_study-body
 features[field_instance][] = node-field_of_study-field_faculty_directory_subject_
