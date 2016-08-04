@@ -146,22 +146,33 @@ function evergreen_content_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_add_to_sections',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'entityreference',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'site_sections',
-          'parent' => 0,
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'site_section_picker',
         ),
       ),
+      'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_advertised_schedule'.

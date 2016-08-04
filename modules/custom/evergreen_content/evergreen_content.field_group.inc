@@ -335,10 +335,9 @@ function evergreen_content_field_group_info() {
     'weight' => '15',
     'children' => array(
       0 => 'field_calendar_categories',
-      1 => 'field_site_section',
-      2 => 'field_event_format',
-      3 => 'field_academic_quarter',
-      4 => 'field_add_to_sections',
+      1 => 'field_event_format',
+      2 => 'field_academic_quarter',
+      3 => 'field_add_to_sections',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

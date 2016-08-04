@@ -1389,65 +1389,17 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-blurb-field_add_to_sections'.
   $field_instances['node-blurb-field_add_to_sections'] = array(
     'bundle' => 'blurb',
-    'default_value' => array(
-      0 => array(
-        'tid' => 709,
-        'vid' => 3,
-        'name' => 'news',
-        'description' => NULL,
-        'format' => 'plain_text',
-        'weight' => 0,
-        'vocabulary_machine_name' => 'site_sections',
-        'field_background_image' => array(),
-        'field_long_name' => array(
-          'und' => array(
-            0 => array(
-              'value' => 'News & Events',
-              'format' => NULL,
-              'safe_value' => 'News &amp; Events',
-            ),
-          ),
-        ),
-        'field_section_contact_info' => array(),
-        'field_section_navigation' => array(),
-        'rdf_mapping' => array(
-          'description' => array(
-            'predicates' => array(
-              0 => 'skos:definition',
-            ),
-          ),
-          'name' => array(
-            'predicates' => array(
-              0 => 'rdfs:label',
-              1 => 'skos:prefLabel',
-            ),
-          ),
-          'parent' => array(
-            'predicates' => array(
-              0 => 'skos:broader',
-            ),
-            'type' => 'rel',
-          ),
-          'rdftype' => array(
-            0 => 'skos:Concept',
-          ),
-          'vid' => array(
-            'predicates' => array(
-              0 => 'skos:inScheme',
-            ),
-            'type' => 'rel',
-          ),
-        ),
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add this information if the blurb should be displayed on a site section in addition to the home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/". Commas between site section names.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 7,
       ),
       'full_name' => array(
@@ -1470,17 +1422,23 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Add to Sections',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 5,
     ),
     'workbench_access_field' => 0,
@@ -5645,7 +5603,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -5655,13 +5613,15 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select one or more sites where this event might be displayed. Note: the site\'s manager will review this post before it goes live.',
+    'description' => 'This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 13,
       ),
       'teaser' => array(
@@ -5678,18 +5638,24 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Site Section(s)',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
       'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -9981,7 +9947,6 @@ function evergreen_content_field_default_field_instances() {
   t('Add a flyer if you would like people to print out information to post.');
   t('Add an image and extended description.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
-  t('Add this information if the blurb should be displayed on a site section in addition to the home page. Section names are equivalent to their "folder" -- the first part of the URL after "evergreen.edu/". Commas between site section names.');
   t('Add to Sections');
   t('Additional Contact Information');
   t('Advertised Schedule');
@@ -10152,7 +10117,6 @@ function evergreen_content_field_default_field_instances() {
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
-  t('Select one or more sites where this event might be displayed. Note: the site\'s manager will review this post before it goes live.');
   t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
@@ -10195,6 +10159,7 @@ function evergreen_content_field_default_field_instances() {
   t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
+  t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
   t('This means one or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
