@@ -3224,18 +3224,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'security_review',
   );
 
-  // Exported permission: 'schedule publishing of nodes'.
-  $permissions['schedule publishing of nodes'] = array(
-    'name' => 'schedule publishing of nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
-      'student groups' => 'student groups',
-    ),
-    'module' => 'scheduler',
-  );
-
   // Exported permission: 'search content'.
   $permissions['search content'] = array(
     'name' => 'search content',
@@ -3860,16 +3848,6 @@ function evergreen_content_user_default_permissions() {
       'student groups' => 'student groups',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'view scheduled content'.
-  $permissions['view scheduled content'] = array(
-    'name' => 'view scheduled content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-    ),
-    'module' => 'scheduler',
   );
 
   // Exported permission: 'view the administration theme'.
