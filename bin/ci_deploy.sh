@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-EXPORT WWW_CODE='/var/www/html/www'
+export WWW_CODE='/var/www/html/www'
 # Source adminweb environment.
 . /opt/evergreen/ods/bin/collab_build_environment.sh
 . drupal_deploy_functions.sh
