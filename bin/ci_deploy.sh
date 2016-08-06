@@ -12,6 +12,7 @@ deploy_d7_module modules/custom/native_cases $COLLAB_CODE/drupal7
 echo "Collab Site updates"
 run_site_updates $COLLAB_CODE/drupal7 site_updates_collab
 # www deployment.
+echo "Beginning WWW Deployment"
 if [ -f $WWW_CODE/index.php ]; then
   # Required Libraries
   deploy_d7_library libraries/iCalcreator $WWW_CODE
