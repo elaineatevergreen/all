@@ -17,9 +17,8 @@ if [ -f $WWW_CODE/index.php ]; then
   # Required Libraries
   deploy_d7_library libraries/iCalcreator $WWW_CODE
   deploy_d7_library libraries/plupload $WWW_CODE
-  d7_upgrade_cas
   # Feature modules
-  deploy_d7_theme themes/wwwevergreen $WWW_CODE_CODE
+  deploy_d7_theme themes/wwwevergreen $WWW_CODE
   deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
   deploy_d7_custom_module modules/custom/campus_calendar $WWW_CODE
   echo "www site updates"
