@@ -9,6 +9,7 @@ export WWW_CODE='/var/www/html/www'
 deploy_d7_theme themes/wwwevergreen $COLLAB_CODE/drupal7
 deploy_d7_module modules/custom/learning_community_directory $COLLAB_CODE/drupal7
 deploy_d7_module modules/custom/native_cases $COLLAB_CODE/drupal7
+echo "Collab Site updates"
 run_site_updates $COLLAB_CODE/drupal7 site_updates_collab
 # www deployment.
 if [ -f $WWW_CODE/index.php ]; then
@@ -20,6 +21,7 @@ if [ -f $WWW_CODE/index.php ]; then
   deploy_d7_theme themes/wwwevergreen $WWW_CODE_CODE
   deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
   deploy_d7_custom_module modules/custom/campus_calendar $WWW_CODE
+  echo "www site updates"
   run_site_updates $WWW_CODE site_updates_www
 fi
 
