@@ -54,6 +54,46 @@ function evergreen_content_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_date_custom_date_formats().
+ */
+function evergreen_content_fe_date_custom_date_formats() {
+  $custom_date_formats = array();
+  $custom_date_formats['F Y'] = 'F Y';
+  $custom_date_formats['F j, Y'] = 'F j, Y';
+  $custom_date_formats['M'] = 'M';
+  $custom_date_formats['Y'] = 'Y';
+  $custom_date_formats['Y-m-d'] = 'Y-m-d';
+  $custom_date_formats['g:i a'] = 'g:i a';
+  $custom_date_formats['j'] = 'j';
+  $custom_date_formats['l, F j, Y'] = 'l, F j, Y';
+  return $custom_date_formats;
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function evergreen_content_date_format_types() {
+  $format_types = array();
+  // Exported date format type: day
+  $format_types['day'] = 'Day';
+  // Exported date format type: long_notime
+  $format_types['long_notime'] = 'Long/NoTime';
+  // Exported date format type: longdate
+  $format_types['longdate'] = 'LongDate';
+  // Exported date format type: month
+  $format_types['month'] = 'Month';
+  // Exported date format type: month_year
+  $format_types['month_year'] = 'Month/Year';
+  // Exported date format type: time
+  $format_types['time'] = 'Time';
+  // Exported date format type: url
+  $format_types['url'] = 'URL';
+  // Exported date format type: year
+  $format_types['year'] = 'Year';
+  return $format_types;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function evergreen_content_image_default_styles() {
@@ -171,6 +211,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Name'),
       'help' => t('If this field is not for a "page" field, then the name MUST match a field in the CMD in order to correctly pull offerings out of the catalog!'),
     ),
+    'gallery' => array(
+      'name' => t('Gallery'),
+      'base' => 'node_content',
+      'description' => t('Create a <em>gallery</em> to display a sequence of images with descriptions.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'home_page' => array(
       'name' => t('Home Page'),
       'base' => 'node_content',
@@ -191,6 +239,14 @@ function evergreen_content_node_info() {
       'name' => t('Library Database'),
       'base' => 'node_content',
       'description' => t('Use this for posting links to databases on the library\'s website.'),
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'location' => array(
+      'name' => t('Location'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>location</em> to share information about a building or other facility on campus.'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'help' => '',

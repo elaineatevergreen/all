@@ -1,12 +1,29 @@
-deploy_key:
+deploy_www:
   stage: deploy
   script:
     - chmod uog+x bin/*
     - sudo -EHu banner bin/ci_deploy.sh
   tags:
-    - key
+    - www
+  only:
+    - master
+deploy_wwwtest:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -EHu banner bin/ci_deploy.sh
+  tags:
+    - wwwtest
+  only:
+    - test
+deploy_wwwdev:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -EHu banner bin/ci_deploy.sh
+  tags:
+    - wwwdev
   only:
     - dev
-    - master
 
 

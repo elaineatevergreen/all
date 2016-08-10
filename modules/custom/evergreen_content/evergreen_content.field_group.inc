@@ -13,6 +13,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|location|form';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About the Building',
+    'weight' => '4',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_square_footage',
+      2 => 'field_building_history',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_about|node|location|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_applicant|node|scholarship|form';
   $field_group->group_name = 'group_applicant';
   $field_group->entity_type = 'node';
@@ -153,8 +183,9 @@ function evergreen_content_field_group_info() {
       4 => 'field_preparatory_for',
       5 => 'field_status_date',
       6 => 'field_related_field',
-      7 => 'field_credits',
-      8 => 'title',
+      7 => 'field_minimum_credits',
+      8 => 'field_maximum_credits',
+      9 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -304,9 +335,9 @@ function evergreen_content_field_group_info() {
     'weight' => '15',
     'children' => array(
       0 => 'field_calendar_categories',
-      1 => 'field_site_section',
-      2 => 'field_event_format',
-      3 => 'field_academic_quarter',
+      1 => 'field_event_format',
+      2 => 'field_academic_quarter',
+      3 => 'field_add_to_sections',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -859,7 +890,7 @@ function evergreen_content_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_description_plain',
-      1 => 'field_site_section',
+      1 => 'field_add_to_sections',
       2 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -968,6 +999,35 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_names|node|location|form';
+  $field_group->group_name = 'group_names';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Additional Names',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_abbreviated_building_name',
+      1 => 'field_official_name',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-names field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_names|node|location|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_navigation|taxonomy_term|site_sections|form';
   $field_group->group_name = 'group_navigation';
   $field_group->entity_type = 'taxonomy_term';
@@ -1068,6 +1128,8 @@ function evergreen_content_field_group_info() {
       2 => 'field_quarters_open',
       3 => 'field_begin_term',
       4 => 'field_term_details',
+      5 => 'field_end_term',
+      6 => 'field_number_of_quarters',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1265,13 +1327,14 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_advertised_schedule',
       1 => 'field_class_standing',
-      2 => 'field_grad_or_undergrad',
-      3 => 'field_location',
-      4 => 'field_maximum_enrollment',
-      5 => 'field_off_campus_location',
-      6 => 'field_online_learning',
-      7 => 'field_percent_freshman',
-      8 => 'field_time_offered',
+      2 => 'field_location',
+      3 => 'field_maximum_enrollment',
+      4 => 'field_off_campus_location',
+      5 => 'field_online_learning',
+      6 => 'field_percent_freshman',
+      7 => 'field_time_offered',
+      8 => 'field_graduate_program',
+      9 => 'field_undergrad',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1288,6 +1351,8 @@ function evergreen_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About the Building');
+  t('Additional Names');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Article Information');
