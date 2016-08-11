@@ -6880,6 +6880,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
   $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
   $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['label'] = 'Criteria';
   /* Field: Content: Under-represented */
   $handler->display->display_options['fields']['field_under_represented']['id'] = 'field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
