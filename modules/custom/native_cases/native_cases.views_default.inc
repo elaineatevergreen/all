@@ -172,18 +172,36 @@ function native_cases_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'media';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Featured Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_featured_image']['element_class'] = 'media-image';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -192,6 +210,7 @@ function native_cases_views_default_views() {
   $handler->display->display_options['fields']['field_author']['table'] = 'field_data_field_author';
   $handler->display->display_options['fields']['field_author']['field'] = 'field_author';
   $handler->display->display_options['fields']['field_author']['label'] = '';
+  $handler->display->display_options['fields']['field_author']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_author']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_author']['delta_offset'] = '0';
   /* Field: Content: Body */
@@ -199,22 +218,23 @@ function native_cases_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Featured Image */
-  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
-  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
-  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
-  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
-  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => 'content',
-  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media-body">
+[title]
+[field_author] 
+[body]
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
