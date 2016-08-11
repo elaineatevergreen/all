@@ -21,12 +21,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => 'footer',
         'status' => 1,
@@ -47,12 +41,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => 'section_nav',
         'status' => 1,
@@ -73,12 +61,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -99,12 +81,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -125,12 +101,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 10,
-      ),
       'wwwevergreen' => array(
         'region' => '',
         'status' => 0,
@@ -151,12 +121,6 @@ function native_cases_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'wwwevergreen' => array(
         'region' => 'section_nav',
         'status' => 1,
