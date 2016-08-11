@@ -9108,7 +9108,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'scholarship',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Which is eligible to apply for this scholarship? Select both for either.',
+    'description' => 'Which is eligible to apply for this scholarship?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -10200,7 +10200,7 @@ function evergreen_content_field_default_field_instances() {
   t('What even <em>is</em> Evergreen?');
   t('When the import is run from the CMD, this value should be set to 1.');
   t('Where did they come from before they went to Evergreen?');
-  t('Which is eligible to apply for this scholarship? Select both for either.');
+  t('Which is eligible to apply for this scholarship?');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
   t('this is the extra blobby version of the home page content. it\'ll be more chunky later, I swear.');

@@ -2214,9 +2214,9 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        1 => 'Required',
-        2 => 'Preferred',
-        3 => 'Not need-based',
+        'Required' => 'Required',
+        'Preferred' => 'Preferred',
+        'Not need-based' => 'Not need-based',
       ),
       'allowed_values_function' => '',
     ),
@@ -2240,8 +2240,9 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        1 => 'New Student',
-        2 => 'Current Student',
+        'New student' => 'New student',
+        'Current student' => 'Current student',
+        'New or current' => 'New or current',
       ),
       'allowed_values_function' => '',
     ),

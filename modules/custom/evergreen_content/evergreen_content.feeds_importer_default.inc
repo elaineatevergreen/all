@@ -1186,6 +1186,8 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:6' => 'system-data-structure/requirements/criteria/value',
           'xpathparser:7' => 'system-data-structure/give/cashnet',
           'xpathparser:8' => 'path',
+          'xpathparser:9' => 'system-data-structure/requirements/needbased',
+          'xpathparser:10' => 'system-data-structure/requirements/newOrCurrent',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -1197,6 +1199,8 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:6' => 0,
           'xpathparser:7' => 0,
           'xpathparser:8' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
         ),
         'context' => '/system-index-block/system-page',
         'exp' => array(
@@ -1212,6 +1216,8 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:6' => 0,
             'xpathparser:7' => 0,
             'xpathparser:8' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -1275,6 +1281,18 @@ function evergreen_content_feeds_importer_default() {
           8 => array(
             'source' => 'xpathparser:8',
             'target' => 'field_site_section',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_need_based',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'field_new_or_current',
             'unique' => FALSE,
           ),
         ),

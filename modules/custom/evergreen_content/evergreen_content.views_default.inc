@@ -6870,6 +6870,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_class_standing']['id'] = 'field_class_standing';
   $handler->display->display_options['fields']['field_class_standing']['table'] = 'field_data_field_class_standing';
   $handler->display->display_options['fields']['field_class_standing']['field'] = 'field_class_standing';
+  $handler->display->display_options['fields']['field_class_standing']['type'] = 'list_key';
   $handler->display->display_options['fields']['field_class_standing']['delta_offset'] = '0';
   /* Field: Content: Need-Based */
   $handler->display->display_options['fields']['field_need_based']['id'] = 'field_need_based';
