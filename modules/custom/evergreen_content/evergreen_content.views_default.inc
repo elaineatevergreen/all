@@ -6849,10 +6849,18 @@ return($term); ';
   $handler->display->display_options['fields']['field_amount']['id'] = 'field_amount';
   $handler->display->display_options['fields']['field_amount']['table'] = 'field_data_field_amount';
   $handler->display->display_options['fields']['field_amount']['field'] = 'field_amount';
+  $handler->display->display_options['fields']['field_amount']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_amount']['alter']['text'] = '<br/><small><strong>Amount</strong>: [field_amount]</small';
+  $handler->display->display_options['fields']['field_amount']['hide_empty'] = TRUE;
   /* Field: Content: Tuition Award */
   $handler->display->display_options['fields']['field_tuition_award']['id'] = 'field_tuition_award';
   $handler->display->display_options['fields']['field_tuition_award']['table'] = 'field_data_field_tuition_award';
   $handler->display->display_options['fields']['field_tuition_award']['field'] = 'field_tuition_award';
+  $handler->display->display_options['fields']['field_tuition_award']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_tuition_award']['alter']['text'] = '<br/><small><strong>Tuition Award, restrictions apply.*</strong></small>';
+  $handler->display->display_options['fields']['field_tuition_award']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_tuition_award']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_tuition_award']['type'] = 'list_key';
   /* Field: Content: New or Current */
   $handler->display->display_options['fields']['field_new_or_current']['id'] = 'field_new_or_current';
   $handler->display->display_options['fields']['field_new_or_current']['table'] = 'field_data_field_new_or_current';
