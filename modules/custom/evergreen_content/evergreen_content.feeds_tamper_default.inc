@@ -270,6 +270,38 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'scholarship_import-xpathparser_8-find_replace_regex';
+  $feeds_tamper->importer = 'scholarship_import';
+  $feeds_tamper->source = 'xpathparser:8';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/\\/([a-z-])+/',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Strip after the slash';
+  $export['scholarship_import-xpathparser_8-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'scholarship_import-xpathparser_8-trim';
+  $feeds_tamper->importer = 'scholarship_import';
+  $feeds_tamper->source = 'xpathparser:8';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '/',
+    'side' => 'ltrim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Remove leading slash';
+  $export['scholarship_import-xpathparser_8-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'student_group_import-meeting_location-rewrite';
   $feeds_tamper->importer = 'student_group_import';
   $feeds_tamper->source = 'Meeting Location';
