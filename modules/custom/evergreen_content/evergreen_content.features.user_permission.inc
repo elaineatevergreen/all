@@ -904,15 +904,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: 'clear catalog_terms feeds'.
-  $permissions['clear catalog_terms feeds'] = array(
-    'name' => 'clear catalog_terms feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'clear e2campus feeds'.
   $permissions['clear e2campus feeds'] = array(
     'name' => 'clear e2campus feeds',
@@ -2999,15 +2990,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: 'import catalog_terms feeds'.
-  $permissions['import catalog_terms feeds'] = array(
-    'name' => 'import catalog_terms feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'import e2campus feeds'.
   $permissions['import e2campus feeds'] = array(
     'name' => 'import e2campus feeds',
@@ -3280,15 +3262,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
-  // Exported permission: 'tamper catalog_terms'.
-  $permissions['tamper catalog_terms'] = array(
-    'name' => 'tamper catalog_terms',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
   // Exported permission: 'tamper e2campus'.
   $permissions['tamper e2campus'] = array(
     'name' => 'tamper e2campus',
@@ -3382,15 +3355,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock catalog feeds'.
   $permissions['unlock catalog feeds'] = array(
     'name' => 'unlock catalog feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'unlock catalog_terms feeds'.
-  $permissions['unlock catalog_terms feeds'] = array(
-    'name' => 'unlock catalog_terms feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),

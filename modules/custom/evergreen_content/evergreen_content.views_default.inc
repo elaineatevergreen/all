@@ -6779,6 +6779,10 @@ return($term); ';
       'empty_column' => 0,
     ),
   );
+  /* Relationship: Content: Site Section (field_site_section) */
+  $handler->display->display_options['relationships']['field_site_section_tid']['id'] = 'field_site_section_tid';
+  $handler->display->display_options['relationships']['field_site_section_tid']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['relationships']['field_site_section_tid']['field'] = 'field_site_section_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -6789,7 +6793,6 @@ return($term); ';
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  $handler->display->display_options['sorts']['title']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -6834,7 +6837,7 @@ return($term); ';
   );
 
   /* Display: Applicant View */
-  $handler = $view->new_display('block', 'Applicant View', 'block');
+  $handler = $view->new_display('block', 'Applicant View', 'students');
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -6872,6 +6875,21 @@ return($term); ';
   $handler->display->display_options['fields']['field_under_represented']['id'] = 'field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'site_sections' => 'site_sections',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -6926,7 +6944,7 @@ return($term); ';
   );
 
   /* Display: Donor View */
-  $handler = $view->new_display('block', 'Donor View', 'block_1');
+  $handler = $view->new_display('block', 'Donor View', 'donors');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Scholarships for Donors';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -6976,6 +6994,13 @@ return($term); ';
   $handler->display->display_options['title'] = 'Review Scholarships';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_site_section',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
     'field_amount' => 'field_amount',
@@ -6990,6 +7015,7 @@ return($term); ';
     'field_short_description' => 'field_short_description',
     'field_tuition_award' => 'field_tuition_award',
     'field_under_represented' => 'field_short_description',
+    'field_site_section' => 'field_site_section',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -7008,7 +7034,7 @@ return($term); ';
       'empty_column' => 0,
     ),
     'field_cashnet_code' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -7020,14 +7046,14 @@ return($term); ';
       'empty_column' => 0,
     ),
     'field_common_application' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_deadline' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -7072,6 +7098,13 @@ return($term); ';
       'empty_column' => 0,
     ),
     'field_under_represented' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_site_section' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -7198,6 +7231,17 @@ return($term); ';
   $handler->display->display_options['fields']['field_under_represented']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_under_represented']['field_api_classes'] = TRUE;
+  /* Field: Content: Site Section */
+  $handler->display->display_options['fields']['field_site_section']['id'] = 'field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
+  $handler->display->display_options['fields']['field_site_section']['label'] = '';
+  $handler->display->display_options['fields']['field_site_section']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_site_section']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_site_section']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_site_section']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_site_section']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_site_section']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

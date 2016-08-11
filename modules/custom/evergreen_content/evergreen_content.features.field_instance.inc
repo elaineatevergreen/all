@@ -6254,6 +6254,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -6314,6 +6320,12 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Add an image and extended description.',
     'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'field_collection',
