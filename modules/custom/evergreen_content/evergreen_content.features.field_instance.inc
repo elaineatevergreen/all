@@ -9127,7 +9127,7 @@ function evergreen_content_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_new_or_current',
-    'label' => 'New or Current',
+    'label' => 'New or Current Student',
     'required' => 0,
     'settings' => array(
       'description_display' => 'before',
@@ -9286,7 +9286,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'scholarship',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This means one or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.',
+    'description' => '<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -9952,6 +9952,7 @@ function evergreen_content_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
+  t('<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
   t('Abbreviated Building Name');
   t('Academic Quarter');
@@ -10091,7 +10092,7 @@ function evergreen_content_field_default_field_instances() {
   t('Most of the time, keep it to other pages in the same site section.');
   t('Navigation');
   t('Need-Based');
-  t('New or Current');
+  t('New or Current Student');
   t('News Outlet');
   t('Number of Quarters');
   t('Off Campus Location');
@@ -10172,7 +10173,6 @@ function evergreen_content_field_default_field_instances() {
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
   t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
-  t('This means one or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should ALWAYS be <em>library</em>.');

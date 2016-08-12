@@ -1190,7 +1190,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:10' => 'system-data-structure/requirements/newOrCurrent',
           'xpathparser:11' => 'system-data-structure/tuitionAward',
           'xpathparser:12' => 'system-data-structure/requirements/criteria',
-          'xpathparser:13' => 'system-data-structure/requirements/underrepresented/underrepresented-alt',
+          'xpathparser:13' => 'system-data-structure/requirements/underrepresented/underrepresented',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -1316,6 +1316,11 @@ function evergreen_content_feeds_importer_default() {
             'target' => 'field_short_description',
             'unique' => FALSE,
             'language' => 'und',
+          ),
+          13 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_under_represented',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',

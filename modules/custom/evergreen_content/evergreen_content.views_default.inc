@@ -6712,7 +6712,7 @@ return($term); ';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -6723,7 +6723,7 @@ return($term); ';
     'field_class_standing' => 'field_class_standing',
     'field_need_based' => 'field_need_based',
     'field_short_description' => 'field_short_description',
-    'field_under_represented' => 'field_short_description',
+    'field_under_represented' => 'field_under_represented',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -6822,7 +6822,7 @@ return($term); ';
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: New or Current (field_new_or_current) */
+  /* Filter criterion: Content: New or Current Student (field_new_or_current) */
   $handler->display->display_options['filters']['field_new_or_current_value']['id'] = 'field_new_or_current_value';
   $handler->display->display_options['filters']['field_new_or_current_value']['table'] = 'field_data_field_new_or_current';
   $handler->display->display_options['filters']['field_new_or_current_value']['field'] = 'field_new_or_current_value';
@@ -6839,6 +6839,179 @@ return($term); ';
 
   /* Display: Applicant View */
   $handler = $view->new_display('block', 'Applicant View', 'students');
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_class_standing_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_new_or_current_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_under_represented_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => 'One or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -6862,7 +7035,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_tuition_award']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_tuition_award']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_tuition_award']['type'] = 'list_key';
-  /* Field: Content: New or Current */
+  /* Field: Content: New or Current Student */
   $handler->display->display_options['fields']['field_new_or_current']['id'] = 'field_new_or_current';
   $handler->display->display_options['fields']['field_new_or_current']['table'] = 'field_data_field_new_or_current';
   $handler->display->display_options['fields']['field_new_or_current']['field'] = 'field_new_or_current';
@@ -6877,15 +7050,19 @@ return($term); ';
   $handler->display->display_options['fields']['field_need_based']['id'] = 'field_need_based';
   $handler->display->display_options['fields']['field_need_based']['table'] = 'field_data_field_need_based';
   $handler->display->display_options['fields']['field_need_based']['field'] = 'field_need_based';
-  /* Field: Content: Short Description */
-  $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
-  $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
-  $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
-  $handler->display->display_options['fields']['field_short_description']['label'] = 'Criteria';
   /* Field: Content: Under-represented */
   $handler->display->display_options['fields']['field_under_represented']['id'] = 'field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
+  $handler->display->display_options['fields']['field_under_represented']['label'] = 'Under-Represented Groups';
+  $handler->display->display_options['fields']['field_under_represented']['alter']['text'] = '<strong>Under-represented groups</strong>: [field_under_represented]';
+  $handler->display->display_options['fields']['field_under_represented']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
+  /* Field: Content: Short Description */
+  $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['label'] = 'Other Criteria';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -6917,10 +7094,21 @@ return($term); ';
   $handler->display->display_options['filters']['type']['value'] = array(
     'scholarship' => 'scholarship',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Funding Status (field_funding_status) */
+  $handler->display->display_options['filters']['field_funding_status_value']['id'] = 'field_funding_status_value';
+  $handler->display->display_options['filters']['field_funding_status_value']['table'] = 'field_data_field_funding_status';
+  $handler->display->display_options['filters']['field_funding_status_value']['field'] = 'field_funding_status_value';
+  $handler->display->display_options['filters']['field_funding_status_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_funding_status_value']['value'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_funding_status_value']['group'] = 1;
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
   $handler->display->display_options['filters']['field_class_standing_value']['table'] = 'field_data_field_class_standing';
   $handler->display->display_options['filters']['field_class_standing_value']['field'] = 'field_class_standing_value';
+  $handler->display->display_options['filters']['field_class_standing_value']['group'] = 1;
   $handler->display->display_options['filters']['field_class_standing_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_class_standing_value']['expose']['operator_id'] = 'field_class_standing_value_op';
   $handler->display->display_options['filters']['field_class_standing_value']['expose']['label'] = 'Class Standing';
@@ -6931,10 +7119,11 @@ return($term); ';
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: New or Current (field_new_or_current) */
+  /* Filter criterion: Content: New or Current Student (field_new_or_current) */
   $handler->display->display_options['filters']['field_new_or_current_value']['id'] = 'field_new_or_current_value';
   $handler->display->display_options['filters']['field_new_or_current_value']['table'] = 'field_data_field_new_or_current';
   $handler->display->display_options['filters']['field_new_or_current_value']['field'] = 'field_new_or_current_value';
+  $handler->display->display_options['filters']['field_new_or_current_value']['group'] = 1;
   $handler->display->display_options['filters']['field_new_or_current_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_new_or_current_value']['expose']['operator_id'] = 'field_new_or_current_value_op';
   $handler->display->display_options['filters']['field_new_or_current_value']['expose']['label'] = 'New or Current';
@@ -6945,13 +7134,26 @@ return($term); ';
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Funding Status (field_funding_status) */
-  $handler->display->display_options['filters']['field_funding_status_value']['id'] = 'field_funding_status_value';
-  $handler->display->display_options['filters']['field_funding_status_value']['table'] = 'field_data_field_funding_status';
-  $handler->display->display_options['filters']['field_funding_status_value']['field'] = 'field_funding_status_value';
-  $handler->display->display_options['filters']['field_funding_status_value']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_funding_status_value']['value'] = array(
+  /* Filter criterion: Content: Under-represented (field_under_represented) */
+  $handler->display->display_options['filters']['field_under_represented_value']['id'] = 'field_under_represented_value';
+  $handler->display->display_options['filters']['field_under_represented_value']['table'] = 'field_data_field_under_represented';
+  $handler->display->display_options['filters']['field_under_represented_value']['field'] = 'field_under_represented_value';
+  $handler->display->display_options['filters']['field_under_represented_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator_id'] = 'field_under_represented_value_op';
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['label'] = 'Member of Under-Represented Group';
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator'] = 'field_under_represented_value_op';
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['identifier'] = 'field_under_represented_value';
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_under_represented_value']['expose']['remember_roles'] = array(
     2 => '2',
+    1 => 0,
+    4 => 0,
+    8 => 0,
+    5 => 0,
+    9 => 0,
+    7 => 0,
+    6 => 0,
+    3 => 0,
   );
 
   /* Display: Donor View */
@@ -7209,7 +7411,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_need_based']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_need_based']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_need_based']['field_api_classes'] = TRUE;
-  /* Field: Content: New or Current */
+  /* Field: Content: New or Current Student */
   $handler->display->display_options['fields']['field_new_or_current']['id'] = 'field_new_or_current';
   $handler->display->display_options['fields']['field_new_or_current']['table'] = 'field_data_field_new_or_current';
   $handler->display->display_options['fields']['field_new_or_current']['field'] = 'field_new_or_current';
