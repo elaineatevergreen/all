@@ -40,10 +40,16 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-1' => array(
+        'block-2' => array(
           'module' => 'block',
-          'delta' => '1',
+          'delta' => '2',
           'region' => 'section_title',
+          'weight' => '-9',
+        ),
+        'bean-calendar-nav' => array(
+          'module' => 'bean',
+          'delta' => 'calendar-nav',
+          'region' => 'section_nav',
           'weight' => '-10',
         ),
       ),
@@ -134,12 +140,6 @@ function evergreen_content_context_default_contexts() {
           'module' => 'bean',
           'delta' => 'directory-menu',
           'region' => 'section_nav',
-          'weight' => '-10',
-        ),
-        'bean-directories' => array(
-          'module' => 'bean',
-          'delta' => 'directories',
-          'region' => 'background_image',
           'weight' => '-10',
         ),
       ),

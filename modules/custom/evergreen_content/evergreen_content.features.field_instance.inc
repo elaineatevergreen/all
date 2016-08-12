@@ -1383,7 +1383,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 1,
     ),
-    'workbench_access_field' => 1,
+    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-blurb-field_add_to_sections'.
@@ -5379,7 +5379,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 0,
     ),
-    'workbench_access_field' => 1,
+    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-directory_office-field_twitter'.

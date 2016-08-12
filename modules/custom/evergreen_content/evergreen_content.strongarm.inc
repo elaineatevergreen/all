@@ -2674,6 +2674,7 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_menu';
   $strongarm->value = array(
+    'devel' => 0,
     'main-menu' => 0,
     'management' => 0,
     'navigation' => 0,
@@ -2720,7 +2721,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_event';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['workbench_access_node_type_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2745,6 +2746,8 @@ function evergreen_content_strongarm() {
     'site_sections' => 'site_sections',
     'calendar_categories' => 0,
     'database_of_databases' => 0,
+    'event_formats' => 0,
+    'faculty_directory_categories' => 0,
   );
   $export['workbench_access_taxonomy'] = $strongarm;
 

@@ -14,7 +14,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
@@ -227,6 +229,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['access toolbar'] = array(
     'name' => 'access toolbar',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -259,6 +262,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -273,6 +277,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['access workbench access by role'] = array(
     'name' => 'access workbench access by role',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3124,7 +3129,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['moderate content from needs_review to draft'] = array(
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
@@ -3137,7 +3144,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['moderate content from needs_review to published'] = array(
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
@@ -3608,6 +3617,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['use workbench_moderation my drafts tab'] = array(
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3622,6 +3632,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['use workbench_moderation needs review tab'] = array(
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3636,6 +3647,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['view all unpublished content'] = array(
     'name' => 'view all unpublished content',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3709,6 +3721,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['view moderation history'] = array(
     'name' => 'view moderation history',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3723,6 +3736,7 @@ function evergreen_content_user_default_permissions() {
   $permissions['view moderation messages'] = array(
     'name' => 'view moderation messages',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
@@ -3818,7 +3832,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
