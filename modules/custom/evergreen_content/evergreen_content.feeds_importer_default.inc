@@ -13,6 +13,307 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'academic_calendar_csv';
+  $feeds_importer->config = array(
+    'name' => 'Academic Calendar CSV',
+    'description' => 'Allows importing of academic calendar dates from a spreadsheet!',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'no_headers' => 0,
+        'encoding' => 'UTF-8',
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Published',
+            'target' => 'status',
+            'unique' => FALSE,
+          ),
+          1 => array(
+            'source' => 'Quarter',
+            'target' => 'field_academic_quarter',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'Title',
+            'target' => 'title',
+            'unique' => 1,
+          ),
+          3 => array(
+            'source' => 'Start',
+            'target' => 'field_event_date:start',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'End',
+            'target' => 'field_event_date:end',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'Description',
+            'target' => 'body',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'Format',
+            'target' => 'field_format',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'Category',
+            'target' => 'field_category',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'update_non_existent' => 'skip',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'event',
+        'insert_new' => 1,
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['academic_calendar_csv'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'calendar_categories';
+  $feeds_importer->config = array(
+    'name' => 'Calendar Categories',
+    'description' => 'For initial calendar setup.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsTermProcessor',
+      'config' => array(
+        'vocabulary' => 0,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Name',
+            'target' => 'name',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Description',
+            'target' => 'description',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '0',
+        'update_non_existent' => 'skip',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'calendar_categories',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['calendar_categories'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'calendar_formats';
+  $feeds_importer->config = array(
+    'name' => 'Calendar Formats',
+    'description' => 'For initial calendar setup.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsTermProcessor',
+      'config' => array(
+        'vocabulary' => 0,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Name',
+            'target' => 'name',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Description',
+            'target' => 'description',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '0',
+        'update_non_existent' => 'skip',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'event_formats',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['calendar_formats'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'campus_locations';
+  $feeds_importer->config = array(
+    'name' => 'Campus Locations',
+    'description' => 'Means we only have to input this info once!',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Nid',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Title',
+            'target' => 'title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'Official Name',
+            'target' => 'field_official_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'Abbreviated Building Name',
+            'target' => 'field_abbreviated_building_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Description',
+            'target' => 'body',
+            'format' => 'full_html',
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'Location Category',
+            'target' => 'field_location_category',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'location',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['campus_locations'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'catalog';
   $feeds_importer->config = array(
     'name' => 'Catalog',
@@ -884,6 +1185,12 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:5' => 'system-data-structure/deadline',
           'xpathparser:6' => 'system-data-structure/requirements/criteria/value',
           'xpathparser:7' => 'system-data-structure/give/cashnet',
+          'xpathparser:8' => 'path',
+          'xpathparser:9' => 'system-data-structure/requirements/needbased',
+          'xpathparser:10' => 'system-data-structure/requirements/newOrCurrent',
+          'xpathparser:11' => 'system-data-structure/tuitionAward',
+          'xpathparser:12' => 'system-data-structure/requirements/criteria',
+          'xpathparser:13' => 'system-data-structure/requirements/underrepresented/underrepresented',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -894,6 +1201,12 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:5' => 0,
           'xpathparser:6' => 0,
           'xpathparser:7' => 0,
+          'xpathparser:8' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
+          'xpathparser:12' => 0,
+          'xpathparser:13' => 0,
         ),
         'context' => '/system-index-block/system-page',
         'exp' => array(
@@ -908,6 +1221,12 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:5' => 0,
             'xpathparser:6' => 0,
             'xpathparser:7' => 0,
+            'xpathparser:8' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
+            'xpathparser:12' => 0,
+            'xpathparser:13' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -924,40 +1243,83 @@ function evergreen_content_feeds_importer_default() {
             'source' => 'xpathparser:0',
             'target' => 'title',
             'unique' => 1,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'xpathparser:1',
             'target' => 'body',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           2 => array(
             'source' => 'xpathparser:2',
             'target' => 'field_amount',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           3 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_class_standing',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           4 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_fafsa_or_wasfa_required',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           5 => array(
             'source' => 'xpathparser:5',
             'target' => 'field_deadline:start',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           6 => array(
             'source' => 'xpathparser:6',
             'target' => 'field_short_description',
             'unique' => FALSE,
+            'language' => 'und',
           ),
           7 => array(
             'source' => 'xpathparser:7',
             'target' => 'field_cashnet_code',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          8 => array(
+            'source' => 'xpathparser:8',
+            'target' => 'field_site_section',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_need_based',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'field_new_or_current',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'field_tuition_award',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          12 => array(
+            'source' => 'xpathparser:12',
+            'target' => 'field_short_description',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          13 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_under_represented',
             'unique' => FALSE,
           ),
         ),
@@ -966,6 +1328,8 @@ function evergreen_content_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'scholarship',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',
@@ -976,6 +1340,99 @@ function evergreen_content_feeds_importer_default() {
     'process_in_background' => 0,
   );
   $export['scholarship_import'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'student_group_import';
+  $feeds_importer->config = array(
+    'name' => 'Student Group Import',
+    'description' => 'Should only be used when the site is migrated.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Title',
+            'target' => 'title',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Websites',
+            'target' => 'field_websites:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'Email',
+            'target' => 'field_email',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'Description',
+            'target' => 'body',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Meeting Times',
+            'target' => 'Temporary target 1',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'Meeting Location',
+            'target' => 'field_meetings',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'Group Categories',
+            'target' => 'field_group_categories',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'basic_tags',
+        'skip_hash_check' => 0,
+        'bundle' => 'student_group',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['student_group_import'] = $feeds_importer;
 
   return $export;
 }
