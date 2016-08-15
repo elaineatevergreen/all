@@ -2178,7 +2178,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_article';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_article'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2206,35 +2206,35 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_directory_individual';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_directory_individual'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_directory_office';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_directory_office'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_event';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_event'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_field_of_study';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_field_of_study'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_gallery';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2248,49 +2248,49 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_home_page_hero';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_home_page_hero'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_library_database';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_library_database'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_location';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_location'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_profile';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_profile'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_scholarship';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_scholarship'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_student_group';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_student_group'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_webform';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_webform'] = $strongarm;
 
   $strongarm = new stdClass();
