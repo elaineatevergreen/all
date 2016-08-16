@@ -6368,108 +6368,6 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-home_page-body'.
-  $field_instances['node-home_page-body'] = array(
-    'bundle' => 'home_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'this is the extra blobby version of the home page content. it\'ll be more chunky later, I swear.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'body',
-    'is_property' => 0,
-    'label' => 'Blob',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'display_summary' => 1,
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-home_page-field_emergency_message'.
-  $field_instances['node-home_page-field_emergency_message'] = array(
-    'bundle' => 'home_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_emergency_message',
-    'label' => 'Emergency Message',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-home_page-field_intro'.
   $field_instances['node-home_page-field_intro'] = array(
     'bundle' => 'home_page',
@@ -6558,48 +6456,6 @@ function evergreen_content_field_default_field_instances() {
       'weight' => 33,
     ),
     'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-home_page-field_site_section'.
-  $field_instances['node-home_page-field_site_section'] = array(
-    'bundle' => 'home_page',
-    'default_value' => array(
-      0 => array(
-        'tid' => 101,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'This should ONLY EVER be the "Home Page" section.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_site_section',
-    'label' => 'Site Section',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 6,
-    ),
-    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-home_page_hero-field_classes'.
@@ -9979,7 +9835,6 @@ function evergreen_content_field_default_field_instances() {
   t('Background Image');
   t('Begin Term');
   t('Biography');
-  t('Blob');
   t('Blurb');
   t('Body');
   t('Building');
@@ -10015,7 +9870,6 @@ function evergreen_content_field_default_field_instances() {
   t('Display in alumni directories');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
   t('Email');
-  t('Emergency Message');
   t('End Term');
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.');
   t('Event Date');
@@ -10176,7 +10030,6 @@ function evergreen_content_field_default_field_instances() {
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should ALWAYS be <em>library</em>.');
-  t('This should ONLY EVER be the "Home Page" section.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('Time Offered');
@@ -10190,7 +10043,6 @@ function evergreen_content_field_default_field_instances() {
   t('Upper Division Science Credit');
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
-  t('Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.');
   t('Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.');
   t('Using the Banner format, where 201610 = Fall 2016.');
   t('Variable Credit Options');
@@ -10203,7 +10055,6 @@ function evergreen_content_field_default_field_instances() {
   t('Which is eligible to apply for this scholarship?');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
-  t('this is the extra blobby version of the home page content. it\'ll be more chunky later, I swear.');
   t('this is used for lots of connecting and prepopulating stuff, or at least I think it will be.');
 
   return $field_instances;
