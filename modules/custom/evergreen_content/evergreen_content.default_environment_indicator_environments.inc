@@ -45,7 +45,7 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'localhost';
   $environment->name = 'Dev/Localhost';
-  $environment->regexurl = 'localhost';
+  $environment->regexurl = 'localhost*';
   $environment->settings = array(
     'color' => '#aa3333',
     'text_color' => '#ffffff',

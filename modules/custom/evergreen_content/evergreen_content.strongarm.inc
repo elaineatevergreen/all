@@ -2606,7 +2606,6 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
-    'file' => TRUE,
     'node' => TRUE,
     'taxonomy' => TRUE,
     'user' => TRUE,

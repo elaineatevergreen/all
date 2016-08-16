@@ -89,6 +89,122 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_2-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:2';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_2-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_3-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-l.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_3-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_3-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_3-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_4-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-m.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_4-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_4-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_4-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_5-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:5';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-s.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_5-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_5-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:5';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_5-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory-xpathparser_10-trim';
   $feeds_tamper->importer = 'office_directory';
   $feeds_tamper->source = 'xpathparser:10';
