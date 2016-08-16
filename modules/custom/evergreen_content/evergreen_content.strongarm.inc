@@ -20,6 +20,27 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_profile';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_profile';
+  $strongarm->value = '[node:field-first-name] [node:field-last-name]';
+  $export['auto_entitylabel_pattern_node_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_profile';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
   $strongarm->value = '1';
   $export['clean_url'] = $strongarm;
