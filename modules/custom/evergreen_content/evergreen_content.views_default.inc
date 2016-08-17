@@ -177,16 +177,19 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_business_address_administrative_area']['table'] = 'field_data_field_business_address';
   $handler->display->display_options['fields']['field_business_address_administrative_area']['field'] = 'field_business_address_administrative_area';
   $handler->display->display_options['fields']['field_business_address_administrative_area']['label'] = 'State';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_address_administrative_area']['element_type'] = '0';
   $handler->display->display_options['fields']['field_business_address_administrative_area']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_business_address_administrative_area']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_business_address_administrative_area']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_business_address_administrative_area']['display_name'] = 1;
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['display_name'] = 0;
   /* Field: Content: Business Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_business_address_locality']['id'] = 'field_business_address_locality';
   $handler->display->display_options['fields']['field_business_address_locality']['table'] = 'field_data_field_business_address';
   $handler->display->display_options['fields']['field_business_address_locality']['field'] = 'field_business_address_locality';
-  $handler->display->display_options['fields']['field_business_address_locality']['label'] = 'City';
+  $handler->display->display_options['fields']['field_business_address_locality']['label'] = 'Location';
+  $handler->display->display_options['fields']['field_business_address_locality']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_business_address_locality']['alter']['text'] = '[field_business_address_locality], [field_business_address_administrative_area]';
   $handler->display->display_options['fields']['field_business_address_locality']['element_type'] = '0';
   $handler->display->display_options['fields']['field_business_address_locality']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_business_address_locality']['element_wrapper_type'] = '0';
