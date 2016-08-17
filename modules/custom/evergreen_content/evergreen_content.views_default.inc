@@ -154,22 +154,6 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Last name */
-  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
-  $handler->display->display_options['fields']['field_last_name']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_last_name']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_last_name']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_last_name']['field_api_classes'] = TRUE;
-  /* Field: Content: First name */
-  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  $handler->display->display_options['fields']['field_first_name']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_first_name']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_first_name']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_first_name']['field_api_classes'] = TRUE;
   /* Field: Content: Business Name */
   $handler->display->display_options['fields']['field_business_name']['id'] = 'field_business_name';
   $handler->display->display_options['fields']['field_business_name']['table'] = 'field_data_field_business_name';
@@ -188,6 +172,25 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['field_business_type']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_business_type']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_business_type']['field_api_classes'] = TRUE;
+  /* Field: Content: Business Address - Administrative area (i.e. State / Province) */
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['id'] = 'field_business_address_administrative_area';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['table'] = 'field_data_field_business_address';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['field'] = 'field_business_address_administrative_area';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['label'] = 'State';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_business_address_administrative_area']['display_name'] = 1;
+  /* Field: Content: Business Address - Locality (i.e. City) */
+  $handler->display->display_options['fields']['field_business_address_locality']['id'] = 'field_business_address_locality';
+  $handler->display->display_options['fields']['field_business_address_locality']['table'] = 'field_data_field_business_address';
+  $handler->display->display_options['fields']['field_business_address_locality']['field'] = 'field_business_address_locality';
+  $handler->display->display_options['fields']['field_business_address_locality']['label'] = 'City';
+  $handler->display->display_options['fields']['field_business_address_locality']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_business_address_locality']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_business_address_locality']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_business_address_locality']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
