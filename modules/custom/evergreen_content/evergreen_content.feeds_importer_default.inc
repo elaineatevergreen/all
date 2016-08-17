@@ -105,6 +105,126 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'author_directory';
+  $feeds_importer->config = array(
+    'name' => 'Author Directory',
+    'description' => 'Importing authors from blobby HTML',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:5' => 'id',
+          'xpathparser:0' => 'lastname',
+          'xpathparser:1' => 'firstname',
+          'xpathparser:2' => 'gradyear',
+          'xpathparser:3' => 'bio',
+          'xpathparser:4' => 'excerpt',
+        ),
+        'rawXML' => array(
+          'xpathparser:3' => 'xpathparser:3',
+          'xpathparser:4' => 'xpathparser:4',
+          'xpathparser:5' => 0,
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+        ),
+        'context' => '/authors/author',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'field_last_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'field_first_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_graduated_alt',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'body',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_excerpt',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_display',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'basic_tags',
+        'skip_hash_check' => 0,
+        'bundle' => 'profile',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['author_directory'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'calendar_categories';
   $feeds_importer->config = array(
     'name' => 'Calendar Categories',
@@ -516,6 +636,201 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'entrepreneur_directory';
+  $feeds_importer->config = array(
+    'name' => 'Entrepreneur Directory',
+    'description' => 'Converts wufoo form data to nodes',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml html htm',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => 'Field41',
+          'xpathparser:1' => 'Field42',
+          'xpathparser:2' => 'Field3',
+          'xpathparser:3' => 'Field49',
+          'xpathparser:4' => 'Field37',
+          'xpathparser:5' => 'EntryId',
+          'xpathparser:6' => 'Field375',
+          'xpathparser:7' => 'Field7',
+          'xpathparser:8' => 'Field9',
+          'xpathparser:9' => 'Field10',
+          'xpathparser:10' => 'Field34',
+          'xpathparser:11' => 'Field6',
+          'xpathparser:12' => 'Field23',
+        ),
+        'rawXML' => array(
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
+          'xpathparser:6' => 0,
+          'xpathparser:7' => 0,
+          'xpathparser:8' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
+          'xpathparser:12' => 0,
+        ),
+        'context' => '/Entries/Entry',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
+            'xpathparser:8' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
+            'xpathparser:12' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'field_first_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'field_last_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_business_name',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_business_description',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_display',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_how_did_your_evergreen_edu',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          7 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_business_type',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          8 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_business_address:thoroughfare',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'xpathparser:8',
+            'target' => 'field_business_address:locality',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_business_address:administrative_area',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'Blank source 2',
+            'target' => 'field_business_address:country',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          12 => array(
+            'source' => 'xpathparser:10',
+            'target' => 'field_graduated_alt',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          13 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'field_dates_of_operation',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          14 => array(
+            'source' => 'xpathparser:12',
+            'target' => 'field_email',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          15 => array(
+            'source' => 'Blank source 3',
+            'target' => 'field_roles',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'profile',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['entrepreneur_directory'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'faculty_directory';
   $feeds_importer->config = array(
     'name' => 'Faculty Directory',
@@ -684,6 +999,120 @@ function evergreen_content_feeds_importer_default() {
     'process_in_background' => 0,
   );
   $export['fields_of_study_import'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'hero_images';
+  $feeds_importer->config = array(
+    'name' => 'Hero Images',
+    'description' => 'Add the current items to the home page.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => 'caption',
+          'xpathparser:1' => 'classes',
+          'xpathparser:2' => 'link',
+          'xpathparser:3' => 'link',
+          'xpathparser:4' => 'link',
+          'xpathparser:5' => 'link',
+        ),
+        'rawXML' => array(
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
+        ),
+        'context' => '/images/image',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+          ),
+        ),
+        'allow_override' => 1,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'title',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'field_classes',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_hero_image:uri',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_hero_image_large:uri',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_hero_image_medium:uri',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_hero_image_small:uri',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'home_page_hero',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['hero_images'] = $feeds_importer;
 
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */

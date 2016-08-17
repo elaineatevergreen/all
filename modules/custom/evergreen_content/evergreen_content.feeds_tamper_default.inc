@@ -13,6 +13,21 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'author_directory-blank_source_1-default_value';
+  $feeds_tamper->importer = 'author_directory';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['author_directory-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'campus_locations-abbreviated_building_name-trim';
   $feeds_tamper->importer = 'campus_locations';
   $feeds_tamper->source = 'Abbreviated Building Name';
@@ -74,6 +89,106 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-blank_source_1-default_value';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['entrepreneur_directory-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-blank_source_2-default_value';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'Blank source 2';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'US',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'USA';
+  $export['entrepreneur_directory-blank_source_2-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-blank_source_3-default_value';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'Blank source 3';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'Student/Alumnus',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['entrepreneur_directory-blank_source_3-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-xpathparser_1-trim';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'xpathparser:1';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['entrepreneur_directory-xpathparser_1-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-xpathparser_8-convert_case';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'xpathparser:8';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '2',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['entrepreneur_directory-xpathparser_8-convert_case'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-xpathparser_9-convert_case';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '0',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Convert case';
+  $export['entrepreneur_directory-xpathparser_9-convert_case'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'entrepreneur_directory-xpathparser_9-state_to_abbrev';
+  $feeds_tamper->importer = 'entrepreneur_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'state_to_abbrev';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Full state name to abbrev';
+  $export['entrepreneur_directory-xpathparser_9-state_to_abbrev'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'faculty_directory-blank_source_1-default_value';
   $feeds_tamper->importer = 'faculty_directory';
   $feeds_tamper->source = 'Blank source 1';
@@ -85,6 +200,122 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Set default for faculty importing';
   $export['faculty_directory-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_2-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:2';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_2-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_3-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-l.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_3-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_3-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_3-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_4-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-m.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_4-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_4-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_4-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_5-find_replace';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:5';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '-x.jpg',
+    'replace' => '-s.jpg',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Switch size';
+  $export['hero_images-xpathparser_5-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'hero_images-xpathparser_5-sprintf';
+  $feeds_tamper->importer = 'hero_images';
+  $feeds_tamper->source = 'xpathparser:5';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => 'http://evergreen.edu%s',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Prepend URL';
+  $export['hero_images-xpathparser_5-sprintf'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

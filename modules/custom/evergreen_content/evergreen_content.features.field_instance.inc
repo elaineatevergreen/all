@@ -6368,108 +6368,6 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-home_page-body'.
-  $field_instances['node-home_page-body'] = array(
-    'bundle' => 'home_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'this is the extra blobby version of the home page content. it\'ll be more chunky later, I swear.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'body',
-    'is_property' => 0,
-    'label' => 'Blob',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'display_summary' => 1,
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-home_page-field_emergency_message'.
-  $field_instances['node-home_page-field_emergency_message'] = array(
-    'bundle' => 'home_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_emergency_message',
-    'label' => 'Emergency Message',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-home_page-field_intro'.
   $field_instances['node-home_page-field_intro'] = array(
     'bundle' => 'home_page',
@@ -6558,48 +6456,6 @@ function evergreen_content_field_default_field_instances() {
       'weight' => 33,
     ),
     'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-home_page-field_site_section'.
-  $field_instances['node-home_page-field_site_section'] = array(
-    'bundle' => 'home_page',
-    'default_value' => array(
-      0 => array(
-        'tid' => 101,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'This should ONLY EVER be the "Home Page" section.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_site_section',
-    'label' => 'Site Section',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 6,
-    ),
-    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-home_page_hero-field_classes'.
@@ -7669,7 +7525,7 @@ function evergreen_content_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 19,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7770,7 +7626,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7818,7 +7674,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 18,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7863,7 +7719,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7989,6 +7845,54 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-profile-field_dates_of_operation'.
+  $field_instances['node-profile-field_dates_of_operation'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_dates_of_operation',
+    'label' => 'Dates of Operation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 39,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-profile-field_degrees'.
   $field_instances['node-profile-field_degrees'] = array(
     'bundle' => 'profile',
@@ -8003,7 +7907,7 @@ function evergreen_content_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8044,10 +7948,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 12,
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8090,10 +7993,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8119,6 +8021,48 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 2,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-profile-field_email'.
+  $field_instances['node-profile-field_email'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -8168,7 +8112,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 22,
+      'weight' => 23,
     ),
     'workbench_access_field' => 0,
   );
@@ -8182,10 +8126,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8217,6 +8160,54 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 7,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-profile-field_graduated_alt'.
+  $field_instances['node-profile-field_graduated_alt'] = array(
+    'bundle' => 'profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_graduated_alt',
+    'label' => 'Graduated',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -8287,11 +8278,11 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8341,7 +8332,7 @@ function evergreen_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8401,10 +8392,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8452,7 +8442,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8483,7 +8473,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -8500,7 +8490,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8540,7 +8530,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -8571,7 +8561,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 21,
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -8653,7 +8643,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 6,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -9979,7 +9969,6 @@ function evergreen_content_field_default_field_instances() {
   t('Background Image');
   t('Begin Term');
   t('Biography');
-  t('Blob');
   t('Blurb');
   t('Body');
   t('Building');
@@ -10007,6 +9996,7 @@ function evergreen_content_field_default_field_instances() {
   t('Current Location');
   t('Current Profession');
   t('DO NOT DISPLAY');
+  t('Dates of Operation');
   t('Deadline');
   t('Degree');
   t('Degrees');
@@ -10015,7 +10005,6 @@ function evergreen_content_field_default_field_instances() {
   t('Display in alumni directories');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
   t('Email');
-  t('Emergency Message');
   t('End Term');
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.');
   t('Event Date');
@@ -10037,6 +10026,7 @@ function evergreen_content_field_default_field_instances() {
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Graduate Program');
+  t('Graduated');
   t('Group Categories');
   t('Group Title');
   t('Headshot');
@@ -10166,6 +10156,7 @@ function evergreen_content_field_default_field_instances() {
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
+  t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
   t('This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.');
   t('This is for students to determine which classes they might be eligible to take.');
   t('This is independent of whether the scholarship is need-based.');
@@ -10176,7 +10167,6 @@ function evergreen_content_field_default_field_instances() {
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should ALWAYS be <em>library</em>.');
-  t('This should ONLY EVER be the "Home Page" section.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('Time Offered');
@@ -10190,7 +10180,6 @@ function evergreen_content_field_default_field_instances() {
   t('Upper Division Science Credit');
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
-  t('Use this for a manual emergency message if you need to post something that won\'t be sent out via e2campus.');
   t('Use this line <strong>only</strong> if you are not the author of this post, for example if you are copying in work written by a guest author who does not have an evergreen.edu login.');
   t('Using the Banner format, where 201610 = Fall 2016.');
   t('Variable Credit Options');
@@ -10203,7 +10192,6 @@ function evergreen_content_field_default_field_instances() {
   t('Which is eligible to apply for this scholarship?');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
-  t('this is the extra blobby version of the home page content. it\'ll be more chunky later, I swear.');
   t('this is used for lots of connecting and prepopulating stuff, or at least I think it will be.');
 
   return $field_instances;
