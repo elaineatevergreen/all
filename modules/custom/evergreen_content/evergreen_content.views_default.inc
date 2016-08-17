@@ -78,6 +78,7 @@ function evergreen_content_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Alumni Directories';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -86,6 +87,57 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_graduated_alt' => 'field_graduated_alt',
+    'field_business_name' => 'field_business_name',
+    'field_business_type' => 'field_business_type',
+    'field_business_address_administrative_area' => 'field_business_address_administrative_area',
+    'field_business_address_locality' => 'field_business_address_locality',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_graduated_alt' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_business_name' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_business_type' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_business_address_administrative_area' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_business_address_locality' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -144,7 +196,7 @@ function evergreen_content_views_default_views() {
   );
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Block', 'entrepreneurs');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Entrepreneur Directory';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -152,12 +204,22 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Name';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Graduated */
+  $handler->display->display_options['fields']['field_graduated_alt']['id'] = 'field_graduated_alt';
+  $handler->display->display_options['fields']['field_graduated_alt']['table'] = 'field_data_field_graduated_alt';
+  $handler->display->display_options['fields']['field_graduated_alt']['field'] = 'field_graduated_alt';
+  $handler->display->display_options['fields']['field_graduated_alt']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_graduated_alt']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_graduated_alt']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_graduated_alt']['field_api_classes'] = TRUE;
   /* Field: Content: Business Name */
   $handler->display->display_options['fields']['field_business_name']['id'] = 'field_business_name';
   $handler->display->display_options['fields']['field_business_name']['table'] = 'field_data_field_business_name';
   $handler->display->display_options['fields']['field_business_name']['field'] = 'field_business_name';
+  $handler->display->display_options['fields']['field_business_name']['label'] = 'Business or Product';
   $handler->display->display_options['fields']['field_business_name']['element_type'] = '0';
   $handler->display->display_options['fields']['field_business_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_business_name']['element_wrapper_type'] = '0';
@@ -222,6 +284,51 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['field_business_name_value']['table'] = 'field_data_field_business_name';
   $handler->display->display_options['filters']['field_business_name_value']['field'] = 'field_business_name_value';
   $handler->display->display_options['filters']['field_business_name_value']['operator'] = 'not empty';
+  /* Filter criterion: Content: Business Type (field_business_type) */
+  $handler->display->display_options['filters']['field_business_type_value']['id'] = 'field_business_type_value';
+  $handler->display->display_options['filters']['field_business_type_value']['table'] = 'field_data_field_business_type';
+  $handler->display->display_options['filters']['field_business_type_value']['field'] = 'field_business_type_value';
+  $handler->display->display_options['filters']['field_business_type_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_business_type_value']['expose']['operator_id'] = 'field_business_type_value_op';
+  $handler->display->display_options['filters']['field_business_type_value']['expose']['label'] = 'Business Type';
+  $handler->display->display_options['filters']['field_business_type_value']['expose']['operator'] = 'field_business_type_value_op';
+  $handler->display->display_options['filters']['field_business_type_value']['expose']['identifier'] = 'field_business_type_value';
+  $handler->display->display_options['filters']['field_business_type_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    8 => 0,
+    5 => 0,
+    9 => 0,
+    7 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Global: Combine fields filter */
+  $handler->display->display_options['filters']['combine']['id'] = 'combine';
+  $handler->display->display_options['filters']['combine']['table'] = 'views';
+  $handler->display->display_options['filters']['combine']['field'] = 'combine';
+  $handler->display->display_options['filters']['combine']['operator'] = 'contains';
+  $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Name/Business Name';
+  $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    8 => 0,
+    5 => 0,
+    9 => 0,
+    7 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['combine']['fields'] = array(
+    'title' => 'title',
+    'field_business_name' => 'field_business_name',
+  );
   $export['alumni_directories'] = $view;
 
   $view = new view();
