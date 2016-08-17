@@ -28,6 +28,83 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'author_directory-xpathparser_6-find_replace';
+  $feeds_tamper->importer = 'author_directory';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'http://www.evergreen.edu/scripts/contact.php?sm=',
+    'replace' => '',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Strip contact script link';
+  $export['author_directory-xpathparser_6-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'author_directory-xpathparser_6-find_replace2';
+  $feeds_tamper->importer = 'author_directory';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '&sub=&sub=Email%20from%20Authors%20Directory&title=Contact%20',
+    'replace' => '',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Strip first part of script variables';
+  $export['author_directory-xpathparser_6-find_replace2'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'author_directory-xpathparser_6-find_replace3';
+  $feeds_tamper->importer = 'author_directory';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '&sub=&title=',
+    'replace' => '',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 3;
+  $feeds_tamper->description = 'More script stripping';
+  $export['author_directory-xpathparser_6-find_replace3'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'author_directory-xpathparser_6-find_replace_regex';
+  $feeds_tamper->importer = 'author_directory';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/([A-Z%20])\\w+/',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Remove rest of script link';
+  $export['author_directory-xpathparser_6-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'campus_locations-abbreviated_building_name-trim';
   $feeds_tamper->importer = 'campus_locations';
   $feeds_tamper->source = 'Abbreviated Building Name';
