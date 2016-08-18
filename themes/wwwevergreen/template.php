@@ -1,6 +1,7 @@
 <?php
 	
-// some fun things that happen on nodes
+// allow per-node-type template files
+// rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
   if (isset($variables['node']->type)) {
     // If the content type's machine name is "my_machine_name" the file
@@ -92,6 +93,11 @@ function wwwevergreen_field__field_phone(&$variables) {
   $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
 
   return $output;
+}
+
+//formats library database links to use the proxy if needed
+function wwwevergreen_field__field_resource_link(&$variables){
+	
 }
 
 /**
