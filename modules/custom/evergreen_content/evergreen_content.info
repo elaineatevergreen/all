@@ -187,6 +187,7 @@ features[feeds_importer][] = entrepreneur_directory
 features[feeds_importer][] = faculty_directory
 features[feeds_importer][] = fields_of_study_import
 features[feeds_importer][] = hero_images
+features[feeds_importer][] = library_database_subjects
 features[feeds_importer][] = library_databases
 features[feeds_importer][] = office_directory
 features[feeds_importer][] = office_directory_facility
