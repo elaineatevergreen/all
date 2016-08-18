@@ -6819,6 +6819,89 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-library_database-field_degrees'.
+  $field_instances['node-library_database-field_degrees'] = array(
+    'bundle' => 'library_database',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_degrees',
+    'label' => 'Degrees',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-library_database-field_featured'.
+  $field_instances['node-library_database-field_featured'] = array(
+    'bundle' => 'library_database',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Select if this item should appear at the top as a "place to start" resource.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_featured',
+    'label' => 'Featured',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 41,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-library_database-field_proxy'.
   $field_instances['node-library_database-field_proxy'] = array(
     'bundle' => 'library_database',
@@ -10018,6 +10101,7 @@ function evergreen_content_field_default_field_instances() {
   t('Faculty');
   t('Faculty directory subject area');
   t('Fax');
+  t('Featured');
   t('Fields of Study');
   t('First name');
   t('Flyer');
@@ -10120,6 +10204,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select if this item should appear at the top as a "place to start" resource.');
   t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');

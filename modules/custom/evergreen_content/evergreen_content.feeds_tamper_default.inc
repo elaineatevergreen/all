@@ -397,6 +397,25 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'library_databases-xpathparser_4-convert_boolean';
+  $feeds_tamper->importer = 'library_databases';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'convert_boolean';
+  $feeds_tamper->settings = array(
+    'true_value' => 'featured',
+    'false_value' => 'not featured',
+    'match_case' => 0,
+    'no_match' => 'false',
+    'other_text' => '',
+    'no_match_value' => FALSE,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert to boolean';
+  $export['library_databases-xpathparser_4-convert_boolean'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory-xpathparser_10-trim';
   $feeds_tamper->importer = 'office_directory';
   $feeds_tamper->source = 'xpathparser:10';

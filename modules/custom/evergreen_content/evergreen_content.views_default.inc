@@ -4287,14 +4287,6 @@ return($term); ';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Promoted to front page */
-  $handler->display->display_options['fields']['promote']['id'] = 'promote';
-  $handler->display->display_options['fields']['promote']['table'] = 'node';
-  $handler->display->display_options['fields']['promote']['field'] = 'promote';
-  $handler->display->display_options['fields']['promote']['label'] = '★';
-  $handler->display->display_options['fields']['promote']['type'] = 'custom';
-  $handler->display->display_options['fields']['promote']['type_custom_true'] = '★';
-  $handler->display->display_options['fields']['promote']['not'] = 0;
   /* Field: Content: Resource Link */
   $handler->display->display_options['fields']['field_resource_link']['id'] = 'field_resource_link';
   $handler->display->display_options['fields']['field_resource_link']['table'] = 'field_data_field_resource_link';
@@ -4315,10 +4307,6 @@ return($term); ';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Sort criterion: Content: Promoted to front page */
-  $handler->display->display_options['sorts']['promote']['id'] = 'promote';
-  $handler->display->display_options['sorts']['promote']['table'] = 'node';
-  $handler->display->display_options['sorts']['promote']['field'] = 'promote';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -4337,23 +4325,61 @@ return($term); ';
   $handler->display->display_options['filters']['type']['value'] = array(
     'library_database' => 'library_database',
   );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_resource_subject_value']['id'] = 'field_resource_subject_value';
-  $handler->display->display_options['filters']['field_resource_subject_value']['table'] = 'field_data_field_resource_subject';
-  $handler->display->display_options['filters']['field_resource_subject_value']['field'] = 'field_resource_subject_value';
-  $handler->display->display_options['filters']['field_resource_subject_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_resource_subject_value']['expose']['operator_id'] = 'field_resource_subject_value_op';
-  $handler->display->display_options['filters']['field_resource_subject_value']['expose']['label'] = 'Subjects';
-  $handler->display->display_options['filters']['field_resource_subject_value']['expose']['operator'] = 'field_resource_subject_value_op';
-  $handler->display->display_options['filters']['field_resource_subject_value']['expose']['identifier'] = 'field_resource_subject_value';
-  $handler->display->display_options['filters']['field_resource_subject_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Table with All */
+  $handler = $view->new_display('block', 'Table with All', 'all');
+
+  /* Display: List of Featured */
+  $handler = $view->new_display('block', 'List of Featured', 'featured');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Resource Link */
+  $handler->display->display_options['fields']['field_resource_link']['id'] = 'field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['table'] = 'field_data_field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['field'] = 'field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_resource_link']['type'] = 'link_plain';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'library_database' => 'library_database',
+  );
+  /* Filter criterion: Content: Featured (field_featured) */
+  $handler->display->display_options['filters']['field_featured_value']['id'] = 'field_featured_value';
+  $handler->display->display_options['filters']['field_featured_value']['table'] = 'field_data_field_featured';
+  $handler->display->display_options['filters']['field_featured_value']['field'] = 'field_featured_value';
+  $handler->display->display_options['filters']['field_featured_value']['value'] = array(
+    1 => '1',
+  );
   $export['database_of_databases'] = $view;
 
   $view = new view();
