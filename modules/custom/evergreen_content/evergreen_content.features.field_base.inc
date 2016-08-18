@@ -1405,7 +1405,7 @@ function evergreen_content_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'entityqueue' => array(
@@ -1415,13 +1415,10 @@ function evergreen_content_field_default_field_bases() {
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'field_last_name:value',
-          'type' => 'field',
-        ),
-        'target_bundles' => array(
-          'directory_individual' => 'directory_individual',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_3',
+          'view_name' => 'page_picker',
         ),
       ),
       'target_type' => 'node',

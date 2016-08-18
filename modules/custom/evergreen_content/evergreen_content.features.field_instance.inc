@@ -6102,7 +6102,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'faculty_news',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select whoever was involved with this news. Can be more than one if multiple faculty participated!',
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
@@ -6143,9 +6143,13 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 43,
     ),
     'workbench_access_field' => 0,
@@ -10447,6 +10451,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select what section this page belongs to. That will set its site title, navigation, and background.');
   t('Select which calendars this event should appear on. DO NOT select Academic Calendar unless authorized to do so.');
   t('Select which office in the directory should be associated with this site section. In order for the site editors to update the information, the office will also need to be assigned to this site.');
+  t('Select whoever was involved with this news. Can be more than one if multiple faculty participated!');
   t('Short Description');
   t('Site Section');
   t('Site Section(s)');
