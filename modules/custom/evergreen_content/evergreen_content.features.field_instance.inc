@@ -6097,6 +6097,245 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-faculty_news-field_faculty_members'.
+  $field_instances['node-faculty_news-field_faculty_members'] = array(
+    'bundle' => 'faculty_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_faculty_members',
+    'label' => 'Faculty Member(s)',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 43,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-faculty_news-field_image'.
+  $field_instances['node-faculty_news-field_image'] = array(
+    'bundle' => 'faculty_news',
+    'deleted' => 0,
+    'description' => 'A single image such as a book cover or conference photo.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 45,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-faculty_news-field_layperson_blurb'.
+  $field_instances['node-faculty_news-field_layperson_blurb'] = array(
+    'bundle' => 'faculty_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_layperson_blurb',
+    'label' => 'Layperson Blurb',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 42,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-faculty_news-field_professional_blurb'.
+  $field_instances['node-faculty_news-field_professional_blurb'] = array(
+    'bundle' => 'faculty_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This information can be aimed at people in the field with advanced experience.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_professional_blurb',
+    'label' => 'Professional Blurb',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 41,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-field_of_study-body'.
   $field_instances['node-field_of_study-body'] = array(
     'bundle' => 'field_of_study',
@@ -10020,6 +10259,7 @@ function evergreen_content_field_default_field_instances() {
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
+  t('A single image such as a book cover or conference photo.');
   t('Abbreviated Building Name');
   t('Academic Quarter');
   t('Academic Year');
@@ -10091,6 +10331,7 @@ function evergreen_content_field_default_field_instances() {
   t('Facilities');
   t('Facility');
   t('Faculty');
+  t('Faculty Member(s)');
   t('Faculty directory subject area');
   t('Fax');
   t('Featured');
@@ -10137,6 +10378,7 @@ function evergreen_content_field_default_field_instances() {
   t('Just a short description. In the future, there will also be an option to select from the standard Fields of Study list.');
   t('Just enter the part of the URL <em>after</em> "itemcode=".');
   t('Last name');
+  t('Layperson Blurb');
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
   t('Links to sub-offices or other related offices.');
@@ -10175,6 +10417,7 @@ function evergreen_content_field_default_field_instances() {
   t('Preparatory For');
   t('Prerequisites');
   t('Primary Content');
+  t('Professional Blurb');
   t('Proxy');
   t('Publication Type');
   t('Publications');
@@ -10232,6 +10475,7 @@ function evergreen_content_field_default_field_instances() {
   t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
+  t('This information can be aimed at people in the field with advanced experience.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
   t('This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.');
@@ -10246,6 +10490,7 @@ function evergreen_content_field_default_field_instances() {
   t('This should ALWAYS be <em>library</em>.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
+  t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
   t('Tuition Award');
