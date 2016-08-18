@@ -599,8 +599,8 @@ function evergreen_content_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'body',
-      1 => 'field_resource_subject',
-      2 => 'field_resource_type',
+      1 => 'field_resource_type',
+      2 => 'field_resource_subject',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

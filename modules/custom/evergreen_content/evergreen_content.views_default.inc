@@ -4328,6 +4328,46 @@ return($term); ';
 
   /* Display: Table with All */
   $handler = $view->new_display('block', 'Table with All', 'all');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'library_database' => 'library_database',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy terms (with depth; <em class="placeholder">Simple hierarchical select</em>) */
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['id'] = 'shs_term_node_tid_depth';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['field'] = 'shs_term_node_tid_depth';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['value'] = 'All';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['operator_id'] = 'shs_term_node_tid_depth_op';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['label'] = 'Subject';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['operator'] = 'shs_term_node_tid_depth_op';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['identifier'] = 'shs_term_node_tid_depth';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    8 => 0,
+    5 => 0,
+    9 => 0,
+    7 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['vocabulary'] = 'database_of_databases';
+  $handler->display->display_options['filters']['shs_term_node_tid_depth']['depth'] = '1';
 
   /* Display: List of Featured */
   $handler = $view->new_display('block', 'List of Featured', 'featured');
@@ -4380,6 +4420,68 @@ return($term); ';
   $handler->display->display_options['filters']['field_featured_value']['value'] = array(
     1 => '1',
   );
+
+  /* Display: Quick-Add Subjects */
+  $handler = $view->new_display('page', 'Quick-Add Subjects', 'page_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '1';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 1,
+      'label' => 'Update Databases',
+      'settings' => array(
+        'show_all_tokens' => 0,
+        'display_values' => array(
+          'library_database::field_featured' => 'library_database::field_featured',
+          'library_database::field_resource_subject' => 'library_database::field_resource_subject',
+        ),
+      ),
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Resource Subject */
+  $handler->display->display_options['fields']['field_resource_subject']['id'] = 'field_resource_subject';
+  $handler->display->display_options['fields']['field_resource_subject']['table'] = 'field_data_field_resource_subject';
+  $handler->display->display_options['fields']['field_resource_subject']['field'] = 'field_resource_subject';
+  $handler->display->display_options['fields']['field_resource_subject']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_subject']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_subject']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_subject']['type'] = 'shs_default';
+  $handler->display->display_options['fields']['field_resource_subject']['settings'] = array(
+    'linked' => 0,
+  );
+  $handler->display->display_options['fields']['field_resource_subject']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_resource_subject']['field_api_classes'] = TRUE;
+  /* Field: Content: Featured */
+  $handler->display->display_options['fields']['field_featured']['id'] = 'field_featured';
+  $handler->display->display_options['fields']['field_featured']['table'] = 'field_data_field_featured';
+  $handler->display->display_options['fields']['field_featured']['field'] = 'field_featured';
+  $handler->display->display_options['fields']['field_featured']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_featured']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_featured']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_featured']['field_api_classes'] = TRUE;
+  $handler->display->display_options['path'] = 'admin/library-databases';
   $export['database_of_databases'] = $view;
 
   $view = new view();

@@ -7018,16 +7018,14 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'library_database',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'At some point, this will involve picking narrower categories under a broader category?',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -7042,12 +7040,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Resource Subject',
     'required' => 0,
     'settings' => array(
-      'behaviors' => array(
-        'taxonomy-index' => array(
-          'status' => TRUE,
-        ),
-      ),
-      'description_display' => 'before',
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -10046,7 +10039,6 @@ function evergreen_content_field_default_field_instances() {
   t('Article Author');
   t('Article Date');
   t('Article Link');
-  t('At some point, this will involve picking narrower categories under a broader category?');
   t('At the moment, only used for faculty. May be expanded to staff as well?');
   t('Background');
   t('Background Image');

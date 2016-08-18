@@ -36,7 +36,7 @@ function evergreen_content_taxonomy_default_vocabularies() {
       'name' => 'Database of Databases',
       'machine_name' => 'database_of_databases',
       'description' => 'Categories for library database resources',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
