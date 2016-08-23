@@ -70,6 +70,7 @@
 ?>
     <?php
       // We hide the links now so that we can render them later.
+      //even if the actual link is the only field, this still needs to be here.
       hide($content['links']);
       print render($content);
     ?>
