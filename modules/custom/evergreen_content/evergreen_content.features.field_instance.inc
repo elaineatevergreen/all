@@ -7062,43 +7062,6 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-library_database-field_degrees'.
-  $field_instances['node-library_database-field_degrees'] = array(
-    'bundle' => 'library_database',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_degrees',
-    'label' => 'Degrees',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 42,
-    ),
-  );
-
   // Exported field_instance: 'node-library_database-field_featured'.
   $field_instances['node-library_database-field_featured'] = array(
     'bundle' => 'library_database',
@@ -7140,7 +7103,7 @@ function evergreen_content_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 41,
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
@@ -7202,7 +7165,7 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_plain',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -7334,50 +7297,6 @@ function evergreen_content_field_default_field_instances() {
       'weight' => 7,
     ),
     'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-library_database-field_site_section'.
-  $field_instances['node-library_database-field_site_section'] = array(
-    'bundle' => 'library_database',
-    'default_value' => array(
-      0 => array(
-        'tid' => 51,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'This should ALWAYS be <em>library</em>.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_site_section',
-    'label' => 'Site Section',
-    'required' => 1,
-    'settings' => array(
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-location-body'.
@@ -10492,7 +10411,6 @@ function evergreen_content_field_default_field_instances() {
   t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
-  t('This should ALWAYS be <em>library</em>.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
