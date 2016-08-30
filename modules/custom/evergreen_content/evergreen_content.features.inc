@@ -203,6 +203,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'faculty_news' => array(
+      'name' => t('Faculty News'),
+      'base' => 'node_content',
+      'description' => t('Submit <em>Faculty News</em> to share information about your latest scholarship, etc.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => t('Some directions for faculty here.'),
+    ),
     'field_of_study' => array(
       'name' => t('Field of Study'),
       'base' => 'node_content',

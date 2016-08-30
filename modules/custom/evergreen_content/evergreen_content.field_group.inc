@@ -136,6 +136,39 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_author|node|profile|default';
+  $field_group->group_name = 'group_author';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Author Information',
+    'weight' => '12',
+    'children' => array(
+      0 => 'field_excerpt',
+      1 => 'field_publication_type',
+      2 => 'field_publications',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-author field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_author|node|profile|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_author|node|profile|form';
   $field_group->group_name = 'group_author';
   $field_group->entity_type = 'node';
@@ -144,10 +177,10 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_directories';
   $field_group->data = array(
     'label' => 'Author Info',
-    'weight' => '18',
+    'weight' => '19',
     'children' => array(
-      0 => 'field_publication_type',
-      1 => 'field_excerpt',
+      0 => 'field_excerpt',
+      1 => 'field_publication_type',
       2 => 'field_publications',
     ),
     'format_type' => 'fieldset',
@@ -320,6 +353,42 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_bio|node|profile|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_business|node|profile|default';
+  $field_group->group_name = 'group_business';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'profile';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Business Information',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_business_address',
+      1 => 'field_business_description',
+      2 => 'field_business_name',
+      3 => 'field_business_phone',
+      4 => 'field_business_type',
+      5 => 'field_dates_of_operation',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-business field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_business|node|profile|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -590,8 +659,9 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_display',
       1 => 'field_how_did_your_evergreen_edu',
-      2 => 'group_author',
-      3 => 'group_entrepreneur',
+      2 => 'field_email',
+      3 => 'group_author',
+      4 => 'group_entrepreneur',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -644,13 +714,14 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_directories';
   $field_group->data = array(
     'label' => 'Entrepreneur Info',
-    'weight' => '19',
+    'weight' => '20',
     'children' => array(
-      0 => 'field_business_type',
-      1 => 'field_business_phone',
-      2 => 'field_business_address',
-      3 => 'field_business_name',
-      4 => 'field_business_description',
+      0 => 'field_business_address',
+      1 => 'field_business_description',
+      2 => 'field_business_name',
+      3 => 'field_business_phone',
+      4 => 'field_business_type',
+      5 => 'field_dates_of_operation',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -764,9 +835,9 @@ function evergreen_content_field_group_info() {
     'label' => 'group',
     'weight' => '3',
     'children' => array(
-      0 => 'group_directories',
-      1 => 'group_bio',
-      2 => 'group_content',
+      0 => 'group_bio',
+      1 => 'group_content',
+      2 => 'group_directories',
       3 => 'group_studies',
     ),
     'format_type' => 'htabs',
@@ -920,8 +991,8 @@ function evergreen_content_field_group_info() {
     'label' => 'Link',
     'weight' => '3',
     'children' => array(
-      0 => 'field_resource_link',
-      1 => 'field_proxy',
+      0 => 'field_proxy',
+      1 => 'field_resource_link',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -1214,6 +1285,7 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_degrees',
       1 => 'field_other_institutions',
+      2 => 'field_graduated_alt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1359,8 +1431,10 @@ function evergreen_content_field_group_info() {
   t('Articles & Images');
   t('Attachments');
   t('Author Info');
+  t('Author Information');
   t('Basics');
   t('Biographical Details');
+  t('Business Information');
   t('Categories');
   t('Contact Information');
   t('Description');

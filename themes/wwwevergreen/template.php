@@ -1,6 +1,7 @@
 <?php
 	
-// some fun things that happen on nodes
+// allow per-node-type and panel page template files
+// rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
   if (isset($variables['node']->type)) {
     // If the content type's machine name is "my_machine_name" the file
@@ -13,6 +14,11 @@ function wwwevergreen_preprocess_page(&$variables) {
 	  	$variables['title'] = $temptitle;
 	  	drupal_set_title($temptitle);
   	};
+  };
+  // allows for special template pages for panel pages.
+  if (module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
+        $variables['theme_hook_suggestions'][] = 'page__panels';
+        $variables['theme_hook_suggestions'][] = 'page__'  . $panel_page['name']; //this line doesn't seem to work?
   }
 }
 
@@ -93,6 +99,37 @@ function wwwevergreen_field__field_phone(&$variables) {
 
   return $output;
 }
+
+/**
+ * Returns HTML for a managed file element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: A render element representing the file.
+ *
+ * @ingroup themeable
+ */
+/* note: this doesn't actually work.
+function wwwevergreen_theme_media_element($variables) {
+  $element = $variables['element'];
+
+  $attributes = array();
+  if (isset($element['#id'])) {
+    $attributes['id'] = $element['#id'];
+  }
+  if (!empty($element['#attributes']['class'])) {
+    $attributes['class'] = (array) $element['#attributes']['class'];
+  }
+  $attributes['class'][] = 'form-media';
+
+  // This wrapper is required to apply JS behaviors and CSS styling.
+  $output = '';
+  $output .= '<span' . drupal_attributes($attributes) . '>';
+  $output .= drupal_render_children($element);
+  $output .= ' (hello world)</span>';
+  return $output;
+}
+*/
 
 /**
  * THEME_PREPROCESS_VIEWS_VIEW
