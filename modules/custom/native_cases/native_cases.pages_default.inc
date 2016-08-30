@@ -66,6 +66,16 @@ function native_cases_default_page_manager_pages() {
           1 => 1,
         ),
         'parent' => NULL,
+        'class' => '',
+        'column_class' => '',
+        'row_class' => '',
+        'region_class' => '',
+        'no_scale' => FALSE,
+        'fixed_width' => '',
+        'column_separation' => '',
+        'region_separation' => '',
+        'row_separation' => '',
+        'hide_empty' => 0,
       ),
       'main' => array(
         'type' => 'column',
@@ -75,6 +85,8 @@ function native_cases_default_page_manager_pages() {
           0 => 'main-row',
         ),
         'parent' => 'canvas',
+        'class' => 'primary-content-wrapper unit-4-7',
+        'hide_empty' => 0,
       ),
       'main-row' => array(
         'type' => 'row',
@@ -90,7 +102,7 @@ function native_cases_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => '',
+        'class' => 'main-content',
         'hide_empty' => 1,
       ),
       1 => array(
@@ -101,7 +113,7 @@ function native_cases_default_page_manager_pages() {
         'children' => array(
           0 => 2,
         ),
-        'class' => '',
+        'class' => 'sidebar-wrapper unit-2-7',
         'hide_empty' => 1,
       ),
       2 => array(
@@ -120,7 +132,7 @@ function native_cases_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '2',
-        'class' => '',
+        'class' => 'sidebar',
         'hide_empty' => 1,
       ),
     ),
