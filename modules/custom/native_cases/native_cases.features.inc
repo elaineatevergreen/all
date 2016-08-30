@@ -30,6 +30,25 @@ function native_cases_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_date_custom_date_formats().
+ */
+function native_cases_fe_date_custom_date_formats() {
+  $custom_date_formats = array();
+  $custom_date_formats['M j'] = 'M j';
+  return $custom_date_formats;
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function native_cases_date_format_types() {
+  $format_types = array();
+  // Exported date format type: monthday
+  $format_types['monthday'] = 'MonthDay';
+  return $format_types;
+}
+
+/**
  * Implements hook_node_info().
  */
 function native_cases_node_info() {
