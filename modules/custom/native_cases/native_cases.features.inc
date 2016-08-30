@@ -35,6 +35,7 @@ function native_cases_views_api($module = NULL, $api = NULL) {
 function native_cases_fe_date_custom_date_formats() {
   $custom_date_formats = array();
   $custom_date_formats['M j'] = 'M j';
+  $custom_date_formats['Y'] = 'Y';
   return $custom_date_formats;
 }
 
@@ -45,6 +46,8 @@ function native_cases_date_format_types() {
   $format_types = array();
   // Exported date format type: monthday
   $format_types['monthday'] = 'MonthDay';
+  // Exported date format type: year
+  $format_types['year'] = 'Year';
   return $format_types;
 }
 
