@@ -31,7 +31,7 @@ function native_cases_feeds_tamper_default() {
   $feeds_tamper->importer = 'case_study';
   $feeds_tamper->source = 'xpathparser:3';
   $feeds_tamper->plugin_id = 'html_entity_decode';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'HTML entity decode';
   $export['case_study-xpathparser_3-html_entity_decode'] = $feeds_tamper;

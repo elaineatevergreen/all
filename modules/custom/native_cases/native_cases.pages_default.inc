@@ -223,6 +223,41 @@ function native_cases_default_page_manager_pages() {
   $display->content['new-d7b11769-2d95-4e68-a8bd-cf76afcf9480'] = $pane;
   $display->panels['center'][2] = 'new-d7b11769-2d95-4e68-a8bd-cf76afcf9480';
   $pane = new stdClass();
+  $pane->pid = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
+  $pane->panel = 'secondary';
+  $pane->type = 'views';
+  $pane->subtype = 'events';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '5',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '649490fd-a921-49ab-ad9f-5b0d9ef74902';
+  $display->content['new-649490fd-a921-49ab-ad9f-5b0d9ef74902'] = $pane;
+  $display->panels['secondary'][0] = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
+  $pane = new stdClass();
   $pane->pid = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
   $pane->panel = 'secondary';
   $pane->type = 'views';
@@ -252,11 +287,11 @@ function native_cases_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '13417020-ecb1-4947-a3a9-0c7e85f81142';
   $display->content['new-13417020-ecb1-4947-a3a9-0c7e85f81142'] = $pane;
-  $display->panels['secondary'][0] = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
+  $display->panels['secondary'][1] = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
