@@ -50,6 +50,14 @@ function native_cases_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'event' => array(
+      'name' => t('Event'),
+      'base' => 'node_content',
+      'description' => t('Use an <em>event</em> to post a workshop or institute.'),
+      'has_title' => '1',
+      'title_label' => t('Event Name'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',

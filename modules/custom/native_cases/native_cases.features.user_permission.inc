@@ -146,6 +146,15 @@ function native_cases_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer date tools'.
+  $permissions['administer date tools'] = array(
+    'name' => 'administer date tools',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'date_tools',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -171,6 +180,15 @@ function native_cases_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'administer fields'.
+  $permissions['administer fields'] = array(
+    'name' => 'administer fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field',
   );
 
   // Exported permission: 'administer file types'.
@@ -398,6 +416,13 @@ function native_cases_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'bypass access in place editing'.
+  $permissions['bypass access in place editing'] = array(
+    'name' => 'bypass access in place editing',
+    'roles' => array(),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'bypass file access'.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
@@ -487,6 +512,13 @@ function native_cases_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create event content'.
+  $permissions['create event content'] = array(
+    'name' => 'create event content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
@@ -557,6 +589,13 @@ function native_cases_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete any event content'.
+  $permissions['delete any event content'] = array(
+    'name' => 'delete any event content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any image files'.
   $permissions['delete any image files'] = array(
     'name' => 'delete any image files',
@@ -616,6 +655,13 @@ function native_cases_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'delete own event content'.
+  $permissions['delete own event content'] = array(
+    'name' => 'delete own event content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'delete own image files'.
@@ -787,6 +833,13 @@ function native_cases_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit any event content'.
+  $permissions['edit any event content'] = array(
+    'name' => 'edit any event content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any image files'.
   $permissions['edit any image files'] = array(
     'name' => 'edit any image files',
@@ -846,6 +899,13 @@ function native_cases_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit own event content'.
+  $permissions['edit own event content'] = array(
+    'name' => 'edit own event content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit own image files'.
@@ -1137,6 +1197,15 @@ function native_cases_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
   );
 
   // Exported permission: 'view files'.
