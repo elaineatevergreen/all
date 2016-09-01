@@ -7124,6 +7124,114 @@ return($term); ';
   $export['magazine'] = $view;
 
   $view = new view();
+  $view->name = 'news_o_matic';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'News-o-matic';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_description_plain']['id'] = 'field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['table'] = 'field_data_field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['field'] = 'field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['label'] = '';
+  $handler->display->display_options['fields']['field_description_plain']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_description_plain']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_description_plain']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['field_description_plain']['element_default_classes'] = FALSE;
+  /* Field: Content: Article Link */
+  $handler->display->display_options['fields']['field_article_link']['id'] = 'field_article_link';
+  $handler->display->display_options['fields']['field_article_link']['table'] = 'field_data_field_article_link';
+  $handler->display->display_options['fields']['field_article_link']['field'] = 'field_article_link';
+  $handler->display->display_options['fields']['field_article_link']['label'] = '';
+  $handler->display->display_options['fields']['field_article_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_article_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_link']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['field_article_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_article_link']['click_sort_column'] = 'url';
+  /* Field: Content: Article Date */
+  $handler->display->display_options['fields']['field_article_date']['id'] = 'field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['table'] = 'field_data_field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['field'] = 'field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['label'] = '';
+  $handler->display->display_options['fields']['field_article_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_article_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_article_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_article_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_article_date']['settings'] = array(
+    'format_type' => 'month_year',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Content: News Outlet */
+  $handler->display->display_options['fields']['field_publication_title']['id'] = 'field_publication_title';
+  $handler->display->display_options['fields']['field_publication_title']['table'] = 'field_data_field_publication_title';
+  $handler->display->display_options['fields']['field_publication_title']['field'] = 'field_publication_title';
+  $handler->display->display_options['fields']['field_publication_title']['label'] = '';
+  $handler->display->display_options['fields']['field_publication_title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_publication_title']['alter']['text'] = '([field_publication_title], [field_article_date])';
+  $handler->display->display_options['fields']['field_publication_title']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_publication_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_publication_title']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['field_publication_title']['element_default_classes'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blurb' => 'blurb',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['news_o_matic'] = $view;
+
+  $view = new view();
   $view->name = 'page_picker';
   $view->description = 'This is used for selecting pages or offices that are associated with a specific site.';
   $view->tag = 'site sections';

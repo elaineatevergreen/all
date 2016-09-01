@@ -1373,6 +1373,7 @@ features[views_view][] = directory
 features[views_view][] = fields_of_study
 features[views_view][] = home_page_hero
 features[views_view][] = magazine
+features[views_view][] = news_o_matic
 features[views_view][] = page_picker
 features[views_view][] = scholarships
 features[views_view][] = secondary_content
