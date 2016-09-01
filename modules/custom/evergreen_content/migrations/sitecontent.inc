@@ -268,6 +268,8 @@ class NewsMigration extends XMLMigration {
 	    $replace[] = array('//evergreen.edu - old design','http://evergreen.edu');
 	    //$replace[] = array('//evergreen.edu','http://evergreen.edu');
 	    $replace[] = array('site://','http://');
+	    $replace[] = array('_archive','');
+	    $replace[] = array('_draft','');
 	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", $row->xml->primary->asXML()));
 	    $row->summary = str_replace("&amp;", "&", $row->xml->summary->asXML());
 	    
