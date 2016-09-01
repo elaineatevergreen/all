@@ -95,6 +95,7 @@ dependencies[] = search
 dependencies[] = security_review
 dependencies[] = shortcut
 dependencies[] = shs
+dependencies[] = shurly
 dependencies[] = simpletest
 dependencies[] = statistics
 dependencies[] = strongarm
