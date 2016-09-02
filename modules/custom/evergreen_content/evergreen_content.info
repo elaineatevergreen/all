@@ -203,6 +203,7 @@ features[feeds_tamper][] = author_directory-xpathparser_6-find_replace2
 features[feeds_tamper][] = author_directory-xpathparser_6-find_replace3
 features[feeds_tamper][] = author_directory-xpathparser_6-find_replace_regex
 features[feeds_tamper][] = calendar_events-null-default_value
+features[feeds_tamper][] = calendar_events-promote-convert_boolean
 features[feeds_tamper][] = campus_locations-abbreviated_building_name-trim
 features[feeds_tamper][] = campus_locations-official_name-trim
 features[feeds_tamper][] = campus_locations-title-trim
