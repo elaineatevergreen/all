@@ -258,7 +258,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->importer = 'entrepreneur_directory';
   $feeds_tamper->source = 'xpathparser:9';
   $feeds_tamper->plugin_id = 'state_to_abbrev';
-  $feeds_tamper->settings = array();
+  $feeds_tamper->settings = '';
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Full state name to abbrev';
   $export['entrepreneur_directory-xpathparser_9-state_to_abbrev'] = $feeds_tamper;

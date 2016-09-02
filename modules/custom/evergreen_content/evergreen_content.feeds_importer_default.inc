@@ -295,6 +295,123 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'calendar_events';
+  $feeds_importer->config = array(
+    'name' => 'Calendar Events',
+    'description' => 'Uses existing iCal feed to get currently listed events',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'encoding' => 'UTF-8',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'title',
+            'target' => 'title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'Start Date',
+            'target' => 'field_event_date:start',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'End Date',
+            'target' => 'field_event_date:end',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'body',
+            'target' => 'body',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'quarter',
+            'target' => 'field_academic_quarter',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'building',
+            'target' => 'field_building',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'room',
+            'target' => 'field_room',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          7 => array(
+            'source' => 'sponsor',
+            'target' => 'field_sponsored_by',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          8 => array(
+            'source' => 'promote',
+            'target' => 'promote',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          9 => array(
+            'source' => 'nid',
+            'target' => 'guid',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'created',
+            'target' => 'created',
+            'unique' => FALSE,
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'basic_tags',
+        'skip_hash_check' => 0,
+        'bundle' => 'event',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['calendar_events'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'calendar_formats';
   $feeds_importer->config = array(
     'name' => 'Calendar Formats',
