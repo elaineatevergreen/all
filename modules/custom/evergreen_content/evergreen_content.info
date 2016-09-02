@@ -1367,6 +1367,7 @@ features[views_view][] = alerts
 features[views_view][] = alumni_directories
 features[views_view][] = blog
 features[views_view][] = calendar
+features[views_view][] = calendar_by_date
 features[views_view][] = campus_locations
 features[views_view][] = catalog
 features[views_view][] = content_audits
