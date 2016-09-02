@@ -5966,7 +5966,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'medium__500px_wide_',
+          'image_style' => 'event_image__345px_wide_',
         ),
         'type' => 'image',
         'weight' => 13,

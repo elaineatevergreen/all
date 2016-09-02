@@ -99,6 +99,22 @@ function evergreen_content_date_format_types() {
 function evergreen_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: event_image__345px_wide_.
+  $styles['event_image__345px_wide_'] = array(
+    'label' => 'Event image (345px wide)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 345,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: large__800px_wide_.
   $styles['large__800px_wide_'] = array(
     'label' => 'Large (800px wide)',
