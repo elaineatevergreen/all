@@ -1387,4 +1387,5 @@ features[workbench_moderation_transitions][] = published:recycled
 files[] = migrations/evergreen.inc
 files[] = migrations/sitesections.inc
 files[] = migrations/sitecontent.inc
+files[] = migrations/calendar.inc
 no autodetect = 1
