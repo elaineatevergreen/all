@@ -298,7 +298,7 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->id = 'calendar_events';
   $feeds_importer->config = array(
     'name' => 'Calendar Events',
-    'description' => 'Uses existing iCal feed to get currently listed events',
+    'description' => 'Import existing events from CSV',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -388,6 +388,12 @@ function evergreen_content_feeds_importer_default() {
           10 => array(
             'source' => 'created',
             'target' => 'created',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'null',
+            'target' => 'status',
             'unique' => FALSE,
           ),
         ),
