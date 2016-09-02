@@ -156,6 +156,7 @@ features[fe_block_settings][] = views-alerts-block
 features[fe_block_settings][] = views-blog-home
 features[fe_block_settings][] = views-calendar-block_2
 features[fe_block_settings][] = views-home_page_hero-block
+features[fe_block_settings][] = views-news_o_matic-block
 features[fe_block_settings][] = views-secondary_content-block
 features[fe_block_settings][] = views-site_section_background-block
 features[fe_block_settings][] = views-site_section_background-block_1
