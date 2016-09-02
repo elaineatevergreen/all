@@ -60,5 +60,39 @@ function evergreen_content_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_new_event'] = entity_import('rules_config', '{ "rules_new_event" : {
+      "LABEL" : "New event by basic user",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules" ],
+      "ON" : { "node_insert--event" : { "bundle" : "event" } },
+      "IF" : [
+        { "NOT user_has_role" : {
+            "account" : [ "node:author" ],
+            "roles" : { "value" : {
+                "4" : "4",
+                "8" : "8",
+                "5" : "5",
+                "9" : "9",
+                "7" : "7",
+                "6" : "6",
+                "3" : "3"
+              }
+            },
+            "operation" : "OR"
+          }
+        }
+      ],
+      "DO" : [
+        { "mail_to_users_of_role" : {
+            "roles" : { "value" : { "4" : "4", "6" : "6" } },
+            "subject" : "Campus Calendar: new event submitted ",
+            "message" : "An event has been submitted by [site:current-user]. \\r\\n\\r\\n[node:title]\\r\\n[node:field-event-date:value]\\r\\nCategory(ies): [node:field_category]\\r\\nFormat: [node:field_format]\\r\\n\\r\\nGo to http:\\/\\/collab.evergreen.edu\\/calendar\\/admin\\/workbench\\/needs-review to review all new events."
+          }
+        },
+        { "drupal_message" : { "message" : "Thank you for submitting your event: [node:title]. A moderator will review your information and publish it to the calendar." } }
+      ]
+    }
+  }');
   return $items;
 }
