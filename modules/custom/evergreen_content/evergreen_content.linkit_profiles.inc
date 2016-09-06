@@ -55,7 +55,7 @@ function evergreen_content_default_linkit_profiles() {
       'group_by_bundle' => 0,
     ),
     'entity:node' => array(
-      'result_description' => '',
+      'result_description' => '[node:field-site-section:field_long_name]',
       'bundles' => array(
         'alert' => 0,
         'basic_page' => 0,
@@ -81,12 +81,12 @@ function evergreen_content_default_linkit_profiles() {
       'include_unpublished' => 0,
     ),
     'entity:file' => array(
-      'result_description' => '',
+      'result_description' => '[file:field-file-description] [file:field-site-section:field_long_name]',
       'bundles' => array(
+        'document' => 0,
         'image' => 0,
         'video' => 0,
         'audio' => 0,
-        'document' => 0,
       ),
       'group_by_bundle' => 0,
       'show_scheme' => 0,

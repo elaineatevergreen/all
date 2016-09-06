@@ -444,7 +444,7 @@ function evergreen_content_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'teasers');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section (field_site_section) */
+  /* Contextual filter: Field: Site Section (field_site_section) */
   $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -598,7 +598,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: Content: Site Section (field_site_section) */
+  /* Filter criterion: Field: Site Section (field_site_section) */
   $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -615,7 +615,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Site Section (field_site_section) */
+  /* Relationship: Field: Site Section (field_site_section) */
   $handler->display->display_options['relationships']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['relationships']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['relationships']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -647,7 +647,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section (field_site_section) */
+  /* Contextual filter: Field: Site Section (field_site_section) */
   $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -678,7 +678,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section (field_site_section) */
+  /* Contextual filter: Field: Site Section (field_site_section) */
   $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -760,7 +760,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filter criterion: Content: Site Section (field_site_section) */
+  /* Filter criterion: Field: Site Section (field_site_section) */
   $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -824,7 +824,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Site Section */
+  /* Field: Field: Site Section */
   $handler->display->display_options['fields']['field_site_section']['id'] = 'field_site_section';
   $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
@@ -846,7 +846,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['fields']['promote']['field'] = 'promote';
   $handler->display->display_options['fields']['promote']['not'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section (field_site_section) */
+  /* Contextual filter: Field: Site Section (field_site_section) */
   $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -3430,7 +3430,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section (field_site_section) */
+  /* Contextual filter: Field: Site Section (field_site_section) */
   $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -7834,7 +7834,7 @@ return($term); ';
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filter criterion: Content: Site Section (field_site_section) */
+  /* Filter criterion: Field: Site Section (field_site_section) */
   $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -8262,7 +8262,7 @@ return($term); ';
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Content: Site Section (field_site_section) */
+  /* Relationship: Field: Site Section (field_site_section) */
   $handler->display->display_options['relationships']['field_site_section_tid']['id'] = 'field_site_section_tid';
   $handler->display->display_options['relationships']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['relationships']['field_site_section_tid']['field'] = 'field_site_section_tid';
@@ -8926,7 +8926,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_under_represented']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_under_represented']['field_api_classes'] = TRUE;
-  /* Field: Content: Site Section */
+  /* Field: Field: Site Section */
   $handler->display->display_options['fields']['field_site_section']['id'] = 'field_site_section';
   $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
@@ -9096,7 +9096,7 @@ return($term); ';
   /* Display: Section Title Block */
   $handler = $view->new_display('block', 'Section Title Block', 'block_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Site Section */
+  /* Field: Field: Site Section */
   $handler->display->display_options['fields']['field_site_section']['id'] = 'field_site_section';
   $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
