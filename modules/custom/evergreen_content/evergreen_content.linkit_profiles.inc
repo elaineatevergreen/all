@@ -19,6 +19,7 @@ function evergreen_content_default_linkit_profiles() {
   $linkit_profile->profile_type = '1';
   $linkit_profile->data = array(
     'text_formats' => array(
+      'extended_tags' => 'extended_tags',
       'basic_tags' => 'basic_tags',
       'full_html' => 0,
       'plain_text' => 0,
@@ -47,16 +48,33 @@ function evergreen_content_default_linkit_profiles() {
     ),
     'entity:bean' => array(
       'result_description' => '',
+      'bundles' => array(
+        'alternate_background_image' => 0,
+        'section_menu' => 0,
+      ),
+      'group_by_bundle' => 0,
     ),
     'entity:node' => array(
       'result_description' => '',
       'bundles' => array(
-        'article' => 0,
+        'alert' => 0,
         'basic_page' => 0,
+        'catalog_entry' => 0,
         'directory_individual' => 0,
         'directory_office' => 0,
         'event' => 0,
+        'faculty_news' => 0,
+        'field_of_study' => 0,
+        'gallery' => 0,
         'home_page' => 0,
+        'home_page_hero' => 0,
+        'library_database' => 0,
+        'location' => 0,
+        'blurb' => 0,
+        'article' => 0,
+        'profile' => 0,
+        'scholarship' => 0,
+        'student_group' => 0,
         'webform' => 0,
       ),
       'group_by_bundle' => 0,
@@ -82,8 +100,10 @@ function evergreen_content_default_linkit_profiles() {
     'entity:taxonomy_term' => array(
       'result_description' => '',
       'bundles' => array(
-        'tags' => 0,
         'calendar_categories' => 0,
+        'database_of_databases' => 0,
+        'event_formats' => 0,
+        'faculty_directory_categories' => 0,
         'site_sections' => 0,
       ),
       'group_by_bundle' => 0,
