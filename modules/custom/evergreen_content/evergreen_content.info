@@ -1271,6 +1271,7 @@ features[variable][] = menu_parent_profile
 features[variable][] = menu_parent_scholarship
 features[variable][] = menu_parent_student_group
 features[variable][] = menu_parent_webform
+features[variable][] = metatag_extended_permissions
 features[variable][] = module_filter_tabs
 features[variable][] = node_options_alert
 features[variable][] = node_options_article

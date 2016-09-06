@@ -2134,6 +2134,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_extended_permissions';
+  $strongarm->value = 1;
+  $export['metatag_extended_permissions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'module_filter_tabs';
   $strongarm->value = 0;
   $export['module_filter_tabs'] = $strongarm;
