@@ -1232,6 +1232,7 @@ features[variable][] = field_bundle_settings_user__user
 features[variable][] = jquery_update_compression_type
 features[variable][] = jquery_update_jquery_cdn
 features[variable][] = jquery_update_jquery_version
+features[variable][] = media_wysiwyg_wysiwyg_allowed_types
 features[variable][] = menu_options_alert
 features[variable][] = menu_options_article
 features[variable][] = menu_options_basic_page
