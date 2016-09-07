@@ -15,6 +15,8 @@ class SiteContentMigration extends XMLMigration {
     // "fields" from an XML feed, so we pass an explicit list of source fields
     $fields = array(
       'title' => t('title'),
+      'created' => t('created'),
+      'changed' => t('changed'),
       'primary' => t('primary'),
       'secondary' => t('secondary'),
       'sitesection' => t('sitesection'),
@@ -68,6 +70,9 @@ class SiteContentMigration extends XMLMigration {
 		*/
 		
 		$this->addFieldMapping('title', 'title')->xpath('title');
+		
+		$this->addFieldMapping('created', 'created')->xpath('created');
+		$this->addFieldMapping('changed', 'changed')->xpath('changed');
 		
 		//the primary and secondary content have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary');
