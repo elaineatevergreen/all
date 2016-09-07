@@ -159,7 +159,7 @@ class NewsMigration extends XMLMigration {
     // "fields" from an XML feed, so we pass an explicit list of source fields
     $fields = array(
       'title' => t('title'),
-      'startdate' => t('startdate'),
+      'created' => t('created'),
       'primary' => t('primary'),
       'summary' => t('summary'),
       'url' => t('url'),
@@ -213,7 +213,7 @@ class NewsMigration extends XMLMigration {
 		
 		$this->addFieldMapping('title', 'title')->xpath('title');
 		
-		$this->addFieldMapping('created', 'startdate')->xpath('startdate');
+		$this->addFieldMapping('created', 'created')->xpath('created');
 		
 		//the primary content and blurb have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary');
