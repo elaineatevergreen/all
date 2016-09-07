@@ -684,6 +684,7 @@ features[node][] = scholarship
 features[node][] = student_group
 features[node][] = webform
 features[page_manager_handlers][] = myworkbench__panel_context_9f331727-0a27-4b21-a454-c3c3e46fa5f8
+features[page_manager_pages][] = marketing_tools
 features[page_manager_pages][] = news_o_matic
 features[rules_config][] = rules_generate_section_home_page
 features[rules_config][] = rules_log_out_with_cas_after_logging_out

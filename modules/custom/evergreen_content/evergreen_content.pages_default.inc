@@ -280,6 +280,160 @@ function evergreen_content_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'marketing_tools';
+  $page->task = 'page';
+  $page->admin_title = 'Marketing Tools';
+  $page->admin_description = 'A variety of tools for the communications department';
+  $page->path = 'admin/workbench/content/shurly';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Short URLs',
+    'name' => 'navigation',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_marketing_tools__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'marketing_tools';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Short URLs';
+  $display->uuid = '11b113d9-f7ef-4db9-af3d-2fc62cbfe213';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_marketing_tools__panel';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-a9f32690-517b-4a19-a9bd-dffc5f56cbfa';
+  $pane->panel = 'center';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Link to other URL options',
+    'title' => 'More Redirects and Alternate URLs',
+    'title_heading' => 'h2',
+    'body' => '<p>
+	See&nbsp;<a href="admin/config/search/redirect">URL Redirects</a> for hand-created non-advertising addresses or <a href="admin/config/search/path">URL Aliases</a> for automatically generated addresses and URL patterns.</p>
+',
+    'format' => 'extended_tags',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'a9f32690-517b-4a19-a9bd-dffc5f56cbfa';
+  $display->content['new-a9f32690-517b-4a19-a9bd-dffc5f56cbfa'] = $pane;
+  $display->panels['center'][0] = 'new-a9f32690-517b-4a19-a9bd-dffc5f56cbfa';
+  $pane = new stdClass();
+  $pane->pid = 'new-2173d7b0-a80f-40ad-b44d-b2e4b71c2255';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'shurly-form';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '2173d7b0-a80f-40ad-b44d-b2e4b71c2255';
+  $display->content['new-2173d7b0-a80f-40ad-b44d-b2e4b71c2255'] = $pane;
+  $display->panels['center'][1] = 'new-2173d7b0-a80f-40ad-b44d-b2e4b71c2255';
+  $pane = new stdClass();
+  $pane->pid = 'new-0dd29423-fe80-4953-9ed2-610d6dc593eb';
+  $pane->panel = 'center';
+  $pane->type = 'views';
+  $pane->subtype = 'shurly_admin';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '0',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'page_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '0dd29423-fe80-4953-9ed2-610d6dc593eb';
+  $display->content['new-0dd29423-fe80-4953-9ed2-610d6dc593eb'] = $pane;
+  $display->panels['center'][2] = 'new-0dd29423-fe80-4953-9ed2-610d6dc593eb';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-0dd29423-fe80-4953-9ed2-610d6dc593eb';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['marketing_tools'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'news_o_matic';
   $page->task = 'page';
   $page->admin_title = 'News-o-matic';
@@ -292,7 +446,7 @@ function evergreen_content_default_page_manager_pages() {
     'name' => 'navigation',
     'weight' => '0',
     'parent' => array(
-      'type' => 'tab',
+      'type' => 'none',
       'title' => 'My Content',
       'name' => 'navigation',
       'weight' => '0',
