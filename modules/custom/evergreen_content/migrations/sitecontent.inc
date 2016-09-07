@@ -270,11 +270,13 @@ class NewsMigration extends XMLMigration {
 	    //this converts all the content of primary and secondary into actual HTML
 	    //need to find a way to remove the intro paragraph!
 	    //things that need to be stripped
+	    
+	    //all of these clean up Cascade code, old cruft, or bad coding
 	    $replace[] = array('//evergreen.edu - old design','http://evergreen.edu');
-	    //$replace[] = array('//evergreen.edu','http://evergreen.edu');
 	    $replace[] = array('site://','http://');
 	    $replace[] = array('_archive','');
 	    $replace[] = array('_draft','');
+	    $replace[] = array('target="_blank"','');
 	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", $row->xml->primary->asXML()));
 	    $row->summary = str_replace("&amp;", "&", $row->xml->summary->asXML());
 	    
