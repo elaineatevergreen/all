@@ -467,6 +467,7 @@ features[field_instance][] = field_collection_item-field_section_navigation-fiel
 features[field_instance][] = file-document-field_file_description
 features[field_instance][] = file-document-field_site_section
 features[field_instance][] = file-image-field_file_image_alt_text
+features[field_instance][] = file-image-field_site_section
 features[field_instance][] = node-alert-field_alert_message
 features[field_instance][] = node-article-body
 features[field_instance][] = node-article-field_blurb

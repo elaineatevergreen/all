@@ -1000,6 +1000,52 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'file-image-field_site_section'.
+  $field_instances['file-image-field_site_section'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Choose which site you are adding this image to. The image may be used elsewhere, but this will help you and other editors find the right images later.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-alert-field_alert_message'.
   $field_instances['node-alert-field_alert_message'] = array(
     'bundle' => 'alert',
@@ -10428,6 +10474,7 @@ function evergreen_content_field_default_field_instances() {
   t('Check this box if they should appear in the alumni directory.');
   t('Check this box if this link needs to go through the college\'s proxy server to authenticate the user.');
   t('Choose the format of the event. If the event includes more than one, choose the most relevant type.');
+  t('Choose which site you are adding this image to. The image may be used elsewhere, but this will help you and other editors find the right images later.');
   t('Class Standing');
   t('Classes');
   t('Comes automatically from the CMD, where it\'s a free-form field.');
