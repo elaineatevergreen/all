@@ -852,12 +852,6 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
-      'large_image' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -913,12 +907,6 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
-      'large_image' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -971,12 +959,6 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'large_image' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1013,7 +995,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );

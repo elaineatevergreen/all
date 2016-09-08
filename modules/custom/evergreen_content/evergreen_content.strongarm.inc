@@ -838,12 +838,7 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
-    'file' => array(
-      'large_image' => array(
-        'label' => 'Large Image',
-        'custom settings' => 1,
-      ),
-    ),
+    'file' => array(),
     'field_collection_item' => array(
       'summary' => array(
         'label' => 'Summary',
