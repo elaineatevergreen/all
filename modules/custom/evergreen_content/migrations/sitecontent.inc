@@ -15,6 +15,8 @@ class SiteContentMigration extends XMLMigration {
     // "fields" from an XML feed, so we pass an explicit list of source fields
     $fields = array(
       'title' => t('title'),
+      'created' => t('created'),
+      'changed' => t('changed'),
       'primary' => t('primary'),
       'secondary' => t('secondary'),
       'sitesection' => t('sitesection'),
@@ -68,6 +70,9 @@ class SiteContentMigration extends XMLMigration {
 		*/
 		
 		$this->addFieldMapping('title', 'title')->xpath('title');
+		
+		$this->addFieldMapping('created', 'created')->xpath('created');
+		$this->addFieldMapping('changed', 'changed')->xpath('changed');
 		
 		//the primary and secondary content have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary');
@@ -154,7 +159,7 @@ class NewsMigration extends XMLMigration {
     // "fields" from an XML feed, so we pass an explicit list of source fields
     $fields = array(
       'title' => t('title'),
-      'startdate' => t('startdate'),
+      'created' => t('created'),
       'primary' => t('primary'),
       'summary' => t('summary'),
       'url' => t('url'),
@@ -208,7 +213,7 @@ class NewsMigration extends XMLMigration {
 		
 		$this->addFieldMapping('title', 'title')->xpath('title');
 		
-		$this->addFieldMapping('created', 'startdate')->xpath('startdate');
+		$this->addFieldMapping('created', 'created')->xpath('created');
 		
 		//the primary content and blurb have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary');
@@ -265,9 +270,13 @@ class NewsMigration extends XMLMigration {
 	    //this converts all the content of primary and secondary into actual HTML
 	    //need to find a way to remove the intro paragraph!
 	    //things that need to be stripped
+	    
+	    //all of these clean up Cascade code, old cruft, or bad coding
 	    $replace[] = array('//evergreen.edu - old design','http://evergreen.edu');
-	    //$replace[] = array('//evergreen.edu','http://evergreen.edu');
 	    $replace[] = array('site://','http://');
+	    $replace[] = array('_archive','');
+	    $replace[] = array('_draft','');
+	    $replace[] = array('target="_blank"','');
 	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", $row->xml->primary->asXML()));
 	    $row->summary = str_replace("&amp;", "&", $row->xml->summary->asXML());
 	    

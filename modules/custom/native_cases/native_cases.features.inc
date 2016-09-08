@@ -30,6 +30,28 @@ function native_cases_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_date_custom_date_formats().
+ */
+function native_cases_fe_date_custom_date_formats() {
+  $custom_date_formats = array();
+  $custom_date_formats['M j'] = 'M j';
+  $custom_date_formats['Y'] = 'Y';
+  return $custom_date_formats;
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function native_cases_date_format_types() {
+  $format_types = array();
+  // Exported date format type: monthday
+  $format_types['monthday'] = 'MonthDay';
+  // Exported date format type: year
+  $format_types['year'] = 'Year';
+  return $format_types;
+}
+
+/**
  * Implements hook_node_info().
  */
 function native_cases_node_info() {
@@ -48,6 +70,14 @@ function native_cases_node_info() {
       'description' => t('A <em>case study</em> tells a story about a problem and its history, then ends with a leading question so that students work through the case themselves.'),
       'has_title' => '1',
       'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'event' => array(
+      'name' => t('Event'),
+      'base' => 'node_content',
+      'description' => t('Use an <em>event</em> to post a workshop or institute.'),
+      'has_title' => '1',
+      'title_label' => t('Event Name'),
       'help' => '',
     ),
     'page' => array(

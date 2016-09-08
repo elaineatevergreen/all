@@ -105,6 +105,40 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'calendar_events-null-default_value';
+  $feeds_tamper->importer = 'calendar_events';
+  $feeds_tamper->source = 'null';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Publish by default';
+  $export['calendar_events-null-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'calendar_events-promote-convert_boolean';
+  $feeds_tamper->importer = 'calendar_events';
+  $feeds_tamper->source = 'promote';
+  $feeds_tamper->plugin_id = 'convert_boolean';
+  $feeds_tamper->settings = array(
+    'true_value' => 'yes',
+    'false_value' => 'no',
+    'match_case' => 0,
+    'no_match' => 'false',
+    'other_text' => '',
+    'no_match_value' => FALSE,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert to boolean';
+  $export['calendar_events-promote-convert_boolean'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'campus_locations-abbreviated_building_name-trim';
   $feeds_tamper->importer = 'campus_locations';
   $feeds_tamper->source = 'Abbreviated Building Name';
