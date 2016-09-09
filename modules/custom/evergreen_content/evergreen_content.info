@@ -1384,6 +1384,7 @@ features[variable][] = workbench_access_node_type_webform
 features[variable][] = workbench_access_taxonomy
 features[variable][] = workbench_moderation_default_state_article
 features[variable][] = workbench_moderation_default_state_basic_page
+features[variable][] = workbench_moderation_default_state_gallery
 features[variable][] = workbench_myworkbench_disabled
 features[views_view][] = alerts
 features[views_view][] = alumni_directories
