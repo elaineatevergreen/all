@@ -51,11 +51,11 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
 <head profile="<?php print $grddl_profile; ?>">
+  <meta charset="utf-8" />
   <?php print $head; ?>
   <title>
   	<?php print $head_title; ?>
   </title>
-  <meta charset="utf-8" />
   <?php print $styles; ?>
   <?php print $scripts; ?>
   
@@ -63,24 +63,23 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<meta content="IE=edge" http-equiv="X-UA-Compatible" /><!-- Do not allow (In)Compatibility Mode -->
 	<meta content="width=device-width, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
-	<link href="http://evergreen.edu/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72" /><!-- non-retina iPad pre iOS 7 -->
-	<link href="http://evergreen.edu/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76" /><!-- non-retina iPad iOS 7 -->
-	<link href="http://evergreen.edu/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114" /><!-- retina iPhone pre iOS 7 -->
-	<link href="http://evergreen.edu/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120" /><!-- retina iPhone iOS 7 -->
-	<link href="http://evergreen.edu/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144" /><!-- retina iPad pre iOS 7 -->
-	<link href="http://evergreen.edu/apple-touch-icon-152-precomposed.png" rel="apple-touch-icon" sizes="152x152" /><!-- retina iPad iOS 7 -->
-	<link color="#64933a" href="/apple-pinned-tab.svg" rel="mask-icon" /><!-- Safari 9 -->
-	<meta content="#64933a" name="msapplication-TileColor" /><!-- Windows 8, IE10 -->
-	<meta content="/mstile-144x144.png" name="msapplication-TileImage" /><!-- Windows 8, IE10 -->
-	<link href="http://evergreen.edu/favicon.ico" rel="icon" type="image/x-icon" /><!-- IE and hi-dpi favicon -->
+	
+	<!-- All other Apple touch icons have been deprecated and should be deleted soon. -->
+	<link href="http://evergreen.edu/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
+	<link color="#64933a" href="/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9 -->
+	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
+	<meta content="/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
+	<link href="http://evergreen.edu/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
 	<!-- favicons for everybody else -->
-	<link href="/favicon-16.png" rel="icon" sizes="16x16" type="image/png" />
-	<link href="/favicon-16.png" rel="icon" sizes="24x24" type="image/png" />
-	<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png" />
-	<link href="/favicon-64.png" rel="icon" sizes="64x64" type="image/png" />
-	<link href="/favicon.svg" rel="icon" type="image/svg+xml" /><!-- Firefox 41+ -->
+	<link href="/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="/favicon-16.png" rel="icon" sizes="24x24" type="image/png"/>
+	<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+	<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox 41+ -->
+	
 	<!--<link href="http://evergreen.edu/_inc/styles.css" media="all" rel="stylesheet" />-->
 	<link href="http://evergreen.edu/_inc/print.css" media="print" rel="stylesheet" />
+	
 	<!-- Google Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -90,11 +89,19 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	
 	  ga('create', 'UA-456756-1', 'auto');
 	  ga('send', 'pageview');
-	
 	</script>
+	
 	<!-- Typekit -->
-	<script src="https://use.typekit.net/rtm8ksn.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script>
+	  (function(d) {
+	    var config = {
+	      kitId: 'rtm8ksn',
+	      scriptTimeout: 3000
+	    },
+	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
