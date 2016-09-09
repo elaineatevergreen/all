@@ -3016,5 +3016,12 @@ function evergreen_content_strongarm() {
   $strongarm->value = FALSE;
   $export['workbench_myworkbench_disabled'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_scheduler_article';
+  $strongarm->value = array();
+  $export['workbench_scheduler_article'] = $strongarm;
+
   return $export;
 }
