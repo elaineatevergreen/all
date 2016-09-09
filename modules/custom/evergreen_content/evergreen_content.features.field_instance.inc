@@ -606,124 +606,6 @@ function evergreen_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_gallery_image-field_description'.
-  $field_instances['field_collection_item-field_gallery_image-field_description'] = array(
-    'bundle' => 'field_gallery_image',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'summary' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_description',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_gallery_image-field_image'.
-  $field_instances['field_collection_item-field_gallery_image-field_image'] = array(
-    'bundle' => 'field_gallery_image',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-      'summary' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'description_display' => 'after',
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_2' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'upload' => 0,
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 2,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
   // 'field_collection_item-field_section_navigation-field_group_title'.
   $field_instances['field_collection_item-field_section_navigation-field_group_title'] = array(
     'bundle' => 'field_section_navigation',
@@ -995,7 +877,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -1041,7 +923,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 0,
     ),
     'workbench_access_field' => 0,
   );
@@ -6799,17 +6681,16 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-gallery-field_gallery_image'.
-  $field_instances['node-gallery-field_gallery_image'] = array(
+  // Exported field_instance: 'node-gallery-field_gallery'.
+  $field_instances['node-gallery-field_gallery'] = array(
     'bundle' => 'gallery',
-    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add an image and extended description.',
+    'description' => '',
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
@@ -6819,12 +6700,31 @@ function evergreen_content_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'juicebox',
         'settings' => array(
-          'view_mode' => 'full',
+          'apply_markup_filter' => 1,
+          'caption_source' => 'field_file_description',
+          'custom_parent_classes' => '',
+          'image_style' => '',
+          'incompatible_file_action' => 'show_icon_and_link',
+          'jlib_backgroundColor' => '#222222',
+          'jlib_galleryHeight' => '100%',
+          'jlib_galleryWidth' => '100%',
+          'jlib_showExpandButton' => 1,
+          'jlib_showOpenButton' => 1,
+          'jlib_showThumbsButton' => 1,
+          'jlib_textColor' => 'rgba(255,255,255,1)',
+          'jlib_thumbFrameColor' => 'rgba(255,255,255,.5)',
+          'jlib_useFullscreenExpand' => 0,
+          'jlib_useThumbDots' => 0,
+          'linkurl_source' => '',
+          'linkurl_target' => '_blank',
+          'manual_config' => '',
+          'thumb_style' => 'juicebox_square_thumbnail',
+          'title_source' => '',
         ),
-        'type' => 'field_collection_fields',
-        'weight' => 1,
+        'type' => 'juicebox_formatter',
+        'weight' => 2,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -6839,24 +6739,97 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_gallery_image',
-    'label' => 'Image',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_gallery',
+    'label' => 'Gallery',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'alt_field' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 32,
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-gallery-field_site_section'.
+  $field_instances['node-gallery-field_site_section'] = array(
+    'bundle' => 'gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The section selected will set the page\'s site title, navigation, and background.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-home_page-field_intro'.
@@ -10436,7 +10409,6 @@ function evergreen_content_field_default_field_instances() {
   t('Academic Year');
   t('Add a flyer if you would like people to print out information to post.');
   t('Add a short description of this document\'s contents. This will help you and other editors find the document later.');
-  t('Add an image and extended description.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
   t('Add to Sections');
   t('Additional Contact Information');
@@ -10515,6 +10487,7 @@ function evergreen_content_field_default_field_instances() {
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
+  t('Gallery');
   t('Graduate Program');
   t('Graduated');
   t('Group Categories');
@@ -10636,6 +10609,7 @@ function evergreen_content_field_default_field_instances() {
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The maximum number of credits this offering is listed for. NB: minimum and maximum CAN be the same number.');
   t('The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".');
+  t('The section selected will set the page\'s site title, navigation, and background.');
   t('The smallest number of credits that this offering is listed for.');
   t('There\'s some overlap in grad school offerings.');
   t('These may include floor plans or exterior maps.');

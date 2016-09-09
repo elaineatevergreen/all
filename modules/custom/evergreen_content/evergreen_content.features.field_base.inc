@@ -979,25 +979,6 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_description'.
-  $field_bases['field_description'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_description',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
   // Exported field_base: 'field_description_plain'.
   $field_bases['field_description_plain'] = array(
     'active' => 1,
@@ -1606,30 +1587,26 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_gallery_image'.
-  $field_bases['field_gallery_image'] = array(
+  // Exported field_base: 'field_gallery'.
+  $field_bases['field_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_gallery_image',
+    'field_name' => 'field_gallery',
     'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-      'value' => array(
-        0 => 'value',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'field_collection',
+    'module' => 'image',
     'settings' => array(
-      'hide_blank_items' => 1,
-      'hide_initial_item' => FALSE,
-      'path' => '',
+      'default_image' => 0,
+      'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'field_collection',
+    'type' => 'image',
   );
 
   // Exported field_base: 'field_graduate_program'.

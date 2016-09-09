@@ -1403,13 +1403,16 @@ function evergreen_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '5',
+        ),
+        'metatags' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -2573,7 +2576,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_gallery';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
