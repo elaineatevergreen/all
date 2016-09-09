@@ -2674,7 +2674,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_catalog_entry_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'catalog/[node:title]';
   $export['pathauto_node_catalog_entry_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2701,15 +2701,22 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_field_of_study_pattern';
+  $strongarm->name = 'pathauto_node_faculty_news_pattern';
   $strongarm->value = '';
+  $export['pathauto_node_faculty_news_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_field_of_study_pattern';
+  $strongarm->value = 'studies/[node:title]';
   $export['pathauto_node_field_of_study_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_gallery_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:field-site-section:name]/[node:title]';
   $export['pathauto_node_gallery_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2737,7 +2744,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_location_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'location/[node:title]';
   $export['pathauto_node_location_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
