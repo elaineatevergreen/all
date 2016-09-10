@@ -2994,13 +2994,6 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'workbench_moderation_default_state_article';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_article'] = $strongarm;
-  
-    $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_moderation_default_state_blurb';
-  $strongarm->value = 'draft';
-  $export['workbench_moderation_default_state_blurb'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3012,18 +3005,25 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_blurb';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_blurb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_directory_individual';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_directory_individual'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_directory_office';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_directory_office'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_field_of_study';
@@ -3036,50 +3036,50 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'workbench_moderation_default_state_gallery';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_gallery'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_home_page_hero';
   $strongarm->value = 'draft';
   $export['workbench_moderation_default_state_home_page_hero'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_library_database';
-  $strongarm->value = 'published';
-  $export['workbench_moderation_default_state_article'] = $strongarm;
-  
-    $strongarm = new stdClass();
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_library_database'] = $strongarm;
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_location';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_location'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_profile';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_profile'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_scholarship';
   $strongarm->value = 'draft';
   $export['workbench_moderation_default_state_scholarship'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_student_group';
   $strongarm->value = 'published';
   $export['workbench_moderation_default_state_student_group'] = $strongarm;
-  
-    $strongarm = new stdClass();
+
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_moderation_default_state_webform';
