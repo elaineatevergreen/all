@@ -721,10 +721,9 @@ function evergreen_content_field_group_info() {
     'label' => 'Details',
     'weight' => '2',
     'children' => array(
-      0 => 'field_abbreviated_building_name',
-      1 => 'field_building_history',
-      2 => 'field_official_name',
-      3 => 'field_square_footage',
+      0 => 'field_building_history',
+      1 => 'field_official_name',
+      2 => 'field_square_footage',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

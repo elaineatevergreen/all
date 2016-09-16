@@ -7643,9 +7643,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'full_name' => array(

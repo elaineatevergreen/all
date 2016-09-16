@@ -7,13 +7,24 @@ function wwwevergreen_preprocess_page(&$variables) {
     // If the content type's machine name is "my_machine_name" the file
     // name will be "page--my-machine-name.tpl.php".
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
-      //this rewrites individual directory people pages for a nicer title (Elaine Nelson vs Nelson, Elaine)
-      if ($variables['node']->type === 'directory_individual') {
-	  	$temptitle = explode(',', check_plain($variables['node']->title));
-	  	$temptitle = $temptitle[1] . ' ' . $temptitle[0];
-	  	$variables['title'] = $temptitle;
-	  	drupal_set_title($temptitle);
-  	};
+    
+    //some rewriting of page titles!
+    //this rewrites individual directory people pages for a nicer title (Elaine Nelson vs Nelson, Elaine)
+    if ($variables['node']->type === 'directory_individual') {
+	  $temptitle = explode(',', check_plain($variables['node']->title));
+	  $temptitle = $temptitle[1] . ' ' . $temptitle[0];
+	  $variables['title'] = $temptitle;
+	  drupal_set_title($temptitle);
+  	} 
+  	// adds abbreviation to the end of a location name
+  	elseif ($variables['node']->type === 'location') {
+		$abbr = field_get_items('node', $variables['node'], 'field_abbreviated_building_name');
+		$abbr = $abbr[0]['value'];
+		$temptitle = check_plain($variables['node']->title);
+		$temptitle = $temptitle . " ($abbr)";
+		$variables['title'] = $temptitle;
+		drupal_set_title($temptitle);
+  	}
   };
   // allows for special template pages for panel pages.
   if (module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
