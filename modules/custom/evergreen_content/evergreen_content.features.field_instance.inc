@@ -7586,7 +7586,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7646,7 +7646,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7663,7 +7663,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_abbreviated_building_name',
     'label' => 'Abbreviated Building Name',
     'required' => 0,
@@ -7701,7 +7701,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7753,10 +7753,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7869,7 +7868,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7886,7 +7885,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_official_name',
     'label' => 'Official Name',
     'required' => 0,
@@ -7920,7 +7919,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -7929,7 +7928,7 @@ function evergreen_content_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7946,7 +7945,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'p',
     'field_name' => 'field_square_footage',
     'label' => 'Square Footage',
     'required' => 0,
@@ -7955,7 +7954,7 @@ function evergreen_content_field_default_field_instances() {
       'max' => '',
       'min' => '',
       'prefix' => '',
-      'suffix' => '',
+      'suffix' => ' square feet',
       'user_register_form' => FALSE,
     ),
     'widget' => array(

@@ -711,6 +711,39 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|location|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_abbreviated_building_name',
+      1 => 'field_building_history',
+      2 => 'field_official_name',
+      3 => 'field_square_footage',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-details field-group-html-element',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|location|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_directories|node|profile|form';
   $field_group->group_name = 'group_directories';
   $field_group->entity_type = 'node';

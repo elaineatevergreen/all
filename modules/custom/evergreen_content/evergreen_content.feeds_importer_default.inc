@@ -556,6 +556,18 @@ function evergreen_content_feeds_importer_default() {
             'source' => 'Location Category',
             'target' => 'field_location_category',
             'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'Building History',
+            'target' => 'field_building_history',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          7 => array(
+            'source' => 'Square Footage',
+            'target' => 'field_square_footage',
+            'unique' => FALSE,
           ),
         ),
         'insert_new' => '1',
