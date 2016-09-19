@@ -6230,7 +6230,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".',
+    'description' => 'The name of the department or series, i.e., "Career Center" or "Geoducks@Nite".',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -10661,7 +10661,7 @@ function evergreen_content_field_default_field_instances() {
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The maximum number of credits this offering is listed for. NB: minimum and maximum CAN be the same number.');
-  t('The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".');
+  t('The name of the department or series, i.e., "Career Center" or "Geoducks@Nite".');
   t('The section selected will set the page\'s site title, navigation, and background.');
   t('The smallest number of credits that this offering is listed for.');
   t('There\'s some overlap in grad school offerings.');
