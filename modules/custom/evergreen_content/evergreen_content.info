@@ -85,6 +85,7 @@ dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = path
+dependencies[] = path_redirect_import
 dependencies[] = pathauto
 dependencies[] = phone
 dependencies[] = plupload
