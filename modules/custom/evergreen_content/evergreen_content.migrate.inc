@@ -17,6 +17,10 @@ function evergreen_content_migrate_api() {
 				'class_name' => 'SiteSectionMigration',
 				'group_name' => 'sites',
 			), //end of the SiteSection migration
+			'SectionNav' => array(
+				'class_name' => 'SiteSectionNavMigration',
+				'group_name' => 'sites',
+			),
 			'SiteContent' => array( 
 				'class_name' => 'SiteContentMigration',
 				'group_name' => 'sites',

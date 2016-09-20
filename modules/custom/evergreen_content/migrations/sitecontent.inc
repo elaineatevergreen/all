@@ -132,8 +132,27 @@ class SiteContentMigration extends XMLMigration {
 	    $replace[] = array('//evergreen.edu - old design','http://evergreen.edu');
 	    //$replace[] = array('//evergreen.edu','http://evergreen.edu');
 	    $replace[] = array('site://','http://');
-	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", $row->xml->primary->asXML()));
-	    $row->secondary = str_replace("&amp;", "&", $row->xml->secondary->asXML());
+	    
+	    /*
+		  fixing links to non-HTML files...
+		  
+		  1) http://www.evergreen.edu/directory/structure/file.ext
+		  2) directory/structure/file.ext
+		  
+		  strip http://evergreen.edu and http://www.evergreen.edu
+		  
+		  append "sites/all/default/files" to directory/structure/file.ext
+		*/
+		  
+		  $filepath='/((?:href)|(?:src))="(?:http:\/\/(?:www.)*evergreen.edu\/)*(?:\.\.\/)*([^"]+\.(?!htm).{1,5})"/';
+		  
+		  $drupalfilepath = '$1="/sites/default/files/$2"';
+		  
+		  
+		  
+	    
+	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", preg_replace($filepath,$drupalfilepath,$row->xml->primary->asXML())));
+	    $row->secondary = str_replace("&amp;", "&", preg_replace($filepath,$drupalfilepath,$row->xml->secondary->asXML()));
 	    
 	    //strip the first slash out of the url
 	    //for some reason this needs to go AFTER the HTML/XML stuff.
