@@ -844,6 +844,10 @@ function evergreen_content_strongarm() {
         'label' => 'Summary',
         'custom settings' => 1,
       ),
+      'data_export' => array(
+        'label' => 'Data Export',
+        'custom settings' => 1,
+      ),
     ),
     'node' => array(
       'full_name' => array(

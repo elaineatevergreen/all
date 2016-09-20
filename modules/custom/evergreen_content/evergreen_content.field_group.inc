@@ -43,6 +43,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_advanced|node|event|form';
+  $field_group->group_name = 'group_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_categories';
+  $field_group->data = array(
+    'label' => 'Additional Settings',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_academic_quarter',
+      1 => 'field_add_to_sections',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Additional Settings',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-advanced field-group-fieldset',
+        'description' => 'Most events do not require this information.',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_advanced|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_applicant|node|scholarship|form';
   $field_group->group_name = 'group_applicant';
   $field_group->entity_type = 'node';
@@ -115,18 +145,20 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
-    'label' => 'Attachments',
-    'weight' => '16',
+    'label' => 'Details',
+    'weight' => '14',
     'children' => array(
-      0 => 'field_image',
+      0 => 'body',
       1 => 'field_flyer',
+      2 => 'field_image',
+      3 => 'field_sponsored_by',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'no-start',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-attachments field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -401,19 +433,18 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '15',
+    'weight' => '16',
     'children' => array(
       0 => 'field_calendar_categories',
       1 => 'field_event_format',
-      2 => 'field_academic_quarter',
-      3 => 'field_add_to_sections',
+      2 => 'group_advanced',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'no-start',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-categories field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -902,17 +933,19 @@ function evergreen_content_field_group_info() {
     'label' => 'group',
     'weight' => '8',
     'children' => array(
-      0 => 'group_what',
-      1 => 'group_where',
-      2 => 'group_categories',
-      3 => 'group_attachments',
+      0 => 'group_attachments',
+      1 => 'group_categories',
+      2 => 'group_what',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'multipage-group',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'group',
       'instance_settings' => array(
-        'classes' => 'group-group field-group-htabs',
-        'id' => '',
+        'classes' => '',
+        'page_header' => '3',
+        'page_counter' => '1',
+        'move_button' => '1',
+        'move_additional' => '1',
       ),
     ),
   );
@@ -1140,10 +1173,10 @@ function evergreen_content_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_where';
+  $field_group->parent_name = 'group_what';
   $field_group->data = array(
     'label' => 'Location: On Campus',
-    'weight' => '6',
+    'weight' => '2',
     'children' => array(
       0 => 'field_building',
       1 => 'field_room',
@@ -1523,22 +1556,23 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
-    'label' => 'What',
+    'label' => 'Title, Time, and Place',
     'weight' => '12',
     'children' => array(
-      0 => 'body',
-      1 => 'field_event_date',
-      2 => 'field_sponsored_by',
-      3 => 'title',
+      0 => 'field_event_date',
+      1 => 'field_location_off_campus',
+      2 => 'title',
+      3 => 'group_location_on_campus',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Title, Time, and Place',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-what field-group-htab',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'no-start',
     ),
   );
   $field_groups['group_what|node|event|form'] = $field_group;
@@ -1612,11 +1646,11 @@ function evergreen_content_field_group_info() {
   // Included for use with string extractors like potx.
   t('About the Building');
   t('Additional Names');
+  t('Additional Settings');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Article Information');
   t('Articles & Images');
-  t('Attachments');
   t('Author Info');
   t('Author Information');
   t('Basics');
@@ -1645,9 +1679,9 @@ function evergreen_content_field_group_info() {
   t('Social Media Connections');
   t('Sponsor');
   t('Studies');
+  t('Title, Time, and Place');
   t('Top Level');
   t('Website-Specific Content');
-  t('What');
   t('Where');
   t('Who, When, and Where');
   t('group');
