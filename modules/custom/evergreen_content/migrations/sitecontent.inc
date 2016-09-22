@@ -17,6 +17,7 @@ class SiteContentMigration extends XMLMigration {
       'title' => t('title'),
       'created' => t('created'),
       'changed' => t('changed'),
+      'lastmodifiedby' => t('lastmodifiedby'),
       'primary' => t('primary'),
       'secondary' => t('secondary'),
       'sitesection' => t('sitesection'),
@@ -94,13 +95,14 @@ class SiteContentMigration extends XMLMigration {
 		//eventually this should belong to a specific user in Cascade...
 		$this->addFieldMapping('uid')->defaultValue('1'); //because I don't like migrated items belonging to Anon.
 		
+		$this->addFieldMapping('log','changelog');
+		
 		$this->addUnmigratedDestinations(
 			array(
 				"status",
 				"promote",
 				"sticky",
 				"revision",
-				"log",
 				"language",
 				"tnid",
 				"translate",
@@ -139,6 +141,8 @@ class SiteContentMigration extends XMLMigration {
 	    
 	    //the site section is the first part of the URL.
 	    $row->sitesection = substr($alteredURL,0,strpos($alteredURL,'/'));
+	    
+	    $row->changelog = "Imported via Migrate, Fall 2016. Last updated in Cascade Server on " . $row->xml->changed . " by " . $row->xml->lastmodifiedby . ".";
 
     } //end prepareRow
     
