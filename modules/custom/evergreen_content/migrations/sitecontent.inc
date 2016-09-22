@@ -144,11 +144,8 @@ class SiteContentMigration extends XMLMigration {
 		  append "sites/all/default/files" to directory/structure/file.ext
 		*/
 		  
-		  $filepath='/((?:href)|(?:src))="(?:http:\/\/(?:www.)*evergreen.edu\/)*(?:\.\.\/)*([^"]+\.(?!htm).{1,5})"/';
-		  
-		  $drupalfilepath = '$1="/sites/default/files/$2"';
-		  
-		  
+		$filepath='/((?:href)|(?:src))="(?:http:\/\/(?:www.)*evergreen.edu\/)*(?:\.\.\/)*([^"]+\.(?!htm).{1,5})"/';
+		$drupalfilepath = '$1="/sites/default/files/$2"';
 		  
 	    
 	    $row->primary = str_replace("//evergreen.edu - old design","http://evergreen.edu",str_replace("&amp;", "&", preg_replace($filepath,$drupalfilepath,$row->xml->primary->asXML())));

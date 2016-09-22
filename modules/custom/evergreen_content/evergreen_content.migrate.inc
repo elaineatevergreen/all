@@ -25,6 +25,10 @@ function evergreen_content_migrate_api() {
 				'class_name' => 'SiteContentMigration',
 				'group_name' => 'sites',
 			), //end of the SiteContent migration
+			'SiteFiles' => array( 
+				'class_name' => 'FileImportMigration',
+				'group_name' => 'sites',
+			), //end of the SiteFiles migration
 			'News' => array( 
 				'class_name' => 'NewsMigration',
 				'group_name' => 'sites',

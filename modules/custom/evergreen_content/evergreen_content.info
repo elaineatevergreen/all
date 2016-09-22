@@ -1437,4 +1437,5 @@ files[] = migrations/evergreen.inc
 files[] = migrations/sitesections.inc
 files[] = migrations/sitecontent.inc
 files[] = migrations/calendar.inc
+files[] = migrations/files.inc
 no autodetect = 1
