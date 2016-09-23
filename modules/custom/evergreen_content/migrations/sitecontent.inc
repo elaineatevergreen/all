@@ -305,6 +305,24 @@ function tidyBlobs($row) {
 		    $row = str_ireplace($r[0], $r[1], $row);
 	    };
 	    
+	    /* 
+		    fixing links to the old contact forms 
+		    
+		    old formats:
+		    http://forms.evergreen.edu/contact?e=username@evergreen.edu&u=http://evergreen.edu/give/home
+		    http://www.evergreen.edu/scripts/contact.php?sm=username&sub=Email%20from%20Native%20Programs%20Site%20&title=Contact%20Site%20Manager
+		    
+		    new format:
+		    mailto:username@evergreen.edu ?
+
+		    
+	    */
+	    
+	    $contactforms = '/(?:(?:http:\/\/forms\.evergreen\.edu\/contact\?e=)|(?:http:\/\/www\.evergreen\.edu\/scripts\/contact\.php\?sm=))([a-z]+)(?:(?:@evergreen\.edu&u)|(?:&sub=))(?:[^"]+)/';
+	    $mailto = 'mailto:$1@evergreen.edu';
+		$row = preg_replace($contactforms,$mailto,$row);
+	    
+	    
 	    /*
 		  fixing links to non-HTML files...
 		  
