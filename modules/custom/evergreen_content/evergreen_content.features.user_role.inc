@@ -46,6 +46,12 @@ function evergreen_content_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: student admin.
+  $roles['student admin'] = array(
+    'name' => 'student admin',
+    'weight' => 9,
+  );
+
   // Exported role: student groups.
   $roles['student groups'] = array(
     'name' => 'student groups',

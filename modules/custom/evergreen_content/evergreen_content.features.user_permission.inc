@@ -883,24 +883,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'clear calendar_categories feeds'.
-  $permissions['clear calendar_categories feeds'] = array(
-    'name' => 'clear calendar_categories feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'clear calendar_formats feeds'.
-  $permissions['clear calendar_formats feeds'] = array(
-    'name' => 'clear calendar_formats feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'clear catalog feeds'.
   $permissions['clear catalog feeds'] = array(
     'name' => 'clear catalog feeds',
@@ -922,15 +904,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'clear faculty_directory feeds'.
   $permissions['clear faculty_directory feeds'] = array(
     'name' => 'clear faculty_directory feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'clear fields_of_study_import feeds'.
-  $permissions['clear fields_of_study_import feeds'] = array(
-    'name' => 'clear fields_of_study_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -967,15 +940,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'clear scholarship_import feeds'.
   $permissions['clear scholarship_import feeds'] = array(
     'name' => 'clear scholarship_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'clear student_group_import feeds'.
-  $permissions['clear student_group_import feeds'] = array(
-    'name' => 'clear student_group_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -3014,15 +2978,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: 'import fields_of_study_import feeds'.
-  $permissions['import fields_of_study_import feeds'] = array(
-    'name' => 'import fields_of_study_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'import media'.
   $permissions['import media'] = array(
     'name' => 'import media',
@@ -3062,15 +3017,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'import scholarship_import feeds'.
   $permissions['import scholarship_import feeds'] = array(
     'name' => 'import scholarship_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'import student_group_import feeds'.
-  $permissions['import student_group_import feeds'] = array(
-    'name' => 'import student_group_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -3246,24 +3192,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: 'tamper calendar_categories'.
-  $permissions['tamper calendar_categories'] = array(
-    'name' => 'tamper calendar_categories',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
-  // Exported permission: 'tamper calendar_formats'.
-  $permissions['tamper calendar_formats'] = array(
-    'name' => 'tamper calendar_formats',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
   // Exported permission: 'tamper catalog'.
   $permissions['tamper catalog'] = array(
     'name' => 'tamper catalog',
@@ -3285,15 +3213,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'tamper faculty_directory'.
   $permissions['tamper faculty_directory'] = array(
     'name' => 'tamper faculty_directory',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
-  // Exported permission: 'tamper fields_of_study_import'.
-  $permissions['tamper fields_of_study_import'] = array(
-    'name' => 'tamper fields_of_study_import',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -3336,33 +3255,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
-  // Exported permission: 'tamper student_group_import'.
-  $permissions['tamper student_group_import'] = array(
-    'name' => 'tamper student_group_import',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
-  // Exported permission: 'unlock calendar_categories feeds'.
-  $permissions['unlock calendar_categories feeds'] = array(
-    'name' => 'unlock calendar_categories feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'unlock calendar_formats feeds'.
-  $permissions['unlock calendar_formats feeds'] = array(
-    'name' => 'unlock calendar_formats feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'unlock catalog feeds'.
   $permissions['unlock catalog feeds'] = array(
     'name' => 'unlock catalog feeds',
@@ -3384,15 +3276,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock faculty_directory feeds'.
   $permissions['unlock faculty_directory feeds'] = array(
     'name' => 'unlock faculty_directory feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'unlock fields_of_study_import feeds'.
-  $permissions['unlock fields_of_study_import feeds'] = array(
-    'name' => 'unlock fields_of_study_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -3429,15 +3312,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock scholarship_import feeds'.
   $permissions['unlock scholarship_import feeds'] = array(
     'name' => 'unlock scholarship_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'unlock student_group_import feeds'.
-  $permissions['unlock student_group_import feeds'] = array(
-    'name' => 'unlock student_group_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
