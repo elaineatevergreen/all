@@ -18,6 +18,7 @@ class SiteContentMigration extends XMLMigration {
       'created' => t('created'),
       'changed' => t('changed'),
       'lastmodifiedby' => t('lastmodifiedby'),
+      'metadescription' => t('metadescription'),
       'primary' => t('primary'),
       'secondary' => t('secondary'),
       'sitesection' => t('sitesection'),
@@ -74,6 +75,10 @@ class SiteContentMigration extends XMLMigration {
 		
 		$this->addFieldMapping('created', 'created')->xpath('created');
 		$this->addFieldMapping('changed', 'changed')->xpath('changed');
+		
+		$this->addFieldMapping('metatag_description', 'metadescription')->xpath('metadescription');
+		$this->addFieldMapping('metatag_og:description', 'metadescription')->xpath('metadescription');
+		$this->addFieldMapping('metatag_twitter:description', 'metadescription')->xpath('metadescription');
 		
 		//the primary and secondary content have to go through prepareRow to appear properly.
 		$this->addFieldMapping('body', 'primary')->callbacks('tidyBlobs');
