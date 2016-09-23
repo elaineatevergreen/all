@@ -13,6 +13,138 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'alumni_circle_import';
+  $feeds_importer->config = array(
+    'name' => 'Alumni Circle Import',
+    'description' => 'Import existing circles from other Drupal\'s XML',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsHTTPFetcher',
+      'config' => array(
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => 'title',
+          'xpathparser:1' => 'websites/div/ul/li/a/text()',
+          'xpathparser:2' => 'websites/div/ul/li/a/@href',
+          'xpathparser:3' => 'email/div/ul/li/a/@href',
+          'xpathparser:4' => 'phone',
+          'xpathparser:5' => 'content',
+          'xpathparser:6' => 'teaser',
+          'xpathparser:7' => 'meetingtimelong',
+        ),
+        'rawXML' => array(
+          'xpathparser:5' => 'xpathparser:5',
+          'xpathparser:6' => 'xpathparser:6',
+          'xpathparser:7' => 'xpathparser:7',
+          'xpathparser:0' => 0,
+          'xpathparser:1' => 0,
+          'xpathparser:2' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+        ),
+        'context' => '/groups/group',
+        'exp' => array(
+          'errors' => 1,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:2' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => '1',
+        'authorize' => 1,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'title',
+            'unique' => 1,
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'field_websites:title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:2',
+            'target' => 'field_websites:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_email',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_phone:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'body',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'body:summary',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          7 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_meetings',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'delete',
+        'input_format' => 'basic_tags',
+        'skip_hash_check' => 0,
+        'bundle' => 'alumni_circles',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['alumni_circle_import'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'author_directory';
   $feeds_importer->config = array(
     'name' => 'Author Directory',
