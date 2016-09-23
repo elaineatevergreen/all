@@ -203,6 +203,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'committee_page' => array(
+      'name' => t('Committee Page'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>committee page</em> to list information about committees, their members, and their meetings. This includes disappearing task forces (DTFs).'),
+      'has_title' => '1',
+      'title_label' => t('Committee Name'),
+      'help' => t('If you have information that does NOT fit this format, contact the Web Team. Your committee\'s work may need an additional web presence.'),
+    ),
     'directory_individual' => array(
       'name' => t('Directory Individual'),
       'base' => 'node_content',

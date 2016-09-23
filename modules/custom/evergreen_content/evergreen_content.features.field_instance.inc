@@ -3690,6 +3690,519 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-committee_page-body'.
+  $field_instances['node-committee_page-body'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This may include procedures or additional information about the committee.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'body',
+    'label' => 'Details',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 7,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_agendas'.
+  $field_instances['node-committee_page-field_agendas'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'Upload meeting agendas in PDF or Word format.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 5,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_agendas',
+    'label' => 'Agendas',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 1,
+      'file_directory' => 'committees/agendas',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_charge'.
+  $field_instances['node-committee_page-field_charge'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'If this committee has a formal charge or charter document, upload it here.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_charge',
+    'label' => 'Charge',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 1,
+      'file_directory' => 'committees/charges',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_meetings'.
+  $field_instances['node-committee_page-field_meetings'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'List the general times and locations of this committee. (Create an event listing if you want meetings to appear on the Campus Calendar.)',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_meetings',
+    'label' => 'Meetings',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_members'.
+  $field_instances['node-committee_page-field_members'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select current members from the college directory. Contact information may be displayed along with the people\'s names.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_members',
+    'label' => 'Staff and Faculty Members',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_minutes'.
+  $field_instances['node-committee_page-field_minutes'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 6,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_minutes',
+    'label' => 'Minutes',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 1,
+      'file_directory' => 'committees/minutes',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 11,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_other_members'.
+  $field_instances['node-committee_page-field_other_members'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Students, Trustees, members of the public, etc.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_other_members',
+    'label' => 'Other Members',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_short_description'.
+  $field_instances['node-committee_page-field_short_description'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field may be used in lists and other summaries.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_short_description',
+    'label' => 'Short Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_individual-field_alternate_phone'.
   $field_instances['node-directory_individual-field_alternate_phone'] = array(
     'bundle' => 'directory_individual',
@@ -10785,6 +11298,7 @@ function evergreen_content_field_default_field_instances() {
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');
+  t('Agendas');
   t('Alert Message');
   t('All lower-case, separated by spaces.');
   t('Alt Text');
@@ -10813,6 +11327,7 @@ function evergreen_content_field_default_field_instances() {
   t('CMD ID');
   t('Calendar Categories');
   t('Cashnet Code');
+  t('Charge');
   t('Check if anyone from Evergreen was involved in pitching this story to the media.');
   t('Check this box if they should appear in the alumni directory.');
   t('Check this box if this link needs to go through the college\'s proxy server to authenticate the user.');
@@ -10832,6 +11347,7 @@ function evergreen_content_field_default_field_instances() {
   t('Degree');
   t('Degrees');
   t('Description');
+  t('Details');
   t('Display Name');
   t('Display in alumni directories');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
@@ -10873,6 +11389,7 @@ function evergreen_content_field_default_field_instances() {
   t('How did your Evergreen education help you?');
   t('If there is a single "canonical" biography that we use throughout the site, enter it here. Otherwise, use the Related Pieces field to link to magazine articles, etc.');
   t('If they are an alumnus, where do they live now?');
+  t('If this committee has a formal charge or charter document, upload it here.');
   t('If this is referring to another person (new name, nickname, etc)...');
   t('If this person received degrees of note from other colleges or universities, you can enter them here. Not strictly necessary if longer bios or articles include this information.');
   t('If you write articles or blog posts, this name will appear in the byline.');
@@ -10901,6 +11418,7 @@ function evergreen_content_field_default_field_instances() {
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
   t('Links to sub-offices or other related offices.');
+  t('List the general times and locations of this committee. (Create an event listing if you want meetings to appear on the Campus Calendar.)');
   t('Location');
   t('Location Category');
   t('Location Off Campus');
@@ -10915,6 +11433,7 @@ function evergreen_content_field_default_field_instances() {
   t('Meetings');
   t('Members');
   t('Minimum Credits');
+  t('Minutes');
   t('More than one is allowed because some programs vary by quarter.');
   t('Most of the time, keep it to other pages in the same site section.');
   t('Navigation');
@@ -10929,6 +11448,7 @@ function evergreen_content_field_default_field_instances() {
   t('Online Learning');
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
   t('Other Institutions');
+  t('Other Members');
   t('Percent Freshman');
   t('Phone');
   t('Pick up to two.');
@@ -10958,6 +11478,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select current members from the college directory. Contact information may be displayed along with the people\'s names.');
   t('Select if this item should appear at the top as a "place to start" resource.');
   t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
@@ -10973,7 +11494,9 @@ function evergreen_content_field_default_field_instances() {
   t('Special Expenses');
   t('Sponsored By');
   t('Square Footage');
+  t('Staff and Faculty Members');
   t('Status Date');
+  t('Students, Trustees, members of the public, etc.');
   t('Study Abroad');
   t('Subjects Studied');
   t('Term Details');
@@ -10993,6 +11516,7 @@ function evergreen_content_field_default_field_instances() {
   t('This field determines whether this scholarship is displayed to potential donors and if so, how it\'s highlighted. Unchecking all the options removes this scholarship from lists shown for potential donors.');
   t('This field helps organize the buildings so people can find what they need quickly!');
   t('This field is used to assign an office to the Contact Us section of the website.');
+  t('This field may be used in lists and other summaries.');
   t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
@@ -11006,6 +11530,7 @@ function evergreen_content_field_default_field_instances() {
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
   t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
+  t('This may include procedures or additional information about the committee.');
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should be the plain URL, without any proxy details.');
@@ -11019,6 +11544,7 @@ function evergreen_content_field_default_field_instances() {
   t('Under-represented');
   t('Undergrad');
   t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
+  t('Upload meeting agendas in PDF or Word format.');
   t('Upper Division Science Credit');
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');

@@ -1196,6 +1196,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_meetings|node|committee_page|form';
+  $field_group->group_name = 'group_meetings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Meetings',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_meetings',
+      1 => 'field_agendas',
+      2 => 'field_minutes',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-meetings field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_meetings|node|committee_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_misc|node|catalog_entry|form';
   $field_group->group_name = 'group_misc';
   $field_group->entity_type = 'node';
@@ -1341,6 +1371,35 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_on_campus|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_participants|node|committee_page|form';
+  $field_group->group_name = 'group_participants';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Participants',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_members',
+      1 => 'field_other_members',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-participants field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_participants|node|committee_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1669,9 +1728,11 @@ function evergreen_content_field_group_info() {
   t('Imported Content');
   t('Link');
   t('Location: On Campus');
+  t('Meetings');
   t('Misc Options');
   t('Navigation');
   t('Our Annotations');
+  t('Participants');
   t('Primary Content');
   t('Prospective Student Nav');
   t('Quarters');

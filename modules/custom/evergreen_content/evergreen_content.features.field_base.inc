@@ -194,6 +194,29 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_agendas'.
+  $field_bases['field_agendas'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_agendas',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_alert_message'.
   $field_bases['field_alert_message'] = array(
     'active' => 1,
@@ -698,6 +721,29 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_charge'.
+  $field_bases['field_charge'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_charge',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
   );
 
   // Exported field_base: 'field_class_standing'.
@@ -2298,6 +2344,29 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_minutes'.
+  $field_bases['field_minutes'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_minutes',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_need_based'.
   $field_bases['field_need_based'] = array(
     'active' => 1,
@@ -2495,6 +2564,27 @@ function evergreen_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_other_members'.
+  $field_bases['field_other_members'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_other_members',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_percent_freshman'.
