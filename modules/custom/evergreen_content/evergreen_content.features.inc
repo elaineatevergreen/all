@@ -163,6 +163,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'alumni_circles' => array(
+      'name' => t('Alumni Circles'),
+      'base' => 'node_content',
+      'description' => t('Use an <em>Alumni Circle</em> to share information about alumni groups and their gatherings.'),
+      'has_title' => '1',
+      'title_label' => t('Group Name'),
+      'help' => '',
+    ),
     'article' => array(
       'name' => t('News or Blog Post'),
       'base' => 'node_content',

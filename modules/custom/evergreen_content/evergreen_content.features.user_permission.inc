@@ -2933,24 +2933,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: 'import calendar_categories feeds'.
-  $permissions['import calendar_categories feeds'] = array(
-    'name' => 'import calendar_categories feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'import calendar_formats feeds'.
-  $permissions['import calendar_formats feeds'] = array(
-    'name' => 'import calendar_formats feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'import catalog feeds'.
   $permissions['import catalog feeds'] = array(
     'name' => 'import catalog feeds',
