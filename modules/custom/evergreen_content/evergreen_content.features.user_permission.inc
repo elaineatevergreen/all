@@ -3430,10 +3430,14 @@ function evergreen_content_user_default_permissions() {
   $permissions['use text format basic_tags'] = array(
     'name' => 'use text format basic_tags',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'authenticated user' => 'authenticated user',
+      'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student admin' => 'student admin',
       'student groups' => 'student groups',
     ),
     'module' => 'filter',

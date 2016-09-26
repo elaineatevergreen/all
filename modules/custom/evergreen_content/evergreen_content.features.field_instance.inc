@@ -5681,7 +5681,7 @@ function evergreen_content_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -5902,7 +5902,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Hours',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -6298,7 +6298,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'directory_office',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.',
+    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>.',
     'display' => array(
       'contact_block' => array(
         'label' => 'hidden',
@@ -6337,7 +6337,7 @@ function evergreen_content_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -6348,7 +6348,7 @@ function evergreen_content_field_default_field_instances() {
         'profile' => '',
       ),
       'rel_remove' => 'default',
-      'title' => 'required',
+      'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => 'Twitter',
@@ -11357,7 +11357,7 @@ function evergreen_content_field_default_field_instances() {
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
   t('Email');
   t('End Term');
-  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.');
+  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>.');
   t('Event Date');
   t('Event Format');
   t('Excerpt');
