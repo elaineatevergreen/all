@@ -80,32 +80,37 @@
  * @ingroup themeable
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print $user_picture; ?>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <p<?php print $title_attributes; ?>><?php print $title; ?></p>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
 
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
+    <section class="h-card site-info">
+        <h2>Contact</h2>
+
+        <p><b class="p-name"><?php print $title; ?></b><br>
+        <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_building_room']) ?> </span><br>
+        <a class="u-email" href="http://forms.evergreen.edu/contact?e=advising@evergreen.edu&amp;u=http://evergreen.edu/advising/home">Email us.</a><br>
+        <span class="p-tel"><?php print render($content['field_phone']) ?> </span><br>
+        <?php /*if stuff*/ ?>
+        <i>Fax:</i> <?php print render($content['field_fax']) ?></p>
+
+        <p><a href="advisorduties.htm">Our staff.</a></p>
+    </section>
+
+    <div id="node-&lt;?php print $node-&gt;nid; ?&gt;" class="<?php print $classes; ?> clearfix" <?php print $attributes; ?>>
+        <?php print $user_picture; ?><?php print render($title_prefix); ?><?php if (!$page): ?>
+
+        <p print="">&gt;<?php print $title; ?></p><?php endif; ?><?php print render($title_suffix); ?><?php if ($display_submitted): ?>
+
+        <div class="submitted">
+            <?php print $submitted; ?>
+        </div><?php endif; ?>
+
+        <div class="content" <?php print $content_attributes; ?>>
+            <?php
+                  // We hide the comments and links now so that we can render them later.
+                  hide($content['comments']);
+                  hide($content['links']);
+                  print render($content);
+                ?>
+        </div><?php print render($content['links']); ?><?php print render($content['comments']); ?>
     </div>
-  <?php endif; ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
-  </div>
-
-  <?php print render($content['links']); ?>
-
-  <?php print render($content['comments']); ?>
-
-</div>
