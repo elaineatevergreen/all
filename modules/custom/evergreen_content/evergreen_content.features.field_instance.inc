@@ -4211,7 +4211,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4379,7 +4379,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4498,7 +4498,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -4553,9 +4553,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'inline',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'default' => array(
@@ -4613,7 +4612,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4729,12 +4728,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'default' => array(
@@ -4811,9 +4806,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'inline',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'default' => array(
@@ -5121,7 +5115,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5181,7 +5175,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -5239,11 +5233,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 14,
       ),
       'default' => array(
@@ -5299,7 +5290,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5359,7 +5350,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -5437,7 +5428,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Use this field sparingly for things like most commonly used forms or additional contact details.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5448,7 +5439,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -5498,7 +5489,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -5509,7 +5500,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5557,9 +5548,10 @@ function evergreen_content_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5603,7 +5595,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -5614,7 +5606,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 10,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5624,11 +5616,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_email',
     'is_property' => 0,
     'label' => 'Email',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5651,7 +5645,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Include the full URL of your Facebook page or group.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -5662,7 +5656,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5672,6 +5666,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_facebook',
     'is_property' => 0,
     'label' => 'Facebook',
@@ -5679,13 +5674,14 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
+        'class' => 'link-icon link-icon-alt icon-facebook',
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'after',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -5731,10 +5727,10 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 17,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5788,7 +5784,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 16,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5826,7 +5822,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -5837,7 +5833,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5847,6 +5843,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_fax',
     'is_property' => 0,
     'label' => 'Fax',
@@ -5854,6 +5851,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -5877,18 +5875,18 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 7,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5898,12 +5896,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_hours',
     'is_property' => 0,
     'label' => 'Hours',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5938,11 +5937,11 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 17,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5994,9 +5993,11 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_block',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 13,
       ),
       'teaser' => array(
@@ -6007,7 +6008,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'ul',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_members',
     'label' => 'Members',
     'required' => 0,
@@ -6037,18 +6038,18 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
         'weight' => 3,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6099,10 +6100,10 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6154,7 +6155,7 @@ function evergreen_content_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 15,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6202,9 +6203,10 @@ function evergreen_content_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6261,7 +6263,7 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6299,7 +6301,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -6310,7 +6312,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6320,6 +6322,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_twitter',
     'is_property' => 0,
     'label' => 'Twitter',
@@ -6327,13 +6330,14 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
+        'class' => 'link-icon link-icon-alt icon-twitter',
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'after',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -6380,7 +6384,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 11,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',

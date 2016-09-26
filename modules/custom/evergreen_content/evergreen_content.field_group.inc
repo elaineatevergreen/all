@@ -1404,6 +1404,39 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_phone|node|directory_office|default';
+  $field_group->group_name = 'group_phone';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_office';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Phone Numbers',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_alternate_phone',
+      1 => 'field_fax',
+      2 => 'field_phone',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-phone field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_phone|node|directory_office|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_primary|node|basic_page|form';
   $field_group->group_name = 'group_primary';
   $field_group->entity_type = 'node';
@@ -1502,17 +1535,22 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Social Media Connections',
-    'weight' => '25',
-    'children' => array(),
+    'label' => 'Find Online',
+    'weight' => '12',
+    'children' => array(
+      0 => 'field_facebook',
+      1 => 'field_twitter',
+      2 => 'field_websites',
+    ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Social Media Connections',
+      'label' => 'Find Online',
       'instance_settings' => array(
+        'id' => '',
         'classes' => 'group-social field-group-html-element',
         'element' => 'div',
         'show_label' => '1',
-        'label_element' => 'dt',
+        'label_element' => 'h3',
         'attributes' => '',
       ),
     ),
@@ -1723,6 +1761,7 @@ function evergreen_content_field_group_info() {
   t('Donor Info');
   t('Entrepreneur Info');
   t('Faculty Information');
+  t('Find Online');
   t('Identity');
   t('Image float');
   t('Imported Content');
@@ -1733,11 +1772,11 @@ function evergreen_content_field_group_info() {
   t('Navigation');
   t('Our Annotations');
   t('Participants');
+  t('Phone Numbers');
   t('Primary Content');
   t('Prospective Student Nav');
   t('Quarters');
   t('Secondary Content');
-  t('Social Media Connections');
   t('Sponsor');
   t('Studies');
   t('Title, Time, and Place');

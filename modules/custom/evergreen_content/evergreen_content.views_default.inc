@@ -6535,6 +6535,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_phone']['element_label_class'] = 'dir-key';
   $handler->display->display_options['fields']['field_phone']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_phone']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_phone']['field_api_classes'] = TRUE;
   /* Field: Content: Alternate Phone */
   $handler->display->display_options['fields']['field_alternate_phone']['id'] = 'field_alternate_phone';
   $handler->display->display_options['fields']['field_alternate_phone']['table'] = 'field_data_field_alternate_phone';
@@ -6599,22 +6600,25 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
-  $handler->display->display_options['fields']['field_members']['label'] = 'People In This Office';
+  $handler->display->display_options['fields']['field_members']['label'] = '';
   $handler->display->display_options['fields']['field_members']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_members']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_members']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_members']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_members']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_members']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_members']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_members']['settings'] = array(
-    'link' => 1,
+    'view_mode' => 'contact_block',
+    'links' => 0,
+    'use_content_language' => 1,
   );
   $handler->display->display_options['fields']['field_members']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_members']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_members']['separator'] = '';
+  $handler->display->display_options['fields']['field_members']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Title */
   $handler->display->display_options['arguments']['title']['id'] = 'title';
