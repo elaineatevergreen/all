@@ -86,31 +86,54 @@
         <h2>Contact</h2>
 
         <p><b class="p-name"><?php print $title; ?></b><br>
-        <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </span><br>
-        <?php print render($content['field_email']) ?><br>
-        <span class="p-tel"><?php print render($content['field_phone']) ?> </span><br>
-        <?php /*if stuff*/ ?>
-        <i>Fax:</i> <?php print render($content['field_fax']) ?></p>
-
+        <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </span>
+        <?php if ($content['field_email']) {
+	        ?><br>
+        <?php print render($content['field_email']) ?><?php
+        }; ?>
+        <?php if ($content['field_phone']) {
+	        ?><br><span class="p-tel"><?php print render($content['field_phone']) ?> </span><?php
+        }; ?>
+        <?php if ($content['field_fax']) {
+	        ?><br><i>Fax:</i> <?php print render($content['field_fax']) ?><?php
+        }; ?>
+        <?php if ($content['field_alternate_phone']) {
+	        ?><br><i>Alternate Phone:</i> <?php print render($content['field_alternate_phone']) ?><?php
+        }; ?>
+        </p>
+        
+        <!-- what about staff pages? -->
         <!--<p><a href="advisorduties.htm">Our staff.</a></p>-->
+        
+        <?php if ($content['field_hours'] or $content['body'] or $content['field_facebook'] or $content['field_twitter']) { ?>
+        	<dl>
+	    <?php if ($content['field_hours']) { ?>
+	        <dt>Hours</dt><dd><?php print render($content['field_hours']) ?></dd>
+	    
+	    <?php
+		    }; //end check for hours
+			if ($content['body']) { ?>
+	        <dd><?php print render($content['body']) ?></dd>
+	    <?php
+		    }; //end check for additional
+		    if($content['field_facebook'] or $content['field_twitter']) {  
+		?>
+	        <dt>Connect With Us</dt>
+	        <dd><ul class="tertiary-nav-list">
+		    <?php if($content['field_facebook']) { ?>
+			    <li><?php print render($content['field_facebook']) ?></li>
+		    <?php }; ?>
+		    <?php if($content['field_twitter']) { ?>
+			    <li><?php print render($content['field_twitter']) ?></li>
+		    <?php }; ?>
+		        
+		        </ul></dd>
+		<?php
+			};
+		?>
+		</dl>
+		<?php }; //end check for dl contents ?>
+		
+		<!-- what about other social media? -->
+		
     </section>
-
-   <!-- <div id="node-&lt;?php print $node-&gt;nid; ?&gt;" class="<?php print $classes; ?> clearfix" <?php print $attributes; ?>>
-        <?php print $user_picture; ?><?php print render($title_prefix); ?><?php if (!$page): ?>
-
-        <p print=""><?php print $title; ?></p><?php endif; ?><?php print render($title_suffix); ?><?php if ($display_submitted): ?>
-
-        <div class="submitted">
-            <?php print $submitted; ?>
-        </div><?php endif; ?>
-
-        <div class="content" <?php print $content_attributes; ?>>
-            <?php
-                  // We hide the comments and links now so that we can render them later.
-                  hide($content['comments']);
-                  hide($content['links']);
-                  print render($content);
-                ?>
-        </div><?php print render($content['links']); ?><?php print render($content['comments']); ?>
-    </div>-->
-
