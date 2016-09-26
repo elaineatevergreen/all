@@ -93,20 +93,21 @@ function wwwevergreen_field__field_phone(&$variables) {
   }
 
   // Render the items.
-  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  //$output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
   foreach ($variables['items'] as $delta => $item) {
 	  $phone = drupal_render($item);
 	  	if(substr($phone, -8,3) == '867') { 
 			$ext = substr($phone, -4,4);
 			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
 		};
-    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
-    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . $phone . '</div>';
+	//$classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    //$output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . $phone . '</div>';
+    $output = $phone;
   }
-  $output .= '</div>';
+  //$output .= '</div>';
 
   // Render the top-level DIV.
-  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+  //$output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
 
   return $output;
 }

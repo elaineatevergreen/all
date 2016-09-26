@@ -86,19 +86,19 @@
         <h2>Contact</h2>
 
         <p><b class="p-name"><?php print $title; ?></b><br>
-        <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_building_room']) ?> </span><br>
-        <a class="u-email" href="http://forms.evergreen.edu/contact?e=advising@evergreen.edu&amp;u=http://evergreen.edu/advising/home">Email us.</a><br>
+        <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </span><br>
+        <?php print render($content['field_email']) ?><br>
         <span class="p-tel"><?php print render($content['field_phone']) ?> </span><br>
         <?php /*if stuff*/ ?>
         <i>Fax:</i> <?php print render($content['field_fax']) ?></p>
 
-        <p><a href="advisorduties.htm">Our staff.</a></p>
+        <!--<p><a href="advisorduties.htm">Our staff.</a></p>-->
     </section>
 
-    <div id="node-&lt;?php print $node-&gt;nid; ?&gt;" class="<?php print $classes; ?> clearfix" <?php print $attributes; ?>>
+   <!-- <div id="node-&lt;?php print $node-&gt;nid; ?&gt;" class="<?php print $classes; ?> clearfix" <?php print $attributes; ?>>
         <?php print $user_picture; ?><?php print render($title_prefix); ?><?php if (!$page): ?>
 
-        <p print="">&gt;<?php print $title; ?></p><?php endif; ?><?php print render($title_suffix); ?><?php if ($display_submitted): ?>
+        <p print=""><?php print $title; ?></p><?php endif; ?><?php print render($title_suffix); ?><?php if ($display_submitted): ?>
 
         <div class="submitted">
             <?php print $submitted; ?>
@@ -112,5 +112,5 @@
                   print render($content);
                 ?>
         </div><?php print render($content['links']); ?><?php print render($content['comments']); ?>
-    </div>
+    </div>-->
 
