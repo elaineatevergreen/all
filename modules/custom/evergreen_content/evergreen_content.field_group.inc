@@ -603,6 +603,7 @@ function evergreen_content_field_group_info() {
       2 => 'field_hours',
       3 => 'field_site_section',
       4 => 'field_twitter',
+      5 => 'field_staff_page',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -1083,15 +1084,15 @@ function evergreen_content_field_group_info() {
       0 => 'field_alternate_phone',
       1 => 'field_building_alt',
       2 => 'field_email',
-      3 => 'field_fax',
-      4 => 'field_mailstop',
-      5 => 'field_members',
-      6 => 'field_phone',
-      7 => 'field_room',
-      8 => 'field_websites',
-      9 => 'field_reference',
-      10 => 'field_related_offices',
-      11 => 'field_facilities',
+      3 => 'field_facilities',
+      4 => 'field_fax',
+      5 => 'field_mailstop',
+      6 => 'field_members',
+      7 => 'field_phone',
+      8 => 'field_reference',
+      9 => 'field_related_offices',
+      10 => 'field_room',
+      11 => 'field_websites',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -1536,7 +1537,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Find Online',
-    'weight' => '12',
+    'weight' => '9',
     'children' => array(
       0 => 'field_facebook',
       1 => 'field_twitter',

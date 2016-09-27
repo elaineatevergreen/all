@@ -102,8 +102,11 @@
         }; ?>
         </p>
         
-        <!-- what about staff pages? -->
-        <!--<p><a href="advisorduties.htm">Our staff.</a></p>-->
+
+        <?php
+	        $staffURL = $base_path . "/node/" . trim(render($content['field_staff_page']));
+	    ?>
+        <p><a href="<?php print $staffURL ?>">Our staff.</a></p>
         
         <?php if ($content['field_hours'] or $content['body'] or $content['field_facebook'] or $content['field_twitter']) { ?>
         	<dl>
