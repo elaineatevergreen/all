@@ -10,6 +10,13 @@
 function evergreen_migration_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'clear alumni_circle_import feeds'.
+  $permissions['clear alumni_circle_import feeds'] = array(
+    'name' => 'clear alumni_circle_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear author_directory feeds'.
   $permissions['clear author_directory feeds'] = array(
     'name' => 'clear author_directory feeds',
@@ -62,6 +69,13 @@ function evergreen_migration_user_default_permissions() {
   // Exported permission: 'clear navigation_import feeds'.
   $permissions['clear navigation_import feeds'] = array(
     'name' => 'clear navigation_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import alumni_circle_import feeds'.
+  $permissions['import alumni_circle_import feeds'] = array(
+    'name' => 'import alumni_circle_import feeds',
     'roles' => array(),
     'module' => 'feeds',
   );
@@ -122,6 +136,13 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'tamper alumni_circle_import'.
+  $permissions['tamper alumni_circle_import'] = array(
+    'name' => 'tamper alumni_circle_import',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper author_directory'.
   $permissions['tamper author_directory'] = array(
     'name' => 'tamper author_directory',
@@ -176,6 +197,13 @@ function evergreen_migration_user_default_permissions() {
     'name' => 'tamper navigation_import',
     'roles' => array(),
     'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'unlock alumni_circle_import feeds'.
+  $permissions['unlock alumni_circle_import feeds'] = array(
+    'name' => 'unlock alumni_circle_import feeds',
+    'roles' => array(),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'unlock author_directory feeds'.
