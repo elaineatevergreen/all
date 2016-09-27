@@ -10,9 +10,53 @@
 function evergreen_content_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'Administer short URLs'.
+  $permissions['Administer short URLs'] = array(
+    'name' => 'Administer short URLs',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'shurly',
+  );
+
   // Exported permission: 'Create short URLs'.
   $permissions['Create short URLs'] = array(
     'name' => 'Create short URLs',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'shurly',
+  );
+
+  // Exported permission: 'Delete own URLs'.
+  $permissions['Delete own URLs'] = array(
+    'name' => 'Delete own URLs',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'shurly',
+  );
+
+  // Exported permission: 'Enter custom URLs'.
+  $permissions['Enter custom URLs'] = array(
+    'name' => 'Enter custom URLs',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'shurly',
+  );
+
+  // Exported permission: 'View own URL stats'.
+  $permissions['View own URL stats'] = array(
+    'name' => 'View own URL stats',
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
@@ -298,6 +342,13 @@ function evergreen_content_user_default_permissions() {
       'student groups' => 'student groups',
     ),
     'module' => 'workbench_access',
+  );
+
+  // Exported permission: 'add JS snippets for google analytics'.
+  $permissions['add JS snippets for google analytics'] = array(
+    'name' => 'add JS snippets for google analytics',
+    'roles' => array(),
+    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'administer actions'.
@@ -714,6 +765,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'statistics',
   );
 
+  // Exported permission: 'administer tabtamer'.
+  $permissions['administer tabtamer'] = array(
+    'name' => 'administer tabtamer',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'tabtamer',
+  );
+
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
@@ -793,6 +853,15 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: 'administer workbench schedules'.
+  $permissions['administer workbench schedules'] = array(
+    'name' => 'administer workbench schedules',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'workbench_scheduler',
   );
 
   // Exported permission: 'advanced migration information'.
@@ -976,6 +1045,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create alumni_circles content'.
+  $permissions['create alumni_circles content'] = array(
+    'name' => 'create alumni_circles content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create any alternate_background_image bean'.
   $permissions['create any alternate_background_image bean'] = array(
     'name' => 'create any alternate_background_image bean',
@@ -1031,6 +1107,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create committee_page content'.
+  $permissions['create committee_page content'] = array(
+    'name' => 'create committee_page content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1132,6 +1215,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create location content'.
+  $permissions['create location content'] = array(
+    'name' => 'create location content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create profile content'.
   $permissions['create profile content'] = array(
     'name' => 'create profile content',
@@ -1226,6 +1316,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'delete any alumni_circles content'.
+  $permissions['delete any alumni_circles content'] = array(
+    'name' => 'delete any alumni_circles content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any article content'.
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
@@ -1268,6 +1365,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any committee_page content'.
+  $permissions['delete any committee_page content'] = array(
+    'name' => 'delete any committee_page content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1361,6 +1465,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any location content'.
+  $permissions['delete any location content'] = array(
+    'name' => 'delete any location content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any profile content'.
   $permissions['delete any profile content'] = array(
     'name' => 'delete any profile content',
@@ -1434,6 +1545,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own alumni_circles content'.
+  $permissions['delete own alumni_circles content'] = array(
+    'name' => 'delete own alumni_circles content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own article content'.
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
@@ -1478,6 +1596,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own committee_page content'.
+  $permissions['delete own committee_page content'] = array(
+    'name' => 'delete own committee_page content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1573,6 +1698,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own location content'.
+  $permissions['delete own location content'] = array(
+    'name' => 'delete own location content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1795,6 +1927,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any alumni_circles content'.
+  $permissions['edit any alumni_circles content'] = array(
+    'name' => 'edit any alumni_circles content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any article content'.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
@@ -1841,6 +1980,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any committee_page content'.
+  $permissions['edit any committee_page content'] = array(
+    'name' => 'edit any committee_page content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1936,6 +2082,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any location content'.
+  $permissions['edit any location content'] = array(
+    'name' => 'edit any location content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2241,6 +2394,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: next'.
+  $permissions['edit meta tag: next'] = array(
+    'name' => 'edit meta tag: next',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: og:audio'.
   $permissions['edit meta tag: og:audio'] = array(
     'name' => 'edit meta tag: og:audio',
@@ -2332,6 +2492,13 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: og:image:secure_url'.
+  $permissions['edit meta tag: og:image:secure_url'] = array(
+    'name' => 'edit meta tag: og:image:secure_url',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: og:image:type'.
   $permissions['edit meta tag: og:image:type'] = array(
     'name' => 'edit meta tag: og:image:type',
@@ -2369,12 +2536,75 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: og:locale'.
+  $permissions['edit meta tag: og:locale'] = array(
+    'name' => 'edit meta tag: og:locale',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: og:locale:alternate'.
   $permissions['edit meta tag: og:locale:alternate'] = array(
     'name' => 'edit meta tag: og:locale:alternate',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:locality'.
+  $permissions['edit meta tag: og:locality'] = array(
+    'name' => 'edit meta tag: og:locality',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:longitude'.
+  $permissions['edit meta tag: og:longitude'] = array(
+    'name' => 'edit meta tag: og:longitude',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:phone_number'.
+  $permissions['edit meta tag: og:phone_number'] = array(
+    'name' => 'edit meta tag: og:phone_number',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:postal_code'.
+  $permissions['edit meta tag: og:postal_code'] = array(
+    'name' => 'edit meta tag: og:postal_code',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:region'.
+  $permissions['edit meta tag: og:region'] = array(
+    'name' => 'edit meta tag: og:region',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:see_also'.
+  $permissions['edit meta tag: og:see_also'] = array(
+    'name' => 'edit meta tag: og:see_also',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:site_name'.
+  $permissions['edit meta tag: og:site_name'] = array(
+    'name' => 'edit meta tag: og:site_name',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:street_address'.
+  $permissions['edit meta tag: og:street_address'] = array(
+    'name' => 'edit meta tag: og:street_address',
+    'roles' => array(),
     'module' => 'metatag',
   );
 
@@ -2405,6 +2635,69 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: og:url'.
+  $permissions['edit meta tag: og:url'] = array(
+    'name' => 'edit meta tag: og:url',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:video:height'.
+  $permissions['edit meta tag: og:video:height'] = array(
+    'name' => 'edit meta tag: og:video:height',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:video:secure_url'.
+  $permissions['edit meta tag: og:video:secure_url'] = array(
+    'name' => 'edit meta tag: og:video:secure_url',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:video:type'.
+  $permissions['edit meta tag: og:video:type'] = array(
+    'name' => 'edit meta tag: og:video:type',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:video:url'.
+  $permissions['edit meta tag: og:video:url'] = array(
+    'name' => 'edit meta tag: og:video:url',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: og:video:width'.
+  $permissions['edit meta tag: og:video:width'] = array(
+    'name' => 'edit meta tag: og:video:width',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: original-source'.
+  $permissions['edit meta tag: original-source'] = array(
+    'name' => 'edit meta tag: original-source',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: pragma'.
+  $permissions['edit meta tag: pragma'] = array(
+    'name' => 'edit meta tag: pragma',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: prev'.
+  $permissions['edit meta tag: prev'] = array(
+    'name' => 'edit meta tag: prev',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: profile:first_name'.
   $permissions['edit meta tag: profile:first_name'] = array(
     'name' => 'edit meta tag: profile:first_name',
@@ -2432,6 +2725,20 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: profile:username'.
+  $permissions['edit meta tag: profile:username'] = array(
+    'name' => 'edit meta tag: profile:username',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: publisher'.
+  $permissions['edit meta tag: publisher'] = array(
+    'name' => 'edit meta tag: publisher',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: rating'.
   $permissions['edit meta tag: rating'] = array(
     'name' => 'edit meta tag: rating',
@@ -2441,12 +2748,61 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: referrer'.
+  $permissions['edit meta tag: referrer'] = array(
+    'name' => 'edit meta tag: referrer',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: refresh'.
+  $permissions['edit meta tag: refresh'] = array(
+    'name' => 'edit meta tag: refresh',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: revisit-after'.
+  $permissions['edit meta tag: revisit-after'] = array(
+    'name' => 'edit meta tag: revisit-after',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: rights'.
+  $permissions['edit meta tag: rights'] = array(
+    'name' => 'edit meta tag: rights',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: robots'.
+  $permissions['edit meta tag: robots'] = array(
+    'name' => 'edit meta tag: robots',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: shortlink'.
+  $permissions['edit meta tag: shortlink'] = array(
+    'name' => 'edit meta tag: shortlink',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: standout'.
   $permissions['edit meta tag: standout'] = array(
     'name' => 'edit meta tag: standout',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: title'.
+  $permissions['edit meta tag: title'] = array(
+    'name' => 'edit meta tag: title',
+    'roles' => array(),
     'module' => 'metatag',
   );
 
@@ -2468,6 +2824,20 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: twitter:app:id:ipad'.
+  $permissions['edit meta tag: twitter:app:id:ipad'] = array(
+    'name' => 'edit meta tag: twitter:app:id:ipad',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:id:iphone'.
+  $permissions['edit meta tag: twitter:app:id:iphone'] = array(
+    'name' => 'edit meta tag: twitter:app:id:iphone',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: twitter:app:name:googleplay'.
   $permissions['edit meta tag: twitter:app:name:googleplay'] = array(
     'name' => 'edit meta tag: twitter:app:name:googleplay',
@@ -2477,12 +2847,47 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: twitter:app:name:ipad'.
+  $permissions['edit meta tag: twitter:app:name:ipad'] = array(
+    'name' => 'edit meta tag: twitter:app:name:ipad',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:name:iphone'.
+  $permissions['edit meta tag: twitter:app:name:iphone'] = array(
+    'name' => 'edit meta tag: twitter:app:name:iphone',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: twitter:app:url:googleplay'.
   $permissions['edit meta tag: twitter:app:url:googleplay'] = array(
     'name' => 'edit meta tag: twitter:app:url:googleplay',
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:url:ipad'.
+  $permissions['edit meta tag: twitter:app:url:ipad'] = array(
+    'name' => 'edit meta tag: twitter:app:url:ipad',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:app:url:iphone'.
+  $permissions['edit meta tag: twitter:app:url:iphone'] = array(
+    'name' => 'edit meta tag: twitter:app:url:iphone',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:card'.
+  $permissions['edit meta tag: twitter:card'] = array(
+    'name' => 'edit meta tag: twitter:card',
+    'roles' => array(),
     'module' => 'metatag',
   );
 
@@ -2624,6 +3029,69 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: twitter:player'.
+  $permissions['edit meta tag: twitter:player'] = array(
+    'name' => 'edit meta tag: twitter:player',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:player:height'.
+  $permissions['edit meta tag: twitter:player:height'] = array(
+    'name' => 'edit meta tag: twitter:player:height',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:player:stream'.
+  $permissions['edit meta tag: twitter:player:stream'] = array(
+    'name' => 'edit meta tag: twitter:player:stream',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:player:stream:content_type'.
+  $permissions['edit meta tag: twitter:player:stream:content_type'] = array(
+    'name' => 'edit meta tag: twitter:player:stream:content_type',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:player:width'.
+  $permissions['edit meta tag: twitter:player:width'] = array(
+    'name' => 'edit meta tag: twitter:player:width',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:site'.
+  $permissions['edit meta tag: twitter:site'] = array(
+    'name' => 'edit meta tag: twitter:site',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:site:id'.
+  $permissions['edit meta tag: twitter:site:id'] = array(
+    'name' => 'edit meta tag: twitter:site:id',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:title'.
+  $permissions['edit meta tag: twitter:title'] = array(
+    'name' => 'edit meta tag: twitter:title',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: twitter:url'.
+  $permissions['edit meta tag: twitter:url'] = array(
+    'name' => 'edit meta tag: twitter:url',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tag: video:actor'.
   $permissions['edit meta tag: video:actor'] = array(
     'name' => 'edit meta tag: video:actor',
@@ -2651,6 +3119,41 @@ function evergreen_content_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: 'edit meta tag: video:duration'.
+  $permissions['edit meta tag: video:duration'] = array(
+    'name' => 'edit meta tag: video:duration',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:release_date'.
+  $permissions['edit meta tag: video:release_date'] = array(
+    'name' => 'edit meta tag: video:release_date',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:series'.
+  $permissions['edit meta tag: video:series'] = array(
+    'name' => 'edit meta tag: video:series',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:tag'.
+  $permissions['edit meta tag: video:tag'] = array(
+    'name' => 'edit meta tag: video:tag',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit meta tag: video:writer'.
+  $permissions['edit meta tag: video:writer'] = array(
+    'name' => 'edit meta tag: video:writer',
+    'roles' => array(),
+    'module' => 'metatag',
+  );
+
   // Exported permission: 'edit meta tags'.
   $permissions['edit meta tags'] = array(
     'name' => 'edit meta tags',
@@ -2667,6 +3170,13 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own alumni_circles content'.
+  $permissions['edit own alumni_circles content'] = array(
+    'name' => 'edit own alumni_circles content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2718,6 +3228,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own committee_page content'.
+  $permissions['edit own committee_page content'] = array(
+    'name' => 'edit own committee_page content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2818,6 +3335,13 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own location content'.
+  $permissions['edit own location content'] = array(
+    'name' => 'edit own location content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -2933,6 +3457,15 @@ function evergreen_content_user_default_permissions() {
       'site editor' => 'site editor',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'execute php code'.
+  $permissions['execute php code'] = array(
+    'name' => 'execute php code',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'devel',
   );
 
   // Exported permission: 'generate features'.
@@ -3096,6 +3629,21 @@ function evergreen_content_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
+  // Exported permission: 'moderate content from published to recycled'.
+  $permissions['moderate content from published to recycled'] = array(
+    'name' => 'moderate content from published to recycled',
+    'roles' => array(
+      'academics editor' => 'academics editor',
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
+      'student groups' => 'student groups',
+    ),
+    'module' => 'workbench_moderation',
+  );
+
   // Exported permission: 'notify of path changes'.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
@@ -3174,6 +3722,24 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'set any workbench schedule'.
+  $permissions['set any workbench schedule'] = array(
+    'name' => 'set any workbench schedule',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'workbench_scheduler',
+  );
+
+  // Exported permission: 'set workbench schedule'.
+  $permissions['set workbench schedule'] = array(
+    'name' => 'set workbench schedule',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'workbench_scheduler',
   );
 
   // Exported permission: 'set workbench schedule for schedule_publishing'.
@@ -3350,6 +3916,15 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'entityqueue',
+  );
+
+  // Exported permission: 'use PHP for label patterns'.
+  $permissions['use PHP for label patterns'] = array(
+    'name' => 'use PHP for label patterns',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'auto_entitylabel',
   );
 
   // Exported permission: 'use PHP for tracking visibility'.
