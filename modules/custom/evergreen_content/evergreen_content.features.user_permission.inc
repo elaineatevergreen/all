@@ -10,6 +10,17 @@
 function evergreen_content_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'Create short URLs'.
+  $permissions['Create short URLs'] = array(
+    'name' => 'Create short URLs',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'news promoter' => 'news promoter',
+      'student admin' => 'student admin',
+    ),
+    'module' => 'shurly',
+  );
+
   // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -3163,6 +3174,38 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'set workbench schedule for schedule_publishing'.
+  $permissions['set workbench schedule for schedule_publishing'] = array(
+    'name' => 'set workbench schedule for schedule_publishing',
+    'roles' => array(
+      'academics editor' => 'academics editor',
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
+      'student admin' => 'student admin',
+      'student groups' => 'student groups',
+    ),
+    'module' => 'workbench_scheduler',
+  );
+
+  // Exported permission: 'set workbench schedule for schedule_recycling'.
+  $permissions['set workbench schedule for schedule_recycling'] = array(
+    'name' => 'set workbench schedule for schedule_recycling',
+    'roles' => array(
+      'academics editor' => 'academics editor',
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'calendar review' => 'calendar review',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
+      'student admin' => 'student admin',
+      'student groups' => 'student groups',
+    ),
+    'module' => 'workbench_scheduler',
   );
 
   // Exported permission: 'switch shortcut sets'.
