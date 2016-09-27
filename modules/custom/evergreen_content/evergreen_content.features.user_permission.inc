@@ -16,7 +16,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
-      'student admin' => 'student admin',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'shurly',
   );
@@ -3186,8 +3186,8 @@ function evergreen_content_user_default_permissions() {
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
-      'student admin' => 'student admin',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_scheduler',
   );
@@ -3202,8 +3202,8 @@ function evergreen_content_user_default_permissions() {
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
-      'student admin' => 'student admin',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_scheduler',
   );
@@ -3480,8 +3480,8 @@ function evergreen_content_user_default_permissions() {
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
-      'student admin' => 'student admin',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'filter',
   );

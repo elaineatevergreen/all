@@ -1073,6 +1073,7 @@ features[user_role][] = calendar review
 features[user_role][] = news promoter
 features[user_role][] = site editor
 features[user_role][] = student groups
+features[user_role][] = student worker administrator
 features[variable][] = admin_theme
 features[variable][] = auto_entitylabel_node_profile
 features[variable][] = auto_entitylabel_pattern_node_profile
