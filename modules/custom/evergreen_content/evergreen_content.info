@@ -674,6 +674,7 @@ features[rules_config][] = rules_generate_section_home_page
 features[rules_config][] = rules_log_out_with_cas_after_logging_out
 features[rules_config][] = rules_move_to_recycling_bin
 features[rules_config][] = rules_new_event
+features[rules_config][] = rules_notify_of_approved_event
 features[taxonomy][] = calendar_categories
 features[taxonomy][] = database_of_databases
 features[taxonomy][] = event_formats

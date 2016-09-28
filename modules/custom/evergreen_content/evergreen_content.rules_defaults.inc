@@ -94,5 +94,43 @@ function evergreen_content_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_notify_of_approved_event'] = entity_import('rules_config', '{ "rules_notify_of_approved_event" : {
+      "LABEL" : "Notify of approved event",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules", "workbench_moderation" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "event" : "event" } } } },
+        { "NOT user_has_role" : {
+            "account" : [ "node:author" ],
+            "roles" : { "value" : {
+                "12" : "12",
+                "9" : "9",
+                "6" : "6",
+                "7" : "7",
+                "8" : "8",
+                "5" : "5",
+                "10" : "10",
+                "4" : "4"
+              }
+            },
+            "operation" : "OR"
+          }
+        },
+        { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } }
+      ],
+      "DO" : [
+        { "mail" : {
+            "to" : "[node:author]",
+            "subject" : "Your event has been published",
+            "message" : "Your event has been reviewed and published. You can now view it live at [node:url]. Thanks for using The Evergreen State College campus calendar!",
+            "language" : [ "" ]
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }
