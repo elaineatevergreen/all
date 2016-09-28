@@ -6600,7 +6600,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -6619,6 +6619,24 @@ return($term); ';
   $handler->display->display_options['fields']['field_members']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_members']['separator'] = '';
   $handler->display->display_options['fields']['field_members']['field_api_classes'] = TRUE;
+  /* Field: Content: Facilities */
+  $handler->display->display_options['fields']['field_facilities']['id'] = 'field_facilities';
+  $handler->display->display_options['fields']['field_facilities']['table'] = 'field_data_field_facilities';
+  $handler->display->display_options['fields']['field_facilities']['field'] = 'field_facilities';
+  $handler->display->display_options['fields']['field_facilities']['label'] = '';
+  $handler->display->display_options['fields']['field_facilities']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_facilities']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_facilities']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_facilities']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_facilities']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_facilities']['settings'] = array(
+    'view_mode' => 'contact_row',
+    'links' => 0,
+    'use_content_language' => 1,
+  );
+  $handler->display->display_options['fields']['field_facilities']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_facilities']['separator'] = '';
+  $handler->display->display_options['fields']['field_facilities']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Title */
   $handler->display->display_options['arguments']['title']['id'] = 'title';
@@ -6649,6 +6667,14 @@ return($term); ';
     'directory_office' => 'directory_office',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Facility (field_facility) */
+  $handler->display->display_options['filters']['field_facility_value']['id'] = 'field_facility_value';
+  $handler->display->display_options['filters']['field_facility_value']['table'] = 'field_data_field_facility';
+  $handler->display->display_options['filters']['field_facility_value']['field'] = 'field_facility_value';
+  $handler->display->display_options['filters']['field_facility_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_facility_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['path'] = 'directory/offices';
 
   /* Display: Office A-Z Index */

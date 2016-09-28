@@ -858,6 +858,10 @@ function evergreen_content_strongarm() {
         'label' => 'Contact Block',
         'custom settings' => 1,
       ),
+      'contact_row' => array(
+        'label' => 'Contact Row',
+        'custom settings' => 1,
+      ),
     ),
   );
   $export['entity_view_modes'] = $strongarm;
@@ -912,6 +916,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -932,7 +939,11 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__alumni_circles';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
@@ -992,6 +1003,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1041,6 +1055,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1100,6 +1117,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1157,6 +1177,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1180,7 +1203,11 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__committee_page';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
@@ -1235,6 +1262,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_row' => array(
         'custom_settings' => TRUE,
       ),
     ),
@@ -1294,6 +1324,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1351,6 +1384,9 @@ function evergreen_content_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1377,7 +1413,11 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__faculty_news';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
@@ -1405,6 +1445,9 @@ function evergreen_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1458,6 +1501,9 @@ function evergreen_content_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1501,6 +1547,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1557,6 +1606,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1606,6 +1658,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1668,6 +1723,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1725,6 +1783,9 @@ function evergreen_content_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1758,6 +1819,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1783,6 +1847,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1834,6 +1901,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),

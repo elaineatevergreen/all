@@ -4217,6 +4217,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'phone',
         'weight' => 4,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -4272,6 +4279,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -4333,6 +4347,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4383,6 +4403,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 6,
+      ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'inline',
@@ -4442,6 +4469,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 14,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'above',
@@ -4503,6 +4536,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'email_default',
         'weight' => 2,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'email',
@@ -4555,6 +4595,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'default' => array(
         'label' => 'inline',
@@ -4617,6 +4664,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'phone',
         'weight' => 5,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -4672,6 +4726,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'above',
@@ -4730,6 +4790,16 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'above',
@@ -4809,6 +4879,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -4873,6 +4950,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4921,6 +5004,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -4988,6 +5078,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5053,6 +5149,18 @@ function evergreen_content_field_default_field_instances() {
         ),
         'type' => 'addressfield_default',
         'weight' => 9,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -5124,6 +5232,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 8,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -5184,6 +5299,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'phone',
         'weight' => 3,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -5239,6 +5361,15 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 19,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'above',
@@ -5299,6 +5430,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 7,
       ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -5358,6 +5496,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 1,
+      ),
+      'contact_row' => array(
+        'label' => 'inline',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'inline',
@@ -5437,6 +5582,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 7,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -5498,6 +5649,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'phone',
         'weight' => 4,
       ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
@@ -5543,6 +5701,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -5604,6 +5769,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'email_default',
         'weight' => 2,
       ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'email',
@@ -5653,6 +5825,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 9,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -5726,13 +5904,21 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_row',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -5782,11 +5968,16 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -5825,6 +6016,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 5,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
@@ -5884,6 +6082,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 8,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -5939,6 +6143,13 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -5992,6 +6203,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -6041,6 +6258,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 3,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
@@ -6099,6 +6323,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -6151,6 +6381,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -6198,6 +6434,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -6262,6 +6505,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -6309,6 +6558,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'entityreference_entity_id',
         'weight' => 6,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -6359,6 +6614,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 10,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -6431,6 +6692,12 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'above',
@@ -7771,7 +8038,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 1,
     ),
-    'workbench_access_field' => 1,
+    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-home_page-field_intro'.

@@ -93,6 +93,25 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory_facility-blank_source_1-convert_boolean';
+  $feeds_tamper->importer = 'office_directory_facility';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'convert_boolean';
+  $feeds_tamper->settings = array(
+    'true_value' => 'true',
+    'false_value' => 'false',
+    'match_case' => 0,
+    'no_match' => 'true',
+    'other_text' => '',
+    'no_match_value' => TRUE,
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Convert to boolean (always true)';
+  $export['office_directory_facility-blank_source_1-convert_boolean'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory_facility-blank_source_1-default_value';
   $feeds_tamper->importer = 'office_directory_facility';
   $feeds_tamper->source = 'Blank source 1';
