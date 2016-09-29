@@ -96,6 +96,7 @@ function wwwevergreen_field__field_phone(&$variables) {
   //$output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
   foreach ($variables['items'] as $delta => $item) {
 	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);
 	  	if(substr($phone, -8,3) == '867') { 
 			$ext = substr($phone, -4,4);
 			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
