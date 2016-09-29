@@ -4225,7 +4225,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 8,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4245,6 +4245,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_alternate_phone',
     'is_property' => 0,
     'label' => 'Alternate Phone',
@@ -4252,6 +4253,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -4373,11 +4375,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_building',
     'is_property' => 0,
     'label' => 'Building',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4412,7 +4416,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 10,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4432,11 +4436,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_building_alt',
     'is_property' => 0,
     'label' => 'Building',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4544,7 +4550,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 6,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -4564,11 +4570,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_email',
     'is_property' => 0,
     'label' => 'Email',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4672,7 +4680,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 9,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4692,6 +4700,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_fax',
     'is_property' => 0,
     'label' => 'Fax',
@@ -4699,6 +4708,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -5240,7 +5250,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 12,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5260,11 +5270,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_mailstop',
     'is_property' => 0,
     'label' => 'Mailstop',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5307,7 +5319,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 7,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -5327,6 +5339,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_phone',
     'is_property' => 0,
     'label' => 'Phone',
@@ -5334,6 +5347,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -5438,7 +5452,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 11,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5458,11 +5472,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_room',
     'is_property' => 0,
     'label' => 'Room',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5817,7 +5833,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'directory_office',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Include the full URL of your Facebook page or group.',
+    'description' => 'Include the full URL of your Facebook page or group. It\'s not necessary to list the main college Facebook page here.',
     'display' => array(
       'contact_block' => array(
         'label' => 'hidden',
@@ -6606,7 +6622,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'directory_office',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>.',
+    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!',
     'display' => array(
       'contact_block' => array(
         'label' => 'hidden',
@@ -11677,7 +11693,7 @@ function evergreen_content_field_default_field_instances() {
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
   t('Email');
   t('End Term');
-  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>.');
+  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
   t('Event Date');
   t('Event Format');
   t('Excerpt');
@@ -11725,7 +11741,7 @@ function evergreen_content_field_default_field_instances() {
   t('In theory, any faculty member should be in the campus directory? Hoping to use the email value as a bridge when importing. [fingers crossed]');
   t('Include dollar sign and number awarded.');
   t('Include regular dates, times, and locations.');
-  t('Include the full URL of your Facebook page or group.');
+  t('Include the full URL of your Facebook page or group. It\'s not necessary to list the main college Facebook page here.');
   t('Include the site section for easier finding and filtering. This will help you and other site editors link to the correct files.');
   t('Include the summary of uses of the building as well as any more detailed descriptions available.');
   t('Include the very basic criteria; shown on the overview page for applicants.');
