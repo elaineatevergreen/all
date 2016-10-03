@@ -96,9 +96,10 @@ class SiteContentMigration extends XMLMigration {
 		
 		//this needs to have the first slash removed to work properly!
 		$this->addFieldMapping('path','url');
+		//and this way it doesn't also create a pathauto version
+		$this->addFieldMapping('pathauto')->defaultValue('0');
 		
-		//eventually this should belong to a specific user in Cascade...
-		$this->addFieldMapping('uid')->defaultValue('1'); //because I don't like migrated items belonging to Anon.
+		$this->addFieldMapping('uid')->defaultValue('1'); //because I don't like migrated items belonging to Anon, and I can't match up with Cascade users. 
 		
 		$this->addFieldMapping('log','changelog');
 		

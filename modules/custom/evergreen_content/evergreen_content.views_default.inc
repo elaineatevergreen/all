@@ -9392,7 +9392,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_section_contact_info']['table'] = 'field_data_field_section_contact_info';
   $handler->display->display_options['fields']['field_section_contact_info']['field'] = 'field_section_contact_info';
   $handler->display->display_options['fields']['field_section_contact_info']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['fields']['field_section_contact_info']['label'] = 'Contact';
+  $handler->display->display_options['fields']['field_section_contact_info']['label'] = '';
   $handler->display->display_options['fields']['field_section_contact_info']['element_type'] = '0';
   $handler->display->display_options['fields']['field_section_contact_info']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_section_contact_info']['element_label_colon'] = FALSE;
