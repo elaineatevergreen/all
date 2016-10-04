@@ -311,6 +311,68 @@ function evergreen_content_ckeditor_profile_defaults() {
       ),
       'input_formats' => array(),
     ),
+    'Minimal_formatting' => array(
+      'name' => 'Minimal_formatting',
+      'settings' => array(
+        'ss' => 2,
+        'toolbar' => '[
+    [\'Format\',\'Bold\',\'Italic\'],
+    [\'NumberedList\',\'BulletedList\'],
+    [\'Link\',\'Unlink\']
+]',
+        'expand' => 't',
+        'default' => 't',
+        'show_toggle' => 't',
+        'uicolor' => 'default',
+        'uicolor_user' => 'default',
+        'width' => '100%',
+        'lang' => 'en',
+        'auto_lang' => 't',
+        'language_direction' => 'default',
+        'allowed_content' => 'f',
+        'extraAllowedContent' => '',
+        'enter_mode' => 'p',
+        'shift_enter_mode' => 'br',
+        'font_format' => 'p;h2;h3;h4',
+        'custom_formatting' => 'f',
+        'formatting' => array(
+          'custom_formatting_options' => array(
+            'indent' => 'indent',
+            'breakBeforeOpen' => 'breakBeforeOpen',
+            'breakAfterOpen' => 'breakAfterOpen',
+            'breakAfterClose' => 'breakAfterClose',
+            'breakBeforeClose' => 0,
+            'pre_indent' => 0,
+          ),
+        ),
+        'css_mode' => 'theme',
+        'css_path' => '',
+        'css_style' => 'theme',
+        'styles_path' => '',
+        'filebrowser' => 'none',
+        'filebrowser_image' => '',
+        'filebrowser_flash' => '',
+        'UserFilesPath' => '%b%f/',
+        'UserFilesAbsolutePath' => '%d%b%f/',
+        'forcePasteAsPlainText' => 'f',
+        'html_entities' => 'f',
+        'scayt_autoStartup' => 'f',
+        'theme_config_js' => 'f',
+        'js_conf' => '',
+        'loadPlugins' => array(
+          'counter' => array(
+            'name' => 'counter',
+            'desc' => 'Plugin to count symbols, symbols without blanks and words',
+            'path' => '%plugin_dir%counter/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
+        ),
+      ),
+      'input_formats' => array(
+        'minimal_formatting' => 'Minimal formatting',
+      ),
+    ),
   );
   return $data;
 }
