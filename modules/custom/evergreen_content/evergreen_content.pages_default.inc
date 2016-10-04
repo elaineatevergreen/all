@@ -59,11 +59,11 @@ function evergreen_content_default_page_manager_handlers() {
   $pane->configuration = array(
     'admin_title' => 'Placeholder Workbench Help',
     'title' => 'CMS Help',
-    'body' => 'This is placeholder content until actual help exists in a useful format.
-
-We\'ll link to some articles about how to make things, how to write gooder, etc.',
-    'format' => 'plain_text',
+    'body' => '<p>See the Canvas course "<a href="https://canvas.evergreen.edu/courses/1257">Website Editor Training</a>" for tutorials and other materials.</p>
+',
+    'format' => 'basic_tags',
     'substitute' => TRUE,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
