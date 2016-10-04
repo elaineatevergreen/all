@@ -143,10 +143,17 @@ class SiteContentMigration extends XMLMigration {
 	    //strip the first slash out of the url
 	    $alteredURL = $row->xml->url;
 	    $alteredURL = substr($alteredURL, 1);
-	    $row->url = $alteredURL;
 	    
 	    //the site section is the first part of the URL.
 	    $row->sitesection = substr($alteredURL,0,strpos($alteredURL,'/'));
+	    
+	    //if the page is a home page, set the URL to be the site section shortname.
+	    if(substr($alteredURL, -4) == 'home') { $alteredURL = substr($alteredURL, 0, -5); };
+	    
+	    //then set the url
+	    $row->url = $alteredURL;
+	    
+	    
 	    
 	    $row->changelog = "Imported via Migrate, Fall 2016. Last updated in Cascade Server on " . $row->xml->changed . " by " . $row->xml->lastmodifiedby . ".";
 
