@@ -37,9 +37,6 @@ regions[page_bottom] = Page Bottom
 ;regions[sidebar_second] = Sidebar Second
 ;regions[user_menu] = User Menu (built-in Drupal thing)
 
-; custom region commented because it doesn't actually do anything
-;regions[primary_content] = Primary Content 
-
 ; note: "As a general rule, consider using a region when content needs to be moved between regions or rearranged in the Blocks interface. When content doesn’t need to be controlled via the Blocks interface, and it is risky for it to be there, consider hardcoding it in template files so it can’t be affected by actions taken in the Blocks interface."
 
 
