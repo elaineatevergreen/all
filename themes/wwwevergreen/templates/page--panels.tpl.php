@@ -2,6 +2,17 @@
 
 /**
 	this template file applies to pages created via Page Manager/Panels.
+	
+	Panel pages get their grid classes from the Panels interface.
+			
+	Go to [siteurl]/admin/structure/pages and click "Edit" for the page you want
+	Go to Content
+	Click "Show layout designer"
+			
+	* Canvas > Canvas settings
+	* Column > Column settings
+	
+	
  */
 ?>
 
@@ -122,39 +133,13 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	<main id="main-row" class="main-row row wrapper" role="main">
 		<div class="grid main-row-grid">
 		
+			<?php /* Do we take out this entire column of the grid on panel pages? */ ?>
 			<div class="tertiary-nav-wrapper unit-1-7">
-				<?php 
-					
-					/* 
-					
-						Drupal things get SUPER WEIRD in here. 
-					
-					*/
-					
-					print render($page['section_nav']); 
-				?>
+				<?php print render($page['section_nav']); ?>
 			</div>
 			
-		<!-- 
-			
-			for Panel pages, the wrapping divs are classed in the Page Manager interface. 
-			this doesn't seem to have quite the right markup; let's see what we can do. -emn
-			
-			/* 
-			Primary column has the class "primary-content-wrapper unit-4-7 
-			Region in that column is "main-content" 
-			Secondary column has the class "sidebar-wrapper unit-2-7" 
-			Region in that column is "sidebar"
-			*/
-		
-		-->
-		
-		
-	
-	    <?php 
-			/* lots of content in here for Drupaling */	
-		?>
-					<?php print $messages; ?>
+		<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
+			<?php print $messages; ?>
 	        <?php if ($page['highlighted']): ?>
 	        	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
 	        <?php endif; ?>
