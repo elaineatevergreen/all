@@ -10485,6 +10485,7 @@ return($term); ';
     'name' => 'name',
     'changed' => 'changed',
     'edit_node' => 'edit_node',
+    'path' => 'title',
   );
   $handler->display->display_options['style_options']['default'] = 'changed';
   $handler->display->display_options['style_options']['info'] = array(
@@ -10492,38 +10493,48 @@ return($term); ';
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => '',
+      'separator' => '<br/>',
+      'empty_column' => 0,
     ),
     'type' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
     ),
     'status' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
     ),
     'name' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
     ),
     'changed' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
     ),
     'edit_node' => array(
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
+    ),
+    'path' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['order'] = 'desc';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -10588,10 +10599,32 @@ return($term); ';
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'basic_page' => 'basic_page',
+    'gallery' => 'gallery',
+    'article' => 'article',
+    'webform' => 'webform',
+  );
   $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -10605,14 +10638,16 @@ return($term); ';
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
-  /* Filter criterion: Workbench Access: Access filter */
-  $handler->display->display_options['filters']['access_id']['id'] = 'access_id';
-  $handler->display->display_options['filters']['access_id']['table'] = 'workbench_access';
-  $handler->display->display_options['filters']['access_id']['field'] = 'access_id';
-  $handler->display->display_options['filters']['access_id']['access_id'] = array(
-    'site_sections' => 'site_sections',
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'basic_page' => 'basic_page',
+    'gallery' => 'gallery',
+    'article' => 'article',
+    'webform' => 'webform',
   );
-  $handler->display->display_options['filters']['access_id']['size'] = '5';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
@@ -10660,6 +10695,13 @@ return($term); ';
   $handler->display->display_options['fields']['edit_node']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['path'] = 'admin/workbench/content/all';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'All Recent Content';
@@ -10681,14 +10723,17 @@ return($term); ';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
-  /* Filter criterion: Workbench Access: Access filter */
-  $handler->display->display_options['filters']['access_id']['id'] = 'access_id';
-  $handler->display->display_options['filters']['access_id']['table'] = 'workbench_access';
-  $handler->display->display_options['filters']['access_id']['field'] = 'access_id';
-  $handler->display->display_options['filters']['access_id']['access_id'] = array(
-    'site_sections' => 'site_sections',
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'basic_page' => 'basic_page',
+    'gallery' => 'gallery',
+    'article' => 'article',
+    'webform' => 'webform',
   );
-  $handler->display->display_options['filters']['access_id']['size'] = '5';
   $export['workbench_recent_content_with_recycling_'] = $view;
 
   return $export;
