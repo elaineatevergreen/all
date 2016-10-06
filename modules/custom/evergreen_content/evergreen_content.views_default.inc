@@ -544,6 +544,64 @@ function evergreen_content_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'all');
+
+  /* Display: Admin Page */
+  $handler = $view->new_display('page', 'Admin Page', 'page_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    4 => '4',
+    12 => '12',
+    10 => '10',
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Websites */
+  $handler->display->display_options['fields']['field_websites']['id'] = 'field_websites';
+  $handler->display->display_options['fields']['field_websites']['table'] = 'field_data_field_websites';
+  $handler->display->display_options['fields']['field_websites']['field'] = 'field_websites';
+  $handler->display->display_options['fields']['field_websites']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_websites']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_websites']['multi_type'] = 'ul';
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_email']['multi_type'] = 'ul';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  /* Field: Workbench Access: Edit link */
+  $handler->display->display_options['fields']['edit']['id'] = 'edit';
+  $handler->display->display_options['fields']['edit']['table'] = 'workbench_access';
+  $handler->display->display_options['fields']['edit']['field'] = 'edit';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'alumni_circles' => 'alumni_circles',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'admin/workbench/content/alumni-circles';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Alumni Circles';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['alumni_groups'] = $view;
 
   $view = new view();
@@ -5379,12 +5437,13 @@ return($term); ';
     1 => '1',
   );
 
-  /* Display: Quick-Add Subjects */
-  $handler = $view->new_display('page', 'Quick-Add Subjects', 'page_1');
+  /* Display: Admin Page */
+  $handler = $view->new_display('page', 'Admin Page', 'page_1');
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     4 => '4',
+    11 => '11',
   );
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Bulk operations: Content */
@@ -5474,7 +5533,12 @@ return($term); ';
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['path'] = 'admin/library-databases';
+  $handler->display->display_options['path'] = 'admin/workbench/content/library-databases';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Databases';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Data export */
   $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
@@ -9771,6 +9835,167 @@ return($term); ';
   $handler->display->display_options['filters']['field_group_categories_value']['value'] = array(
     'Recreation/Athletics' => 'Recreation/Athletics',
   );
+
+  /* Display: Admin Page */
+  $handler = $view->new_display('page', 'Admin Page', 'page_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    4 => '4',
+    9 => '9',
+    10 => '10',
+  );
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'body' => 'title',
+    'field_meetings' => 'field_meetings',
+    'field_email' => 'field_email',
+    'field_websites' => 'field_websites',
+    'edit' => 'edit',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_meetings' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_email' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_websites' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Group Name';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  /* Field: Content: Meetings */
+  $handler->display->display_options['fields']['field_meetings']['id'] = 'field_meetings';
+  $handler->display->display_options['fields']['field_meetings']['table'] = 'field_data_field_meetings';
+  $handler->display->display_options['fields']['field_meetings']['field'] = 'field_meetings';
+  $handler->display->display_options['fields']['field_meetings']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_meetings']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_meetings']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_meetings']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_meetings']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_meetings']['field_api_classes'] = TRUE;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_email']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_email']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_email']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_email']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_email']['field_api_classes'] = TRUE;
+  /* Field: Content: Websites */
+  $handler->display->display_options['fields']['field_websites']['id'] = 'field_websites';
+  $handler->display->display_options['fields']['field_websites']['table'] = 'field_data_field_websites';
+  $handler->display->display_options['fields']['field_websites']['field'] = 'field_websites';
+  $handler->display->display_options['fields']['field_websites']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_websites']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_websites']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_websites']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_websites']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_websites']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_websites']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_websites']['field_api_classes'] = TRUE;
+  /* Field: Workbench Access: Edit link */
+  $handler->display->display_options['fields']['edit']['id'] = 'edit';
+  $handler->display->display_options['fields']['edit']['table'] = 'workbench_access';
+  $handler->display->display_options['fields']['edit']['field'] = 'edit';
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 0,
+        'display_values' => array(
+          '_all_' => '_all_',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'student_group' => 'student_group',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'admin/workbench/content/student-groups';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Student Groups';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['student_groups'] = $view;
 
   $view = new view();

@@ -285,7 +285,23 @@ function evergreen_content_default_page_manager_pages() {
   $page->admin_title = 'Marketing Tools';
   $page->admin_description = 'A variety of tools for the communications department';
   $page->path = 'admin/workbench/content/shurly';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 7,
+            1 => 10,
+            2 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'Short URLs',
@@ -439,7 +455,23 @@ function evergreen_content_default_page_manager_pages() {
   $page->admin_title = 'News-o-matic';
   $page->admin_description = 'Administrative interface for home page news.';
   $page->path = 'admin/workbench/content/news';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 7,
+            1 => 10,
+            2 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'News-O-Matic',
