@@ -131,6 +131,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:0' => 'title',
           'xpathparser:1' => 'body',
           'xpathparser:9' => 'preparatory_for',
+          'xpathparser:13' => 'location',
           'xpathparser:11' => 'terms/begin_term',
           'xpathparser:12' => 'terms/end_term',
         ),
@@ -142,6 +143,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:6' => 0,
           'xpathparser:10' => 0,
           'xpathparser:0' => 0,
+          'xpathparser:13' => 0,
           'xpathparser:11' => 0,
           'xpathparser:12' => 0,
         ),
@@ -157,6 +159,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
             'xpathparser:9' => 0,
+            'xpathparser:13' => 0,
             'xpathparser:11' => 0,
             'xpathparser:12' => 0,
           ),
@@ -214,12 +217,18 @@ function evergreen_content_feeds_importer_default() {
             'language' => 'und',
           ),
           7 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_location',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          8 => array(
             'source' => 'xpathparser:11',
             'target' => 'field_begin_term',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          8 => array(
+          9 => array(
             'source' => 'xpathparser:12',
             'target' => 'field_end_term',
             'unique' => FALSE,
