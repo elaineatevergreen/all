@@ -20,7 +20,7 @@ deploy_wwwdev:
   stage: deploy
   script:
     - chmod uog+x bin/*
-    - sudo -EHu banner bin/ci_deploy.sh
+    - sudo -EHu www_deploy bin/ci_deploy_www.sh
   tags:
     - wwwdev
   only:
