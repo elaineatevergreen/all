@@ -3,7 +3,7 @@
 # Schema revision tracker for drupal 7
 #
 # Source the drupal deployment library.
-. drupal_deploy_functions.sh
+. bin/drupal_deploy_functions.sh
 #------------
 # global vars for schema management.
 #
