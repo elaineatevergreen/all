@@ -1,30 +1,38 @@
-deploy_www:
-  stage: deploy
+deploy_collab:
   script:
     - chmod uog+x bin/*
     - sudo -EHu banner bin/ci_deploy_collab.sh
   tags:
-    - www
+    - collab
   only:
     - master
-deploy_wwwtest:
-  stage: deploy
-  script:
-    - chmod uog+x bin/*
-    - sudo -EHu banner bin/ci_deploy_collab.sh
-  tags:
-    - wwwtest
-  only:
-    - test
-deploy_wwwdev:
+deploy_www:
   stage: deploy
   script:
     - chmod uog+x bin/*
     - sudo -EHu www_deploy bin/ci_deploy_www.sh
   tags:
-    - wwwdev
+    - www
   only:
-    - dev
+    - master
+deploy_collabtest:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -EHu banner bin/ci_deploy_collab.sh
+  tags:
+    - collabtest
+  only:
+    - test
+deploy_wwwtest:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -EHu www_deploy bin/ci_deploy_www.sh
+  tags:
+    - wwwtest
+  only:
+    - test
 deploy_collabdev:
   stage: deploy
   script:
@@ -34,5 +42,12 @@ deploy_collabdev:
     - collabdev
   only:
     - dev
-
-
+deploy_wwwdev:
+  stage: deploy
+  script:
+    - chmod uog+x bin/*
+    - sudo -EHu www_deploy bin/ci_deploy_www.sh
+  tags:
+    - wwwdev
+  only:
+    - dev
