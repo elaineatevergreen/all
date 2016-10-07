@@ -13,7 +13,7 @@ echo "Collab Site updates"
 run_site_updates $COLLAB_CODE/drupal7 site_updates_collab
 # www deployment.
 echo "Beginning WWW Deployment"
-if [ -f $WWW_CODE/index.php ]; then
+if [ -f $WWW_CODE/index.php ] && [[ "$STAGE" != "dev" ]] ; then
   # Required Libraries
   deploy_d7_library libraries/iCalcreator $WWW_CODE
   deploy_d7_library libraries/plupload $WWW_CODE
