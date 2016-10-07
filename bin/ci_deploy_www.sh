@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
 . bin/www_build_environment.sh
-export WWW_CODE='/var/www/html/www'
 . bin/drupal_deploy_functions.sh
 . bin/d7_migrations.sh
 # Deploy Themes
