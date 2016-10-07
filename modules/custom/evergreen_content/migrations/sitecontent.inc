@@ -26,11 +26,11 @@ class SiteContentMigration extends XMLMigration {
       'intro'=> t('intro') //yes, even tho this isn't even a proper element in the XML
     );
     	
-    	//find the correct folder and get the XML
-    	//I would like to figure out how to combine old and new content in a single XML file
-    	//or how to iterate over two XML files?	
+    	//find the correct location and get the XML
     	//$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_content') . '/migrations/';
         //$xml_location = $folder . 'all-content-simple-combined.xml';
+        //note that if this is being run directly on sobek, then sobek needs real DNS
+        //OR we go back to the previously commented method
         $xml_location = 'http://www.evergreen.edu/_inc/inventory/combined.xml';
         
         // This is the xpath identifying the items to be migrated, relative to the
