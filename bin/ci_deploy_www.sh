@@ -2,8 +2,8 @@
 set -e
 . bin/www_build_environment.sh
 export WWW_CODE='/var/www/html/www'
-. bin/drupal_deploy_functions.sh
-. bin/d7_migrations.sh
+. drupal_deploy_functions.sh
+. d7_migrations.sh
 # Deploy Themes
 echo "Beginning WWW Deployment"
 if [ -f $WWW_CODE/index.php ]; then

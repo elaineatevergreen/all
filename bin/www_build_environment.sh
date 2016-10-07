@@ -15,5 +15,6 @@ case "$CI_BUILD_REF_NAME" in
   *)
     STAGE="dev"
     export SITE_SUFFIX="dev";
+    export WWW_CODE='/var/www/wwwdev.evergreen.edu'
     ;;
 esac
