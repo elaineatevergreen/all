@@ -1,0 +1,2 @@
+User_Alias  GITLAB_USERS = gitlab-runner
+GITLAB_USERS ALL = (www_deploy) NOPASSWD:ALL
