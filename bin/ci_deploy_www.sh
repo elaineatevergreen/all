@@ -6,6 +6,7 @@ export WWW_CODE='/var/www/html/www'
 . bin/d7_migrations.sh
 # Deploy Themes
 echo "Beginning WWW Deployment"
+rsync -rtp --delete etc/ $HOME/etc
 if [ -f $WWW_CODE/index.php ]; then
   # Required Libraries
   deploy_d7_library libraries/iCalcreator $WWW_CODE
