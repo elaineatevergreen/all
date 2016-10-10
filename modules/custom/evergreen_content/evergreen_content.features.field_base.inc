@@ -2125,10 +2125,10 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'OLY' => 'Olympia',
-        'TAC' => 'Tacoma',
-        'GRH' => 'Grays Harbor',
-        'TRI' => 'Tribal',
+        'Olympia' => 'Olympia',
+        'Tacoma' => 'Tacoma',
+        'Grays Harbor' => 'Grays Harbor',
+        'Tribal' => 'Tribal',
       ),
       'allowed_values_function' => '',
     ),
