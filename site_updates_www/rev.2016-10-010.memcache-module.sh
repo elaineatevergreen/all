@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 set -e
-drush --yes en memcache
+drush --yes dl memcache
+drush --yes rr
