@@ -5153,7 +5153,7 @@ return($term); ';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = 'THIS IS A TEST.';
+  $handler->display->display_options['header']['area']['content'] = 'Upcoming Offerings';
   $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -5173,12 +5173,17 @@ return($term); ';
   $handler->display->display_options['arguments']['field_related_field_target_id']['id'] = 'field_related_field_target_id';
   $handler->display->display_options['arguments']['field_related_field_target_id']['table'] = 'field_data_field_related_field';
   $handler->display->display_options['arguments']['field_related_field_target_id']['field'] = 'field_related_field_target_id';
-  $handler->display->display_options['arguments']['field_related_field_target_id']['relationship'] = 'field_related_field_target_id';
   $handler->display->display_options['arguments']['field_related_field_target_id']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_related_field_target_id']['default_argument_type'] = 'node';
   $handler->display->display_options['arguments']['field_related_field_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_related_field_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_related_field_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_related_field_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_related_field_target_id']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_related_field_target_id']['validate_options']['types'] = array(
+    'field_of_study' => 'field_of_study',
+  );
+  $handler->display->display_options['arguments']['field_related_field_target_id']['validate']['fail'] = 'access denied';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

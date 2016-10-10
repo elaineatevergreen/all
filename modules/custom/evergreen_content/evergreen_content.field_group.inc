@@ -743,6 +743,38 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|field_of_study|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'field_of_study';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Extended Subject Details',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_sample_program',
+      1 => 'field_after_graduation',
+      2 => 'field_facilities_resources',
+      3 => 'field_recent_student_projects',
+      4 => 'field_faculty_bios',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-details field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|field_of_study|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|location|default';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'node';
@@ -1761,6 +1793,7 @@ function evergreen_content_field_group_info() {
   t('Details');
   t('Donor Info');
   t('Entrepreneur Info');
+  t('Extended Subject Details');
   t('Faculty Information');
   t('Find Online');
   t('Identity');

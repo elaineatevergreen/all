@@ -7705,7 +7705,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'field_of_study',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -7731,11 +7731,18 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'body',
-    'label' => 'Blurb',
+    'label' => 'Blurb or Introduction',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'display_summary' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -7747,8 +7754,171 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 6,
     ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_after_graduation'.
+  $field_instances['node-field_of_study-field_after_graduation'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eventually this will be amended with a View or something automagically picking one or more alumni.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_after_graduation',
+    'label' => 'After Graduation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_facilities_resources'.
+  $field_instances['node-field_of_study-field_facilities_resources'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_facilities_resources',
+    'label' => 'Facilities & Resources',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_faculty_bios'.
+  $field_instances['node-field_of_study-field_faculty_bios'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_faculty_bios',
+    'label' => 'Faculty Bios',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 12,
+    ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance:
@@ -7800,7 +7970,114 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 35,
+      'weight' => 3,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'node-field_of_study-field_recent_student_projects'.
+  $field_instances['node-field_of_study-field_recent_student_projects'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be replaced by a View someday.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_recent_student_projects',
+    'label' => 'Recent Student Projects',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 11,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_sample_program'.
+  $field_instances['node-field_of_study-field_sample_program'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_sample_program',
+    'label' => 'Sample Program',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -7845,10 +8122,14 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 41,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -11647,6 +11928,7 @@ function evergreen_content_field_default_field_instances() {
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');
+  t('After Graduation');
   t('Agendas');
   t('Alert Message');
   t('All lower-case, separated by spaces.');
@@ -11663,6 +11945,7 @@ function evergreen_content_field_default_field_instances() {
   t('Begin Term');
   t('Biography');
   t('Blurb');
+  t('Blurb or Introduction');
   t('Body');
   t('Building');
   t('Building History');
@@ -11705,13 +11988,17 @@ function evergreen_content_field_default_field_instances() {
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
   t('Event Date');
   t('Event Format');
+  t('Eventually this will be amended with a View or something automagically picking one or more alumni.');
+  t('Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)');
   t('Excerpt');
   t('Expertise');
   t('FAFSA or WASFA Required');
   t('Facebook');
   t('Facilities');
+  t('Facilities & Resources');
   t('Facility');
   t('Faculty');
+  t('Faculty Bios');
   t('Faculty Member(s)');
   t('Faculty directory subject area');
   t('Fax');
@@ -11721,6 +12008,7 @@ function evergreen_content_field_default_field_instances() {
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
+  t('For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
@@ -11813,6 +12101,7 @@ function evergreen_content_field_default_field_instances() {
   t('Quarters Offered');
   t('Quarters Open');
   t('Queue items');
+  t('Recent Student Projects');
   t('Reference');
   t('Related Offices');
   t('Related Pieces');
@@ -11821,6 +12110,7 @@ function evergreen_content_field_default_field_instances() {
   t('Resource Type');
   t('Roles');
   t('Room');
+  t('Sample Program');
   t('Secondary Content');
   t('Section Contact Info');
   t('Section Navigation');
@@ -11885,6 +12175,7 @@ function evergreen_content_field_default_field_instances() {
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
+  t('This will be replaced by a View someday.');
   t('This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
