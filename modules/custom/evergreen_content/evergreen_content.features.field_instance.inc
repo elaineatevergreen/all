@@ -2603,7 +2603,7 @@ function evergreen_content_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_graduate_program',
-    'label' => 'Graduate Program',
+    'label' => 'Graduate Program (which one)',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -3270,7 +3270,7 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 22,
@@ -3283,7 +3283,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_related_field',
     'label' => 'Fields of Study',
     'required' => 0,
@@ -3293,9 +3293,13 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 10,
     ),
     'workbench_access_field' => 0,
@@ -4486,7 +4490,7 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4967,10 +4971,11 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 9,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
+        'type' => 'list_key',
+        'weight' => 8,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7800,12 +7805,12 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-field_of_study-field_related_field'.
-  $field_instances['node-field_of_study-field_related_field'] = array(
+  // Exported field_instance: 'node-field_of_study-field_umbrella_field'.
+  $field_instances['node-field_of_study-field_umbrella_field'] = array(
     'bundle' => 'field_of_study',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the "parent" of this field.',
+    'description' => 'This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -7814,7 +7819,7 @@ function evergreen_content_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7830,10 +7835,12 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_related_field',
-    'label' => 'Related field',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_umbrella_field',
+    'label' => '"Umbrella" field',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -7841,8 +7848,9 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 34,
+      'weight' => 41,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-gallery-body'.
@@ -11622,6 +11630,7 @@ function evergreen_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('"Umbrella" field');
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
@@ -11715,7 +11724,7 @@ function evergreen_content_field_default_field_instances() {
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
-  t('Graduate Program');
+  t('Graduate Program (which one)');
   t('Graduated');
   t('Group Categories');
   t('Group Title');
@@ -11807,7 +11816,6 @@ function evergreen_content_field_default_field_instances() {
   t('Reference');
   t('Related Offices');
   t('Related Pieces');
-  t('Related field');
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
@@ -11821,7 +11829,6 @@ function evergreen_content_field_default_field_instances() {
   t('Select all that apply.');
   t('Select current members from the college directory. Contact information may be displayed along with the people\'s names.');
   t('Select if this item should appear at the top as a "place to start" resource.');
-  t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
   t('Select the types of resources that can be found at the link.');
@@ -11878,6 +11885,7 @@ function evergreen_content_field_default_field_instances() {
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
+  t('This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
   t('Tuition Award');

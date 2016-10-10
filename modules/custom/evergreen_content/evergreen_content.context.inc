@@ -91,7 +91,7 @@ function evergreen_content_context_default_contexts() {
         'views--exp-catalog-page' => array(
           'module' => 'views',
           'delta' => '-exp-catalog-page',
-          'region' => 'secondary_content',
+          'region' => 'filters',
           'weight' => '-10',
         ),
       ),
