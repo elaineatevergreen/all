@@ -13,5 +13,7 @@ deploy_d7_library libraries/plupload $WWW_CODE
 # Feature modules
 deploy_d7_theme themes/wwwevergreen $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
 echo "www site updates"
 run_site_updates $WWW_CODE site_updates_www
