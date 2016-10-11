@@ -349,13 +349,10 @@ function evergreen_content_user_default_permissions() {
   $permissions['access workbench access by role'] = array(
     'name' => 'access workbench access by role',
     'roles' => array(
-      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
-      'calendar review' => 'calendar review',
-      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
-      'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_access',
   );
@@ -1970,6 +1967,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
+      'site editor' => 'site editor',
     ),
     'module' => 'file_entity',
   );
@@ -3892,10 +3890,13 @@ function evergreen_content_user_default_permissions() {
       'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -3907,10 +3908,13 @@ function evergreen_content_user_default_permissions() {
       'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_moderation',
   );
