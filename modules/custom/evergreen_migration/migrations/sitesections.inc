@@ -15,7 +15,7 @@ class SiteSectionMigration extends EvergreenMigration {
     	);
     	
     	//find the correct folder and get the CSV	
-    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_content') . '/migrations/';
+    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_migration') . '/migrations/';
         $csv_location = $folder . 'sitesections.csv';
     	$this->source = new MigrateSourceCSV($csv_location, array(),$options);
     	
@@ -88,7 +88,7 @@ class SiteSectionNavMigration extends EvergreenMigration {
     	);
     	
     	//find the correct folder and get the CSV	
-    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_content') . '/migrations/';
+    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_migration') . '/migrations/';
         $csv_location = $folder . 'navigation2.csv';
     	$this->source = new MigrateSourceCSV($csv_location,array(),$options);
     	
