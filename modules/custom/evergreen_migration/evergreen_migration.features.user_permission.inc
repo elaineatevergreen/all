@@ -45,6 +45,15 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear fields_of_study_import feeds'.
+  $permissions['clear fields_of_study_import feeds'] = array(
+    'name' => 'clear fields_of_study_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear hero_images feeds'.
   $permissions['clear hero_images feeds'] = array(
     'name' => 'clear hero_images feeds',
@@ -108,6 +117,15 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'import fields_of_study_import feeds'.
+  $permissions['import fields_of_study_import feeds'] = array(
+    'name' => 'import fields_of_study_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import hero_images feeds'.
   $permissions['import hero_images feeds'] = array(
     'name' => 'import hero_images feeds',
@@ -168,6 +186,15 @@ function evergreen_migration_user_default_permissions() {
   $permissions['tamper entrepreneur_directory'] = array(
     'name' => 'tamper entrepreneur_directory',
     'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'tamper fields_of_study_import'.
+  $permissions['tamper fields_of_study_import'] = array(
+    'name' => 'tamper fields_of_study_import',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
