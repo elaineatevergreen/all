@@ -122,6 +122,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -661,6 +662,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -931,6 +933,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1055,6 +1058,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1062,7 +1066,11 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create alumni_circles content'.
   $permissions['create alumni_circles content'] = array(
     'name' => 'create alumni_circles content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'alumni programs' => 'alumni programs',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1089,8 +1097,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1100,7 +1110,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1111,6 +1123,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1127,7 +1140,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create committee_page content'.
   $permissions['create committee_page content'] = array(
     'name' => 'create committee_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1199,6 +1215,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1217,6 +1234,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create home_page_hero content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1226,6 +1244,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create library_database content',
     'roles' => array(
       'administrator' => 'administrator',
+      'librarian' => 'librarian',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1233,7 +1253,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'create location content'.
   $permissions['create location content'] = array(
     'name' => 'create location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1243,6 +1266,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1252,6 +1276,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create scholarship content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1262,6 +1287,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1280,7 +1306,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
+      'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1318,6 +1345,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1334,7 +1362,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete any alumni_circles content'.
   $permissions['delete any alumni_circles content'] = array(
     'name' => 'delete any alumni_circles content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1343,6 +1374,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1362,6 +1394,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1371,6 +1404,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any blurb content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1387,7 +1421,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete any committee_page content'.
   $permissions['delete any committee_page content'] = array(
     'name' => 'delete any committee_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1442,6 +1479,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any gallery content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1460,6 +1498,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any home_page_hero content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1479,6 +1518,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any library_database content',
     'roles' => array(
       'administrator' => 'administrator',
+      'librarian' => 'librarian',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1486,7 +1527,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete any location content'.
   $permissions['delete any location content'] = array(
     'name' => 'delete any location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1495,6 +1539,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1504,6 +1549,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any scholarship content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1522,6 +1568,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any student_group content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1541,6 +1588,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1561,6 +1609,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1568,7 +1617,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete own alumni_circles content'.
   $permissions['delete own alumni_circles content'] = array(
     'name' => 'delete own alumni_circles content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1577,6 +1629,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1598,6 +1651,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1607,6 +1661,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own blurb content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1623,7 +1678,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete own committee_page content'.
   $permissions['delete own committee_page content'] = array(
     'name' => 'delete own committee_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1680,6 +1738,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own gallery content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1698,6 +1757,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own home_page_hero content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1721,6 +1781,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own library_database content',
     'roles' => array(
       'administrator' => 'administrator',
+      'librarian' => 'librarian',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1728,7 +1790,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'delete own location content'.
   $permissions['delete own location content'] = array(
     'name' => 'delete own location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1737,6 +1802,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own profile content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1746,6 +1812,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own scholarship content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1755,6 +1822,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own student_group content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1776,6 +1844,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1945,6 +2014,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1961,7 +2031,11 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit any alumni_circles content'.
   $permissions['edit any alumni_circles content'] = array(
     'name' => 'edit any alumni_circles content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'alumni programs' => 'alumni programs',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -1970,8 +2044,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -1991,7 +2067,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2002,6 +2080,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2018,7 +2097,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit any committee_page content'.
   $permissions['edit any committee_page content'] = array(
     'name' => 'edit any committee_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -2036,7 +2118,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any directory_office content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2058,7 +2140,7 @@ function evergreen_content_user_default_permissions() {
       'administrator' => 'administrator',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2067,7 +2149,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['edit any field_of_study content'] = array(
     'name' => 'edit any field_of_study content',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2078,6 +2162,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2087,6 +2172,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any home_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2096,6 +2182,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any home_page_hero content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2115,6 +2202,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any library_database content',
     'roles' => array(
       'administrator' => 'administrator',
+      'librarian' => 'librarian',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2122,7 +2211,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit any location content'.
   $permissions['edit any location content'] = array(
     'name' => 'edit any location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -2132,6 +2224,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2141,6 +2234,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any scholarship content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2160,6 +2254,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2179,7 +2274,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
+      'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -2930,14 +3026,18 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: twitter:app:id:ipad'.
   $permissions['edit meta tag: twitter:app:id:ipad'] = array(
     'name' => 'edit meta tag: twitter:app:id:ipad',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:app:id:iphone'.
   $permissions['edit meta tag: twitter:app:id:iphone'] = array(
     'name' => 'edit meta tag: twitter:app:id:iphone',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2953,14 +3053,18 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: twitter:app:name:ipad'.
   $permissions['edit meta tag: twitter:app:name:ipad'] = array(
     'name' => 'edit meta tag: twitter:app:name:ipad',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:app:name:iphone'.
   $permissions['edit meta tag: twitter:app:name:iphone'] = array(
     'name' => 'edit meta tag: twitter:app:name:iphone',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2976,21 +3080,27 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: twitter:app:url:ipad'.
   $permissions['edit meta tag: twitter:app:url:ipad'] = array(
     'name' => 'edit meta tag: twitter:app:url:ipad',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:app:url:iphone'.
   $permissions['edit meta tag: twitter:app:url:iphone'] = array(
     'name' => 'edit meta tag: twitter:app:url:iphone',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:card'.
   $permissions['edit meta tag: twitter:card'] = array(
     'name' => 'edit meta tag: twitter:card',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -3035,7 +3145,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: twitter:description',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -3045,7 +3157,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: twitter:image',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -3091,7 +3205,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: twitter:image:alt',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -3135,63 +3251,81 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: twitter:player'.
   $permissions['edit meta tag: twitter:player'] = array(
     'name' => 'edit meta tag: twitter:player',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:player:height'.
   $permissions['edit meta tag: twitter:player:height'] = array(
     'name' => 'edit meta tag: twitter:player:height',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:player:stream'.
   $permissions['edit meta tag: twitter:player:stream'] = array(
     'name' => 'edit meta tag: twitter:player:stream',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:player:stream:content_type'.
   $permissions['edit meta tag: twitter:player:stream:content_type'] = array(
     'name' => 'edit meta tag: twitter:player:stream:content_type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:player:width'.
   $permissions['edit meta tag: twitter:player:width'] = array(
     'name' => 'edit meta tag: twitter:player:width',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:site'.
   $permissions['edit meta tag: twitter:site'] = array(
     'name' => 'edit meta tag: twitter:site',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:site:id'.
   $permissions['edit meta tag: twitter:site:id'] = array(
     'name' => 'edit meta tag: twitter:site:id',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:title'.
   $permissions['edit meta tag: twitter:title'] = array(
     'name' => 'edit meta tag: twitter:title',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: twitter:url'.
   $permissions['edit meta tag: twitter:url'] = array(
     'name' => 'edit meta tag: twitter:url',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -3225,35 +3359,45 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: video:duration'.
   $permissions['edit meta tag: video:duration'] = array(
     'name' => 'edit meta tag: video:duration',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: video:release_date'.
   $permissions['edit meta tag: video:release_date'] = array(
     'name' => 'edit meta tag: video:release_date',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: video:series'.
   $permissions['edit meta tag: video:series'] = array(
     'name' => 'edit meta tag: video:series',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: video:tag'.
   $permissions['edit meta tag: video:tag'] = array(
     'name' => 'edit meta tag: video:tag',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: video:writer'.
   $permissions['edit meta tag: video:writer'] = array(
     'name' => 'edit meta tag: video:writer',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -3272,6 +3416,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3279,7 +3424,11 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit own alumni_circles content'.
   $permissions['edit own alumni_circles content'] = array(
     'name' => 'edit own alumni_circles content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'alumni programs' => 'alumni programs',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -3288,8 +3437,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own article content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3311,7 +3462,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own basic_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3322,6 +3475,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3338,7 +3492,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit own committee_page content'.
   $permissions['edit own committee_page content'] = array(
     'name' => 'edit own committee_page content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -3356,7 +3513,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own directory_office content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
     ),
     'module' => 'node',
   );
@@ -3389,7 +3545,9 @@ function evergreen_content_user_default_permissions() {
   $permissions['edit own field_of_study content'] = array(
     'name' => 'edit own field_of_study content',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3400,6 +3558,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3409,6 +3568,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own home_page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3418,6 +3578,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own home_page_hero content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3446,6 +3607,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own library_database content',
     'roles' => array(
       'administrator' => 'administrator',
+      'librarian' => 'librarian',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3453,7 +3616,10 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit own location content'.
   $permissions['edit own location content'] = array(
     'name' => 'edit own location content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
     'module' => 'node',
   );
 
@@ -3463,6 +3629,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'news promoter' => 'news promoter',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3472,6 +3639,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own scholarship content',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3482,6 +3650,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3503,7 +3672,8 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own webform content',
     'roles' => array(
       'administrator' => 'administrator',
-      'site editor' => 'site editor',
+      'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -3788,10 +3958,13 @@ function evergreen_content_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
@@ -4399,12 +4572,14 @@ function evergreen_content_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
       'calendar review' => 'calendar review',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'node',
   );
