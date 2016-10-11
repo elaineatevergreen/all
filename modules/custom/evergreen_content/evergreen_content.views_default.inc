@@ -5130,13 +5130,13 @@ return($term); ';
     4 => 0,
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Undergrad Catalog */
+  $handler = $view->new_display('page', 'Undergrad Catalog', 'page');
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'catalog/index';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'offerings_by_field');
+  /* Display: Offerings by Field */
+  $handler = $view->new_display('block', 'Offerings by Field', 'offerings_by_field');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming Offerings';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -5177,6 +5177,65 @@ return($term); ';
     'field_of_study' => 'field_of_study',
   );
   $handler->display->display_options['arguments']['field_related_field_target_id']['validate']['fail'] = 'access denied';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'catalog_entry' => 'catalog_entry',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Offerings by Faculty */
+  $handler = $view->new_display('block', 'Offerings by Faculty', 'offerings_by_faculty');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Offerings';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'program-title';
+  $handler->display->display_options['fields']['title']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Faculty (field_faculty) */
+  $handler->display->display_options['arguments']['field_faculty_target_id']['id'] = 'field_faculty_target_id';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['table'] = 'field_data_field_faculty';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['field'] = 'field_faculty_target_id';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_faculty_target_id']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_faculty_target_id']['validate_options']['types'] = array(
+    'directory_individual' => 'directory_individual',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

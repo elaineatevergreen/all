@@ -356,7 +356,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:0' => '@user_name',
           'xpathparser:1' => 'bio',
           'xpathparser:2' => 'expertise',
-          'xpathparser:3' => 'interests',
+          'xpathparser:3' => 'interest',
           'xpathparser:4' => 'name',
         ),
         'rawXML' => array(
@@ -424,6 +424,8 @@ function evergreen_content_feeds_importer_default() {
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
         'bundle' => 'directory_individual',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',
