@@ -132,10 +132,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
-      'calendar review' => 'calendar review',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
-      'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'contextual',
   );
@@ -153,7 +150,16 @@ function evergreen_content_user_default_permissions() {
   $permissions['access environment indicator collabtest'] = array(
     'name' => 'access environment indicator collabtest',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
+      'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
+      'news promoter' => 'news promoter',
+      'site editor' => 'site editor',
+      'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
   );
@@ -163,6 +169,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access environment indicator default_environment',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
   );
@@ -172,6 +179,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access environment indicator live_collab',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
   );
@@ -181,6 +189,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access environment indicator localhost',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
   );
@@ -190,6 +199,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access environment indicator overwritten_environment',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
   );
@@ -198,11 +208,16 @@ function evergreen_content_user_default_permissions() {
   $permissions['access media browser'] = array(
     'name' => 'access media browser',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
+      'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'media',
   );
@@ -347,7 +362,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'add JS snippets for google analytics'.
   $permissions['add JS snippets for google analytics'] = array(
     'name' => 'add JS snippets for google analytics',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'googleanalytics',
   );
 
@@ -968,6 +985,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear catalog feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -977,6 +995,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear e2campus feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -986,6 +1005,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear faculty_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -995,6 +1015,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear office_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -1004,6 +1025,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -1013,6 +1035,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'clear people_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -1143,6 +1166,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'create evergreen_magazine entityqueue',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'entityqueue',
   );
@@ -1328,6 +1352,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1389,6 +1414,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1443,6 +1469,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1504,6 +1531,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1522,6 +1550,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete evergreen_magazine entityqueue',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'entityqueue',
   );
@@ -1557,6 +1586,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -1620,6 +1650,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -1676,9 +1707,11 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1731,6 +1764,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'delete own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -1814,6 +1848,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1823,8 +1858,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download any document files',
     'roles' => array(
       'administrator' => 'administrator',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1834,6 +1868,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1843,6 +1878,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1852,6 +1888,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -1863,6 +1900,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
@@ -1872,6 +1910,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download own image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -1884,6 +1923,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'download own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -1941,6 +1981,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -2005,6 +2046,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -2063,6 +2105,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any image files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -2126,6 +2169,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit any video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -2298,7 +2342,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: description',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -2362,7 +2409,10 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: image_src',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -2388,7 +2438,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: next'.
   $permissions['edit meta tag: next'] = array(
     'name' => 'edit meta tag: next',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2469,7 +2521,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: og:image',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -2486,7 +2540,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: og:image:secure_url'.
   $permissions['edit meta tag: og:image:secure_url'] = array(
     'name' => 'edit meta tag: og:image:secure_url',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2504,7 +2560,9 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit meta tag: og:image:url',
     'roles' => array(
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
       'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'metatag',
   );
@@ -2530,7 +2588,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: og:locale'.
   $permissions['edit meta tag: og:locale'] = array(
     'name' => 'edit meta tag: og:locale',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2546,56 +2606,72 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: og:locality'.
   $permissions['edit meta tag: og:locality'] = array(
     'name' => 'edit meta tag: og:locality',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:longitude'.
   $permissions['edit meta tag: og:longitude'] = array(
     'name' => 'edit meta tag: og:longitude',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:phone_number'.
   $permissions['edit meta tag: og:phone_number'] = array(
     'name' => 'edit meta tag: og:phone_number',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:postal_code'.
   $permissions['edit meta tag: og:postal_code'] = array(
     'name' => 'edit meta tag: og:postal_code',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:region'.
   $permissions['edit meta tag: og:region'] = array(
     'name' => 'edit meta tag: og:region',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:see_also'.
   $permissions['edit meta tag: og:see_also'] = array(
     'name' => 'edit meta tag: og:see_also',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:site_name'.
   $permissions['edit meta tag: og:site_name'] = array(
     'name' => 'edit meta tag: og:site_name',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:street_address'.
   $permissions['edit meta tag: og:street_address'] = array(
     'name' => 'edit meta tag: og:street_address',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2629,63 +2705,81 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: og:url'.
   $permissions['edit meta tag: og:url'] = array(
     'name' => 'edit meta tag: og:url',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:video:height'.
   $permissions['edit meta tag: og:video:height'] = array(
     'name' => 'edit meta tag: og:video:height',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:video:secure_url'.
   $permissions['edit meta tag: og:video:secure_url'] = array(
     'name' => 'edit meta tag: og:video:secure_url',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:video:type'.
   $permissions['edit meta tag: og:video:type'] = array(
     'name' => 'edit meta tag: og:video:type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:video:url'.
   $permissions['edit meta tag: og:video:url'] = array(
     'name' => 'edit meta tag: og:video:url',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: og:video:width'.
   $permissions['edit meta tag: og:video:width'] = array(
     'name' => 'edit meta tag: og:video:width',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: original-source'.
   $permissions['edit meta tag: original-source'] = array(
     'name' => 'edit meta tag: original-source',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: pragma'.
   $permissions['edit meta tag: pragma'] = array(
     'name' => 'edit meta tag: pragma',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: prev'.
   $permissions['edit meta tag: prev'] = array(
     'name' => 'edit meta tag: prev',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2719,14 +2813,18 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: profile:username'.
   $permissions['edit meta tag: profile:username'] = array(
     'name' => 'edit meta tag: profile:username',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: publisher'.
   $permissions['edit meta tag: publisher'] = array(
     'name' => 'edit meta tag: publisher',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2742,42 +2840,54 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: referrer'.
   $permissions['edit meta tag: referrer'] = array(
     'name' => 'edit meta tag: referrer',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: refresh'.
   $permissions['edit meta tag: refresh'] = array(
     'name' => 'edit meta tag: refresh',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: revisit-after'.
   $permissions['edit meta tag: revisit-after'] = array(
     'name' => 'edit meta tag: revisit-after',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: rights'.
   $permissions['edit meta tag: rights'] = array(
     'name' => 'edit meta tag: rights',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: robots'.
   $permissions['edit meta tag: robots'] = array(
     'name' => 'edit meta tag: robots',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
   // Exported permission: 'edit meta tag: shortlink'.
   $permissions['edit meta tag: shortlink'] = array(
     'name' => 'edit meta tag: shortlink',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -2793,7 +2903,9 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'edit meta tag: title'.
   $permissions['edit meta tag: title'] = array(
     'name' => 'edit meta tag: title',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'metatag',
   );
 
@@ -3187,6 +3299,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own audio files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -3253,6 +3366,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own document files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -3312,10 +3426,17 @@ function evergreen_content_user_default_permissions() {
   $permissions['edit own image files'] = array(
     'name' => 'edit own image files',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
+      'authenticated user' => 'authenticated user',
+      'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
   );
@@ -3370,6 +3491,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'edit own video files',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
     ),
@@ -3464,6 +3586,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import catalog feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3473,6 +3596,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import e2campus feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3482,6 +3606,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import faculty_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3500,6 +3625,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import office_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3509,6 +3635,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3518,6 +3645,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'import people_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3815,6 +3943,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock catalog feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3824,6 +3953,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock e2campus feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3833,6 +3963,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock faculty_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3842,6 +3973,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock office_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3851,6 +3983,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock office_directory_facility feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3860,6 +3993,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'unlock people_directory feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'feeds',
   );
@@ -3869,6 +4003,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'update evergreen_magazine entityqueue',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'entityqueue',
   );
@@ -3944,12 +4079,16 @@ function evergreen_content_user_default_permissions() {
   $permissions['use media wysiwyg'] = array(
     'name' => 'use media wysiwyg',
     'roles' => array(
+      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'media_wysiwyg',
   );
@@ -4006,8 +4145,9 @@ function evergreen_content_user_default_permissions() {
       'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
-      'authenticated user' => 'authenticated user',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
@@ -4022,6 +4162,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'filter',
   );
@@ -4031,6 +4172,7 @@ function evergreen_content_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'filter',
   );
@@ -4209,11 +4351,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'administrator' => 'administrator',
-      'advanced editor' => 'advanced editor',
-      'calendar review' => 'calendar review',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
-      'student groups' => 'student groups',
     ),
     'module' => 'file_entity',
   );
