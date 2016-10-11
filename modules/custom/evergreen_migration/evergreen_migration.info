@@ -23,6 +23,7 @@ features[feeds_importer][] = author_directory
 features[feeds_importer][] = calendar_events
 features[feeds_importer][] = campus_locations
 features[feeds_importer][] = entrepreneur_directory
+features[feeds_importer][] = faculty_categories_import
 features[feeds_importer][] = fields_of_study_import
 features[feeds_importer][] = hero_images
 features[feeds_importer][] = library_database_subjects
