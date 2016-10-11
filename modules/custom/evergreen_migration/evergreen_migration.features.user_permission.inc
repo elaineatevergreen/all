@@ -82,6 +82,15 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear scholarship_import feeds'.
+  $permissions['clear scholarship_import feeds'] = array(
+    'name' => 'clear scholarship_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'import alumni_circle_import feeds'.
   $permissions['import alumni_circle_import feeds'] = array(
     'name' => 'import alumni_circle_import feeds',
@@ -151,6 +160,15 @@ function evergreen_migration_user_default_permissions() {
   $permissions['import navigation_import feeds'] = array(
     'name' => 'import navigation_import feeds',
     'roles' => array(),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import scholarship_import feeds'.
+  $permissions['import scholarship_import feeds'] = array(
+    'name' => 'import scholarship_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
@@ -226,6 +244,15 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'tamper scholarship_import'.
+  $permissions['tamper scholarship_import'] = array(
+    'name' => 'tamper scholarship_import',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'unlock alumni_circle_import feeds'.
   $permissions['unlock alumni_circle_import feeds'] = array(
     'name' => 'unlock alumni_circle_import feeds',
@@ -261,6 +288,15 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'unlock fields_of_study_import feeds'.
+  $permissions['unlock fields_of_study_import feeds'] = array(
+    'name' => 'unlock fields_of_study_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'unlock hero_images feeds'.
   $permissions['unlock hero_images feeds'] = array(
     'name' => 'unlock hero_images feeds',
@@ -286,6 +322,15 @@ function evergreen_migration_user_default_permissions() {
   $permissions['unlock navigation_import feeds'] = array(
     'name' => 'unlock navigation_import feeds',
     'roles' => array(),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock scholarship_import feeds'.
+  $permissions['unlock scholarship_import feeds'] = array(
+    'name' => 'unlock scholarship_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds',
   );
 
