@@ -1017,15 +1017,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: 'clear scholarship_import feeds'.
-  $permissions['clear scholarship_import feeds'] = array(
-    'name' => 'clear scholarship_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'context ajax block access'.
   $permissions['context ajax block access'] = array(
     'name' => 'context ajax block access',
@@ -3540,15 +3531,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: 'import scholarship_import feeds'.
-  $permissions['import scholarship_import feeds'] = array(
-    'name' => 'import scholarship_import feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
@@ -3837,15 +3819,6 @@ function evergreen_content_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
-  // Exported permission: 'tamper scholarship_import'.
-  $permissions['tamper scholarship_import'] = array(
-    'name' => 'tamper scholarship_import',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds_tamper',
-  );
-
   // Exported permission: 'unlock catalog feeds'.
   $permissions['unlock catalog feeds'] = array(
     'name' => 'unlock catalog feeds',
@@ -3894,15 +3867,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'unlock people_directory feeds'.
   $permissions['unlock people_directory feeds'] = array(
     'name' => 'unlock people_directory feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'unlock scholarship_import feeds'.
-  $permissions['unlock scholarship_import feeds'] = array(
-    'name' => 'unlock scholarship_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
     ),
