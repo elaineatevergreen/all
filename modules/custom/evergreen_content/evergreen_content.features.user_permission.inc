@@ -4044,6 +4044,15 @@ function evergreen_content_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'use text format minimal_formatting'.
+  $permissions['use text format minimal_formatting'] = array(
+    'name' => 'use text format minimal_formatting',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'use workbench_media add form'.
   $permissions['use workbench_media add form'] = array(
     'name' => 'use workbench_media add form',
