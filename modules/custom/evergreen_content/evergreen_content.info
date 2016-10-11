@@ -1077,7 +1077,6 @@ features[user_permission][] = edit terms in event_formats
 features[user_permission][] = edit terms in faculty_directory_categories
 features[user_permission][] = edit terms in site_sections
 features[user_permission][] = edit webform components
-features[user_permission][] = execute php code
 features[user_permission][] = generate features
 features[user_permission][] = import catalog feeds
 features[user_permission][] = import e2campus feeds
