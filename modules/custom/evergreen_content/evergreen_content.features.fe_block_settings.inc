@@ -182,6 +182,28 @@ directory/combined',
     'visibility' => 0,
   );
 
+  $export['views-catalog-offerings_by_field'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'catalog-offerings_by_field',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'field_of_study',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-home_page_hero-block'] = array(
     'cache' => -1,
     'custom' => 0,
