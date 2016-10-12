@@ -28,6 +28,10 @@ theme for individual person pages
 	    
 	    <?php print render($content['field_interests']) ?>
 	    
+	    <h2>Related Subject Areas</h2>
+	    
+	    <?php print render($content['field_related_subjects_directory']) ?>
+	    
 	    
 	<?php }; ?>
     

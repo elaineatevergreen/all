@@ -5743,6 +5743,7 @@ return($term); ';
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Directory';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -6809,7 +6810,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -7109,16 +7110,149 @@ return($term); ';
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Faculty Directory';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'combine' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_faculty_directory_subject__target_id' => array(
+      'bef_format' => 'default',
+      'slider_options' => array(
+        'bef_slider_min' => '0',
+        'bef_slider_max' => '99999',
+        'bef_slider_step' => '1',
+        'bef_slider_animate' => '',
+        'bef_slider_orientation' => 'horizontal',
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'bef_filter_description' => NULL,
+        'any_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '- Any -|',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'extended_tags';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_headshot' => 'field_headshot',
     'title' => 'title',
     'field_expertise' => 'title',
+    'field_related_subjects_directory' => 'title',
     'field_phone' => 'field_phone',
     'field_email' => 'field_email',
     'field_building_alt' => 'field_room',
@@ -7126,6 +7260,13 @@ return($term); ';
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_headshot' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -7136,6 +7277,11 @@ return($term); ';
     'field_expertise' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_related_subjects_directory' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -7170,6 +7316,7 @@ return($term); ';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Headshot */
   $handler->display->display_options['fields']['field_headshot']['id'] = 'field_headshot';
@@ -7190,22 +7337,45 @@ return($term); ';
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Name';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'p-name';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   /* Field: Content: Expertise */
   $handler->display->display_options['fields']['field_expertise']['id'] = 'field_expertise';
   $handler->display->display_options['fields']['field_expertise']['table'] = 'field_data_field_expertise';
   $handler->display->display_options['fields']['field_expertise']['field'] = 'field_expertise';
-  $handler->display->display_options['fields']['field_expertise']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_expertise']['alter']['text'] = '<strong>Expertise:</strong> [field_expertise]';
+  $handler->display->display_options['fields']['field_expertise']['label'] = '';
+  $handler->display->display_options['fields']['field_expertise']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_expertise']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_expertise']['element_class'] = 'p-role';
+  $handler->display->display_options['fields']['field_expertise']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_expertise']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_expertise']['element_default_classes'] = FALSE;
+  /* Field: Content: Related Subjects (Directory) */
+  $handler->display->display_options['fields']['field_related_subjects_directory']['id'] = 'field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['table'] = 'field_data_field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['label'] = '';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['delta_offset'] = '0';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Name';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2 class="p-name">[title]</h2>
+<p class="expertise"><strong>Expertise:</strong> <span class="p-role">[field_expertise]</span></p>
+<p class="fos"><strong>Related Subjects:</strong> [field_related_subjects_directory] </p>';
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
@@ -7249,22 +7419,60 @@ return($term); ';
   $handler->display->display_options['filters']['field_is_faculty_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Name';
-  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
-  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['field_is_faculty_value']['group'] = 1;
+  /* Filter criterion: Global: Combine fields filter */
+  $handler->display->display_options['filters']['combine']['id'] = 'combine';
+  $handler->display->display_options['filters']['combine']['table'] = 'views';
+  $handler->display->display_options['filters']['combine']['field'] = 'combine';
+  $handler->display->display_options['filters']['combine']['operator'] = 'contains';
+  $handler->display->display_options['filters']['combine']['group'] = 1;
+  $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by Name or Expertise';
+  $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
+  $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
+  $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
     3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
     4 => 0,
   );
+  $handler->display->display_options['filters']['combine']['fields'] = array(
+    'title' => 'title',
+    'field_expertise' => 'field_expertise',
+  );
+  /* Filter criterion: Content: Related Subjects (Directory) (field_related_subjects_directory) */
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['table'] = 'field_data_field_related_subjects_directory';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['field'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator_id'] = 'field_related_subjects_directory_tid_op';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['label'] = 'Filter by Subject';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator'] = 'field_related_subjects_directory_tid_op';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['identifier'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['vocabulary'] = 'faculty_directory_categories';
   $handler->display->display_options['path'] = 'faculty';
 
   /* Display: Faculty not in directory */

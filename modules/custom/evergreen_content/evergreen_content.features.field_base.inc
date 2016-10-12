@@ -3083,6 +3083,32 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_related_subjects_directory'.
+  $field_bases['field_related_subjects_directory'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_related_subjects_directory',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'faculty_directory_categories',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_resource_link'.
   $field_bases['field_resource_link'] = array(
     'active' => 1,

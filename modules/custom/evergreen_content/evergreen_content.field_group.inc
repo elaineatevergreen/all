@@ -914,6 +914,7 @@ function evergreen_content_field_group_info() {
       2 => 'field_interests',
       3 => 'field_is_faculty',
       4 => 'field_faculty_directory_subject_',
+      5 => 'field_related_subjects_directory',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
