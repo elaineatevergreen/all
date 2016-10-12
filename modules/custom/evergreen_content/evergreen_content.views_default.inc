@@ -10726,6 +10726,12 @@ return($term); ';
   $handler->display->display_options['fields']['edit_node']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
