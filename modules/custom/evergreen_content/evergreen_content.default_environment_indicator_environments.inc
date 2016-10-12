@@ -17,7 +17,7 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->name = 'dev';
   $environment->regexurl = 'wwwdev.*';
   $environment->settings = array(
-    'color' => '#0e1af2',
+    'color' => '#af1910',
     'text_color' => '#ffffff',
     'weight' => '',
     'position' => 'top',
@@ -30,7 +30,7 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'live';
   $environment->name = 'Live';
-  $environment->regexurl = 'www.*';
+  $environment->regexurl = 'www.evergreen.edu';
   $environment->settings = array(
     'color' => '#2d8625',
     'text_color' => '#ffffff',
