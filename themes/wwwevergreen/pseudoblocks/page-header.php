@@ -42,7 +42,7 @@
 						<img alt="Search" src="<?php echo($imagepath) ?>search-w32.png"/>
 					</label>
 					<label class="student-toggle" for="internal-users-flag">
-						<img alt="Profile" src="<?php echo( $base_path . $directory) ?>/images/user-w32.png"/>
+						<img alt="Profile" src="<?php echo( $imagepath) ?>/images/user-w32.png"/>
 					</label>
 				</div>
 
