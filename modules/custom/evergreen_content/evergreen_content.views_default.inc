@@ -5359,11 +5359,66 @@ return($term); ';
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Database of Databases';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+    ),
+    'field_resource_subject_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'extended_tags';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -5489,6 +5544,14 @@ return($term); ';
 
   /* Display: Table with All */
   $handler = $view->new_display('block', 'Table with All', 'all');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>No databases are yet available.</p>';
+  $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -5506,32 +5569,34 @@ return($term); ';
     'library_database' => 'library_database',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Has taxonomy terms (with depth; Simple hierarchical select) */
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['id'] = 'shs_term_node_tid_depth';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['table'] = 'node';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['field'] = 'shs_term_node_tid_depth';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['value'] = 'All';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['operator_id'] = 'shs_term_node_tid_depth_op';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['label'] = 'Subject';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['operator'] = 'shs_term_node_tid_depth_op';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['identifier'] = 'shs_term_node_tid_depth';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Resource Subject (field_resource_subject) */
+  $handler->display->display_options['filters']['field_resource_subject_tid']['id'] = 'field_resource_subject_tid';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['table'] = 'field_data_field_resource_subject';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['field'] = 'field_resource_subject_tid';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_resource_subject_tid']['expose']['operator_id'] = 'field_resource_subject_tid_op';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['expose']['label'] = 'Database Subject';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['expose']['operator'] = 'field_resource_subject_tid_op';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['expose']['identifier'] = 'field_resource_subject_tid';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
+    12 => 0,
+    11 => 0,
     9 => 0,
-    7 => 0,
     6 => 0,
     3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
   );
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['vocabulary'] = 'database_of_databases';
-  $handler->display->display_options['filters']['shs_term_node_tid_depth']['depth'] = '1';
+  $handler->display->display_options['filters']['field_resource_subject_tid']['vocabulary'] = 'database_of_databases';
 
   /* Display: List of Featured */
   $handler = $view->new_display('block', 'List of Featured', 'featured');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
@@ -5660,7 +5725,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_resource_subject']['element_type'] = '0';
   $handler->display->display_options['fields']['field_resource_subject']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_resource_subject']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_resource_subject']['type'] = 'shs_default';
   $handler->display->display_options['fields']['field_resource_subject']['settings'] = array(
     'linked' => 0,
   );
@@ -6810,7 +6874,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -7356,7 +7420,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_expertise']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_expertise']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_expertise']['element_default_classes'] = FALSE;
-  /* Field: Content: Related Subjects (Directory) */
+  /* Field: Field: Related Subjects (Directory) */
   $handler->display->display_options['fields']['field_related_subjects_directory']['id'] = 'field_related_subjects_directory';
   $handler->display->display_options['fields']['field_related_subjects_directory']['table'] = 'field_data_field_related_subjects_directory';
   $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
@@ -7449,7 +7513,7 @@ return($term); ';
     'title' => 'title',
     'field_expertise' => 'field_expertise',
   );
-  /* Filter criterion: Content: Related Subjects (Directory) (field_related_subjects_directory) */
+  /* Filter criterion: Field: Related Subjects (Directory) (field_related_subjects_directory) */
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['table'] = 'field_data_field_related_subjects_directory';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['field'] = 'field_related_subjects_directory_tid';

@@ -1027,6 +1027,7 @@ function evergreen_migration_feeds_importer_default() {
           'xpathparser:2' => 'description',
           'xpathparser:3' => 'bayredirect',
           'xpathparser:4' => 'featured',
+          'xpathparser:5' => 'narrowsubject/div/ul/li',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -1034,6 +1035,7 @@ function evergreen_migration_feeds_importer_default() {
           'xpathparser:2' => 0,
           'xpathparser:3' => 0,
           'xpathparser:4' => 0,
+          'xpathparser:5' => 0,
         ),
         'context' => '/databases/resources',
         'exp' => array(
@@ -1045,6 +1047,7 @@ function evergreen_migration_feeds_importer_default() {
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
             'xpathparser:4' => 0,
+            'xpathparser:5' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -1084,6 +1087,12 @@ function evergreen_migration_feeds_importer_default() {
           4 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_featured',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_resource_subject',
             'unique' => FALSE,
           ),
         ),
