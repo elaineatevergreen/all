@@ -1,3 +1,43 @@
+#=================================
+#
+# Justin’s Grunt and Sass Nonsense
+#
+#=================================
+.sass-cache
+
+# Temporary "trash" folder; if there is no current trash folder, remove this line
+trash
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+libs
+
+custom-css/jquery.css
+custom-css/build/jquery.css
+themes/wwwevergreen/css/dist/custom-css/jquery.css
+
+# Ignore third-party libraries
+js/files
+
+# Ignore image and sprite stuff for now
+images/src/
+images/build/
+campus-life.html
+
 #================
 #
 # Drupal Nonsense
