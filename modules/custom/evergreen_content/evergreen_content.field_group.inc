@@ -13,6 +13,71 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|committee_page|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About this Committee',
+    'weight' => '5',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_members',
+      2 => 'field_other_members',
+      3 => 'field_charge',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'About this Committee',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_about|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|committee_page|form';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About this Committee',
+    'weight' => '8',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_short_description',
+      2 => 'field_charge',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_about|node|committee_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|location|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -932,6 +997,70 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_funding|node|committee_page|default';
+  $field_group->group_name = 'group_funding';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Funding',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_eligibility',
+      1 => 'field_upcoming_deadlines',
+      2 => 'webform',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Funding',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_funding|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_funding|node|committee_page|form';
+  $field_group->group_name = 'group_funding';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Funding',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_eligibility',
+      1 => 'field_upcoming_deadlines',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Funding',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-funding field-group-fieldset',
+        'description' => 'If this committee distributes funding, provide the details here. Otherwise, you may skip this section.',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_funding|node|committee_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_group|node|basic_page|form';
   $field_group->group_name = 'group_group';
   $field_group->entity_type = 'node';
@@ -1231,6 +1360,40 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_meetings|node|committee_page|default';
+  $field_group->group_name = 'group_meetings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Meetings',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_meetings',
+      1 => 'field_agendas',
+      2 => 'field_minutes',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Meetings',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_meetings|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_meetings|node|committee_page|form';
   $field_group->group_name = 'group_meetings';
   $field_group->entity_type = 'node';
@@ -1239,7 +1402,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Meetings',
-    'weight' => '6',
+    'weight' => '1',
     'children' => array(
       0 => 'field_meetings',
       1 => 'field_agendas',
@@ -1418,7 +1581,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Participants',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_members',
       1 => 'field_other_members',
@@ -1777,6 +1940,7 @@ function evergreen_content_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About the Building');
+  t('About this Committee');
   t('Additional Names');
   t('Additional Settings');
   t('Alumni Directories');
@@ -1798,6 +1962,7 @@ function evergreen_content_field_group_info() {
   t('Extended Subject Details');
   t('Faculty Information');
   t('Find Online');
+  t('Funding');
   t('Identity');
   t('Image float');
   t('Imported Content');

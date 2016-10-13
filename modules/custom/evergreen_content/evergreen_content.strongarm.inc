@@ -1207,23 +1207,60 @@ function evergreen_content_strongarm() {
       'contact_row' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full_name' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
-        ),
-        'redirect' => array(
           'weight' => '2',
         ),
+        'redirect' => array(
+          'weight' => '3',
+        ),
       ),
-      'display' => array(),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '9',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__committee_page'] = $strongarm;

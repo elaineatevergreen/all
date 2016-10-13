@@ -3712,7 +3712,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3754,7 +3754,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -3776,7 +3776,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3846,7 +3846,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3894,7 +3894,69 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_eligibility'.
+  $field_instances['node-committee_page-field_eligibility'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What are the general requirements for someone to apply for funding from this committee?',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_eligibility',
+    'label' => 'Eligibility',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -3913,11 +3975,11 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3976,10 +4038,10 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4034,7 +4096,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4105,7 +4167,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 9,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4161,11 +4223,11 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4202,7 +4264,80 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_upcoming_deadlines'.
+  $field_instances['node-committee_page-field_upcoming_deadlines'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_upcoming_deadlines',
+    'label' => 'Upcoming Deadlines',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'display_all_day' => 0,
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -7933,7 +8068,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -7987,7 +8122,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -8041,7 +8176,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -8150,7 +8285,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -9101,7 +9236,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_resource_subject',
     'label' => 'Resource Subject',
     'required' => 0,
@@ -9111,9 +9246,15 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
       'weight' => 8,
     ),
     'workbench_access_field' => 0,
@@ -12108,6 +12249,7 @@ function evergreen_content_field_default_field_instances() {
   t('Display Name');
   t('Display in alumni directories');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
+  t('Eligibility');
   t('Email');
   t('End Term');
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
@@ -12311,6 +12453,7 @@ function evergreen_content_field_default_field_instances() {
   t('Twitter');
   t('Under-represented');
   t('Undergrad');
+  t('Upcoming Deadlines');
   t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
   t('Upload meeting agendas in PDF or Word format.');
   t('Upper Division Science Credit');
@@ -12322,6 +12465,7 @@ function evergreen_content_field_default_field_instances() {
   t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Website');
   t('Websites');
+  t('What are the general requirements for someone to apply for funding from this committee?');
   t('What even <em>is</em> Evergreen?');
   t('When the import is run from the CMD, this value should be set to 1.');
   t('Where did they come from before they went to Evergreen?');
