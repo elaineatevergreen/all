@@ -31,12 +31,12 @@ custom-css/build/jquery.css
 themes/wwwevergreen/css/dist/custom-css/jquery.css
 
 # Ignore third-party libraries
-js/files
+themes/wwwevergreen/js/files/
 
 # Ignore image and sprite stuff for now
-images/src/
-images/build/
-campus-life.html
+themes/wwwevergreen/images/src/
+themes/wwwevergreen/images/build/
+themes/wwwevergreen/campus-life.html
 
 #================
 #
