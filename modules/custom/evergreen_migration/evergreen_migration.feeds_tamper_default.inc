@@ -400,6 +400,23 @@ function evergreen_migration_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'library_databases-xpathparser_2-find_replace_regex';
+  $feeds_tamper->importer = 'library_databases';
+  $feeds_tamper->source = 'xpathparser:2';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/\\s/',
+    'replace' => ' ',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace REGEX';
+  $export['library_databases-xpathparser_2-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'library_databases-xpathparser_4-convert_boolean';
   $feeds_tamper->importer = 'library_databases';
   $feeds_tamper->source = 'xpathparser:4';

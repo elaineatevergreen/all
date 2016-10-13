@@ -13,32 +13,32 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment = new stdClass();
   $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
   $environment->api_version = 1;
-  $environment->machine = 'collabtest';
-  $environment->name = 'Test/Collabtest';
-  $environment->regexurl = 'collabtest.*';
+  $environment->machine = 'dev';
+  $environment->name = 'dev';
+  $environment->regexurl = 'wwwdev.*';
   $environment->settings = array(
-    'color' => '#888888',
+    'color' => '#af1910',
     'text_color' => '#ffffff',
     'weight' => '',
     'position' => 'top',
     'fixed' => 0,
   );
-  $export['collabtest'] = $environment;
+  $export['dev'] = $environment;
 
   $environment = new stdClass();
   $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
   $environment->api_version = 1;
-  $environment->machine = 'live_collab';
-  $environment->name = 'Live/Collab';
-  $environment->regexurl = 'collab\\..*';
+  $environment->machine = 'live';
+  $environment->name = 'Live';
+  $environment->regexurl = 'www.evergreen.edu';
   $environment->settings = array(
-    'color' => '#a9a9a9',
+    'color' => '#2d8625',
     'text_color' => '#ffffff',
     'weight' => '',
     'position' => 'top',
     'fixed' => 0,
   );
-  $export['live_collab'] = $environment;
+  $export['live'] = $environment;
 
   $environment = new stdClass();
   $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
@@ -47,13 +47,28 @@ function evergreen_content_default_environment_indicator_environment() {
   $environment->name = 'Dev/Localhost';
   $environment->regexurl = 'localhost*';
   $environment->settings = array(
-    'color' => '#aa3333',
+    'color' => '#aa33a0',
     'text_color' => '#ffffff',
     'weight' => '99',
     'position' => 'top',
     'fixed' => 0,
   );
   $export['localhost'] = $environment;
+
+  $environment = new stdClass();
+  $environment->disabled = FALSE; /* Edit this to true to make a default environment disabled initially */
+  $environment->api_version = 1;
+  $environment->machine = 'test';
+  $environment->name = 'Test';
+  $environment->regexurl = 'wwwtest.*';
+  $environment->settings = array(
+    'color' => '#113dc2',
+    'text_color' => '#ffffff',
+    'weight' => '',
+    'position' => 'top',
+    'fixed' => 0,
+  );
+  $export['test'] = $environment;
 
   return $export;
 }

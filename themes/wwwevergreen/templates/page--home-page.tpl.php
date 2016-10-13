@@ -19,7 +19,7 @@ We'll have to do something about that.
 				*/
 			
 			//main site
-			if($evergreen_blocks == 1):
+			if(!empty($evergreen_blocks)):
 				staticblocks('page-header');
 			
 			// markup & regions for service center sites
@@ -107,7 +107,7 @@ We'll have to do something about that.
 					another place where we switch between the standard Evergreen footer 
 					and possible service center footers.
 				*/
-				if ($evergreen_blocks == 1): 
+				if (!empty($evergreen_blocks)):
 					staticblocks('page-footer');
 				else: 
 					print render($page['footer']); 

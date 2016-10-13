@@ -143,23 +143,6 @@ function evergreen_content_user_default_permissions() {
     'name' => 'access environment indicator',
     'roles' => array(
       'administrator' => 'administrator',
-    ),
-    'module' => 'environment_indicator',
-  );
-
-  // Exported permission: 'access environment indicator collabtest'.
-  $permissions['access environment indicator collabtest'] = array(
-    'name' => 'access environment indicator collabtest',
-    'roles' => array(
-      'academics editor' => 'academics editor',
-      'administrator' => 'administrator',
-      'advanced editor' => 'advanced editor',
-      'alumni programs' => 'alumni programs',
-      'calendar review' => 'calendar review',
-      'librarian' => 'librarian',
-      'news promoter' => 'news promoter',
-      'site editor' => 'site editor',
-      'student groups' => 'student groups',
       'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'environment_indicator',
@@ -168,16 +151,6 @@ function evergreen_content_user_default_permissions() {
   // Exported permission: 'access environment indicator default_environment'.
   $permissions['access environment indicator default_environment'] = array(
     'name' => 'access environment indicator default_environment',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'student worker administrator' => 'student worker administrator',
-    ),
-    'module' => 'environment_indicator',
-  );
-
-  // Exported permission: 'access environment indicator live_collab'.
-  $permissions['access environment indicator live_collab'] = array(
-    'name' => 'access environment indicator live_collab',
     'roles' => array(
       'administrator' => 'administrator',
       'student worker administrator' => 'student worker administrator',
@@ -349,13 +322,10 @@ function evergreen_content_user_default_permissions() {
   $permissions['access workbench access by role'] = array(
     'name' => 'access workbench access by role',
     'roles' => array(
-      'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
-      'calendar review' => 'calendar review',
-      'news promoter' => 'news promoter',
       'site editor' => 'site editor',
-      'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_access',
   );
@@ -1970,6 +1940,7 @@ function evergreen_content_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
+      'site editor' => 'site editor',
     ),
     'module' => 'file_entity',
   );
@@ -3892,10 +3863,13 @@ function evergreen_content_user_default_permissions() {
       'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_moderation',
   );
@@ -3907,10 +3881,13 @@ function evergreen_content_user_default_permissions() {
       'academics editor' => 'academics editor',
       'administrator' => 'administrator',
       'advanced editor' => 'advanced editor',
+      'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
       'student groups' => 'student groups',
+      'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'workbench_moderation',
   );

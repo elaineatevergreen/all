@@ -1,8 +1,7 @@
 name = www.evergreen.edu
 description = A custom experimental template, created for The Evergreen State College.
 core = 7.x
- 
-stylesheets[all][] = css/style.css
+
 ;Justin's styles downloaded from github
 stylesheets[all][] = css/build/styles.css
 ;Scripts & stylesheets added by Naomi for home page and slick slider

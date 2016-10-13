@@ -19,11 +19,18 @@ theme for individual person pages
     
     <?php if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { ?>
 	    
+	    
+	    
 	    <?php print render($content['field_background']) ?>
 	    
 	    <?php print render($content['field_expertise']) ?>
 	    
+	    
 	    <?php print render($content['field_interests']) ?>
+	    
+	    <h2>Related Subject Areas</h2>
+	    
+	    <?php print render($content['field_related_subjects_directory']) ?>
 	    
 	    
 	<?php }; ?>

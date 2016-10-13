@@ -278,9 +278,9 @@ function evergreen_content_field_group_info() {
     'label' => 'Basics',
     'weight' => '15',
     'children' => array(
-      0 => 'group_identity',
-      1 => 'group_contact',
-      2 => 'group_faculty',
+      0 => 'group_contact',
+      1 => 'group_faculty',
+      2 => 'group_identity',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -909,10 +909,12 @@ function evergreen_content_field_group_info() {
     'label' => 'Faculty Information',
     'weight' => '18',
     'children' => array(
-      0 => 'field_expertise',
-      1 => 'field_interests',
-      2 => 'field_background',
+      0 => 'field_background',
+      1 => 'field_expertise',
+      2 => 'field_interests',
       3 => 'field_is_faculty',
+      4 => 'field_faculty_directory_subject_',
+      5 => 'field_related_subjects_directory',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1051,11 +1053,11 @@ function evergreen_content_field_group_info() {
     'label' => 'Identity',
     'weight' => '16',
     'children' => array(
-      0 => 'field_first_name',
-      1 => 'field_job_title',
-      2 => 'field_last_name',
-      3 => 'field_cas_name',
-      4 => 'field_headshot',
+      0 => 'field_cas_name',
+      1 => 'field_first_name',
+      2 => 'field_headshot',
+      3 => 'field_job_title',
+      4 => 'field_last_name',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
