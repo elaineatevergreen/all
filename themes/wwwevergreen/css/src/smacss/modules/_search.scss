@@ -1,0 +1,60 @@
+/**
+ * D. Search
+ *
+ * The search form on the top right of every page.
+ */
+
+[type="search"],
+#search-block-form,  // Drupal service center site top search form
+#edit-search-block-form--2{  // Drupal service center site top search form input
+	// box model
+	margin: 0 -100% 0 0;
+	width: 100%;
+	// layout
+	appearance: none;
+	position: relative;
+}
+
+#edit-search-block-form--2{
+	width: 100%;
+	max-width: none;
+}
+
+#edit-actions--2{
+	// layout
+	float: right;
+	// position
+	position: relative;
+}
+
+.search-button,
+#search-block-form #edit-submit,  // Drupal service center site top search form
+#search-block-form #edit-submit--2{  // Drupal service center secondary content search, when logged out(?)
+	// box model
+	border-width: 1px 1px 1px 0;
+	height: 1.875rem;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding: 2px;
+	// layout
+	appearance: none;
+	float: right;
+	position: relative;
+	// typography
+	vertical-align: top;
+	// decoration
+	background: none $tint;
+	border-color: mix($tint, $blueberry-susan, 60%);
+	border-radius: 0;
+	box-shadow: none;
+	// miscellaneous
+	cursor: pointer;
+
+	&:hover{
+		background: none mix($tint, $shade, 80%);
+	}
+}
+
+.search-button > img{
+	max-height: 100%;
+}

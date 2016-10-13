@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+.dir-people-index,
+.dir-facilities-index{
+	// layout
+	display: block;
+	
+	> thead{
+		display: none;
+	}
+	
+	> tbody,
+	> tbody tr,
+	> tbody td{
+		display: block;
+	}
+	
+	> tbody tr{
+		// box model
+		border: 1px solid mix(white, $blueberry-susan, 66%);
+		@include margin-default;
+		// backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-radius: 2px;
+		// misc
+		box-shadow: 0 1px 1px $drop-shadow;
+	}
+	
+	> tbody td{
+		border-top-width: 0;
+		padding: 0;
+		margin: 0 1em;
+		
+		&:first-child{
+			margin-top: 1.07142857142857em;  // 15/14
+		}
+		
+		&:last-child{
+			margin-bottom: 0.53571428571429em;  // 7.5/14
+		}
+	}
+	
+	@include breakpoint($drax){
+		
+		> thead{
+			display: table-header-group;
+		}
+		
+		> tbody{
+			display: table-row-group;
+		}
+		
+		> tbody tr{
+			// box model
+			border-width: 0;
+			// layout
+			display: table-row;
+			// typography
+			text-align: left;
+			// backgrounds & borders
+			background-color: transparent;
+			border-radius: 0;
+			// misc
+			box-shadow: none;
+		}
+		
+		> tbody td{
+			// box model
+			border-top-width: 1px;
+			margin: 0;
+			padding: 0.37037em 1.11111em 1.11111em 0;
+			// layout
+			display: table-cell;
+			
+			&:first-child,
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+}
+
+.dir-people-index .p-name{
+	font-weight: bold;
+}
+
+.dir-key{
+	font-weight: bold;
+}
+
+.dir-phone-list .dir-key{
+	font-weight: normal;
+}
+
+.dir-phone,
+.dir-mailstop{
+	letter-spacing: .066em;
+	
+	&::before{
+		letter-spacing: 0;
+	}
+}
+
+.dir-email::before{
+	content: "Email: ";
+}
+.dir-location::before{
+	content: "Location: ";
+}
+.dir-mailstop::before{
+	content: "Mailstop: ";
+}
+.dir-phone::before{
+	content: "Phone: ";
+}
+
+@include breakpoint($drax){
+	.dir-email::before,
+	.dir-location::before,
+	.dir-mailstop::before,
+	.dir-phone::before{
+		content: "";
+	}
+}

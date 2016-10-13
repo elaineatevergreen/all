@@ -1,0 +1,37 @@
+{
+  "name": "Evergreen",
+  "version": "1.0.0",
+  "description": "Website of The Evergreen State College",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://revoltpuppy@github.com/revoltpuppy/Evergreen"
+  },
+  "author": "Justin McDowell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revoltpuppy/Evergreen/issues"
+  },
+  "homepage": "https://evergreen.edu",
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-concat": "1.0.x",
+    "grunt-contrib-copy": "1.x",
+    "grunt-contrib-imagemin": "1.x",
+    "grunt-contrib-jshint": "1.x",
+    "grunt-contrib-nodeunit": "1.0.x",
+    "grunt-contrib-sass": "1.0.x",
+    "grunt-contrib-uglify": "2.x",
+    "grunt-contrib-watch": "1.x",
+    "grunt-newer": "1.2.x",
+    "grunt-perfbudget": "^0.1.8",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass-lint": "^0.2.0",
+    "grunt-svgstore": "1.x",
+    "postcss-reporter": "^1.4.1"
+  },
+  "_comment": "Run “npm update” in the project directory to get the latest version of dependencies."
+}

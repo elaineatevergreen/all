@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/**
+ * Search Styles
+ *
+ * Style overrides for the Google search engine results page integrated
+ * into Evergreen’s website.
+ *
+ * These styles were originally developed by Justin McDowell.
+ */
+@import "../tools";
+
+#___gcse_0 .cse .gsc-control-cse,
+#___gcse_0 .gsc-control-cse{  // search tool wrapper
+	// box model
+	border-width: 0;
+	padding: 0;
+	// backgrounds & borders
+	background-color: transparent;
+}
+
+.gsc-control-cse,
+.gsc-control-cse{
+	font-family: "proxima-nova" $text-face !important;  // Proxima Nova is included as a Typekit override
+}
+
+.gsc-control-cse table{
+	margin: 0;
+}
+.gsc-control-cse td{
+	border-width: 0;
+	padding: 0;
+}
+.gsc-control-wrapper-cse form.gsc-search-box,
+.gsc-control-wrapper-cse table.gsc-search-box{
+	margin: 0;
+}
+.gsc-input
+.gsc-input:focus,
+.gsc-clear-button{
+	// box model
+	padding: 0;
+	// backgrounds and borders
+	box-shadow: none;
+}
+.gsc-input .gsc-input-box{
+	height: auto;
+}
+
+// Input row
+.gsc-control-cse .gsib_a{
+    padding: 4px 8px;
+}
+.gsst_b .gsst_a{  // clear search input (the little x)
+	border-bottom: none;
+}
+// Search button
+.gsc-search-box input.gsc-search-button,
+.cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,
+.gsc-search-box input.gsc-search-button-v2{
+	// box model
+	box-sizing: content-box;
+	height: auto;
+  margin: 0;
+  padding: 7px 4ch;
+  width: auto;
+  // layout
+  display: block;
+  // backgrounds and borders
+  box-shadow: none;
+}
+
+// Sort by
+div.gsc-selected-option-container{
+	padding: 0 3ch 0 1ch;
+	width: auto !important;
+	max-width: none;
+	min-width: 0;
+}
+
+// Spelling
+// e.g. Showing results for catalog. Search instead for cataglog.
+.gs-result .gs-spelling{
+	padding: 0;
+	display: inline;
+}
+.gs-spelling::after{
+	content: ". "
+}
+
+// Area between the search box and the results
+.gsc-control-wrapper-cse .gsc-above-wrapper-area{
+	padding: 0;
+}
+
+// Google search results page
+.gsc-results{
+	width: 100%;
+}
+.gsc-results .gsc-webResult.gsc-result,
+.gsc-results .gsc-webResult.gsc-result:hover,
+.gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{
+	// box model
+	border-width: 0;
+	// backgrounds & borders
+	background-color: transparent;
+}
+
+// Promoted results
+.gsc-webResult.gsc-result.gsc-promotion{
+	border-width: 0;
+	padding: 0.37037037037037em 2% 1.111111111111111em 2%;  // 5/13.5 // 15/13.5
+	background-color: #c8e7fd;
+}
+// Normal results
+.gsc-result .gs-result .gs-title{
+	// box model
+	height: auto;
+	// typography
+	text-decoration: none;
+}
+
+.gsc-result .gs-result .gs-title .gs-title *{  // Emphasized portions of the search result title
+	// typography
+	font-size: inherit;
+	font-style: italic;
+	text-decoration: none;
+}
+
+#___gcse_0 .gsc-control-cse,
+#___gcse_0 .gsc-control-cse .gsc-table-result,
+#___gcse_0 .gs-result .gsc-control-cse,
+#___gcse_0 .gs-result .gsc-control-cse .gsc-table-result{
+	font-size: 0.875rem;
+	line-height: 1.607142857142857;  // 22.5/14
+}
+
+.gs-result .gsc-thumbnail-inside,
+.gs-result .gsc-url-top{
+	padding: 0;
+}
+#___gcse_0 .gsc-control-cse .gs-spelling,
+#___gcse_0 .gsc-control-cse .gs-result .gs-title{
+	font-size: 1.063rem;
+	line-height: 1.323529411764706;
+}
+
+.gs-image-box.gs-web-image-box{
+	padding: 0;
+}
+
+.gs-result .gs-image-box img.gs-image,  // Emages in search results
+.gs-result .gs-image-box img.gs-promotion-image{
+	border-color: mix(black, $sky-blue, 60%);
+}
+
+// Autocomplete box
+.gssb_c{
+	margin: 0;
+}
+.gssb_e .gsc-completion-container,
+.gssb_a,
+.gsc-completion-container tr > td{
+	border-width: 0;
+}
+.gsc-completion-container .gssb_l{
+	margin: 0;
+}
+
+// Pagination
+.gsc-results .gsc-expansionArea .gsc-cursor-box{
+	@include margin-default;
+	
+	@include breakpoint($starlord){
+		@include margin-default-lg;
+	}
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor{
+	
+	@include breakpoint($lil-groot){
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.gsc-cursor-page{
+		// box model
+		margin-right: 0;
+		padding: 0 .3333333333em;
+		// backgrounds and borders
+		border-radius: 2px;
+		// typography
+		font-weight: bold;
+		
+		@include breakpoint($starlord){
+			// box model
+			padding: 0 1em;
+		}
+		
+		&.gsc-cursor-current-page{
+			@include base-type-lg;
+		}
+	}
+}

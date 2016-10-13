@@ -1,0 +1,296 @@
+/**
+ * D. Tertiary Nav
+ *
+ * The contextual nav that each site can have (typically on the
+ * left-hand side).
+ *
+ * Table of Contents
+ *
+ * 1. Default Tertiary Nav
+ * 2. Homepage Tertiary Nav
+ */
+
+/**
+ * 1. Default Tertiary Nav
+ */
+.tertiary-nav-wrapper{
+	width: 100%;
+	max-width: calc(100% - 0.5em);
+	min-height: 1px;  // gives the box layout even when empty (taking pity on IE 9)
+
+	@include breakpoint($rocket){
+		max-width: 345px;  // the other significant number in the grid system
+	}
+
+	@include breakpoint($gamora){
+		width: 20%;  // 1/5
+	}
+
+	@include breakpoint($drax){
+		width: 14.285714285714%;  // 1/7
+	}
+}
+
+#tertiary-nav{
+	// box model
+	margin: 0 auto;
+	padding-right: 0;
+	width: 100%;
+	max-width: none;
+	// layout
+	z-index: 1;  // Fixes an issue where the nav goes under the content in #index-wrapper.
+	// typography
+	@include base-type;
+
+	@include breakpoint($starlord){
+		margin: 0 auto calc(15 / 16 * 1rem);
+		max-width: 66.6666666666%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		//margin-top: calc(30 / 16 * 1rem);
+		padding-top: calc(45 / 16 * 1rem);
+		width: calc(100% + 1em);
+		max-width: none;
+		// position
+		position: relative;
+		// backgrounds and borders
+		border-radius: 0;
+
+		.index-wrapper &{
+			// box model
+			width: 20.01953125%;  // 410/2048
+		}
+	}
+
+	@include breakpoint($drax){
+		// typography
+		@include base-type-lg;
+
+		.index-wrapper &{
+			// box model
+			margin-top: 1rem;
+		}
+	}
+}
+
+#tertiary-nav > ul{
+	margin-right: 1em;
+
+	@include breakpoint($gamora){
+		//margin-top: calc(30 / 16 * 1rem);
+		margin-top: 0;
+	}
+}
+
+#tertiary-nav .accordion{
+	border-width: 0;
+	background-color: transparent;
+
+	dd{
+		background-color: transparentize($tint, 0.75);
+	}
+}
+
+.tertiary-nav-list,
+.tertiary-related-links,
+.tertiary-related-links > li > ul{
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.tertiary-nav-h{  // heading for tertiary nav in wider views
+	//box model
+	margin-top: 0;  // compensate for border
+	margin-bottom: 0;
+	padding: 0.631100639515315em 0;  // 15/11.884/2
+	//typography
+	@include base-type;
+
+	@include breakpoint($gamora){
+		//box model
+		border-bottom: 1px solid mix($shade, $sky-blue, 50%);
+		margin-bottom: -1px;
+		padding: 0;
+		//layout
+		display: block;
+		//typography
+		font-size: 1.202rem;  // 19.232px
+		line-height: 1.559900166389351;  // 30/19.232
+	}
+}
+
+.tertiary-nav-list li,
+.tertiary-related-links > li > ul > li,
+#tertiary-nav dd > ul li{  //WYSIWYG
+	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+
+	@include breakpoint($gamora){
+		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
+	}
+}
+
+.tertiary-nav-list a,
+#tertiary-nav dd > ul a,  // Cascade WYSIWYG
+.tertiary-related-links a{
+	// box model
+	border-bottom-width: 0;
+	// typography
+	font-weight: normal;
+}
+
+/*@include breakpoint($gamora){
+	.tertiary-nav-h,
+	a.tertiary-nav-h{  // heading for tertiary nav in wider views
+		border-bottom: 1px solid mix(black, $sky-blue, 50%);
+		margin-top: -1px;  // compensate for border
+		display: block;
+		//color: mix(black, $sky-blue, 50%);
+		font-weight: bold;
+	}
+}*/
+
+/**
+ * 2. Homepage Tertiary Nav
+ */
+#tertiary-nav.tertiary-nav-homepage{
+
+	@include breakpoint($gamora){
+		// box model
+		margin-left: calc(-25% + 1em);
+		width: calc(25% + 1.5em);
+		// layout
+		position: absolute;
+		left: 0;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-left: calc(-16.6666666667% + 1em);
+		width: calc(16.6666666667% + 1em);
+	}
+}
+
+/**
+ * CSS Accordion
+ *
+ * An accordion that relies on radio buttons and labels instead of JavaScript.
+ *
+ * @see http://cssconf.com/talk-seddon.html
+ */
+[name="accordion-group"]{
+	display: none;  // Hide all actual checkboxes; they are activated by their labels
+}
+
+.accordion-h label::before{
+	// layout
+	display: inline-block;
+	// typgography
+	color: $shade;
+	// miscellaneous
+	content: "▶\00A0";  // non-breaking space
+
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+[name="accordion-group"] + .accordion-h label::before{
+	transition: transform 0.1s linear;
+}
+
+[name="accordion-group"]:checked + .accordion-h label::before{
+	// animations, transforms, and transitions
+	transform: rotate(90deg);
+	transition: transform 0.1s linear;
+}
+
+.tertiary-nav-h label{
+	// typography
+	color: $wine;
+	// misc
+	cursor: pointer;
+
+	&:hover{
+		color: $sky-blue;
+	}
+
+	@include breakpoint($gamora){
+		// typography
+		color: mix($shade, $sky-blue, 50%);
+		// misc
+		cursor: default;
+
+		&:hover{
+			color: mix($shade, $sky-blue, 50%);
+		}
+	}
+}
+
+[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
+	display: inline;
+}
+
+[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
+	display: none;
+}
+
+[name="accordion-group"] ~ h4 .accordion-dismiss{
+	display: none;
+}
+
+[name="accordion-group"]:checked ~ h4 .accordion-dismiss{
+	display: inline;
+}
+
+.accordion-body{
+	// box model
+	border-bottom: 1px solid $shade;
+	height: auto;
+	max-height: 0;
+	// layout
+	overflow: hidden;
+	// decoration
+	background-color: transparentize($tint, 0.75);
+	// misc
+	box-shadow: 0 2px 2px $drop-shadow inset;
+	// transition
+	transition: max-height 0.25s ease 0s;
+
+	@include breakpoint ($gamora){
+		border-bottom-width: 0;
+		max-height: 600px;
+		// decoration
+		background-color: transparent;
+		// misc
+		box-shadow: none;
+	}
+
+	@include breakpoint($drax){
+		max-height: none;
+	}
+}
+
+#tertiary-nav li:last-child .accordion-body{
+	border-bottom-width: 0;
+}
+
+[name="accordion-group"]:checked ~ .accordion-body{
+	// box model
+	max-height: 500px;
+	// transition
+	transition-duration: 0.75s;
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}
+
+ul.accordion-inner{
+	padding: 0 2%;  // 15/11.884/2
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}

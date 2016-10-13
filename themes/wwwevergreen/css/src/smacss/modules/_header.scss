@@ -1,0 +1,658 @@
+/**
+ * A. Header
+ *
+ * The header at the top of every page.
+ *
+ * Table of Contents
+ *
+ * 1. Mobile Header Widgets
+ * 2. Logo
+ * 3. Header Search
+ * 4. Primary Nav
+ * 5. Secondary Nav
+ * 6. Site Name
+ */
+
+/**
+ * 1. Mobile Header Widgets
+ *
+ * Togglable dropdowns for internal user links and search bar.
+ */
+.header-dropdowns{
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 49%;
+		// layout
+		float: right;
+	}
+
+	@include breakpoint($drax){
+		width: 40%;
+	}
+
+	@include breakpoint($groot){
+		width: 20%;
+	}
+}
+
+input[name="header-toggle"]{  // Don't show the checkboxes
+	//display: none; Note, this causes a bug in Mobile Safari where one checkbox label can’t be pressed immediately after another.
+	position: absolute;  // Removes from the document flow
+	visibility: hidden;  // Hides the checkbox
+}
+
+input + .header-dropdown{
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.5s all ease;
+}
+
+input:checked + .header-dropdown{
+	max-height: 8em;
+	transition: 0.5s all ease;
+}
+
+.internal-users,
+.header-dropdown .search{
+	// box model
+	width: 100%;
+}
+
+.internal-users{
+	// box model
+	margin-top: 0;
+	// layout
+	overflow: hidden;
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 80%);
+}
+
+.internal-users > li{
+	// box model
+	padding: 0.9375rem 1em;  // 15px
+	width: 50%;
+	// layout
+	float: left;
+}
+
+.internal-users img{
+	// box model
+	margin-right: 5px;  // magic-number
+	width: 10px;  // magic-number; visually fits with text height
+	// layout
+	display: inline-block;
+}
+
+#search-flag + .header-dropdown{
+	@include breakpoint($gamora){
+		max-height: none;
+		overflow: visible;
+	}
+}
+
+.header-dropdown .search,
+.header-dropdown #search-block-form{  // Drupal service center site top search form
+	margin: 0;
+	padding: 0.9375rem 1em;  // 15px
+	overflow: hidden;
+	background-color: mix($tint, $evergreen-neue, 80%);
+
+	@include breakpoint($gamora){
+		// box model
+		padding: 0.9375rem 1em 0.9375rem 0;  //Use padding for height calculations in JS.
+		// layout
+		float: right;
+		// backgrounds & borders
+		background-color: transparent;
+	}
+}
+
+.page-header{
+	width: 100%;
+
+	@include breakpoint($gamora){
+		width: 51%;
+	}
+
+	@include breakpoint($drax){
+		width: 60%;
+	}
+}
+
+/**
+ * 2. Logo
+ */
+.logo{
+	margin: 0.46875rem 0.5em 0;  // 7.5px 7px 7px
+	width: calc(100% - 1em);
+
+	@include breakpoint($lil-groot){
+		// box model
+		width: 58%;
+		// layout
+		float: left;
+	}
+
+	@include breakpoint($starlord){
+		//width: 58%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		//width: 48%;
+		width: auto;
+		// layout
+		float: none;
+	}
+
+	@include breakpoint($drax){
+		//width: 36%;
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-right: auto;
+		margin-bottom: 1em;
+		margin-left: auto;
+		//width: 20%;
+		// layout
+		float: none;
+		// typography
+		text-align: center;
+	}
+
+	a,
+	a:visited,
+	a:hover{
+		border-bottom-width: 0;
+	}
+
+	img{
+		max-height: 4em;
+
+		@include breakpoint($groot){
+			max-height: none;  // max-height doesn't center correctly in Blink.
+			max-width: 20em;
+		}
+	}
+}
+
+/**
+ * 3. Header Search
+ *
+ * @section mod-header-search
+ */
+[for="q"]{
+	height: 0;
+	width: 0;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+}
+
+.off-canvas{
+	margin-right: 2%;
+}
+
+.search-toggle,   // button to reveal search
+.student-toggle{  // button to reveal profile
+	// box model
+	padding: 0 0.618em;
+	min-width: 22px;
+	// layout
+	float: right;
+	// typography
+	text-align: center;
+	text-decoration: none;
+
+	@include breakpoint($gamora){
+		display: none;
+	}
+}
+
+.search-toggle{
+	border-radius: 0 0 4.5px;
+}
+
+.student-toggle{
+	border-right: 1px solid mix($tint, $shade, 20%);
+	border-radius: 0 0 0 4.5px;
+}
+
+.search-toggle,
+.student-toggle{
+	border-bottom-width: 0;
+}
+
+.search-toggle:hover,
+.student-toggle:hover{
+	// backgrounds & borders
+	//background-color: $blueberry-susan; // Causes a weird bug on mobile that keeps active link purple
+	// misc
+	cursor: pointer;
+}
+
+.search-toggle > img,
+.student-toggle > img{
+	margin: 0.46875rem auto;  // 7.5px
+	width: 17px;
+	display: block;
+}
+
+.student-toggle > img{
+	padding-top: 1px;  // Compensate for matching search icon height
+}
+
+#top-search-query,  // deprecated, use #q
+#q,
+.top-search button{
+	margin-bottom: 0;
+}
+
+[placeholder]:focus::-webkit-input-placeholder{  // Safari & Chrome
+	color: transparent;
+}
+
+[placeholder]:focus::-moz-placeholder{  // Firefox
+	color: transparent;
+}
+
+[placeholder]:focus:-ms-placeholder{  // IE
+	color: transparent;
+}
+
+.internal-users,
+.search-tools{
+	margin-bottom: 0;
+
+	@include breakpoint($starlord){
+		@include base-type-lg;
+	}
+
+	@include breakpoint($groot){
+		@include base-type-xl;
+	}
+}
+
+.search-tools{
+	// box model
+	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	// typography
+	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
+}
+
+.search-tools li{
+	display: inline;
+
+	&::after{
+		content: " | ";
+	}
+
+	&:last-child::after{
+		content: "";
+	}
+
+	@include breakpoint($groot){
+		display: block;
+
+		&:after{
+			content: "";
+		}
+
+		&:not(:first-child){
+			margin-left: 19px;  // magic-number; should fit with .internal-users img
+		}
+	}
+}
+
+.search-tools .internal-users-alt{
+	display: none;
+
+	@include breakpoint($gamora){
+		display: inline;
+	}
+
+	@include breakpoint($groot){
+		display: block;
+	}
+}
+
+.internal-users-alt img{
+	// box model
+	margin-right: 5px;  // magic-number
+	width: 14px;  // magic-number; visually fits with text height
+	// layout
+	display: inline-block;
+}
+
+.menu-button,
+.search-toggle,
+.student-toggle{
+	font-size: 1.125rem;  // 18px
+	line-height: 1.66666666666667;  // 30/18
+}
+
+.top-nav,
+.top-nav-list,
+.menu-button,
+.search-toggle,
+.student-toggle,
+.top-nav-list .active{
+	color: $tint;
+	background-color: $evergreen-neue;
+}
+
+/**
+ * 4. Primary Nav
+ *
+ * The green nav at the top of every page.
+ */
+.top-nav-list{
+	// box model
+	margin: 0 auto;
+	margin-top: 0;
+	width: 100%;
+	min-height: 45px;
+	// positioning
+	position: relative;
+	// tyopography
+	text-align: center;
+	// list
+	list-style-type: none;
+
+	@include breakpoint($lil-groot){
+		// layout
+		align-items: stretch;
+		display: flex;
+	}
+
+	&::before,
+	&::after{
+		// box model
+		width: 0;
+		// layout
+		clear: both;
+		display: table;
+		// miscellaneous
+		content: "";
+	}
+}
+
+.top-nav-list > li{
+	display: inline-block;
+
+	@include breakpoint($lil-groot){
+		// box model
+		border-left: 1px solid mix($tint, $shade, 20%);
+		// layout
+		align-items: stretch;
+		display: inline-block;  // IE9
+		display: flex;
+		flex-grow: 1;
+		overflow: hidden;
+		// typography
+		//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
+
+		&:first-child{
+			// box model
+			border-left-width: 0;
+		}
+	}
+
+	@include breakpoint($starlord){
+		// box model
+		width: 20%;
+		// layout
+		flex-grow: 1;
+		// typography
+		font-family: $text-face;
+		letter-spacing: normal;
+	}
+
+	@include breakpoint($gamora){
+		height: auto;
+	}
+}
+
+.top-nav-link,
+.secondary-nav-link{
+	// box model
+	border-bottom-width: 0;
+	padding: 0.46875rem 1rem;  // 7.5/16
+	width: 100%;
+	// layout
+	display: block;
+
+	&:hover{
+		// typography
+		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
+		// misc
+		box-shadow: 0 0 1px $highlight inset,
+		/*        */0 0 1em transparentize($highlight, 0.75) inset;
+		transition: all 0.1s ease-out;
+	}
+
+	&:focus{
+		background-color: $blueberry-susan;
+	}
+
+	@include breakpoint($lil-groot){
+		// box model
+		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
+		// layout
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		// misc
+		text-shadow: 0 2px 0 $drop-shadow;
+	}
+
+	@include breakpoint($rocket){
+		// box model
+		padding-right: 0.6666666667em;
+		padding-left: 0.6666666667em;
+	}
+
+	@include breakpoint($drax){
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
+
+.top-nav-list a,
+.top-nav-list a:visited,
+.top-nav-link,
+.top-nav-link:visited{
+	// typography
+	color: $tint;
+	font-weight: 600;
+
+	@include breakpoint($starlord){
+		text-shadow: none;
+	}
+
+	@include breakpoint($gamora){
+		font-weight: bold;
+	}
+}
+
+/**
+ * 5. Secondary Nav
+ *
+ * The textured nav immediately below the primary nav on the
+ * homepage only.
+ */
+.secondary-nav-list{
+	// box model
+	border-top: 1px solid $evergreen-old-style;
+	margin: 0;
+	padding: 0;
+	// typography
+	text-align: center;
+	// backgrounds & borders
+	background: $evergreen-neue url("images/texture-1.png");
+	// list
+	list-style-type: none;
+
+	/*> li{
+		display: inline-block;
+	}*/
+
+	@include breakpoint($lil-groot){
+		display: flex;
+		overflow: hidden;  // IE 9
+
+		/*> li:first-child,
+		> li:last-child{
+			margin: 0;
+		}
+
+		> li{
+			margin: 0;
+			width: 25%;  // IE 9
+			// layout
+			flex-grow: 1;
+			float: left;  // IE9
+		}*/
+	}
+
+	@include breakpoint($rocket){
+		// layout
+		justify-content: flex-end;
+
+		/*> li{
+			// box model
+			width: auto;
+			// layout
+			display: inline-block;  // IE9
+			flex-grow: 0;
+			float: none;  // IE 9
+			// typography
+			line-height: 2.52440255806126;  // 30/11.884
+			white-space: nowrap;
+		}*/
+	}
+
+	@include breakpoint($starlord){
+		font-family: $text-face;
+		line-height: 2.14285714285714;  // 30/14
+	}
+}
+
+.secondary-nav-list > li{
+	display: inline-block;
+
+	@include breakpoint($lil-groot){
+		margin: 0;
+		width: 25%;  // IE 9
+		// layout
+		flex-grow: 1;
+		float: left;  // IE 9
+
+		&:first-child,
+		&:last-child{
+			margin: 0;
+		}
+	}
+
+	@include breakpoint($rocket){
+		// box model
+		width: auto;
+		// layout
+		display: inline-block;  // IE 9
+		flex-grow: 0;
+		float: none;  // IE 9
+		// typography
+		line-height: 2.52440255806126;  // 30/11.884
+		white-space: nowrap;
+	}
+
+	@include breakpoint($gamora){
+		@include base-type;
+		line-height: 3.21428571428571;  // 45/14
+	}
+
+	@include breakpoint($groot){
+		@include base-type-lg;
+		line-height: 2.5;  // 45/18
+	}
+}
+
+.secondary-nav-link{
+
+	&,
+	&:visited{
+		// box model
+		border-bottom: 0;
+		height: 100%;
+		width: 100%;
+		// layout
+		//display: block;
+		// typography
+		color: $tint;
+		font-weight: normal;
+
+		@include breakpoint($rocket){
+			// box model
+			height: auto;
+			padding: 0 1em;
+			// layout
+			display: inline-block;
+		}
+
+		@include breakpoint($drax){
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	&:hover{
+		// typography
+		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
+		// misc
+		box-shadow: 0 0 2px $highlight inset;
+		transition: all 0.1s ease-out;
+	}
+
+	&:focus{
+		background-color: $blueberry-susan;
+	}
+}
+
+/**
+ * 6. Site Name
+ *
+ * The name of the department’s site, e.g. About Evergreen, Web
+ * Resources, or Registration
+ */
+
+.site-name{
+	// box model
+	//border-bottom: 4px solid $evergreen-old-style;
+	margin-top: 3.75rem;  // 60/16
+	//margin-bottom: -4px;  // Compensates for 4px border and maintains 15px vertical cadence.
+
+	@include breakpoint($drax){
+		// box model
+		margin-right: 1em;
+		margin-left: 1em;
+		width: 100%;
+		// backgrounds and borders
+		background-color: transparentize($tint, 0.33);
+		border-radius: 2px 2px 0 0;
+	}
+
+	h1{
+
+		@media screen and (min-height: 35em){  // Note this is a height-based media query
+			margin-bottom: calc(30 / 16 * 1rem);
+		}
+	}
+}

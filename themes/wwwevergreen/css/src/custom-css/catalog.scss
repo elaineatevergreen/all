@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+@import "../tools";
+
+.compare-box{
+	// box model
+	max-width: 200px;
+	// layout
+	display: flex;
+	flex-direction: column;
+	// position
+	position: fixed;
+	right: 1em;
+	bottom: -6em;
+	// typography
+	text-align: center;
+	// misc
+	box-shadow: 0 0 2px $drop-shadow;
+}
+
+.compare-box-active{
+	bottom: 0;
+	-webkit-transition: bottom .25s;  //Safari 6
+	        transition: bottom .25s;
+}
+
+#compare{  // Compare button inside .compare-box
+	// box model
+	@include margin-default;
+	// layout
+	float: left;
+}
+
+.course-index{
+	// layout
+	display: block;
+	// typography
+	@include base-type;  // We want this table to always use the smaller copy size
+	
+	> thead{
+		display: none;
+	}
+	
+	> tbody,
+	> tbody > tr,
+	> tbody > tr > td{
+		display: block;
+	}
+	
+	> tbody > tr{
+		// box model
+		border: 1px solid mix(white, $blueberry-susan, 66%);
+		@include margin-default;
+		padding: 0 1em;
+		// layout
+		overflow: hidden;
+		// typography
+		text-align: center;
+		// backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-radius: 2px;
+		// misc
+		box-shadow: 0 1px 1px $drop-shadow;
+		
+		&.cancelled{
+			// backgrounds & borders
+			background-color: #f3f3f3;
+			border-color: mix(white, $blueberry-susan, 75%);
+			border-style: dashed;
+			// misc
+			box-shadow: none;
+		}
+	}
+	
+	> tbody > tr > td{
+		border-width: 0;
+		padding: 0;
+		
+		&.offering,
+		&.standing,
+		&.credits,
+		&.time{
+			display: inline;
+		}
+		
+		&.is-hidden{
+			display: none;
+		}
+	}
+	
+	@media screen and (min-width: 55em){
+		display: table;
+		
+		> thead{
+			display: table-header-group;
+		}
+		
+		> tbody{
+			display: table-row-group;
+		}
+		
+		> tbody > tr{
+			// box model
+			border-width: 0;
+			// layout
+			display: table-row;
+			// typography
+			text-align: left;
+			// backgrounds & borders
+			background-color: transparent;
+			border-radius: 0;
+			// misc
+			box-shadow: none;
+		}
+		
+		> tbody > tr > td{
+			// box model
+			border-top-width: 1px;
+			padding: 0.37037em 1.11111em 1.11111em 0;
+			// layout
+			display: table-cell;
+		
+			&.offering,
+			&.standing,
+			&.credits,
+			&.time{
+				display: table-cell;
+			}
+		}
+	}
+}
+
+.compare{  // Compare checkbox
+	// box model
+	@include margin-default;
+	margin-right: 1em;
+	// layout
+	float: left;
+	
+	@media screen and (min-width: 55em){
+		// box model
+		margin: 0;
+		// layout
+		float: none;
+	}
+}
+
+.compare-clear{
+	float: left;
+	clear: left;
+}
+
+.title{
+	margin: 0 2%;
+}
+
+.program-title{
+	@media screen and (min-width: 55em){
+		@include base-type-lg;
+	}
+	
+	.message{
+		//box model
+		padding: 0 0.3125rem;
+		//typography
+		color: $wine;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		//backgrounds & borders
+		background-color: $highlight;
+	}
+}
+
+.offering,
+.standing,
+.credits,
+.time{
+	@include margin-default;
+}
+
+.offering:after,
+.standing:after{
+	content: " •";
+	
+	@media screen and (min-width: 55em){
+		content: "";
+	}
+}
+
+.credits:after{
+	content: " credits •";
+	
+	@media screen and (min-width: 55em){
+		content: "";
+	}
+}
+
+.time:after{
+	width: 0;
+	clear: both;
+	display: table;
+	content: "";
+}
+
+.fall{
+	//layout
+	clear: left;
+	
+	&,
+	abbr{
+		//box model
+		border-color: #c09a00;
+		background-color: #c09a00;
+		//color: mix($tint, #c09a00, 60%);
+	}
+}
+.winter{
+	&,
+	abbr{
+		//box model
+		border-color: mix(black, $sky-blue, 25%);
+		//backgrounds & borders
+		background-color: mix(black, $sky-blue, 25%);
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $sky-blue, 50%);
+			//backgrounds & borders
+			background-color: mix(white, $sky-blue, 66%);
+		}
+	}
+}
+.spring{
+	&,
+	abbr{
+		//box model
+		border-color: mix(white, $blueberry-susan, 25%);
+		//backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 25%);
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $blueberry-susan, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $blueberry-susan, 75%);
+		}
+	}
+}
+.summer{
+	&,
+	abbr{
+		//box model
+		border-color: $evergreen-neue;
+		//backgrounds & borders
+		background-color: $evergreen-neue;
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $evergreen-neue, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $evergreen-neue, 50%);
+		}
+	}
+}
+
+.summer-session-1{
+	&,
+	abbr{
+		//box model
+		border-color: $evergreen-old-style;
+		//backgrounds & borders
+		background-color: $evergreen-old-style;
+	}
+}
+.summer-session-2{
+	&,
+	abbr{
+		//box model
+		border-color: $wine;
+		//backgrounds & borders
+		background-color: $wine;
+		
+		&.closed{
+			//box model
+			border-style: dashed;
+			//typography
+			color: mix(black, $wine, 25%);
+			//backgrounds & borders
+			background-color: mix(white, $wine, 50%);
+		}
+	}
+}
+
+.fall,
+.winter,
+.spring,
+.summer,
+.summer-session-1,
+.summer-session-2{
+	//box model
+	margin-top: 0.9375rem;
+	width: 25%;
+	//layout
+	float: left;
+	//typography
+	color: white;
+	text-align: center;
+	
+	abbr{
+		//box model
+		border-style: solid;
+		border-width: 1px;
+		//border-bottom-width: 0;
+		padding: 0.234375rem;
+		//layout
+		display: block;
+		//backgrounds & borders
+		border-radius: 2px;
+	}
+	
+	@media screen and (min-width: 55em){
+		//box model
+		width: auto;
+		//layout
+		float: none;
+		//backgrounds & borders
+		background-color: transparent;
+	}
+}
+
+.keyword-list{
+	
+	> li{
+		//box model
+		margin: 0.234375rem 0;  //3.75px
+		//layout
+		display: inline-block;
+		//typography
+		color: white;
+		
+		> a{
+			//box model
+			border-bottom-width: 0;
+			margin: 0 0.4375rem 0 0;  //7.5px
+			//layout
+			display: block;
+			
+			&:before{
+				content: "#";
+			}
+			
+			&:after{
+				@media print{
+					content: "";
+				}
+			}
+		}
+		
+		> a,
+		> a:visited{
+			//typography
+			color: mix(white, $blueberry-susan, 50%);
+			font-weight: normal;
+		}
+		
+		> a:hover{
+			color: mix(white, $sky-blue, 66%);
+			background-color: $blueberry-susan;
+		}
+		
+		&:last-child a{
+			margin-right: 0;
+		}
+	}
+}
+
+.cancelled{
+	opacity: .4;
+	
+	.fall,
+	.winter,
+	.spring,
+	.summer{
+		//typography
+		color: black;
+		//backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 80%);
+		
+		abbr{
+			background-color: mix(white, $blueberry-susan, 80%);
+		}
+	}
+	
+	@media screen and (min-width: 55em){
+		.fall,
+		.winter,
+		.spring,
+		.summer{
+			background-color: transparent;
+		}
+	}
+}
+
+/**
+ * Program Pages
+ *
+ * Styles for the detail pages for each of the individual programs.
+ */
+
+.program-faculty{  // Deprecated; use .mini-bio-photo instead.
+	//box model
+	border: 1px solid mix(black, $sky-blue, 60%);
+	height: 3rem;
+	//backgrounds & borders;
+	border-radius: 50%;
+}
+
+.program-prerequisites,
+.program-prerequisites-content,
+.program-description{
+	@include margin-default;
+}
+
+.catalog-season{
+	height: 1.375rem;  //Matches height of h3
+	
+	@media screen and (min-width: 43em){
+		font-size: 1.594rem;  //Matches height of h3
+	}
+}
+
+@media print{
+	
+	.dataTables_wrapper > div *{  // This whole rule is necessary for printing in Firefox, for some reason; without it, the catalog entries are invisible.
+		all: initial;
+	}
+	
+	// Hide unnecessary elements.
+	.compare-box,
+	.dataTables_wrapper .showing,
+	.course-index > thead,
+	.course-index > tbody > tr > td.compare{
+		display: none;
+	}
+	
+	// Avoid page breaks inside catalog entries.
+	.course-index > tbody > tr{
+		page-break-inside: avoid;
+	}
+}

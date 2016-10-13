@@ -1,0 +1,201 @@
+/**
+ * H. Media Segment
+ *
+ * A common pattern wherein copy is tightly coupled to an icon.
+ *
+ * Table of Contents
+ *
+ * 1. Default
+ * 2. Alternate
+ * 3. Vertically-Centered
+ * 4. Column And Squishy
+ */
+/**
+ * 1. Default
+ *
+ * .media
+ * +---------+ +------------------+
+ * |         | |                  |
+ * | .media- | | .media-body      |
+ * |  img    | |                  |
+ * |         | |                  |
+ * +---------+ |                  |
+ *             |                  |
+ *             +------------------+
+ */
+.media{
+	clear: left;  // IE 9
+	display: block;  // IE 9
+	display: flex;  // W3C
+}
+
+.media-img,
+.media-img:link{
+	// box model
+	border-bottom-width: 0;
+	margin-bottom: 1.071428571428571em;  // 15px
+	padding-right: 1.071428571428571em;  // 15px
+	max-width: 31.3333333333%;
+	// layout
+	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
+	float: left;  // IE9
+
+	@include breakpoint($gamora){
+		padding-right: 0.882352941176471em;  // 15px
+	}
+}
+
+.media-img img{
+	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
+	display: block;
+}
+
+// Extends .media-img img(?)
+.media-img-icon{
+	max-height: 3.75rem;
+}
+
+.media-body{
+	// layout
+	flex: 1 1 auto;
+	overflow: auto;  // IE 9  // Gives block formatting context
+	/**
+	 * Alternate way to give block formatting context:
+	 *  * display: table-cell;  // Gives block formatting context (pretty
+	 *    nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
+	 *  * width: 3000px;  // Stretches box to fit the remaining width; this is
+	 *    not the actual value that comes out.
+	 */
+}
+
+.media-body > :first-child{
+	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
+}
+
+/**
+ * 2. Alternate
+ *
+ * Put .media-img on the right. Extends .media
+ *
+ * .media
+ * +------------------+ +---------+
+ * |                  | |         |
+ * | .media-body      | | .media- |
+ * |                  | |  img    |
+ * |                  | |         |
+ * |                  | +---------+
+ * |                  |
+ * +------------------+
+ */
+.media-alt{
+	flex-direction: row-reverse;
+}
+
+.media-alt .media-img{
+	padding-right: 0;
+	padding-left: 1.071428571428571em;
+	float: right;  // IE 9
+}
+
+/**
+ * 3. Vertically-Centered
+ * 
+ * Vertically center .media-child-alt. Extends .media-img or .media-body.
+ *
+ * .media
+ *                 +------------------+
+ * +-------------+ |                  |
+ * |             | | .media-body      |
+ * | .media-     | |                  |
+ * |  img.media- | |                  |
+ * |  child-alt  | |                  |
+ * |             | |                  |
+ * +-------------+ |                  |
+ *                 +------------------+
+ *
+ * OR
+ *
+ * .media
+ * +-------------+
+ * |             | +--------------------+
+ * | .media-     | |                    |
+ * |  img        | | .media-body.media- |
+ * |             | |  child-alt         |
+ * |             | |                    |
+ * |             | +--------------------+
+ * +-------------+
+ */
+.media-img-alt,  // deprecated, use .media-child-alt instead
+.media-child-alt{
+	align-self: center;  // W3C
+}
+
+/**
+ * 4. Column And Squishy
+ *
+ * .media-column puts .media-img on the top. Extends .media.
+ *
+ * .media-squish puts .media-img on top, then moves it to the side (as
+ * above) as screen width increases. Extends .media
+ *
+ * .media.media-column or .media.media-squishy
+ *    +------------+
+ *    |            |
+ *    | .media-img |
+ *    |            |
+ *    |            |
+ *    |            |
+ *    +------------+
+ * +------------------+
+ * |                  |
+ * | .media-body      |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * +------------------+
+ */
+
+.media-column,
+.media-squishy{  // Put .media-img on top, then move to the side
+	align-items: stretch;
+	flex-direction: column;
+}
+
+.media-squishy{
+
+	@include breakpoint($starlord){
+		align-items: stretch;
+		flex-direction: row;
+	}
+}
+
+.media-column > .media-img,
+.media-squishy > .media-img{
+	padding-right: 0;
+	max-width: 100%;
+	float: none;  // IE 9
+	text-align: center;
+}
+
+.media-squishy > .media-img{
+
+	@include breakpoint($starlord){
+		margin-bottom: 1.071428571428571em;  // 15px
+		padding-right: 1.071428571428571em;  // 15px
+		max-width: 31.3333333333%;
+		// layout
+		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
+		float: left;  // IE9
+	}
+
+	@include breakpoint($gamora){
+		padding-right: 0.882352941176471em;  // 15px
+	}
+}
+
+.media-column > .media-img img,
+.media-squishy > .media-img img{
+	margin: 0 auto;
+}

@@ -1,0 +1,366 @@
+/**
+ * G. Boxes
+ *
+ * Boxes for containing things, usually with a background color or
+ * texture.
+ *
+ * Table of Contents
+ *
+ * 1. Default Box
+ * 2. Note
+ * 3. Alert
+ * 4. Captioned Figures
+ * 5. Action Box
+ * 6. Pull Quotes
+ * 7. Full Box
+ * 8. UI Group
+ */
+
+/**
+ * 1. Default Box
+ */
+.notice,  // deprecated
+.box,
+p.box{  // WYSIWYG
+	// box model
+	margin-top: 2.14285714285714em;  // 30/14
+	margin-bottom: 3.21428571428571em;  // 45/14
+	padding: 0 1em;
+	// layout
+	overflow: hidden;
+	// typography
+	color: mix($shade, $sky-blue, 66.667%);
+	// backgrounds & borders
+	background-color: transparentize(mix(white, $sky-blue, 80%), 0.05);
+	background-image: url("images/texture-1.png");
+	border-radius: 2px;
+
+	@include breakpoint($gamora){
+		margin-top: 2.5em;  // 45/18
+		margin-bottom: 3.33333333333333em;  // 60/18
+	}
+}
+
+.notice h2,  // deprecated
+.box h2,
+.notice h4,  // deprecated
+.box h4{
+	color: mix($shade, $sky-blue, 50%);
+}
+
+.notice h3,  // deprecated
+.box h3{
+	color: mix($shade, $sky-blue, 50%);
+}
+
+.notice h5,  // deprecated
+.box h5,
+.notice h6,  // deprecated
+.box h6{
+	color: mix($shade, $sky-blue, 33.333%);
+}
+
+.box.supplement,
+.box.supplement-alt-1-2{
+
+	@include breakpoint($lil-groot){
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 0.41666666666667em;  // Margins should match margin-default-lg
+		margin-bottom: 0.83333333333333em;
+		// backgrounds & borders
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+	}
+
+	@include breakpoint($groot){
+		margin-top: 0.52004784440168em;  // Margins should match margin-default-xl
+		margin-bottom: 1.04009568880337em;
+	}
+}
+
+/**
+ * 2. Note
+ *
+ * Stands out a little bit more than a default box.
+ */
+.notice,  // deprecated
+.note{
+	border-left: 5px solid mix($tint, $sky-blue, 60%);
+
+	@include breakpoint($rocket){
+		padding-left: calc(1em - 5px);
+	}
+}
+
+/**
+ * 3. Alerts
+ *
+ * Stands out a lot more than a default box.
+ */
+
+.alert,
+p.alert{  // WYSIWYG
+	// box model
+	//border: 1px solid $wine;  // Conflicts with sitewide alert JS. Might be worth changing how that works.
+	// typography
+	color: $wine;
+	// backgrounds & borders
+	background-color: $highlight;
+	border-radius: 0;
+}
+
+#sitewide-alert{
+	// box model
+	margin: 0;
+	width: 100%;
+	// typography
+	font-family: $monospace-face;
+	// decoration
+	border-radius: 0;
+	// movement
+	transition: all 0.5s ease-in;
+}
+
+/**
+ * 4. Captioned Figures
+ *
+ * Lends a bit more readability to boxes while still standing out
+ * against the content a little bit more.
+ */
+
+.caption-box{
+	// typography
+	text-shadow: 0 1px 0 transparentize($tint, 0.5);
+	// backgrounds and borders
+	background-color: transparentize($tint, 0.05);
+}
+
+.caption-box img{
+	margin-top: 0.9375rem;  // 15/16
+	margin-bottom: 0.9375rem;  // 15/16
+}
+
+/**
+ * 5. Action Box
+ *
+ * A box with one or two calls to action.
+ *
+ * The content in this box should not ramble on and on. They should be
+ * focused down to distinct calls to action with *maybe* a bit of
+ * supporting content. If you want to ramble, consider using a default .box
+ * instead, or even just make it regular content.
+ *
+ * One call-to-action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |         Singular call-to-action.          |
+ *   |                                           |
+ *   +-------------------------------------------+
+ * Seen on Emergency Campus Notifications: http://www.evergreen.edu/news/weatherdelays
+ *
+ * Two calls to action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |   Primary call-to-  |  Secondary call-to- |
+ *   |   action (.action-  |   action (.action-  |
+ *   |      item-1-2)      |      item-2-2)      |
+ *   |                                           |
+ *   +-------------------------------------------+
+ * Seen on New Student Orientation: http://www.evergreen.edu/events/orientation/
+ */
+.action-box{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 80%);
+	margin-right: auto;
+	margin-left: auto;
+	// layout
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	// typography
+	text-align: center;
+	// decoration
+	background: transparent none;
+
+	@include breakpoint($lil-groot){
+		flex-direction: row;
+	}
+
+	@include breakpoint($starlord){
+		width: 75%;
+	}
+}
+
+.action-item-1-1{
+	margin: 0 auto;
+}
+
+.action-item-1-2,
+.action-item-2-2{
+	float: left;
+}
+
+.action-item-1-2{
+	border-right: 1px solid mix($tint, $blueberry-susan, 80%);
+	padding-right: 1em;
+	width: 50%;
+}
+
+.action-item-2-2{
+	margin-left: 1em;
+	width: calc(50% - 1em);
+}
+
+/**
+ * 6. Pull Quotes
+ */
+.pull-box{
+	// typography
+	color: $tint;
+	//-moz-osx-font-smoothing: grayscale;  // Better rendering of reverse-out text
+	//-webkit-font-smoothing: antialiased;  // Better rendering of reverse-out text
+	// decoration
+	background-color: transparentize($evergreen-neue, 0.05);
+
+	@include breakpoint($gamora){
+		margin-bottom: 1.071428571428571em;  // 15px
+	}
+
+	a{
+		// box model
+		border-bottom: 2px solid mix($tint, $blueberry-susan, 66%);
+		// typography
+		color: mix($tint, $blueberry-susan, 75%);
+	}
+
+	a:visited{
+		// typography
+		color: mix($tint, $wine, 75%);
+		// decoration
+		border-bottom-color: mix($tint, $wine, 66%);
+	}
+
+	a:hover{
+		// typography
+		color: mix($tint, $sky-blue, 66%);
+		// decoration
+		border-bottom-color: mix($tint, $sky-blue, 66%);
+	}
+}
+
+.pull-box-alt{
+	background-color: $sky-blue;
+}
+
+.pull-quote{
+	// box model
+	margin: 0.44117647058824em 0 0.88235294117647em;  // 7.5/17 15/17
+	// typography
+	@include base-type-lg;
+	font-style: italic;
+
+	@include breakpoint($drax){
+		// box model
+		margin: 0.36358347876672em 0 0.72716695753345em;  // 10/27.504 20/27.504
+		// typography
+		font-size: 1.719rem;  // 27.504px
+		line-height: 1.09075043630017;  // 30/27.504
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin: 0.48200514138817em 0 0.96401028277635em;  // 15/31.12 30/31.12
+		// typography
+		font-size: 1.945rem;  // 31.12
+		line-height: 1.44601542416452;  // 45/31.12
+	}
+}
+
+.supplement-alt-1-2 .pull-quote{
+
+	@include breakpoint($gamora){
+		@include base-type-xl;
+	}
+}
+
+/**
+ * 7. Full Box
+ *
+ * A box with a header and possibly a footer.
+ *
+ * @section box-full
+ */
+
+.full-box{
+	border: 1px solid $sky-blue;
+	padding: 0;
+	background: $sky-blue url("images/texture-1.png");
+}
+
+.full-box h2,
+.full-box h3{
+	color: $tint;
+}
+
+.full-box > .box{
+	background-color: $tint;
+}
+
+/**
+ * 8. UI Group
+ *
+ * A different kind of box; a group of elements, typically UI
+ * that need visual separation from one another, or from other
+ * elements.
+ 
+ * @section ui-group
+ */
+
+.ui-group{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
+	margin-bottom: 0.46875rem;  // 7.5px
+	padding: 0 1em;
+	// layout
+	overflow: hidden;
+	// backgrounds & borders
+	background-color: mix($tint, $blueberry-susan, 85%);
+	border-radius: 2px;
+
+	/*&:hover{
+		// backgrounds & borders
+		background-color: mix(white, $blueberry-susan, 90%);
+		border-color: mix(white, $blueberry-susan, 80%);
+		// transitions
+		-webkit-transition: all .2s ease-out;
+		        transition: all .2s ease-out;
+	}*/
+
+	@include breakpoint($starlord){
+		&.unit-1-2{
+			margin: 0.234375rem;  // 3.75px
+			width: calc(50% - 0.46875rem);  // 7.5px
+		}
+	}
+
+	@include breakpoint($drax){
+		&.unit-1-3{
+			margin: 0.234375rem;  // 3.75px
+			width: calc(33.3333333333% - 0.46875rem);  // 7.5px
+		}
+
+		.media{
+			//padding: 0 0.9375rem;  //17px
+			width: 100%;
+		}
+	}
+
+	> :last-child{
+		margin-bottom: 0.9375rem;  // 15px
+	}
+}

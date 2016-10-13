@@ -1,0 +1,122 @@
+/**
+ * I. Base Styles
+ *
+ * Styles generally for generic html elements. Classed or IDed
+ * elements should typically be included in the Modules section.
+ *
+ * Table of Contents
+ *
+ * A. Typography
+ * B. Tables
+ * C. Forms
+ * D. Buttons
+ * E. Hyphenation
+ */
+
+html{
+	box-sizing: border-box;
+}
+
+*{
+	box-sizing: inherit;
+}
+
+/**
+ * For the following, I am taking pity on IE8- because I'm using
+ * the appropriate double-colon syntax for pseudo-elements. If I
+ * condensed this style declaration with the above *, IE8- would
+ * choke on the whole thing, breaking the border-box declaration
+ * for the universal selector.
+ */
+*::before,
+*::after{
+	box-sizing: inherit;
+}
+
+body{
+	// box model
+	margin: 0;
+	min-height: 100vh;
+	// layout
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	// decoration
+	background-color: $tint;
+}
+
+img,
+svg{
+	border-width: 0;
+	height: auto;
+	width: auto;
+	max-width: 100%;
+}
+
+audio{
+	max-width: 100%;
+}
+
+video{
+	height: auto;
+	width: 100%;
+}
+
+iframe{
+	width: 100%;
+}
+
+.iframe-ratio-16-9{  // 16:9 ratio
+	// box model
+	height: 0;
+	//padding-top: 25px;
+	padding-bottom: 56.25%;
+	// position
+	position: relative;
+}
+
+.iframe-ratio-16-9 > iframe{
+	// box model
+	height: 100%;
+	width: 100%;
+	// position
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/**
+ * A. Typography
+ */
+@import "base/typography";
+
+/**
+ * B. Tables
+ */
+@import "base/tables";
+
+/**
+ * C. Forms
+ */
+@import "base/forms";
+
+/**
+ * D. Buttons
+ */
+@import "base/buttons";
+
+/**
+ * E. Hyphenation
+ */
+/*a,  //keep linked words whole
+a:link,
+.intro,
+.pull-quote,
+.big-fact{
+	hyphens: none;
+}*/
+
+.looong-word{  // For words that are so long they may cause overflow, like dichlorodiphenyltrichloroethane. Holy crap!
+	word-wrap: break-word;  // Firefox, IE
+	overflow-wrap: break-word;  // W3C
+}

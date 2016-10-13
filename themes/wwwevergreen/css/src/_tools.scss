@@ -1,0 +1,181 @@
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+
+/**
+ * Colors
+ */
+$morning-light: #fdf4b6;
+$sky-blue: #0086ee;
+$evergreen-neue: #64933a;
+$evergreen-old-style: #46502b;
+$blueberry-susan: #492c5d;
+$wine: #600f21;
+$black: #000;
+
+$highlight: transparentize($morning-light, 0.5);
+
+$tint: hsl(0, 0%, 95%);
+$shade: hsl(0, 0%, 0%);
+
+$legacy-tint: #fff;  // For use when graphics have a white background, so they look wrong against the off-white $tint; used in Banner theme
+
+$drop-shadow: transparentize(mix($shade, $blueberry-susan, 60%), 0.75);
+
+$display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$small-face: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$monospace-face: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+
+/**
+ * Breakpoints
+ *
+ * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+$lil-groot: (min:  20em);
+$rocket:    (min:  22em);
+$starlord:  (min:  32em);
+$gamora:    (min:  43em);
+$drax:      (min:  70em);
+$groot:     (min: 125em);
+
+@mixin breakpoint($map){
+	$query: null;
+	@if map-has-key($map, min){
+		$query: append($query, unquote("(min-width: #{map-get($map, min)})"));
+	}
+	@if map-has-key($map, min) and map-has-key($map, max){
+		$query: append($query, unquote("and"));
+	}
+	@if map-has-key($map, max){
+		$query: append($query, unquote("(max-width: #{map-get($map, max)})"));
+	}
+	@media screen and #{$query}{
+		@content;
+	}
+}
+
+/**
+ * Deprecated Modular Scale - Do not use!
+ *
+ * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+
+/**
+ * New Modular Scale
+ *
+ * Ideal text size is 18px.
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * See: http://www.modularscale.com/?18,345&px&1.618&web&text
+ */
+/**
+ * Step #    Pixels     Ems    Rems
+ *     17   845.475  46.971  52.842
+ *     16   558.21   31.012  34.888
+ *     15   522.543  29.03   32.659
+ *     14   345      19.167  21.563
+ *     13   322.956  17.942  20.185
+ *     12   213.226  11.846  13.327
+ *     11   199.602  11.089  12.475
+ *     10   131.784   7.321   8.237
+ *      9   123.363   6.854   7.71
+ *      8    81.449   4.525   5.091
+ *      7    76.244   4.236   4.765
+ *      6    50.339   2.797   3.146
+ *      5    47.123   2.618   2.945
+ *      4    31.112   1.728   1.945
+ *      3    29.124   1.618   1.82
+ *      2    19.229   1.068   1.202
+ *      1    18       1       1.125
+ *      0.5  14.000   0.778   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.120   0.618   0.695
+ *     -2     6.876   0.382   0.43
+ *     -3     4.249   0.236   0.266
+ *     -4     2.626   0.146   0.164
+ *     -5     1.623   0.09    0.101
+ */
+
+/**
+ * Sass Mixins
+ *
+ * @section sass-mixins
+ */
+
+/**
+ * Margins
+ */
+@mixin margin-default{
+	margin: 0.535714285714286em 0 1.071428571428571em;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+}
+@mixin margin-default-lg{
+	margin: 0.41666666666667em 0 0.83333333333333em;  //22.5/18/3  15/18  So, 22.5 + 7.5 + 15 = 45
+}
+@mixin margin-default-xl{
+	margin: 0.52004784440168em 0 1.04009568880337em;  // 10/19.229 20/19.229  So, 30 + 10 + 20 = 60
+}
+
+/**
+ * Font Sizes
+ */
+@mixin base-type{
+	font-size: 0.875rem;  // 14px  Step 0.5
+	line-height: 1.42857142857143;  //20/14
+}
+@mixin base-type-lg{
+	font-size: 1.125rem;  // 18px  Step 1
+	line-height: 1.38888888888889;  // 25/18
+}
+@mixin base-type-xl{
+	font-size: 1.202rem;  // 19.229px  Step 2
+	line-height: 1.30011961100421;  // 25/19.229
+}
+@mixin small-type{
+	font-family: $small-face;
+	font-size: 0.695rem;  // 11.12px  Step -1
+	line-height: 1.34831460674157;  // 15/11.125
+}
+
+/**
+ * Backgrounds
+ */
+/**
+ * Replaces PNG background-image with multiple repeating
+ * gradients instead. Unfortunately, Chrome totally craps out
+ * in the rendering department, so this will have to wait for
+ * another day.
+ */
+/*@mixin background-default{
+	background-image:
+		 diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		 diagonal lines
+		100% 100%,
+		 1px dots
+		10px 10px;
+}*/

@@ -1,0 +1,80 @@
+/**
+ * E. Footer
+ *
+ * The footer at the bottom of every page.
+ */
+
+.page-footer{
+	// box-model
+	margin-top: auto;
+	padding: 1em 1em 0;
+	// layout
+	clear: left;
+	// typography
+	color: $tint;
+	@include base-type;
+	// decoration
+	background-color: $shade;
+
+	@include breakpoint($drax){
+		@include base-type-lg;
+	}
+
+	@include breakpoint($groot){
+		@include base-type-xl;
+	}
+}
+
+.page-footer:after,
+.page-footer:before{
+	// layout
+	clear: both;
+	display: table;
+	// miscellaneous
+	content: "";
+}
+
+.page-footer a,
+.page-footer a:link,
+.page-footer a:visited{
+	// typography
+	color: $evergreen-neue;
+	// decoration
+	border-color: mix($shade, $evergreen-neue, 40%);
+}
+
+.page-footer a:hover{
+	// typography
+	color: $sky-blue;
+	// decoration
+	border-color: $sky-blue;
+}
+
+.footer-map{
+	// box model
+	margin-left: 1em;
+	width: 35%;
+	// layout
+	display: block;
+	float: right;
+
+	@include breakpoint($rocket){
+		width: 50%;
+		max-width: 280px;
+	}
+}
+
+.footer-map a{
+	border-width: 0;
+}
+
+.footer-map img{
+
+	@include breakpoint($gamora){
+		max-height: 112.5px;
+	}
+}
+
+.school-contact{
+	@include margin-default;
+}
