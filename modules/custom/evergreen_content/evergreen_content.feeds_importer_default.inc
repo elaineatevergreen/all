@@ -16,7 +16,7 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->id = 'academic_calendar_csv';
   $feeds_importer->config = array(
     'name' => 'Academic Calendar CSV',
-    'description' => 'Allows importing of academic calendar dates from a spreadsheet!',
+    'description' => 'Import upcoming academic calendar dates from a spreadsheet.',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -336,8 +336,8 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'faculty_directory';
   $feeds_importer->config = array(
-    'name' => 'Faculty Directory',
-    'description' => 'This (should) add more information for people who are also faculty.',
+    'name' => 'Directory: Faculty',
+    'description' => 'Additional information from the CMD.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
@@ -456,8 +456,8 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'office_directory';
   $feeds_importer->config = array(
-    'name' => 'Office Directory',
-    'description' => 'Imports offices from the adminweb directory.',
+    'name' => 'Directory: Office',
+    'description' => 'Imports offices from the Banner-based directory.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
@@ -621,7 +621,7 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'office_directory_facility';
   $feeds_importer->config = array(
-    'name' => 'Office Directory - Facility',
+    'name' => 'Directory: Office Facility',
     'description' => 'These items are sub-sections of offices.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
@@ -759,8 +759,8 @@ function evergreen_content_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'people_directory';
   $feeds_importer->config = array(
-    'name' => 'People Directory',
-    'description' => 'Imports individuals from the adminweb directory.',
+    'name' => 'Directory: Individual',
+    'description' => 'Imports individuals from the Banner-based directory.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
@@ -914,6 +914,8 @@ function evergreen_content_feeds_importer_default() {
         'skip_hash_check' => 0,
         'bundle' => 'directory_individual',
         'update_non_existent' => 'unpublish',
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',

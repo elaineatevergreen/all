@@ -15,17 +15,17 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'alumni_circle_import';
   $feeds_importer->config = array(
-    'name' => 'Alumni Circle Import',
+    'name' => '_Migration Upload: Alumni Circle Import',
     'description' => 'Import existing circles from other Drupal\'s XML',
     'fetcher' => array(
-      'plugin_key' => 'FeedsHTTPFetcher',
+      'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
-        'auto_detect_feeds' => FALSE,
-        'use_pubsubhubbub' => FALSE,
-        'designated_hub' => '',
-        'request_timeout' => NULL,
-        'auto_scheme' => 'http',
-        'accept_invalid_cert' => FALSE,
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
       ),
     ),
     'parser' => array(
@@ -147,7 +147,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'author_directory';
   $feeds_importer->config = array(
-    'name' => 'Author Directory',
+    'name' => '_Migration: Author Directory',
     'description' => 'Importing authors from blobby HTML',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
@@ -276,17 +276,17 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'calendar_events';
   $feeds_importer->config = array(
-    'name' => 'Calendar Events',
+    'name' => '_Migration: Calendar Events',
     'description' => 'Import existing events from CSV',
     'fetcher' => array(
-      'plugin_key' => 'FeedsFileFetcher',
+      'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
-        'allowed_extensions' => 'txt csv tsv xml opml',
-        'direct' => FALSE,
-        'directory' => 'public://feeds',
-        'allowed_schemes' => array(
-          0 => 'public',
-        ),
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
+        'auto_scheme' => 'http',
+        'accept_invalid_cert' => FALSE,
       ),
     ),
     'parser' => array(
@@ -412,7 +412,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'campus_locations';
   $feeds_importer->config = array(
-    'name' => 'Campus Locations',
+    'name' => '_Migration Upload: Campus Locations',
     'description' => 'Means we only have to input this info once!',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -511,7 +511,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'entrepreneur_directory';
   $feeds_importer->config = array(
-    'name' => 'Entrepreneur Directory',
+    'name' => '_Migration Upload: Entrepreneur Directory',
     'description' => 'Converts wufoo form data to nodes',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -706,7 +706,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'faculty_categories_import';
   $feeds_importer->config = array(
-    'name' => 'Faculty Categories Import',
+    'name' => '_Migration Upload: Faculty Categories Import',
     'description' => 'Brings terms in from directory',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -761,7 +761,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'fields_of_study_import';
   $feeds_importer->config = array(
-    'name' => 'Fields of Study Import',
+    'name' => '_Migration Upload: Fields of Study Basic Import',
     'description' => 'Imports existing field codes, relationships, and blurbs from collabtest/cms',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -783,36 +783,34 @@ function evergreen_migration_feeds_importer_default() {
       ),
     ),
     'processor' => array(
-      'plugin_key' => 'FeedsNodeProcessor',
+      'plugin_key' => 'FeedsTermProcessor',
       'config' => array(
-        'expire' => '-1',
-        'author' => '1',
-        'authorize' => 1,
+        'vocabulary' => 0,
         'mappings' => array(
           0 => array(
             'source' => 'code',
-            'target' => 'title',
+            'target' => 'name',
             'unique' => 1,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'Description',
-            'target' => 'body',
-            'unique' => FALSE,
+            'target' => 'description',
+            'format' => 'full_html',
             'language' => 'und',
           ),
           2 => array(
             'source' => 'Related field',
-            'target' => 'field_umbrella_field:label',
+            'target' => 'parent',
             'unique' => FALSE,
-            'language' => 'und',
           ),
         ),
         'insert_new' => '1',
-        'update_existing' => '2',
-        'update_non_existent' => 'unpublish',
-        'input_format' => 'basic_tags',
+        'update_existing' => '0',
+        'update_non_existent' => 'delete',
+        'input_format' => 'plain_text',
         'skip_hash_check' => 0,
-        'bundle' => 'field_of_study',
+        'bundle' => 'faculty_directory_categories',
         'language' => 'und',
       ),
     ),
@@ -830,7 +828,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'hero_images';
   $feeds_importer->config = array(
-    'name' => 'Hero Images',
+    'name' => '_Migration: Hero Images',
     'description' => 'Add the current items to the home page.',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
@@ -944,7 +942,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'library_database_subjects';
   $feeds_importer->config = array(
-    'name' => 'Library Database Subjects',
+    'name' => '_Migration Upload: Library Database Subjects',
     'description' => 'Imported from spreadsheet',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -1005,17 +1003,17 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'library_databases';
   $feeds_importer->config = array(
-    'name' => 'Library Databases',
+    'name' => '_Migration Upload: Library Databases',
     'description' => 'Initial importer',
     'fetcher' => array(
-      'plugin_key' => 'FeedsHTTPFetcher',
+      'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
-        'auto_detect_feeds' => FALSE,
-        'use_pubsubhubbub' => FALSE,
-        'designated_hub' => '',
-        'request_timeout' => NULL,
-        'auto_scheme' => 'http',
-        'accept_invalid_cert' => FALSE,
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
       ),
     ),
     'parser' => array(
@@ -1119,7 +1117,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'navigation_import';
   $feeds_importer->config = array(
-    'name' => 'Navigation Import',
+    'name' => '_Migration Upload: Navigation Import',
     'description' => 'For moving navigations from site to site (live to dev etc)',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
@@ -1217,7 +1215,7 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'scholarship_import';
   $feeds_importer->config = array(
-    'name' => 'Scholarship Import',
+    'name' => '_Migration: Scholarship Import',
     'description' => 'Imports XML from Cascade',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
