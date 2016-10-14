@@ -4,7 +4,7 @@
  * linkLabel - keyword for tracking events on this element
  * linkInteraction - boolean; does clicking this link not nullify a bounce
  */
-/*function recordEvent(id, action, linkLabel, linkInteraction){
+function recordEvent(id, action, linkLabel, linkInteraction){
 	var elementID = document.getElementById(id);  // The element ID trigger
 	//var hitCallback;  // link or form
 	var timeout = 1000; // Wait no more than 1 second
@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function(event){
 	recordEvent('virtual-tour-link', 'click', 'Virtual Tour', false);
 	// Record submissions
 	
-});*/
+});
 
 /**
  * Trying again with class names instead of IDs.
  */
 
-function recordEvent(className, action, linkLabel, linkInteraction){
+/*function recordEvent(className, action, linkLabel, linkInteraction){
 	var elementClass = document.getElementsByClassName(className);  // The element ID trigger
 	//var hitCallback;  // link or form
 	
@@ -132,4 +132,4 @@ document.addEventListener('DOMContentLoaded', function(event){
 	recordEvent('virtual-tour-link', 'click', 'Virtual Tour', false);
 	// Record submissions
 	
-});
+});*/
