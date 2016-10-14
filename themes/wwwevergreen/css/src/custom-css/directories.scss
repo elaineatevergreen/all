@@ -6,52 +6,51 @@
 .dir-facilities-index{
 	// layout
 	display: block;
-	
+
 	> thead{
 		display: none;
 	}
-	
+
 	> tbody,
 	> tbody tr,
 	> tbody td{
 		display: block;
 	}
-	
+
 	> tbody tr{
 		// box model
-		border: 1px solid mix(white, $blueberry-susan, 66%);
+		border: 1px solid mix($tint, $blueberry-susan, 66%);
 		@include margin-default;
-		// backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 90%);
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 90%);
 		border-radius: 2px;
-		// misc
 		box-shadow: 0 1px 1px $drop-shadow;
 	}
-	
+
 	> tbody td{
 		border-top-width: 0;
-		padding: 0;
 		margin: 0 1em;
-		
+		padding: 0;
+
 		&:first-child{
 			margin-top: 1.07142857142857em;  // 15/14
 		}
-		
+
 		&:last-child{
 			margin-bottom: 0.53571428571429em;  // 7.5/14
 		}
 	}
-	
+
 	@include breakpoint($drax){
-		
+
 		> thead{
 			display: table-header-group;
 		}
-		
+
 		> tbody{
 			display: table-row-group;
 		}
-		
+
 		> tbody tr{
 			// box model
 			border-width: 0;
@@ -65,7 +64,7 @@
 			// misc
 			box-shadow: none;
 		}
-		
+
 		> tbody td{
 			// box model
 			border-top-width: 1px;
@@ -73,7 +72,7 @@
 			padding: 0.37037em 1.11111em 1.11111em 0;
 			// layout
 			display: table-cell;
-			
+
 			&:first-child,
 			&:last-child{
 				margin: 0;
@@ -96,8 +95,8 @@
 
 .dir-phone,
 .dir-mailstop{
-	letter-spacing: .066em;
-	
+	letter-spacing: 0.066em;
+
 	&::before{
 		letter-spacing: 0;
 	}
@@ -106,12 +105,15 @@
 .dir-email::before{
 	content: "Email: ";
 }
+
 .dir-location::before{
 	content: "Location: ";
 }
+
 .dir-mailstop::before{
 	content: "Mailstop: ";
 }
+
 .dir-phone::before{
 	content: "Phone: ";
 }

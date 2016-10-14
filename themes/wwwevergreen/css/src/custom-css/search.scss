@@ -26,14 +26,17 @@
 .gsc-control-cse table{
 	margin: 0;
 }
+
 .gsc-control-cse td{
 	border-width: 0;
 	padding: 0;
 }
+
 .gsc-control-wrapper-cse form.gsc-search-box,
 .gsc-control-wrapper-cse table.gsc-search-box{
 	margin: 0;
 }
+
 .gsc-input
 .gsc-input:focus,
 .gsc-clear-button{
@@ -42,17 +45,20 @@
 	// backgrounds and borders
 	box-shadow: none;
 }
+
 .gsc-input .gsc-input-box{
 	height: auto;
 }
 
 // Input row
 .gsc-control-cse .gsib_a{
-    padding: 4px 8px;
+	padding: 4px 8px;
 }
+
 .gsst_b .gsst_a{  // clear search input (the little x)
-	border-bottom: none;
+	border-bottom-width: 0;
 }
+
 // Search button
 .gsc-search-box input.gsc-search-button,
 .cse .gsc-search-box .gsc-search-button input.gsc-search-button-v2,
@@ -96,6 +102,7 @@ div.gsc-selected-option-container{
 .gsc-results{
 	width: 100%;
 }
+
 .gsc-results .gsc-webResult.gsc-result,
 .gsc-results .gsc-webResult.gsc-result:hover,
 .gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{
@@ -111,6 +118,7 @@ div.gsc-selected-option-container{
 	padding: 0.37037037037037em 2% 1.111111111111111em 2%;  // 5/13.5 // 15/13.5
 	background-color: #c8e7fd;
 }
+
 // Normal results
 .gsc-result .gs-result .gs-title{
 	// box model
@@ -138,6 +146,7 @@ div.gsc-selected-option-container{
 .gs-result .gsc-url-top{
 	padding: 0;
 }
+
 #___gcse_0 .gsc-control-cse .gs-spelling,
 #___gcse_0 .gsc-control-cse .gs-result .gs-title{
 	font-size: 1.063rem;
@@ -157,11 +166,13 @@ div.gsc-selected-option-container{
 .gssb_c{
 	margin: 0;
 }
+
 .gssb_e .gsc-completion-container,
 .gssb_a,
 .gsc-completion-container tr > td{
 	border-width: 0;
 }
+
 .gsc-completion-container .gssb_l{
 	margin: 0;
 }
@@ -176,7 +187,7 @@ div.gsc-selected-option-container{
 }
 
 .gsc-results .gsc-cursor-box .gsc-cursor{
-	
+
 	@include breakpoint($lil-groot){
 		display: flex;
 		justify-content: space-between;
@@ -190,12 +201,12 @@ div.gsc-selected-option-container{
 		border-radius: 2px;
 		// typography
 		font-weight: bold;
-		
+
 		@include breakpoint($starlord){
 			// box model
 			padding: 0 1em;
 		}
-		
+
 		&.gsc-cursor-current-page{
 			@include base-type-lg;
 		}

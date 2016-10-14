@@ -13,28 +13,28 @@
 	.e2ma_signup_form_element textarea,
 	.e2ma_signup_form_element select{
 		// typography
+		color: inherit;
 		font-family: inherit;
 		font-size: inherit;
-		color: inherit;
 	}
 
 	.e2ma_signup_message{
 		// box model
 		@include margin-default;
 	}
-	
+
 	.e2ma_signup_form_row{
 		border-width: 0;
 	}
-	
+
 	.e2ma_signup_form_required_footnote{
 		display: none;
 	}
-	
+
 	.e2ma_signup_form_button{
 		width: auto !important;
 	}
-	
+
 	.e2ma_signup_form_button_row #e2ma_signup_reset_button{
 		display: none;
 	}

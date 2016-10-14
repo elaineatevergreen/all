@@ -9,13 +9,14 @@
  * 2. SVG Transporter
  * 3. Slick Slider
  */
+@import "../tools";
 
 /**
  * 1. Unpublished Content
  *
  * Playing around with styles for unpublished content (still needs some work)
  */
-.node-unpublished .content::before {
+.node-unpublished .content::before{
 	// box model
 	padding-right: 1ch;
 	padding-left: 1ch;
@@ -23,7 +24,7 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	// decoration
-	background-color: #FF9494;
+	background-color: mix($tint, $wine, 80%);
 	border-radius: 2px;
 	// misc
 	content: "Unpublished";
