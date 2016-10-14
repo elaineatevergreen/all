@@ -5198,22 +5198,63 @@ return($term); ';
   /* Display: Offerings by Faculty */
   $handler = $view->new_display('block', 'Offerings by Faculty', 'offerings_by_faculty');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Upcoming Offerings';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['override'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2>Current, Recent, and Upcoming Offerings</h2>';
+  $handler->display->display_options['header']['area']['format'] = 'extended_tags';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Begin Term */
+  $handler->display->display_options['fields']['field_begin_term']['id'] = 'field_begin_term';
+  $handler->display->display_options['fields']['field_begin_term']['table'] = 'field_data_field_begin_term';
+  $handler->display->display_options['fields']['field_begin_term']['field'] = 'field_begin_term';
+  $handler->display->display_options['fields']['field_begin_term']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_begin_term']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_begin_term']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_begin_term']['field_api_classes'] = TRUE;
+  /* Field: Content: End Term */
+  $handler->display->display_options['fields']['field_end_term']['id'] = 'field_end_term';
+  $handler->display->display_options['fields']['field_end_term']['table'] = 'field_data_field_end_term';
+  $handler->display->display_options['fields']['field_end_term']['field'] = 'field_end_term';
+  $handler->display->display_options['fields']['field_end_term']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_end_term']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_end_term']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_end_term']['field_api_classes'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'Offering';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
