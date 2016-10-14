@@ -418,6 +418,7 @@ input:checked + .header-dropdown{
 }
 
 .top-nav-link,
+.top-nav-list a,  // Drupal
 .secondary-nav-link{
 	// box model
 	border-bottom-width: 0;
@@ -464,10 +465,10 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-list a,
-.top-nav-list a:visited,
 .top-nav-link,
-.top-nav-link:visited{
+.top-nav-link:visited,
+.top-nav-list a,  // Drupal
+.top-nav-list a:visited{  // Drupal
 	// typography
 	color: $tint;
 	font-weight: 600;
