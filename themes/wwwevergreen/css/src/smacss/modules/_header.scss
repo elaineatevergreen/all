@@ -417,7 +417,7 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,
+.top-nav-link,  // Deprecated in Drupal
 .top-nav-list a,  // Drupal
 .secondary-nav-link{
 	// box model
@@ -465,8 +465,8 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,
-.top-nav-link:visited,
+.top-nav-link,  // Deprecated in Drupal
+.top-nav-link:visited,  // Deprecated in Drupal
 .top-nav-list a,  // Drupal
 .top-nav-list a:visited{  // Drupal
 	// typography
