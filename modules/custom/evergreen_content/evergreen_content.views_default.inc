@@ -13,7 +13,7 @@ function evergreen_content_views_default_views() {
   $view = new view();
   $view->name = 'alerts';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'content';
   $view->base_table = 'node';
   $view->human_name = 'Alerts';
   $view->core = 7;
@@ -68,7 +68,7 @@ function evergreen_content_views_default_views() {
   $view = new view();
   $view->name = 'alumni_directories';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'content';
   $view->base_table = 'node';
   $view->human_name = 'Alumni Directories';
   $view->core = 7;
@@ -9589,6 +9589,12 @@ return($term); ';
   $handler = $view->new_display('page', 'Scholarship Review Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Review Scholarships';
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    12 => '12',
+  );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -9713,6 +9719,30 @@ return($term); ';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '1';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 0,
+        'display_values' => array(
+          '_all_' => '_all_',
+        ),
+      ),
+    ),
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -9833,6 +9863,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_site_section']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['fields']['field_site_section']['field'] = 'field_site_section';
   $handler->display->display_options['fields']['field_site_section']['label'] = '';
+  $handler->display->display_options['fields']['field_site_section']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_site_section']['element_type'] = '0';
   $handler->display->display_options['fields']['field_site_section']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_site_section']['element_wrapper_type'] = '0';
@@ -9856,7 +9887,12 @@ return($term); ';
     'scholarship' => 'scholarship',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $handler->display->display_options['path'] = 'admin/workbench/scholarships';
+  $handler->display->display_options['path'] = 'admin/workbench/content/scholarships';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Scholarships';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['scholarships'] = $view;
 
   $view = new view();
