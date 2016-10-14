@@ -44,6 +44,66 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'mailing_lists_feed_importer-xpathparser_3-community';
+  $feeds_tamper->importer = 'mailing_lists_feed_importer';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'community',
+    'replace' => 'Community Lists',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'community';
+  $export['mailing_lists_feed_importer-xpathparser_3-community'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'mailing_lists_feed_importer-xpathparser_3-find_replace';
+  $feeds_tamper->importer = 'mailing_lists_feed_importer';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'programs',
+    'replace' => 'Program Lists',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'programs';
+  $export['mailing_lists_feed_importer-xpathparser_3-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'mailing_lists_feed_importer-xpathparser_3-sponsored';
+  $feeds_tamper->importer = 'mailing_lists_feed_importer';
+  $feeds_tamper->source = 'xpathparser:3';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'tescsponsor',
+    'replace' => 'Sponsored Lists',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'sponsored';
+  $export['mailing_lists_feed_importer-xpathparser_3-sponsored'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory-xpathparser_10-trim';
   $feeds_tamper->importer = 'office_directory';
   $feeds_tamper->source = 'xpathparser:10';

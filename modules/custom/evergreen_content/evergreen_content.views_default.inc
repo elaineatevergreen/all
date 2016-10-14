@@ -8598,6 +8598,111 @@ return($term); ';
   $export['magazine'] = $view;
 
   $view = new view();
+  $view->name = 'mailing_lists';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Mailing Lists';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Mailing Lists';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_list_category',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p>Find, join, and read email lists. (<a href="http://lists.evergreen.edu/utilities">List administration</a>)</p>';
+  $handler->display->display_options['header']['area']['format'] = 'extended_tags';
+  /* Field: Content: id */
+  $handler->display->display_options['fields']['field_id']['id'] = 'field_id';
+  $handler->display->display_options['fields']['field_id']['table'] = 'field_data_field_id';
+  $handler->display->display_options['fields']['field_id']['field'] = 'field_id';
+  $handler->display->display_options['fields']['field_id']['label'] = '';
+  $handler->display->display_options['fields']['field_id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_id']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title]';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'http://lists.evergreen.edu/read/?forum=[field_id]';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Subscribe */
+  $handler->display->display_options['fields']['field_subscribe']['id'] = 'field_subscribe';
+  $handler->display->display_options['fields']['field_subscribe']['table'] = 'field_data_field_subscribe';
+  $handler->display->display_options['fields']['field_subscribe']['field'] = 'field_subscribe';
+  $handler->display->display_options['fields']['field_subscribe']['label'] = '';
+  $handler->display->display_options['fields']['field_subscribe']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_subscribe']['alter']['text'] = 'Subscribe';
+  $handler->display->display_options['fields']['field_subscribe']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_subscribe']['alter']['path'] = 'http://lists.evergreen.edu/read/all_forums/subscribe?name=[field_subscribe]';
+  $handler->display->display_options['fields']['field_subscribe']['element_label_colon'] = FALSE;
+  /* Field: Content: List Category */
+  $handler->display->display_options['fields']['field_list_category']['id'] = 'field_list_category';
+  $handler->display->display_options['fields']['field_list_category']['table'] = 'field_data_field_list_category';
+  $handler->display->display_options['fields']['field_list_category']['field'] = 'field_list_category';
+  $handler->display->display_options['fields']['field_list_category']['label'] = '';
+  $handler->display->display_options['fields']['field_list_category']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_list_category']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'mailing_list_link' => 'mailing_list_link',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'lists';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $export['mailing_lists'] = $view;
+
+  $view = new view();
   $view->name = 'news_o_matic';
   $view->description = '';
   $view->tag = 'default';

@@ -9692,6 +9692,204 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-mailing_list_link-field_id'.
+  $field_instances['node-mailing_list_link-field_id'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_id',
+    'label' => 'id',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-mailing_list_link-field_list_category'.
+  $field_instances['node-mailing_list_link-field_list_category'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_list_category',
+    'label' => 'List Category',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-mailing_list_link-field_subscribe'.
+  $field_instances['node-mailing_list_link-field_subscribe'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_subscribe',
+    'label' => 'Subscribe',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-profile-body'.
   $field_instances['node-profile-body'] = array(
     'bundle' => 'profile',
@@ -12324,6 +12522,7 @@ function evergreen_content_field_default_field_instances() {
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
   t('Links to sub-offices or other related offices.');
+  t('List Category');
   t('List the general times and locations of this committee. (Create an event listing if you want meetings to appear on the Campus Calendar.)');
   t('Location');
   t('Location Category');
@@ -12380,6 +12579,7 @@ function evergreen_content_field_default_field_instances() {
   t('Roles');
   t('Room');
   t('Sample Program');
+  t('Sample Program Description');
   t('Secondary Content');
   t('Section Contact Info');
   t('Section Navigation');
@@ -12407,6 +12607,7 @@ function evergreen_content_field_default_field_instances() {
   t('Students, Trustees, members of the public, etc.');
   t('Study Abroad');
   t('Subjects Studied');
+  t('Subscribe');
   t('Term Details');
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
@@ -12472,6 +12673,7 @@ function evergreen_content_field_default_field_instances() {
   t('Which is eligible to apply for this scholarship?');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
+  t('id');
   t('this is used for lots of connecting and prepopulating stuff, or at least I think it will be.');
 
   return $field_instances;

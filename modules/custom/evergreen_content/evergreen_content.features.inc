@@ -283,6 +283,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Name'),
       'help' => '',
     ),
+    'mailing_list_link' => array(
+      'name' => t('Mailing List Link'),
+      'base' => 'node_content',
+      'description' => t('Exported from duc.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'profile' => array(
       'name' => t('Profile'),
       'base' => 'node_content',
