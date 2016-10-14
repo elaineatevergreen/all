@@ -19,7 +19,7 @@ We'll have to do something about that.
 				*/
 			
 			//main site
-			if(!empty($evergreen_blocks)):
+			if($evergreen_blocks == 1):
 				staticblocks('page-header');
 			
 			// markup & regions for service center sites
