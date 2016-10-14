@@ -10,6 +10,9 @@ We'll have to do something about that.
 
 */
 ?>
+<?php
+$evergreen_blocks = theme_get_setting('evergreen_blocks');
+?>
 <div class="row box" id="sitewide-alert"><!--This is a placeholder. Keep it empty.--></div>
 <header class="row" role="banner">
 	
