@@ -41,17 +41,18 @@ ul.banned-list{
 }
 
 ul.banned-list{
-	list-style-image: url(/style-guide/images/no.png);
+	list-style-image: url("/style-guide/images/no.png");
 }
 
-@include breakpoint($starlord) {
+@include breakpoint($starlord){
 	.sample-list > li{
-		margin:0.535714285714286em 4% 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
+		margin: 0.535714285714286em 4% 1.071428571428571em 0;  //22.5/14/3 15/14  So, 22.5 + 7.5 + 15 = 45
 		width: 48%;
 		float: left;
 	}
+
 	.sample-list > li:nth-child(even){
-	    margin-right: 0;
+		margin-right: 0;
 	}
 }
 
@@ -69,7 +70,7 @@ ul.banned-list{
  * @see http://smacss.com/book/type-state
  */
 .is-dark{
-	color:#fff;
+	color: $tint;
 }
 
 /*body::after{

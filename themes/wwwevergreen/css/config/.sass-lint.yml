@@ -108,6 +108,7 @@ rules:
       		# direction (e.g. for box model: top, right, bottom, left)
       		# alphabetically
         # box model
+        - box-sizing
         - border
         - border-top
         - border-right
@@ -214,7 +215,9 @@ rules:
         - outline-width
         # behavior
         - animation
+        - touch-action
         - transition
+        - user-select
         # miscellaneous
         - content
         - quotes
