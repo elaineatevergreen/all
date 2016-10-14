@@ -115,14 +115,12 @@ directory/combined',
     'visibility' => 0,
   );
 
-  $export['views-alerts-block'] = array(
+  $export['views-alerts-only_alerts'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 'alerts-block',
+    'delta' => 'alerts-only_alerts',
     'module' => 'views',
-    'node_types' => array(
-      0 => 'home_page',
-    ),
+    'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(

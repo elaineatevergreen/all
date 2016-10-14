@@ -34,6 +34,10 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'full';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -62,7 +66,19 @@ function evergreen_content_views_default_views() {
   );
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  $handler = $view->new_display('block', 'Block', 'only_alerts');
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'open_notice');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'Campus open';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>The campus is open as normal.</p>';
+  $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $export['alerts'] = $view;
 
   $view = new view();
