@@ -345,6 +345,8 @@ function tidyBlobs($row) {
 		$filepath='/((?:href)|(?:src))="(?:http:\/\/(?:www.)*evergreen.edu\/)*(?:\.\.\/)*([^"]+\.(?!htm).{1,5})"/';
 		$drupalfilepath = '$1="/sites/default/files/$2"';
 	    $row = preg_replace($filepath,$drupalfilepath,$row);
+	    //rewrite _inc icon urls
+	    $row = str_ireplace("/sites/default/files/_inc/", "/sites/all/themes/wwwevergreen/images/", $row);
 	    
 	    
 	    return $row;
