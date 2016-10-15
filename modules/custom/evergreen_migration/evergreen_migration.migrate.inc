@@ -7,9 +7,6 @@ function evergreen_content_migrate_api() {
 			'sites' => array(
 				'title' => t('Sites'),
 			),
-			'calendar' => array(
-				'title' => t('Campus Calendar'),
-			),
 		),
 		'migrations' => array(
 			//site content
@@ -32,10 +29,6 @@ function evergreen_content_migrate_api() {
 			'News' => array( 
 				'class_name' => 'NewsMigration',
 				'group_name' => 'sites',
-			), //end of the News migration
-			'Events' => array( 
-				'class_name' => 'EventMigration',
-				'group_name' => 'calendar',
 			), //end of the News migration
 		), //end of the migrations array
 	); //end of the main array
