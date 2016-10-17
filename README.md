@@ -3,6 +3,7 @@ Includes:
 * Evergreen Content feature 
 * Campus Calendar feature 
 * Learning Communities feature 
+* Curriculum for the Bioregion feature
 
 # Collab Sites  
 The following sites are using the drupal7 code tree and are updated by  

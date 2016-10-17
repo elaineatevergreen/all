@@ -838,15 +838,14 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
-    'file' => array(
-      'large_image' => array(
-        'label' => 'Large Image',
-        'custom settings' => 1,
-      ),
-    ),
+    'file' => array(),
     'field_collection_item' => array(
       'summary' => array(
         'label' => 'Summary',
+        'custom settings' => 1,
+      ),
+      'data_export' => array(
+        'label' => 'Data Export',
         'custom settings' => 1,
       ),
     ),
@@ -857,6 +856,10 @@ function evergreen_content_strongarm() {
       ),
       'contact_block' => array(
         'label' => 'Contact Block',
+        'custom settings' => 1,
+      ),
+      'contact_row' => array(
+        'label' => 'Contact Row',
         'custom settings' => 1,
       ),
     ),
@@ -913,6 +916,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -927,6 +933,36 @@ function evergreen_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__alert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__alumni_circles';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__alumni_circles'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -965,6 +1001,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1016,6 +1055,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1075,6 +1117,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1132,6 +1177,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1149,6 +1197,73 @@ function evergreen_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__committee_page';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full_name' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '10',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '2',
+        ),
+        'redirect' => array(
+          'weight' => '3',
+        ),
+      ),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '9',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_node__committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1186,6 +1301,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => TRUE,
       ),
+      'contact_row' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1197,6 +1315,9 @@ function evergreen_content_strongarm() {
         ),
         'redirect' => array(
           'weight' => '2',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(),
@@ -1243,6 +1364,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1254,6 +1378,9 @@ function evergreen_content_strongarm() {
         ),
         'redirect' => array(
           'weight' => '4',
+        ),
+        'metatags' => array(
+          'weight' => '40',
         ),
       ),
       'display' => array(),
@@ -1271,6 +1398,33 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1299,7 +1453,11 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__faculty_news';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
@@ -1329,14 +1487,23 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '1',
+        ),
+        'metatags' => array(
+          'weight' => '4',
+        ),
+        'redirect' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(),
@@ -1349,17 +1516,54 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__gallery';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full_name' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '5',
+        ),
+        'metatags' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -1389,6 +1593,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1445,6 +1652,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1494,6 +1704,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1556,6 +1769,9 @@ function evergreen_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1576,6 +1792,32 @@ function evergreen_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__mailing_list_link';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__mailing_list_link'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1613,6 +1855,9 @@ function evergreen_content_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1646,6 +1891,9 @@ function evergreen_content_strongarm() {
       'contact_block' => array(
         'custom_settings' => FALSE,
       ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1671,6 +1919,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1722,6 +1973,9 @@ function evergreen_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -1799,11 +2053,31 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'media_wysiwyg_wysiwyg_allowed_types';
+  $strongarm->value = array(
+    0 => 'image',
+    1 => 'video',
+    2 => 'audio',
+  );
+  $export['media_wysiwyg_wysiwyg_allowed_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_alert';
   $strongarm->value = array(
     0 => 'main-menu',
   );
   $export['menu_options_alert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_alumni_circles';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_alumni_circles'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1827,9 +2101,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_blurb';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_blurb'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1840,6 +2112,15 @@ function evergreen_content_strongarm() {
     0 => 'main-menu',
   );
   $export['menu_options_catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_committee_page';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1930,6 +2211,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_mailing_list_link';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_mailing_list_link'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_profile';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -1973,6 +2263,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_alumni_circles';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_alumni_circles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_article';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_article'] = $strongarm;
@@ -1997,6 +2294,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'menu_parent_catalog_entry';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_committee_page';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2071,6 +2375,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_mailing_list_link';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_mailing_list_link'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_profile';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_profile'] = $strongarm;
@@ -2099,6 +2410,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'metatag_extended_permissions';
+  $strongarm->value = 1;
+  $export['metatag_extended_permissions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'module_filter_tabs';
   $strongarm->value = 0;
   $export['module_filter_tabs'] = $strongarm;
@@ -2113,6 +2431,16 @@ function evergreen_content_strongarm() {
     2 => 'revision',
   );
   $export['node_options_alert'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_alumni_circles';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_alumni_circles'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2156,6 +2484,16 @@ function evergreen_content_strongarm() {
     1 => 'promote',
   );
   $export['node_options_catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_committee_page';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2262,6 +2600,16 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_mailing_list_link';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_mailing_list_link'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_profile';
   $strongarm->value = array(
     0 => 'status',
@@ -2310,6 +2658,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_alumni_circles';
+  $strongarm->value = '0';
+  $export['node_preview_alumni_circles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_article';
   $strongarm->value = '0';
   $export['node_preview_article'] = $strongarm;
@@ -2334,6 +2689,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_preview_catalog_entry';
   $strongarm->value = '1';
   $export['node_preview_catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_committee_page';
+  $strongarm->value = '0';
+  $export['node_preview_committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2408,6 +2770,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_mailing_list_link';
+  $strongarm->value = '1';
+  $export['node_preview_mailing_list_link'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_profile';
   $strongarm->value = '0';
   $export['node_preview_profile'] = $strongarm;
@@ -2443,6 +2812,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_alumni_circles';
+  $strongarm->value = 0;
+  $export['node_submitted_alumni_circles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_article';
   $strongarm->value = 1;
   $export['node_submitted_article'] = $strongarm;
@@ -2467,6 +2843,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_submitted_catalog_entry';
   $strongarm->value = 0;
   $export['node_submitted_catalog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_committee_page';
+  $strongarm->value = 0;
+  $export['node_submitted_committee_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2507,7 +2890,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_gallery';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2537,6 +2920,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_submitted_location';
   $strongarm->value = 0;
   $export['node_submitted_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_mailing_list_link';
+  $strongarm->value = 0;
+  $export['node_submitted_mailing_list_link'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2605,7 +2995,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_catalog_entry_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'catalog/[node:title]';
   $export['pathauto_node_catalog_entry_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -2626,15 +3016,29 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_event_pattern';
-  $strongarm->value = 'campuscalendar/event/[node:title]';
+  $strongarm->value = 'calendar/event/[node:field_event_date]/[node:title]';
   $export['pathauto_node_event_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_field_of_study_pattern';
+  $strongarm->name = 'pathauto_node_faculty_news_pattern';
   $strongarm->value = '';
+  $export['pathauto_node_faculty_news_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_field_of_study_pattern';
+  $strongarm->value = 'studies/[node:title]';
   $export['pathauto_node_field_of_study_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_gallery_pattern';
+  $strongarm->value = '[node:field-site-section:name]/[node:title]';
+  $export['pathauto_node_gallery_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2656,6 +3060,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_library_database_pattern';
   $strongarm->value = 'library/databases/[node:title]';
   $export['pathauto_node_library_database_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_location_pattern';
+  $strongarm->value = 'location/[node:title]';
+  $export['pathauto_node_location_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2753,6 +3164,7 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
+    'file' => TRUE,
     'node' => TRUE,
     'taxonomy' => TRUE,
     'user' => TRUE,
@@ -2765,6 +3177,644 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'site_default_country';
   $strongarm->value = '';
   $export['site_default_country'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'tabtamer_tab_settings';
+  $strongarm->value = array(
+    'node/%/webform' => array(
+      'weight' => '-92',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results' => array(
+      'weight' => '-91',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results',
+      'tabtamer_title' => '',
+    ),
+    'node/%/repeats' => array(
+      'weight' => '-94',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/repeats',
+      'tabtamer_title' => '',
+    ),
+    'node/%/revisions' => array(
+      'weight' => '-90',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/revisions',
+      'tabtamer_title' => '',
+    ),
+    'node/%/import' => array(
+      'weight' => '-88',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/import',
+      'tabtamer_title' => '',
+    ),
+    'node/%/delete-items' => array(
+      'weight' => '-87',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/delete-items',
+      'tabtamer_title' => '',
+    ),
+    'node/%/unlock' => array(
+      'weight' => '-86',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/unlock',
+      'tabtamer_title' => '',
+    ),
+    'node/%/view' => array(
+      'weight' => '-100',
+      'action' => 'hidden',
+      'tabtamer_original_path' => 'node/%node/view',
+      'tabtamer_title' => '',
+    ),
+    'node/%/edit' => array(
+      'weight' => '-98',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/edit',
+      'tabtamer_title' => '',
+    ),
+    'node/%/delete' => array(
+      'weight' => '-93',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/delete',
+      'tabtamer_title' => '',
+    ),
+    'node/%/replicate' => array(
+      'weight' => '-96',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/replicate',
+      'tabtamer_title' => 'Copy',
+    ),
+    'node/%/track' => array(
+      'weight' => '-89',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/track',
+      'tabtamer_title' => '',
+    ),
+    'node/%/devel' => array(
+      'weight' => '-84',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/devel',
+      'tabtamer_title' => '',
+    ),
+    'node/%/manage_schedules' => array(
+      'weight' => '-95',
+      'action' => 'hidden',
+      'tabtamer_original_path' => 'node/%node/manage_schedules',
+      'tabtamer_title' => '',
+    ),
+    'node/%/moderation' => array(
+      'weight' => '-97',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/moderation',
+      'tabtamer_title' => 'Versions',
+    ),
+    'node/%/draft' => array(
+      'weight' => '-99',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/draft',
+      'tabtamer_title' => '',
+    ),
+    'node/%/log' => array(
+      'weight' => '-85',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%views_arg/log',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/components' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/components',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/conditionals' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/conditionals',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/configure' => array(
+      'weight' => '5',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/configure',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/emails' => array(
+      'weight' => '4',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/emails',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/validation' => array(
+      'weight' => '3',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/validation',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/components/%' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/components/%webform_menu_component',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/components/%/clone' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/components/%webform_menu_component/clone',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/components/%/delete' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/components/%webform_menu_component/delete',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/emails/%' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/emails/%webform_menu_email',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/emails/%/clone' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/emails/%webform_menu_email/clone',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform/emails/%/delete' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform/emails/%webform_menu_email/delete',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/submissions' => array(
+      'weight' => '4',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/submissions',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/analysis' => array(
+      'weight' => '5',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/analysis',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/table' => array(
+      'weight' => '6',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/table',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/download' => array(
+      'weight' => '7',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/download',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/clear' => array(
+      'weight' => '8',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/clear',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/analysis/%' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/analysis/%webform_menu_component',
+      'tabtamer_title' => '',
+    ),
+    'node/%/webform-results/analysis/%/more' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/webform-results/analysis/%webform_menu_component/more',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/view' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/view',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/edit' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/edit',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/delete' => array(
+      'weight' => '2',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/delete',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/devel',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'node/%/submission/%/devel/token' => array(
+      'weight' => '5',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%webform_menu/submission/%webform_menu_submission/devel/token',
+      'tabtamer_title' => '',
+    ),
+    'node/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'node/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'node/%/moderation/view' => array(
+      'weight' => '-1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/moderation/view',
+      'tabtamer_title' => '',
+    ),
+    'node/%/moderation/diff' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/moderation/diff',
+      'tabtamer_title' => '',
+    ),
+    'node/%/moderation/diff/list' => array(
+      'weight' => '-1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/moderation/diff/list',
+      'tabtamer_title' => '',
+    ),
+    'node/%/moderation/diff/view' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'node/%node/moderation/diff/view',
+      'tabtamer_title' => '',
+    ),
+    'block/%/view' => array(
+      'weight' => '-20',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/view',
+      'tabtamer_title' => '',
+    ),
+    'block/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/edit',
+      'tabtamer_title' => '',
+    ),
+    'block/%/delete' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/delete',
+      'tabtamer_title' => '',
+    ),
+    'block/%/revisions' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/revisions',
+      'tabtamer_title' => '',
+    ),
+    'block/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/devel',
+      'tabtamer_title' => '',
+    ),
+    'block/%/revisions/%/view' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/revisions/%/view',
+      'tabtamer_title' => '',
+    ),
+    'block/%/revisions/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/revisions/%/edit',
+      'tabtamer_title' => '',
+    ),
+    'block/%/revisions/%/set-active' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/revisions/%/set-active',
+      'tabtamer_title' => '',
+    ),
+    'block/%/revisions/%/delete' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/revisions/%/delete',
+      'tabtamer_title' => '',
+    ),
+    'block/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'block/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'block/%bean_delta/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'user/%/contact' => array(
+      'weight' => '2',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/contact',
+      'tabtamer_title' => '',
+    ),
+    'user/%/shortcuts' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/shortcuts',
+      'tabtamer_title' => '',
+    ),
+    'user/%/track/navigation' => array(
+      'weight' => '2',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/track/navigation',
+      'tabtamer_title' => '',
+    ),
+    'user/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/devel',
+      'tabtamer_title' => '',
+    ),
+    'user/%/view' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/view',
+      'tabtamer_title' => '',
+    ),
+    'user/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/edit',
+      'tabtamer_title' => '',
+    ),
+    'user/%/sections' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/sections',
+      'tabtamer_title' => '',
+    ),
+    'user/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'user/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'user/%/edit/account' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/%user_category/edit/account',
+      'tabtamer_title' => '',
+    ),
+    'user/login' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/login',
+      'tabtamer_title' => '',
+    ),
+    'user/register' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/register',
+      'tabtamer_title' => '',
+    ),
+    'user/password' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'user/password',
+      'tabtamer_title' => '',
+    ),
+    'import/%/import' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'import/%feeds_importer/import',
+      'tabtamer_title' => '',
+    ),
+    'import/%/delete-items' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'import/%feeds_importer/delete-items',
+      'tabtamer_title' => '',
+    ),
+    'import/%/unlock' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'import/%feeds_importer/unlock',
+      'tabtamer_title' => '',
+    ),
+    'import/%/log' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'import/%/log',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-degrees/%/view' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-degrees/%field_collection_item/view',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-degrees/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-degrees/%field_collection_item/edit',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-degrees/%/delete' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-degrees/%field_collection_item/delete',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-section-navigation/%/view' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-section-navigation/%field_collection_item/view',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-section-navigation/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-section-navigation/%field_collection_item/edit',
+      'tabtamer_title' => '',
+    ),
+    'field-collection/field-section-navigation/%/delete' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'field-collection/field-section-navigation/%field_collection_item/delete',
+      'tabtamer_title' => '',
+    ),
+    'file/add/upload' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/add/upload',
+      'tabtamer_title' => '',
+    ),
+    'file/add/upload/file' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/add/upload/file',
+      'tabtamer_title' => '',
+    ),
+    'file/add/upload/archive' => array(
+      'weight' => '-5',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/add/upload/archive',
+      'tabtamer_title' => '',
+    ),
+    'file/%/view' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/view',
+      'tabtamer_title' => '',
+    ),
+    'file/%/usage' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/usage',
+      'tabtamer_title' => '',
+    ),
+    'file/%/edit' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/edit',
+      'tabtamer_title' => '',
+    ),
+    'file/%/delete' => array(
+      'weight' => '1',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/delete',
+      'tabtamer_title' => '',
+    ),
+    'file/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/devel',
+      'tabtamer_title' => '',
+    ),
+    'file/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'file/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'file/%/devel/token' => array(
+      'weight' => '5',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'file/%file/devel/token',
+      'tabtamer_title' => '',
+    ),
+    'search/node' => array(
+      'weight' => '-10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'search/node',
+      'tabtamer_title' => '',
+    ),
+    'search/user' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'search/user',
+      'tabtamer_title' => '',
+    ),
+    'search/node/%' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'search/node/%menu_tail',
+      'tabtamer_title' => '',
+    ),
+    'search/user/%' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'search/user/%menu_tail',
+      'tabtamer_title' => '',
+    ),
+    'taxonomy/term/%/view' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'taxonomy/term/%taxonomy_term/view',
+      'tabtamer_title' => '',
+    ),
+    'taxonomy/term/%/edit' => array(
+      'weight' => '10',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'taxonomy/term/%taxonomy_term/edit',
+      'tabtamer_title' => '',
+    ),
+    'taxonomy/term/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'taxonomy/term/%taxonomy_term/devel',
+      'tabtamer_title' => '',
+    ),
+    'taxonomy/term/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'taxonomy/term/%taxonomy_term/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'taxonomy/term/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'taxonomy/term/%taxonomy_term/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'comment/%/devel' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'comment/%comment/devel',
+      'tabtamer_title' => '',
+    ),
+    'comment/%/devel/load' => array(
+      'weight' => '0',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'comment/%comment/devel/load',
+      'tabtamer_title' => '',
+    ),
+    'comment/%/devel/render' => array(
+      'weight' => '100',
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'comment/%comment/devel/render',
+      'tabtamer_title' => '',
+    ),
+    'calendar' => array(
+      'weight' => 0,
+      'action' => 'enabled',
+      'tabtamer_original_path' => 'calendar',
+      'tabtamer_title' => '',
+    ),
+  );
+  $export['tabtamer_tab_settings'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2914,9 +3964,100 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_blurb';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_blurb'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_directory_individual';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_directory_individual'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_directory_office';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_directory_office'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_field_of_study';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_field_of_study'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_gallery';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_gallery'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_home_page_hero';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_home_page_hero'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_library_database';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_library_database'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_location';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_profile';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_scholarship';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_scholarship'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_student_group';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_student_group'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_webform';
+  $strongarm->value = 'published';
+  $export['workbench_moderation_default_state_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'workbench_myworkbench_disabled';
   $strongarm->value = FALSE;
   $export['workbench_myworkbench_disabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_scheduler_article';
+  $strongarm->value = array();
+  $export['workbench_scheduler_article'] = $strongarm;
 
   return $export;
 }

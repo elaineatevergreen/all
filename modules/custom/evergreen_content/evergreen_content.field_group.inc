@@ -13,6 +13,71 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|committee_page|default';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About this Committee',
+    'weight' => '5',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_members',
+      2 => 'field_other_members',
+      3 => 'field_charge',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'About this Committee',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_about|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_about|node|committee_page|form';
+  $field_group->group_name = 'group_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About this Committee',
+    'weight' => '8',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_short_description',
+      2 => 'field_charge',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-about field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_about|node|committee_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_about|node|location|form';
   $field_group->group_name = 'group_about';
   $field_group->entity_type = 'node';
@@ -39,6 +104,36 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_about|node|location|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_advanced|node|event|form';
+  $field_group->group_name = 'group_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_categories';
+  $field_group->data = array(
+    'label' => 'Additional Settings',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_academic_quarter',
+      1 => 'field_add_to_sections',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Additional Settings',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-advanced field-group-fieldset',
+        'description' => 'Most events do not require this information.',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_advanced|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -115,18 +210,20 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
-    'label' => 'Attachments',
-    'weight' => '16',
+    'label' => 'Details',
+    'weight' => '14',
     'children' => array(
-      0 => 'field_image',
+      0 => 'body',
       1 => 'field_flyer',
+      2 => 'field_image',
+      3 => 'field_sponsored_by',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'no-start',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-attachments field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -246,9 +343,9 @@ function evergreen_content_field_group_info() {
     'label' => 'Basics',
     'weight' => '15',
     'children' => array(
-      0 => 'group_identity',
-      1 => 'group_contact',
-      2 => 'group_faculty',
+      0 => 'group_contact',
+      1 => 'group_faculty',
+      2 => 'group_identity',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -401,19 +498,18 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '15',
+    'weight' => '16',
     'children' => array(
       0 => 'field_calendar_categories',
       1 => 'field_event_format',
-      2 => 'field_academic_quarter',
-      3 => 'field_add_to_sections',
+      2 => 'group_advanced',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'no-start',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-categories field-group-htab',
+        'classes' => '',
         'required_fields' => 1,
       ),
     ),
@@ -572,6 +668,7 @@ function evergreen_content_field_group_info() {
       2 => 'field_hours',
       3 => 'field_site_section',
       4 => 'field_twitter',
+      5 => 'field_staff_page',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -584,6 +681,38 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_custom|node|directory_office|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_description|node|event|default';
+  $field_group->group_name = 'group_description';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Description Wrapper',
+    'weight' => '1',
+    'children' => array(
+      0 => 'body',
+      1 => 'group_image',
+      2 => 'group_sponsor',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Description Wrapper',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'event-description',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_description|node|event|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -643,6 +772,102 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_description|node|student_group|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|event|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_event_date',
+      1 => 'field_location_off_campus',
+      2 => 'group_on_campus',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'event-details',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|field_of_study|form';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'field_of_study';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Extended Subject Details',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_sample_program',
+      1 => 'field_after_graduation',
+      2 => 'field_facilities_resources',
+      3 => 'field_recent_student_projects',
+      4 => 'field_faculty_bios',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-details field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|field_of_study|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|location|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'location';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_building_history',
+      1 => 'field_official_name',
+      2 => 'field_square_footage',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-details field-group-html-element',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|location|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -749,10 +974,12 @@ function evergreen_content_field_group_info() {
     'label' => 'Faculty Information',
     'weight' => '18',
     'children' => array(
-      0 => 'field_expertise',
-      1 => 'field_interests',
-      2 => 'field_background',
+      0 => 'field_background',
+      1 => 'field_expertise',
+      2 => 'field_interests',
       3 => 'field_is_faculty',
+      4 => 'field_faculty_directory_subject_',
+      5 => 'field_related_subjects_directory',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -766,6 +993,70 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_faculty|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_funding|node|committee_page|default';
+  $field_group->group_name = 'group_funding';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Funding',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_eligibility',
+      1 => 'field_upcoming_deadlines',
+      2 => 'webform',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Funding',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_funding|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_funding|node|committee_page|form';
+  $field_group->group_name = 'group_funding';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Funding',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_eligibility',
+      1 => 'field_upcoming_deadlines',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Funding',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-funding field-group-fieldset',
+        'description' => 'If this committee distributes funding, provide the details here. Otherwise, you may skip this section.',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_funding|node|committee_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -806,17 +1097,19 @@ function evergreen_content_field_group_info() {
     'label' => 'group',
     'weight' => '8',
     'children' => array(
-      0 => 'group_what',
-      1 => 'group_where',
-      2 => 'group_categories',
-      3 => 'group_attachments',
+      0 => 'group_attachments',
+      1 => 'group_categories',
+      2 => 'group_what',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'multipage-group',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'group',
       'instance_settings' => array(
-        'classes' => 'group-group field-group-htabs',
-        'id' => '',
+        'classes' => '',
+        'page_header' => '3',
+        'page_counter' => '1',
+        'move_button' => '1',
+        'move_additional' => '1',
       ),
     ),
   );
@@ -889,11 +1182,11 @@ function evergreen_content_field_group_info() {
     'label' => 'Identity',
     'weight' => '16',
     'children' => array(
-      0 => 'field_first_name',
-      1 => 'field_job_title',
-      2 => 'field_last_name',
-      3 => 'field_cas_name',
-      4 => 'field_headshot',
+      0 => 'field_cas_name',
+      1 => 'field_first_name',
+      2 => 'field_headshot',
+      3 => 'field_job_title',
+      4 => 'field_last_name',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -911,6 +1204,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_image|node|event|default';
+  $field_group->group_name = 'group_image';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_description';
+  $field_group->data = array(
+    'label' => 'Image float',
+    'weight' => '12',
+    'children' => array(
+      0 => 'field_image',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Image float',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'supplement',
+        'element' => 'figure',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_image|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_imported|node|directory_office|form';
   $field_group->group_name = 'group_imported';
   $field_group->entity_type = 'node';
@@ -924,15 +1247,15 @@ function evergreen_content_field_group_info() {
       0 => 'field_alternate_phone',
       1 => 'field_building_alt',
       2 => 'field_email',
-      3 => 'field_fax',
-      4 => 'field_mailstop',
-      5 => 'field_members',
-      6 => 'field_phone',
-      7 => 'field_room',
-      8 => 'field_websites',
-      9 => 'field_reference',
-      10 => 'field_related_offices',
-      11 => 'field_facilities',
+      3 => 'field_facilities',
+      4 => 'field_fax',
+      5 => 'field_mailstop',
+      6 => 'field_members',
+      7 => 'field_phone',
+      8 => 'field_reference',
+      9 => 'field_related_offices',
+      10 => 'field_room',
+      11 => 'field_websites',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -1014,10 +1337,10 @@ function evergreen_content_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'event';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_where';
+  $field_group->parent_name = 'group_what';
   $field_group->data = array(
     'label' => 'Location: On Campus',
-    'weight' => '6',
+    'weight' => '2',
     'children' => array(
       0 => 'field_building',
       1 => 'field_room',
@@ -1033,6 +1356,70 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_location_on_campus|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_meetings|node|committee_page|default';
+  $field_group->group_name = 'group_meetings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Meetings',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_meetings',
+      1 => 'field_agendas',
+      2 => 'field_minutes',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Meetings',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+        'required_fields' => 1,
+      ),
+      'formatter' => '',
+    ),
+  );
+  $field_groups['group_meetings|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_meetings|node|committee_page|form';
+  $field_group->group_name = 'group_meetings';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Meetings',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_meetings',
+      1 => 'field_agendas',
+      2 => 'field_minutes',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-meetings field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_meetings|node|committee_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1155,6 +1542,99 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_on_campus|node|event|default';
+  $field_group->group_name = 'group_on_campus';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_details';
+  $field_group->data = array(
+    'label' => 'Location: On Campus',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_building',
+      1 => 'field_room',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Location: On Campus',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_on_campus|node|event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_participants|node|committee_page|form';
+  $field_group->group_name = 'group_participants';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Participants',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_members',
+      1 => 'field_other_members',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-participants field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_participants|node|committee_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_phone|node|directory_office|default';
+  $field_group->group_name = 'group_phone';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_office';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Phone Numbers',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_alternate_phone',
+      1 => 'field_fax',
+      2 => 'field_phone',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-phone field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_phone|node|directory_office|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_primary|node|basic_page|form';
   $field_group->group_name = 'group_primary';
   $field_group->entity_type = 'node';
@@ -1253,22 +1733,57 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Social Media Connections',
-    'weight' => '25',
-    'children' => array(),
+    'label' => 'Find Online',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_facebook',
+      1 => 'field_twitter',
+      2 => 'field_websites',
+    ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Social Media Connections',
+      'label' => 'Find Online',
       'instance_settings' => array(
+        'id' => '',
         'classes' => 'group-social field-group-html-element',
         'element' => 'div',
         'show_label' => '1',
-        'label_element' => 'dt',
+        'label_element' => 'h3',
         'attributes' => '',
       ),
     ),
   );
   $field_groups['group_social|node|directory_office|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sponsor|node|event|default';
+  $field_group->group_name = 'group_sponsor';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_description';
+  $field_group->data = array(
+    'label' => 'Sponsor',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_sponsored_by',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Sponsor',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'event-sponsor',
+        'element' => 'p',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_sponsor|node|event|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1336,22 +1851,23 @@ function evergreen_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_group';
   $field_group->data = array(
-    'label' => 'What',
+    'label' => 'Title, Time, and Place',
     'weight' => '12',
     'children' => array(
-      0 => 'body',
-      1 => 'field_event_date',
-      2 => 'field_sponsored_by',
-      3 => 'title',
+      0 => 'field_event_date',
+      1 => 'field_location_off_campus',
+      2 => 'title',
+      3 => 'group_location_on_campus',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'multipage',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Title, Time, and Place',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-what field-group-htab',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'no-start',
     ),
   );
   $field_groups['group_what|node|event|form'] = $field_group;
@@ -1424,12 +1940,13 @@ function evergreen_content_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About the Building');
+  t('About this Committee');
   t('Additional Names');
+  t('Additional Settings');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Article Information');
   t('Articles & Images');
-  t('Attachments');
   t('Author Info');
   t('Author Information');
   t('Basics');
@@ -1438,25 +1955,34 @@ function evergreen_content_field_group_info() {
   t('Categories');
   t('Contact Information');
   t('Description');
+  t('Description Wrapper');
+  t('Details');
   t('Donor Info');
   t('Entrepreneur Info');
+  t('Extended Subject Details');
   t('Faculty Information');
+  t('Find Online');
+  t('Funding');
   t('Identity');
+  t('Image float');
   t('Imported Content');
   t('Link');
   t('Location: On Campus');
+  t('Meetings');
   t('Misc Options');
   t('Navigation');
   t('Our Annotations');
+  t('Participants');
+  t('Phone Numbers');
   t('Primary Content');
   t('Prospective Student Nav');
   t('Quarters');
   t('Secondary Content');
-  t('Social Media Connections');
+  t('Sponsor');
   t('Studies');
+  t('Title, Time, and Place');
   t('Top Level');
   t('Website-Specific Content');
-  t('What');
   t('Where');
   t('Who, When, and Where');
   t('group');

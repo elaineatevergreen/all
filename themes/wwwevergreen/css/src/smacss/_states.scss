@@ -1,0 +1,61 @@
+/**
+ * IV. State Styles
+ *
+ * Styles generally for elements that might have different states,
+ * depending on how they're set. Typically these are for JS or
+ * otherwise app-like functions.
+ *
+ * Table of Contents
+ *
+ * A. Primary Nav States
+ * B. Accordions
+ * C. UI
+ */
+
+/**
+ * A. Primary Nav States
+ */
+.is-current-section{
+	// typography
+	color: $tint;
+	// decoration
+	background-color: $evergreen-old-style;
+}
+
+.is-current-section a,
+.is-current-section a:link
+.is-current-section a:visited,
+.is-current-section .is-explored-section:hover,
+.is-current-section .is-explored-section:focus,
+.is-current-section .is-explored-section:active{
+	background-color: $evergreen-old-style;
+}
+
+/**
+ * B. Accordions
+ */
+
+.is-expanded:before{
+	// layout
+	transform: rotate(90deg);
+	// behavior
+	transition: all 0.2s linear;
+}
+
+/**
+ * C. UI
+ */
+
+.is-selected-ui{
+	// box model
+	padding: 0 0.33em;
+	// typography
+	color: $tint;
+	font-weight: bold;
+	// decoration
+	background-color: $blueberry-susan;
+}
+
+.is-hidden{
+	display: none !important;
+}

@@ -606,124 +606,6 @@ function evergreen_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_gallery_image-field_description'.
-  $field_instances['field_collection_item-field_gallery_image-field_description'] = array(
-    'bundle' => 'field_gallery_image',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'summary' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_description',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_gallery_image-field_image'.
-  $field_instances['field_collection_item-field_gallery_image-field_image'] = array(
-    'bundle' => 'field_gallery_image',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-      'summary' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'description_display' => 'after',
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_2' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'upload' => 0,
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 2,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
   // 'field_collection_item-field_section_navigation-field_group_title'.
   $field_instances['field_collection_item-field_section_navigation-field_group_title'] = array(
     'bundle' => 'field_section_navigation',
@@ -731,6 +613,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data_export' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -780,6 +669,13 @@ function evergreen_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Most of the time, keep it to other pages in the same site section.',
     'display' => array(
+      'data_export' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_separate',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
@@ -838,6 +734,162 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'file-document-field_file_description'.
+  $field_instances['file-document-field_file_description'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add a short description of this document\'s contents. This will help you and other editors find the document later.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_file_description',
+    'label' => 'Description',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'file-document-field_site_section'.
+  $field_instances['file-document-field_site_section'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Include the site section for easier finding and filtering. This will help you and other site editors link to the correct files.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'file-image-field_file_description'.
+  $field_instances['file-image-field_file_description'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add a brief description to go with this image in galleries. This description may also be available in the future for use as a caption.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_file_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'file-image-field_file_image_alt_text'.
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
@@ -852,12 +904,6 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'large_image' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -899,7 +945,53 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 3,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'file-image-field_site_section'.
+  $field_instances['file-image-field_site_section'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Choose which site you are adding this image to. The image may be used elsewhere, but this will help you and other editors find the right images later.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'file',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+      'wysiwyg_override' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 0,
     ),
     'workbench_access_field' => 0,
   );
@@ -948,6 +1040,310 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 31,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-alumni_circles-body'.
+  $field_instances['node-alumni_circles-body'] = array(
+    'bundle' => 'alumni_circles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-alumni_circles-field_email'.
+  $field_instances['node-alumni_circles-field_email'] = array(
+    'bundle' => 'alumni_circles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 44,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-alumni_circles-field_meetings'.
+  $field_instances['node-alumni_circles-field_meetings'] = array(
+    'bundle' => 'alumni_circles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Include regular dates, times, and locations.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_meetings',
+    'label' => 'Meetings',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 48,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-alumni_circles-field_phone'.
+  $field_instances['node-alumni_circles-field_phone'] = array(
+    'bundle' => 'alumni_circles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_phone',
+    'label' => 'Phone',
+    'required' => 0,
+    'settings' => array(
+      'ca_phone_parentheses' => 1,
+      'ca_phone_separator' => '-',
+      'description_display' => 'after',
+      'phone_country_code' => 0,
+      'phone_default_country_code' => 1,
+      'phone_int_max_length' => 15,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'phone',
+      'settings' => array(),
+      'type' => 'phone_textfield',
+      'weight' => 46,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-alumni_circles-field_websites'.
+  $field_instances['node-alumni_circles-field_websites'] = array(
+    'bundle' => 'alumni_circles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_websites',
+    'label' => 'Websites',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'description_display' => 'after',
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 42,
     ),
     'workbench_access_field' => 0,
   );
@@ -2207,7 +2603,7 @@ function evergreen_content_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_graduate_program',
-    'label' => 'Graduate Program',
+    'label' => 'Graduate Program (which one)',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -2874,7 +3270,7 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 22,
@@ -2887,7 +3283,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_related_field',
     'label' => 'Fields of Study',
     'required' => 0,
@@ -2897,9 +3293,13 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
       'weight' => 10,
     ),
     'workbench_access_field' => 0,
@@ -3294,6 +3694,654 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-committee_page-body'.
+  $field_instances['node-committee_page-body'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This may include procedures or additional information about the committee.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'body',
+    'label' => 'Details',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_agendas'.
+  $field_instances['node-committee_page-field_agendas'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'Upload meeting agendas in PDF or Word format.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_agendas',
+    'label' => 'Agendas',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 1,
+      'file_directory' => 'committees/agendas',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_charge'.
+  $field_instances['node-committee_page-field_charge'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'If this committee has a formal charge or charter document, upload it here.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 6,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_charge',
+    'label' => 'Charge',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 1,
+      'file_directory' => 'committees/charges',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_eligibility'.
+  $field_instances['node-committee_page-field_eligibility'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What are the general requirements for someone to apply for funding from this committee?',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_eligibility',
+    'label' => 'Eligibility',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 12,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_meetings'.
+  $field_instances['node-committee_page-field_meetings'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'List the general times and locations of this committee. (Create an event listing if you want meetings to appear on the Campus Calendar.)',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_meetings',
+    'label' => 'Meetings',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_members'.
+  $field_instances['node-committee_page-field_members'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select current members from the college directory. Contact information may be displayed along with the people\'s names.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_members',
+    'label' => 'Staff and Faculty Members',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_minutes'.
+  $field_instances['node-committee_page-field_minutes'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_minutes',
+    'label' => 'Minutes',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 1,
+      'file_directory' => 'committees/minutes',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 11,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_other_members'.
+  $field_instances['node-committee_page-field_other_members'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Students, Trustees, members of the public, etc.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_other_members',
+    'label' => 'Other Members',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_short_description'.
+  $field_instances['node-committee_page-field_short_description'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field may be used in lists and other summaries.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_short_description',
+    'label' => 'Short Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_upcoming_deadlines'.
+  $field_instances['node-committee_page-field_upcoming_deadlines'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_upcoming_deadlines',
+    'label' => 'Upcoming Deadlines',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'display_all_day' => 0,
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 13,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_individual-field_alternate_phone'.
   $field_instances['node-directory_individual-field_alternate_phone'] = array(
     'bundle' => 'directory_individual',
@@ -3302,6 +4350,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 4,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'phone',
         'settings' => array(),
@@ -3309,7 +4364,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 8,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -3329,6 +4384,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_alternate_phone',
     'is_property' => 0,
     'label' => 'Alternate Phone',
@@ -3336,6 +4392,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -3360,17 +4417,23 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3423,6 +4486,12 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'default' => array(
@@ -3445,11 +4514,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_building',
     'is_property' => 0,
     'label' => 'Building',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3470,6 +4541,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -3477,7 +4555,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 10,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3497,11 +4575,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_building_alt',
     'is_property' => 0,
     'label' => 'Building',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -3533,13 +4613,19 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3589,6 +4675,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'email',
         'settings' => array(),
@@ -3596,7 +4689,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 6,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -3616,11 +4709,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_email',
     'is_property' => 0,
     'label' => 'Email',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3644,17 +4739,23 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'contact_row' => array(
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3696,6 +4797,72 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance:
+  // 'node-directory_individual-field_faculty_directory_subject_'.
+  $field_instances['node-directory_individual-field_faculty_directory_subject_'] = array(
+    'bundle' => 'directory_individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_faculty_directory_subject_',
+    'label' => 'Faculty directory subject area',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 26,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_individual-field_fax'.
   $field_instances['node-directory_individual-field_fax'] = array(
     'bundle' => 'directory_individual',
@@ -3704,6 +4871,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 5,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'phone',
         'settings' => array(),
@@ -3711,7 +4885,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 9,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -3731,6 +4905,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_fax',
     'is_property' => 0,
     'label' => 'Fax',
@@ -3738,6 +4913,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -3761,6 +4937,12 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'contact_row' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -3820,13 +5002,19 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'above',
@@ -3836,7 +5024,7 @@ function evergreen_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3902,17 +5090,23 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'contact_row' => array(
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -3969,13 +5163,20 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 15,
       ),
-      'default' => array(
+      'contact_row' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 9,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 8,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4020,15 +5221,24 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'full_name' => array(
         'label' => 'hidden',
@@ -4044,11 +5254,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_job_title',
     'is_property' => 0,
     'label' => 'Job Title',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4077,6 +5289,12 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
+      'contact_row' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -4137,6 +5355,18 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 9,
+      ),
+      'contact_row' => array(
         'label' => 'hidden',
         'module' => 'addressfield',
         'settings' => array(
@@ -4212,6 +5442,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -4219,7 +5456,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 12,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4239,11 +5476,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_mailstop',
     'is_property' => 0,
     'label' => 'Mailstop',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4272,6 +5511,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 3,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'phone',
         'settings' => array(),
@@ -4279,7 +5525,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 7,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4299,6 +5545,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_phone',
     'is_property' => 0,
     'label' => 'Phone',
@@ -4306,6 +5553,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -4330,12 +5578,18 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 14,
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'above',
@@ -4344,7 +5598,7 @@ function evergreen_content_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 14,
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4382,6 +5636,65 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance:
+  // 'node-directory_individual-field_related_subjects_directory'.
+  $field_instances['node-directory_individual-field_related_subjects_directory'] = array(
+    'bundle' => 'directory_individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Indicates which overarching subjects this faculty has checked.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 15,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_related_subjects_directory',
+    'label' => 'Related Subjects (Directory)',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 26,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory_individual-field_room'.
   $field_instances['node-directory_individual-field_room'] = array(
     'bundle' => 'directory_individual',
@@ -4390,6 +5703,13 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -4397,7 +5717,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 11,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4417,11 +5737,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_room',
     'is_property' => 0,
     'label' => 'Room',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4450,18 +5772,25 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 1,
+      ),
+      'contact_row' => array(
         'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -4528,18 +5857,24 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Use this field sparingly for things like most commonly used forms or additional contact details.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -4576,7 +5911,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -4589,18 +5924,25 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
         'weight' => 4,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 6,
       ),
       'default' => array(
         'label' => 'inline',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4646,11 +5988,19 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4694,18 +6044,25 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
         'weight' => 2,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 10,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4715,11 +6072,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_email',
     'is_property' => 0,
     'label' => 'Email',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4729,7 +6088,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 12,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -4739,21 +6098,27 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'directory_office',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Include the full URL of your Facebook page or group.',
+    'description' => 'Include the full URL of your Facebook page or group. It\'s not necessary to list the main college Facebook page here.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 9,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4763,6 +6128,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_facebook',
     'is_property' => 0,
     'label' => 'Facebook',
@@ -4770,13 +6136,14 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
+        'class' => 'link-icon link-icon-alt icon-facebook',
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -4800,7 +6167,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 2,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -4816,16 +6183,24 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_row',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 17,
+        'type' => 'entityreference_entity_view',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4852,7 +6227,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -4872,14 +6247,19 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4917,7 +6297,14 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 5,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -4928,7 +6315,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4938,6 +6325,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_fax',
     'is_property' => 0,
     'label' => 'Fax',
@@ -4945,6 +6333,7 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'ca_phone_parentheses' => 1,
       'ca_phone_separator' => '-',
+      'description_display' => 'after',
       'phone_country_code' => 0,
       'phone_default_country_code' => 1,
       'phone_int_max_length' => 15,
@@ -4955,7 +6344,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 11,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -4968,18 +6357,24 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4989,12 +6384,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_hours',
     'is_property' => 0,
     'label' => 'Hours',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5010,7 +6406,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -5026,14 +6422,21 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
-      'default' => array(
-        'label' => 'inline',
+      'contact_row' => array(
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 2,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5079,16 +6482,24 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_block',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 13,
+        'type' => 'entityreference_entity_view',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5098,7 +6509,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'ul',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_members',
     'label' => 'Members',
     'required' => 0,
@@ -5115,7 +6526,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 14,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -5128,18 +6539,25 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 3,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
         'weight' => 3,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5184,16 +6602,22 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5220,7 +6644,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -5236,7 +6660,13 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'default' => array(
         'label' => 'above',
@@ -5245,7 +6675,7 @@ function evergreen_content_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 15,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5272,7 +6702,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 17,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -5291,11 +6721,19 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5346,13 +6784,19 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5382,26 +6826,31 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => TRUE,
   );
 
-  // Exported field_instance: 'node-directory_office-field_twitter'.
-  $field_instances['node-directory_office-field_twitter'] = array(
+  // Exported field_instance: 'node-directory_office-field_staff_page'.
+  $field_instances['node-directory_office-field_staff_page'] = array(
     'bundle' => 'directory_office',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.',
+    'description' => 'If your contact block includes a staff page, select it here.',
     'display' => array(
       'contact_block' => array(
-        'label' => 'above',
-        'module' => 'link',
+        'label' => 'hidden',
+        'module' => 'entityreference',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 9,
+        'type' => 'entityreference_entity_id',
+        'weight' => 6,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'hidden',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5411,6 +6860,64 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_staff_page',
+    'label' => 'Staff Page',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-directory_office-field_twitter'.
+  $field_instances['node-directory_office-field_twitter'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 10,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_twitter',
     'is_property' => 0,
     'label' => 'Twitter',
@@ -5418,13 +6925,14 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
+        'class' => 'link-icon link-icon-alt icon-twitter',
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -5435,7 +6943,7 @@ function evergreen_content_field_default_field_instances() {
         'profile' => '',
       ),
       'rel_remove' => 'default',
-      'title' => 'required',
+      'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => 'Twitter',
@@ -5448,7 +6956,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -5464,6 +6972,12 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'contact_row' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'default' => array(
@@ -5471,7 +6985,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 11,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5518,7 +7032,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -5535,7 +7049,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -5546,25 +7060,41 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'text_summary_or_trimmed',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'label' => 'Description',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'description_display' => 'after',
+      'display_summary' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 5,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-event-field_academic_quarter'.
@@ -5576,10 +7106,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 12,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5587,10 +7116,17 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_academic_quarter',
     'label' => 'Academic Quarter',
     'required' => 0,
@@ -5603,7 +7139,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -5617,12 +7153,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 13,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5630,10 +7163,19 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 13,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_add_to_sections',
     'label' => 'Site Section(s)',
     'required' => 0,
@@ -5655,7 +7197,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -5668,7 +7210,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -5679,6 +7221,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -5709,13 +7258,20 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -5743,7 +7299,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Select <em>Show End Date</em> to add an end time or date.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -5755,7 +7311,7 @@ function evergreen_content_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5763,10 +7319,25 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'url',
+          'fromto' => 'value',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+          'show_repeat_rule' => 'hide',
+        ),
+        'type' => 'date_default',
+        'weight' => 7,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_event_date',
     'label' => 'Event Date',
     'required' => 1,
@@ -5807,10 +7378,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5818,10 +7388,17 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_event_format',
     'label' => 'Event Format',
     'required' => 0,
@@ -5846,11 +7423,11 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Add a flyer if you would like people to print out information to post.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 10,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5858,10 +7435,17 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 10,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_flyer',
     'label' => 'Flyer',
     'required' => 0,
@@ -5880,7 +7464,7 @@ function evergreen_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 10,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -5892,6 +7476,22 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Your image will be resized to 345 pixels wide and displayed with your event description.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'event_image__345px_wide_',
+        ),
+        'type' => 'image',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -5901,16 +7501,10 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'image',
         'weight' => 9,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_image',
     'label' => 'Image',
     'required' => 0,
@@ -5946,7 +7540,7 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 9,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -5959,6 +7553,24 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Only use if your event is taking place off campus. Select "United States" below to add an address.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
         'label' => 'above',
         'module' => 'addressfield',
         'settings' => array(
@@ -5969,12 +7581,6 @@ function evergreen_content_field_default_field_instances() {
         ),
         'type' => 'addressfield_default',
         'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -6004,7 +7610,7 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -6016,7 +7622,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -6027,6 +7633,13 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -6053,14 +7666,14 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".',
+    'description' => 'The name of the department or series, i.e., "Career Center" or "Geoducks@Nite".',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6068,10 +7681,17 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_sponsored_by',
     'label' => 'Sponsored By',
     'required' => 0,
@@ -6092,7 +7712,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -6345,7 +7965,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'field_of_study',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -6371,11 +7991,18 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'body',
-    'label' => 'Blurb',
+    'label' => 'Blurb or Introduction',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'display_summary' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -6387,8 +8014,171 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 6,
     ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_after_graduation'.
+  $field_instances['node-field_of_study-field_after_graduation'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eventually this will be amended with a View or something automagically picking one or more alumni.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_after_graduation',
+    'label' => 'After Graduation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_facilities_resources'.
+  $field_instances['node-field_of_study-field_facilities_resources'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_facilities_resources',
+    'label' => 'Facilities & Resources',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 11,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_faculty_bios'.
+  $field_instances['node-field_of_study-field_faculty_bios'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_faculty_bios',
+    'label' => 'Faculty Bios',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 13,
+    ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance:
@@ -6440,26 +8230,25 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 35,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-field_of_study-field_related_field'.
-  $field_instances['node-field_of_study-field_related_field'] = array(
+  // Exported field_instance:
+  // 'node-field_of_study-field_recent_student_projects'.
+  $field_instances['node-field_of_study-field_recent_student_projects'] = array(
     'bundle' => 'field_of_study',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the "parent" of this field.',
+    'description' => 'This will be replaced by a View someday.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -6475,19 +8264,134 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_related_field',
-    'label' => 'Related field',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_recent_student_projects',
+    'label' => 'Recent Student Projects',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 34,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 12,
     ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_sample_program'.
+  $field_instances['node-field_of_study-field_sample_program'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_sample_program',
+    'label' => 'Sample Program',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-field_of_study-field_umbrella_field'.
+  $field_instances['node-field_of_study-field_umbrella_field'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_umbrella_field',
+    'label' => '"Umbrella" field',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-gallery-body'.
@@ -6551,17 +8455,16 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-gallery-field_gallery_image'.
-  $field_instances['node-gallery-field_gallery_image'] = array(
+  // Exported field_instance: 'node-gallery-field_gallery'.
+  $field_instances['node-gallery-field_gallery'] = array(
     'bundle' => 'gallery',
-    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add an image and extended description.',
+    'description' => '',
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
@@ -6570,13 +8473,32 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
+        'label' => 'hidden',
+        'module' => 'juicebox',
         'settings' => array(
-          'view_mode' => 'full',
+          'apply_markup_filter' => 1,
+          'caption_source' => 'field_file_description',
+          'custom_parent_classes' => '',
+          'image_style' => '',
+          'incompatible_file_action' => 'show_icon_and_link',
+          'jlib_backgroundColor' => '#222222',
+          'jlib_galleryHeight' => '100%',
+          'jlib_galleryWidth' => '100%',
+          'jlib_showExpandButton' => 1,
+          'jlib_showOpenButton' => 1,
+          'jlib_showThumbsButton' => 1,
+          'jlib_textColor' => 'rgba(255,255,255,1)',
+          'jlib_thumbFrameColor' => 'rgba(255,255,255,.5)',
+          'jlib_useFullscreenExpand' => 0,
+          'jlib_useThumbDots' => 0,
+          'linkurl_source' => '',
+          'linkurl_target' => '_blank',
+          'manual_config' => '',
+          'thumb_style' => 'juicebox_square_thumbnail',
+          'title_source' => '',
         ),
-        'type' => 'field_collection_fields',
-        'weight' => 1,
+        'type' => 'juicebox_formatter',
+        'weight' => 2,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -6591,24 +8513,97 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_gallery_image',
-    'label' => 'Image',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_gallery',
+    'label' => 'Gallery',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'alt_field' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 32,
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-gallery-field_site_section'.
+  $field_instances['node-gallery-field_site_section'] = array(
+    'bundle' => 'gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The section selected will set the page\'s site title, navigation, and background.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_site_section',
+    'label' => 'Site Section',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => TRUE,
   );
 
   // Exported field_instance: 'node-home_page-field_intro'.
@@ -7241,7 +9236,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_resource_subject',
     'label' => 'Resource Subject',
     'required' => 0,
@@ -7251,9 +9246,15 @@ function evergreen_content_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+        ),
+      ),
+      'type' => 'taxonomy_shs',
       'weight' => 8,
     ),
     'workbench_access_field' => 0,
@@ -7311,7 +9312,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7368,10 +9369,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7388,7 +9388,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_abbreviated_building_name',
     'label' => 'Abbreviated Building Name',
     'required' => 0,
@@ -7426,7 +9426,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7478,10 +9478,9 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7594,7 +9593,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7611,7 +9610,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_official_name',
     'label' => 'Official Name',
     'required' => 0,
@@ -7645,7 +9644,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -7654,7 +9653,7 @@ function evergreen_content_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -7671,7 +9670,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'p',
     'field_name' => 'field_square_footage',
     'label' => 'Square Footage',
     'required' => 0,
@@ -7680,7 +9679,7 @@ function evergreen_content_field_default_field_instances() {
       'max' => '',
       'min' => '',
       'prefix' => '',
-      'suffix' => '',
+      'suffix' => ' square feet',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -7689,6 +9688,204 @@ function evergreen_content_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-mailing_list_link-field_id'.
+  $field_instances['node-mailing_list_link-field_id'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_id',
+    'label' => 'id',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-mailing_list_link-field_list_category'.
+  $field_instances['node-mailing_list_link-field_list_category'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_list_category',
+    'label' => 'List Category',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-mailing_list_link-field_subscribe'.
+  $field_instances['node-mailing_list_link-field_subscribe'] = array(
+    'bundle' => 'mailing_list_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_subscribe',
+    'label' => 'Subscribe',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
     ),
     'workbench_access_field' => 0,
   );
@@ -10178,6 +12375,7 @@ function evergreen_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('"Umbrella" field');
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
@@ -10186,13 +12384,16 @@ function evergreen_content_field_default_field_instances() {
   t('Abbreviated Building Name');
   t('Academic Quarter');
   t('Academic Year');
+  t('Add a brief description to go with this image in galleries. This description may also be available in the future for use as a caption.');
   t('Add a flyer if you would like people to print out information to post.');
-  t('Add an image and extended description.');
+  t('Add a short description of this document\'s contents. This will help you and other editors find the document later.');
   t('Add multiple if the person received more than one degree (BA, MPA, etc) from Evergreen. Do not add degrees from other institutions.');
   t('Add to Sections');
   t('Additional Contact Information');
   t('Advertised Schedule');
   t('Affects how scholarship is displayed to applicants.');
+  t('After Graduation');
+  t('Agendas');
   t('Alert Message');
   t('All lower-case, separated by spaces.');
   t('Alt Text');
@@ -10208,6 +12409,7 @@ function evergreen_content_field_default_field_instances() {
   t('Begin Term');
   t('Biography');
   t('Blurb');
+  t('Blurb or Introduction');
   t('Body');
   t('Building');
   t('Building History');
@@ -10221,10 +12423,12 @@ function evergreen_content_field_default_field_instances() {
   t('CMD ID');
   t('Calendar Categories');
   t('Cashnet Code');
+  t('Charge');
   t('Check if anyone from Evergreen was involved in pitching this story to the media.');
   t('Check this box if they should appear in the alumni directory.');
   t('Check this box if this link needs to go through the college\'s proxy server to authenticate the user.');
   t('Choose the format of the event. If the event includes more than one, choose the most relevant type.');
+  t('Choose which site you are adding this image to. The image may be used elsewhere, but this will help you and other editors find the right images later.');
   t('Class Standing');
   t('Classes');
   t('Comes automatically from the CMD, where it\'s a free-form field.');
@@ -10239,21 +12443,27 @@ function evergreen_content_field_default_field_instances() {
   t('Degree');
   t('Degrees');
   t('Description');
+  t('Details');
   t('Display Name');
   t('Display in alumni directories');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
+  t('Eligibility');
   t('Email');
   t('End Term');
-  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>. You may put your handle in the title field.');
+  t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
   t('Event Date');
   t('Event Format');
+  t('Eventually this will be amended with a View or something automagically picking one or more alumni.');
+  t('Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)');
   t('Excerpt');
   t('Expertise');
   t('FAFSA or WASFA Required');
   t('Facebook');
   t('Facilities');
+  t('Facilities & Resources');
   t('Facility');
   t('Faculty');
+  t('Faculty Bios');
   t('Faculty Member(s)');
   t('Faculty directory subject area');
   t('Fax');
@@ -10263,9 +12473,11 @@ function evergreen_content_field_default_field_instances() {
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
+  t('For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
-  t('Graduate Program');
+  t('Gallery');
+  t('Graduate Program (which one)');
   t('Graduated');
   t('Group Categories');
   t('Group Title');
@@ -10279,18 +12491,23 @@ function evergreen_content_field_default_field_instances() {
   t('How did your Evergreen education help you?');
   t('If there is a single "canonical" biography that we use throughout the site, enter it here. Otherwise, use the Related Pieces field to link to magazine articles, etc.');
   t('If they are an alumnus, where do they live now?');
+  t('If this committee has a formal charge or charter document, upload it here.');
   t('If this is referring to another person (new name, nickname, etc)...');
   t('If this person received degrees of note from other colleges or universities, you can enter them here. Not strictly necessary if longer bios or articles include this information.');
   t('If you write articles or blog posts, this name will appear in the byline.');
+  t('If your contact block includes a staff page, select it here.');
   t('Image');
   t('In the XML from the CMD, this is the "bio", but it\'s really just their educational background.');
   t('In the form "2016-17", pls.');
   t('In the future, we might be able to use this to feed all references to locations on campus. If we\'re lucky.');
   t('In theory, any faculty member should be in the campus directory? Hoping to use the email value as a bridge when importing. [fingers crossed]');
   t('Include dollar sign and number awarded.');
-  t('Include the full URL of your Facebook page or group.');
+  t('Include regular dates, times, and locations.');
+  t('Include the full URL of your Facebook page or group. It\'s not necessary to list the main college Facebook page here.');
+  t('Include the site section for easier finding and filtering. This will help you and other site editors link to the correct files.');
   t('Include the summary of uses of the building as well as any more detailed descriptions available.');
   t('Include the very basic criteria; shown on the overview page for applicants.');
+  t('Indicates which overarching subjects this faculty has checked.');
   t('Instructions');
   t('Interests');
   t('Intro');
@@ -10305,6 +12522,8 @@ function evergreen_content_field_default_field_instances() {
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
   t('Links to sub-offices or other related offices.');
+  t('List Category');
+  t('List the general times and locations of this committee. (Create an event listing if you want meetings to appear on the Campus Calendar.)');
   t('Location');
   t('Location Category');
   t('Location Off Campus');
@@ -10319,6 +12538,7 @@ function evergreen_content_field_default_field_instances() {
   t('Meetings');
   t('Members');
   t('Minimum Credits');
+  t('Minutes');
   t('More than one is allowed because some programs vary by quarter.');
   t('Most of the time, keep it to other pages in the same site section.');
   t('Navigation');
@@ -10333,6 +12553,7 @@ function evergreen_content_field_default_field_instances() {
   t('Online Learning');
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
   t('Other Institutions');
+  t('Other Members');
   t('Percent Freshman');
   t('Phone');
   t('Pick up to two.');
@@ -10347,23 +12568,26 @@ function evergreen_content_field_default_field_instances() {
   t('Quarters Offered');
   t('Quarters Open');
   t('Queue items');
+  t('Recent Student Projects');
   t('Reference');
   t('Related Offices');
   t('Related Pieces');
-  t('Related field');
+  t('Related Subjects (Directory)');
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
   t('Roles');
   t('Room');
+  t('Sample Program');
+  t('Sample Program Description');
   t('Secondary Content');
   t('Section Contact Info');
   t('Section Navigation');
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select current members from the college directory. Contact information may be displayed along with the people\'s names.');
   t('Select if this item should appear at the top as a "place to start" resource.');
-  t('Select the "parent" of this field.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
   t('Select the types of resources that can be found at the link.');
@@ -10377,14 +12601,19 @@ function evergreen_content_field_default_field_instances() {
   t('Special Expenses');
   t('Sponsored By');
   t('Square Footage');
+  t('Staff Page');
+  t('Staff and Faculty Members');
   t('Status Date');
+  t('Students, Trustees, members of the public, etc.');
   t('Study Abroad');
   t('Subjects Studied');
+  t('Subscribe');
   t('Term Details');
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The maximum number of credits this offering is listed for. NB: minimum and maximum CAN be the same number.');
-  t('The name of the department or series, i.e., "Career Center" or "Geoducks @ Nite".');
+  t('The name of the department or series, i.e., "Career Center" or "Geoducks@Nite".');
+  t('The section selected will set the page\'s site title, navigation, and background.');
   t('The smallest number of credits that this offering is listed for.');
   t('There\'s some overlap in grad school offerings.');
   t('These may include floor plans or exterior maps.');
@@ -10396,6 +12625,7 @@ function evergreen_content_field_default_field_instances() {
   t('This field determines whether this scholarship is displayed to potential donors and if so, how it\'s highlighted. Unchecking all the options removes this scholarship from lists shown for potential donors.');
   t('This field helps organize the buildings so people can find what they need quickly!');
   t('This field is used to assign an office to the Contact Us section of the website.');
+  t('This field may be used in lists and other summaries.');
   t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
@@ -10409,11 +12639,14 @@ function evergreen_content_field_default_field_instances() {
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
   t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
+  t('This may include procedures or additional information about the committee.');
   t('This needs to be parsed from the options sent in the XML.');
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
   t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
+  t('This will be replaced by a View someday.');
+  t('This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
   t('Tuition Award');
@@ -10421,7 +12654,9 @@ function evergreen_content_field_default_field_instances() {
   t('Twitter');
   t('Under-represented');
   t('Undergrad');
+  t('Upcoming Deadlines');
   t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
+  t('Upload meeting agendas in PDF or Word format.');
   t('Upper Division Science Credit');
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
@@ -10431,12 +12666,14 @@ function evergreen_content_field_default_field_instances() {
   t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Website');
   t('Websites');
+  t('What are the general requirements for someone to apply for funding from this committee?');
   t('What even <em>is</em> Evergreen?');
   t('When the import is run from the CMD, this value should be set to 1.');
   t('Where did they come from before they went to Evergreen?');
   t('Which is eligible to apply for this scholarship?');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
+  t('id');
   t('this is used for lots of connecting and prepopulating stuff, or at least I think it will be.');
 
   return $field_instances;

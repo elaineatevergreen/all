@@ -1,0 +1,502 @@
+/**
+ * G. Lists
+ *
+ * Table of Contents
+ *
+ *  1.   Text List
+ *  1.a. Alternate Text List
+ *  2.   Lineup
+ *  3.   Accordion
+ *  4.   Flexible Lists
+ *  5.   Step List
+ *  6.   Link Icons
+ *  7.   Tag Clouds
+ *  8.   Alphabetical Order Index
+ *  9.   Badge List
+ * 10.   Zebra-Striped
+ */
+
+/**
+ * 1. Text List
+ *
+ * Creates a standard bulleted list. Mostly used to override lists behaving badly.
+ */
+.text-list{
+	//box-model
+	margin-left: 1em;
+	//lists
+	list-style-type: disc;
+
+	ul{
+		//box-model
+		margin-left: 1em;
+		//lists
+		list-style-type: square;
+	}
+}
+
+/**
+ * 1.a. Alternate Text List
+ *
+ * A different style for a text list. This one has with more
+ * generous spacing below, to distinguish individual list
+ * items.
+ *
+ * Extends .text-list or .element-list.
+ */
+
+.text-list-alt > li{
+	//box model
+	margin: calc(7.5 / 14 * 1em) 0;
+
+	@include breakpoint ($gamora){
+		margin: calc(7.5/ 18 * 1em) 0;
+	}
+}
+
+//Not sure where this is used. Probably delete whenever and see if anybody complains.
+/*.singleton a{  //deprecated
+	font-weight: normal;
+}*/
+
+/**
+ * 2. Lineup
+ *
+ * For inlining lists.
+ *
+ * See the social media icons in the footer, for example.
+ */
+
+.lineup{
+	display: flex;
+	flex-wrap: wrap;
+	//justify-content: space-around;
+}
+
+/*.lineup > li{
+	display: inline-block;
+}*/
+
+.lineup > li img{
+	//box model
+	height: 3em;
+	margin: 0 1ch 1em 0;
+	width: 3em;
+	//max-width: calc(100% - 1ch);
+	//layout
+	display: block;
+
+	@include breakpoint($gamora){
+		height: 2em;
+		width: 2em;
+	}
+}
+
+/**
+ * 3. Accordion
+ *
+ * @subsubsection mod-typography-l-accordion
+ */
+.accordion,
+.accordion-table{
+	//box model
+	border: 1px solid  mix($tint, $blueberry-susan, 75%);
+	//layout
+	overflow: hidden;
+	//backgrounds & borders
+	background-color:  mix($tint, $blueberry-susan, 85%);
+	border-radius: 2px;
+}
+
+.accordion dt a,
+.accordion dd{
+	padding: 0.631100639515315em 2%;  //15/11.884/2
+}
+
+.accordion dt{
+	border-top: 1px solid mix($shade, $blueberry-susan, 50%);  //Use border-top, cuz dts aren't last-childs
+	margin-top: 0;
+
+	&:first-child{  //Use first-child cuz dts aren't last-childs
+		border-top-width: 0;
+	}
+
+	&:hover{
+		// backgrounds & borders
+		background-color: mix($tint, $blueberry-susan, 90%);
+		border-color: mix($tint, $blueberry-susan, 80%);
+		border-top-color: mix($shade, $blueberry-susan, 33%);
+		// transition
+		transition: background-color 0.2s ease-out;
+	}
+}
+
+.accordion dt a{
+	// box model
+	border-bottom-width: 0;
+	width: 100%;
+	// layout
+	display: block;
+}
+
+.accordion dt a:before{
+	// box model
+	margin-right: 2%;
+	// layout
+	display: inline-block;
+	content: "▶";
+}
+
+.accordion dd{
+	// box model
+	margin-bottom: 0;
+	// backgrounds & borders
+	background-color: $tint;
+	// misc
+	box-shadow: inset 0 2px 2px mix($tint, $shade, 60%);
+}
+
+.accordion-table .group{
+	color: $blueberry-susan;
+	font-weight: bold;
+
+	&:hover{
+		// typography
+		color: $sky-blue;
+		// misc
+		cursor: pointer;
+	}
+}
+
+/**
+ * 4. Flexible Lists
+ *
+ * Responsive lists that break across columns.
+ *
+ * @see http://evergreen.edu/studies
+ */
+// Lists have a hard time breaking across columns, so there are some tricky fixes here.
+.flexible{
+
+	@media screen and (min-width: 20em){
+		// box model
+		margin-left: 0;
+		// layout
+		column-count: 2;
+		column-gap: 15px;
+		list-style-position: inside;  // a compromise that makes bullets visible
+  }
+
+	@media screen and (min-width: 32em){
+		column-count: 3;
+	}
+}
+
+.flexible > li{
+
+	@media screen and (min-width: 20em){
+		// box model
+		margin: 0 2% 0.46875rem;  // 7.5/16
+		//width: 46%;
+		// layout
+		//float: left;
+		overflow: hidden;
+	}
+}
+
+.unit-2-7 .flexible{
+	@media screen and (min-width: 32em){
+		column-count: 2;
+	}
+}
+
+.unit-3-7 .flexible{
+	@media screen and (min-width: 70em){
+		column-count: 2;
+	}
+
+	@media screen and (min-width: 70em){
+		column-count: 3;
+	}
+}
+
+/**
+ * 5. Step List
+ *
+ * A list of steps to follow.
+ */
+.step-list{
+	// box model
+	margin-left: 0;
+	// list
+	counter-reset: li;
+	list-style-type: none;
+}
+
+.step-list > li{
+	// box model
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+	padding-left: 3em;
+	// position
+	position: relative;  // Creates new positioning context
+
+	@include breakpoint($gamora){
+		padding-left: 4em;
+	}
+
+	&::before{
+		// box model
+		width: 0.75em;
+		// layout
+		position: absolute;
+		left: 0;
+		// typography
+		color: mix($tint, $blueberry-susan, 40%);
+		font-size: 1.945rem;  //31.12px  Step 4
+		font-variant-numeric: tabular-nums;
+		font-weight: bold;
+		line-height: 1em;
+		text-align: right;
+		// decoration
+		counter-increment: li;
+		// miscellaneous
+		content: counter(li) ".";
+
+		@include breakpoint($starlord){
+			font-size: 2.291rem;  //36.656px
+	  }
+
+		@include breakpoint($gamora){
+			// box model
+			width: 1em;
+			// typography
+			font-size: 2.782rem;  //44.512px  Step 5
+		}
+
+		@include breakpoint($groot){
+			font-size: 3.146rem;  //50.336  Step 6
+		}
+	}
+
+	p,
+	li{
+		// typography
+		@include base-type;
+		font-weight: normal;
+
+		@include breakpoint($gamora){
+			@include base-type-lg;
+		}
+	}
+}
+
+/**
+ * 6. Link Icons
+ *
+ * Links with icons attached to them, e.g. PDFs or social media chicklets.
+ */
+.link-icon::before,
+.link-icon-alt::before{
+	// box model
+	height: 1rem;
+	width: 1rem;
+	// layout
+	display: inline-block;
+	overflow: hidden;
+	// typography
+	text-indent: 100%;
+	vertical-align: middle;
+	white-space: nowrap;
+	// decoration
+	background-repeat: no-repeat;
+	background-size: 1rem 1rem;
+	// misc
+	content: "";
+}
+
+.link-icon::after{
+	margin-left: 0.5em;
+}
+
+.link-icon-alt::before{
+	margin-right: 0.5em;
+}
+
+.icon-blog::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/blog32x32.png");
+	// misc
+	content: "Blog";
+}
+
+.icon-facebook::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/facebook32x32.png");
+	// misc
+	content: "Facebook";
+}
+
+.icon-instagram::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/instagram32x32.png");
+	// misc
+	content: "Instagram";
+}
+
+.icon-pinterest::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+	// misc
+	content: "Pinterest";
+}
+
+.icon-twitter::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/twitter32x32.png");
+	// misc
+	content: "Twitter";
+}
+
+.icon-youtube::before{
+	// backgrounds & borders
+	background-image: url("/_inc/images/icons/external/youtube32x32.png");
+	// misc
+	content: "YouTube";
+}
+
+/**
+ * 7. Tag Clouds
+ *
+ * Tag cloud sizing.
+ */
+.few{
+	font-size: 0.695rem;
+	line-height: 1.34831460674157;  // 15/11.125
+
+	a{
+		font-weight: normal;
+	}
+}
+
+.many{
+	@include base-type-lg;
+
+	@include breakpoint($groot){
+		@include base-type-xl;
+	}
+}
+
+/**
+ * 8. Alphabetical Order Index
+ *
+ * An index of the letters of the alphabet, for skipping around the page.
+ */
+.alpha-label{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
+	border-bottom-width: 0;
+	margin-bottom: -1px;
+	padding: 0 1em;
+	// layout
+	display: inline-block;
+	// position
+	position: sticky;
+	// position
+	top: 0.5em;
+	z-index: 1;
+	// backgrounds & borders
+	background-color: mix($tint, $blueberry-susan, 85%);
+	border-radius: 2px 2px 0 0;
+}
+
+.alpha-index{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 75%);
+	margin-left: 0;
+	padding-left: 0;
+	// layout
+	display: block;
+	// position
+	position: sticky;
+	top: calc(0.5em + 0.875rem * 1.60714);
+	// typography
+	word-wrap: break-word;
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 85%);
+	border-radius: 2px;
+	// lists
+	list-style-type: none;
+
+	@media screen and (min-width: 32em){
+		// layout
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 43em){
+		top: calc(0.5em + 1.202rem * 1.46814);
+	}
+}
+
+.alpha-label + .alpha-index{
+	// box model
+	margin-top: -1px;
+	// decoration
+	border-top-left-radius: 0;
+}
+
+.alpha-index > li{
+	// box model
+	padding: 0 2px;
+	// layout
+	display: inline;  // Safari 6, IE 9
+}
+
+/**
+ * 9. Badge List
+ *
+ * Lists of logos, badges, or sponsors.
+ *
+ * @see http://evergreen.edu/admissions
+ */
+
+.badge-list{
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: hidden;
+
+	> li{
+		// box model
+		margin: 0 1em;
+		// layout
+		float: left;
+		// typography
+		text-align: center;
+	}
+}
+
+.badge{
+	max-height: 90px;
+}
+
+.badge-alt{
+	max-width: 115px;  // For badges in landscape mode
+}
+
+
+/**
+ * 10. Zebra-Striped
+ *
+ * A parent container, whose direct children are zebra-striped.
+ * Strictly speaking, this doesn't have to be a list element.
+ */
+.zebra-striped > *{
+	padding-right: 1em;
+	padding-left: 1em;
+
+	&:nth-child(odd){
+		background-color: mix($tint, $blueberry-susan, 85%);
+	}
+}

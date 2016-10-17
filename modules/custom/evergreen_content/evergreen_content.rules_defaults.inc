@@ -60,5 +60,77 @@ function evergreen_content_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_new_event'] = entity_import('rules_config', '{ "rules_new_event" : {
+      "LABEL" : "New event by basic user",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules" ],
+      "ON" : { "node_insert--event" : { "bundle" : "event" } },
+      "IF" : [
+        { "NOT user_has_role" : {
+            "account" : [ "node:author" ],
+            "roles" : { "value" : {
+                "4" : "4",
+                "8" : "8",
+                "5" : "5",
+                "9" : "9",
+                "7" : "7",
+                "6" : "6",
+                "3" : "3"
+              }
+            },
+            "operation" : "OR"
+          }
+        }
+      ],
+      "DO" : [
+        { "mail_to_users_of_role" : {
+            "roles" : { "value" : { "4" : "4", "6" : "6" } },
+            "subject" : "Campus Calendar: new event submitted ",
+            "message" : "An event has been submitted by [site:current-user]. \\r\\n\\r\\n[node:title]\\r\\n[node:field-event-date:value]\\r\\nCategory(ies): [node:field_category]\\r\\nFormat: [node:field_format]\\r\\n\\r\\nGo to http:\\/\\/collab.evergreen.edu\\/calendar\\/admin\\/workbench\\/needs-review to review all new events."
+          }
+        },
+        { "drupal_message" : { "message" : "Thank you for submitting your event: [node:title]. A moderator will review your information and publish it to the calendar." } }
+      ]
+    }
+  }');
+  $items['rules_notify_of_approved_event'] = entity_import('rules_config', '{ "rules_notify_of_approved_event" : {
+      "LABEL" : "Notify of approved event",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules", "workbench_moderation" ],
+      "ON" : { "workbench_moderation_after_moderation_transition" : [] },
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "event" : "event" } } } },
+        { "NOT user_has_role" : {
+            "account" : [ "node:author" ],
+            "roles" : { "value" : {
+                "12" : "12",
+                "9" : "9",
+                "6" : "6",
+                "7" : "7",
+                "8" : "8",
+                "5" : "5",
+                "10" : "10",
+                "4" : "4"
+              }
+            },
+            "operation" : "OR"
+          }
+        },
+        { "contents_previous_state" : { "node" : [ "node" ], "moderation_state" : "needs_review" } },
+        { "contents_current_state" : { "node" : [ "node" ], "moderation_state" : "published" } }
+      ],
+      "DO" : [
+        { "mail" : {
+            "to" : "[node:author]",
+            "subject" : "Your event has been published",
+            "message" : "Your event has been reviewed and published. You can now view it live at [node:url]. Thanks for using The Evergreen State College campus calendar!",
+            "language" : [ "" ]
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }

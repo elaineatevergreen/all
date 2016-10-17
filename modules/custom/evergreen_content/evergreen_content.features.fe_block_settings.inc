@@ -40,14 +40,15 @@ function evergreen_content_default_fe_block_settings() {
     'node_types' => array(),
     'pages' => 'directory
 directory/offices
-directory/people',
+directory/people
+directory/combined',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -29,
+        'weight' => -39,
       ),
     ),
     'title' => '<none>',
@@ -114,14 +115,12 @@ directory/people',
     'visibility' => 0,
   );
 
-  $export['views-alerts-block'] = array(
+  $export['views-alerts-only_alerts'] = array(
     'cache' => -1,
     'custom' => 0,
-    'delta' => 'alerts-block',
+    'delta' => 'alerts-only_alerts',
     'module' => 'views',
-    'node_types' => array(
-      0 => 'home_page',
-    ),
+    'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -129,7 +128,7 @@ directory/people',
         'region' => 'content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -31,
+        'weight' => -42,
       ),
     ),
     'title' => '',
@@ -151,7 +150,7 @@ directory/people',
         'region' => 'content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -30,
+        'weight' => -35,
       ),
     ),
     'title' => '',
@@ -174,7 +173,51 @@ directory/people',
         'region' => 'content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -31,
+        'weight' => -37,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-catalog-offerings_by_faculty'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'catalog-offerings_by_faculty',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'directory_individual',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-catalog-offerings_by_field'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'catalog-offerings_by_field',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'field_of_study',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
       ),
     ),
     'title' => '',
@@ -196,7 +239,29 @@ directory/people',
         'region' => 'content',
         'status' => 1,
         'theme' => 'wwwevergreen',
-        'weight' => -31,
+        'weight' => -41,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['views-news_o_matic-block'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'news_o_matic-block',
+    'module' => 'views',
+    'node_types' => array(
+      0 => 'home_page',
+    ),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => -36,
       ),
     ),
     'title' => '<none>',

@@ -1,0 +1,13 @@
+# Gitlab runner users
+User_Alias  GITLAB_USERS = gitlab-runner
+# Commands that need to run in runner jobs /automated deployment scripts
+Cmnd_Alias EVERGREEN_DEPLOY_COMMANDS = \
+  /bin/chown apache *
+# Commands that admins need to be able to execute.
+Cmnd_Alias EVERGREEN_ADMIN_COMMANDS = \
+  /bin/su - www_deploy
+# The rules
+GITLAB_USERS ALL = (www_deploy) NOPASSWD:ALL
+www_deploy ALL = (ALL) NOPASSWD:EVERGREEN_DEPLOY_COMMANDS
+860e ALL = (www_deploy) NOPASSWD:ALL
+860e ALL = (ALL) NOPASSWD:EVERGREEN_ADMIN_COMMANDS

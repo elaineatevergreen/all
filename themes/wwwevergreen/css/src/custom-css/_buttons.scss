@@ -1,0 +1,128 @@
+/**
+ * Buttons
+ */
+button,
+.button,
+.button:link,
+.button:visited,
+.standard-button{
+	// box model
+	border: 1px solid $sky-blue;
+	margin-bottom: 1.262201279030629em;  // 15/11.884
+	padding: 5px .5em;
+	// layout
+	display: inline-block;
+	// typography
+	color: #333333;
+	font-size: 1rem;
+	font-weight: normal;
+	text-shadow: 0 1px 0 $highlight;
+	// backgrounds and borders
+	background-color: mix(white, $sky-blue, 60%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 40%));
+	border-radius: .2em;
+	// miscelaneous
+	box-shadow: 0 .2em .2em $drop-shadow;
+	transition: all .1s ease-in-out;
+}
+button:hover,
+.button:hover,
+.hover-button,
+button:focus,
+.button:focus,
+.focus-button{
+	// typography
+	color: #333;
+	// backgrounds & borders
+	background-color: mix(white, $sky-blue, 80%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $sky-blue, 80%), mix(white, $sky-blue, 60%));
+	// miscelaneous
+	transition: all .1s ease-in-out;
+}
+button:focus,
+.button:focus,
+.focus-button{
+	border-color:#999;
+    outline-width:0;
+}
+button:active,
+.button:active,
+.active-button{
+	// backgrounds & borders
+	background-color: mix(white, $sky-blue, 40%);  // IE 9
+	background-image: linear-gradient(mix(white, $sky-blue, 40%), mix($morning-light, $sky-blue, 60%));
+	// miscelaneous
+	box-shadow: inset 0 .1em .2em hsla(0,0%,0%,.25);
+}
+button[disabled],
+.is-disabled{
+	// typography
+	color: #666;
+	text-shadow: 0 .05em 0 $highlight;
+	// backgrounds and borders
+	background: mix(white, $sky-blue, 60%) none;
+	border-color: #999;
+	// miscelaneous
+	box-shadow: 0 .1em .1em $drop-shadow inset;
+	cursor: not-allowed;
+}
+
+.prime,
+.prime:link,
+.prime:visited,
+.prime-button{
+	// box model
+	border-color: $evergreen-old-style;
+	// layout
+	display: inline-block;
+	// backgrounds and borders
+	background-color: $evergreen-neue;  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
+}
+.prime:hover,
+.hover-prime,
+.prime:focus,
+.focus-prime{
+	// backgrounds & borders
+	background-color: mix(white, $evergreen-neue, 20%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix(white, $evergreen-neue, 20%));  // w3c
+}
+.prime:focus,
+.focus-prime{
+	border-color: #999;
+}
+.prime:active,
+.active-prime{
+	// backgrounds & borders
+	background-color: mix(white, $evergreen-neue, 40%);  // IE 9
+	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));  // w3c
+}
+.prime[disabled],
+.is-disabled-prime,
+.is-disabled-prime:hover{
+	// backgrounds and borders
+	background: mix(white, $evergreen-neue, 20%) none;
+}
+
+.standard-button:hover,
+.focus-button:hover,
+.active-button:hover{
+	color: #333;
+}
+.focus-button:hover,
+.is-disabled:hover,
+.focus-prime:hover{
+	border-color: #999;
+}
+.is-disabled:hover{
+	color: #666;
+}
+.prime-button:hover,
+.hover-prime:hover,
+.active-prime:hover,
+.is-disabled-prime:hover{
+	border-color: $evergreen-old-style;
+}
+.is-disabled-prime:hover{
+	color: #666;
+}

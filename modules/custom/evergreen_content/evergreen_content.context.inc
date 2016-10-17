@@ -34,6 +34,11 @@ function evergreen_content_context_default_contexts() {
         'calendar:page_6' => 'calendar:page_6',
         'calendar:page_7' => 'calendar:page_7',
         'calendar:page_8' => 'calendar:page_8',
+        'calendar_by_date' => 'calendar_by_date',
+        'calendar_by_date:day' => 'calendar_by_date:day',
+        'calendar_by_date:page' => 'calendar_by_date:page',
+        'calendar_by_date:page_1' => 'calendar_by_date:page_1',
+        'calendar_by_date:page_2' => 'calendar_by_date:page_2',
       ),
     ),
   );
@@ -86,7 +91,7 @@ function evergreen_content_context_default_contexts() {
         'views--exp-catalog-page' => array(
           'module' => 'views',
           'delta' => '-exp-catalog-page',
-          'region' => 'secondary_content',
+          'region' => 'filters',
           'weight' => '-10',
         ),
       ),

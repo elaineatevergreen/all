@@ -1,0 +1,111 @@
+/**
+ * Icons
+ */
+
+/**
+ * 1. Inline Icons
+ *
+ * Icons that appear before strings of text. For example, [x] Close,
+ * where [x] is the icon.
+ */
+
+.icon{
+	display: inline-block;
+	fill: currentColor;
+}
+
+.inline-icon{
+	// box model
+	//margin-right: 0.25em;
+	max-height: 1.25em;
+	// layout
+	display: inline;
+	position: relative;
+	top: 0.25em;
+}
+
+/**
+ * 2. Related Nav (aka The Transporter)
+ *
+ * Related links with iconographic circles.
+ */
+.transporter > li{
+	// box model
+	margin: 0.9375rem 0;  // 15/16
+	// layout
+	display: block;
+	float: left;
+	// typography
+	text-align: center;
+	vertical-align: top;
+}
+
+.transporter a{
+	display: block;
+
+	&,
+	&:visited{
+		// box model
+		border-bottom-width: 0;
+		// typography
+		color: $evergreen-neue;
+	}
+
+	&:hover{
+		color: $sky-blue;
+
+		.transporter-icon{
+			background: $sky-blue;
+			// misc
+			box-shadow: 0 0 0.2em $highlight inset;
+		}
+	}
+}
+
+.transporter a:hover .icon{
+	transform: scale(0.8);
+}
+
+.transporter-icon{
+	// box model
+	//padding: 15%;  // Whatever feels right.
+	//padding-top: 85%;  // For responsive SVG.
+	max-width: 100%;
+	// layout
+	display: inline-block;
+	// positioning
+	position: relative;  // For responsive SVG.
+	// typography
+	color: $tint;
+	text-align: center;
+	// decoration
+	background-color: $evergreen-neue;
+	border-radius: 50%;
+	// misc
+	transition: all 0.2s;
+
+	@include breakpoint($rocket){
+		margin: 0 auto;
+		max-width: 80%;
+	}
+
+	@include breakpoint($starlord){
+		max-width: 100%;
+	}
+
+	@include breakpoint($drax){
+		max-width: 90%;
+	}
+
+	img{
+		// layout
+		display: block;
+		//position: absolute;  // For responsive SVG.
+		//top: 0;
+		//left: 0;
+		transform: scale(0.6);
+		// behavior
+		transition: transform 0.1s ease;
+		// miscellaneous
+	}
+}

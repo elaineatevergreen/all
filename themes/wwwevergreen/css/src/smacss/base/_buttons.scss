@@ -1,0 +1,146 @@
+/**
+ * Buttons
+ *
+ * @section button
+ *
+ * (Note: Built-in Drupal forms require "input[type='submit']"
+ * instead of button.)
+ */
+button,
+.button,
+.button:visited,
+input[type="button"],
+input[type="submit"]{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 40%);
+	height: auto;
+	margin-bottom: 1.262201279030629em;  // 15/14
+	padding: 5px 0.5em;
+	// layout
+	display: inline-block;
+	// typography
+	color: mix($tint, $shade, 20%);
+	font-family: $display-face;
+	font-size: 1em;
+	font-weight: normal;
+	text-shadow: 0 1px 0 $highlight;
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
+	background-image: linear-gradient(mix($highlight, $blueberry-susan, 85%), mix($tint, $blueberry-susan, 65%));
+	border-radius: 0.2em;
+	// miscelaneous
+	box-shadow: 0 0.2em 0.2em $drop-shadow;
+
+	@include breakpoint($gamora){
+		margin-bottom: 0.83333333333333em; // 15/18
+	}
+}
+
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover{
+	color: mix($shade, $blueberry-susan, 40%);
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
+	background-image: linear-gradient(mix($highlight, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
+	border-color: mix($tint, $blueberry-susan, 40%);
+}
+
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus{
+	border-color: mix($tint, $shade, 60%);
+	outline-width: 0;
+}
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="submit"]:active{
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 40%);  // IE 9
+	background-image: linear-gradient(mix($tint, $blueberry-susan, 40%), mix($highlight, $blueberry-susan, 60%));
+	// miscelaneous
+	box-shadow: inset 0 0.1em 0.2em transparentize(mix($shade, $blueberry-susan, 60%), 0.75);
+}
+
+/**
+ * Primary Action Button
+ *
+ * The primary action button is meant to be the single default
+ * action that a user will expect to take. E.g., Submit would be
+ * the .prime button while Cancel would be the default button.
+ */
+.prime,
+.prime:visited,
+input.prime{
+	// typography
+	color: $tint;
+	text-shadow: 0 -1px 0 $drop-shadow;
+	// decoration
+	background-color: $evergreen-neue;  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
+	border-color: $evergreen-old-style;
+}
+
+.prime:hover,
+input.prime:hover{
+	// typography
+	color: $evergreen-old-style;
+	text-shadow: 0 1px 0 $highlight;
+	// decoration
+	background-color: mix($tint, $evergreen-neue, 20%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix($tint, $evergreen-neue, 20%));
+	border-bottom-color: $evergreen-old-style;
+}
+
+.prime:focus,
+input.prime:focus{
+	border-color: mix($tint, $shade, 60%);
+}
+
+.prime:active,
+input.prime:active{
+	// decoration
+	background-color: mix($tint, $evergreen-neue, 40%);  // IE 9
+	background-image: linear-gradient($evergreen-neue, mix($morning-light, $evergreen-neue, 20%));
+}
+
+
+/**
+ * Disabled Buttons
+ *
+ * Gives a disabled, unclickable appearance for buttons that can't
+ * be clicked, but should still be present in the design. Disabled
+ * buttons should have their actions taken away from them, or have
+ * the disabled attribute.
+ */
+.is-disabled,
+.is-disabled:visited,
+.is-disabled:hover,
+button[disabled],
+button[disabled]:hover,
+input.is-disabled,
+input.is-disabled:hover{
+	// typography
+	color: mix($tint, $shade, 40%);
+	text-shadow: 0 0.05em 0 $highlight;
+	// decoration
+	background: mix($tint, $blueberry-susan, 60%) none;
+	border-color: mix($tint, $shade, 60%);
+	// miscelaneous
+	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
+	cursor: not-allowed;
+}
+
+.prime.is-disabled,
+.prime.is-disabled:hover,
+.prime.is-disabled:visited,
+.prime[disabled],
+.prime[disabled]:hover,
+input.prime.is-disabled,
+input.prime.is-disabled:hover{
+	background: mix($tint, $evergreen-neue, 20%) none;
+}

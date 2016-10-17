@@ -1,0 +1,7253 @@
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/*!*                                                       
+ *                                                                   (
+ *          )   )                                                   )\ )   )        )         (       (  (                  
+ *    ` )  /(( /(   (    (    )     (  (   (  ( (     (   (        (()/(( /(   ) ( /(  (      )\      )\ )\  (  (  (    (   
+ *     ( )(_))\()) ))\   )\  /((   ))\ )(  )\))()(   ))\ ))\ (      /(_))\()| /( )\())))\   (((_)  ( ((_|(_)))\ )\))(  ))\  
+ *    (_(_()|(_)\ /((_) ((_)(_))\ /((_|()\((_))(()\ /((_)((_))\ )  (_))(_))/)(_)|_))//((_)  )\___  )\ _  _ /((_|(_))\ /((_) 
+ *    |_   _| |(_|_))   | __|)((_|_))  ((_)(()(_|(_|_))(_)) _(_/(  / __| |_((_)_| |_(_))   ((/ __|((_) || (_))  (()(_|_))   
+ *      | | | ' \/ -_)  | _|\ V // -_)| '_/ _` | '_/ -_) -_) ' \)) \__ \  _/ _` |  _/ -_)   | (__/ _ \ || / -_)/ _` |/ -_)  
+ *      |_| |_||_\___|  |___|\_/ \___||_| \__, |_| \___\___|_||_|  |___/\__\__,_|\__\___|    \___\___/_||_\___|\__, |\___|  
+ *                                        |___/                                                                |___/        
+ *                .-'''-.                                                             .-'''-.                             
+ *               '   _    \                                                          '   _    \             _______       
+ *             /   /` '.   \           /|              __.....__                   /   /` '.   \    _..._   \  ___ `'.    
+ *      .--./).   |     \  '           ||          .-''         '. .-.          .-.   |     \  '  .'     '.  ' |--.\  \   
+ *     /.''\ \|   '      |  '          ||         /     .-''"'-.  `.\ \        / /|   '      |  '.   .-.   . | |    \  '  
+ *    | |  | |\    \     / /           ||  __    /     /________\  ` \ \      / / \    \     / / |  '   '  | | |     |  ' 
+ *     \`-' /  `.   ` ..' /            ||/'__ '. |                  | \ \    / /   `.   ` ..' /  |  |   |  | | |     |  | 
+ *     /("'`      '-...-'`             |:/`  '. '\    .-------------'  \ \  / /       '-...-'`   |  |   |  | | |     ' .' 
+ *     \ '---.                         ||     | | \    '-.____...---.   \ `  /                   |  |   |  | | |___.' /'  
+ *      /'""'.\                        ||\    / '  `.             .'     \  /                    |  |   |  |/_______.'/   
+ *     ||     ||                       |/\'..' /     `''-...... -'       / /                     |  |   |  |\_______|/    
+ *     \'. __//                        '  `'-'`                      |`-' /                      |  |   |  |              
+ *      `'---'                                                        '..'                       '--'   '--'              
+ */
+/*!*
+ * View the source and fork these styles on Github:
+ *
+ * @see https://github.com/revoltpuppy/Evergreen
+ */
+/**
+ * Responsive Styles
+ *
+ * Styles for a new responsive template, to be rolled out across
+ * the website sooner or later.
+ *
+ * These styles were originally developed by Justin McDowell. They
+ * set up a mobile-first website that expands to three, then seven
+ * columns as the browser width increases. The baseline is set at
+ * 15 pixels.
+ *
+ * Styles in this file are organized according to the SMACSS
+ * principles: http://smacss.com/
+ *
+ * @project    The Evergreen State College
+ * @author     The Evergreen State College
+ * @copyright  2014 by the author
+ * @cssdoc     0.2.22
+ * @license    Copyrighted
+ */
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+/**
+ * Colors
+ */
+/**
+ * Breakpoints
+ *
+ * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Deprecated Modular Scale - Do not use!
+ *
+ * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
+ * Ideal text size is 18px.
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * See: http://www.modularscale.com/?18,345&px&1.618&web&text
+ */
+/**
+ * Step #    Pixels     Ems    Rems
+ *     17   845.475  46.971  52.842
+ *     16   558.21   31.012  34.888
+ *     15   522.543  29.03   32.659
+ *     14   345      19.167  21.563
+ *     13   322.956  17.942  20.185
+ *     12   213.226  11.846  13.327
+ *     11   199.602  11.089  12.475
+ *     10   131.784   7.321   8.237
+ *      9   123.363   6.854   7.71
+ *      8    81.449   4.525   5.091
+ *      7    76.244   4.236   4.765
+ *      6    50.339   2.797   3.146
+ *      5    47.123   2.618   2.945
+ *      4    31.112   1.728   1.945
+ *      3    29.124   1.618   1.82
+ *      2    19.229   1.068   1.202
+ *      1    18       1       1.125
+ *      0.5  14.000   0.778   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.120   0.618   0.695
+ *     -2     6.876   0.382   0.43
+ *     -3     4.249   0.236   0.266
+ *     -4     2.626   0.146   0.164
+ *     -5     1.623   0.09    0.101
+ */
+/**
+ * Sass Mixins
+ *
+ * @section sass-mixins
+ */
+/**
+ * Margins
+ */
+/**
+ * Font Sizes
+ */
+/**
+ * Backgrounds
+ */
+/**
+ * Replaces PNG background-image with multiple repeating
+ * gradients instead. Unfortunately, Chrome totally craps out
+ * in the rendering department, so this will have to wait for
+ * another day.
+ */
+/*@mixin background-default{
+	background-image:
+		 diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		 diagonal lines
+		100% 100%,
+		 1px dots
+		10px 10px;
+}*/
+/**
+ * I. Base Styles
+ *
+ * Styles generally for generic html elements. Classed or IDed
+ * elements should typically be included in the Modules section.
+ *
+ * Table of Contents
+ *
+ * A. Typography
+ * B. Tables
+ * C. Forms
+ * D. Buttons
+ * E. Hyphenation
+ */
+/* line 16, ../src/smacss/_base.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 20, ../src/smacss/_base.scss */
+* {
+  box-sizing: inherit;
+}
+
+/**
+ * For the following, I am taking pity on IE8- because I'm using
+ * the appropriate double-colon syntax for pseudo-elements. If I
+ * condensed this style declaration with the above *, IE8- would
+ * choke on the whole thing, breaking the border-box declaration
+ * for the universal selector.
+ */
+/* line 31, ../src/smacss/_base.scss */
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* line 36, ../src/smacss/_base.scss */
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+/* line 48, ../src/smacss/_base.scss */
+img,
+svg {
+  border-width: 0;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+/* line 56, ../src/smacss/_base.scss */
+audio {
+  max-width: 100%;
+}
+
+/* line 60, ../src/smacss/_base.scss */
+video {
+  height: auto;
+  width: 100%;
+}
+
+/* line 65, ../src/smacss/_base.scss */
+iframe {
+  width: 100%;
+}
+
+/* line 69, ../src/smacss/_base.scss */
+.iframe-ratio-16-9 {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+/* line 78, ../src/smacss/_base.scss */
+.iframe-ratio-16-9 > iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/**
+ * A. Typography
+ */
+/**
+ * Typographic Styles
+ *
+ * Base styles that make the text look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1.   Base Typography
+ * 2.   Headings
+ * 3.   Lists
+ * 4.   Links
+ * 4.a. Site Name Link
+ * 5.   Other Typography
+ */
+/**
+ * 1. Base Typography
+ *
+ * @section base-type
+ */
+/* line 21, ../src/smacss/base/_typography.scss */
+html {
+  font-size: 100%;
+}
+
+/* line 25, ../src/smacss/base/_typography.scss */
+body {
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  /**
+   * OpenType features available in Proxima Nova
+   * c2sc - Small capitals from capitals (Note: don't use font-feature-settings for small-caps)
+   * frac - Fractions
+   * liga - Standard ligatures
+   * lnum - Lining figures ("uppercase" numbers)
+   * onum - Oldstyle figures ("lowercase" numbers); at least one Win10/Chrome combination chokes on this
+   * ordn - Ordinals (1st, 2nd) - bad support
+   * pnum - Proportional figures (Varying width numbers)
+   * salt - Stylistic alternates
+   * smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
+   * ss## - Stylistic sets (## is 01-20; I don't know how many sets this font has)
+   * subs - Subscripts
+   * sups - Superscripts
+   * tnum - Tabular figures (Fixed-width numbers)
+   */
+  -webkit-font-feature-settings: "kern", "liga";
+          font-feature-settings: "kern", "liga";
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -webkit-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 50, ../src/smacss/base/_typography.scss */
+body,
+input,
+button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 57, ../src/smacss/base/_typography.scss */
+body,
+.base {
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+}
+@media screen and (min-width: 43em) {
+  /* line 57, ../src/smacss/base/_typography.scss */
+  body,
+  .base {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 57, ../src/smacss/base/_typography.scss */
+  body,
+  .base {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/* line 70, ../src/smacss/base/_typography.scss */
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+.base {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+@media screen and (min-width: 43em) {
+  /* line 70, ../src/smacss/base/_typography.scss */
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  figure,
+  .base {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 70, ../src/smacss/base/_typography.scss */
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  figure,
+  .base {
+    margin: 0.52004784440168em 0 1.04009568880337em;
+  }
+}
+
+/**
+ * Removing hyphen rules for now.
+ * English doesn't have long enough words to warrant this,
+ * and we’re not justifying text,
+ * but consider it for narrow columns.
+ */
+/*p{
+	hyphens: auto;
+	hyphenate-limit-lines: 2;
+}*/
+/**
+ * 2. Headings
+ *
+ * @section h
+ */
+/* line 104, ../src/smacss/base/_typography.scss */
+h1 {
+  margin: 0.96401028277635em 0 0;
+  font-size: 1.945rem;
+  font-weight: normal;
+  line-height: 1.44601542416452;
+}
+@media screen and (min-width: 32em) {
+  /* line 104, ../src/smacss/base/_typography.scss */
+  h1 {
+    margin-top: 0.818419903972065em;
+    font-size: 2.291rem;
+    line-height: 1.227629855958097;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 104, ../src/smacss/base/_typography.scss */
+  h1 {
+    margin-top: 0.63663179339176em;
+    font-size: 2.945rem;
+    line-height: 0.95494769008764;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 104, ../src/smacss/base/_typography.scss */
+  h1 {
+    color: #515151;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 104, ../src/smacss/base/_typography.scss */
+  h1 {
+    margin-top: 1.19191879059973em;
+    font-size: 3.146rem;
+    line-height: 1.19191879059973;
+  }
+}
+
+/* line 142, ../src/smacss/base/_typography.scss */
+h2 {
+  margin-top: 1.56014353320505em;
+  color: #616161;
+  font-size: 1.202rem;
+  font-weight: bold;
+  line-height: 1.56014353320505;
+}
+@media screen and (min-width: 43em) {
+  /* line 142, ../src/smacss/base/_typography.scss */
+  h2 {
+    margin-top: 1.03007828594973em;
+    font-size: 1.82rem;
+    line-height: 1.03007828594973;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 142, ../src/smacss/base/_typography.scss */
+  h2 {
+    margin-top: 1.44638724607868em;
+    font-size: 1.945rem;
+    line-height: 0.96425816405246;
+  }
+}
+
+/* line 168, ../src/smacss/base/_typography.scss */
+h3 {
+  margin-top: 1.66666666666667em;
+  color: #303030;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+  font-weight: normal;
+}
+@media screen and (min-width: 43em) {
+  /* line 168, ../src/smacss/base/_typography.scss */
+  h3 {
+    margin-top: 1.10603155876714em;
+    font-size: 1.69525rem;
+    line-height: 1.10603155876714;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 168, ../src/smacss/base/_typography.scss */
+  h3 {
+    margin-top: 1.54575432811212em;
+    font-size: 1.8195rem;
+    line-height: 1.03050288540808;
+  }
+}
+
+/* line 193, ../src/smacss/base/_typography.scss */
+h4 {
+  margin-top: 2.14285714285714em;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.60714285714286;
+  /*@include breakpoint($groot){
+  // box model
+  margin-top: 1.5451174289246em;  // 45/29.124
+  // typography
+  font-size: 1.82rem;  // 29.124px  Step 3
+  line-height: 1.03007828594973; // 30/29.124
+  }*/
+}
+@media screen and (min-width: 43em) {
+  /* line 193, ../src/smacss/base/_typography.scss */
+  h4 {
+    margin-top: 1.56014353320505em;
+    font-size: 1.202rem;
+    line-height: 1.56014353320505;
+  }
+}
+
+/* line 218, ../src/smacss/base/_typography.scss */
+h5 {
+  margin-top: 2.14285714285714em;
+  color: #616161;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.60714285714286;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 43em) {
+  /* line 218, ../src/smacss/base/_typography.scss */
+  h5 {
+    margin-top: 1.66666666666667em;
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+/* line 237, ../src/smacss/base/_typography.scss */
+h6 {
+  margin-top: 2.69784172661871em;
+  margin-bottom: 1.34892086330935em;
+  color: #616161;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 43em) {
+  /* line 237, ../src/smacss/base/_typography.scss */
+  h6 {
+    margin-top: 2.14285714285714em;
+    margin-bottom: 2.14285714285714em;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 237, ../src/smacss/base/_typography.scss */
+  h6 {
+    margin-top: 2.5em;
+    margin-bottom: 1.66666666666667em;
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+/* line 266, ../src/smacss/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.46875rem;
+}
+@media screen and (min-width: 125em) {
+  /* line 266, ../src/smacss/base/_typography.scss */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0.625rem;
+  }
+}
+
+/**
+ * 3. Lists
+ *
+ * @section l
+ */
+/* line 284, ../src/smacss/base/_typography.scss */
+ul,
+ol {
+  margin-left: 1.07142857142857em;
+  padding-left: 0;
+}
+@media screen and (min-width: 43em) {
+  /* line 284, ../src/smacss/base/_typography.scss */
+  ul,
+  ol {
+    margin-left: 1.66666666666667em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 284, ../src/smacss/base/_typography.scss */
+  ul,
+  ol {
+    margin-left: 1.56014353320505em;
+  }
+}
+
+/* line 298, ../src/smacss/base/_typography.scss */
+ul,
+dl {
+  padding: 0;
+}
+
+/* line 303, ../src/smacss/base/_typography.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 307, ../src/smacss/base/_typography.scss */
+dt {
+  margin-top: 0.535714285714286em;
+  font-weight: bold;
+}
+@media screen and (min-width: 125em) {
+  /* line 307, ../src/smacss/base/_typography.scss */
+  dt {
+    margin-top: 0.52004784440168em;
+  }
+}
+
+/* line 318, ../src/smacss/base/_typography.scss */
+dd {
+  margin-bottom: 1.071428571428571em;
+  margin-left: 0;
+}
+@media screen and (min-width: 125em) {
+  /* line 318, ../src/smacss/base/_typography.scss */
+  dd {
+    margin-bottom: 1.04009568880337em;
+  }
+}
+
+/* line 327, ../src/smacss/base/_typography.scss */
+dd > p:first-child,
+dd > ul:first-child,
+dd > ol:first-child,
+dd > blockquote:first-child,
+dd > blockquote:first-child > p:first-child {
+  margin-top: 0;
+}
+
+/**
+ * 4. Links
+ *
+ * @section a
+ */
+/* line 340, ../src/smacss/base/_typography.scss */
+a,
+.internal-users a:visited,
+.search-tools a:visited,
+.tertiary-nav-list a:visited {
+  border-bottom: 1px solid #c8c1cd;
+  color: #492c5d;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s ease;
+}
+
+/* line 354, ../src/smacss/base/_typography.scss */
+a:visited {
+  color: #600f21;
+  border-bottom-color: #ceb9be;
+}
+
+/* line 361, ../src/smacss/base/_typography.scss */
+a:hover,
+.internal-users a:hover,
+.search-tools a:hover,
+.tertiary-nav-list a:hover {
+  color: #0086ee;
+  border-bottom-color: #0086ee;
+}
+
+/* line 371, ../src/smacss/base/_typography.scss */
+a:focus,
+a:active {
+  background-color: rgba(73, 44, 93, 0.1);
+  outline-width: 0;
+}
+
+/**
+ * 4.a Site Name Link
+ *
+ * @section a-site-name
+ */
+/* line 383, ../src/smacss/base/_typography.scss */
+.site-name a {
+  border-bottom-width: 0;
+}
+/* line 386, ../src/smacss/base/_typography.scss */
+.site-name a, .site-name a:visited {
+  color: #f2f2f2;
+  text-shadow: 0 1px 3px #1d1225;
+  		/*@include breakpoint($drax){
+  			text-shadow:
+  				-1px 1px $blueberry-susan,
+  				-1px 2px $blueberry-susan,
+  				-2px 3px $blueberry-susan,
+  				-2px 4px $blueberry-susan,
+  				-3px 5px $blueberry-susan,
+  				-3px 6px $blueberry-susan,
+  				-4px 7px 0.5px $blueberry-susan;
+      }*/
+}
+@media screen and (min-width: 70em) {
+  /* line 386, ../src/smacss/base/_typography.scss */
+  .site-name a, .site-name a:visited {
+    color: #46502b;
+    font-weight: normal;
+    text-shadow: 0 1px 2px #f2f2f2;
+  }
+}
+
+/**
+ * 5. Other Typography
+ *
+ * @section other-type
+ */
+/* line 416, ../src/smacss/base/_typography.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 420, ../src/smacss/base/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 424, ../src/smacss/base/_typography.scss */
+figcaption,
+small,
+.details,
+.caption {
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+@media screen and (min-width: 125em) {
+  /* line 424, ../src/smacss/base/_typography.scss */
+  figcaption,
+  small,
+  .details,
+  .caption {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+/* line 436, ../src/smacss/base/_typography.scss */
+figcaption p {
+  margin-top: 0.67446043165468em;
+  margin-bottom: 1.34892086330935em;
+}
+
+/* line 443, ../src/smacss/base/_typography.scss */
+[role="contentinfo"] small {
+  color: #c2c2c2;
+}
+
+/**
+ * Small (inline) text can inherit the line-height of its parent. Switching
+ * to inline-block forces small to use its own line-height.
+ */
+/* line 452, ../src/smacss/base/_typography.scss */
+.small {
+  display: inline-block;
+}
+
+/* line 456, ../src/smacss/base/_typography.scss */
+abbr {
+  border-bottom: 1px dotted #b6b6b6;
+  text-decoration: none;
+  cursor: help;
+}
+
+/* line 465, ../src/smacss/base/_typography.scss */
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+/* line 469, ../src/smacss/base/_typography.scss */
+q::before {
+  content: open-quote;
+}
+
+/* line 473, ../src/smacss/base/_typography.scss */
+q::after {
+  content: close-quote;
+}
+
+/* line 477, ../src/smacss/base/_typography.scss */
+code,
+pre {
+  font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+}
+
+/* line 482, ../src/smacss/base/_typography.scss */
+blockquote {
+  padding-left: 1em;
+  font-style: italic;
+}
+
+@supports (font-variant-position: super) {
+  /* line 490, ../src/smacss/base/_typography.scss */
+  sup {
+    font-size: inherit;
+    font-variant-position: super;
+    vertical-align: inherit;
+  }
+}
+@supports (font-variant-position: sub) {
+  /* line 498, ../src/smacss/base/_typography.scss */
+  sub {
+    font-size: inherit;
+    font-variant-position: sub;
+    vertical-align: inherit;
+  }
+}
+/* line 505, ../src/smacss/base/_typography.scss */
+hr {
+  border: 0;
+  height: 5px;
+  margin: 2.65625rem 0;
+  width: 100%;
+  background-color: #64933a;
+}
+
+/**
+ * B. Tables
+ */
+/**
+ * Table Styles
+ *
+ * Styles that make tables look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1. Base Typography
+ * 2. Horizontal Tables
+ * 3. Padded Tables
+ * 4. DataTables
+ */
+/**
+ * 1. Base Table Styles
+ */
+/* line 18, ../src/smacss/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+  margin: 2.14285714285714em 0 3.21428571428571em;
+  width: 100%;
+  max-width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+}
+
+/* line 30, ../src/smacss/base/_tables.scss */
+caption {
+  margin: 0 0 0.41666666666667em;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+  font-style: italic;
+}
+@media screen and (min-width: 43em) {
+  /* line 30, ../src/smacss/base/_tables.scss */
+  caption {
+    margin: 0 0 0.39003588330126em;
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 30, ../src/smacss/base/_tables.scss */
+  caption {
+    margin-top: 0.51503914297487em;
+    font-size: 1.82rem;
+    line-height: 1.03007828594973;
+  }
+}
+
+/* line 52, ../src/smacss/base/_tables.scss */
+tr.even,
+tr.odd {
+  border-bottom-width: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* line 60, ../src/smacss/base/_tables.scss */
+th,
+td {
+  text-align: left;
+}
+
+/* line 65, ../src/smacss/base/_tables.scss */
+th {
+  border-bottom-width: 0;
+  padding: 0 1.111111111111111em 0 0;
+  color: black;
+  vertical-align: bottom;
+}
+
+/* line 74, ../src/smacss/base/_tables.scss */
+tbody th,
+td {
+  border: 0 solid #c2c2c2;
+  border-top-width: 1px;
+  padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;
+  color: #303030;
+  -webkit-font-feature-settings: "lnum", "tnum";
+          font-feature-settings: "lnum", "tnum";
+  font-variant-numeric: lining-nums tabular-nums;
+  vertical-align: top;
+}
+
+/* line 87, ../src/smacss/base/_tables.scss */
+tbody > tr:first-child > th,
+tbody > tr:first-child > td {
+  border-top-color: black;
+}
+
+/* line 92, ../src/smacss/base/_tables.scss */
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* line 97, ../src/smacss/base/_tables.scss */
+td strong,
+tfoot td {
+  color: black;
+  font-weight: bold;
+}
+
+/* line 104, ../src/smacss/base/_tables.scss */
+th > :first-child,
+td > :first-child,
+td > ul:first-child li:first-child > p:first-child,
+td > ol:first-child li:first-child > p:first-child {
+  margin-top: 0;
+}
+
+/* line 112, ../src/smacss/base/_tables.scss */
+th > :last-child,
+td > :last-child,
+td > ul:last-child li:last-child > p:last-child,
+td > ol:last-child li:last-child > p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 119, ../src/smacss/base/_tables.scss */
+table a {
+  border-bottom-width: 0;
+}
+
+/* line 123, ../src/smacss/base/_tables.scss */
+.tnum {
+  text-align: right;
+}
+
+/**
+ * 2. Horizontal Tables
+ *
+ * For tables with the th left of the tds.
+ */
+/* line 132, ../src/smacss/base/_tables.scss */
+.horizontal-table th {
+  border-top: 1px solid #c2c2c2;
+  padding: 0.37037em 1.1111111111em 1.1111111111em 0;
+  vertical-align: top;
+}
+
+/* line 140, ../src/smacss/base/_tables.scss */
+.horizontal-table tr:first-child th {
+  border-top: 1px solid black;
+}
+
+/* line 145, ../src/smacss/base/_tables.scss */
+.horizontal-table:last-child {
+  border-bottom-width: 0;
+}
+
+/**
+ * 3. Padded Tables
+ *
+ * For normal tables that need the left-padding for whatever reason
+ * (e.g. background-colors that make the text look funny).
+ */
+/* line 156, ../src/smacss/base/_tables.scss */
+.padded-table th,
+.padded-table td,
+.accordion-table th,
+.accordion-table td,
+.striped-table td {
+  padding-left: 1.1111111111em;
+}
+/* line 163, ../src/smacss/base/_tables.scss */
+.padded-table th:last-child,
+.padded-table td:last-child,
+.accordion-table th:last-child,
+.accordion-table td:last-child,
+.striped-table td:last-child {
+  padding-right: 1.1111111111em;
+}
+
+/* line 168, ../src/smacss/base/_tables.scss */
+.striped-table > tbody > tr:nth-child(odd) {
+  background-color: #e1dee3;
+}
+
+/**
+ * 4. DataTables
+ *
+ * JavaScript DataTables plugin.
+ */
+/* line 178, ../src/smacss/base/_tables.scss */
+.dataTable th:hover {
+  cursor: pointer;
+}
+
+/* line 183, ../src/smacss/base/_tables.scss */
+.sorting_asc::before {
+  content: "↓\00A0";
+}
+
+/* line 187, ../src/smacss/base/_tables.scss */
+.sorting_desc::before {
+  content: "↑\00A0";
+}
+
+/* line 191, ../src/smacss/base/_tables.scss */
+.dataTables_filter label {
+  font-weight: bold;
+}
+
+/**
+ * C. Forms
+ */
+/**
+ * Form Styles
+ *
+ * Base styles that make the forms a pleasure to fill out.
+ * 
+ * Table of Contents
+ *
+ * 1. Sidebar Overrides
+ * 2. Views Module Forms
+ * 3. Webform Module
+ * 4. Search
+ */
+/**
+ * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
+ */
+/* line 17, ../src/smacss/base/_forms.scss */
+fieldset {
+  border-width: 0;
+  margin: calc(30 / 16 * 1rem) 0;
+  padding: 0;
+}
+
+/* line 23, ../src/smacss/base/_forms.scss */
+legend {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  padding: 0;
+  display: table;
+  letter-spacing: 0.25ch;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 43em) {
+  /* line 23, ../src/smacss/base/_forms.scss */
+  legend {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 38, ../src/smacss/base/_forms.scss */
+label {
+  display: inline;
+}
+
+/* line 42, ../src/smacss/base/_forms.scss */
+input,
+select,
+textarea {
+  border: 1px solid #aea3b6;
+  margin-bottom: calc(15 / 16 * 1rem);
+  max-width: 100%;
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+  border-radius: 2px;
+}
+/* line 55, ../src/smacss/base/_forms.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 2px 1px rgba(29, 18, 37, 0.25);
+}
+@media screen and (min-width: 43em) {
+  /* line 42, ../src/smacss/base/_forms.scss */
+  input,
+  select,
+  textarea {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+/* line 65, ../src/smacss/base/_forms.scss */
+input {
+  height: 1.875rem;
+  padding: 0 0.5em;
+  font-size: 1em;
+}
+
+/* line 73, ../src/smacss/base/_forms.scss */
+input[type="text"] {
+  width: 100%;
+  max-width: calc(45ch + 1em);
+}
+
+/* line 78, ../src/smacss/base/_forms.scss */
+input[type="email"] {
+  width: 100%;
+  max-width: calc(30ch + 1em);
+}
+
+/* line 83, ../src/smacss/base/_forms.scss */
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  max-width: calc(15ch + 1em);
+}
+
+/* line 89, ../src/smacss/base/_forms.scss */
+select {
+  height: calc(30 / 16 * 1rem);
+  padding: 0 0.5em;
+  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
+  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
+  cursor: pointer;
+}
+/* line 99, ../src/smacss/base/_forms.scss */
+select:hover {
+  background-color: #e1dee3;
+  border-bottom-style: dashed;
+}
+
+/* line 106, ../src/smacss/base/_forms.scss */
+textarea {
+  padding: calc(7.5 / 16 * 1rem) 0.75em;
+  width: 100%;
+  max-width: calc(45ch + 1em);
+  min-width: 50%;
+}
+@media screen and (min-width: 43em) {
+  /* line 106, ../src/smacss/base/_forms.scss */
+  textarea {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 119, ../src/smacss/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  height: calc(14 / 16 * 1rem);
+  margin: 0 0.5ch calc(20 / 16 * 1rem) 0;
+  width: 1em;
+  clear: left;
+  float: left;
+  vertical-align: top;
+}
+@media screen and (min-width: 43em) {
+  /* line 119, ../src/smacss/base/_forms.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
+    height: calc(18 / 16 * 1rem);
+    margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 119, ../src/smacss/base/_forms.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
+    height: calc(19.229 / 16 * 1rem);
+  }
+}
+
+/**
+ * 1. Sidebar Overrides
+ */
+/* line 144, ../src/smacss/base/_forms.scss */
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"] {
+  height: calc(14 / 16 * 1rem);
+}
+@media screen and (min-width: 125em) {
+  /* line 144, ../src/smacss/base/_forms.scss */
+  .sidebar input[type="checkbox"],
+  .sidebar input[type="radio"] {
+    height: calc(18 / 16 * 1rem);
+  }
+}
+
+/* line 153, ../src/smacss/base/_forms.scss */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin-bottom: 0.9375rem;
+  width: calc(100% - 1em - 0.5ch);
+  float: left;
+}
+@media screen and (min-width: 43em) {
+  /* line 153, ../src/smacss/base/_forms.scss */
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    width: calc(100% - 1.25em);
+  }
+}
+
+/**
+ * 2. Views Module Forms
+ */
+/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-submit-button,
+.views-exposed-form .views-reset-button {
+  display: inline-block;
+}
+
+/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
+}
+
+/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
+  margin-bottom: 0;
+}
+
+/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-form {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+@media screen and (min-width: 43em) {
+  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+  .tertiary-nav-wrapper .views-exposed-form {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-widget {
+  padding: 0;
+}
+
+/**
+ * 3. Webform Module
+ */
+/**
+ * NOTE:
+ *
+ * Webform .form-items wrap around each label + input pair, so put margins
+ * on .form-items and remove them from form fields.
+ */
+/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-client-form .form-item,
+.webform-client-form .form-actions {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  margin: 0;
+  clear: left;
+}
+@media screen and (min-width: 43em) {
+  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  .webform-client-form .form-item,
+  .webform-client-form .form-actions {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-client-form input[type="text"],
+.webform-client-form select {
+  margin: 0;
+}
+
+/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-client-form label {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-client-form .description {
+  margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+@media screen and (min-width: 43em) {
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  .webform-client-form .description {
+    margin: 0.535714285714286em 0 1.071428571428571em;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-client-form input.year {
+  width: calc(4.1ch + 1em);
+}
+
+/* line 52, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-container-inline input[type="radio"],
+.webform-container-inline input[type="checkbox"] {
+  margin-right: 0;
+  float: none;
+}
+
+/* line 60, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-container-inline label {
+  margin-right: 0;
+}
+
+/* line 64, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-container-inline input + label {
+  margin-right: 1ch;
+  float: none;
+}
+
+/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+.resizable-textarea .grippie {
+  width: 100%;
+  max-width: calc(45ch + 1em);
+  min-width: 50%;
+}
+
+/**
+ * 4. Search
+ */
+/**
+ * D. Search
+ *
+ * The search form on the top right of every page.
+ */
+/* line 7, ../src/smacss/modules/_search.scss */
+[type="search"],
+#search-block-form,
+#edit-search-block-form--2 {
+  margin: 0 -100% 0 0;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+/* line 18, ../src/smacss/modules/_search.scss */
+#edit-search-block-form--2 {
+  width: 100%;
+  max-width: none;
+}
+
+/* line 23, ../src/smacss/modules/_search.scss */
+#edit-actions--2 {
+  float: right;
+  position: relative;
+}
+
+/* line 30, ../src/smacss/modules/_search.scss */
+.search-button,
+#search-block-form #edit-submit,
+#search-block-form #edit-submit--2 {
+  border-width: 1px 1px 1px 0;
+  height: 1.875rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  float: right;
+  position: relative;
+  vertical-align: top;
+  background: none #f2f2f2;
+  border-color: #aea3b6;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+/* line 53, ../src/smacss/modules/_search.scss */
+.search-button:hover,
+#search-block-form #edit-submit:hover,
+#search-block-form #edit-submit--2:hover {
+  background: none #c2c2c2;
+}
+
+/* line 58, ../src/smacss/modules/_search.scss */
+.search-button > img {
+  max-height: 100%;
+}
+
+/**
+ * D. Buttons
+ */
+/**
+ * Buttons
+ *
+ * @section button
+ *
+ * (Note: Built-in Drupal forms require "input[type='submit']"
+ * instead of button.)
+ */
+/* line 9, ../src/smacss/base/_buttons.scss */
+button,
+.button,
+.button:visited,
+input[type="button"],
+input[type="submit"] {
+  border: 1px solid #8d7b99;
+  height: auto;
+  margin-bottom: 1.262201279030629em;
+  padding: 5px 0.5em;
+  display: inline-block;
+  color: #303030;
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
+  background-color: #d0cad4;
+  background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
+  border-radius: 0.2em;
+  box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
+}
+@media screen and (min-width: 43em) {
+  /* line 9, ../src/smacss/base/_buttons.scss */
+  button,
+  .button,
+  .button:visited,
+  input[type="button"],
+  input[type="submit"] {
+    margin-bottom: 0.83333333333333em;
+  }
+}
+
+/* line 39, ../src/smacss/base/_buttons.scss */
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  color: #2c1a38;
+  background-color: #e1dee3;
+  background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
+  border-color: #8d7b99;
+}
+
+/* line 50, ../src/smacss/base/_buttons.scss */
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus {
+  border-color: #919191;
+  outline-width: 0;
+}
+
+/* line 58, ../src/smacss/base/_buttons.scss */
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  background-color: #8d7b99;
+  background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
+  box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
+}
+
+/**
+ * Primary Action Button
+ *
+ * The primary action button is meant to be the single default
+ * action that a user will expect to take. E.g., Submit would be
+ * the .prime button while Cancel would be the default button.
+ */
+/* line 76, ../src/smacss/base/_buttons.scss */
+.prime,
+.prime:visited,
+input.prime,
+.webform-client-form .button-primary {
+  color: #f2f2f2;
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  background-color: #64933a;
+  background-image: linear-gradient(#a1ba6c, #64933a);
+  border-color: #46502b;
+}
+
+/* line 88, ../src/smacss/base/_buttons.scss */
+.prime:hover,
+input.prime:hover,
+.webform-client-form .button-primary:hover {
+  color: #46502b;
+  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
+  background-color: #80a65f;
+  background-image: linear-gradient(#c0cd84, #80a65f);
+  border-bottom-color: #46502b;
+}
+
+/* line 99, ../src/smacss/base/_buttons.scss */
+.prime:focus,
+input.prime:focus,
+.webform-client-form .button-primary:focus {
+  border-color: #919191;
+}
+
+/* line 104, ../src/smacss/base/_buttons.scss */
+.prime:active,
+input.prime:active,
+.webform-client-form .button-primary:active {
+  background-color: #9db984;
+  background-image: linear-gradient(#64933a, #83a653);
+}
+
+/**
+ * Disabled Buttons
+ *
+ * Gives a disabled, unclickable appearance for buttons that can't
+ * be clicked, but should still be present in the design. Disabled
+ * buttons should have their actions taken away from them, or have
+ * the disabled attribute.
+ */
+/* line 120, ../src/smacss/base/_buttons.scss */
+.is-disabled,
+.is-disabled:visited,
+.is-disabled:hover,
+button[disabled],
+button[disabled]:hover,
+input.is-disabled,
+input.is-disabled:hover {
+  color: #616161;
+  text-shadow: 0 0.05em 0 rgba(253, 244, 182, 0.5);
+  background: #aea3b6 none;
+  border-color: #919191;
+  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
+  cursor: not-allowed;
+}
+
+/* line 138, ../src/smacss/base/_buttons.scss */
+.prime.is-disabled,
+.prime.is-disabled:hover,
+.prime.is-disabled:visited,
+.prime[disabled],
+.webform-client-form .button-primary[disabled],
+.prime[disabled]:hover,
+.webform-client-form .button-primary[disabled]:hover,
+input.prime.is-disabled,
+.webform-client-form .is-disabled.button-primary,
+input.prime.is-disabled:hover,
+.webform-client-form .is-disabled.button-primary:hover {
+  background: #80a65f none;
+}
+
+/**
+ * E. Hyphenation
+ */
+/*a,  //keep linked words whole
+a:link,
+.intro,
+.pull-quote,
+.big-fact{
+	hyphens: none;
+}*/
+/* line 119, ../src/smacss/_base.scss */
+.looong-word {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/**
+ * II. Layout Styles
+ *
+ * Styles for overarching page layout elements like main columns,
+ * rows, and wrappers.
+ *
+ * Table of Contents
+ *
+ * A. Grid
+ * B. Page-level Layout
+ * C. Header Layout
+ * D. Content Layout
+ * E. Faux Wrappers
+ * F. Hidden Elements
+ */
+/**
+ * A. Grid
+ *
+ * Styles related to the grid system.
+ *
+ * @section l-grid
+ */
+/**
+ * A. Grid
+ *
+ * Unit layout and sizing for the grid system.
+ *
+ * Table of Contents
+ *
+ * 1. Flexbox-based Grid Layout
+ * 2. Float-based Grid Layout
+ * 3. Supplemental Content
+ */
+/* line 13, ../src/smacss/layout/_grid.scss */
+.row {
+  width: 100%;
+  clear: both;
+  display: block;
+}
+
+/**
+ * 1. Flexbox-based Grid Layout
+ *
+ * See http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ *
+ * Use the flexbox-based grid whenever possible. Styles still in
+ * the float-based grid are being updated over time. All grid units
+ * should eventually be flexbox-based for modern browsers.
+ */
+/* line 30, ../src/smacss/layout/_grid.scss */
+.grid,
+.grid.element-list {
+  margin-left: -1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 39, ../src/smacss/layout/_grid.scss */
+.grid.zebra-striped,
+.grid.element-list.zebra-striped {
+  margin-right: 0;
+}
+
+/* line 45, ../src/smacss/layout/_grid.scss */
+.grid-alt {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 49, ../src/smacss/layout/_grid.scss */
+.unit-1-1,
+.unit-1-2,
+.unit-1-3,
+.unit-1-3-alt,
+.unit-1-4,
+.unit-2-3,
+.unit-1-5,
+.unit-1-6,
+.unit-1-6-alt,
+.unit-1-7,
+.unit-2-7,
+.unit-3-7,
+.unit-4-7,
+.unit-5-7,
+.unit-6-7 {
+  padding-left: 1em;
+  float: left;
+}
+
+/* line 70, ../src/smacss/layout/_grid.scss */
+.unit-1-1 {
+  width: 100%;
+  clear: left;
+}
+
+/* line 76, ../src/smacss/layout/_grid.scss */
+.unit-1-2 {
+  width: 100%;
+}
+@media (min-width: 32em) {
+  /* line 76, ../src/smacss/layout/_grid.scss */
+  .unit-1-2 {
+    width: 50%;
+  }
+  /* line 84, ../src/smacss/layout/_grid.scss */
+  .unit-1-2:nth-child(odd) {
+    clear: left;
+  }
+}
+
+/* line 90, ../src/smacss/layout/_grid.scss */
+.unit-1-3 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 90, ../src/smacss/layout/_grid.scss */
+  .unit-1-3 {
+    width: 33.3333333333%;
+  }
+}
+
+/* line 99, ../src/smacss/layout/_grid.scss */
+.unit-1-3-alt {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 99, ../src/smacss/layout/_grid.scss */
+  .unit-1-3-alt {
+    width: 50%;
+  }
+  /* line 107, ../src/smacss/layout/_grid.scss */
+  .unit-1-3-alt:nth-child(odd) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 99, ../src/smacss/layout/_grid.scss */
+  .unit-1-3-alt {
+    width: 33.3333333333%;
+  }
+  /* line 117, ../src/smacss/layout/_grid.scss */
+  .unit-1-3-alt:nth-child(odd) {
+    clear: none;
+  }
+  /* line 121, ../src/smacss/layout/_grid.scss */
+  .unit-1-3-alt:nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+/* line 127, ../src/smacss/layout/_grid.scss */
+.unit-2-3 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 127, ../src/smacss/layout/_grid.scss */
+  .unit-2-3 {
+    width: 66.6666666667%;
+  }
+}
+
+/* line 136, ../src/smacss/layout/_grid.scss */
+.unit-1-4 {
+  width: 100%;
+}
+
+/* line 140, ../src/smacss/layout/_grid.scss */
+.unit-1-5 {
+  width: 100%;
+}
+@media screen and (min-width: 70em) {
+  /* line 140, ../src/smacss/layout/_grid.scss */
+  .unit-1-5 {
+    width: 20%;
+  }
+}
+
+/* line 148, ../src/smacss/layout/_grid.scss */
+.unit-1-6 {
+  width: 100%;
+}
+@media screen and (min-width: 20em) {
+  /* line 148, ../src/smacss/layout/_grid.scss */
+  .unit-1-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 148, ../src/smacss/layout/_grid.scss */
+  .unit-1-6 {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 148, ../src/smacss/layout/_grid.scss */
+  .unit-1-6 {
+    width: 16.666666666667%;
+  }
+}
+
+/* line 165, ../src/smacss/layout/_grid.scss */
+.unit-1-6-alt {
+  width: 50%;
+}
+@media screen and (min-width: 20em) {
+  /* line 165, ../src/smacss/layout/_grid.scss */
+  .unit-1-6-alt {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 165, ../src/smacss/layout/_grid.scss */
+  .unit-1-6-alt {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 165, ../src/smacss/layout/_grid.scss */
+  .unit-1-6-alt {
+    width: 16.666666666667%;
+  }
+}
+
+/* line 183, ../src/smacss/layout/_grid.scss */
+.unit-1-7 {
+  width: 100%;
+}
+@media screen and (min-width: 20em) {
+  /* line 183, ../src/smacss/layout/_grid.scss */
+  .unit-1-7 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 183, ../src/smacss/layout/_grid.scss */
+  .unit-1-7 {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 183, ../src/smacss/layout/_grid.scss */
+  .unit-1-7 {
+    width: 14.285714285714%;
+  }
+}
+
+/* line 201, ../src/smacss/layout/_grid.scss */
+.unit-2-7 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 201, ../src/smacss/layout/_grid.scss */
+  .unit-2-7 {
+    width: 28.571428571429%;
+  }
+}
+
+/* line 211, ../src/smacss/layout/_grid.scss */
+.unit-3-7 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 211, ../src/smacss/layout/_grid.scss */
+  .unit-3-7 {
+    width: 42.857142857143%;
+  }
+}
+
+/* line 221, ../src/smacss/layout/_grid.scss */
+.unit-4-7 {
+  padding-right: 1em;
+  padding-left: 0;
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 221, ../src/smacss/layout/_grid.scss */
+  .unit-4-7 {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 221, ../src/smacss/layout/_grid.scss */
+  .unit-4-7 {
+    width: 57.142857142857%;
+  }
+}
+
+/* line 238, ../src/smacss/layout/_grid.scss */
+.unit-5-7 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 238, ../src/smacss/layout/_grid.scss */
+  .unit-5-7 {
+    width: 71.428571428571%;
+  }
+}
+
+/* line 248, ../src/smacss/layout/_grid.scss */
+.unit-6-7 {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 248, ../src/smacss/layout/_grid.scss */
+  .unit-6-7 {
+    width: 85.714285714286%;
+  }
+}
+
+/* line 257, ../src/smacss/layout/_grid.scss */
+.standalone-unit {
+  padding: 0 1em;
+}
+
+/**
+ * 3. Supplemental Content
+ *
+ * section @supplement
+ */
+@media screen and (min-width: 32em) {
+  /* line 267, ../src/smacss/layout/_grid.scss */
+  .right,
+  .supplement,
+  .supplement-1-2 {
+    margin-left: 1em;
+    width: calc(66.6666666667% - 1em);
+    float: right;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 267, ../src/smacss/layout/_grid.scss */
+  .right,
+  .supplement,
+  .supplement-1-2 {
+    margin-right: -2em;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 267, ../src/smacss/layout/_grid.scss */
+  .right,
+  .supplement,
+  .supplement-1-2 {
+    margin-right: -3em;
+    width: calc(50% + 2.5em);
+  }
+}
+
+@media screen and (min-width: 22em) {
+  /* line 291, ../src/smacss/layout/_grid.scss */
+  .supplement-alt-1-2 {
+    margin-right: -1em;
+    margin-left: 1em;
+    width: calc(50% + 1em);
+    float: right;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 291, ../src/smacss/layout/_grid.scss */
+  .supplement-alt-1-2 {
+    margin-right: 0;
+    width: calc(66.666666667% - 1em);
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 291, ../src/smacss/layout/_grid.scss */
+  .supplement-alt-1-2 {
+    margin-right: 1em;
+    margin-left: calc(-25% - 2em);
+    width: calc((100% + 4em * 18 / 14) / 4);
+    float: left;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 291, ../src/smacss/layout/_grid.scss */
+  .supplement-alt-1-2 {
+    margin-left: calc(-25% - 3em);
+    width: calc((100% + 6em * 18 / 14) / 4);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 291, ../src/smacss/layout/_grid.scss */
+  .supplement-alt-1-2 {
+    margin-left: calc(-50% - 2em);
+    width: 50%;
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+/**
+ * Element list is a generic container that is meant to house lists
+ * of designed elements, i.e. not a bulleted text list. It is meant
+ * to apply to uls and ols.
+ */
+/* line 31, ../src/smacss/_layout.scss */
+.element-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/**
+ * B. Page-level Layout
+ */
+/* line 42, ../src/smacss/_layout.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+/* line 49, ../src/smacss/_layout.scss */
+.wrapper.grid, .wrapper.grid-alt {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 70em) {
+  /* line 42, ../src/smacss/_layout.scss */
+  .wrapper {
+    max-width: 77em;
+  }
+}
+
+/* line 59, ../src/smacss/_layout.scss */
+.wrapper:before,
+.wrapper:after {
+  width: 0;
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/**
+ * C. Header Layout
+ */
+/* line 74, ../src/smacss/_layout.scss */
+[role="banner"],
+body > div + header,
+.header-nav-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
+}
+@media screen and (min-width: 43em) {
+  /* line 74, ../src/smacss/_layout.scss */
+  [role="banner"],
+  body > div + header,
+  .header-nav-wrapper {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+/* line 91, ../src/smacss/_layout.scss */
+.page-header {
+  transition: all 0.1s ease-in-out;
+}
+@media screen and (min-width: 43em) {
+  /* line 91, ../src/smacss/_layout.scss */
+  .page-header {
+    background-color: transparent;
+  }
+}
+
+/* line 99, ../src/smacss/_layout.scss */
+[role="main"],
+.main-row {
+  position: relative;
+}
+@media screen and (min-width: 70em) {
+  /* line 99, ../src/smacss/_layout.scss */
+  [role="main"],
+  .main-row {
+    border-top: 4px solid #46502b;
+    margin-top: -4px;
+    border-radius: 2px;
+  }
+}
+
+/* line 113, ../src/smacss/_layout.scss */
+.top-nav,
+.main-row {
+  width: 100%;
+}
+
+/* line 118, ../src/smacss/_layout.scss */
+.top-nav {
+  clear: both;
+  position: relative;
+}
+@media screen and (min-width: 20em) {
+  /* line 118, ../src/smacss/_layout.scss */
+  .top-nav {
+    font-size: 0.695rem;
+    letter-spacing: -0.01em;
+    line-height: 1.34831460674157;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 118, ../src/smacss/_layout.scss */
+  .top-nav {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 118, ../src/smacss/_layout.scss */
+  .top-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/**
+ * Typekit overrides
+ */
+@media screen and (min-width: 20em) {
+  /* line 142, ../src/smacss/_layout.scss */
+  .wf-active .top-nav {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 142, ../src/smacss/_layout.scss */
+  .wf-active .top-nav {
+    letter-spacing: 0.05em;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 153, ../src/smacss/_layout.scss */
+  .top-nav,
+  .wf-active .top-nav {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 153, ../src/smacss/_layout.scss */
+  .top-nav,
+  .wf-active .top-nav {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 153, ../src/smacss/_layout.scss */
+  .top-nav,
+  .wf-active .top-nav {
+    font-size: 1.719rem;
+    line-height: 1.090750436300175;
+  }
+}
+
+/**
+ * D. Content Layout
+ */
+/* line 175, ../src/smacss/_layout.scss */
+.site-content {
+  margin-bottom: 1.875rem;
+  width: 100%;
+}
+@media screen and (min-height: 35em) {
+  /* line 175, ../src/smacss/_layout.scss */
+  .site-content {
+    margin-bottom: 3.75rem;
+  }
+}
+
+/* line 185, ../src/smacss/_layout.scss */
+.index-wrapper,
+.primary-content-wrapper {
+  border-top: 5px solid #46502b;
+  margin: -5px 0 0 1em;
+  padding: 0;
+  width: calc(100% - 1.5em);
+  background-color: rgba(242, 242, 242, 0.95);
+  border-radius: 2px;
+}
+@media screen and (min-width: 43em) {
+  /* line 185, ../src/smacss/_layout.scss */
+  .index-wrapper,
+  .primary-content-wrapper {
+    margin-right: 0;
+    margin-left: 0;
+    width: calc(80% - 1em);
+    overflow: visible;
+    border-radius: 0 0 2px 2px;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 185, ../src/smacss/_layout.scss */
+  .index-wrapper,
+  .primary-content-wrapper {
+    border-top-width: 0;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 216, ../src/smacss/_layout.scss */
+  .index-wrapper {
+    position: relative;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 216, ../src/smacss/_layout.scss */
+  .index-wrapper {
+    width: 85.714285714286%;
+  }
+}
+
+/* line 230, ../src/smacss/_layout.scss */
+.primary-content-wrapper {
+  border-bottom: 2px dashed #64933a;
+  /*@include breakpoint($gamora){
+  	// box model
+  	padding-left: 1em;
+  }*/
+}
+@media screen and (min-width: 70em) {
+  /* line 230, ../src/smacss/_layout.scss */
+  .primary-content-wrapper {
+    border-bottom: 0;
+    width: 57.142857142857%;
+  }
+}
+
+/* line 246, ../src/smacss/_layout.scss */
+.sidebar-wrapper {
+  margin-left: 1em;
+  padding: 0;
+  width: calc(100% - 1.5em);
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.95);
+}
+@media screen and (min-width: 43em) {
+  /* line 246, ../src/smacss/_layout.scss */
+  .sidebar-wrapper {
+    margin-left: 20%;
+    padding-left: 1em;
+    width: calc(80% - 1em);
+    overflow: visible;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 246, ../src/smacss/_layout.scss */
+  .sidebar-wrapper {
+    margin: 0;
+    width: 28.571428571429%;
+  }
+}
+
+/* line 274, ../src/smacss/_layout.scss */
+.main-content,
+.sidebar {
+  margin: 0 0.75em 2.14285714285714em;
+}
+@media screen and (min-width: 22em) {
+  /* line 274, ../src/smacss/_layout.scss */
+  .main-content,
+  .sidebar {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 274, ../src/smacss/_layout.scss */
+  .main-content,
+  .sidebar {
+    margin-bottom: 4.28571428571429em;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 274, ../src/smacss/_layout.scss */
+  .main-content,
+  .sidebar {
+    margin-bottom: 3.3333333333em;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 292, ../src/smacss/_layout.scss */
+  .index-wrapper .main-content {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+}
+
+/* line 300, ../src/smacss/_layout.scss */
+.primary-content-wrapper .main-content {
+  max-width: 45em;
+}
+@media screen and (min-width: 43em) and (min-width: 43em) {
+  /* line 300, ../src/smacss/_layout.scss */
+  .primary-content-wrapper .main-content {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}
+@media screen and (min-width: 43em) and (min-width: 70em) {
+  /* line 300, ../src/smacss/_layout.scss */
+  .primary-content-wrapper .main-content {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+}
+
+/* line 316, ../src/smacss/_layout.scss */
+.main-content {
+  margin-top: calc(30 / 16 * 1rem);
+}
+@media screen and (min-width: 70em) {
+  /* line 316, ../src/smacss/_layout.scss */
+  .main-content {
+    margin-top: calc(45 / 16 * 1rem);
+  }
+}
+
+/* line 324, ../src/smacss/_layout.scss */
+.sidebar {
+  margin: 0 0.75em 3.75rem;
+}
+@media screen and (min-width: 22em) {
+  /* line 324, ../src/smacss/_layout.scss */
+  .sidebar {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 324, ../src/smacss/_layout.scss */
+  .sidebar {
+    margin-right: 5.675675675675676%;
+    margin-left: 5.675675675675676%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 324, ../src/smacss/_layout.scss */
+  .sidebar {
+    border-left: 1px solid #c2c2c2;
+    margin: calc(45 / 16 * 1rem) 1em 0 0;
+    padding-left: 1em;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+    color: #303030;
+  }
+  /* line 346, ../src/smacss/_layout.scss */
+  .sidebar p,
+  .sidebar .base {
+    margin: 0.535714285714286em 0 1.071428571428571em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 324, ../src/smacss/_layout.scss */
+  .sidebar {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+  /* line 355, ../src/smacss/_layout.scss */
+  .sidebar p,
+  .sidebar .base {
+    margin: 0.441176470588235em 0 0.882352941176471em;
+  }
+}
+
+/**
+ * E. Faux Wrappers
+ *
+ * For main-content and sidebar inside an index-wrapper, e.g., used
+ * in the catalog. Use sparingly!
+ */
+/* line 368, ../src/smacss/_layout.scss */
+#faux-content-wrapper {
+  border-bottom: 2px dashed #64933a;
+}
+@media screen and (min-width: 43em) {
+  /* line 368, ../src/smacss/_layout.scss */
+  #faux-content-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 368, ../src/smacss/_layout.scss */
+  #faux-content-wrapper {
+    border-bottom-width: 0;
+    width: 66.6666666667%;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 381, ../src/smacss/_layout.scss */
+  #faux-sidebar-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 381, ../src/smacss/_layout.scss */
+  #faux-sidebar-wrapper {
+    width: 33.3333333333%;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 395, ../src/smacss/_layout.scss */
+  .faux-sidebar {
+    border-left: 1px solid #c2c2c2;
+    padding-left: 1em;
+  }
+}
+
+/* line 404, ../src/smacss/_layout.scss */
+.spotlight {
+  text-align: center;
+}
+
+/**
+ * F. Hidden Elements
+ *
+ * For displaying less essential elements only when screen size
+ * permits. Use sparingly!
+ */
+@media screen and (max-width: 20em) {
+  /* line 415, ../src/smacss/_layout.scss */
+  .gt20 {
+    display: none;
+  }
+}
+@media screen and (max-width: 22em) {
+  /* line 421, ../src/smacss/_layout.scss */
+  .gt22 {
+    display: none;
+  }
+}
+@media screen and (max-width: 32em) {
+  /* line 427, ../src/smacss/_layout.scss */
+  .gt32 {
+    display: none;
+  }
+}
+@media screen and (max-width: 43em) {
+  /* line 437, ../src/smacss/_layout.scss */
+  .gt43 {
+    display: none;
+  }
+}
+@media screen and (max-width: 70em) {
+  /* line 443, ../src/smacss/_layout.scss */
+  .gt70 {
+    display: none;
+  }
+}
+@media screen and (max-width: 88em) {
+  /* line 449, ../src/smacss/_layout.scss */
+  .gt88 {
+    display: none;
+  }
+}
+/**
+ * III. Module Styles
+ *
+ * Styles for specific or reusable, components.
+ *
+ * Table of Contents
+ * 
+ * A. Header
+ * B. Background Image
+ * C. Homepage Hero Image
+ * D. Tertiary Nav
+ * E. Page Footer
+ * F. Special Typography
+ * G. Lists
+ * H. Tables
+ * I. Icons
+ * J. Media Segment
+ * K. Spread Segment
+ * L. Boxes
+ * M. Images
+ * N. Calendars
+ * O. News
+ * P. Profiles
+ * Q. Directories
+ * R. Embedded Content
+ * S. Drupal Login
+ * T. CMS
+ */
+/* line 33, ../src/smacss/_modules.scss */
+.top-links,
+.search-list,
+.primary-nav-unit h2,
+.nav li {
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+
+/**
+ * A. Header
+ */
+/**
+ * A. Header
+ *
+ * The header at the top of every page.
+ *
+ * Table of Contents
+ *
+ * 1. Mobile Header Widgets
+ * 2. Logo
+ * 3. Header Search
+ * 4. Primary Nav
+ * 5. Secondary Nav
+ * 6. Site Name
+ */
+/**
+ * 1. Mobile Header Widgets
+ *
+ * Togglable dropdowns for internal user links and search bar.
+ */
+/* line 21, ../src/smacss/modules/_header.scss */
+.header-dropdowns {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 21, ../src/smacss/modules/_header.scss */
+  .header-dropdowns {
+    width: 49%;
+    float: right;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 21, ../src/smacss/modules/_header.scss */
+  .header-dropdowns {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 21, ../src/smacss/modules/_header.scss */
+  .header-dropdowns {
+    width: 20%;
+  }
+}
+
+/* line 40, ../src/smacss/modules/_header.scss */
+input[name="header-toggle"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* line 46, ../src/smacss/modules/_header.scss */
+input + .header-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s all ease;
+}
+
+/* line 52, ../src/smacss/modules/_header.scss */
+input:checked + .header-dropdown {
+  max-height: 8em;
+  transition: 0.5s all ease;
+}
+
+/* line 57, ../src/smacss/modules/_header.scss */
+.internal-users,
+.header-dropdown .search {
+  width: 100%;
+}
+
+/* line 63, ../src/smacss/modules/_header.scss */
+.internal-users {
+  margin-top: 0;
+  overflow: hidden;
+  background-color: #d0cad4;
+}
+
+/* line 72, ../src/smacss/modules/_header.scss */
+.internal-users > li {
+  padding: 0.9375rem 1em;
+  width: 50%;
+  float: left;
+}
+
+/* line 80, ../src/smacss/modules/_header.scss */
+.internal-users img {
+  margin-right: 5px;
+  width: 10px;
+  display: inline-block;
+}
+
+@media screen and (min-width: 43em) {
+  /* line 88, ../src/smacss/modules/_header.scss */
+  #search-flag + .header-dropdown {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* line 95, ../src/smacss/modules/_header.scss */
+.header-dropdown .search,
+.header-dropdown #search-block-form {
+  margin: 0;
+  padding: 0.9375rem 1em;
+  overflow: hidden;
+  background-color: #d6dfcd;
+}
+@media screen and (min-width: 43em) {
+  /* line 95, ../src/smacss/modules/_header.scss */
+  .header-dropdown .search,
+  .header-dropdown #search-block-form {
+    padding: 0.9375rem 1em 0.9375rem 0;
+    float: right;
+    background-color: transparent;
+  }
+}
+
+/* line 112, ../src/smacss/modules/_header.scss */
+.page-header {
+  width: 100%;
+}
+@media screen and (min-width: 43em) {
+  /* line 112, ../src/smacss/modules/_header.scss */
+  .page-header {
+    width: 51%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 112, ../src/smacss/modules/_header.scss */
+  .page-header {
+    width: 60%;
+  }
+}
+
+/**
+ * 2. Logo
+ */
+/* line 127, ../src/smacss/modules/_header.scss */
+.logo {
+  margin: 0.46875rem 0.5em 0;
+  width: calc(100% - 1em);
+}
+@media screen and (min-width: 20em) {
+  /* line 127, ../src/smacss/modules/_header.scss */
+  .logo {
+    width: 58%;
+    float: left;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 127, ../src/smacss/modules/_header.scss */
+  .logo {
+    width: auto;
+    float: none;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 127, ../src/smacss/modules/_header.scss */
+  .logo {
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    float: none;
+    text-align: center;
+  }
+}
+/* line 166, ../src/smacss/modules/_header.scss */
+.logo a,
+.logo a:visited,
+.logo a:hover {
+  border-bottom-width: 0;
+}
+/* line 172, ../src/smacss/modules/_header.scss */
+.logo img {
+  max-height: 4em;
+}
+@media screen and (min-width: 125em) {
+  /* line 172, ../src/smacss/modules/_header.scss */
+  .logo img {
+    max-height: none;
+    max-width: 20em;
+  }
+}
+
+/**
+ * 3. Header Search
+ *
+ * @section mod-header-search
+ */
+/* line 187, ../src/smacss/modules/_header.scss */
+[for="q"] {
+  height: 0;
+  width: 0;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 195, ../src/smacss/modules/_header.scss */
+.off-canvas {
+  margin-right: 2%;
+}
+
+/* line 199, ../src/smacss/modules/_header.scss */
+.search-toggle,
+.student-toggle {
+  padding: 0 0.618em;
+  min-width: 22px;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (min-width: 43em) {
+  /* line 199, ../src/smacss/modules/_header.scss */
+  .search-toggle,
+  .student-toggle {
+    display: none;
+  }
+}
+
+/* line 215, ../src/smacss/modules/_header.scss */
+.search-toggle {
+  border-radius: 0 0 4.5px;
+}
+
+/* line 219, ../src/smacss/modules/_header.scss */
+.student-toggle {
+  border-right: 1px solid #303030;
+  border-radius: 0 0 0 4.5px;
+}
+
+/* line 224, ../src/smacss/modules/_header.scss */
+.search-toggle,
+.student-toggle {
+  border-bottom-width: 0;
+}
+
+/* line 229, ../src/smacss/modules/_header.scss */
+.search-toggle:hover,
+.student-toggle:hover {
+  cursor: pointer;
+}
+
+/* line 237, ../src/smacss/modules/_header.scss */
+.search-toggle > img,
+.student-toggle > img {
+  margin: 0.46875rem auto;
+  width: 17px;
+  display: block;
+}
+
+/* line 244, ../src/smacss/modules/_header.scss */
+.student-toggle > img {
+  padding-top: 1px;
+}
+
+/* line 248, ../src/smacss/modules/_header.scss */
+#top-search-query,
+#q,
+.top-search button {
+  margin-bottom: 0;
+}
+
+/* line 254, ../src/smacss/modules/_header.scss */
+[placeholder]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* line 258, ../src/smacss/modules/_header.scss */
+[placeholder]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* line 262, ../src/smacss/modules/_header.scss */
+[placeholder]:focus:-ms-placeholder {
+  color: transparent;
+}
+
+/* line 266, ../src/smacss/modules/_header.scss */
+.internal-users,
+.search-tools {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 32em) {
+  /* line 266, ../src/smacss/modules/_header.scss */
+  .internal-users,
+  .search-tools {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 266, ../src/smacss/modules/_header.scss */
+  .internal-users,
+  .search-tools {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/* line 279, ../src/smacss/modules/_header.scss */
+.search-tools {
+  margin-left: 0;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+/* line 287, ../src/smacss/modules/_header.scss */
+.search-tools li {
+  display: inline;
+}
+/* line 290, ../src/smacss/modules/_header.scss */
+.search-tools li::after {
+  content: " | ";
+}
+/* line 294, ../src/smacss/modules/_header.scss */
+.search-tools li:last-child::after {
+  content: "";
+}
+@media screen and (min-width: 125em) {
+  /* line 287, ../src/smacss/modules/_header.scss */
+  .search-tools li {
+    display: block;
+  }
+  /* line 301, ../src/smacss/modules/_header.scss */
+  .search-tools li:after {
+    content: "";
+  }
+  /* line 305, ../src/smacss/modules/_header.scss */
+  .search-tools li:not(:first-child) {
+    margin-left: 19px;
+  }
+}
+
+/* line 311, ../src/smacss/modules/_header.scss */
+.search-tools .internal-users-alt {
+  display: none;
+}
+@media screen and (min-width: 43em) {
+  /* line 311, ../src/smacss/modules/_header.scss */
+  .search-tools .internal-users-alt {
+    display: inline;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 311, ../src/smacss/modules/_header.scss */
+  .search-tools .internal-users-alt {
+    display: block;
+  }
+}
+
+/* line 323, ../src/smacss/modules/_header.scss */
+.internal-users-alt img {
+  margin-right: 5px;
+  width: 14px;
+  display: inline-block;
+}
+
+/* line 331, ../src/smacss/modules/_header.scss */
+.menu-button,
+.search-toggle,
+.student-toggle {
+  font-size: 1.125rem;
+  line-height: 1.66666666666667;
+}
+
+/* line 338, ../src/smacss/modules/_header.scss */
+.top-nav,
+.top-nav-list,
+.menu-button,
+.search-toggle,
+.student-toggle,
+.top-nav-list .active {
+  color: #f2f2f2;
+  background-color: #64933a;
+}
+
+/**
+ * 4. Primary Nav
+ *
+ * The green nav at the top of every page.
+ */
+/* line 353, ../src/smacss/modules/_header.scss */
+.top-nav-list {
+  margin: 0 auto;
+  margin-top: 0;
+  width: 100%;
+  min-height: 45px;
+  position: relative;
+  text-align: center;
+  list-style-type: none;
+}
+@media screen and (min-width: 20em) {
+  /* line 353, ../src/smacss/modules/_header.scss */
+  .top-nav-list {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* line 372, ../src/smacss/modules/_header.scss */
+.top-nav-list::before, .top-nav-list::after {
+  width: 0;
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 384, ../src/smacss/modules/_header.scss */
+.top-nav-list > li {
+  display: inline-block;
+}
+@media screen and (min-width: 20em) {
+  /* line 384, ../src/smacss/modules/_header.scss */
+  .top-nav-list > li {
+    border-left: 1px solid #303030;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    display: inline-block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    overflow: hidden;
+  }
+  /* line 399, ../src/smacss/modules/_header.scss */
+  .top-nav-list > li:first-child {
+    border-left-width: 0;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 384, ../src/smacss/modules/_header.scss */
+  .top-nav-list > li {
+    width: 20%;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 384, ../src/smacss/modules/_header.scss */
+  .top-nav-list > li {
+    height: auto;
+  }
+}
+
+/* line 420, ../src/smacss/modules/_header.scss */
+.top-nav-link,
+.top-nav-list a,
+.secondary-nav-link {
+  border-bottom-width: 0;
+  padding: 0.46875rem 1rem;
+  width: 100%;
+  display: block;
+}
+/* line 430, ../src/smacss/modules/_header.scss */
+.top-nav-link:hover,
+.top-nav-list a:hover,
+.secondary-nav-link:hover {
+  color: #f2f2f2;
+  background-color: #8d7b99;
+  box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
+  transition: all 0.1s ease-out;
+}
+/* line 441, ../src/smacss/modules/_header.scss */
+.top-nav-link:focus,
+.top-nav-list a:focus,
+.secondary-nav-link:focus {
+  background-color: #492c5d;
+}
+@media screen and (min-width: 20em) {
+  /* line 420, ../src/smacss/modules/_header.scss */
+  .top-nav-link,
+  .top-nav-list a,
+  .secondary-nav-link {
+    padding: 0.46875rem 0.25rem;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-shadow: 0 2px 0 rgba(29, 18, 37, 0.25);
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 420, ../src/smacss/modules/_header.scss */
+  .top-nav-link,
+  .top-nav-list a,
+  .secondary-nav-link {
+    padding-right: 0.6666666667em;
+    padding-left: 0.6666666667em;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 420, ../src/smacss/modules/_header.scss */
+  .top-nav-link,
+  .top-nav-list a,
+  .secondary-nav-link {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+/* line 468, ../src/smacss/modules/_header.scss */
+.top-nav-link,
+.top-nav-link:visited,
+.top-nav-list a,
+.top-nav-list a:visited {
+  color: #f2f2f2;
+  font-weight: 600;
+}
+@media screen and (min-width: 32em) {
+  /* line 468, ../src/smacss/modules/_header.scss */
+  .top-nav-link,
+  .top-nav-link:visited,
+  .top-nav-list a,
+  .top-nav-list a:visited {
+    text-shadow: none;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 468, ../src/smacss/modules/_header.scss */
+  .top-nav-link,
+  .top-nav-link:visited,
+  .top-nav-list a,
+  .top-nav-list a:visited {
+    font-weight: bold;
+  }
+}
+
+/**
+ * 5. Secondary Nav
+ *
+ * The textured nav immediately below the primary nav on the
+ * homepage only.
+ */
+/* line 491, ../src/smacss/modules/_header.scss */
+.secondary-nav-list {
+  border-top: 1px solid #46502b;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #64933a url("images/texture-1.png");
+  list-style-type: none;
+  /*> li{
+  	display: inline-block;
+  }*/
+}
+@media screen and (min-width: 20em) {
+  /* line 491, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    		/*> li:first-child,
+    		> li:last-child{
+    			margin: 0;
+    		}
+    
+    		> li{
+    			margin: 0;
+    			width: 25%;  // IE 9
+    			// layout
+    			flex-grow: 1;
+    			float: left;  // IE9
+    		}*/
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 491, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /*> li{
+    	// box model
+    	width: auto;
+    	// layout
+    	display: inline-block;  // IE9
+    	flex-grow: 0;
+    	float: none;  // IE 9
+    	// typography
+    	line-height: 2.52440255806126;  // 30/11.884
+    	white-space: nowrap;
+    }*/
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 491, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+    line-height: 2.14285714285714;
+  }
+}
+
+/* line 548, ../src/smacss/modules/_header.scss */
+.secondary-nav-list > li {
+  display: inline-block;
+}
+@media screen and (min-width: 20em) {
+  /* line 548, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li {
+    margin: 0;
+    width: 25%;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    float: left;
+  }
+  /* line 558, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li:first-child, .secondary-nav-list > li:last-child {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 22em) {
+  /* line 548, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li {
+    width: auto;
+    display: inline-block;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    float: none;
+    line-height: 2.52440255806126;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 548, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+    line-height: 3.21428571428571;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 548, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+    line-height: 2.5;
+  }
+}
+
+/* line 589, ../src/smacss/modules/_header.scss */
+.secondary-nav-link, .secondary-nav-link:visited {
+  border-bottom: 0;
+  height: 100%;
+  width: 100%;
+  color: #f2f2f2;
+  font-weight: normal;
+}
+@media screen and (min-width: 22em) {
+  /* line 589, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited {
+    height: auto;
+    padding: 0 1em;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 589, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+/* line 615, ../src/smacss/modules/_header.scss */
+.secondary-nav-link:hover {
+  color: #f2f2f2;
+  background-color: #8d7b99;
+  box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
+  transition: all 0.1s ease-out;
+}
+/* line 625, ../src/smacss/modules/_header.scss */
+.secondary-nav-link:focus {
+  background-color: #492c5d;
+}
+
+/**
+ * 6. Site Name
+ *
+ * The name of the department’s site, e.g. About Evergreen, Web
+ * Resources, or Registration
+ */
+/* line 637, ../src/smacss/modules/_header.scss */
+.site-name {
+  margin-top: 3.75rem;
+}
+@media screen and (min-width: 70em) {
+  /* line 637, ../src/smacss/modules/_header.scss */
+  .site-name {
+    margin-right: 1em;
+    margin-left: 1em;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.67);
+    border-radius: 2px 2px 0 0;
+  }
+}
+@media screen and (min-height: 35em) {
+  /* line 653, ../src/smacss/modules/_header.scss */
+  .site-name h1 {
+    margin-bottom: calc(30 / 16 * 1rem);
+  }
+}
+
+/**
+ * B. Background Image
+ */
+/* line 49, ../src/smacss/_modules.scss */
+.main-background,
+.main-background2 {
+  width: 100%;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* line 61, ../src/smacss/_modules.scss */
+.main-background .main-background-img,
+.main-background > :first-child,
+.main-background2 .main-background-img,
+.main-background2 > :first-child {
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 43em) {
+  /* line 61, ../src/smacss/_modules.scss */
+  .main-background .main-background-img,
+  .main-background > :first-child,
+  .main-background2 .main-background-img,
+  .main-background2 > :first-child {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 61, ../src/smacss/_modules.scss */
+  .main-background .main-background-img,
+  .main-background > :first-child,
+  .main-background2 .main-background-img,
+  .main-background2 > :first-child {
+    max-width: calc(77em * 0.57142857142857143);
+  }
+}
+
+/* line 79, ../src/smacss/_modules.scss */
+.main-background2 {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* line 83, ../src/smacss/_modules.scss */
+.main-background2 > .main-background-img,
+.main-background2 > :first-child {
+  position: absolute;
+}
+@media screen and (min-width: 43em) {
+  /* line 83, ../src/smacss/_modules.scss */
+  .main-background2 > .main-background-img,
+  .main-background2 > :first-child {
+    width: auto;
+    max-height: 100vh;
+  }
+}
+
+/**
+ * We are going to use this later.
+#main-background-img{
+	filter: blur(1em);
+	transition: all 0.085s cubic-bezier(0.19, 1, 0.22, 1) 0s;  // exponential
+	//will-change: filter;
+}
+*/
+/* line 104, ../src/smacss/_modules.scss */
+.main-background2-enhanced #main-background-img {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/**
+ * C. Homepage Hero Image
+ */
+/**
+ * C. Homepage Hero Image
+ *
+ * @section mod-hero-homepage
+ *
+ * +------------------------------+
+ * |                              |
+ * | .homepage-hero-       /---\  |
+ * | content goes here.    |. .|  |
+ * |  ---------------      \ - /  |
+ * | [.call-to-action]     /; ;\  |
+ * |                      /;  ;|  |
+ * |  -----------------   u'===|' |
+ * | |.box.caption-box |  |  v |  |
+ * +------------------------------+
+ *
+ * Table of Contents
+ *
+ * 1. Default
+ * 2. Graduation Day Hero Image
+ * 3. Copy
+ * 4. Copy Modifiers
+ */
+/* line 24, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero,
+.homepage-hero-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 20em) {
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero {
+    display: table;
+  }
+}
+
+/* line 46, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-picture img {
+  display: block;
+}
+@media screen and (min-width: 70em) {
+  /* line 46, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-picture img {
+    width: 100%;
+  }
+}
+
+/* line 55, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-img {
+  margin-left: -50%;
+  width: 200%;
+  max-width: none;
+  display: block;
+}
+@media screen and (min-width: 32em) {
+  /* line 63, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: -25%;
+    width: 150%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 71, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: -10%;
+    width: 120%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 78, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img .homepage-hero-img {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* line 84, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-img-alt .homepage-hero-img {
+  margin-left: 0;
+}
+
+/* line 89, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero a,
+.homepage-hero a:visited,
+.homepage-hero a:hover {
+  border-width: 0;
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* line 97, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero .call-to-action {
+  padding: 0 2%;
+  display: inline-block;
+  color: #f2f2f2;
+  text-shadow: none;
+  background-color: #64933a;
+}
+/* line 108, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero .call-to-action:hover {
+  background-color: #0086ee;
+}
+@media screen and (min-width: 70em) {
+  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    font-size: 1.82rem;
+    line-height: 1.5451174289246;
+  }
+}
+
+/* line 118, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content {
+  width: 100%;
+  max-width: 82em;
+  background-color: #492c5d;
+}
+@media screen and (min-width: 20em) {
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 25em) {
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content {
+    height: 100%;
+  }
+}
+
+/* line 145, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content .box {
+  margin: 0;
+}
+@media screen and (min-width: 20em) {
+  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content .box {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/**
+ * 2. Graduation Day Hero Image
+ *
+ * The hero image changes to graduation-centric imagery copy.
+ *
+ * (I wonder if this section should be below section 3-Copy and maybe
+ * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
+ * sure why now. Check it out when you have some time sometime.)
+ */
+/* line 164, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content-grad {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 168, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content-grad .caption-box {
+  display: none;
+}
+
+/* line 172, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content-grad .homepage-hero-copy {
+  width: calc(66.6666666667% - 1em);
+}
+@media screen and (min-width: 32em) {
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content-grad .homepage-hero-copy {
+    width: calc(50% - 1em);
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content-grad .homepage-hero-copy {
+    width: calc(100% - 2em);
+    text-align: center;
+  }
+}
+
+/* line 188, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content-grad h1 {
+  margin: 0;
+}
+
+/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-content-grad .homepage-hero-copy img {
+  max-height: calc(250 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content-grad .homepage-hero-copy img {
+    margin-bottom: -2.2em;
+    width: 66.6666666667%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-content-grad .homepage-hero-copy img {
+    margin-bottom: -2.5em;
+  }
+}
+
+/**
+ * 3. Copy
+ */
+/* line 208, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy {
+  margin: 0 calc(15 / 14 * 1em);
+}
+@media screen and (min-width: 20em) {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc(66.6666666667% - 1em);
+    float: left;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    margin: 0 1em;
+    width: calc(50% - 1em);
+    color: #f2f2f2;
+    text-shadow: 0 1px 2px #0f0913;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc((3 / 7 * 100%) - 1em);
+  }
+}
+
+/* line 232, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy h1 {
+  font-size: 1.202rem;
+  line-height: 1.169925124792013;
+}
+@media screen and (min-width: 20em) {
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
+    color: #f2f2f2;
+    text-shadow: 0 2px 1px #0f0913;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
+    font-size: 1.416rem;
+    line-height: 1.324152542372881;
+  }
+}
+@media screen and (min-width: 86em) {
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
+    font-size: 2.291rem;
+    line-height: 1.227629855958097;
+  }
+}
+
+/**
+ * 4. Copy Modifiers
+ *
+ * Some hero images require different placement or design of the hero copy.
+ * Add both of these to the .homepage-hero parent class.
+ *
+ * - .homepage-hero-copy-alt      Moves the copy to the right side of the
+ *                                image.
+ * - .homepage-hero-img-detailed  Adds a violet background to make the text
+ *                                more readable on detailed images.
+ */
+@media screen and (min-width: 20em) {
+  /* line 266, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 266, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
+  }
+}
+
+/* line 281, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-img-detailed .homepage-hero-copy {
+  height: 100%;
+  margin: 0;
+  padding: 0 calc(7.5 / 15 * 1em);
+  width: 66.6666666667%;
+  background-color: rgba(73, 44, 93, 0.5);
+  border-radius: 2px;
+}
+@media screen and (min-width: 22em) {
+  /* line 281, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 14 * 1em);
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 281, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    height: auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 281, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 17 * 1em);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 281, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 281, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(30 / 19.23333333333 * 1em);
+  }
+}
+
+/*.profile-list > li{  // deprecated
+	// layout
+	overflow: hidden;
+	// position
+  position: relative;
+}
+
+.profile-list .profile-img-link{
+  // layout
+  display: block;
+  overflow: hidden;
+}
+
+.profile-list .box{
+	// box model
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.profile-img{
+	// box model
+	margin-left: -50%;
+  width: 200%;
+  max-width: 685px;
+  // layout
+  display: block;
+  
+  @include breakpoint($lil-groot){
+    margin-left: -25%;
+    width: 150%;
+  }
+  
+  @include breakpoint($starlord){
+    margin-left: 0%;
+    width: 100%;
+  }
+  
+  @include breakpoint($gamora){
+    width: 120%;
+    margin-left: -10%;
+  }
+  
+  @media screen and (min-width: 60em){
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+.profile-list .box{
+	margin-top: -1.40625rem;  //22.5/16
+  //margin-top: -2.142857142857143em;  //30/14
+  position: absolute;
+  bottom: 0;
+}*/
+/**
+ * D. Tertiary Nav
+ */
+/**
+ * D. Tertiary Nav
+ *
+ * The contextual nav that each site can have (typically on the
+ * left-hand side).
+ *
+ * Table of Contents
+ *
+ * 1. Default Tertiary Nav
+ * 2. Homepage Tertiary Nav
+ */
+/**
+ * 1. Default Tertiary Nav
+ */
+/* line 16, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-wrapper {
+  width: 100%;
+  max-width: calc(100% - 0.5em);
+  min-height: 1px;
+}
+@media screen and (min-width: 22em) {
+  /* line 16, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-wrapper {
+    max-width: 345px;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 16, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-wrapper {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 16, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-wrapper {
+    width: 14.285714285714%;
+  }
+}
+
+/* line 34, ../src/smacss/modules/_tertiary-nav.scss */
+#tertiary-nav {
+  margin: 0 auto;
+  padding-right: 0;
+  width: 100%;
+  max-width: none;
+  z-index: 1;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+}
+@media screen and (min-width: 32em) {
+  /* line 34, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav {
+    margin: 0 auto calc(15 / 16 * 1rem);
+    max-width: 66.6666666666%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 34, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav {
+    padding-top: calc(45 / 16 * 1rem);
+    width: calc(100% + 1em);
+    max-width: none;
+    position: relative;
+    border-radius: 0;
+  }
+  /* line 61, ../src/smacss/modules/_tertiary-nav.scss */
+  .index-wrapper #tertiary-nav {
+    width: 20.01953125%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 34, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+  /* line 71, ../src/smacss/modules/_tertiary-nav.scss */
+  .index-wrapper #tertiary-nav {
+    margin-top: 1rem;
+  }
+}
+
+/* line 78, ../src/smacss/modules/_tertiary-nav.scss */
+#tertiary-nav > ul {
+  margin-right: 1em;
+}
+@media screen and (min-width: 43em) {
+  /* line 78, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav > ul {
+    margin-top: 0;
+  }
+}
+
+/* line 87, ../src/smacss/modules/_tertiary-nav.scss */
+#tertiary-nav .accordion {
+  border-width: 0;
+  background-color: transparent;
+}
+/* line 91, ../src/smacss/modules/_tertiary-nav.scss */
+#tertiary-nav .accordion dd {
+  background-color: rgba(242, 242, 242, 0.25);
+}
+
+/* line 96, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-list,
+.tertiary-related-links,
+.tertiary-related-links > li > ul {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+/* line 103, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-h {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.631100639515315em 0;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+}
+@media screen and (min-width: 43em) {
+  /* line 103, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-h {
+    border-bottom: 1px solid #004377;
+    margin-bottom: -1px;
+    padding: 0;
+    display: block;
+    font-size: 1.202rem;
+    line-height: 1.559900166389351;
+  }
+}
+
+/* line 124, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-list li,
+.tertiary-related-links > li > ul > li,
+#tertiary-nav dd > ul li {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+@media screen and (min-width: 43em) {
+  /* line 124, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-list li,
+  .tertiary-related-links > li > ul > li,
+  #tertiary-nav dd > ul li {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 134, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-list a,
+#tertiary-nav dd > ul a,
+.tertiary-related-links a {
+  border-bottom-width: 0;
+  font-weight: normal;
+}
+
+/*@include breakpoint($gamora){
+	.tertiary-nav-h,
+	a.tertiary-nav-h{  // heading for tertiary nav in wider views
+		border-bottom: 1px solid mix(black, $sky-blue, 50%);
+		margin-top: -1px;  // compensate for border
+		display: block;
+		//color: mix(black, $sky-blue, 50%);
+		font-weight: bold;
+	}
+}*/
+/**
+ * 2. Homepage Tertiary Nav
+ */
+@media screen and (min-width: 43em) {
+  /* line 157, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav.tertiary-nav-homepage {
+    margin-left: calc(-25% + 1em);
+    width: calc(25% + 1.5em);
+    position: absolute;
+    left: 0;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 157, ../src/smacss/modules/_tertiary-nav.scss */
+  #tertiary-nav.tertiary-nav-homepage {
+    margin-left: calc(-16.6666666667% + 1em);
+    width: calc(16.6666666667% + 1em);
+  }
+}
+
+/**
+ * CSS Accordion
+ *
+ * An accordion that relies on radio buttons and labels instead of JavaScript.
+ *
+ * @see http://cssconf.com/talk-seddon.html
+ */
+/* line 182, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"] {
+  display: none;
+}
+
+/* line 186, ../src/smacss/modules/_tertiary-nav.scss */
+.accordion-h label::before {
+  display: inline-block;
+  color: black;
+  content: "▶\00A0";
+}
+@media screen and (min-width: 43em) {
+  /* line 186, ../src/smacss/modules/_tertiary-nav.scss */
+  .accordion-h label::before {
+    content: "";
+  }
+}
+
+/* line 199, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"] + .accordion-h label::before {
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+/* line 203, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"]:checked + .accordion-h label::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+/* line 209, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-h label {
+  color: #600f21;
+  cursor: pointer;
+}
+/* line 215, ../src/smacss/modules/_tertiary-nav.scss */
+.tertiary-nav-h label:hover {
+  color: #0086ee;
+}
+@media screen and (min-width: 43em) {
+  /* line 209, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-h label {
+    color: #004377;
+    cursor: default;
+  }
+  /* line 225, ../src/smacss/modules/_tertiary-nav.scss */
+  .tertiary-nav-h label:hover {
+    color: #004377;
+  }
+}
+
+/* line 231, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle {
+  display: inline;
+}
+
+/* line 235, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle {
+  display: none;
+}
+
+/* line 239, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"] ~ h4 .accordion-dismiss {
+  display: none;
+}
+
+/* line 243, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"]:checked ~ h4 .accordion-dismiss {
+  display: inline;
+}
+
+/* line 247, ../src/smacss/modules/_tertiary-nav.scss */
+.accordion-body {
+  border-bottom: 1px solid black;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.25);
+  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
+  transition: max-height 0.25s ease 0s;
+}
+@media screen and (min-width: 43em) {
+  /* line 247, ../src/smacss/modules/_tertiary-nav.scss */
+  .accordion-body {
+    border-bottom-width: 0;
+    max-height: 600px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 247, ../src/smacss/modules/_tertiary-nav.scss */
+  .accordion-body {
+    max-height: none;
+  }
+}
+
+/* line 275, ../src/smacss/modules/_tertiary-nav.scss */
+#tertiary-nav li:last-child .accordion-body {
+  border-bottom-width: 0;
+}
+
+/* line 279, ../src/smacss/modules/_tertiary-nav.scss */
+[name="accordion-group"]:checked ~ .accordion-body {
+  max-height: 500px;
+  transition-duration: 0.75s;
+}
+@media screen and (min-width: 43em) {
+  /* line 279, ../src/smacss/modules/_tertiary-nav.scss */
+  [name="accordion-group"]:checked ~ .accordion-body {
+    padding: 0;
+  }
+}
+
+/* line 290, ../src/smacss/modules/_tertiary-nav.scss */
+ul.accordion-inner {
+  padding: 0 2%;
+}
+@media screen and (min-width: 43em) {
+  /* line 290, ../src/smacss/modules/_tertiary-nav.scss */
+  ul.accordion-inner {
+    padding: 0;
+  }
+}
+
+/**
+ * E. Page Footer
+ */
+/**
+ * E. Footer
+ *
+ * The footer at the bottom of every page.
+ */
+/* line 7, ../src/smacss/modules/_footer.scss */
+.page-footer {
+  margin-top: auto;
+  padding: 1em 1em 0;
+  clear: left;
+  color: #f2f2f2;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+  background-color: black;
+}
+@media screen and (min-width: 70em) {
+  /* line 7, ../src/smacss/modules/_footer.scss */
+  .page-footer {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 7, ../src/smacss/modules/_footer.scss */
+  .page-footer {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/* line 28, ../src/smacss/modules/_footer.scss */
+.page-footer:after,
+.page-footer:before {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 37, ../src/smacss/modules/_footer.scss */
+.page-footer a,
+.page-footer a:link,
+.page-footer a:visited {
+  color: #64933a;
+  border-color: #3c5823;
+}
+
+/* line 46, ../src/smacss/modules/_footer.scss */
+.page-footer a:hover {
+  color: #0086ee;
+  border-color: #0086ee;
+}
+
+/* line 53, ../src/smacss/modules/_footer.scss */
+.footer-map {
+  margin-left: 1em;
+  width: 35%;
+  display: block;
+  float: right;
+}
+@media screen and (min-width: 22em) {
+  /* line 53, ../src/smacss/modules/_footer.scss */
+  .footer-map {
+    width: 50%;
+    max-width: 280px;
+  }
+}
+
+/* line 67, ../src/smacss/modules/_footer.scss */
+.footer-map a {
+  border-width: 0;
+}
+
+@media screen and (min-width: 43em) {
+  /* line 71, ../src/smacss/modules/_footer.scss */
+  .footer-map img {
+    max-height: 112.5px;
+  }
+}
+
+/* line 78, ../src/smacss/modules/_footer.scss */
+.school-contact {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+
+/**
+ * F. Special Typography
+ *
+ * Special, non-base element typography.
+ */
+/* line 183, ../src/smacss/_modules.scss */
+.lead {
+  margin-bottom: 0;
+}
+
+/* line 187, ../src/smacss/_modules.scss */
+.follow {
+  margin-top: 0;
+}
+
+/* line 191, ../src/smacss/_modules.scss */
+.intro,
+.field-intro {
+  margin: 1.17010764990379em 0;
+  color: #50762e;
+  font-size: 1.202rem;
+  line-height: 1.30011961100421;
+}
+@media screen and (min-width: 43em) {
+  /* line 191, ../src/smacss/_modules.scss */
+  .intro,
+  .field-intro {
+    margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
+    font-size: 1.82rem;
+    line-height: 1.5451174289246;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 191, ../src/smacss/_modules.scss */
+  .intro,
+  .field-intro {
+    margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
+    font-size: 1.945rem;
+    line-height: 1.44638724607868;
+  }
+}
+
+/* line 216, ../src/smacss/_modules.scss */
+.intro-alt {
+  color: #303030;
+  font-weight: bold;
+}
+
+/* line 221, ../src/smacss/_modules.scss */
+.big-fact {
+  font-size: 1.202rem;
+  line-height: 1.30011961100421;
+}
+@media screen and (min-width: 70em) {
+  /* line 221, ../src/smacss/_modules.scss */
+  .big-fact {
+    font-size: 1.82rem;
+    line-height: 1.03007828594973;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 221, ../src/smacss/_modules.scss */
+  .big-fact {
+    font-size: 1.945rem;
+    line-height: 1.44638724607868;
+  }
+}
+
+/* line 235, ../src/smacss/_modules.scss */
+.key-number {
+  margin: 0.818419903972065em 0 0;
+  display: block;
+  color: #64933a;
+  font-size: 1.945rem;
+  font-weight: normal;
+  line-height: 1.44638724607868;
+}
+@media screen and (min-width: 43em) {
+  /* line 235, ../src/smacss/_modules.scss */
+  .key-number {
+    font-size: 2.945rem;
+    line-height: 1.27326358678352;
+  }
+}
+
+/* line 252, ../src/smacss/_modules.scss */
+.machine-text {
+  font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+}
+
+/* line 256, ../src/smacss/_modules.scss */
+.main-content > p:last-child::after,
+.main-content > ul:last-child > li:last-child::after,
+.main-content > ol:last-child > li:last-child::after,
+.main-content > dl:last-child > dd:last-child::after {
+  white-space: nowrap;
+  content: " " url("/_inc/images/endnote.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
+  /* line 256, ../src/smacss/_modules.scss */
+  .main-content > p:last-child::after,
+  .main-content > ul:last-child > li:last-child::after,
+  .main-content > ol:last-child > li:last-child::after,
+  .main-content > dl:last-child > dd:last-child::after {
+    content: " " url("/_inc/images/endnote.svg");
+  }
+}
+
+/**
+ * G. Lists
+ */
+/**
+ * G. Lists
+ *
+ * Table of Contents
+ *
+ *  1.   Text List
+ *  1.a. Alternate Text List
+ *  2.   Lineup
+ *  3.   Accordion
+ *  4.   Flexible Lists
+ *  5.   Step List
+ *  6.   Link Icons
+ *  7.   Tag Clouds
+ *  8.   Alphabetical Order Index
+ *  9.   Badge List
+ * 10.   Zebra-Striped
+ */
+/**
+ * 1. Text List
+ *
+ * Creates a standard bulleted list. Mostly used to override lists behaving badly.
+ */
+/* line 24, ../src/smacss/modules/_lists.scss */
+.text-list {
+  margin-left: 1em;
+  list-style-type: disc;
+}
+/* line 30, ../src/smacss/modules/_lists.scss */
+.text-list ul {
+  margin-left: 1em;
+  list-style-type: square;
+}
+
+/**
+ * 1.a. Alternate Text List
+ *
+ * A different style for a text list. This one has with more
+ * generous spacing below, to distinguish individual list
+ * items.
+ *
+ * Extends .text-list or .element-list.
+ */
+/* line 48, ../src/smacss/modules/_lists.scss */
+.text-list-alt > li {
+  margin: calc(7.5 / 14 * 1em) 0;
+}
+@media screen and (min-width: 43em) {
+  /* line 48, ../src/smacss/modules/_lists.scss */
+  .text-list-alt > li {
+    margin: calc(7.5/ 18 * 1em) 0;
+  }
+}
+
+/*.singleton a{  //deprecated
+	font-weight: normal;
+}*/
+/**
+ * 2. Lineup
+ *
+ * For inlining lists.
+ *
+ * See the social media icons in the footer, for example.
+ */
+/* line 70, ../src/smacss/modules/_lists.scss */
+.lineup {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/*.lineup > li{
+	display: inline-block;
+}*/
+/* line 80, ../src/smacss/modules/_lists.scss */
+.lineup > li img {
+  height: 3em;
+  margin: 0 1ch 1em 0;
+  width: 3em;
+  display: block;
+}
+@media screen and (min-width: 43em) {
+  /* line 80, ../src/smacss/modules/_lists.scss */
+  .lineup > li img {
+    height: 2em;
+    width: 2em;
+  }
+}
+
+/**
+ * 3. Accordion
+ *
+ * @subsubsection mod-typography-l-accordion
+ */
+/* line 100, ../src/smacss/modules/_lists.scss */
+.accordion,
+.accordion-table {
+  border: 1px solid #c8c1cd;
+  overflow: hidden;
+  background-color: #d9d4dc;
+  border-radius: 2px;
+}
+
+/* line 111, ../src/smacss/modules/_lists.scss */
+.accordion dt a,
+.accordion dd {
+  padding: 0.631100639515315em 2%;
+}
+
+/* line 116, ../src/smacss/modules/_lists.scss */
+.accordion dt {
+  border-top: 1px solid #25162f;
+  margin-top: 0;
+}
+/* line 120, ../src/smacss/modules/_lists.scss */
+.accordion dt:first-child {
+  border-top-width: 0;
+}
+/* line 124, ../src/smacss/modules/_lists.scss */
+.accordion dt:hover {
+  background-color: #e1dee3;
+  border-color: #d0cad4;
+  border-top-color: #311d3e;
+  transition: background-color 0.2s ease-out;
+}
+
+/* line 134, ../src/smacss/modules/_lists.scss */
+.accordion dt a {
+  border-bottom-width: 0;
+  width: 100%;
+  display: block;
+}
+
+/* line 142, ../src/smacss/modules/_lists.scss */
+.accordion dt a:before {
+  margin-right: 2%;
+  display: inline-block;
+  content: "▶";
+}
+
+/* line 150, ../src/smacss/modules/_lists.scss */
+.accordion dd {
+  margin-bottom: 0;
+  background-color: #f2f2f2;
+  box-shadow: inset 0 2px 2px #919191;
+}
+
+/* line 159, ../src/smacss/modules/_lists.scss */
+.accordion-table .group {
+  color: #492c5d;
+  font-weight: bold;
+}
+/* line 163, ../src/smacss/modules/_lists.scss */
+.accordion-table .group:hover {
+  color: #0086ee;
+  cursor: pointer;
+}
+
+/**
+ * 4. Flexible Lists
+ *
+ * Responsive lists that break across columns.
+ *
+ * @see http://evergreen.edu/studies
+ */
+@media screen and (min-width: 20em) {
+  /* line 179, ../src/smacss/modules/_lists.scss */
+  .flexible {
+    margin-left: 0;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    list-style-position: inside;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 179, ../src/smacss/modules/_lists.scss */
+  .flexible {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+
+@media screen and (min-width: 20em) {
+  /* line 195, ../src/smacss/modules/_lists.scss */
+  .flexible > li {
+    margin: 0 2% 0.46875rem;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 32em) {
+  /* line 207, ../src/smacss/modules/_lists.scss */
+  .unit-2-7 .flexible {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 213, ../src/smacss/modules/_lists.scss */
+  .unit-3-7 .flexible {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 213, ../src/smacss/modules/_lists.scss */
+  .unit-3-7 .flexible {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+
+/**
+ * 5. Step List
+ *
+ * A list of steps to follow.
+ */
+/* line 228, ../src/smacss/modules/_lists.scss */
+.step-list {
+  margin-left: 0;
+  counter-reset: li;
+  list-style-type: none;
+}
+
+/* line 236, ../src/smacss/modules/_lists.scss */
+.step-list > li {
+  border-bottom: 1px solid #c8c1cd;
+  padding-left: 3em;
+  position: relative;
+}
+@media screen and (min-width: 43em) {
+  /* line 236, ../src/smacss/modules/_lists.scss */
+  .step-list > li {
+    padding-left: 4em;
+  }
+}
+/* line 247, ../src/smacss/modules/_lists.scss */
+.step-list > li::before {
+  width: 0.75em;
+  position: absolute;
+  left: 0;
+  color: #8d7b99;
+  font-size: 1.945rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  line-height: 1em;
+  text-align: right;
+  counter-increment: li;
+  content: counter(li) ".";
+}
+@media screen and (min-width: 32em) {
+  /* line 247, ../src/smacss/modules/_lists.scss */
+  .step-list > li::before {
+    font-size: 2.291rem;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 247, ../src/smacss/modules/_lists.scss */
+  .step-list > li::before {
+    width: 1em;
+    font-size: 2.782rem;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 247, ../src/smacss/modules/_lists.scss */
+  .step-list > li::before {
+    font-size: 3.146rem;
+  }
+}
+/* line 281, ../src/smacss/modules/_lists.scss */
+.step-list > li p,
+.step-list > li li {
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+  font-weight: normal;
+}
+@media screen and (min-width: 43em) {
+  /* line 281, ../src/smacss/modules/_lists.scss */
+  .step-list > li p,
+  .step-list > li li {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+/**
+ * 6. Link Icons
+ *
+ * Links with icons attached to them, e.g. PDFs or social media chicklets.
+ */
+/* line 298, ../src/smacss/modules/_lists.scss */
+.link-icon::before,
+.link-icon-alt::before {
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  content: "";
+}
+
+/* line 317, ../src/smacss/modules/_lists.scss */
+.link-icon::after {
+  margin-left: 0.5em;
+}
+
+/* line 321, ../src/smacss/modules/_lists.scss */
+.link-icon-alt::before {
+  margin-right: 0.5em;
+}
+
+/* line 325, ../src/smacss/modules/_lists.scss */
+.icon-blog::before {
+  background-image: url("/_inc/images/icons/external/blog32x32.png");
+  content: "Blog";
+}
+
+/* line 332, ../src/smacss/modules/_lists.scss */
+.icon-facebook::before {
+  background-image: url("/_inc/images/icons/external/facebook32x32.png");
+  content: "Facebook";
+}
+
+/* line 339, ../src/smacss/modules/_lists.scss */
+.icon-instagram::before {
+  background-image: url("/_inc/images/icons/external/instagram32x32.png");
+  content: "Instagram";
+}
+
+/* line 346, ../src/smacss/modules/_lists.scss */
+.icon-pinterest::before {
+  background-image: url("/_inc/images/icons/external/pinterest32x32.png");
+  content: "Pinterest";
+}
+
+/* line 353, ../src/smacss/modules/_lists.scss */
+.icon-twitter::before {
+  background-image: url("/_inc/images/icons/external/twitter32x32.png");
+  content: "Twitter";
+}
+
+/* line 360, ../src/smacss/modules/_lists.scss */
+.icon-youtube::before {
+  background-image: url("/_inc/images/icons/external/youtube32x32.png");
+  content: "YouTube";
+}
+
+/**
+ * 7. Tag Clouds
+ *
+ * Tag cloud sizing.
+ */
+/* line 372, ../src/smacss/modules/_lists.scss */
+.few {
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+/* line 376, ../src/smacss/modules/_lists.scss */
+.few a {
+  font-weight: normal;
+}
+
+/* line 381, ../src/smacss/modules/_lists.scss */
+.many {
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+}
+@media screen and (min-width: 125em) {
+  /* line 381, ../src/smacss/modules/_lists.scss */
+  .many {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/**
+ * 8. Alphabetical Order Index
+ *
+ * An index of the letters of the alphabet, for skipping around the page.
+ */
+/* line 394, ../src/smacss/modules/_lists.scss */
+.alpha-label {
+  border: 1px solid #c8c1cd;
+  border-bottom-width: 0;
+  margin-bottom: -1px;
+  padding: 0 1em;
+  display: inline-block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0.5em;
+  z-index: 1;
+  background-color: #d9d4dc;
+  border-radius: 2px 2px 0 0;
+}
+
+/* line 412, ../src/smacss/modules/_lists.scss */
+.alpha-index {
+  border: 1px solid #c8c1cd;
+  margin-left: 0;
+  padding-left: 0;
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(0.5em + 0.875rem * 1.60714);
+  word-wrap: break-word;
+  background-color: #d9d4dc;
+  border-radius: 2px;
+  list-style-type: none;
+}
+@media screen and (min-width: 32em) {
+  /* line 412, ../src/smacss/modules/_lists.scss */
+  .alpha-index {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 412, ../src/smacss/modules/_lists.scss */
+  .alpha-index {
+    top: calc(0.5em + 1.202rem * 1.46814);
+  }
+}
+
+/* line 441, ../src/smacss/modules/_lists.scss */
+.alpha-label + .alpha-index {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+}
+
+/* line 448, ../src/smacss/modules/_lists.scss */
+.alpha-index > li {
+  padding: 0 2px;
+  display: inline;
+}
+
+/**
+ * 9. Badge List
+ *
+ * Lists of logos, badges, or sponsors.
+ *
+ * @see http://evergreen.edu/admissions
+ */
+/* line 463, ../src/smacss/modules/_lists.scss */
+.badge-list {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  overflow: hidden;
+}
+/* line 470, ../src/smacss/modules/_lists.scss */
+.badge-list > li {
+  margin: 0 1em;
+  float: left;
+  text-align: center;
+}
+
+/* line 480, ../src/smacss/modules/_lists.scss */
+.badge {
+  max-height: 90px;
+}
+
+/* line 484, ../src/smacss/modules/_lists.scss */
+.badge-alt {
+  max-width: 115px;
+}
+
+/**
+ * 10. Zebra-Striped
+ *
+ * A parent container, whose direct children are zebra-striped.
+ * Strictly speaking, this doesn't have to be a list element.
+ */
+/* line 495, ../src/smacss/modules/_lists.scss */
+.zebra-striped > * {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+/* line 499, ../src/smacss/modules/_lists.scss */
+.zebra-striped > *:nth-child(odd) {
+  background-color: #d9d4dc;
+}
+
+/**
+ * H. Tables
+ */
+/* line 276, ../src/smacss/_modules.scss */
+.dataTable {
+  /*@include breakpoint($starlord){
+  	font-family: $text-face;
+  }*/
+}
+
+/**
+ * I. Icons
+ */
+/**
+ * Icons
+ */
+/**
+ * 1. Inline Icons
+ *
+ * Icons that appear before strings of text. For example, [x] Close,
+ * where [x] is the icon.
+ */
+/* line 12, ../src/smacss/modules/_icons.scss */
+.icon {
+  display: inline-block;
+  fill: currentColor;
+}
+
+/* line 17, ../src/smacss/modules/_icons.scss */
+.inline-icon {
+  max-height: 1.25em;
+  display: inline;
+  position: relative;
+  top: 0.25em;
+}
+
+/**
+ * 2. Related Nav (aka The Transporter)
+ *
+ * Related links with iconographic circles.
+ */
+/* line 32, ../src/smacss/modules/_icons.scss */
+.transporter > li {
+  margin: 0.9375rem 0;
+  display: block;
+  float: left;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* line 43, ../src/smacss/modules/_icons.scss */
+.transporter a {
+  display: block;
+}
+/* line 46, ../src/smacss/modules/_icons.scss */
+.transporter a, .transporter a:visited {
+  border-bottom-width: 0;
+  color: #64933a;
+}
+/* line 54, ../src/smacss/modules/_icons.scss */
+.transporter a:hover {
+  color: #0086ee;
+}
+/* line 57, ../src/smacss/modules/_icons.scss */
+.transporter a:hover .transporter-icon {
+  background: #0086ee;
+  box-shadow: 0 0 0.2em rgba(253, 244, 182, 0.5) inset;
+}
+
+/* line 65, ../src/smacss/modules/_icons.scss */
+.transporter a:hover .icon {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+/* line 69, ../src/smacss/modules/_icons.scss */
+.transporter-icon {
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  color: #f2f2f2;
+  text-align: center;
+  background-color: #64933a;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+@media screen and (min-width: 22em) {
+  /* line 69, ../src/smacss/modules/_icons.scss */
+  .transporter-icon {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 69, ../src/smacss/modules/_icons.scss */
+  .transporter-icon {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 69, ../src/smacss/modules/_icons.scss */
+  .transporter-icon {
+    max-width: 90%;
+  }
+}
+/* line 100, ../src/smacss/modules/_icons.scss */
+.transporter-icon img {
+  display: block;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+/**
+ * J. Media Segment
+ */
+/**
+ * H. Media Segment
+ *
+ * A common pattern wherein copy is tightly coupled to an icon.
+ *
+ * Table of Contents
+ *
+ * 1. Default
+ * 2. Alternate
+ * 3. Vertically-Centered
+ * 4. Column And Squishy
+ */
+/**
+ * 1. Default
+ *
+ * .media
+ * +---------+ +------------------+
+ * |         | |                  |
+ * | .media- | | .media-body      |
+ * |  img    | |                  |
+ * |         | |                  |
+ * +---------+ |                  |
+ *             |                  |
+ *             +------------------+
+ */
+/* line 26, ../src/smacss/modules/_media-segment.scss */
+.media {
+  clear: left;
+  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 32, ../src/smacss/modules/_media-segment.scss */
+.media-img,
+.media-img:link {
+  border-bottom-width: 0;
+  margin-bottom: 1.071428571428571em;
+  padding-right: 1.071428571428571em;
+  max-width: 31.3333333333%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  float: left;
+}
+@media screen and (min-width: 43em) {
+  /* line 32, ../src/smacss/modules/_media-segment.scss */
+  .media-img,
+  .media-img:link {
+    padding-right: 0.882352941176471em;
+  }
+}
+
+/* line 48, ../src/smacss/modules/_media-segment.scss */
+.media-img img {
+  margin-top: 0.46875rem;
+  display: block;
+}
+
+/* line 54, ../src/smacss/modules/_media-segment.scss */
+.media-img-icon {
+  max-height: 3.75rem;
+}
+
+/* line 58, ../src/smacss/modules/_media-segment.scss */
+.media-body {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  overflow: auto;
+  /**
+   * Alternate way to give block formatting context:
+   *  * display: table-cell;  // Gives block formatting context (pretty
+   *    nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
+   *  * width: 3000px;  // Stretches box to fit the remaining width; this is
+   *    not the actual value that comes out.
+   */
+}
+
+/* line 71, ../src/smacss/modules/_media-segment.scss */
+.media-body > :first-child {
+  margin-top: 0.46875rem;
+}
+
+/**
+ * 2. Alternate
+ *
+ * Put .media-img on the right. Extends .media
+ *
+ * .media
+ * +------------------+ +---------+
+ * |                  | |         |
+ * | .media-body      | | .media- |
+ * |                  | |  img    |
+ * |                  | |         |
+ * |                  | +---------+
+ * |                  |
+ * +------------------+
+ */
+/* line 90, ../src/smacss/modules/_media-segment.scss */
+.media-alt {
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* line 94, ../src/smacss/modules/_media-segment.scss */
+.media-alt .media-img {
+  padding-right: 0;
+  padding-left: 1.071428571428571em;
+  float: right;
+}
+
+/**
+ * 3. Vertically-Centered
+ * 
+ * Vertically center .media-child-alt. Extends .media-img or .media-body.
+ *
+ * .media
+ *                 +------------------+
+ * +-------------+ |                  |
+ * |             | | .media-body      |
+ * | .media-     | |                  |
+ * |  img.media- | |                  |
+ * |  child-alt  | |                  |
+ * |             | |                  |
+ * +-------------+ |                  |
+ *                 +------------------+
+ *
+ * OR
+ *
+ * .media
+ * +-------------+
+ * |             | +--------------------+
+ * | .media-     | |                    |
+ * |  img        | | .media-body.media- |
+ * |             | |  child-alt         |
+ * |             | |                    |
+ * |             | +--------------------+
+ * +-------------+
+ */
+/* line 128, ../src/smacss/modules/_media-segment.scss */
+.media-img-alt,
+.media-child-alt {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+}
+
+/**
+ * 4. Column And Squishy
+ *
+ * .media-column puts .media-img on the top. Extends .media.
+ *
+ * .media-squish puts .media-img on top, then moves it to the side (as
+ * above) as screen width increases. Extends .media
+ *
+ * .media.media-column or .media.media-squishy
+ *    +------------+
+ *    |            |
+ *    | .media-img |
+ *    |            |
+ *    |            |
+ *    |            |
+ *    +------------+
+ * +------------------+
+ * |                  |
+ * | .media-body      |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * |                  |
+ * +------------------+
+ */
+/* line 160, ../src/smacss/modules/_media-segment.scss */
+.media-column,
+.media-squishy {
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 32em) {
+  /* line 166, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* line 174, ../src/smacss/modules/_media-segment.scss */
+.media-column > .media-img,
+.media-squishy > .media-img {
+  padding-right: 0;
+  max-width: 100%;
+  float: none;
+  text-align: center;
+}
+
+@media screen and (min-width: 32em) {
+  /* line 182, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy > .media-img {
+    margin-bottom: 1.071428571428571em;
+    padding-right: 1.071428571428571em;
+    max-width: 31.3333333333%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    float: left;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 182, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy > .media-img {
+    padding-right: 0.882352941176471em;
+  }
+}
+
+/* line 198, ../src/smacss/modules/_media-segment.scss */
+.media-column > .media-img img,
+.media-squishy > .media-img img {
+  margin: 0 auto;
+}
+
+/**
+ * K. Spread Segment
+ */
+/**
+ * H. spread Segment
+ *
+ * A common pattern wherein copy is tightly coupled to a graphic.
+ *
+ * .media
+ * +--------------+--------------+
+ * |              |              |
+ * | .spread-img  | .spread-body |
+ * |              |              |
+ * |              |              |
+ * +--------------+--------------+
+ */
+/* line 15, ../src/smacss/modules/_spread-segment.scss */
+.spread {
+  margin: 4.28571428571429em auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 70em) {
+  /* line 15, ../src/smacss/modules/_spread-segment.scss */
+  .spread {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 28, ../src/smacss/modules/_spread-segment.scss */
+  .index-wrapper .spread {
+    margin: 7.05882352941176em auto;
+  }
+}
+
+/* line 35, ../src/smacss/modules/_spread-segment.scss */
+.spread:first-of-type,
+.index-wrapper .spread:first-of-type {
+  margin-top: calc(30 / 14 * 1em);
+}
+@media screen and (min-width: 43em) {
+  /* line 35, ../src/smacss/modules/_spread-segment.scss */
+  .spread:first-of-type,
+  .index-wrapper .spread:first-of-type {
+    margin-top: calc(30 / 18 * 1em);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 35, ../src/smacss/modules/_spread-segment.scss */
+  .spread:first-of-type,
+  .index-wrapper .spread:first-of-type {
+    margin-top: calc(45 / 19.229 * 1em);
+  }
+}
+
+/* line 48, ../src/smacss/modules/_spread-segment.scss */
+.spread-img,
+.spread-body {
+  max-width: 100%;
+}
+@media screen and (min-width: 70em) {
+  /* line 48, ../src/smacss/modules/_spread-segment.scss */
+  .spread-img,
+  .spread-body {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 57, ../src/smacss/modules/_spread-segment.scss */
+  .spread-img {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 65, ../src/smacss/modules/_spread-segment.scss */
+  .spread-body {
+    margin-left: -3em;
+    padding-left: 2em;
+    max-width: calc(50% + 3em);
+    z-index: 1;
+    background-color: rgba(242, 242, 242, 0.95);
+  }
+}
+
+/**
+ * L. Boxes
+ */
+/**
+ * G. Boxes
+ *
+ * Boxes for containing things, usually with a background color or
+ * texture.
+ *
+ * Table of Contents
+ *
+ * 1. Default Box
+ * 2. Note
+ * 3. Alert
+ * 4. Captioned Figures
+ * 5. Action Box
+ * 6. Pull Quotes
+ * 7. Full Box
+ * 8. UI Group
+ */
+/**
+ * 1. Default Box
+ */
+/* line 22, ../src/smacss/modules/_boxes.scss */
+.notice,
+.box,
+p.box {
+  margin-top: 2.14285714285714em;
+  margin-bottom: 3.21428571428571em;
+  padding: 0 1em;
+  overflow: hidden;
+  color: #002d4f;
+  background-color: rgba(204, 231, 252, 0.95);
+  background-image: url("images/texture-1.png");
+  border-radius: 2px;
+}
+@media screen and (min-width: 43em) {
+  /* line 22, ../src/smacss/modules/_boxes.scss */
+  .notice,
+  .box,
+  p.box {
+    margin-top: 2.5em;
+    margin-bottom: 3.33333333333333em;
+  }
+}
+
+/* line 44, ../src/smacss/modules/_boxes.scss */
+.notice h2,
+.box h2,
+.notice h4,
+.box h4 {
+  color: #004377;
+}
+
+/* line 51, ../src/smacss/modules/_boxes.scss */
+.notice h3,
+.box h3 {
+  color: #004377;
+}
+
+/* line 56, ../src/smacss/modules/_boxes.scss */
+.notice h5,
+.box h5,
+.notice h6,
+.box h6 {
+  color: #00599f;
+}
+
+@media screen and (min-width: 20em) {
+  /* line 63, ../src/smacss/modules/_boxes.scss */
+  .box.supplement,
+  .box.supplement-alt-1-2 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 63, ../src/smacss/modules/_boxes.scss */
+  .box.supplement,
+  .box.supplement-alt-1-2 {
+    margin-top: 0.41666666666667em;
+    margin-bottom: 0.83333333333333em;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 63, ../src/smacss/modules/_boxes.scss */
+  .box.supplement,
+  .box.supplement-alt-1-2 {
+    margin-top: 0.52004784440168em;
+    margin-bottom: 1.04009568880337em;
+  }
+}
+
+/**
+ * 2. Note
+ *
+ * Stands out a little bit more than a default box.
+ */
+/* line 91, ../src/smacss/modules/_boxes.scss */
+.notice,
+.note {
+  border-left: 5px solid #91c7f0;
+}
+@media screen and (min-width: 22em) {
+  /* line 91, ../src/smacss/modules/_boxes.scss */
+  .notice,
+  .note {
+    padding-left: calc(1em - 5px);
+  }
+}
+
+/**
+ * 3. Alerts
+ *
+ * Stands out a lot more than a default box.
+ */
+/* line 106, ../src/smacss/modules/_boxes.scss */
+.alert,
+p.alert {
+  color: #600f21;
+  background-color: rgba(253, 244, 182, 0.5);
+  border-radius: 0;
+}
+
+/* line 117, ../src/smacss/modules/_boxes.scss */
+#sitewide-alert {
+  margin: 0;
+  width: 100%;
+  font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+  border-radius: 0;
+  transition: all 0.5s ease-in;
+}
+
+/**
+ * 4. Captioned Figures
+ *
+ * Lends a bit more readability to boxes while still standing out
+ * against the content a little bit more.
+ */
+/* line 136, ../src/smacss/modules/_boxes.scss */
+.caption-box {
+  text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
+  background-color: rgba(242, 242, 242, 0.95);
+}
+
+/* line 143, ../src/smacss/modules/_boxes.scss */
+.caption-box img {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+}
+
+/**
+ * 5. Action Box
+ *
+ * A box with one or two calls to action.
+ *
+ * The content in this box should not ramble on and on. They should be
+ * focused down to distinct calls to action with *maybe* a bit of
+ * supporting content. If you want to ramble, consider using a default .box
+ * instead, or even just make it regular content.
+ *
+ * One call-to-action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |         Singular call-to-action.          |
+ *   |                                           |
+ *   +-------------------------------------------+
+ * Seen on Emergency Campus Notifications: http://www.evergreen.edu/news/weatherdelays
+ *
+ * Two calls to action:
+ *   +-------------------------------------------+
+ *   |                                           |
+ *   |   Primary call-to-  |  Secondary call-to- |
+ *   |   action (.action-  |   action (.action-  |
+ *   |      item-1-2)      |      item-2-2)      |
+ *   |                                           |
+ *   +-------------------------------------------+
+ * Seen on New Student Orientation: http://www.evergreen.edu/events/orientation/
+ */
+/* line 176, ../src/smacss/modules/_boxes.scss */
+.action-box {
+  border: 1px solid #d0cad4;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: transparent none;
+}
+@media screen and (min-width: 20em) {
+  /* line 176, ../src/smacss/modules/_boxes.scss */
+  .action-box {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 176, ../src/smacss/modules/_boxes.scss */
+  .action-box {
+    width: 75%;
+  }
+}
+
+/* line 199, ../src/smacss/modules/_boxes.scss */
+.action-item-1-1 {
+  margin: 0 auto;
+}
+
+/* line 203, ../src/smacss/modules/_boxes.scss */
+.action-item-1-2,
+.action-item-2-2 {
+  float: left;
+}
+
+/* line 208, ../src/smacss/modules/_boxes.scss */
+.action-item-1-2 {
+  border-right: 1px solid #d0cad4;
+  padding-right: 1em;
+  width: 50%;
+}
+
+/* line 214, ../src/smacss/modules/_boxes.scss */
+.action-item-2-2 {
+  margin-left: 1em;
+  width: calc(50% - 1em);
+}
+
+/**
+ * 6. Pull Quotes
+ */
+/* line 222, ../src/smacss/modules/_boxes.scss */
+.pull-box {
+  color: #f2f2f2;
+  background-color: rgba(100, 147, 58, 0.95);
+}
+@media screen and (min-width: 43em) {
+  /* line 222, ../src/smacss/modules/_boxes.scss */
+  .pull-box {
+    margin-bottom: 1.071428571428571em;
+  }
+}
+/* line 234, ../src/smacss/modules/_boxes.scss */
+.pull-box a {
+  border-bottom: 2px solid #b9afbf;
+  color: #c8c1cd;
+}
+/* line 241, ../src/smacss/modules/_boxes.scss */
+.pull-box a:visited {
+  color: #ceb9be;
+  border-bottom-color: #c0a5ab;
+}
+/* line 248, ../src/smacss/modules/_boxes.scss */
+.pull-box a:hover {
+  color: #a0cdf1;
+  border-bottom-color: #a0cdf1;
+}
+
+/* line 256, ../src/smacss/modules/_boxes.scss */
+.pull-box-alt {
+  background-color: #0086ee;
+}
+
+/* line 260, ../src/smacss/modules/_boxes.scss */
+.pull-quote {
+  margin: 0.44117647058824em 0 0.88235294117647em;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+  font-style: italic;
+}
+@media screen and (min-width: 70em) {
+  /* line 260, ../src/smacss/modules/_boxes.scss */
+  .pull-quote {
+    margin: 0.36358347876672em 0 0.72716695753345em;
+    font-size: 1.719rem;
+    line-height: 1.09075043630017;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 260, ../src/smacss/modules/_boxes.scss */
+  .pull-quote {
+    margin: 0.48200514138817em 0 0.96401028277635em;
+    font-size: 1.945rem;
+    line-height: 1.44601542416452;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 284, ../src/smacss/modules/_boxes.scss */
+  .supplement-alt-1-2 .pull-quote {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/**
+ * 7. Full Box
+ *
+ * A box with a header and possibly a footer.
+ *
+ * @section box-full
+ */
+/* line 299, ../src/smacss/modules/_boxes.scss */
+.full-box {
+  border: 1px solid #0086ee;
+  padding: 0;
+  background: #0086ee url("images/texture-1.png");
+}
+
+/* line 305, ../src/smacss/modules/_boxes.scss */
+.full-box h2,
+.full-box h3 {
+  color: #f2f2f2;
+}
+
+/* line 310, ../src/smacss/modules/_boxes.scss */
+.full-box > .box {
+  background-color: #f2f2f2;
+}
+
+/**
+ * 8. UI Group
+ *
+ * A different kind of box; a group of elements, typically UI
+ * that need visual separation from one another, or from other
+ * elements.
+ 
+ * @section ui-group
+ */
+/* line 324, ../src/smacss/modules/_boxes.scss */
+.ui-group {
+  border: 1px solid #c8c1cd;
+  margin-bottom: 0.46875rem;
+  padding: 0 1em;
+  overflow: hidden;
+  background-color: #d9d4dc;
+  border-radius: 2px;
+  /*&:hover{
+  	// backgrounds & borders
+  	background-color: mix(white, $blueberry-susan, 90%);
+  	border-color: mix(white, $blueberry-susan, 80%);
+  	// transitions
+  	-webkit-transition: all .2s ease-out;
+  	        transition: all .2s ease-out;
+  }*/
+}
+@media screen and (min-width: 32em) {
+  /* line 345, ../src/smacss/modules/_boxes.scss */
+  .ui-group.unit-1-2 {
+    margin: 0.234375rem;
+    width: calc(50% - 0.46875rem);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 352, ../src/smacss/modules/_boxes.scss */
+  .ui-group.unit-1-3 {
+    margin: 0.234375rem;
+    width: calc(33.3333333333% - 0.46875rem);
+  }
+  /* line 357, ../src/smacss/modules/_boxes.scss */
+  .ui-group .media {
+    width: 100%;
+  }
+}
+/* line 363, ../src/smacss/modules/_boxes.scss */
+.ui-group > :last-child {
+  margin-bottom: 0.9375rem;
+}
+
+/**
+ * M. Images
+ */
+/**
+ * J. Images
+ *
+ * Image modules, typically for laying them out within an article.
+ */
+/* line 6, ../src/smacss/modules/_images.scss */
+.left,
+.image,
+.image img,
+.image-alt,
+.image-full,
+.image-full img,
+.field-image img {
+  border: 1px solid #00365f;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+  color: #f2f2f2;
+  background-color: #00365f;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
+}
+
+/* line 32, ../src/smacss/modules/_images.scss */
+.image-full,
+.image-full img,
+.field-image img {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 43em) {
+  /* line 32, ../src/smacss/modules/_images.scss */
+  .image-full,
+  .image-full img,
+  .field-image img {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 32, ../src/smacss/modules/_images.scss */
+  .image-full,
+  .image-full img,
+  .field-image img {
+    margin: 0.52004784440168em 0 1.04009568880337em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 32em) {
+  /* line 52, ../src/smacss/modules/_images.scss */
+  .left,
+  .image,
+  .image img,
+  .image-alt {
+    margin: 0 0 0.53571428571429em 1em;
+    max-width: calc(66.6666666667% - 0.5em);
+    clear: right;
+    float: right;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 52, ../src/smacss/modules/_images.scss */
+  .left,
+  .image,
+  .image img,
+  .image-alt {
+    margin-bottom: 0.83333333333333em;
+  }
+  /* line 71, ../src/smacss/modules/_images.scss */
+  .main-content .left, .main-content
+  .image, .main-content
+  .image img, .main-content
+  .image-alt {
+    margin-right: -2em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 52, ../src/smacss/modules/_images.scss */
+  .left,
+  .image,
+  .image img,
+  .image-alt {
+    margin-bottom: 1.56014353320505em;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 82, ../src/smacss/modules/_images.scss */
+  .left,
+  .main-content .image,
+  .main-content .image img,
+  .image-alt {
+    margin-right: -3em;
+    max-width: calc(50% + 2.5em);
+  }
+
+  /* line 94, ../src/smacss/modules/_images.scss */
+  .image-alt {
+    margin-right: 0;
+    margin-left: -40.943683409437%;
+    width: 38.260135135135135%;
+    clear: left;
+    float: left;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 106, ../src/smacss/modules/_images.scss */
+  .box .image {
+    margin-right: 0;
+  }
+}
+
+/**
+ * Badges
+ *
+ * Logos, labels, and stickers that are not necessarily
+ * important content to the audience, but are important to
+ * content owners and third parties. e.g. NASCAR
+ */
+/*.badge{
+	max-width: 33.3333333333%;
+	
+	@media screen and (min-width:32em){
+		max-width: 16.6666666666%;
+	}
+}*/
+/**
+ * N. Calendars
+ */
+/**
+ * M. Calendars
+ *
+ * 1. Event Calendar
+ * 2. Homepage Upcoming Events
+ * 3. Schedule of Events
+ * 4. Bulletin
+ * 5. Campus Events Calendar
+ * 6. Event Listing
+ */
+/**
+ * 1. Event Calendar
+ */
+/* line 15, ../src/smacss/modules/_calendars.scss */
+.calendar-dt {
+  border: 1px solid #b9afbf;
+  margin: 0 auto;
+  width: 3em;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 2px;
+}
+
+/* line 29, ../src/smacss/modules/_calendars.scss */
+.calendar-month {
+  padding: 0 0.5em;
+  width: 100%;
+  display: block;
+  color: #f2f2f2;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #600f21;
+}
+
+@media screen {
+  /* line 45, ../src/smacss/modules/_calendars.scss */
+  .calendar-dt-mini {
+    width: 2em;
+  }
+  /* line 49, ../src/smacss/modules/_calendars.scss */
+  .calendar-dt-mini .calendar-month {
+    padding: 0;
+    min-height: 0.875rem;
+    font-size: 0.625rem;
+    font-weight: normal;
+  }
+  /* line 62, ../src/smacss/modules/_calendars.scss */
+  .calendar-dt-mini .calendar-day {
+    height: 1.42857em;
+    display: block;
+  }
+}
+
+/* line 71, ../src/smacss/modules/_calendars.scss */
+.calendar-dt-null {
+  background-color: #d0cad4;
+}
+/* line 74, ../src/smacss/modules/_calendars.scss */
+.calendar-dt-null .calendar-month {
+  background-color: #aea3b6;
+}
+
+/**
+ * 2. Homepage Upcoming Events
+ *
+ * The box on the homepage featuring upcoming events from the
+ * calendar. This should track pretty closely to the tertiary
+ * nav higher up on the page.
+ */
+/* line 88, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-homepage {
+  margin: 0 auto;
+}
+/* line 92, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-homepage .media {
+  border-bottom: 1px solid #b9afbf;
+}
+/* line 96, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-homepage .media-body {
+  text-align: center;
+}
+@media screen and (min-width: 32em) {
+  /* line 88, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage {
+    margin: 0 auto 1rem;
+    max-width: 66.6666666666%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 88, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage {
+    margin-top: 1rem;
+    margin-left: -24.58203125%;
+    width: 21.58203125%;
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 88, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage {
+    margin-left: -25.520833333333%;
+    width: 23.484848484848%;
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+  /* line 122, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage li {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 128, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-homepage2 {
+  margin: 0 auto;
+}
+@media screen and (min-width: 43em) {
+  /* line 128, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage2 {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 128, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage2 {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 128, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage2 {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+/* line 146, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-homepage2 li {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+@media screen and (min-width: 70em) {
+  /* line 146, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-homepage2 li {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 156, ../src/smacss/modules/_calendars.scss */
+.upcoming-events-list-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 43em) {
+  /* line 156, ../src/smacss/modules/_calendars.scss */
+  .upcoming-events-list-wrapper {
+    overflow-x: visible;
+  }
+}
+
+/* line 165, ../src/smacss/modules/_calendars.scss */
+.grid.upcoming-events-list {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-x: visible;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-destination: 0 0;
+      -ms-scroll-snap-destination: 0 0;
+          scroll-snap-destination: 0 0;
+  -webkit-scroll-snap-points-x: repeat(0%);
+      -ms-scroll-snap-points-x: repeat(0%);
+          scroll-snap-points-x: repeat(0%);
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+}
+@media screen and (min-width: 43em) {
+  /* line 165, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-scroll-snap-type: none;
+        -ms-scroll-snap-type: none;
+            scroll-snap-type: none;
+  }
+}
+/* line 193, ../src/smacss/modules/_calendars.scss */
+.grid.upcoming-events-list::after {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  box-shadow: -0.25em 0 1em rgba(29, 18, 37, 0.25);
+  content: "";
+}
+@media screen and (min-width: 43em) {
+  /* line 193, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list::after {
+    display: none;
+  }
+}
+
+/* line 212, ../src/smacss/modules/_calendars.scss */
+.grid.upcoming-events-list > .unit-1-4,
+.grid.upcoming-events-list > .unit-1-7 {
+  width: 66.666666%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-scroll-snap-coordinate: 0 0;
+      -ms-scroll-snap-coordinate: 0 0;
+          scroll-snap-coordinate: 0 0;
+}
+@media screen and (min-width: 20em) {
+  /* line 212, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-4,
+  .grid.upcoming-events-list > .unit-1-7 {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 212, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-4,
+  .grid.upcoming-events-list > .unit-1-7 {
+    width: 29%;
+  }
+}
+/* line 229, ../src/smacss/modules/_calendars.scss */
+.grid.upcoming-events-list > .unit-1-4:last-child,
+.grid.upcoming-events-list > .unit-1-7:last-child {
+  -webkit-scroll-snap-coordinate: -50% 0;
+      -ms-scroll-snap-coordinate: -50% 0;
+          scroll-snap-coordinate: -50% 0;
+}
+@media screen and (min-width: 20em) {
+  /* line 229, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-4:last-child,
+  .grid.upcoming-events-list > .unit-1-7:last-child {
+    -webkit-scroll-snap-coordinate: -150% 0;
+        -ms-scroll-snap-coordinate: -150% 0;
+            scroll-snap-coordinate: -150% 0;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 229, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-4:last-child,
+  .grid.upcoming-events-list > .unit-1-7:last-child {
+    -webkit-scroll-snap-coordinate: none;
+        -ms-scroll-snap-coordinate: none;
+            scroll-snap-coordinate: none;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 242, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-4 {
+    width: 25%;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 252, ../src/smacss/modules/_calendars.scss */
+  .grid.upcoming-events-list > .unit-1-7 {
+    width: 14.285714285714%;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+  }
+}
+
+/* line 262, ../src/smacss/modules/_calendars.scss */
+.grid.upcoming-events-list .media-body {
+  text-align: center;
+}
+
+/**
+ * 3. Schedule of Events
+ */
+/* line 269, ../src/smacss/modules/_calendars.scss */
+.schedule {
+  border: 1px solid #c8c1cd;
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  border-radius: 2px;
+}
+
+/* line 277, ../src/smacss/modules/_calendars.scss */
+.schedule .h-event {
+  padding: 1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  border-radius: 2px;
+  /*&:nth-child(even){
+  	background-color: mix($tint, $blueberry-susan, 95%);
+  }*/
+}
+
+/* line 292, ../src/smacss/modules/_calendars.scss */
+.schedule-event-required {
+  border: 2px solid #64933a;
+}
+/* line 295, ../src/smacss/modules/_calendars.scss */
+.schedule-event-required + .schedule-event-required {
+  margin-top: 2px;
+}
+/* line 299, ../src/smacss/modules/_calendars.scss */
+.schedule-event-required:nth-of-type(odd) {
+  background-color: #ebede9;
+}
+/* line 303, ../src/smacss/modules/_calendars.scss */
+.schedule-event-required:nth-of-type(even) {
+  background-color: #e4e9e0;
+}
+/* line 307, ../src/smacss/modules/_calendars.scss */
+.schedule-event-required .p-name {
+  color: #46502b;
+}
+
+/* line 312, ../src/smacss/modules/_calendars.scss */
+.h-event.schedule-event-morning {
+  background-color: #fdf4b6;
+}
+
+/* line 318, ../src/smacss/modules/_calendars.scss */
+.h-event.schedule-event-evening:nth-of-type(odd) {
+  background-color: #e6edf2;
+}
+/* line 322, ../src/smacss/modules/_calendars.scss */
+.h-event.schedule-event-evening:nth-of-type(even) {
+  background-color: #dae7f2;
+}
+/* line 326, ../src/smacss/modules/_calendars.scss */
+.h-event.schedule-event-evening .p-name {
+  color: #00365f;
+}
+
+/* line 331, ../src/smacss/modules/_calendars.scss */
+.schedule-event-evening-start::before {
+  border-bottom: 1px solid #0086ee;
+  width: 100%;
+  display: block;
+  text-align: center;
+  content: "Evening Events";
+}
+
+/* line 343, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-geoducks-at-nite::before,
+.schedule-event-group-required::before {
+  border-width: 0 0 1px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-style: solid;
+}
+
+/* line 356, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-geoducks-at-nite::before {
+  border-bottom-color: #64933a;
+  content: "Geoducks@Nite";
+}
+
+/* line 363, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-geoducks-at-nite {
+  background-color: #ebede9;
+}
+
+/*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
+	background-color: mix($tint, $evergreen-neue, 90%);
+}*/
+/* line 372, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-geoducks-at-nite .p-name {
+  color: #283b17;
+}
+
+/* line 376, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-required::before {
+  border-bottom-color: #600f21;
+}
+
+/* line 381, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-required {
+  background-color: #ebe7e8;
+}
+
+/*.schedule-event-group-required .h-event:nth-child(even){
+	background-color: mix($tint, $wine, 90%);
+}*/
+/* line 390, ../src/smacss/modules/_calendars.scss */
+.schedule-event-group-required .p-name {
+  color: #26060d;
+}
+
+/* line 394, ../src/smacss/modules/_calendars.scss */
+.schedule-event-time {
+  border-bottom: 1px solid #9ca18f;
+  padding-right: 1em;
+  color: #46502b;
+  font-weight: bold;
+}
+
+/**
+ * 4. Bulletin
+ *
+ * The section that says, “This is Week X”.
+ */
+/* line 409, ../src/smacss/modules/_calendars.scss */
+.bulletin {
+  border-bottom: 1px solid #aea3b6;
+  background-color: #e1dee3;
+  font-size: 0.875rem;
+  line-height: 1.42857142857143;
+}
+@media screen and (min-width: 70em) {
+  /* line 409, ../src/smacss/modules/_calendars.scss */
+  .bulletin {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+/* line 421, ../src/smacss/modules/_calendars.scss */
+.bulletin > .wrapper {
+  width: calc(100% - 2em);
+}
+
+/* line 426, ../src/smacss/modules/_calendars.scss */
+.bulletin .grid {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 430, ../src/smacss/modules/_calendars.scss */
+.bulletin-header,
+.bulletin-body {
+  padding-left: 1em;
+  width: 100%;
+}
+
+@media screen and (min-width: 20em) {
+  /* line 436, ../src/smacss/modules/_calendars.scss */
+  .bulletin-header {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 436, ../src/smacss/modules/_calendars.scss */
+  .bulletin-header {
+    width: 14.285714285714%;
+  }
+}
+/* line 445, ../src/smacss/modules/_calendars.scss */
+.bulletin-header h2 {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  text-align: left;
+}
+@media screen and (min-width: 20em) {
+  /* line 445, ../src/smacss/modules/_calendars.scss */
+  .bulletin-header h2 {
+    text-align: right;
+  }
+}
+
+/* line 458, ../src/smacss/modules/_calendars.scss */
+.chrono-meter {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 20em) {
+  /* line 458, ../src/smacss/modules/_calendars.scss */
+  .chrono-meter {
+    margin-right: 1em;
+    width: auto;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    float: left;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 458, ../src/smacss/modules/_calendars.scss */
+  .chrono-meter {
+    margin-right: 0;
+    width: 100%;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 485, ../src/smacss/modules/_calendars.scss */
+.chrono-meter > li {
+  border: 1px solid #aea3b6;
+  height: 7.5px;
+  width: 7.5px;
+  display: inline-block;
+}
+@media screen and (min-width: 20em) {
+  /* line 485, ../src/smacss/modules/_calendars.scss */
+  .chrono-meter > li {
+    margin-bottom: 2px;
+    clear: left;
+    float: left;
+    border-radius: 2px;
+  }
+}
+
+/* line 504, ../src/smacss/modules/_calendars.scss */
+.chrono-stop-current {
+  background-color: #d0cad4;
+}
+
+/* line 509, ../src/smacss/modules/_calendars.scss */
+.chrono-stop-complete {
+  background-color: #aea3b6;
+}
+
+@media screen and (min-width: 20em) {
+  /* line 514, ../src/smacss/modules/_calendars.scss */
+  .bulletin-body {
+    width: 66.6666666667%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 514, ../src/smacss/modules/_calendars.scss */
+  .bulletin-body {
+    width: 85.714285714286%;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 524, ../src/smacss/modules/_calendars.scss */
+  .bulletin-calendar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 43em) {
+  /* line 530, ../src/smacss/modules/_calendars.scss */
+  .bulletin-calendar > li {
+    padding-left: 1em;
+    width: 33.333333333%;
+    float: left;
+  }
+}
+
+/**
+ * 5. Campus Event Calendar
+ *
+ * The list of upcoming events around campus on the Drupal site. Replaces
+ * the Google Calendar listing.
+ */
+/**
+ * 5. Campus Event Calendar
+ *
+ * The list of upcoming events around campus on the Drupal site. Replaces
+ * the Google Calendar listing.
+ *
+ * Table Of Contents
+ *
+ *  a.    Base Calendar Styles
+ *  b.    Calendar Heading
+ *  c.    Calendar List View
+ *  c.i.  Calendar List View Time Column
+ *  c.ii. Calendar List View Items Column
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
+ */
+/**
+ * a. Base Calendar Styles
+ */
+/* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-item {
+  padding: 0.535714285714286em 1em 1.071428571428571em;
+}
+@media screen and (min-width: 43em) {
+  /* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .calendar-item {
+    padding: 0.441176470588235em 1em 0.882352941176471em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .calendar-item {
+    padding: 0.51996672212978em 1em 1.03993344425957em;
+  }
+}
+
+/* line 36, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar {
+  background-clip: transparent;
+}
+
+/* line 40, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar table,
+.calendar-calendar .month-view table {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+
+/* line 45, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar th {
+  text-align: inherit;
+}
+
+/* line 49, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar tr {
+  background-color: transparent;
+}
+
+/* line 53, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td {
+  width: auto;
+}
+
+/* line 57, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td.empty {
+  color: inherit;
+}
+
+/* line 61, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td a:hover {
+  text-decoration: none;
+}
+
+/* line 65, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar div.calendar {
+  font-size: inherit;
+}
+
+/* line 70, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td.calendar-agenda-items div.calendar {
+  border-right-width: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* line 79, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td .inner div.calendar .contents {
+  padding: 0.25rem 0.25em 0.625rem;
+}
+
+/* line 83, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+  padding: 0;
+}
+
+/**
+ * b. Calendar Heading
+ */
+/* line 97, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-nav {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 102, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.item-list ul {
+  margin: inherit;
+}
+
+/* line 106, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.item-list ul li {
+  margin-left: 0;
+}
+
+/* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-heading h3,
+.date-nav div.date-heading h3,
+.date-nav-wrapper .date-heading h3 {
+  margin-top: 1.66666666666667em;
+  margin-bottom: 0.46875rem;
+  font-size: 1.125rem;
+  line-height: 1.38888888888889;
+}
+@media screen and (min-width: 43em) {
+  /* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .view .date-nav-wrapper .date-heading h3,
+  .date-nav div.date-heading h3,
+  .date-nav-wrapper .date-heading h3 {
+    margin-top: 1.10603155876714em;
+    font-size: 1.69525rem;
+    line-height: 1.10603155876714;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .view .date-nav-wrapper .date-heading h3,
+  .date-nav div.date-heading h3,
+  .date-nav-wrapper .date-heading h3 {
+    margin-top: 1.54575432811212em;
+    margin-bottom: 0.625rem;
+    font-size: 1.8195rem;
+    line-height: 1.03050288540808;
+  }
+}
+
+/* line 138, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-prev,
+.view .date-nav-wrapper .date-next {
+  position: static;
+  font-size: inherit;
+}
+@media screen and (min-width: 32em) {
+  /* line 138, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .view .date-nav-wrapper .date-prev,
+  .view .date-nav-wrapper .date-next {
+    position: absolute;
+  }
+}
+
+/* line 150, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-prev {
+  float: left;
+  right: auto;
+  left: 0;
+}
+
+/* line 157, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-next {
+  float: right;
+}
+
+/* line 161, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-prev a,
+.view .date-nav-wrapper .date-next a {
+  margin: 0 0.25em;
+  color: #492c5d;
+}
+/* line 168, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-prev a:visited,
+.view .date-nav-wrapper .date-next a:visited {
+  color: #600f21;
+}
+/* line 172, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view .date-nav-wrapper .date-prev a:hover,
+.view .date-nav-wrapper .date-next a:hover {
+  color: #0086ee;
+}
+
+/**
+ * c. Calendar List View
+ */
+/* line 181, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view td,
+.calendar-calendar .day-view td.calendar-agenda-items {
+  border-width: 0;
+  color: inherit;
+}
+
+/* line 189, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td .inner div,
+.calendar-calendar td .inner div a {
+  background-color: transparent;
+}
+
+/* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view div.calendar,
+.calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
+.calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
+  text-align: left;
+}
+@media screen and (min-width: 43em) {
+  /* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .calendar-calendar .day-view div.calendar,
+  .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
+  .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .calendar-calendar .day-view div.calendar,
+  .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
+  .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
+    font-size: 1.202rem;
+    line-height: 1.30011961100421;
+  }
+}
+
+/* line 208, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td.calendar-agenda-hour,
+.calendar-calendar .day-view .full .calendar-agenda-hour,
+.calendar-calendar td.calendar-agenda-items .calendar.dayview {
+  border-bottom: 1px solid #d0cad4;
+  border-right-width: 0;
+  border-left-width: 0;
+  padding: 0;
+}
+
+/* line 218, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view .calendar-agenda-items {
+  padding-left: 1em;
+}
+
+/* line 222, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview {
+  margin: 0;
+  border-radius: 2px;
+}
+
+/* line 231, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.multi-day div.monthview,
+.calendar-calendar .week-view .full td.multi-day div.weekview,
+.calendar-calendar .day-view .full td.multi-day div.dayview,
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview,
+.calendar-calendar .day-view .full td.single-day {
+  height: inherit;
+  margin-bottom: inherit;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  color: inherit;
+  background: transparent none;
+}
+
+/**
+ * c.i. Calendar List View Time Column
+ */
+/* line 255, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-agenda-hour {
+  white-space: nowrap;
+}
+
+/* line 259, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.all-day .calendar-agenda-hour {
+  white-space: normal;
+}
+
+/* line 263, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view .full .calendar-agenda-hour {
+  padding-top: 0.535714285714286em;
+  padding-bottom: 1.071428571428571em;
+}
+
+/* line 268, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar td.calendar-agenda-hour .calendar-hour,
+.calendar-calendar td.calendar-agenda-hour .calendar-ampm {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* line 280, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-hour::after {
+  content: "\a0";
+}
+
+/**
+ * c.ii. Calendar List View Items Column
+ */
+/* line 289, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view .full td .inner div.calendar div,
+.calendar-calendar .day-view .full td .inner div.calendar div a {
+  margin: 0;
+}
+
+/* line 294, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .day-view .full td .inner div.calendar div a {
+  padding: 0;
+}
+
+/**
+ * d. Calendar Week and Month View
+ */
+/* line 301, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.week-view .full,
+.month-view .full {
+  background-color: #f2f2f2;
+}
+
+/* line 306, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .week-view .calendar,
+.calendar-calendar .week-view .calendar-agenda-hour,
+.calendar-calendar .month-view .calendar,
+.calendar-calendar .month-view .calendar-agenda-hour {
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+/* line 315, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .week-view .full .calendar-agenda-hour {
+  padding: 0 0.25em;
+  width: auto;
+}
+
+/* line 320, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .week-view td,
+.calendar-calendar .week-view .full td.multi-day,
+.calendar-calendar .week-view td.calendar-agenda-items {
+  border-right-width: 0;
+  border-left-width: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* line 331, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.single-day .calendar-empty,
+.calendar-calendar .month-view .full td.single-day.empty,
+.calendar-calendar .month-view .full td.date-box.empty {
+  background: transparent none;
+}
+
+/* line 337, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td {
+  padding: 0;
+}
+
+/* line 341, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td .inner div.day,
+.calendar-calendar .month-view .full td .inner div.day a {
+  width: auto;
+}
+
+/* line 346, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full tr td.today,
+.calendar-calendar .month-view .full tr td.single-day.today,
+.calendar-calendar .month-view .full tr.odd td.today,
+.calendar-calendar .month-view .full tr.even td.today,
+.calendar-calendar .month-view .full td.date-box.today,
+.calendar-calendar .month-view .full tr td.multi-day.starts-today {
+  background-color: #fdf4b6;
+  border-color: #46502b;
+}
+
+/* line 357, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full tr td.multi-day.ends-today {
+  border-color: #46502b;
+}
+
+/* line 362, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full tr.date-box,
+.calendar-calendar .month-view .full tr.date-box td,
+.calendar-calendar .month-view .full tr.multi-day,
+.calendar-calendar .month-view .full tr.multi-day td {
+  height: inherit;
+  max-height: none;
+}
+
+/* line 370, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
+.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
+  border-top: 1px solid #d0cad4;
+  width: auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: static;
+}
+
+/**
+ * e. Single-day
+ */
+/**
+ * f. Multi-day
+ */
+/* line 396, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
+  background-color: #e1dee3;
+}
+
+/* line 402, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
+  height: inherit;
+  margin: 0 0.25em 0 0;
+  padding: 0;
+}
+
+/* line 409, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
+  border-top: 1px solid #d0cad4;
+  height: inherit;
+  padding: 0 0.25em 0 0;
+  width: auto;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  background-color: #e1dee3;
+}
+
+/* line 426, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+  border-top: 1px solid #d0cad4;
+  height: inherit;
+  padding-left: 0;
+  width: 0.5em;
+  position: static;
+  background-color: #d0cad4;
+  border-radius: 0 2px 2px 0;
+}
+
+/**
+ * g. Events by Category
+ */
+/* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.view-calendar .views-field-title {
+  margin-top: 0.535714285714286em;
+}
+@media screen and (min-width: 43em) {
+  /* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .view-calendar .views-field-title {
+    margin-top: 0.41666666666667em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .view-calendar .views-field-title {
+    margin-top: 0.52004784440168em;
+  }
+}
+
+/* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.date-display-range,
+.view-calendar .date-display-range,
+.date-display-single {
+  margin-bottom: 1.071428571428571em;
+  display: inline;
+}
+@media screen and (min-width: 43em) {
+  /* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .date-display-range,
+  .view-calendar .date-display-range,
+  .date-display-single {
+    margin-bottom: 0.83333333333333em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .date-display-range,
+  .view-calendar .date-display-range,
+  .date-display-single {
+    margin-bottom: 1.04009568880337em;
+  }
+}
+
+/* line 472, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.views-exposed-form label {
+  font-weight: inherit;
+}
+
+/**
+ * 6. Event Page
+ *
+ * A single event’s individual page with all event details and a summary.
+ */
+/* line 551, ../src/smacss/modules/_calendars.scss */
+.event-details {
+  font-weight: bold;
+}
+
+/* line 555, ../src/smacss/modules/_calendars.scss */
+.event-description {
+  margin-top: calc(2.14285714285714em);
+  margin-bottom: calc(2.14285714285714em);
+}
+@media screen and (min-width: 43em) {
+  /* line 555, ../src/smacss/modules/_calendars.scss */
+  .event-description {
+    margin-top: calc(2.8125);
+    margin-bottom: calc(2.8125);
+  }
+}
+
+/* line 565, ../src/smacss/modules/_calendars.scss */
+.event-sponsor {
+  font-style: italic;
+}
+
+/* line 569, ../src/smacss/modules/_calendars.scss */
+.field-flyer {
+  border: 1px solid #a1a1a1;
+  padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
+  border-radius: 2px;
+}
+
+/**
+ * O. News
+ */
+/* line 318, ../src/smacss/_modules.scss */
+.news {
+  overflow: hidden;
+}
+
+/* line 328, ../src/smacss/_modules.scss */
+.news-wrapper {
+  margin: 0 auto;
+  width: calc(100% - 2em);
+}
+
+/* line 334, ../src/smacss/_modules.scss */
+.news-story {
+  border: 1px solid #d0cad4;
+  height: calc(100% - 1em);
+  margin-bottom: 1em;
+  padding: 1em 1em 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #303030;
+  background-color: #f2f2f2;
+  border-radius: 2px;
+}
+
+/* line 351, ../src/smacss/_modules.scss */
+.news-story footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/**
+ * P. Profiles
+ */
+/* line 360, ../src/smacss/_modules.scss */
+.profile .portrait-1-1 {
+  border-radius: 50%;
+  -webkit-shape-margin: 1em;
+          shape-margin: 1em;
+  -webkit-shape-outside: circle() border-box;
+          shape-outside: circle() border-box;
+}
+
+/* line 367, ../src/smacss/_modules.scss */
+.profession {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 32em) {
+  /* line 367, ../src/smacss/_modules.scss */
+  .profession {
+    font-size: 0.875rem;
+    line-height: 1.42857142857143;
+    font-weight: bold;
+  }
+}
+
+/* line 377, ../src/smacss/_modules.scss */
+.mini-bio-photo,
+.mini-profile-photo {
+  border: 1px solid #00365f;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+/**
+ * Q. Directories
+ */
+/**
+ * Q. Directories
+ *
+ * Directories of people and their contact information.
+ */
+/**
+ * Photo Directory
+ */
+/* line 13, ../src/smacss/modules/_directories.scss */
+.directory > thead {
+  display: none;
+}
+@media screen and (min-width: 43em) {
+  /* line 13, ../src/smacss/modules/_directories.scss */
+  .directory > thead {
+    display: table-header-group;
+  }
+}
+
+/* line 21, ../src/smacss/modules/_directories.scss */
+.directory > tbody > tr {
+  border: 1px solid #b9afbf;
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  padding: 0 1em;
+  display: block;
+  overflow: hidden;
+  background-color: #e1dee3;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(29, 18, 37, 0.25);
+}
+@media screen and (min-width: 43em) {
+  /* line 21, ../src/smacss/modules/_directories.scss */
+  .directory > tbody > tr {
+    border-width: 0;
+    padding: 0;
+    display: table-row;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* line 49, ../src/smacss/modules/_directories.scss */
+.directory > tbody td {
+  border-width: 0;
+  padding: 0;
+  display: block;
+}
+@media screen and (min-width: 43em) {
+  /* line 49, ../src/smacss/modules/_directories.scss */
+  .directory > tbody td {
+    border-top-width: 1px;
+    padding: 0.37037em 1.11111em 1.11111em 0;
+    display: table-cell;
+  }
+}
+
+/* line 65, ../src/smacss/modules/_directories.scss */
+.directory .p-tel::before {
+  font-weight: bold;
+  content: "Phone: ";
+}
+
+/* line 70, ../src/smacss/modules/_directories.scss */
+.directory .u-email::before {
+  font-weight: bold;
+  content: "Email: ";
+}
+
+/* line 75, ../src/smacss/modules/_directories.scss */
+.directory .p-extended-address::before {
+  font-weight: bold;
+  content: "Location: ";
+}
+
+@media screen and (min-width: 43em) {
+  /* line 80, ../src/smacss/modules/_directories.scss */
+  .directory .p-tel::before,
+  .directory .u-email::before,
+  .directory .p-extended-address::before {
+    content: "";
+  }
+}
+
+/* line 88, ../src/smacss/modules/_directories.scss */
+.directory .u-photo {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  margin-left: 1em;
+  max-width: 75px;
+  float: right;
+}
+@media screen and (min-width: 43em) {
+  /* line 88, ../src/smacss/modules/_directories.scss */
+  .directory .u-photo {
+    margin: 0;
+    float: none;
+  }
+}
+
+/**
+ * R. Embeded Content
+ */
+/* line 394, ../src/smacss/_modules.scss */
+.lazy-load {
+  border-bottom-width: 0;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+/* line 404, ../src/smacss/_modules.scss */
+.lazy-load::after {
+  height: 100%;
+  width: 100%;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  background-image: url("/_inc/images/texture-1.png");
+  content: url("/_inc/images/icons/green/play.png");
+}
+/* line 423, ../src/smacss/_modules.scss */
+.lazy-load:hover::after {
+  opacity: 0.85;
+}
+/* line 427, ../src/smacss/_modules.scss */
+.lazy-load img {
+  margin: 0;
+  display: block;
+}
+
+/* line 435, ../src/smacss/_modules.scss */
+.blog .entries {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* line 443, ../src/smacss/_modules.scss */
+.blog .entry {
+  overflow: hidden;
+}
+
+/**
+ * S. Drupal Login
+ *
+ * Styles the Drupal login widget. This might be moved or consolidated
+ * with a general Drupal section later.
+ */
+/* line 454, ../src/smacss/_modules.scss */
+.form-required {
+  color: inherit;
+}
+
+/* line 458, ../src/smacss/_modules.scss */
+.item-list ul {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  margin-left: 1.07142857142857em;
+}
+@media screen and (min-width: 43em) {
+  /* line 458, ../src/smacss/_modules.scss */
+  .item-list ul {
+    margin-left: 1.66666666666667em;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 458, ../src/smacss/_modules.scss */
+  .item-list ul {
+    margin-left: 1.56014353320505em;
+  }
+}
+
+/* line 471, ../src/smacss/_modules.scss */
+#edit-actions--2 {
+  float: none;
+  position: static;
+}
+
+/**
+ * T. CMS
+ *
+ * Styles to make the CMS WYSIWYG editor look nice. Not seen on
+ * published site.
+ */
+/* line 483, ../src/smacss/_modules.scss */
+#tinymce {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 48em;
+  display: block;
+}
+
+/* line 492, ../src/smacss/_modules.scss */
+#toolbar {
+  box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
+}
+
+/**
+ * IV. State Styles
+ *
+ * Styles generally for elements that might have different states,
+ * depending on how they're set. Typically these are for JS or
+ * otherwise app-like functions.
+ *
+ * Table of Contents
+ *
+ * A. Primary Nav States
+ * B. Accordions
+ * C. UI
+ */
+/**
+ * A. Primary Nav States
+ */
+/* line 18, ../src/smacss/_states.scss */
+.is-current-section {
+  color: #f2f2f2;
+  background-color: #46502b;
+}
+
+/* line 25, ../src/smacss/_states.scss */
+.is-current-section a,
+.is-current-section a:link
+.is-current-section a:visited,
+.is-current-section .is-explored-section:hover,
+.is-current-section .is-explored-section:focus,
+.is-current-section .is-explored-section:active {
+  background-color: #46502b;
+}
+
+/**
+ * B. Accordions
+ */
+/* line 38, ../src/smacss/_states.scss */
+.is-expanded:before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: all 0.2s linear;
+}
+
+/**
+ * C. UI
+ */
+/* line 49, ../src/smacss/_states.scss */
+.is-selected-ui {
+  padding: 0 0.33em;
+  color: #f2f2f2;
+  font-weight: bold;
+  background-color: #492c5d;
+}
+
+/* line 59, ../src/smacss/_states.scss */
+.is-hidden {
+  display: none !important;
+}
+
+/**
+ * Appendix A
+ *
+ * List of Deprecated Styles
+ *
+ * Here is a list of all styles marked deprecated, as of July 10, 2015. Do
+ * not use these classes in HTML. Instead, find the best alternative, or
+ * remove them altogether.
+ * 
+ * base/_typography
+ * ----------------
+ * .details  Use small element, figcaption element, or .caption
+ *
+ * layout
+ * ------
+ * .ins32           Do not use
+ *
+ * layout/_grid
+ * ------------
+ * .grid-list       Use .grid-alt
+ * .right           Use .supplement or .image
+ * .supplement-1-2  Use .supplement
+ * 
+ * modules
+ * -------
+ * .main-background  Use .main-background2
+ * .intro            Use .field-intro
+ * 
+ * modules/_boxes
+ * --------------
+ * .notice           Use .box, .box.note, or .box.alert
+ * .notice h2, etc.  Use .box h2, etc.
+ * 
+ * modules/_header
+ * ---------------
+ * #top-search-query  Use #q
+ * 
+ * modules/_images
+ * ---------------
+ * .left        Use .image or .image-alt sparingly
+ * .illus       Use .image
+ * .illus-alt   Use .image-alt
+ * .illus-full  Use .image-full
+ * 
+ * modules/_lists
+ * --------------
+ * .singleton a  Do not use
+ * 
+ * modules/_media-segment
+ * ----------------------
+ * .media-img-alt  Use .media-child-alt
+ *
+ * modules/_search
+ * ---------------
+ * .top-search button  Use .search button(?)
+ * .top-search-button  Use .search-button(?)
+ */
+/*This file was written by Justin McDowell. ((O)O)*/

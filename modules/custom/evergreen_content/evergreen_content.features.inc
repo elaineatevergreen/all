@@ -99,6 +99,22 @@ function evergreen_content_date_format_types() {
 function evergreen_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: event_image__345px_wide_.
+  $styles['event_image__345px_wide_'] = array(
+    'label' => 'Event image (345px wide)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 345,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: large__800px_wide_.
   $styles['large__800px_wide_'] = array(
     'label' => 'Large (800px wide)',
@@ -147,6 +163,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'alumni_circles' => array(
+      'name' => t('Alumni Circles'),
+      'base' => 'node_content',
+      'description' => t('Use an <em>Alumni Circle</em> to share information about alumni groups and their gatherings.'),
+      'has_title' => '1',
+      'title_label' => t('Group Name'),
+      'help' => '',
+    ),
     'article' => array(
       'name' => t('News or Blog Post'),
       'base' => 'node_content',
@@ -179,6 +203,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'committee_page' => array(
+      'name' => t('Committee Page'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>committee page</em> to list information about committees, their members, and their meetings. This includes disappearing task forces (DTFs).'),
+      'has_title' => '1',
+      'title_label' => t('Committee Name'),
+      'help' => t('If you have information that does NOT fit this format, contact the Web Team. Your committee\'s work may need an additional web presence.'),
+    ),
     'directory_individual' => array(
       'name' => t('Directory Individual'),
       'base' => 'node_content',
@@ -202,14 +234,6 @@ function evergreen_content_node_info() {
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
-    ),
-    'faculty_news' => array(
-      'name' => t('Faculty News'),
-      'base' => 'node_content',
-      'description' => t('Submit <em>Faculty News</em> to share information about your latest scholarship, etc.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => t('Some directions for faculty here.'),
     ),
     'field_of_study' => array(
       'name' => t('Field of Study'),
@@ -257,6 +281,14 @@ function evergreen_content_node_info() {
       'description' => t('Use a <em>location</em> to share information about a building or other facility on campus.'),
       'has_title' => '1',
       'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'mailing_list_link' => array(
+      'name' => t('Mailing List Link'),
+      'base' => 'node_content',
+      'description' => t('Exported from duc.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
       'help' => '',
     ),
     'profile' => array(

@@ -1,3 +1,38 @@
+#=================================
+#
+# Justin’s Grunt and Sass Nonsense
+#
+#=================================
+.sass-cache
+
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+libs
+
+# Ignore superfluous jquery.css file that inexplicably gets created by grunt-contrib-sass
+themes/wwwevergreen/css/dist/custom-css/jquery.css
+
+# Ignore third-party libraries
+themes/wwwevergreen/js/files/
+
+# Ignore image and sprite stuff for now
+themes/wwwevergreen/images/src/
+themes/wwwevergreen/images/build/
+themes/wwwevergreen/campus-life.html
+
 #================
 #
 # Drupal Nonsense
@@ -67,3 +102,4 @@ modules/contrib/features
 features.module
 .idea*
 
+/modules/custom/evergreen_content/migrations/sitesections-old.csv
