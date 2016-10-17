@@ -3175,7 +3175,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_default_country';
-  $strongarm->value = '';
+  $strongarm->value = 'US';
   $export['site_default_country'] = $strongarm;
 
   $strongarm = new stdClass();
