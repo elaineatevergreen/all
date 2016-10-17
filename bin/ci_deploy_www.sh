@@ -6,6 +6,7 @@ set -e
 # Deploy Themes
 echo "Beginning WWW Deployment"
 rsync -rtp --delete etc/ $HOME/etc
+rsync -rtp --delete bin/ $HOME/bin
 #
 # Required Libraries
 deploy_d7_library libraries/iCalcreator $WWW_CODE
