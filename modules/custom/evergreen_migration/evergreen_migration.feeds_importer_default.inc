@@ -810,7 +810,7 @@ function evergreen_migration_feeds_importer_default() {
         'update_non_existent' => 'delete',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
-        'bundle' => 'faculty_directory_categories',
+        'bundle' => 'fields_of_study',
         'language' => 'und',
       ),
     ),
