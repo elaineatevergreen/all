@@ -120,7 +120,9 @@ directory/combined',
     'custom' => 0,
     'delta' => 'alerts-only_alerts',
     'module' => 'views',
-    'node_types' => array(),
+    'node_types' => array(
+      0 => 'home_page',
+    ),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
