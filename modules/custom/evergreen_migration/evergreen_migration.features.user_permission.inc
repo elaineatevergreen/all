@@ -60,6 +60,16 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'clear faculty_categories_import feeds'.
+  $permissions['clear faculty_categories_import feeds'] = array(
+    'name' => 'clear faculty_categories_import feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'clear fields_of_study_import feeds'.
   $permissions['clear fields_of_study_import feeds'] = array(
     'name' => 'clear fields_of_study_import feeds',
@@ -163,6 +173,16 @@ function evergreen_migration_user_default_permissions() {
   // Exported permission: 'import entrepreneur_directory feeds'.
   $permissions['import entrepreneur_directory feeds'] = array(
     'name' => 'import entrepreneur_directory feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import faculty_categories_import feeds'.
+  $permissions['import faculty_categories_import feeds'] = array(
+    'name' => 'import faculty_categories_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
       'student worker administrator' => 'student worker administrator',
@@ -275,6 +295,13 @@ function evergreen_migration_user_default_permissions() {
     'module' => 'feeds_tamper',
   );
 
+  // Exported permission: 'tamper faculty_categories_import'.
+  $permissions['tamper faculty_categories_import'] = array(
+    'name' => 'tamper faculty_categories_import',
+    'roles' => array(),
+    'module' => 'feeds_tamper',
+  );
+
   // Exported permission: 'tamper fields_of_study_import'.
   $permissions['tamper fields_of_study_import'] = array(
     'name' => 'tamper fields_of_study_import',
@@ -372,6 +399,16 @@ function evergreen_migration_user_default_permissions() {
   // Exported permission: 'unlock entrepreneur_directory feeds'.
   $permissions['unlock entrepreneur_directory feeds'] = array(
     'name' => 'unlock entrepreneur_directory feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock faculty_categories_import feeds'.
+  $permissions['unlock faculty_categories_import feeds'] = array(
+    'name' => 'unlock faculty_categories_import feeds',
     'roles' => array(
       'administrator' => 'administrator',
       'student worker administrator' => 'student worker administrator',
