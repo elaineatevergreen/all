@@ -348,6 +348,11 @@ function tidyBlobs($row) {
 	    //rewrite _inc icon urls
 	    $row = str_ireplace("/sites/default/files/_inc/", "/sites/all/themes/wwwevergreen/images/", $row);
 	    
+	    //remove .htm and .html from internal links
+	    $internallink = '/((?:href)="(?:http:\/\/(?:www.)*evergreen.edu\/)*(?:\.\.\/)*([^"]+))\.(htm[l]*)"/';
+	    $dropext = '$1"';
+	    $row = preg_replace($internallink, $dropext, $row);
+	    
 	    
 	    return $row;
 	    
