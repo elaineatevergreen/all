@@ -31,6 +31,28 @@ function wwwevergreen_preprocess_page(&$variables) {
         $variables['theme_hook_suggestions'][] = 'page__panels';
         $variables['theme_hook_suggestions'][] = 'page__'  . $panel_page['name']; //this line doesn't seem to work?
   }
+  // only do this for page-type nodes and only if Path module exists
+  if (module_exists('path') && isset($variables['node']) && $variables['node']->type == 'basic_page') {
+    // look up the alias from the url_alias table
+    $source = 'node/' .$variables['node']->nid;
+    $alias = db_query("SELECT alias FROM {url_alias} WHERE source = '$source'")->fetchField();
+    if ($alias != '')  {
+      // build a suggestion for every possibility
+      $parts = explode('/', $alias);
+      $suggestion = '';
+      foreach ($parts as $part) {
+        if ($suggestion == '') {
+          // first suggestion gets prefaced with 'page--'
+          $suggestion .= "page__$part";
+        } else {
+          // subsequent suggestions get appended
+          $suggestion .= "__$part";
+        }
+        // add the suggestion to the array
+        $variables['theme_hook_suggestions'][] = $suggestion;
+      }
+    }
+  }
 }
 
 //similar to the directory function above, this rewrites people's names to be easier to read.
