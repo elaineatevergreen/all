@@ -248,7 +248,7 @@ function evergreen_content_feeds_importer_default() {
           ),
           11 => array(
             'source' => 'xpathparser:15',
-            'target' => 'field_related_field:label',
+            'target' => 'field_fields_of_study',
             'unique' => FALSE,
           ),
         ),
