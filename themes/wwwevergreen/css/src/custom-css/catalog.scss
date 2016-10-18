@@ -20,8 +20,7 @@
 
 .compare-box-active{
 	bottom: 0;
-	-webkit-transition: bottom .25s;  //Safari 6
-	        transition: bottom .25s;
+	transition: bottom 0.25s;
 }
 
 #compare{  // Compare button inside .compare-box
@@ -36,20 +35,20 @@
 	display: block;
 	// typography
 	@include base-type;  // We want this table to always use the smaller copy size
-	
+
 	> thead{
 		display: none;
 	}
-	
+
 	> tbody,
 	> tbody > tr,
 	> tbody > tr > td{
 		display: block;
 	}
-	
+
 	> tbody > tr{
 		// box model
-		border: 1px solid mix(white, $blueberry-susan, 66%);
+		border: 1px solid mix($tint, $blueberry-susan, 66%);
 		@include margin-default;
 		padding: 0 1em;
 		// layout
@@ -57,48 +56,48 @@
 		// typography
 		text-align: center;
 		// backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 90%);
+		background-color: mix($tint, $blueberry-susan, 90%);
 		border-radius: 2px;
 		// misc
 		box-shadow: 0 1px 1px $drop-shadow;
-		
+
 		&.cancelled{
 			// backgrounds & borders
-			background-color: #f3f3f3;
-			border-color: mix(white, $blueberry-susan, 75%);
+			background-color: $tint;
+			border-color: mix($tint, $blueberry-susan, 75%);
 			border-style: dashed;
 			// misc
 			box-shadow: none;
 		}
 	}
-	
+
 	> tbody > tr > td{
 		border-width: 0;
 		padding: 0;
-		
+
 		&.offering,
 		&.standing,
 		&.credits,
 		&.time{
 			display: inline;
 		}
-		
+
 		&.is-hidden{
 			display: none;
 		}
 	}
-	
+
 	@media screen and (min-width: 55em){
 		display: table;
-		
+
 		> thead{
 			display: table-header-group;
 		}
-		
+
 		> tbody{
 			display: table-row-group;
 		}
-		
+
 		> tbody > tr{
 			// box model
 			border-width: 0;
@@ -112,14 +111,14 @@
 			// misc
 			box-shadow: none;
 		}
-		
+
 		> tbody > tr > td{
 			// box model
 			border-top-width: 1px;
 			padding: 0.37037em 1.11111em 1.11111em 0;
 			// layout
 			display: table-cell;
-		
+
 			&.offering,
 			&.standing,
 			&.credits,
@@ -136,7 +135,7 @@
 	margin-right: 1em;
 	// layout
 	float: left;
-	
+
 	@media screen and (min-width: 55em){
 		// box model
 		margin: 0;
@@ -146,8 +145,8 @@
 }
 
 .compare-clear{
-	float: left;
 	clear: left;
+	float: left;
 }
 
 .title{
@@ -158,13 +157,13 @@
 	@media screen and (min-width: 55em){
 		@include base-type-lg;
 	}
-	
+
 	.message{
 		//box model
 		padding: 0 0.3125rem;
 		//typography
 		color: $wine;
-		letter-spacing: .1em;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		//backgrounds & borders
 		background-color: $highlight;
@@ -181,7 +180,7 @@
 .offering:after,
 .standing:after{
 	content: " •";
-	
+
 	@media screen and (min-width: 55em){
 		content: "";
 	}
@@ -189,7 +188,7 @@
 
 .credits:after{
 	content: " credits •";
-	
+
 	@media screen and (min-width: 55em){
 		content: "";
 	}
@@ -205,66 +204,63 @@
 .fall{
 	//layout
 	clear: left;
-	
+
 	&,
 	abbr{
-		//box model
-		border-color: #c09a00;
+		// decoration
 		background-color: #c09a00;
+		border-color: #c09a00;
 		//color: mix($tint, #c09a00, 60%);
 	}
 }
+
 .winter{
 	&,
 	abbr{
-		//box model
-		border-color: mix(black, $sky-blue, 25%);
-		//backgrounds & borders
-		background-color: mix(black, $sky-blue, 25%);
-		
+		// decoration
+		background-color: mix($shade, $sky-blue, 25%);
+		border-color: mix($shade, $sky-blue, 25%);
+
 		&.closed{
-			//box model
+			// typography
+			color: mix($shade, $sky-blue, 50%);
+			// decoration
+			background-color: mix($tint, $sky-blue, 66%);
 			border-style: dashed;
-			//typography
-			color: mix(black, $sky-blue, 50%);
-			//backgrounds & borders
-			background-color: mix(white, $sky-blue, 66%);
 		}
 	}
 }
+
 .spring{
 	&,
 	abbr{
-		//box model
-		border-color: mix(white, $blueberry-susan, 25%);
-		//backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 25%);
-		
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 25%);
+		border-color: mix($tint, $blueberry-susan, 25%);
+
 		&.closed{
-			//box model
-			border-style: dashed;
 			//typography
-			color: mix(black, $blueberry-susan, 25%);
-			//backgrounds & borders
-			background-color: mix(white, $blueberry-susan, 75%);
+			color: mix($shade, $blueberry-susan, 25%);
+			// decoration
+			background-color: mix($tint, $blueberry-susan, 75%);
+			border-style: dashed;
 		}
 	}
 }
+
 .summer{
 	&,
 	abbr{
-		//box model
-		border-color: $evergreen-neue;
-		//backgrounds & borders
+		// decoration
 		background-color: $evergreen-neue;
-		
+		border-color: $evergreen-neue;
+
 		&.closed{
-			//box model
-			border-style: dashed;
 			//typography
-			color: mix(black, $evergreen-neue, 25%);
-			//backgrounds & borders
-			background-color: mix(white, $evergreen-neue, 50%);
+			color: mix($shade, $evergreen-neue, 25%);
+			// decoration
+			background-color: mix($tint, $evergreen-neue, 50%);
+			border-style: dashed;
 		}
 	}
 }
@@ -272,27 +268,25 @@
 .summer-session-1{
 	&,
 	abbr{
-		//box model
-		border-color: $evergreen-old-style;
-		//backgrounds & borders
+		// decoration
 		background-color: $evergreen-old-style;
+		border-color: $evergreen-old-style;
 	}
 }
+
 .summer-session-2{
 	&,
 	abbr{
-		//box model
-		border-color: $wine;
-		//backgrounds & borders
+		// decoration
 		background-color: $wine;
-		
+		border-color: $wine;
+
 		&.closed{
-			//box model
-			border-style: dashed;
 			//typography
-			color: mix(black, $wine, 25%);
-			//backgrounds & borders
-			background-color: mix(white, $wine, 50%);
+			color: mix($shade, $wine, 25%);
+			// decoration
+			background-color: mix($tint, $wine, 50%);
+			border-style: dashed;
 		}
 	}
 }
@@ -303,77 +297,77 @@
 .summer,
 .summer-session-1,
 .summer-session-2{
-	//box model
+	// box model
 	margin-top: 0.9375rem;
 	width: 25%;
-	//layout
+	// layout
 	float: left;
-	//typography
-	color: white;
+	// typography
+	color: $tint;
 	text-align: center;
-	
+
 	abbr{
-		//box model
-		border-style: solid;
+		// box model
 		border-width: 1px;
 		//border-bottom-width: 0;
 		padding: 0.234375rem;
-		//layout
+		// layout
 		display: block;
-		//backgrounds & borders
+		// decoration
 		border-radius: 2px;
+		border-style: solid;
 	}
-	
+
 	@media screen and (min-width: 55em){
-		//box model
+		// box model
 		width: auto;
-		//layout
+		// layout
 		float: none;
-		//backgrounds & borders
+		// decoration
 		background-color: transparent;
 	}
 }
 
 .keyword-list{
-	
+
 	> li{
-		//box model
+		// box model
 		margin: 0.234375rem 0;  //3.75px
-		//layout
+		// layout
 		display: inline-block;
-		//typography
-		color: white;
-		
+		// typography
+		color: $tint;
+
 		> a{
-			//box model
+			// box model
 			border-bottom-width: 0;
 			margin: 0 0.4375rem 0 0;  //7.5px
-			//layout
+			// layout
 			display: block;
-			
+
 			&:before{
 				content: "#";
 			}
-			
+
 			&:after{
 				@media print{
 					content: "";
 				}
 			}
 		}
-		
+
 		> a,
 		> a:visited{
-			//typography
-			color: mix(white, $blueberry-susan, 50%);
+			// typography
+			color: mix($tint, $blueberry-susan, 50%);
 			font-weight: normal;
 		}
-		
+
 		> a:hover{
-			color: mix(white, $sky-blue, 66%);
+			color: mix($tint, $sky-blue, 66%);
 			background-color: $blueberry-susan;
 		}
-		
+
 		&:last-child a{
 			margin-right: 0;
 		}
@@ -381,22 +375,22 @@
 }
 
 .cancelled{
-	opacity: .4;
-	
+	opacity: 0.4;
+
 	.fall,
 	.winter,
 	.spring,
 	.summer{
-		//typography
-		color: black;
-		//backgrounds & borders
-		background-color: mix(white, $blueberry-susan, 80%);
-		
+		// typography
+		color: $shade;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 80%);
+
 		abbr{
-			background-color: mix(white, $blueberry-susan, 80%);
+			background-color: mix($tint, $blueberry-susan, 80%);
 		}
 	}
-	
+
 	@media screen and (min-width: 55em){
 		.fall,
 		.winter,
@@ -415,7 +409,7 @@
 
 .program-faculty{  // Deprecated; use .mini-bio-photo instead.
 	//box model
-	border: 1px solid mix(black, $sky-blue, 60%);
+	border: 1px solid mix($shade, $sky-blue, 60%);
 	height: 3rem;
 	//backgrounds & borders;
 	border-radius: 50%;
@@ -429,18 +423,18 @@
 
 .catalog-season{
 	height: 1.375rem;  //Matches height of h3
-	
+
 	@media screen and (min-width: 43em){
 		font-size: 1.594rem;  //Matches height of h3
 	}
 }
 
 @media print{
-	
+
 	.dataTables_wrapper > div *{  // This whole rule is necessary for printing in Firefox, for some reason; without it, the catalog entries are invisible.
 		all: initial;
 	}
-	
+
 	// Hide unnecessary elements.
 	.compare-box,
 	.dataTables_wrapper .showing,
@@ -448,7 +442,7 @@
 	.course-index > tbody > tr > td.compare{
 		display: none;
 	}
-	
+
 	// Avoid page breaks inside catalog entries.
 	.course-index > tbody > tr{
 		page-break-inside: avoid;

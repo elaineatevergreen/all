@@ -6,7 +6,7 @@ function evergreen_content_migrate_api() {
 		'groups' => array(
 			'sites' => array(
 				'title' => t('Sites'),
-			),
+			)
 		),
 		'migrations' => array(
 			//site content
