@@ -1,12 +1,15 @@
 <?php
 //need a function to implement hook_migrate_api()
-function evergreen_content_migrate_api() {
+function evergreen_migration_migrate_api() {
 	return array(
 		'api' => 2,
 		'groups' => array(
 			'sites' => array(
 				'title' => t('Sites'),
-			)
+			),
+			'fields' => array(
+				'title' => t('Fields of Study etc'),
+			),
 		),
 		'migrations' => array(
 			//site content
@@ -30,6 +33,10 @@ function evergreen_content_migrate_api() {
 				'class_name' => 'NewsMigration',
 				'group_name' => 'sites',
 			), //end of the News migration
+			'Fields' => array(
+				'class_name' => 'FieldsOfStudyMigration',
+				'group_name' => 'fields',
+			),
 		), //end of the migrations array
 	); //end of the main array
 };
