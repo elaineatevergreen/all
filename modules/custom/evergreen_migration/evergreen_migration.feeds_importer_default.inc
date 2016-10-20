@@ -183,7 +183,7 @@ function evergreen_migration_feeds_importer_default() {
         ),
         'context' => '/authors/author',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
             'context' => 0,
             'xpathparser:5' => 0,
@@ -862,7 +862,7 @@ function evergreen_migration_feeds_importer_default() {
         ),
         'context' => '/images/image',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
             'context' => 0,
             'xpathparser:0' => 0,
@@ -873,7 +873,7 @@ function evergreen_migration_feeds_importer_default() {
             'xpathparser:5' => 0,
           ),
         ),
-        'allow_override' => 1,
+        'allow_override' => 0,
       ),
     ),
     'processor' => array(
@@ -1284,7 +1284,7 @@ function evergreen_migration_feeds_importer_default() {
             'xpathparser:13' => 0,
           ),
         ),
-        'allow_override' => 1,
+        'allow_override' => 0,
       ),
     ),
     'processor' => array(

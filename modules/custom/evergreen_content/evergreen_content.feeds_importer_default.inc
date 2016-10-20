@@ -370,14 +370,14 @@ function evergreen_content_feeds_importer_default() {
         ),
         'context' => '/instructors/faculty',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
-            'xpathparser:4' => 'xpathparser:4',
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
             'xpathparser:5' => 0,
           ),
         ),
@@ -486,7 +486,7 @@ function evergreen_content_feeds_importer_default() {
         ),
         'context' => '//list',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
             'context' => 0,
             'xpathparser:0' => 0,
