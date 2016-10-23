@@ -979,8 +979,8 @@ function evergreen_content_field_group_info() {
       1 => 'field_expertise',
       2 => 'field_interests',
       3 => 'field_is_faculty',
-      4 => 'field_faculty_directory_subject_',
-      5 => 'field_related_subjects_directory',
+      4 => 'field_related_subjects_directory',
+      5 => 'field_faculty_directory_subject_',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1188,6 +1188,7 @@ function evergreen_content_field_group_info() {
       2 => 'field_headshot',
       3 => 'field_job_title',
       4 => 'field_last_name',
+      5 => 'field_department',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

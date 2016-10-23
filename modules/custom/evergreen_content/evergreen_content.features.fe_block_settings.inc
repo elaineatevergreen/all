@@ -45,8 +45,8 @@ directory/combined',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -39,
       ),
