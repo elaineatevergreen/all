@@ -308,6 +308,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'job_post' => array(
+      'name' => t('Job Post'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>job post</em> to list openings. This should be deprecated by a new system by the end of 2016.'),
+      'has_title' => '1',
+      'title_label' => t('Job Title'),
+      'help' => '',
+    ),
     'library_database' => array(
       'name' => t('Library Database'),
       'base' => 'node_content',
