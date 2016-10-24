@@ -7545,7 +7545,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_headshot']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_headshot']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_headshot']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'portrait_thumbnail2',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_headshot']['field_api_classes'] = TRUE;
@@ -11593,7 +11593,7 @@ return($term); ';
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'All Recent Content';
+  $handler->display->display_options['title'] = 'Site Section Content';
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'view all';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -11841,8 +11841,10 @@ return($term); ';
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['path'] = 'admin/workbench/content/all';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'All Recent Content';
+  $handler->display->display_options['menu']['title'] = 'Site Section Content';
   $handler->display->display_options['menu']['weight'] = '2';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');

@@ -226,8 +226,8 @@ function evergreen_content_default_page_manager_handlers() {
     'args' => '',
     'url' => '',
     'display' => 'block_1',
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => 'All Recent Content From My Sections',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();

@@ -70,13 +70,17 @@ function evergreen_content_default_rules_configuration() {
         { "NOT user_has_role" : {
             "account" : [ "node:author" ],
             "roles" : { "value" : {
-                "4" : "4",
+                "13" : "13",
+                "12" : "12",
+                "11" : "11",
+                "9" : "9",
+                "6" : "6",
+                "3" : "3",
+                "7" : "7",
                 "8" : "8",
                 "5" : "5",
-                "9" : "9",
-                "7" : "7",
-                "6" : "6",
-                "3" : "3"
+                "10" : "10",
+                "4" : "4"
               }
             },
             "operation" : "OR"
