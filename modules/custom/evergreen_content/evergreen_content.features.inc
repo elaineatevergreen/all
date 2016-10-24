@@ -147,6 +147,47 @@ function evergreen_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: portrait_thumbnail.
+  $styles['portrait_thumbnail'] = array(
+    'label' => 'Portrait Thumbnail (64x64)',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 64,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      4 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 64,
+          'height' => 64,
+          'anchor' => 'center-top',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: portrait_thumbnail2.
+  $styles['portrait_thumbnail2'] = array(
+    'label' => 'Portrait Thumbnail (100px)',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 100,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
