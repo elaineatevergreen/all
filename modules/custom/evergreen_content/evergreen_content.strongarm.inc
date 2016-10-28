@@ -1244,16 +1244,16 @@ function evergreen_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(

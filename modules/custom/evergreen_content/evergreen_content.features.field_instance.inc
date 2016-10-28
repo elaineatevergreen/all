@@ -3893,6 +3893,58 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-committee_page-field_committee_type'.
+  $field_instances['node-committee_page-field_committee_type'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_committee_type',
+    'label' => 'Committee Type',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-committee_page-field_eligibility'.
   $field_instances['node-committee_page-field_eligibility'] = array(
     'bundle' => 'committee_page',
@@ -4309,7 +4361,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Upcoming Deadlines',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
@@ -13009,6 +13061,7 @@ function evergreen_content_field_default_field_instances() {
   t('Classes');
   t('Comes automatically from the CMD, where it\'s a free-form field.');
   t('Comes from the CMD.');
+  t('Committee Type');
   t('Common Application');
   t('Connects this item to the CMD database. Not usually displayed to mere mortals.');
   t('Current Location');

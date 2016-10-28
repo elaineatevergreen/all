@@ -56,7 +56,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this Committee',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'body',
       1 => 'field_short_description',
@@ -1039,7 +1039,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Funding',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_eligibility',
       1 => 'field_upcoming_deadlines',
@@ -1403,7 +1403,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Meetings',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_meetings',
       1 => 'field_agendas',
@@ -1582,7 +1582,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Participants',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_members',
       1 => 'field_other_members',

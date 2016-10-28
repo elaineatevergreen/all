@@ -5324,6 +5324,78 @@ return($term); ';
   $export['catalog'] = $view;
 
   $view = new view();
+  $view->name = 'committees';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Committees';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Committees';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_committee_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Committee Type */
+  $handler->display->display_options['fields']['field_committee_type']['id'] = 'field_committee_type';
+  $handler->display->display_options['fields']['field_committee_type']['table'] = 'field_data_field_committee_type';
+  $handler->display->display_options['fields']['field_committee_type']['field'] = 'field_committee_type';
+  $handler->display->display_options['fields']['field_committee_type']['label'] = '';
+  $handler->display->display_options['fields']['field_committee_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_committee_type']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_committee_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_committee_type']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_committee_type']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_committee_type']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'committee_page' => 'committee_page',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'simple_list');
+  $export['committees'] = $view;
+
+  $view = new view();
   $view->name = 'content_audits';
   $view->description = '';
   $view->tag = 'default';
@@ -6586,8 +6658,8 @@ return($term); ';
   );
   $handler->display->display_options['inherit_arguments'] = FALSE;
 
-  /* Display: Staff Table Block */
-  $handler = $view->new_display('block', 'Staff Table Block', 'staff_table');
+  /* Display: Block: Table of People */
+  $handler = $view->new_display('block', 'Block: Table of People', 'people_table');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Our Staff';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -6611,7 +6683,7 @@ return($term); ';
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => ', ',
+      'separator' => '<br/>',
       'empty_column' => 0,
     ),
     'field_job_title' => array(
@@ -6710,10 +6782,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['label'] = 'Location';
-  /* Field: Content: Mailstop */
-  $handler->display->display_options['fields']['field_mailstop']['id'] = 'field_mailstop';
-  $handler->display->display_options['fields']['field_mailstop']['table'] = 'field_data_field_mailstop';
-  $handler->display->display_options['fields']['field_mailstop']['field'] = 'field_mailstop';
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
@@ -6764,8 +6832,8 @@ return($term); ';
   $handler->display->display_options['arguments']['guid']['limit'] = '0';
   $handler->display->display_options['arguments']['guid']['break_phrase'] = TRUE;
 
-  /* Display: Staff List Block */
-  $handler = $view->new_display('block', 'Staff List Block', 'staff_list');
+  /* Display: Block: List of People */
+  $handler = $view->new_display('block', 'Block: List of People', 'people_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Our Staff';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
