@@ -5,10 +5,13 @@ function evergreen_migration_migrate_api() {
 		'api' => 2,
 		'groups' => array(
 			'sites' => array(
-				'title' => t('Sites'),
+				'title' => t('Site Sections'),
 			),
-			'fields' => array(
-				'title' => t('Fields of Study etc'),
+			'customContent' => array(
+				'title' => t('Other Content Types'),
+			),
+			'files' => array(
+				'title' => t('Files'),
 			),
 		),
 		'migrations' => array(
@@ -27,16 +30,20 @@ function evergreen_migration_migrate_api() {
 			), //end of the SiteContent migration
 			'SiteFiles' => array( 
 				'class_name' => 'FileImportMigration',
-				'group_name' => 'sites',
+				'group_name' => 'files',
 			), //end of the SiteFiles migration
 			'News' => array( 
 				'class_name' => 'NewsMigration',
-				'group_name' => 'sites',
+				'group_name' => 'customContent',
 			), //end of the News migration
 			'Fields' => array(
 				'class_name' => 'FieldsOfStudyMigration',
-				'group_name' => 'fields',
+				'group_name' => 'customContent',
 			),
+			/*'Headshots' => array(
+				'class_name' => 'HeadshotMigration',
+				'group_name' => 'files',
+			),*/
 		), //end of the migrations array
 	); //end of the main array
 };

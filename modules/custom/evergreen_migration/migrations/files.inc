@@ -12,7 +12,7 @@ class FileImportMigration extends Migration {
   public function __construct($arguments) {
     parent::__construct($arguments);
     $this->description = t('Import files.');
-    //$this->baseDir = '/Applications/MAMP/htdocs/evergreen/sites/default/files/import';
+    //$this->baseDir = '/Applications/MAMP/htdocs/migratefiles';
     $this->baseDir = '/mnt/gluster/files/evergreen.edu';
 
     $this->map = new MigrateSQLMap($this->machineName,
