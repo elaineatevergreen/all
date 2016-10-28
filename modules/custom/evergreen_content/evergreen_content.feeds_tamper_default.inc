@@ -44,6 +44,20 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'faculty_directory-xpathparser_6-rewrite';
+  $feeds_tamper->importer = 'faculty_directory';
+  $feeds_tamper->source = 'xpathparser:6';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => 'http://localhost:8888/evergreen/sites/default/files/faculty/images/portraits/[xpathparser:6].jpg',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Rewrite';
+  $export['faculty_directory-xpathparser_6-rewrite'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'mailing_lists_feed_importer-xpathparser_3-community';
   $feeds_tamper->importer = 'mailing_lists_feed_importer';
   $feeds_tamper->source = 'xpathparser:3';
