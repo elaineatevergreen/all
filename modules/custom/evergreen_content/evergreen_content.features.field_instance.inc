@@ -2578,6 +2578,46 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_fields_of_study'.
+  $field_instances['node-catalog_entry-field_fields_of_study'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 35,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_fields_of_study',
+    'label' => 'Fields of study',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 41,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_graduate_program'.
   $field_instances['node-catalog_entry-field_graduate_program'] = array(
     'bundle' => 'catalog_entry',
@@ -3259,52 +3299,6 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-catalog_entry-field_related_field'.
-  $field_instances['node-catalog_entry-field_related_field'] = array(
-    'bundle' => 'catalog_entry',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 22,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_related_field',
-    'label' => 'Fields of Study',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 10,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-catalog_entry-field_special_expenses'.
   $field_instances['node-catalog_entry-field_special_expenses'] = array(
     'bundle' => 'catalog_entry',
@@ -3899,6 +3893,58 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-committee_page-field_committee_type'.
+  $field_instances['node-committee_page-field_committee_type'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_committee_type',
+    'label' => 'Committee Type',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-committee_page-field_eligibility'.
   $field_instances['node-committee_page-field_eligibility'] = array(
     'bundle' => 'committee_page',
@@ -4315,7 +4361,7 @@ function evergreen_content_field_default_field_instances() {
     'label' => 'Upcoming Deadlines',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
@@ -4663,6 +4709,70 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-directory_individual-field_department'.
+  $field_instances['node-directory_individual-field_department'] = array(
+    'bundle' => 'directory_individual',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is generated automatically as a "corresponding entity reference" from the Office Directory. A person may belong to more than one department, apparently.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 16,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_department',
+    'label' => 'Office/Department',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -5844,7 +5954,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 15,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -7092,7 +7202,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -7275,11 +7385,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_calendar_categories',
     'is_property' => 0,
     'label' => 'Calendar Categories',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -7464,7 +7576,7 @@ function evergreen_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 7,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -7540,7 +7652,7 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -8342,6 +8454,61 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance:
+  // 'node-field_of_study-field_sample_program_description'.
+  $field_instances['node-field_of_study-field_sample_program_description'] = array(
+    'bundle' => 'field_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_sample_program_description',
+    'label' => 'Sample Program Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-field_of_study-field_umbrella_field'.
   $field_instances['node-field_of_study-field_umbrella_field'] = array(
     'bundle' => 'field_of_study',
@@ -9000,6 +9167,213 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-job_post-body'.
+  $field_instances['node-job_post-body'] = array(
+    'bundle' => 'job_post',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-job_post-field_bulletin_number'.
+  $field_instances['node-job_post-field_bulletin_number'] = array(
+    'bundle' => 'job_post',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_bulletin_number',
+    'label' => 'Bulletin Number',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-job_post-field_open_dates'.
+  $field_instances['node-job_post-field_open_dates'] = array(
+    'bundle' => 'job_post',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_open_dates',
+    'label' => 'Open Dates',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'display_all_day' => 0,
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -12151,6 +12525,254 @@ function evergreen_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_after_graduation'.
+  $field_instances['taxonomy_term-fields_of_study-field_after_graduation'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Describe the kinds of jobs and advanced study done by students who studied this subject. Eventually this field will incorporate linked profiles.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_after_graduation',
+    'label' => 'After Graduation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 50,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_facilities_resources'.
+  $field_instances['taxonomy_term-fields_of_study-field_facilities_resources'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'What places, groups, or tools make Evergreen distinctive for this field of study?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_facilities_resources',
+    'label' => 'Facilities & Resources',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 51,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_recent_student_projects'.
+  $field_instances['taxonomy_term-fields_of_study-field_recent_student_projects'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eventually these will be brought over from projects/profiles.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_recent_student_projects',
+    'label' => 'Recent Student Projects',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 10,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 52,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_related_subjects_directory'.
+  $field_instances['taxonomy_term-fields_of_study-field_related_subjects_directory'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select any subjects that should be used to link to faculty members or pull faculty biographies. If no subjects are selected, visitors will be directed to "search the faculty directory" for this field of study\'s name.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_related_subjects_directory',
+    'label' => 'Related Subjects (Directory)',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_sample_program'.
+  $field_instances['taxonomy_term-fields_of_study-field_sample_program'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the program from the catalog for automatic linking.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_sample_program',
+    'label' => 'Sample Program',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 48,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-fields_of_study-field_sample_program_description'.
+  $field_instances['taxonomy_term-fields_of_study-field_sample_program_description'] = array(
+    'bundle' => 'fields_of_study',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field can include extra images or transitional content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_sample_program_description',
+    'label' => 'Sample Program Description',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 10,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 49,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-site_sections-field_background_image'.
   $field_instances['taxonomy_term-site_sections-field_background_image'] = array(
     'bundle' => 'site_sections',
@@ -12169,16 +12791,18 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_background_image',
     'label' => 'Background Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 3,
+      'default_image' => 0,
+      'description_display' => 'after',
       'file_directory' => '[name]/images',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '200 KB',
-      'max_resolution' => '740x740',
+      'max_resolution' => '800x800',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -12191,18 +12815,21 @@ function evergreen_content_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 0,
           'audio' => 0,
-          'default' => 0,
+          'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
       ),
       'type' => 'media_generic',
       'weight' => 2,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'taxonomy_term-site_sections-field_long_name'.
@@ -12413,6 +13040,7 @@ function evergreen_content_field_default_field_instances() {
   t('Body');
   t('Building');
   t('Building History');
+  t('Bulletin Number');
   t('Business Address');
   t('Business Description');
   t('Business Name');
@@ -12433,6 +13061,7 @@ function evergreen_content_field_default_field_instances() {
   t('Classes');
   t('Comes automatically from the CMD, where it\'s a free-form field.');
   t('Comes from the CMD.');
+  t('Committee Type');
   t('Common Application');
   t('Connects this item to the CMD database. Not usually displayed to mere mortals.');
   t('Current Location');
@@ -12442,6 +13071,7 @@ function evergreen_content_field_default_field_instances() {
   t('Deadline');
   t('Degree');
   t('Degrees');
+  t('Describe the kinds of jobs and advanced study done by students who studied this subject. Eventually this field will incorporate linked profiles.');
   t('Description');
   t('Details');
   t('Display Name');
@@ -12453,6 +13083,7 @@ function evergreen_content_field_default_field_instances() {
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
   t('Event Date');
   t('Event Format');
+  t('Eventually these will be brought over from projects/profiles.');
   t('Eventually this will be amended with a View or something automagically picking one or more alumni.');
   t('Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)');
   t('Excerpt');
@@ -12468,7 +13099,7 @@ function evergreen_content_field_default_field_instances() {
   t('Faculty directory subject area');
   t('Fax');
   t('Featured');
-  t('Fields of Study');
+  t('Fields of study');
   t('First name');
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
@@ -12548,10 +13179,12 @@ function evergreen_content_field_default_field_instances() {
   t('Number of Quarters');
   t('Off Campus Location');
   t('Offering Type');
+  t('Office/Department');
   t('Official Name');
   t('On larger screens, this text will appear on the right side of the screen. On smaller screens and in audio interfaces, it will be read below the primary content.');
   t('Online Learning');
   t('Only use if your event is taking place off campus. Select "United States" below to add an address.');
+  t('Open Dates');
   t('Other Institutions');
   t('Other Members');
   t('Percent Freshman');
@@ -12586,10 +13219,12 @@ function evergreen_content_field_default_field_instances() {
   t('Select <em>Show End Date</em> to add an end time or date.');
   t('Select all class standings that can apply for this scholarship.');
   t('Select all that apply.');
+  t('Select any subjects that should be used to link to faculty members or pull faculty biographies. If no subjects are selected, visitors will be directed to "search the faculty directory" for this field of study\'s name.');
   t('Select current members from the college directory. Contact information may be displayed along with the people\'s names.');
   t('Select if this item should appear at the top as a "place to start" resource.');
   t('Select the degree that this person earned at Evergreen. Can be left blank for current students.');
   t('Select the general area where they work. This will be used to organize profile overview pages, etc.');
+  t('Select the program from the catalog for automatic linking.');
   t('Select the types of resources that can be found at the link.');
   t('Select what section this page belongs to. That will set its site title, navigation, and background.');
   t('Select which calendars this event should appear on. DO NOT select Academic Calendar unless authorized to do so.');
@@ -12622,6 +13257,7 @@ function evergreen_content_field_default_field_instances() {
   t('This can be a basic description of the group\'s regular meeting times: <em>Thursdays, 3-5pm, Red Square or Library Atrium (weather permitting)</em>. If you want the group meetings on the Campus Calendar, you\'ll need to use a recurring event. (I\'m still thinking about how to connect a group to an event. Can\'t do it yet.)');
   t('This can include Facebook pages.');
   t('This content appears at the top of the page below the introductory paragraph. You can add boxes, captions, or pull quotes by copying from the <a href="http://www.evergreen.edu/webresources/snippets.htm" target="_blank">Snippets page (new window)</a>.');
+  t('This field can include extra images or transitional content.');
   t('This field determines whether this scholarship is displayed to potential donors and if so, how it\'s highlighted. Unchecking all the options removes this scholarship from lists shown for potential donors.');
   t('This field helps organize the buildings so people can find what they need quickly!');
   t('This field is used to assign an office to the Contact Us section of the website.');
@@ -12634,6 +13270,7 @@ function evergreen_content_field_default_field_instances() {
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
   t('This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.');
   t('This is for students to determine which classes they might be eligible to take.');
+  t('This is generated automatically as a "corresponding entity reference" from the Office Directory. A person may belong to more than one department, apparently.');
   t('This is independent of whether the scholarship is need-based.');
   t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
   t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
@@ -12668,6 +13305,7 @@ function evergreen_content_field_default_field_instances() {
   t('Websites');
   t('What are the general requirements for someone to apply for funding from this committee?');
   t('What even <em>is</em> Evergreen?');
+  t('What places, groups, or tools make Evergreen distinctive for this field of study?');
   t('When the import is run from the CMD, this value should be set to 1.');
   t('Where did they come from before they went to Evergreen?');
   t('Which is eligible to apply for this scholarship?');

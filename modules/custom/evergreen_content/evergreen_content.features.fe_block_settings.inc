@@ -32,29 +32,6 @@ function evergreen_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['custom_search_blocks-1'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 1,
-    'module' => 'custom_search_blocks',
-    'node_types' => array(),
-    'pages' => 'directory
-directory/offices
-directory/people
-directory/combined',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'wwwevergreen',
-        'weight' => -39,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 1,
-  );
-
   $export['search-form'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -120,7 +97,9 @@ directory/combined',
     'custom' => 0,
     'delta' => 'alerts-only_alerts',
     'module' => 'views',
-    'node_types' => array(),
+    'node_types' => array(
+      0 => 'home_page',
+    ),
     'pages' => '',
     'roles' => array(),
     'themes' => array(

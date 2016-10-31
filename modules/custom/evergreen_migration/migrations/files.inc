@@ -12,8 +12,9 @@ class FileImportMigration extends Migration {
   public function __construct($arguments) {
     parent::__construct($arguments);
     $this->description = t('Import files.');
-    //$this->baseDir = '/Applications/MAMP/htdocs/evergreen/sites/default/files/import';
-    $this->baseDir = '/mnt/gluster/files/evergreen.edu';
+    //$this->baseDir = '/Applications/MAMP/htdocs/migratefiles';
+    //$this->baseDir = '/mnt/gluster/files/evergreen.edu';
+    $this->baseDir = 'sites/default/files';
 
     $this->map = new MigrateSQLMap($this->machineName,
       array(
@@ -41,18 +42,23 @@ class FileImportMigration extends Migration {
     // Send FALSE as second argument to prevent loading of file data, which we
     // don't need.
     $item = new MigrateItemFile($this->baseDir, FALSE);
-    $fields = array('sourceid' => t('File name with path'),'file_uri'=>t('defined in prepareRow'),'filename'=>t('should this come from a function?'));
+    $fields = array(
+    	'sourceid' => t('File name with path'),
+    	'file_uri'=>t('defined in prepareRow'),
+    	//'filename'=>t('should this come from a function?')
+    );
     $this->source = new MigrateSourceList($list, $item, $fields);
     $this->destination = new MigrateDestinationFile('file', 'MigrateFileUri');
 
     // Save to the default file scheme.
-    $this->addFieldMapping('destination	_dir')
-      ->defaultValue(variable_get('file_default_scheme', 'public') . '://');
+    $this->addFieldMapping('destination_dir')->defaultValue(variable_get('file_default_scheme', 'public') . '://');
     // Use the full file path in the file name so that we retain the directory
     // structure.
     $this->addFieldMapping('destination_file', 'sourceid');
     // Set the value to the file name, including path.
     $this->addFieldMapping('value', 'file_uri');
+    $this->addFieldMapping('file_replace')->defaultValue(MigrateFile::FILE_EXISTS_REUSE);
+
   }
 
   public function prepareRow($row) {

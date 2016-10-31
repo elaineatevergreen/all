@@ -6,6 +6,10 @@ set -e
 # Deploy Themes
 echo "Beginning WWW Deployment"
 rsync -rtp --delete etc/ $HOME/etc
+# Because dev and test are on the same box, only update these scripts on dev updates.
+if [[ $STAGE != "test" ]] ; then
+  rsync -rtp bin/ $HOME/bin
+fi
 #
 # Required Libraries
 deploy_d7_library libraries/iCalcreator $WWW_CODE

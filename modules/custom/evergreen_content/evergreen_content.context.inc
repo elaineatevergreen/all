@@ -162,5 +162,36 @@ function evergreen_content_context_default_contexts() {
   t('Used in place of Workbench Access View for directory pages');
   $export['directories'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'home';
+  $context->description = 'Adds design elements/CSS for home page';
+  $context->tag = 'design';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'home_page' => 'home_page',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'css' => array(
+      'www.evergreen.edu' => array(
+        'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css',
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Adds design elements/CSS for home page');
+  t('design');
+  $export['home'] = $context;
+
   return $export;
 }
