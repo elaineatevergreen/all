@@ -47,7 +47,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/info.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#info"></use>
 									</svg>-->
@@ -58,7 +58,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/programs.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#apple"></use>
 									</svg>-->
@@ -69,7 +69,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/catalog.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#book"></use>
 									</svg>-->
@@ -80,7 +80,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/tour.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#location"></use>
 									</svg>-->
@@ -91,7 +91,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/visit.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#direction"></use>
 									</svg>-->
@@ -102,7 +102,7 @@
 						<li class="unit-1-6-alt icon-scale">
 							<a href="http:/evergreen.edu/about">
 								<div class="transporter-icon">
-									<img class="icon" src="/themes/wwwevergreen/images/icons/apply.png"/>
+									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
 									<!--<svg width="150">
 										<use xlink:href="#graduation"></use>
 									</svg>-->
@@ -208,7 +208,7 @@
 									<div class="media">
 										<div class="media-img">
 											<!-- <img alt="Testing svgs" src="<?php //echo($base_path . $directory) ?>/images/icons/svg-icons-homepage/academic-resources.svg" /> -->
-											<img alt="Academic resources icon" src="/themes/wwwevergreen/images/icons/green/academic-resources.png">
+											<img alt="Academic resources icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/academic-resources.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-brain"></use>
 											</svg>-->
@@ -224,7 +224,7 @@
 								<li class="unit-1-3-alt">
 									<div class="media">
 										<div class="media-img">
-											<img alt="Value icon" src="/themes/wwwevergreen/images/icons/green/value.png">
+											<img alt="Value icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/value.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-coins"></use>
 											</svg>-->
@@ -241,7 +241,7 @@
 								<li class="unit-1-3-alt">
 									<div class="media">
 										<div class="media-img">
-											<img alt="Sun icon" src="/themes/wwwevergreen/images/icons/green/sun.png">
+											<img alt="Sun icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/sun.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-sun2"></use>
 											</svg>-->
@@ -256,7 +256,7 @@
 								<li class="unit-1-3-alt">
 									<div class="media">
 										<div class="media-img">
-											<img alt="Tools icon" src="/themes/wwwevergreen/images/icons/green/tools.png">
+											<img alt="Tools icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/tools.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-tools"></use>
 											</svg>-->
@@ -272,7 +272,7 @@
 								<li class="unit-1-3-alt">
 									<div class="media">
 										<div class="media-img">
-											<img alt="Scene icon" src="/themes/wwwevergreen/images/icons/green/scene.png">
+											<img alt="Scene icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/scene.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-guitar"></use>
 											</svg>-->
@@ -287,7 +287,7 @@
 								<li class="unit-1-3-alt">
 									<div class="media">
 										<div class="media-img">
-											<img alt="Mascot icon" src="/themes/wwwevergreen/images/icons/green/speedy.png">
+											<img alt="Mascot icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/speedy.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-speedy"></use>
 											</svg>-->
