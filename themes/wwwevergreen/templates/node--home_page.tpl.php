@@ -41,15 +41,16 @@ As much as possible, use this file instead of creating individual field.tpl file
 			<div class="index-wrapper unit-6-7" id="index-wrapper">
 				<!-- Main Content -->
 				<article class="main-content">
-				<!--Transporter Menu-->
-
+				<!-- Transporter Menu -->
+				<!-- SVGs are experimental, and so commented out for now. -->
 				<ul class="element-list grid transporter">
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/info.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#info"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">About Evergreen</div>
 						</a>
@@ -57,9 +58,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/programs.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#apple"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">Fields of Study</div>
 						</a>
@@ -67,9 +69,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/catalog.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#book"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">Catalog</div>
 						</a>
@@ -77,9 +80,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/tour.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#location"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">Virtual Tour</div>
 						</a>
@@ -87,9 +91,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/visit.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#direction"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">Plan a Visit</div>
 						</a>
@@ -97,9 +102,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 					<li class="unit-1-6-alt icon-scale">
 						<a href="http:/evergreen.edu/about">
 							<div class="transporter-icon">
-								<svg width="150">
+								<img class="icon" src="/themes/wwwevergreen/images/icons/apply.png"/>
+								<!--<svg width="150">
 									<use xlink:href="#graduation"></use>
-								</svg>
+								</svg>-->
 							</div>
 							<div class="transporter-text">Apply Now</div>
 						</a>
@@ -201,10 +207,11 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-<!--									<img alt="Testing svgs" src="<?php //echo($base_path . $directory) ?>/images/icons/svg-icons-homepage/academic-resources.svg" /> -->
-										<svg width="75">
+										<!-- <img alt="Testing svgs" src="<?php //echo($base_path . $directory) ?>/images/icons/svg-icons-homepage/academic-resources.svg" /> -->
+										<img alt="Academic resources icon" src="/themes/wwwevergreen/images/icons/green/academic-resources.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-brain"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
 										<p>
@@ -217,9 +224,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-										<svg width="75">
+										<img alt="Value icon" src="/themes/wwwevergreen/images/icons/green/value.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-coins"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
 										<p>
@@ -233,9 +241,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-										<svg width="75">
+										<img alt="Sun icon" src="/themes/wwwevergreen/images/icons/green/sun.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-sun2"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
 										<p>
@@ -247,9 +256,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-										<svg width="75">
+										<img alt="Tools icon" src="/themes/wwwevergreen/images/icons/green/tools.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-tools"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
 										<p>
@@ -262,12 +272,13 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-										<svg width="75">
+										<img alt="Scene icon" src="/themes/wwwevergreen/images/icons/green/scene.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-guitar"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
-										<p alt="Scene icon" src="/_inc/images/icons/green/scene.png">
+										<p src="/_inc/images/icons/green/scene.png">
 											<a href="about/explorethearea.htm">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
 										</p>
 									</div>
@@ -276,9 +287,10 @@ As much as possible, use this file instead of creating individual field.tpl file
 							<li class="unit-1-3-alt">
 								<div class="media">
 									<div class="media-img">
-										<svg width="75">
+										<img alt="Mascot icon" src="/themes/wwwevergreen/images/icons/green/speedy.png">
+										<!--<svg width="75">
 											<use xlink:href="#icon-speedy"></use>
-										</svg>
+										</svg>-->
 									</div>
 									<div class="media-body">
 										<p>
