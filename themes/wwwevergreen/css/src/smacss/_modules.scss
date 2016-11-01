@@ -102,8 +102,10 @@
 }
 
 .main-background2 > div > :first-child{
+	// box model
 	max-height: 100vh;
-	width: auto;
+	// layout
+	display: block;
 }
 
 /**
