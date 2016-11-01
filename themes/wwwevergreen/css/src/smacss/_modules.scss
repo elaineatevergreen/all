@@ -90,8 +90,7 @@
  * declaration.
  */
 .main-background2 > .main-background-img,
-.main-background2 > :first-child,
-.main-background2 > div > :first-child{
+.main-background2 > :first-child{
 	// position
 	position: absolute;
 
@@ -100,6 +99,13 @@
 		width: auto;
 		max-height: 100vh;
 	}
+}
+
+.main-background2 > div > :first-child{
+	// box model
+	max-height: 100vh;
+	// layout
+	display: block;
 }
 
 /**
