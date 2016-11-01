@@ -45,6 +45,11 @@
 
 /**
  * B. Background Image
+ *
+ * After this moves to Drupal, this should be massively simplified. Remove
+ * all deprecated styles, change .main-background2 back to
+ * .main-background, and question whether :first-child styles need to be
+ * declared so vaguely. -jkm
  */
 .main-background,  // deprecated, use main-background2
 .main-background2{
@@ -80,8 +85,13 @@
 	position: sticky;
 }
 
+/**
+ * This, in particular, probably can be simplified down to a single
+ * declaration.
+ */
 .main-background2 > .main-background-img,
-.main-background2 > :first-child{
+.main-background2 > :first-child,
+.main-background2 > div > :first-child{
 	// position
 	position: absolute;
 
