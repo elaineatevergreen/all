@@ -104,6 +104,7 @@ function wwwevergreen_preprocess_node(&$variables) {
 	
 //};
 
+//NOTE: in Drupal 8, probably need to redo this from scratch. This is a particularly weird and verbose way to get all the non-breaking spaces and extension bolding in various phone numbers. And it also strips out all the markup, which is maybe not always the right solution?
 //this reformats the field so that the last four digits are bolded if it's an evergreen number.
 //people like that for some reason. :)
 function wwwevergreen_field__field_phone(&$variables) {
@@ -115,7 +116,6 @@ function wwwevergreen_field__field_phone(&$variables) {
   }
 
   // Render the items.
-  //$output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
   foreach ($variables['items'] as $delta => $item) {
 	  $phone = drupal_render($item);
 	  $phone = str_replace(' ', '&nbsp;', $phone);
@@ -123,15 +123,40 @@ function wwwevergreen_field__field_phone(&$variables) {
 			$ext = substr($phone, -4,4);
 			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
 		};
-	//$classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
-    //$output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . $phone . '</div>';
     $output = $phone;
   }
-  //$output .= '</div>';
 
-  // Render the top-level DIV.
-  //$output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+  return $output;
+}
+function wwwevergreen_field__field_alternate_phone(&$variables) {
+	$output = '';
 
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  foreach ($variables['items'] as $delta => $item) {
+	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);
+	  	if(substr($phone, -8,3) == '867') { 
+			$ext = substr($phone, -4,4);
+			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
+		};
+    $output = $phone;
+  }
+
+  return $output;
+}
+//no bolding in fax numbers, because that would be weird.
+function wwwevergreen_field__field_fax(&$variables) {
+	$output = '';
+  foreach ($variables['items'] as $delta => $item) {
+	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);	
+	  $output = $phone;
+  }
   return $output;
 }
 

@@ -7094,7 +7094,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -7772,7 +7772,10 @@ return($term); ';
     'title' => 'title',
     'field_reference' => 'field_reference',
     'field_job_title' => 'field_reference',
+    'field_related_offices' => 'field_related_offices',
+    'field_facilities' => 'field_reference',
     'field_email' => 'field_email',
+    'field_websites' => 'field_email',
     'field_building_alt' => 'field_room',
     'field_room' => 'field_room',
     'field_mailstop' => 'field_mailstop',
@@ -7781,9 +7784,6 @@ return($term); ';
     'field_fax' => 'field_fax',
     'nothing' => 'nothing',
     'field_last_name' => 'field_last_name',
-    'field_websites' => 'field_email',
-    'field_facilities' => 'field_reference',
-    'field_related_offices' => 'field_reference',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -7791,7 +7791,7 @@ return($term); ';
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => ', ',
+      'separator' => '<br/>',
       'empty_column' => 0,
     ),
     'field_reference' => array(
@@ -7808,9 +7808,24 @@ return($term); ';
       'separator' => '',
       'empty_column' => 0,
     ),
+    'field_related_offices' => array(
+      'align' => '',
+      'separator' => '<br/>',
+      'empty_column' => 0,
+    ),
+    'field_facilities' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_email' => array(
       'align' => '',
       'separator' => '<br/>',
+      'empty_column' => 0,
+    ),
+    'field_websites' => array(
+      'align' => '',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'field_building_alt' => array(
@@ -7867,21 +7882,6 @@ return($term); ';
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_websites' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_facilities' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_related_offices' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -7921,11 +7921,14 @@ return($term); ';
   $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
   $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
+  $handler->display->display_options['fields']['field_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_job_title']['alter']['text'] = ', [field_job_title]';
+  $handler->display->display_options['fields']['field_job_title']['element_label_colon'] = FALSE;
   /* Field: Content: Related Offices */
   $handler->display->display_options['fields']['field_related_offices']['id'] = 'field_related_offices';
   $handler->display->display_options['fields']['field_related_offices']['table'] = 'field_data_field_related_offices';
   $handler->display->display_options['fields']['field_related_offices']['field'] = 'field_related_offices';
+  $handler->display->display_options['fields']['field_related_offices']['label'] = '';
   $handler->display->display_options['fields']['field_related_offices']['alter']['text'] = '<strong>Related Offices:</strong> [field_related_offices]';
   $handler->display->display_options['fields']['field_related_offices']['element_type'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['element_label_colon'] = FALSE;
@@ -7935,10 +7938,12 @@ return($term); ';
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_related_offices']['multi_type'] = 'ul';
   /* Field: Content: Facilities */
   $handler->display->display_options['fields']['field_facilities']['id'] = 'field_facilities';
   $handler->display->display_options['fields']['field_facilities']['table'] = 'field_data_field_facilities';
   $handler->display->display_options['fields']['field_facilities']['field'] = 'field_facilities';
+  $handler->display->display_options['fields']['field_facilities']['label'] = '';
   $handler->display->display_options['fields']['field_facilities']['alter']['text'] = '<strong>Facilities:</strong> [field_facilities]';
   $handler->display->display_options['fields']['field_facilities']['element_type'] = '0';
   $handler->display->display_options['fields']['field_facilities']['element_label_colon'] = FALSE;
@@ -7948,6 +7953,7 @@ return($term); ';
     'link' => 1,
   );
   $handler->display->display_options['fields']['field_facilities']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_facilities']['multi_type'] = 'ul';
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
@@ -7969,6 +7975,8 @@ return($term); ';
   $handler->display->display_options['fields']['field_building_alt']['id'] = 'field_building_alt';
   $handler->display->display_options['fields']['field_building_alt']['table'] = 'field_data_field_building_alt';
   $handler->display->display_options['fields']['field_building_alt']['field'] = 'field_building_alt';
+  $handler->display->display_options['fields']['field_building_alt']['label'] = '';
+  $handler->display->display_options['fields']['field_building_alt']['element_label_colon'] = FALSE;
   /* Field: Content: Room */
   $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
@@ -7982,23 +7990,33 @@ return($term); ';
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['label'] = '';
   $handler->display->display_options['fields']['field_phone']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_phone']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_phone']['field_api_classes'] = TRUE;
   /* Field: Content: Alternate Phone */
   $handler->display->display_options['fields']['field_alternate_phone']['id'] = 'field_alternate_phone';
   $handler->display->display_options['fields']['field_alternate_phone']['table'] = 'field_data_field_alternate_phone';
   $handler->display->display_options['fields']['field_alternate_phone']['field'] = 'field_alternate_phone';
+  $handler->display->display_options['fields']['field_alternate_phone']['label'] = '';
   $handler->display->display_options['fields']['field_alternate_phone']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_alternate_phone']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_alternate_phone']['alter']['text'] = '<abbr title="Alternate phone number">Alt.</abbr>: [field_alternate_phone]';
+  $handler->display->display_options['fields']['field_alternate_phone']['alter']['text'] = '<abbr title="Alternate phone number">Alt.</abbr>:&nbsp;[field_alternate_phone]';
+  $handler->display->display_options['fields']['field_alternate_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_alternate_phone']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_alternate_phone']['field_api_classes'] = TRUE;
   /* Field: Content: Fax */
   $handler->display->display_options['fields']['field_fax']['id'] = 'field_fax';
   $handler->display->display_options['fields']['field_fax']['table'] = 'field_data_field_fax';
   $handler->display->display_options['fields']['field_fax']['field'] = 'field_fax';
+  $handler->display->display_options['fields']['field_fax']['label'] = '';
   $handler->display->display_options['fields']['field_fax']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_fax']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_fax']['alter']['text'] = 'Fax: [field_fax]';
+  $handler->display->display_options['fields']['field_fax']['alter']['text'] = 'Fax:&nbsp;[field_fax]';
+  $handler->display->display_options['fields']['field_fax']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_fax']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_fax']['field_api_classes'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
