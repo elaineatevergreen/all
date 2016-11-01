@@ -49,7 +49,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:6';
   $feeds_tamper->plugin_id = 'rewrite';
   $feeds_tamper->settings = array(
-    'text' => 'http://localhost:8888/evergreen/sites/default/files/faculty/images/portraits/[xpathparser:6].jpg',
+    'text' => 'http://www.evergreen.edu/faculty/images/portraits/[xpathparser:6].jpg',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Rewrite';
