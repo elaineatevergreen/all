@@ -28,12 +28,13 @@ class FieldsOfStudyMigration extends XMLMigration {
       'resources'=>t('resources'),
       'projects'=>t('projects'),
       'directorycode'=>t('directorycode'),
+      'parentfield'=>t('parentfield'),
     );
     	
     	//find the correct location and get the XML
     	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_migration') . '/migrations/';
-        $xml_location = $folder . 'fields-simplified.xml';
-
+        $xml_location = $folder . 'fields-migration-combined.xml';
+		
         
         // This is the xpath identifying the items to be migrated, relative to the
     // document.
@@ -67,7 +68,14 @@ class FieldsOfStudyMigration extends XMLMigration {
 	      field mappings.
 		*/
 		
-		$this->addFieldMapping('name', 'title')->xpath('title');
+		$this->addFieldMapping('name', 'title');
+		/*
+			I just can't get the hierarchy working!
+			if(!is_null('parentfield')) {
+			$this->addFieldMapping('parent_name', 'parentfield');
+		};*/
+		
+		$this->addFieldMapping('field_related_subjects_directory', 'directorycode')->xpath('directorycode');
 		
 		/* all of these text fields need cleanup before they can be imported */
 		$this->addFieldMapping('description', 'intro')->callbacks('tidyBlobs');
@@ -84,8 +92,6 @@ class FieldsOfStudyMigration extends XMLMigration {
 		
 		$this->addFieldMapping('field_recent_student_projects', 'projects')->callbacks('tidyBlobs');
 		$this->addFieldMapping('field_recent_student_projects:format')->defaultValue('basic_tags');
-		
-		$this->addFieldMapping('field_related_subjects_directory', 'directorycode')->xpath('directorycode');
 		
 		/*
 		$this->addFieldMapping('title', 'title')->xpath('title');
@@ -104,7 +110,14 @@ class FieldsOfStudyMigration extends XMLMigration {
 		
 		$this->addUnmigratedDestinations(
 			array(
-				
+				"parent",
+				"weight",
+				"field_related_subjects_directory:source_type",
+				"field_related_subjects_directory:create_term",
+				"field_related_subjects_directory:ignore_case",
+				"field_sample_program",
+				"path",
+				"pathauto"
 			)
 		);
     }
@@ -112,12 +125,45 @@ class FieldsOfStudyMigration extends XMLMigration {
     function prepareRow($row) {
 	    //drush_print_r($row);
 	    
+	    //title case term name and parent term name
+	    $row->title = strtolower($row->xml->title);
+	    //$row->parentfield = ucwords($row->xml->parentfield);
+	    
+	    //extract complex HTML
 	    $row->intro = $row->xml->intro->asXML();
 	    $row->after = $row->xml->after->asXML();
 	    $row->resources = $row->xml->resources->asXML();
 	    $row->sample = $row->xml->sample->asXML();
 	    $row->projects = $row->xml->projects->asXML();
 	}
+	
+	//if a parent term doesn't exist yet (this happens about half a dozen times), create a stub!
+   /* function createStub($migration, array $source_id) {
+    	$term = new stdClass();
+		$term->name = $source_id[0];
+		$term->vocabulary_machine_name = 'fields_of_study';
+		taxonomy_term_save($term);
+		if (isset($term->tid)) {
+			return array($term->tid);
+    	}
+		else {
+			return FALSE;
+    	}
+  	}*/
+  	
+  	public function createStub(Migration $migration, array $source_id) {
+    	print_r($source_id); // This never fires
+		static $vid = NULL;
+		$vocab = taxonomy_vocabulary_machine_name_load('fields_of_study');
+		$vid = $vocab->vid;
+		$term = (object) array(
+			'vid' => $vid,
+			'vocabulary_machine_name' => 'fields_of_study',
+			'name' => $source_id[0],
+		);
+		taxonomy_term_save($term);
+		return array($term->name);
+  	}
     
     /*function prepareRow($row) {
 	    //drush_print_r($row);

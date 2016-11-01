@@ -160,7 +160,6 @@ class SiteContentMigration extends XMLMigration {
 	    $row->changelog = "Imported via Migrate, Fall 2016. Last updated in Cascade Server on " . $row->xml->changed . " by " . $row->xml->lastmodifiedby . ".";
 
     } //end prepareRow
-    
 
     
 };

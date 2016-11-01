@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+  <page>
+    <title>aesthetics</title>
+    <parentfield>philosophy</parentfield>
+    <directorycode>Philosophy</directorycode>
+  </page>
+  <page>
+    <title>African American studies</title>
+    <parentfield>cultural studies</parentfield>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>agriculture</title>
+    <intro><p>The college’s organic farm is at the center of agricultural learning on campus, helping you learn to grow food for yourself and others in the broader community, using ecologically informed methods of farming while also learning management and business skills appropriate for small-scale production. You’ll focus on Northwest crop and livestock species—including orchard fruit, potatoes, sheep, and poultry—and be able to study chemistry, microbiology, and anatomy in a highly practical and experiential context.</p></intro>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>American studies</title>
+    <parentfield>history</parentfield>
+    <directorycode>History</directorycode>
+  </page>
+  <page>
+    <title>anthropology</title>
+    <intro><p>As a multidisciplinary study of humans present and past, anthropology finds its way into many programs and courses. You’ll find opportunities to think deeply about contemporary ways of life and to consider pre-modern and non-industrial human experiences. Anthropology faculty offer instruction and guidance in ethnographic fieldwork: approaches to listening, observing, documenting, and reflecting that will enable you to engage meaningfully with people and topics that matter to their communities. You will combine the study of anthropology with history, psychology, sociology, literature, religion, and biology in integrated and relevant ways.</p></intro>
+    <directorycode>Social Sciences</directorycode>
+  </page>
+  <page>
+    <title>architecture</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Visual Arts</directorycode>
+  </page>
+  <page>
+    <title>art history</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Visual Arts</directorycode>
+  </page>
+  <page>
+    <title>astronomy</title>
+    <parentfield>physics</parentfield>
+    <directorycode>Mathematics and Physics</directorycode>
+  </page>
+  <page>
+    <title>biochemistry</title>
+    <parentfield>chemistry</parentfield>
+    <directorycode>Chemistry</directorycode>
+  </page>
+  <page>
+    <title>biology</title>
+    <parentfield>biology and life sciences</parentfield>
+    <directorycode>Biological Sciences</directorycode>
+  </page>
+  <page>
+    <title>botany</title>
+    <parentfield>biology and life sciences</parentfield>
+    <directorycode>Biological Sciences</directorycode>
+  </page>
+  <page>
+    <title>business and management</title>
+    <parentfield>business, management, and entrepreneurship</parentfield>
+    <directorycode>Business and Economics</directorycode>
+  </page>
+  <page>
+    <title>classics</title>
+    <intro><p>In classics, you study ancient Greek and Roman civilizations and the foundational works of European traditions of art, literature, science, and philosophy. You gain an understanding of past cultures and engage with ancient Greeks and Romans in a dialogue on perennial questions. The combination of classics and classical archaeology with other areas of study gives you the opportunity to explore the vitality of ancient works and their importance in modern times. Classical studies are commonly taught in concert with philosophy, political science, history, theatre, anthropology, visual arts, and natural sciences.</p>
+</intro>
+    <parentfield>history</parentfield>
+    <directorycode>History</directorycode>
+  </page>
+  <page>
+    <title>communication</title>
+    <intro><p>Developing good communication skills is one of the fundamental goals of an Evergreen education. Writing and speaking are emphasized across the curriculum through multiple writing formats, small seminars, collaborative projects, and class presentations. In addition, if you wish to practice media-based communication skills, you have access to state-of-the-art sound recording and television studios, a thriving student-run newspaper, and an on-campus community radio station.</p></intro>
+    <directorycode>Literature, Language, and Communication</directorycode>
+  </page>
+  <page>
+    <title>community studies</title>
+    <intro><p>Evergreen has a rich legacy of working within communities on issues of treaty rights and sovereignty, economic and social justice, and a host of other issues. Working closely with faculty and various communities, you’ll learn a holistic approach to systemic change at the community level. As you learn to conduct community-based research (also known as participatory research, popular education, and action research), you’ll learn the history, philosophy, and modes of research vital to understanding the needs, challenges, and aims of specific communities.</p></intro>
+    <directorycode>Community Field-Based Studies</directorycode>
+  </page>
+  <page>
+    <title>consciousness studies</title>
+    <parentfield>psychology</parentfield>
+    <directorycode>Consciousness Studies</directorycode>
+  </page>
+  <page>
+    <title>cultural studies</title>
+    <intro><p>Cultural studies is both its own unique field and an approach that cuts across the humanities and social sciences. You’ll find programs and courses with an emphasis in African American studies, international studies, maritime studies queer studies, and women’s and gender studies.</p></intro>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>dance</title>
+    <parentfield>performing arts</parentfield>
+    <directorycode>Performing Arts</directorycode>
+  </page>
+  <page>
+    <title>ecology</title>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>economics</title>
+    <intro><p>Economics is taught across the curriculum. We apply economic theory to a broad array of issues, including poverty and economic inequality, public policy, alternatives to capitalism, environmental policy, corporate behavior, social equity, unemployment, area studies, and social movements. We emphasize economic history and inequality by race, class, and gender, and focus on multiple schools of economic theory from neoclassical and Keynesian theory to feminist economics and Marxist political economy. You’ll have opportunities to study foundations of economic theory and their implications for economic policy, and the major debates among economists about such issues as the proper role of government and how to best end poverty and other problems.</p></intro>
+    <directorycode>Business and Economics</directorycode>
+  </page>
+  <page>
+    <title>education</title>
+    <intro><p>Evergreen is a great place to build a foundation for a career in education. You’ll find programs and courses that explore national, state, and local school policies; cover theories about learning and cognitive development; observe and engage in classrooms; and learn strategies for working with second language learners. You will have opportunities to develop your content knowledge in specific teaching areas such as mathematics, English language arts, and the sciences, preparing you for application to a post-baccalaureate teacher certification program. Staff can provide you with guidance as you navigate the curriculum on your way to a successful and fulfilling teaching career.</p></intro>
+    <directorycode>Social Sciences</directorycode>
+  </page>
+  <page>
+    <title>field studies</title>
+    <intro><p>Evergreen provides many opportunities for in-depth learning through fieldwork. In social sciences such as psychology, sociology, or anthropology, you can learn to be a participant observer in the process of conducting ethnographic interviews. In the sciences, through extended time in the field you can learn to conduct field science in ecology at the advanced undergraduate level. Trips to local and remote locations provide the backdrop for independent and group research projects in a number of environmental studies fields.</p>
+</intro>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Community Field-Based Studies</directorycode>
+  </page>
+  <page>
+    <title>gender and women&#039;s studies</title>
+    <parentfield>cultural studies</parentfield>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>geography</title>
+    <intro><p>Learning geography typically focuses on interconnections—between human beings and the natural environment, past and present, domestic and foreign realms, and rural and urban areas—all at the different scales of our existence (from local to regional, national, and global). In geography-rich interdisciplinary programs, you'll learn about local places and the larger world humans inhabit, how they define their homelands, how they engage in conflict and cooperation with each other, and how they migrate. You’ll have opportunities to study scholarly and imaginative works, develop skills in writing and research, and conduct policy research, fieldwork, and mapping.</p></intro>
+    <directorycode>Social Sciences</directorycode>
+  </page>
+  <page>
+    <title>geology</title>
+    <intro><p>Geology integrates a range of scientific disciplines to gain a comprehensive understanding of the Earth, the relationships between rocks, water, chemistry, biology, and the environment, in the context of a changing world. It is usually embedded in team-taught interdisciplinary programs that incorporate other science disciplines, as well as social sciences and arts. You can study geology at all levels; foundational physical geology is taught in lower levels; advanced study typically focuses on geochemistry and hydrogeology. Applied learning is emphasized, through field trips, field and lab observation, geographic information systems (GIS), and research projects. You’ll develop quantitative reasoning, scientific literacy, and data analysis skills that prepare you to answer real-world questions.</p></intro>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>government</title>
+    <parentfield>political economy and political science</parentfield>
+    <directorycode>Politics and Government</directorycode>
+  </page>
+  <page>
+    <title>health</title>
+    <parentfield>biology and life sciences</parentfield>
+    <directorycode>Biological Sciences</directorycode>
+  </page>
+  <page>
+    <title>hydrology</title>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>international studies</title>
+    <parentfield>cultural studies</parentfield>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>language studies</title>
+    <intro><p>You can begin or continue foreign language studies in an array of courses and programs. Our regular offerings include Spanish, French, Russian, German, Japanese, American Sign Language, and Chinese. In addition, Arabic, Basque, Irish Gaelic, Latin, and ancient Greek are taught from time to time. In full-time programs, both stateside and abroad, you can learn foreign languages through immersion in the cultures of the peoples who speak them. Common destinations include Argentina, Costa Rica, Japan, China, France, Italy, Greece, Turkey, and Egypt. In addition to foreign languages, Evergreen offers frequent opportunities in linguistics.</p></intro>
+    <directorycode>Literature, Language, and Communication</directorycode>
+  </page>
+  <page>
+    <title>law and government policy</title>
+    <parentfield>political economy and political science</parentfield>
+    <directorycode>Politics and Government</directorycode>
+  </page>
+  <page>
+    <title>law and public policy</title>
+    <parentfield>political economy and political science</parentfield>
+    <directorycode>Politics and Government</directorycode>
+  </page>
+  <page>
+    <title>leadership studies</title>
+    <parentfield>business, management, and entrepreneurship</parentfield>
+    <directorycode>Business and Economics</directorycode>
+  </page>
+  <page>
+    <title>linguistics</title>
+    <parentfield>language studies</parentfield>
+    <directorycode>Literature, Language, and Communication</directorycode>
+  </page>
+  <page>
+    <title>literature</title>
+    <intro><p>Literature is one of the pillars of a liberal education. By reading the imaginative prose and verse of authors from across the globe and through the centuries, we encounter humanity at its kindest and cruelest, in its hopes and fears, suffering and sublimity. You can study literature in combination with the arts, sciences, and social sciences, as well as in humanities-intensive programs and courses. Cultural studies and study-abroad opportunities typically feature a substantial literature component.</p></intro>
+    <directorycode>Literature, Language, and Communication</directorycode>
+  </page>
+  <page>
+    <title>marine science</title>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>maritime studies</title>
+    <parentfield>cultural studies</parentfield>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>mathematics</title>
+    <intro><p>Mathematics is much more than working with numbers and solving equations. It underlies many daily decisions, is crucial to thinking critically about what we read and hear in the media, is the language of science and technology, and lies behind the games we play and the work we do. Mathematical and quantitative thinking is incorporated across the curriculum. You’ll find it woven into programs and courses involving science, sociology, psychology, economics, linguistics, and the arts. We also offer opportunities to study mathematics as a discipline in its own right: both pure and applied and from beginning to advanced.</p></intro>
+  </page>
+  <page>
+    <title>media arts</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Media and Film</directorycode>
+  </page>
+  <page>
+    <title>media studies</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Media and Film</directorycode>
+  </page>
+  <page>
+    <title>moving image</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Media and Film</directorycode>
+  </page>
+  <page>
+    <title>music</title>
+    <parentfield>performing arts</parentfield>
+    <directorycode>Performing Arts</directorycode>
+  </page>
+  <page>
+    <title>natural history</title>
+    <parentfield>environmental studies</parentfield>
+    <directorycode>Environmental Studies/Agriculture</directorycode>
+  </page>
+  <page>
+    <title>outdoor leadership and education</title>
+    <parentfield>education</parentfield>
+    <directorycode>Social Sciences</directorycode>
+  </page>
+  <page>
+    <title>philosophy</title>
+    <intro><p>Philosophy can be studied in many programs and courses, allowing you to rigorously investigate claims about the grounds of existence, the possibilities for knowledge, the nature of justice, and the existence of God—to name a few. Faculty members have expertise in the theory of knowledge, ethics, aesthetics, the philosophy of science, linguistics, and the philosophy of religion. Both Eastern and Western ways of knowing are represented in our curriculum.</p></intro>
+    <directorycode>Philosophy</directorycode>
+  </page>
+  <page>
+    <title>philosophy of science</title>
+    <parentfield>philosophy</parentfield>
+    <directorycode>Philosophy</directorycode>
+  </page>
+  <page>
+    <title>physics</title>
+    <intro><p>Our approach to physics and astronomy is experiential and hands-on. You work in small groups in labs and workshops to understand the laws and physical models describing interactions involving matter and energy. Physics is taught at all levels and with many other disciplines, including animation, music, sports, sustainability studies, and philosophy. If you’re embarking on an academic pathway in the sciences, you can obtain a foundation in university-level physics that also include calculus and chemistry or computer science. At the advanced level, you can learn physics and astronomy in integrated programs that include applied mathematics and advanced physical chemistry.</p></intro>
+    <directorycode>Mathematics and Physics</directorycode>
+  </page>
+  <page>
+    <title>physiology</title>
+    <parentfield>biology and life sciences</parentfield>
+    <directorycode>Biological Sciences</directorycode>
+  </page>
+  <page>
+    <title>political economy</title>
+    <intro><p>While studying political economy, you will learn the ways in which the U.S. and global economies have been organized and reorganized, how systems of economic and political power operate, and how they are changed. You can study the history of empires in structuring the global economy; examine food systems and agriculture; and mass media’s role in social relationships. You’ll learn how social change has occurred in the past so you can be a more effective agent of change. Finally, you can explore alternative visions for economies and societies that promote justice and environmental sustainability. </p>
+</intro>
+    <parentfield>political economy and political science</parentfield>
+    <directorycode>Politics and Government</directorycode>
+  </page>
+  <page>
+    <title>political science</title>
+    <parentfield>political economy and political science</parentfield>
+    <directorycode>Politics and Government</directorycode>
+  </page>
+  <page>
+    <title>queer studies</title>
+    <parentfield>cultural studies</parentfield>
+    <directorycode>Cultural Studies</directorycode>
+  </page>
+  <page>
+    <title>religious studies</title>
+    <parentfield>philosophy</parentfield>
+    <directorycode>Philosophy</directorycode>
+  </page>
+  <page>
+    <title>sociology</title>
+    <intro><p>Sociology is the study of human social institutions and social relationships. You can explore the intricate and complex relationships of social structures in the context of real-life issues: gender, identity, poverty, communication, community, crime and criminal behavior, and more. Opportunities are available to apply quantitative and qualitative skills through research and internships.</p></intro>
+    <directorycode>Social Sciences</directorycode>
+  </page>
+  <page>
+    <title>somatic studies</title>
+    <intro><p>Somatic studies look at mind-body ways of knowing and living in the world and are guided by the assumption that cultivating body-based intelligence (<em>soma</em> in Greek) can be used to help individuals grow and change. This field of study offers opportunities to explore body-based literacy as it relates to leadership, communication, and engagement with social issues. You'll learn in many ways (academic, experiential, contemplative), using diverse modalities and multiple intelligences, studying somatics through body-centered approaches to mindfulness, movement workshops, creative expression, the arts, and academic work in psychology, health, and more.</p></intro>
+    <directorycode>Consciousness Studies</directorycode>
+  </page>
+  <page>
+    <title>study abroad</title>
+    <intro><p>Each year, Evergreen students travel to more than 40 countries, and the college typically offers four or five interdisciplinary study abroad programs. These include studies in language, culture, field biology, and social justice. Another option involves student exchanges to partner universities in Japan, South Korea, and Denmark. Many students create their own study abroad opportunities through independent learning contracts and study abroad consortia.  For more information, go to <a href="https://www.evergreen.edu/studyabroad">https://www.evergreen.edu/studyabroad</a>.   </p>
+</intro>
+  </page>
+  <page>
+    <title>sustainability studies</title>
+    <intro><p>“Sustainability isn’t just a bandwagon we’re hopping onto. It’s woven into the very fabric of our identity, and history, as an institution.” — President Les Purce. Evergreen is dedicated to sustainability. This value is reflected in our curriculum as well as our operations. Many programs and courses focus on the concept of sustainability from an interdisciplinary perspective. Areas of study include sustainable development, environmental policies, ethics, ecology, landscape architecture, city and regional planning, economics, natural resources, sociology, and anthropology.</p></intro>
+    <directorycode>Sustainability Studies</directorycode>
+  </page>
+  <page>
+    <title>theater</title>
+    <parentfield>performing arts</parentfield>
+    <directorycode>Performing Arts</directorycode>
+  </page>
+  <page>
+    <title>visual arts</title>
+    <parentfield>visual and media arts</parentfield>
+    <directorycode>Visual Arts</directorycode>
+  </page>
+  <page>
+    <title>zoology</title>
+    <parentfield>biology and life sciences</parentfield>
+    <directorycode>Biological Sciences</directorycode>
+  </page>
+</pages>
