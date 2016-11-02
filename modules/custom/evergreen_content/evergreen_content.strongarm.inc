@@ -2053,6 +2053,9 @@ function evergreen_content_strongarm() {
         'redirect' => array(
           'weight' => '2',
         ),
+        'metatags' => array(
+          'weight' => '6',
+        ),
       ),
       'display' => array(
         'webform' => array(

@@ -12491,6 +12491,53 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-webform-field_secondary_content'.
+  $field_instances['node-webform-field_secondary_content'] = array(
+    'bundle' => 'webform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Remember that this will appear <em>after</em> on smaller devices. People may complete the form without reading this information.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_secondary_content',
+    'label' => 'Secondary Content',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
       'weight' => 5,
     ),
     'workbench_access_field' => 0,
@@ -13218,6 +13265,7 @@ function evergreen_content_field_default_field_instances() {
   t('Related Offices');
   t('Related Pieces');
   t('Related Subjects (Directory)');
+  t('Remember that this will appear <em>after</em> on smaller devices. People may complete the form without reading this information.');
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
