@@ -56,7 +56,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About this Committee',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'body',
       1 => 'field_short_description',
@@ -119,7 +119,6 @@ function evergreen_content_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_academic_quarter',
-      1 => 'field_add_to_sections',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -216,7 +215,7 @@ function evergreen_content_field_group_info() {
       0 => 'body',
       1 => 'field_flyer',
       2 => 'field_image',
-      3 => 'field_sponsored_by',
+      3 => 'group_sponsor',
     ),
     'format_type' => 'multipage',
     'format_settings' => array(
@@ -979,8 +978,8 @@ function evergreen_content_field_group_info() {
       1 => 'field_expertise',
       2 => 'field_interests',
       3 => 'field_is_faculty',
-      4 => 'field_faculty_directory_subject_',
-      5 => 'field_related_subjects_directory',
+      4 => 'field_related_subjects_directory',
+      5 => 'field_faculty_directory_subject_',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1040,7 +1039,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Funding',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_eligibility',
       1 => 'field_upcoming_deadlines',
@@ -1188,6 +1187,7 @@ function evergreen_content_field_group_info() {
       2 => 'field_headshot',
       3 => 'field_job_title',
       4 => 'field_last_name',
+      5 => 'field_department',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1403,7 +1403,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Meetings',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_meetings',
       1 => 'field_agendas',
@@ -1582,7 +1582,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Participants',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_members',
       1 => 'field_other_members',
@@ -1789,6 +1789,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sponsor|node|event|form';
+  $field_group->group_name = 'group_sponsor';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_attachments';
+  $field_group->data = array(
+    'label' => 'Sponsor',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_add_to_sections',
+      1 => 'field_sponsored_by',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Sponsor',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-sponsor field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_sponsor|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_studies|node|profile|form';
   $field_group->group_name = 'group_studies';
   $field_group->entity_type = 'node';
@@ -1874,7 +1904,7 @@ function evergreen_content_field_group_info() {
   $field_groups['group_what|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_where|node|event|form';
   $field_group->group_name = 'group_where';

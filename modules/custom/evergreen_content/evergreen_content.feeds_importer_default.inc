@@ -359,6 +359,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:3' => 'interest',
           'xpathparser:4' => 'name',
           'xpathparser:5' => 'fields/field',
+          'xpathparser:6' => '@user_name',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -367,18 +368,20 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:3' => 0,
           'xpathparser:4' => 0,
           'xpathparser:5' => 0,
+          'xpathparser:6' => 0,
         ),
         'context' => '/instructors/faculty',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
-            'xpathparser:4' => 'xpathparser:4',
             'context' => 0,
             'xpathparser:0' => 0,
             'xpathparser:1' => 0,
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
             'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -430,6 +433,12 @@ function evergreen_content_feeds_importer_default() {
           6 => array(
             'source' => 'xpathparser:5',
             'target' => 'field_related_subjects_directory',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          7 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_headshot:uri',
             'unique' => FALSE,
           ),
         ),
@@ -486,7 +495,7 @@ function evergreen_content_feeds_importer_default() {
         ),
         'context' => '//list',
         'exp' => array(
-          'errors' => 0,
+          'errors' => 1,
           'debug' => array(
             'context' => 0,
             'xpathparser:0' => 0,

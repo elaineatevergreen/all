@@ -1244,16 +1244,16 @@ function evergreen_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(
@@ -1676,6 +1676,66 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__job_post';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full_name' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'contact_row' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '3',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '1',
+        ),
+        'redirect' => array(
+          'weight' => '2',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__job_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__library_database';
   $strongarm->value = array(
     'view_modes' => array(
@@ -1993,6 +2053,9 @@ function evergreen_content_strongarm() {
         'redirect' => array(
           'weight' => '2',
         ),
+        'metatags' => array(
+          'weight' => '6',
+        ),
       ),
       'display' => array(
         'webform' => array(
@@ -2198,6 +2261,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_job_post';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_job_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_library_database';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -2360,6 +2432,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'menu_parent_home_page_hero';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_home_page_hero'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_job_post';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_job_post'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2582,6 +2661,16 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_job_post';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_job_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_library_database';
   $strongarm->value = array(
     0 => 'status',
@@ -2759,6 +2848,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_job_post';
+  $strongarm->value = '1';
+  $export['node_preview_job_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_library_database';
   $strongarm->value = '0';
   $export['node_preview_library_database'] = $strongarm;
@@ -2913,6 +3009,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_job_post';
+  $strongarm->value = 0;
+  $export['node_submitted_job_post'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_library_database';
   $strongarm->value = 0;
   $export['node_submitted_library_database'] = $strongarm;
@@ -2976,6 +3079,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_alumni_circles_pattern';
+  $strongarm->value = 'alumni/circle/[node:title]';
+  $export['pathauto_node_alumni_circles_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_pattern';
   $strongarm->value = '[node:field-site-section:name]/post/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
@@ -3000,6 +3110,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_catalog_entry_pattern';
   $strongarm->value = 'catalog/[node:title]';
   $export['pathauto_node_catalog_entry_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_committee_page_pattern';
+  $strongarm->value = 'committee/[node:title]';
+  $export['pathauto_node_committee_page_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3033,7 +3150,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_field_of_study_pattern';
-  $strongarm->value = 'studies/[node:title]';
+  $strongarm->value = '';
   $export['pathauto_node_field_of_study_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3070,6 +3187,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_location_pattern';
   $strongarm->value = 'location/[node:title]';
   $export['pathauto_node_location_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_mailing_list_link_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_mailing_list_link_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3140,6 +3264,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_faculty_directory_categories_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_faculty_directory_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_fields_of_study_pattern';
+  $strongarm->value = 'studies/[term:name]';
+  $export['pathauto_taxonomy_term_fields_of_study_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
