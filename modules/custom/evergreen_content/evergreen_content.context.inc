@@ -14,8 +14,8 @@ function evergreen_content_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'calendar';
-  $context->description = 'Used in place of Workbench Access Views for calendar events';
-  $context->tag = '';
+  $context->description = 'Sets section design for events';
+  $context->tag = 'sections';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -59,35 +59,40 @@ function evergreen_content_context_default_contexts() {
         ),
       ),
     ),
-    'css' => array(
-      'www.evergreen.edu' => array(
-        'sites/all/themes/wwwevergreen/css/directories.css' => 'sites/all/themes/wwwevergreen/css/directories.css',
-      ),
-    ),
   );
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Used in place of Workbench Access Views for calendar events');
+  t('Sets section design for events');
+  t('sections');
   $export['calendar'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'catalog';
-  $context->description = 'Used in place of Workbench Access to set blocks for the Catalog index';
-  $context->tag = '';
+  $context->description = 'Catalog home/lists ONLY, not individual items?';
+  $context->tag = 'sections';
   $context->conditions = array(
-    'views' => array(
+    'node' => array(
       'values' => array(
-        'catalog:page' => 'catalog:page',
+        'catalog_entry' => 'catalog_entry',
+      ),
+      'options' => array(
+        'node_form' => '1',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => '4',
+          'region' => 'section_title',
+          'weight' => '-10',
+        ),
         'views--exp-catalog-page' => array(
           'module' => 'views',
           'delta' => '-exp-catalog-page',
@@ -98,7 +103,7 @@ function evergreen_content_context_default_contexts() {
     ),
     'css' => array(
       'www.evergreen.edu' => array(
-        'sites/all/themes/wwwevergreen/css/catalog.css' => 'sites/all/themes/wwwevergreen/css/catalog.css',
+        'sites/all/themes/wwwevergreen/css/dist/custom-css/catalog.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/catalog.css',
       ),
     ),
   );
@@ -106,15 +111,16 @@ function evergreen_content_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Used in place of Workbench Access to set blocks for the Catalog index');
+  t('Catalog home/lists ONLY, not individual items?');
+  t('sections');
   $export['catalog'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'directories';
-  $context->description = 'Used in place of Workbench Access View for directory pages';
-  $context->tag = '';
+  $context->description = 'Covers both indexes and individual items.';
+  $context->tag = 'sections';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -151,7 +157,7 @@ function evergreen_content_context_default_contexts() {
     ),
     'css' => array(
       'www.evergreen.edu' => array(
-        'sites/all/themes/wwwevergreen/css/directories.css' => 'sites/all/themes/wwwevergreen/css/directories.css',
+        'sites/all/themes/wwwevergreen/css/dist/custom-css/directories.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/directories.css',
       ),
     ),
   );
@@ -159,8 +165,56 @@ function evergreen_content_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Used in place of Workbench Access View for directory pages');
+  t('Covers both indexes and individual items.');
+  t('sections');
   $export['directories'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'fields_of_study';
+  $context->description = 'Sets section design for Fields of Study pages';
+  $context->tag = 'sections';
+  $context->conditions = array(
+    'taxonomy_term' => array(
+      'values' => array(
+        'fields_of_study' => 'fields_of_study',
+      ),
+      'options' => array(
+        'term_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-3' => array(
+          'module' => 'block',
+          'delta' => '3',
+          'region' => 'section_title',
+          'weight' => '-10',
+        ),
+        'bean-section-navigation-fields-of-stu' => array(
+          'module' => 'bean',
+          'delta' => 'section-navigation-fields-of-stu',
+          'region' => 'section_nav',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'css' => array(
+      'www.evergreen.edu' => array(
+        'sites/all/themes/wwwevergreen/css/dist/custom-css/studies.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/studies.css',
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Sets section design for Fields of Study pages');
+  t('sections');
+  $export['fields_of_study'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

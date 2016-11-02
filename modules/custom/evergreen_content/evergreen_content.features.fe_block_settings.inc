@@ -12,10 +12,50 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-catalog_section_title'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'catalog_section_title',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['block-directory_section_title'] = array(
     'cache' => -1,
     'custom' => 0,
     'machine_name' => 'directory_section_title',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['block-fields_section_title'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'fields_section_title',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '',
