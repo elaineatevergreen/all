@@ -5046,7 +5046,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_end_term']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_end_term']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_end_term']['field_api_classes'] = TRUE;
-  /* Field: Content: Fields of study */
+  /* Field: Content: Fields of Study */
   $handler->display->display_options['fields']['field_fields_of_study']['id'] = 'field_fields_of_study';
   $handler->display->display_options['fields']['field_fields_of_study']['table'] = 'field_data_field_fields_of_study';
   $handler->display->display_options['fields']['field_fields_of_study']['field'] = 'field_fields_of_study';
@@ -5130,7 +5130,7 @@ return($term); ';
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Content: Fields of study (field_fields_of_study) */
+  /* Filter criterion: Content: Fields of Study (field_fields_of_study) */
   $handler->display->display_options['filters']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
