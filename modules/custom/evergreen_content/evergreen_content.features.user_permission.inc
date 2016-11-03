@@ -4312,6 +4312,7 @@ function evergreen_content_user_default_permissions() {
       'advanced editor' => 'advanced editor',
       'alumni programs' => 'alumni programs',
       'calendar review' => 'calendar review',
+      'committee organizer' => 'committee organizer',
       'librarian' => 'librarian',
       'news promoter' => 'news promoter',
       'site editor' => 'site editor',
