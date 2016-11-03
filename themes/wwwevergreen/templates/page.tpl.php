@@ -209,7 +209,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					print render($page['content']); 
 					
 					//really? this is an odd default Drupalism.
-					print $feed_icons; 
+					//print $feed_icons; 
 					
 				?>
 	      	
