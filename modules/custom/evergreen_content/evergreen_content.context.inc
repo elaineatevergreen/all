@@ -200,6 +200,18 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_nav',
           'weight' => '-10',
         ),
+        'views-ed3eb47c482a2d265dabe239adf98fbb' => array(
+          'module' => 'views',
+          'delta' => 'ed3eb47c482a2d265dabe239adf98fbb',
+          'region' => 'secondary_content',
+          'weight' => '-10',
+        ),
+        'views-2de9bc6b43b597ba3ae30595ad6f8266' => array(
+          'module' => 'views',
+          'delta' => '2de9bc6b43b597ba3ae30595ad6f8266',
+          'region' => 'background_image',
+          'weight' => '-10',
+        ),
       ),
     ),
     'css' => array(

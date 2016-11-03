@@ -7094,7 +7094,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -9393,11 +9393,11 @@ return($term); ';
     'fields_of_study' => 'fields_of_study',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: All */
+  $handler = $view->new_display('block', 'All', 'all');
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Admin Page */
+  $handler = $view->new_display('page', 'Admin Page', 'page_1');
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -9538,6 +9538,100 @@ return($term); ';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Secondary Content */
+  $handler = $view->new_display('block', 'Secondary Content', 'secondary_content');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Recent Student Projects */
+  $handler->display->display_options['fields']['field_recent_student_projects']['id'] = 'field_recent_student_projects';
+  $handler->display->display_options['fields']['field_recent_student_projects']['table'] = 'field_data_field_recent_student_projects';
+  $handler->display->display_options['fields']['field_recent_student_projects']['field'] = 'field_recent_student_projects';
+  $handler->display->display_options['fields']['field_recent_student_projects']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_recent_student_projects']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_recent_student_projects']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_recent_student_projects']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_recent_student_projects']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_recent_student_projects']['hide_empty'] = TRUE;
+  /* Field: Field: Related Subjects (Directory) */
+  $handler->display->display_options['fields']['field_related_subjects_directory']['id'] = 'field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['table'] = 'field_data_field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['label'] = 'Faculty';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = 'See faculty who teach in [field_related_subjects_directory].';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['delta_offset'] = '0';
+  /* Field: Field: Faculty Bios */
+  $handler->display->display_options['fields']['field_faculty_bios']['id'] = 'field_faculty_bios';
+  $handler->display->display_options['fields']['field_faculty_bios']['table'] = 'field_data_field_faculty_bios';
+  $handler->display->display_options['fields']['field_faculty_bios']['field'] = 'field_faculty_bios';
+  $handler->display->display_options['fields']['field_faculty_bios']['label'] = '';
+  $handler->display->display_options['fields']['field_faculty_bios']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_faculty_bios']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_faculty_bios']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_faculty_bios']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Background Image */
+  $handler = $view->new_display('block', 'Background Image', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Background Image */
+  $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['label'] = '';
+  $handler->display->display_options['fields']['field_background_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_background_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_background_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_background_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $export['fields_of_study_taxonomy_'] = $view;
 
   $view = new view();

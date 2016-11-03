@@ -28,7 +28,7 @@ class FieldsOfStudyMigration extends XMLMigration {
       'resources'=>t('resources'),
       'projects'=>t('projects'),
       'directorycode'=>t('directorycode'),
-      'parentfield'=>t('parentfield'),
+      'facultybios'=>t('facultybios'),
     );
     	
     	//find the correct location and get the XML
@@ -93,6 +93,9 @@ class FieldsOfStudyMigration extends XMLMigration {
 		$this->addFieldMapping('field_recent_student_projects', 'projects')->callbacks('tidyBlobs');
 		$this->addFieldMapping('field_recent_student_projects:format')->defaultValue('basic_tags');
 		
+		$this->addFieldMapping('field_faculty_bios', 'facultybios')->callbacks('tidyBlobs');
+		$this->addFieldMapping('field_faculty_bios:format')->defaultValue('basic_tags');
+		
 		/*
 		$this->addFieldMapping('title', 'title')->xpath('title');
 		
@@ -111,6 +114,7 @@ class FieldsOfStudyMigration extends XMLMigration {
 		$this->addUnmigratedDestinations(
 			array(
 				"parent",
+				"parent_name",
 				"weight",
 				"field_related_subjects_directory:source_type",
 				"field_related_subjects_directory:create_term",
