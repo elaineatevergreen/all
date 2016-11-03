@@ -3,6 +3,9 @@
 // allow per-node-type and panel page template files
 // rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
+	
+	//	  dsm($variables);
+	
   if (isset($variables['node']->type)) {
     // If the content type's machine name is "my_machine_name" the file
     // name will be "page--my-machine-name.tpl.php".
@@ -26,11 +29,19 @@ function wwwevergreen_preprocess_page(&$variables) {
 		drupal_set_title($temptitle);
   	}
   };
+  //custom pages for taxonomy terms, specifically used for fields of study.
+  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
+        $tid = (int)arg(2);
+        $term = taxonomy_term_load($tid);
+        if(is_object($term)) {
+           $variables['theme_hook_suggestions'][] = 'page__'.$term->vocabulary_machine_name;
+        }
+  }
   // allows for special template pages for panel pages.
   if (module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
         $variables['theme_hook_suggestions'][] = 'page__panels';
         $variables['theme_hook_suggestions'][] = 'page__'  . $panel_page['name']; //this line doesn't seem to work?
-  }
+  };
   // only do this for page-type nodes and only if Path module exists
   if (module_exists('path') && isset($variables['node']) && $variables['node']->type == 'basic_page') {
     // look up the alias from the url_alias table
