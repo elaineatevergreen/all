@@ -449,6 +449,7 @@ features[field_group][] = group_social|node|directory_office|default
 features[field_group][] = group_sponsor|node|event|default
 features[field_group][] = group_sponsor|node|event|form
 features[field_group][] = group_studies|node|profile|form
+features[field_group][] = group_title_wrapper|field_collection_item|field_section_navigation|data_export
 features[field_group][] = group_top|taxonomy_term|site_sections|form
 features[field_group][] = group_what|node|event|form
 features[field_group][] = group_where|node|event|form
