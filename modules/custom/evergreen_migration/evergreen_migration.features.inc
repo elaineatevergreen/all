@@ -15,3 +15,10 @@ function evergreen_migration_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "2");
   }
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function evergreen_migration_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
