@@ -51,7 +51,7 @@ class SiteContentMigration extends XMLMigration {
     	
     	//the unique id is the URL, I think.
     	
-    	//map the CSV to the taxonomy
+    	//
     	$this->map = new MigrateSQLMap($this->machineName,
         array(
           'url' => array('type' => 'varchar',
@@ -60,7 +60,7 @@ class SiteContentMigration extends XMLMigration {
                            'description' => 'URL of the page in Cascade',
                           )
         ),
-        MigrateDestinationTerm::getKeySchema()
+        MigrateDestinationNode::getKeySchema()
       );
       
       /*
@@ -213,7 +213,7 @@ class NewsMigration extends XMLMigration {
                            'description' => 'URL of the page in Cascade',
                           )
         ),
-        MigrateDestinationTerm::getKeySchema()
+        MigrateDestinationNode::getKeySchema()
       );
       
       /*

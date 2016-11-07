@@ -1850,6 +1850,38 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_wrapper|field_collection_item|field_section_navigation|data_export';
+  $field_group->group_name = 'group_title_wrapper';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_section_navigation';
+  $field_group->mode = 'data_export';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title Wrapper',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_group_title',
+      1 => 'field_links',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-title-wrapper field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_title_wrapper|field_collection_item|field_section_navigation|data_export'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_top|taxonomy_term|site_sections|form';
   $field_group->group_name = 'group_top';
   $field_group->entity_type = 'taxonomy_term';
@@ -2012,6 +2044,7 @@ function evergreen_content_field_group_info() {
   t('Secondary Content');
   t('Sponsor');
   t('Studies');
+  t('Title Wrapper');
   t('Title, Time, and Place');
   t('Top Level');
   t('Website-Specific Content');

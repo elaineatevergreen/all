@@ -12580,7 +12580,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'Describe the kinds of jobs and advanced study done by students who studied this subject. Eventually this field will incorporate linked profiles.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -12679,7 +12679,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'What places, groups, or tools make Evergreen distinctive for this field of study?',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -12878,7 +12878,7 @@ function evergreen_content_field_default_field_instances() {
     'description' => 'This field can include extra images or transitional content.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
