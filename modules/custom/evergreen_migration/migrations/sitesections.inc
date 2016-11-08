@@ -44,15 +44,11 @@ class SiteSectionMigration extends EvergreenMigration {
     // other options are available. In this case, MigrateFileUri indicates that
     // the 'image' value is a URI.
     
-    $this->addFieldMapping('field_background_image:file_class')
-         ->defaultValue('MigrateFileUri');
+    $this->addFieldMapping('field_background_image:file_class')->defaultValue('MigrateFileUri');
     // Here we specify the directory containing the source files.
-    $this->addFieldMapping('field_background_image:source_dir')
-         ->defaultValue('http://www.evergreen.edu/_inc/inventory/backgrounds/');
-    $this->addFieldMapping('field_background_image:destination_dir')
-    	->defaultValue('public://images/backgrounds');
-    //$this->addFieldMapping('field_background_image:file_replace')
-    //     ->defaultValue(FILE_EXISTS_REUSE);
+    $this->addFieldMapping('field_background_image:source_dir')->defaultValue('http://www.evergreen.edu/_inc/inventory/backgrounds/');
+    $this->addFieldMapping('field_background_image:destination_dir')->defaultValue('public://images/backgrounds');
+    $this->addFieldMapping('field_background_image:file_replace')->defaultValue(FILE_EXISTS_REUSE);
 
 
 

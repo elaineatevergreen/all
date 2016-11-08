@@ -176,6 +176,11 @@ function evergreen_content_context_default_contexts() {
   $context->description = 'Sets section design for Fields of Study pages';
   $context->tag = 'sections';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'studies' => 'studies',
+      ),
+    ),
     'taxonomy_term' => array(
       'values' => array(
         'fields_of_study' => 'fields_of_study',

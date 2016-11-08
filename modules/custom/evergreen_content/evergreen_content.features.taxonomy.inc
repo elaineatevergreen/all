@@ -105,7 +105,7 @@ function evergreen_content_taxonomy_default_vocabularies() {
       'name' => 'Fields of Study',
       'machine_name' => 'fields_of_study',
       'description' => 'Handles the subject areas for the college catalog and ways of describing the curriculum.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
