@@ -6266,7 +6266,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 13,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -6405,7 +6405,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -6522,7 +6522,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 12,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -6585,6 +6585,66 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-directory_office-field_last_name'.
+  $field_instances['node-directory_office-field_last_name'] = array(
+    'bundle' => 'directory_office',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact_row' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_last_name',
+    'label' => 'Alpha-ordering office name',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -6706,7 +6766,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 15,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -6824,7 +6884,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 17,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -6882,7 +6942,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 18,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -7212,7 +7272,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -13225,6 +13285,7 @@ function evergreen_content_field_default_field_instances() {
   t('Agendas');
   t('Alert Message');
   t('All lower-case, separated by spaces.');
+  t('Alpha-ordering office name');
   t('Alt Text');
   t('Alternate Phone');
   t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
@@ -13471,6 +13532,7 @@ function evergreen_content_field_default_field_instances() {
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
   t('This information can be aimed at people in the field with advanced experience.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
+  t('This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.');
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
   t('This is entirely optional; however, some buildings have formal names that should be recorded in addition to their common name.');
   t('This is for students to determine which classes they might be eligible to take.');

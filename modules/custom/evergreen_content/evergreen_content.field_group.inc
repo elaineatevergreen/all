@@ -1259,6 +1259,7 @@ function evergreen_content_field_group_info() {
       9 => 'field_related_offices',
       10 => 'field_room',
       11 => 'field_websites',
+      12 => 'field_last_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

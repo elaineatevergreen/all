@@ -4650,6 +4650,7 @@ return($term); ';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -5011,7 +5012,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_faculty']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_faculty']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_faculty']['settings'] = array(
-    'link' => 0,
+    'link' => 1,
   );
   $handler->display->display_options['fields']['field_faculty']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_faculty']['separator'] = '; ';
@@ -5059,10 +5060,39 @@ return($term); ';
   $handler->display->display_options['fields']['field_quarters_open']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_quarters_open']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_quarters_open']['field_api_classes'] = TRUE;
+  /* Field: Content: Minimum Credits */
+  $handler->display->display_options['fields']['field_minimum_credits']['id'] = 'field_minimum_credits';
+  $handler->display->display_options['fields']['field_minimum_credits']['table'] = 'field_data_field_minimum_credits';
+  $handler->display->display_options['fields']['field_minimum_credits']['field'] = 'field_minimum_credits';
+  $handler->display->display_options['fields']['field_minimum_credits']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_minimum_credits']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_minimum_credits']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_minimum_credits']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_minimum_credits']['field_api_classes'] = TRUE;
+  /* Field: Content: Maximum Credits */
+  $handler->display->display_options['fields']['field_maximum_credits']['id'] = 'field_maximum_credits';
+  $handler->display->display_options['fields']['field_maximum_credits']['table'] = 'field_data_field_maximum_credits';
+  $handler->display->display_options['fields']['field_maximum_credits']['field'] = 'field_maximum_credits';
+  $handler->display->display_options['fields']['field_maximum_credits']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_maximum_credits']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_maximum_credits']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_maximum_credits']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_maximum_credits']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_maximum_credits']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -5137,6 +5167,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_fields_of_study_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['operator_id'] = 'field_fields_of_study_tid_op';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['label'] = 'Fields of Study';
@@ -5160,6 +5191,58 @@ return($term); ';
   );
   $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
+  /* Filter criterion: Content: Minimum Credits (field_minimum_credits) */
+  $handler->display->display_options['filters']['field_minimum_credits_value']['id'] = 'field_minimum_credits_value';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['table'] = 'field_data_field_minimum_credits';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['field'] = 'field_minimum_credits_value';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_minimum_credits_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_minimum_credits_value']['expose']['operator_id'] = 'field_minimum_credits_value_op';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['expose']['label'] = 'Minimum Credits';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['expose']['operator'] = 'field_minimum_credits_value_op';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['expose']['identifier'] = 'field_minimum_credits_value';
+  $handler->display->display_options['filters']['field_minimum_credits_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Maximum Credits (field_maximum_credits) */
+  $handler->display->display_options['filters']['field_maximum_credits_value']['id'] = 'field_maximum_credits_value';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['table'] = 'field_data_field_maximum_credits';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['field'] = 'field_maximum_credits_value';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_maximum_credits_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_maximum_credits_value']['expose']['operator_id'] = 'field_maximum_credits_value_op';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['expose']['label'] = 'Maximum Credits';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['expose']['operator'] = 'field_maximum_credits_value_op';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['expose']['identifier'] = 'field_maximum_credits_value';
+  $handler->display->display_options['filters']['field_maximum_credits_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
 
   /* Display: Undergrad Catalog */
   $handler = $view->new_display('page', 'Undergrad Catalog', 'page');
@@ -6193,10 +6276,10 @@ return($term); ';
   $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website']['type'] = 'link_url';
   $handler->display->display_options['fields']['field_website']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Title */
-  $handler->display->display_options['sorts']['title']['id'] = 'title';
-  $handler->display->display_options['sorts']['title']['table'] = 'node';
-  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sort criterion: Content: Last name (field_last_name) */
+  $handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+  $handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
   /* Contextual filter: Content: Last name (field_last_name) */
   $handler->display->display_options['arguments']['field_last_name_value']['id'] = 'field_last_name_value';
   $handler->display->display_options['arguments']['field_last_name_value']['table'] = 'field_data_field_last_name';
@@ -7098,7 +7181,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -7897,12 +7980,36 @@ return($term); ';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['alter']['text'] = ', [field_first_name] ';
+  $handler->display->display_options['fields']['field_first_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_first_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_default_classes'] = FALSE;
+  /* Field: Content: Last name */
+  $handler->display->display_options['fields']['field_last_name_1']['id'] = 'field_last_name_1';
+  $handler->display->display_options['fields']['field_last_name_1']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['field'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['label'] = '';
+  $handler->display->display_options['fields']['field_last_name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_default_classes'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_last_name_1][field_first_name]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -7912,12 +8019,12 @@ return($term); ';
   $handler->display->display_options['fields']['field_reference']['field'] = 'field_reference';
   $handler->display->display_options['fields']['field_reference']['label'] = 'Name';
   $handler->display->display_options['fields']['field_reference']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_reference']['alter']['text'] = '[title]: See [field_reference]';
+  $handler->display->display_options['fields']['field_reference']['alter']['text'] = '<strong>[field_last_name_1][field_first_name]</strong>: See [field_reference]';
   $handler->display->display_options['fields']['field_reference']['element_type'] = '0';
   $handler->display->display_options['fields']['field_reference']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_reference']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_reference']['empty'] = '[title]';
+  $handler->display->display_options['fields']['field_reference']['empty'] = '[title] ';
   $handler->display->display_options['fields']['field_reference']['settings'] = array(
     'link' => 1,
   );
