@@ -1190,10 +1190,10 @@ function evergreen_content_strongarm() {
           'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '6',
         ),
       ),
       'display' => array(),

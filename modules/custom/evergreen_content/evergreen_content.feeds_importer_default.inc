@@ -135,7 +135,10 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 'terms/begin_term',
           'xpathparser:12' => 'terms/end_term',
           'xpathparser:14' => 'faculty',
-          'xpathparser:15' => 'related_fields/text()',
+          'xpathparser:15' => 'related_field',
+          'xpathparser:16' => 'quarters_offered',
+          'xpathparser:17' => 'quarters_open',
+          'xpathparser:18' => 'time_offered',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -150,6 +153,9 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:12' => 0,
           'xpathparser:14' => 0,
           'xpathparser:15' => 0,
+          'xpathparser:16' => 0,
+          'xpathparser:17' => 0,
+          'xpathparser:18' => 0,
         ),
         'context' => '/div/div/entry',
         'exp' => array(
@@ -168,6 +174,9 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:11' => 0,
             'xpathparser:12' => 0,
             'xpathparser:14' => 0,
+            'xpathparser:16' => 0,
+            'xpathparser:17' => 0,
+            'xpathparser:18' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -249,6 +258,24 @@ function evergreen_content_feeds_importer_default() {
           11 => array(
             'source' => 'xpathparser:15',
             'target' => 'field_fields_of_study',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          12 => array(
+            'source' => 'xpathparser:16',
+            'target' => 'field_quarters_offered',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          13 => array(
+            'source' => 'xpathparser:17',
+            'target' => 'field_quarters_open',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          14 => array(
+            'source' => 'xpathparser:18',
+            'target' => 'field_time_offered',
             'unique' => FALSE,
           ),
         ),
@@ -360,6 +387,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:4' => 'name',
           'xpathparser:5' => 'fields/field',
           'xpathparser:6' => '@user_name',
+          'xpathparser:7' => 'planning_unit',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -369,6 +397,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:4' => 0,
           'xpathparser:5' => 0,
           'xpathparser:6' => 0,
+          'xpathparser:7' => 0,
         ),
         'context' => '/instructors/faculty',
         'exp' => array(
@@ -382,6 +411,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:4' => 0,
             'xpathparser:5' => 0,
             'xpathparser:6' => 0,
+            'xpathparser:7' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -439,6 +469,12 @@ function evergreen_content_feeds_importer_default() {
           7 => array(
             'source' => 'xpathparser:6',
             'target' => 'field_headshot:uri',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          8 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'field_planning_unit_puc',
             'unique' => FALSE,
           ),
         ),

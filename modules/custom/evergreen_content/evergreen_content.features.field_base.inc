@@ -2905,6 +2905,41 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_planning_unit_puc'.
+  $field_bases['field_planning_unit_puc'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_planning_unit_puc',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'CCP' => 'Critical and Creative Practices',
+        'CON' => 'Consciousness Studies',
+        'CTL' => 'Culture, Text, and Language',
+        'EA' => 'Expressive Arts',
+        'ES' => 'Environmental Studies',
+        'NP' => 'Native Programs',
+        'SI' => 'Scientific Inquiry',
+        'SJ' => 'Sustainability and Justice',
+        'TAC' => 'Tacoma Program',
+        'MES' => 'Master of Environmental Studies',
+        'MIT' => 'Master in Teaching',
+        'MPA' => 'Master of Public Administration',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_preparatory_for'.
   $field_bases['field_preparatory_for'] = array(
     'active' => 1,
@@ -2919,11 +2954,9 @@ function evergreen_content_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_prerequisites'.

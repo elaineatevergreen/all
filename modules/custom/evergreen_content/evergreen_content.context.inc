@@ -83,6 +83,11 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'views' => array(
+      'values' => array(
+        'catalog:page' => 'catalog:page',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
