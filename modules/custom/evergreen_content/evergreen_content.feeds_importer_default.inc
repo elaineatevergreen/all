@@ -132,8 +132,8 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:1' => 'body',
           'xpathparser:9' => 'preparatory_for/p',
           'xpathparser:13' => 'location',
-          'xpathparser:11' => 'terms/begin_term',
-          'xpathparser:12' => 'terms/end_term',
+          'xpathparser:11' => 'terms[@class=\'odd\']',
+          'xpathparser:12' => 'terms[@class=\'even\']',
           'xpathparser:15' => 'related_field',
           'xpathparser:16' => 'quarters_offered',
           'xpathparser:17' => 'quarters_open',
@@ -294,6 +294,12 @@ function evergreen_content_feeds_importer_default() {
           16 => array(
             'source' => 'xpathparser:21',
             'target' => 'field_faculty:label',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          17 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_academic_year',
             'unique' => FALSE,
           ),
         ),
