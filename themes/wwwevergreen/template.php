@@ -14,8 +14,9 @@ function wwwevergreen_preprocess_page(&$variables) {
     //some rewriting of page titles!
     //this rewrites individual directory people pages for a nicer title (Elaine Nelson vs Nelson, Elaine)
     if ($variables['node']->type === 'directory_individual') {
-	  $temptitle = explode(',', check_plain($variables['node']->title));
-	  $temptitle = $temptitle[1] . ' ' . $temptitle[0];
+	  //$temptitle = explode(',', check_plain($variables['node']->title));
+	  //$temptitle = $temptitle[1] . ' ' . $temptitle[0];
+	  $temptitle = $variables['node']->field_first_name['und'][0]['safe_value'] . ' ' . $variables['node']->field_last_name['und'][0]['safe_value'];
 	  $variables['title'] = $temptitle;
 	  drupal_set_title($temptitle);
   	} 
