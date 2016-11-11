@@ -141,6 +141,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:19' => 'minimum_credits',
           'xpathparser:20' => 'maximum_credits',
           'xpathparser:21' => 'faculty',
+          'xpathparser:22' => 'class_standing_codes',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -160,6 +161,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:19' => 0,
           'xpathparser:20' => 0,
           'xpathparser:21' => 0,
+          'xpathparser:22' => 0,
         ),
         'context' => '/div/div/entry',
         'exp' => array(
@@ -183,6 +185,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:19' => 0,
             'xpathparser:20' => 0,
             'xpathparser:21' => 0,
+            'xpathparser:22' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -300,6 +303,12 @@ function evergreen_content_feeds_importer_default() {
           17 => array(
             'source' => 'Blank source 1',
             'target' => 'field_academic_year',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          18 => array(
+            'source' => 'xpathparser:22',
+            'target' => 'field_class_standing',
             'unique' => FALSE,
           ),
         ),
