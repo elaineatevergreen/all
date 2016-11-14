@@ -1190,10 +1190,10 @@ function evergreen_content_strongarm() {
           'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
@@ -3146,7 +3146,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_directory_individual_pattern';
-  $strongarm->value = 'directory/people/[node:title]';
+  $strongarm->value = 'directory/people/[node:field_last_name]-[node:field_first_name]';
   $export['pathauto_node_directory_individual_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3197,6 +3197,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_home_page_pattern';
   $strongarm->value = 'home/[node:title]';
   $export['pathauto_node_home_page_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_job_post_pattern';
+  $strongarm->value = 'employment/jobs/[node:title]';
+  $export['pathauto_node_job_post_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -311,9 +311,9 @@ function evergreen_content_field_group_info() {
       3 => 'field_maximum_credits',
       4 => 'field_minimum_credits',
       5 => 'field_offering_type',
-      6 => 'field_preparatory_for',
-      7 => 'field_status_date',
-      8 => 'field_fields_of_study',
+      6 => 'field_status_date',
+      7 => 'field_fields_of_study',
+      8 => 'field_preparatory_for',
       9 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -981,6 +981,7 @@ function evergreen_content_field_group_info() {
       3 => 'field_is_faculty',
       4 => 'field_related_subjects_directory',
       5 => 'field_faculty_directory_subject_',
+      6 => 'field_planning_unit_puc',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1258,6 +1259,7 @@ function evergreen_content_field_group_info() {
       9 => 'field_related_offices',
       10 => 'field_room',
       11 => 'field_websites',
+      12 => 'field_last_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -1434,7 +1436,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Misc Options',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_next_offered',
       1 => 'field_prerequisites',
@@ -1674,7 +1676,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Quarters',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_academic_year',
       1 => 'field_begin_term',

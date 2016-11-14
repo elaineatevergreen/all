@@ -39,12 +39,14 @@ theme for individual person pages
     
   <div>
     <h2><span>Contact Information</span></h2>
+    <?php if (isset($content['group_contact']['field_email'])) { ?>
     <div>
       <span class="field-label">Email:</span>
       <span class="field-email">
         <?php print render($content['group_contact']['field_email']) ?>
       </span>
     </div>
+    <?php }; ?>
     <div class="p-tel">
       <?php if (isset($content['group_contact']['field_phone'])) {
 	        ?><span class="p-tel"><?php print render($content['group_contact']['field_phone']) ?> </span><?php

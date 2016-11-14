@@ -13,6 +13,95 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-blank_source_1-rewrite';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => '[xpathparser:11]',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Rewrite';
+  $export['catalog-blank_source_1-rewrite'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-blank_source_1-sprintf';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => '%.4s',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Four characters only';
+  $export['catalog-blank_source_1-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_11-trim';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:11';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog-xpathparser_11-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_12-trim';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog-xpathparser_12-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_22-explode';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:22';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 5;
+  $feeds_tamper->description = 'Explode';
+  $export['catalog-xpathparser_22-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_22-trim';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:22';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 6;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog-xpathparser_22-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'catalog-xpathparser_7-explode';
   $feeds_tamper->importer = 'catalog';
   $feeds_tamper->source = 'xpathparser:7';
@@ -184,7 +273,7 @@ function evergreen_content_feeds_tamper_default() {
   $export['office_directory_facility-blank_source_1-convert_boolean'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory_facility-blank_source_1-default_value';
   $feeds_tamper->importer = 'office_directory_facility';
@@ -246,6 +335,20 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'REGEX to remove Building';
   $export['office_directory_facility-xpathparser_9-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'people_directory-xpathparser_10-convert_case';
+  $feeds_tamper->importer = 'people_directory';
+  $feeds_tamper->source = 'xpathparser:10';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '0',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['people_directory-xpathparser_10-convert_case'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
