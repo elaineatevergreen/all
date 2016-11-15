@@ -776,6 +776,40 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|catalog_entry|default';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Program Details',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_fields_of_study',
+      1 => 'field_preparatory_for',
+      2 => 'group_location_schedule',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Program Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-details field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_details|node|catalog_entry|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|event|default';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'node';
@@ -1361,6 +1395,41 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_location_on_campus|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_location_schedule|node|catalog_entry|default';
+  $field_group->group_name = 'group_location_schedule';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_details';
+  $field_group->data = array(
+    'label' => 'Location and Schedule',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_advertised_schedule',
+      1 => 'field_location',
+      2 => 'field_off_campus_location',
+      3 => 'field_time_offered',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Location and Schedule',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-location-schedule field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_location_schedule|node|catalog_entry|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -2034,6 +2103,7 @@ function evergreen_content_field_group_info() {
   t('Image float');
   t('Imported Content');
   t('Link');
+  t('Location and Schedule');
   t('Location: On Campus');
   t('Meetings');
   t('Misc Options');
@@ -2042,6 +2112,7 @@ function evergreen_content_field_group_info() {
   t('Participants');
   t('Phone Numbers');
   t('Primary Content');
+  t('Program Details');
   t('Prospective Student Nav');
   t('Quarters');
   t('Secondary Content');

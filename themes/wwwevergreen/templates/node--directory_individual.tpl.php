@@ -36,7 +36,8 @@ theme for individual person pages
 	<?php }; ?>
     
     
-    
+  <?php if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
+
   <div>
     <h2><span>Contact Information</span></h2>
     <?php if (isset($content['group_contact']['field_email'])) { ?>
@@ -59,17 +60,29 @@ theme for individual person pages
         }; ?>
     </div>
     <div class="extended-address">
+	    <?php if (isset($content['group_contact']['field_building_alt'])) { ?>
       <div>
         <span class="field-label">Building:</span>
         <span class="field-building-alt"><?php print render($content['group_contact']['field_building_alt']) ?></span>
       </div>
+      	<?php
+	      	};
+	      	if(isset($content['group_contact']['field_room'])) {
+		?>
       <div>
         <span class="field-label">Room:</span>
         <span class="field-room"><?php print render($content['group_contact']['field_room']) ?></span>
       </div>
+      <?php
+	      	};
+	      	if(isset($content['group_contact']['field_mailstop'])) {
+		?>
         <div>
           <span class="field-label">Mailstop:</span>
           <span class="field-mailstop"><?php print render($content['group_contact']['field_mailstop']) ?></span>
       </div>
+      <?php }; ?>
     </div>
   </div>
+  
+  <?php }; //end check for *any* contact information ?>
