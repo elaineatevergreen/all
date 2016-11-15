@@ -115,6 +115,12 @@ function evergreen_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: image_class.
+  $styles['image_class'] = array(
+    'label' => 'Image Class',
+    'effects' => array(),
+  );
+
   // Exported image style: large__800px_wide_.
   $styles['large__800px_wide_'] = array(
     'label' => 'Large (800px wide)',

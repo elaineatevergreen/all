@@ -3516,6 +3516,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-catalog_entry-field_time_offered'] = array(
     'bundle' => 'catalog_entry',
     'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => 'This needs to be parsed from the options sent in the XML.',
     'display' => array(
@@ -3534,7 +3535,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_time_offered',
     'label' => 'Time Offered',
     'required' => 0,
@@ -5087,11 +5088,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_first_name',
     'is_property' => 0,
     'label' => 'First name',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5139,7 +5142,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'image_class',
         ),
         'type' => 'image',
         'weight' => 5,
@@ -5439,11 +5442,13 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_last_name',
     'is_property' => 0,
     'label' => 'Last name',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5522,19 +5527,24 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_location_off_campus',
     'is_property' => 0,
     'label' => 'Location Off Campus',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'addressfield',
       'settings' => array(
-        'available_countries' => array(),
-        'default_country' => 'site_default',
+        'available_countries' => array(
+          'UM' => 'UM',
+          'US' => 'US',
+        ),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-postal-code' => 0,
