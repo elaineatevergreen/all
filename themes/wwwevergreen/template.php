@@ -80,6 +80,13 @@ function wwwevergreen_field__field_display_name(&$variables) {
 	return $output;
 }
 
+//adds class="image" to headshot images, and in fact any image field where the display style is set to "Image Class"
+function wwwevergreen_preprocess_image(&$variables) {
+  if(isset($variables['style_name']) and $variables['style_name'] == 'image_class') {
+      $variables['attributes']['class'][] = "image";
+  }
+}
+
 //rewriting the submitted by/date line
 //good tips here https://www.drupal.org/node/1072640#comment-6295608
 //also http://drupal.stackexchange.com/questions/11215/how-to-load-a-user-field-in-template-preprocess-comment

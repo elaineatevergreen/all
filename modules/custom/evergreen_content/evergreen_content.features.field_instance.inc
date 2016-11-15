@@ -5142,7 +5142,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'image_class',
         ),
         'type' => 'image',
         'weight' => 5,
@@ -5527,19 +5527,24 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_location_off_campus',
     'is_property' => 0,
     'label' => 'Location Off Campus',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'addressfield',
       'settings' => array(
-        'available_countries' => array(),
-        'default_country' => 'site_default',
+        'available_countries' => array(
+          'UM' => 'UM',
+          'US' => 'US',
+        ),
+        'default_country' => '',
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-postal-code' => 0,
