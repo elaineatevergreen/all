@@ -61,6 +61,7 @@ function evergreen_content_field_group_info() {
       0 => 'body',
       1 => 'field_short_description',
       2 => 'field_charge',
+      3 => 'field_final_report',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
