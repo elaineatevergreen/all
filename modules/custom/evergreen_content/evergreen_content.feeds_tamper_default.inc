@@ -71,6 +71,26 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_18-find_replace';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:18';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'Day, Evening and Weekend',
+    'replace' => 'Day, Evening, and Weekend',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'OXFORD COMMA, y\'all';
+  $export['catalog-xpathparser_18-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'catalog-xpathparser_22-explode';
   $feeds_tamper->importer = 'catalog';
   $feeds_tamper->source = 'xpathparser:22';
@@ -129,6 +149,20 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Set default for faculty importing';
   $export['faculty_directory-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'faculty_directory-xpathparser_4-convert_case';
+  $feeds_tamper->importer = 'faculty_directory';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '0',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['faculty_directory-xpathparser_4-convert_case'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -375,7 +409,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:2';
   $feeds_tamper->plugin_id = 'find_replace_regex';
   $feeds_tamper->settings = array(
-    'find' => '/[a-zA-Z ()\']*, /',
+    'find' => '/[^,]*, /',
     'replace' => '',
     'limit' => '',
     'real_limit' => -1,
@@ -392,7 +426,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:5';
   $feeds_tamper->plugin_id = 'find_replace_regex';
   $feeds_tamper->settings = array(
-    'find' => '/, [a-zA-Z ()\']*/',
+    'find' => '/, (.)*/',
     'replace' => '',
     'limit' => '',
     'real_limit' => -1,

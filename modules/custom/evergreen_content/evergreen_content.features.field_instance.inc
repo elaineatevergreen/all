@@ -3516,6 +3516,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-catalog_entry-field_time_offered'] = array(
     'bundle' => 'catalog_entry',
     'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => 'This needs to be parsed from the options sent in the XML.',
     'display' => array(
@@ -3534,7 +3535,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_time_offered',
     'label' => 'Time Offered',
     'required' => 0,

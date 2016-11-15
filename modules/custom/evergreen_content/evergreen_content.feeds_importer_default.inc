@@ -996,8 +996,8 @@ function evergreen_content_feeds_importer_default() {
         'exp' => array(
           'errors' => 1,
           'debug' => array(
-            'xpathparser:10' => 'xpathparser:10',
             'context' => 0,
+            'xpathparser:10' => 0,
             'xpathparser:2' => 0,
             'xpathparser:5' => 0,
             'xpathparser:4' => 0,
