@@ -68,6 +68,7 @@ function wwwevergreen_preprocess_page(&$variables) {
 }
 
 //similar to the directory function above, this rewrites people's names to be easier to read.
+//I have no idea if this is actually used anywhere. GOOD TIMES.
 function wwwevergreen_field__field_display_name(&$variables) {
 	$output = '';
 	
@@ -76,11 +77,11 @@ function wwwevergreen_field__field_display_name(&$variables) {
 		$name = $name[1] . ' ' . $name[0];
 		$output .= $name;
 	};
-	
 	return $output;
 }
 
 //adds class="image" to headshot images, and in fact any image field where the display style is set to "Image Class"
+//also adds classes on square and rectangular thumbnails
 function wwwevergreen_preprocess_image(&$variables) {
   if(isset($variables['style_name'])) {
 	if($variables['style_name'] == 'image_class') {
@@ -88,6 +89,9 @@ function wwwevergreen_preprocess_image(&$variables) {
     };
     if($variables['style_name'] == 'portrait_thumbnail2') {
       $variables['attributes']['class'][] = "u-photo";
+    };
+    if($variables['style_name'] == 'portrait_thumbnail') {
+      $variables['attributes']['class'][] = "program-faculty";
     };
   };
 }
@@ -119,14 +123,38 @@ function wwwevergreen_preprocess_node(&$variables) {
 	//build the submitted by text
     $variables['submitted'] = t('Written by !username on !datetime', array('!username' => $posted_name, '!datetime' => format_date($variables['node']->created, 'custom', 'F j, Y \a\t g:i a')));
   }
+  
+  //for catalog entries, let's make a nice-looking description of the quarters offered!
+  if ($variables['type'] === 'catalog_entry') {
+	$fall = $variables['field_academic_year'][0]['safe_value'];
+	$winterspring = $fall+1;
+	  
+	foreach($variables['field_quarters_offered'] as $q) {
+		  
+		$quarter = $q['value'];
+		if($quarter == 'Fall') { 
+			$quarters[] = 'Fall ' . $fall; 
+		} else {
+			$quarters[] = $quarter . ' ' . $winterspring;
+		};		  
+	}
+	
+	if(count($quarters) == 1) {
+		$quarters_intro = $quarters[0] . ' quarter';
+	}
+	elseif(count($quarters) == 2) {
+		$quarters_intro .= $quarters[0] . ' and ' . $quarters[1] . " quarters";
+	}
+	elseif(count($quarters) == 3) {
+		$quarters_intro .= $quarters[0] . ', ' . $quarters[1] . ', and ' . $quarters[2] . " quarters";
+	}
+	elseif(count($quarters) == 4) {
+		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] . " quarters";
+	};
+	$variables['quarters_intro'] = $quarters_intro;
+  };
 }
 
-
-
-//makes sure headshots appearing in content have the right class.
-//function wwwevergreen_field__field_headshot(&$variables){
-	
-//};
 
 //NOTE: in Drupal 8, probably need to redo this from scratch. This is a particularly weird and verbose way to get all the non-breaking spaces and extension bolding in various phone numbers. And it also strips out all the markup, which is maybe not always the right solution?
 //this reformats the field so that the last four digits are bolded if it's an evergreen number.

@@ -1504,6 +1504,9 @@ function evergreen_content_field_default_field_bases() {
           'entityqueue' => array(
             'status' => 0,
           ),
+          'field_default_token' => array(
+            'status' => TRUE,
+          ),
           'views-select-list' => array(
             'status' => 0,
           ),

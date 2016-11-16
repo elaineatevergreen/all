@@ -5329,10 +5329,11 @@ return($term); ';
   $handler->display->display_options['fields']['field_location']['element_class'] = 'message';
   $handler->display->display_options['fields']['field_location']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_location']['element_default_classes'] = FALSE;
-  /* Field: Content: Faculty */
+  /* Field: Content: Taught by */
   $handler->display->display_options['fields']['field_faculty']['id'] = 'field_faculty';
   $handler->display->display_options['fields']['field_faculty']['table'] = 'field_data_field_faculty';
   $handler->display->display_options['fields']['field_faculty']['field'] = 'field_faculty';
+  $handler->display->display_options['fields']['field_faculty']['label'] = 'Faculty';
   $handler->display->display_options['fields']['field_faculty']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_faculty']['element_class'] = 'faculty';
   $handler->display->display_options['fields']['field_faculty']['element_wrapper_type'] = '0';
@@ -5852,7 +5853,7 @@ return($term); ';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Faculty (field_faculty) */
+  /* Contextual filter: Content: Taught by (field_faculty) */
   $handler->display->display_options['arguments']['field_faculty_target_id']['id'] = 'field_faculty_target_id';
   $handler->display->display_options['arguments']['field_faculty_target_id']['table'] = 'field_data_field_faculty';
   $handler->display->display_options['arguments']['field_faculty_target_id']['field'] = 'field_faculty_target_id';
@@ -7657,7 +7658,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
