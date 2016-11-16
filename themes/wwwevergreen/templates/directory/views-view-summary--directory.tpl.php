@@ -6,7 +6,7 @@
  *
  * @ingroup views_templates
  
- this version uses the Evergreen "alpha-index" style
+ this version uses the Evergreen "alpha-index" style, creating the alphabetical index for the directory
  */
 ?>
 
