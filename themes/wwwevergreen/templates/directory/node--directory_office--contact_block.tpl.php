@@ -28,11 +28,15 @@ display office information as a "contact block" usually on a page.
         
 
         <?php
-	        $staffURL = $base_path . "/node/" . trim(render($content['field_staff_page']));
+	        if(isset($content['field_staff_page'])) {
+	        	$staffURL = $base_path . "/node/" . trim(render($content['field_staff_page']));
 	    ?>
         <p><a href="<?php print $staffURL ?>">Our staff.</a></p>
         
-        <?php if ($content['field_hours'] or $content['body'] or $content['field_facebook'] or $content['field_twitter']) { ?>
+        <?php 
+	        };
+	        
+	        if (isset($content['field_hours']) or isset($content['body']) or isset($content['field_facebook']) or isset($content['field_twitter'])) { ?>
         	<dl>
 	    <?php if ($content['field_hours']) { ?>
 	        <dt>Hours</dt><dd><?php print render($content['field_hours']) ?></dd>

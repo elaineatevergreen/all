@@ -275,7 +275,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:12';
   $feeds_tamper->plugin_id = 'find_replace_regex';
   $feeds_tamper->settings = array(
-    'find' => '/ ([ABCDE]-)?[0-9]+([A-Z])*/',
+    'find' => '/ ([ABCDEL](-)*)?[0-9]+([A-Z])*/',
     'replace' => '',
     'limit' => '',
     'real_limit' => -1,
@@ -358,7 +358,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:12';
   $feeds_tamper->plugin_id = 'find_replace_regex';
   $feeds_tamper->settings = array(
-    'find' => '/ ([ABCDE]-)?[0-9]+([A-Z])*/',
+    'find' => '/ ([ABCDEL](-)*)?[0-9]+([A-Z])*/',
     'replace' => '',
     'limit' => '',
     'real_limit' => -1,
@@ -406,7 +406,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:12';
   $feeds_tamper->plugin_id = 'find_replace_regex';
   $feeds_tamper->settings = array(
-    'find' => '/ ([ABCDE]-)?[0-9]+([A-Z])*/',
+    'find' => '/ ([ABCDEL](-)*)?[0-9]+([A-Z])*/',
     'replace' => '',
     'limit' => '',
     'real_limit' => -1,
