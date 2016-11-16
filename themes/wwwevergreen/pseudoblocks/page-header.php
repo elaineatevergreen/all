@@ -20,7 +20,7 @@
 									<img alt="User" height="10" src="<?php echo($imagepath) ?>user-32.png" width="10"/> my.evergreen.edu</a>
 								</li>
 								<li class="internal-users-alt"><a href="http://evergreen.edu/webmail">Webmail</a></li>
-								<li><a href="http://evergreen.edu/directories.htm">Directories</a></li>
+								<li><a href="http://evergreen.edu/directory/home">Directories</a></li>
 							</ul>
 						</form>
 					</div>
