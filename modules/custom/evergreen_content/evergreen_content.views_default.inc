@@ -6562,6 +6562,7 @@ return($term); ';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -9135,7 +9136,7 @@ return($term); ';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Index Header';
-  $handler->display->display_options['header']['area']['content'] = '<h4 class="alpha-label">Offices & Groups</h4>';
+  $handler->display->display_options['header']['area']['content'] = '<h4 class="alpha-label">Browse by Last Name or Office</h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -9358,7 +9359,10 @@ return($term); ';
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<ul>
+  $handler->display->display_options['header']['area']['content'] = '<div class="box supplement">
+<p>Now offices and people are listed together. You can also link directly to the contact information for a single office or person, including complete faculty directory details.</p>
+</div>
+<ul>
 <li>For on-campus calls, simply use the last four digits of the phone number you want to call (starting with (360)&nbsp;867-XXXX or (253)&nbsp;680-XXXX).</li>
 <li>For campus open/closed status: call (360)&nbsp;867-6000, then press 1 for an up-to-the-minute announcement.</li>
 </ul>';
@@ -9550,7 +9554,7 @@ return($term); ';
   $handler->display->display_options['filters']['combine']['operator'] = 'contains';
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by Name or Title';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by Name, Title, Phone Number, or Email Address';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
@@ -9573,6 +9577,7 @@ return($term); ';
     'field_last_name_1' => 'field_last_name_1',
     'title' => 'title',
     'field_job_title' => 'field_job_title',
+    'field_phone' => 'field_phone',
   );
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
