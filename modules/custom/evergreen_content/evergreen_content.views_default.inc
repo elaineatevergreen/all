@@ -7658,7 +7658,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
