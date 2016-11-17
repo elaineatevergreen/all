@@ -67,7 +67,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http:/evergreen.edu/catalog">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
 									<!--<svg width="150">
@@ -78,7 +78,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http:/evergreen.edu/admissions/visit">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
 									<!--<svg width="150">
@@ -89,7 +89,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http:/evergreen.edu/admissions/visit">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
 									<!--<svg width="150">
@@ -100,7 +100,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http:/evergreen.edu/admissions/apply">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
 									<!--<svg width="150">
@@ -216,7 +216,7 @@
 										<div class="media-body">
 											<p>
 												You’ll be
-												<a href="academics/home.htm">better equipped for the workforce</a> after graduation because our unique academics more accurately reflect the real world.
+												<a href="academics/home">better equipped for the workforce</a> after graduation because our unique academics more accurately reflect the real world.
 											</p>
 										</div>
 									</div>
@@ -232,8 +232,8 @@
 										<div class="media-body">
 											<p>
 												You’ll have
-												<a href="costs/home.htm">less financial worry</a>. Evergreen has one of the lowest tuition costs and fastest time to degree of any Washington four-year school.
-												<a href="about/praise.htm">Fiske Guide calls it a 2015 “Best Buy.”</a>
+												<a href="costs/home">less financial worry</a>. Evergreen has one of the lowest tuition costs and fastest time to degree of any Washington four-year school.
+												<a href="about/praise">Fiske Guide calls it a 2015 “Best Buy.”</a>
 											</p>
 										</div>
 									</div>
@@ -248,7 +248,7 @@
 										</div>
 										<div class="media-body">
 											<p>
-												<a href="about/graduates.htm">97 percent of our graduates are working,</a> in graduate or professional schools, or otherwise doing something personally meaningful one year after graduation.
+												<a href="about/graduates">97 percent of our graduates are working,</a> in graduate or professional schools, or otherwise doing something personally meaningful one year after graduation.
 											</p>
 										</div>
 									</div>
@@ -264,7 +264,7 @@
 										<div class="media-body">
 											<p>
 												You’ll get hands-on experience right away because we give you
-												<a href="academics/resources.htm">access to an impressive range of tools and technologies</a> from our scanning electron microscope to a wealth of media equipment.
+												<a href="academics/resources">access to an impressive range of tools and technologies</a> from our scanning electron microscope to a wealth of media equipment.
 											</p>
 										</div>
 									</div>
@@ -279,7 +279,7 @@
 										</div>
 										<div class="media-body">
 											<p src="/_inc/images/icons/green/scene.png">
-												<a href="about/explorethearea.htm">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
+												<a href="about/explorethearea">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
 											</p>
 										</div>
 									</div>
@@ -295,7 +295,7 @@
 										<div class="media-body">
 											<p>
 												Speedy,
-												<a href="geoduck/home.htm">our humble and beloved mascot,</a> happens to be a geoduck—a large clam—that inevitably tops weirdest mascot lists year after year.
+												<a href="geoduck/home">our humble and beloved mascot,</a> happens to be a geoduck—a large clam—that inevitably tops weirdest mascot lists year after year.
 											</p>
 										</div>
 									</div>
@@ -303,7 +303,7 @@
 							</ul>
 							<p class="row">
 								<em>Want to know more?</em> Check out our
-								<a href="about/facts.htm">Fact Page.</a>
+								<a href="about/facts">Fact Page.</a>
 							</p>
 						</div><!-- /.row, end Fun Facts -->
 					</article><!-- /.main-content -->
