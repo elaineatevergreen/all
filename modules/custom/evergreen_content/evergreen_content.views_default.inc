@@ -7658,7 +7658,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -8186,6 +8186,15 @@ return($term); ';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p class="intro">Evergreen’s faculty members are distinguished both in scholarship and by their dedication to teaching.</p>
+<p>Find out about faculty research and publications: <a href="/faculty/spotlight">read the latest Faculty Spotlight</a>.</p>';
+  $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: First name */
@@ -8285,6 +8294,17 @@ return($term); ';
   $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
   $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
   $handler->display->display_options['fields']['field_room']['label'] = 'Location';
+  /* Field: Content: Interests */
+  $handler->display->display_options['fields']['field_interests']['id'] = 'field_interests';
+  $handler->display->display_options['fields']['field_interests']['table'] = 'field_data_field_interests';
+  $handler->display->display_options['fields']['field_interests']['field'] = 'field_interests';
+  $handler->display->display_options['fields']['field_interests']['label'] = '';
+  $handler->display->display_options['fields']['field_interests']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_interests']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_interests']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_interests']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_interests']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_interests']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -8319,12 +8339,13 @@ return($term); ';
   $handler->display->display_options['filters']['combine']['group'] = 1;
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by Name or Expertise';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search by Name, Expertise, or Interests';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+    13 => 0,
     12 => 0,
     11 => 0,
     9 => 0,
@@ -8337,7 +8358,6 @@ return($term); ';
     4 => 0,
   );
   $handler->display->display_options['filters']['combine']['fields'] = array(
-    'title' => 'title',
     'field_expertise' => 'field_expertise',
   );
   /* Filter criterion: Field: Related Subjects (Directory) (field_related_subjects_directory) */
@@ -8346,12 +8366,13 @@ return($term); ';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['field'] = 'field_related_subjects_directory_tid';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator_id'] = 'field_related_subjects_directory_tid_op';
-  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['label'] = 'Filter by Subject';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['label'] = 'Filter by Related Subject Area';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator'] = 'field_related_subjects_directory_tid_op';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['identifier'] = 'field_related_subjects_directory_tid';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+    13 => 0,
     12 => 0,
     11 => 0,
     9 => 0,
@@ -9343,12 +9364,36 @@ return($term); ';
 </ul>';
   $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['alter']['text'] = ', [field_first_name] ';
+  $handler->display->display_options['fields']['field_first_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_first_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_default_classes'] = FALSE;
+  /* Field: Content: Last name */
+  $handler->display->display_options['fields']['field_last_name_1']['id'] = 'field_last_name_1';
+  $handler->display->display_options['fields']['field_last_name_1']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['field'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['label'] = '';
+  $handler->display->display_options['fields']['field_last_name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_default_classes'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_last_name_1][field_first_name] ';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -9358,7 +9403,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_reference']['field'] = 'field_reference';
   $handler->display->display_options['fields']['field_reference']['label'] = 'Name';
   $handler->display->display_options['fields']['field_reference']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_reference']['alter']['text'] = '[title]: See [field_reference]';
+  $handler->display->display_options['fields']['field_reference']['alter']['text'] = '<strong>[field_last_name_1][field_first_name]</strong>: See [field_reference]';
   $handler->display->display_options['fields']['field_reference']['element_type'] = '0';
   $handler->display->display_options['fields']['field_reference']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_reference']['element_wrapper_type'] = '0';
@@ -9524,6 +9569,8 @@ return($term); ';
     4 => 0,
   );
   $handler->display->display_options['filters']['combine']['fields'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name_1' => 'field_last_name_1',
     'title' => 'title',
     'field_job_title' => 'field_job_title',
   );
@@ -9533,6 +9580,12 @@ return($term); ';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'longerthan';
   $handler->display->display_options['filters']['title']['value'] = '0';
+  /* Filter criterion: Content: Last name (field_last_name) */
+  $handler->display->display_options['filters']['field_last_name_value']['id'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
+  $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
   $handler->display->display_options['path'] = 'directory/home';
 
   /* Display: PUC */
