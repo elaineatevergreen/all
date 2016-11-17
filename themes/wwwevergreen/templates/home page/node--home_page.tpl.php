@@ -45,7 +45,7 @@
 					<!-- SVGs are experimental, and so commented out for now. -->
 					<ul class="element-list grid transporter">
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http://evergreen.edu/about">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
 									<!--<svg width="150">
@@ -56,7 +56,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/about">
+							<a href="http://evergreen.edu/about">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
 									<!--<svg width="150">
@@ -67,7 +67,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/catalog">
+							<a href="http://evergreen.edu/catalog">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
 									<!--<svg width="150">
@@ -78,7 +78,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/admissions/visit">
+							<a href="http://evergreen.edu/admissions/visit">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
 									<!--<svg width="150">
@@ -89,7 +89,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/admissions/visit">
+							<a href="http://evergreen.edu/admissions/visit">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
 									<!--<svg width="150">
@@ -100,7 +100,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="http:/evergreen.edu/admissions/apply">
+							<a href="http://evergreen.edu/admissions/apply">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
 									<!--<svg width="150">
