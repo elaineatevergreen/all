@@ -14,7 +14,8 @@ Cmnd_Alias EVERGREEN_DEPLOY_COMMANDS = \
   /sbin/service httpd stop, \
   /sbin/service httpd status, \
   /sbin/service httpd graceful, \
-  /bin/rsync
+  /bin/rsync, \
+  /bin/scp
 # Commands that admins need to be able to execute.
 Cmnd_Alias EVERGREEN_ADMIN_COMMANDS = \
   /bin/su - www_deploy
