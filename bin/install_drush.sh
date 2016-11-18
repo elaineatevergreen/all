@@ -8,5 +8,5 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv $HOME/composer.phar $HOME/bin/composer
 $HOME/bin/composer --version
-global require drush/drush
+composer global require drush/drush
 
