@@ -31,7 +31,8 @@
 	}
 }
 
-#tertiary-nav{
+#tertiary-nav,
+#views-exposed-form-catalog-page{  // Drupal; the filter form on the catalog page where #tertiary-nav would normall go... Can or should this just be changed to #tertiary-nav? -jkm
 	// box model
 	margin: 0 auto;
 	padding-right: 0;
