@@ -121,7 +121,7 @@ function evergreen_content_feeds_importer_default() {
       ),
     ),
     'parser' => array(
-      'plugin_key' => 'FeedsXPathParserXML',
+      'plugin_key' => 'FeedsXPathParserHTML',
       'config' => array(
         'sources' => array(
           'xpathparser:5' => 'cmd_id',
@@ -163,9 +163,9 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:21' => 0,
           'xpathparser:22' => 0,
         ),
-        'context' => '/div/div/entry',
+        'context' => '/html/body/div',
         'exp' => array(
-          'errors' => 1,
+          'errors' => 0,
           'debug' => array(
             'context' => 0,
             'xpathparser:5' => 0,
