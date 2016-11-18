@@ -21,3 +21,5 @@ deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
 echo "www site updates"
 run_site_updates $WWW_CODE site_updates_www
+# Push dev scripts up
+push_scripts.sh

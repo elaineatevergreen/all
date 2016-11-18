@@ -9,7 +9,7 @@ case "$CI_BUILD_REF_NAME" in
     ;;
   *master*)
     STAGE="prod"
-    export WWW_CODE='/var/www/www.evergreen.edu/htdocs'
+    export WWW_CODE='/var/www/evergreen.edu/htdocs'
     export SITE_SUFFIX="";
     ;;
   *)
