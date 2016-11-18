@@ -8,6 +8,6 @@
 <h2><?php print $label ?></h2>
 <ul>
 	<?php foreach ($items as $delta => $item): ?>
-      <?php print render($item); ?>
+      <li><?php print render($item); ?></li>
     <?php endforeach; ?>
 </ul>
