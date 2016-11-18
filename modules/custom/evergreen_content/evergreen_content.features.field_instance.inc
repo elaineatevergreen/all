@@ -792,12 +792,7 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'file-document-field_site_section'.
   $field_instances['file-document-field_site_section'] = array(
     'bundle' => 'document',
-    'default_value' => array(
-      0 => array(
-        'tid' => '[current-user:workbench-access-sections:first]',
-      ),
-    ),
-    'default_value_function' => 'field_default_token_default_value_function',
+    'default_value' => NULL,
     'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => 'Include the site section for easier finding and filtering. This will help you and other site editors link to the correct files.',
