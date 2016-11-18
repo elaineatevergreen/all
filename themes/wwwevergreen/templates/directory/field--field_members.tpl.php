@@ -7,7 +7,7 @@
 ?>
 
 <table>
-	<caption>People in this Office</caption>
+	<caption><?php print $label ?></caption>
 	<tr>
 		<th>Name and Title</th>
 		<th>Email</th>
