@@ -10,6 +10,11 @@ class FileImportMigration extends Migration {
   protected $baseDir;
 
   public function __construct($arguments) {
+	  
+	//I legit don't know if this does what I think it does.
+	$this->systemOfRecord = Migration::DESTINATION;
+
+	  
     parent::__construct($arguments);
     $this->description = t('Import files.');
     //$this->baseDir = '/Applications/MAMP/htdocs/migratefiles';
