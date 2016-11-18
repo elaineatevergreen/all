@@ -2,7 +2,20 @@
 User_Alias  GITLAB_USERS = gitlab-runner
 # Commands that need to run in runner jobs /automated deployment scripts
 Cmnd_Alias EVERGREEN_DEPLOY_COMMANDS = \
-  /bin/chown apache *
+  /bin/chown -R apache, \
+  /bin/chown apache, \
+  /bin/chown -R www_deploy, \
+  /bin/grep, \
+  /bin/tail, \
+  /bin/less, \
+  /bin/cat, \
+  /bin/chown www_deploy, \
+  /sbin/service httpd start, \
+  /sbin/service httpd stop, \
+  /sbin/service httpd status, \
+  /sbin/service httpd graceful, \
+  /bin/rsync, \
+  /bin/scp
 # Commands that admins need to be able to execute.
 Cmnd_Alias EVERGREEN_ADMIN_COMMANDS = \
   /bin/su - www_deploy

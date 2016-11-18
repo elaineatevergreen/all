@@ -46,9 +46,8 @@ Right now I think the only difference from the default html.tpl.php is the inclu
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
+?><!DOCTYPE html>
+<html dir="<?php print $language->dir; ?>">
 
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8" />
@@ -65,20 +64,20 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<!-- All other Apple touch icons have been deprecated and should be deleted soon. -->
-	<link href="http://evergreen.edu/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
-	<link color="#64933a" href="/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9 -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
+	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9 -->
 	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
-	<meta content="/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
-	<link href="http://evergreen.edu/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
+	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
 	<!-- favicons for everybody else -->
-	<link href="/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
-	<link href="/favicon-16.png" rel="icon" sizes="24x24" type="image/png"/>
-	<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-	<link href="/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
-	<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox 41+ -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png" rel="icon" sizes="24x24" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox 41+ -->
 	
-	<!--<link href="http://evergreen.edu/_inc/styles.css" media="all" rel="stylesheet" />-->
-	<link href="http://evergreen.edu/_inc/print.css" media="print" rel="stylesheet" />
+	<!--<link href="<?php print base_path() . path_to_theme() ?>/css/dist/styles.css" media="all" rel="stylesheet" />-->
+	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
 	<!-- Google Analytics -->
 	<script>

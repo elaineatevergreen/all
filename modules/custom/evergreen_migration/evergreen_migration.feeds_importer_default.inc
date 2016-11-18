@@ -13,6 +13,130 @@ function evergreen_migration_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = '_migration_upload_student_groups';
+  $feeds_importer->config = array(
+    'name' => '_Migration Upload: Student Groups',
+    'description' => '',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml html htm',
+        'direct' => FALSE,
+        'directory' => 'public://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsXPathParserXML',
+      'config' => array(
+        'sources' => array(
+          'xpathparser:0' => 'title',
+          'xpathparser:1' => 'content',
+          'xpathparser:3' => 'email/div/ul/li/a/@href',
+          'xpathparser:4' => 'categories',
+          'xpathparser:7' => 'meetingtimelong',
+          'xpathparser:5' => 'meetinglocation',
+          'xpathparser:6' => 'websites/div/ul/li/a/@href',
+        ),
+        'rawXML' => array(
+          'xpathparser:1' => 'xpathparser:1',
+          'xpathparser:0' => 0,
+          'xpathparser:3' => 0,
+          'xpathparser:4' => 0,
+          'xpathparser:7' => 0,
+          'xpathparser:5' => 0,
+          'xpathparser:6' => 0,
+        ),
+        'context' => '/groups/group',
+        'exp' => array(
+          'errors' => 0,
+          'debug' => array(
+            'context' => 0,
+            'xpathparser:0' => 0,
+            'xpathparser:1' => 0,
+            'xpathparser:3' => 0,
+            'xpathparser:4' => 0,
+            'xpathparser:7' => 0,
+            'xpathparser:5' => 0,
+            'xpathparser:6' => 0,
+          ),
+        ),
+        'allow_override' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsNodeProcessor',
+      'config' => array(
+        'expire' => '-1',
+        'author' => 0,
+        'authorize' => 0,
+        'mappings' => array(
+          0 => array(
+            'source' => 'xpathparser:0',
+            'target' => 'title',
+            'unique' => 1,
+            'language' => 'und',
+          ),
+          1 => array(
+            'source' => 'xpathparser:1',
+            'target' => 'body',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          2 => array(
+            'source' => 'xpathparser:3',
+            'target' => 'field_email',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_group_categories',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'xpathparser:7',
+            'target' => 'Temporary target 1',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_meetings',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
+            'source' => 'xpathparser:6',
+            'target' => 'field_websites:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+        ),
+        'insert_new' => '1',
+        'update_existing' => '2',
+        'update_non_existent' => 'unpublish',
+        'input_format' => 'basic_tags',
+        'skip_hash_check' => 0,
+        'bundle' => 'student_group',
+        'language' => 'und',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['_migration_upload_student_groups'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'alumni_circle_import';
   $feeds_importer->config = array(
     'name' => '_Migration Upload: Alumni Circle Import',
@@ -1189,6 +1313,18 @@ function evergreen_migration_feeds_importer_default() {
           3 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_group_title',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          4 => array(
+            'source' => 'xpathparser:4',
+            'target' => 'field_links:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'xpathparser:5',
+            'target' => 'field_links:title',
             'unique' => FALSE,
           ),
         ),

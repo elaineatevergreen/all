@@ -21,3 +21,8 @@ deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
 echo "www site updates"
 run_site_updates $WWW_CODE site_updates_www
+# Copy to production server.
+rsync -rtp --delete $HOME/bin/ www_deploy@860elwb01:./bin
+rsync -rtp --delete $HOME/bin/ www_deploy@860elwb02:./bin
+rsync -rtp --delete $HOME/etc/ www_deploy@860elwb01:./etc
+rsync -rtp --delete $HOME/etc/ www_deploy@860elwb02:./etc
