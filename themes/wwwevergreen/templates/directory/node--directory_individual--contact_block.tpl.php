@@ -7,7 +7,7 @@ themes each person as a row to go in a table.
 
 
     <tr>
-        <td><strong><?php print $title; ?></strong>, <?php print render($content['field_job_title']) ?></td>
+        <td><strong><?php print render($content['field_first_name']) . ' ' . render($content['field_last_name']) ?></strong>, <?php print render($content['field_job_title']) ?></td>
         <td><?php print render($content['field_email']) ?></td>
         <td><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?></td>
         <td><?php print render($content['field_mailstop']) ?></td>
