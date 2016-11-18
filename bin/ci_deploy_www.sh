@@ -27,6 +27,6 @@ rsync -rtp --delete $HOME/etc/ www_deploy@860elwb01:./etc
 rsync -rtp --delete $HOME/etc/ www_deploy@860elwb02:./etc
 rsync -rtp --delete site_updates_www/ www_deploy@860elwb01:./site_updates_www
 
-echo "www site updates"
-run_site_updates $WWW_CODE site_updates_www
-
+if [[ "$STAGE" != "prod" ]] ; then
+   run_site_updates $WWW_CODE site_updates_www
+fi
