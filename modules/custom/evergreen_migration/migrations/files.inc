@@ -12,7 +12,7 @@ class FileImportMigration extends Migration {
   public function __construct($arguments) {
 	  
 	//I legit don't know if this does what I think it does.
-	$this->systemOfRecord = Migration::DESTINATION;
+	//$this->systemOfRecord = Migration::DESTINATION;
 
 	  
     parent::__construct($arguments);
