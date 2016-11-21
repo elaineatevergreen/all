@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*!*
+ * Fields of Study Styles
+ *
+ * Styles for the fields of study pages.
+ *
+ * These styles were originally developed by Justin McDowell.
+ */
+@import "../tools";
+
+.studies-list{
+
+	li{
+		@include margin-default;
+	}
+
+	a{
+		// box model
+		border-bottom-width: 0;
+		// typography
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	ul{
+		// box model
+		border-left: 1.5px dashed mix($tint, $blueberry-susan, 60%);
+		margin-left: 0.25em;
+		padding-left: calc(0.75em - 1.5px);
+		// typography
+		list-style-type: none;
+
+		a{
+			font-weight: normal;
+		}
+	}
+}
+
+.in-depth > a::after{
+	// box model
+	height: 15px;
+	margin-bottom: -3px;
+	// layout
+	display: inline-block;
+	// behavior
+	transform: scale(0.8) translateY(7px);
+	// misc
+	content: url("/sites/all/themes/wwwevergreen/images/icons/in-depth.svg");
+
+	@include breakpoint($gamora){
+		// box model
+		height: auto;
+		padding: 0 0.5em;
+		// misc
+		transform: scale(1) translateY(4px);
+	}
+}
+
+.main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
+	content: "";
+}

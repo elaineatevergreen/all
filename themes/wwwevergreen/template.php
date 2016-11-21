@@ -1,22 +1,74 @@
 <?php
 	
-// some fun things that happen on nodes
+// allow per-node-type and panel page template files
+// rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
+	
+	//	  dsm($variables);
+	
   if (isset($variables['node']->type)) {
     // If the content type's machine name is "my_machine_name" the file
     // name will be "page--my-machine-name.tpl.php".
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
-      //this rewrites individual directory people pages for a nicer title (Elaine Nelson vs Nelson, Elaine)
-      if ($variables['node']->type === 'directory_individual') {
-	  	$temptitle = explode(',', check_plain($variables['node']->title));
-	  	$temptitle = $temptitle[1] . ' ' . $temptitle[0];
-	  	$variables['title'] = $temptitle;
-	  	drupal_set_title($temptitle);
-  	};
+    
+    //some rewriting of page titles!
+    //this rewrites individual directory people pages for a nicer title (Elaine Nelson vs Nelson, Elaine)
+    if ($variables['node']->type === 'directory_individual') {
+	  //$temptitle = explode(',', check_plain($variables['node']->title));
+	  //$temptitle = $temptitle[1] . ' ' . $temptitle[0];
+	  $temptitle = $variables['node']->field_first_name['und'][0]['safe_value'] . ' ' . $variables['node']->field_last_name['und'][0]['safe_value'];
+	  $variables['title'] = $temptitle;
+	  drupal_set_title($temptitle);
+  	} 
+  	// adds abbreviation to the end of a location name
+  	elseif ($variables['node']->type === 'location') {
+		$abbr = field_get_items('node', $variables['node'], 'field_abbreviated_building_name');
+		$abbr = $abbr[0]['value'];
+		$temptitle = check_plain($variables['node']->title);
+		$temptitle = $temptitle . " ($abbr)";
+		$variables['title'] = $temptitle;
+		drupal_set_title($temptitle);
+  	}
+  };
+  //custom pages for taxonomy terms, specifically used for fields of study.
+  if(arg(0) == 'taxonomy' && arg(1) == 'term') {
+        $tid = (int)arg(2);
+        $term = taxonomy_term_load($tid);
+        if(is_object($term)) {
+           $variables['theme_hook_suggestions'][] = 'page__'.$term->vocabulary_machine_name;
+        }
+  }
+  // allows for special template pages for panel pages.
+  if (module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
+        $variables['theme_hook_suggestions'][] = 'page__panels';
+        $variables['theme_hook_suggestions'][] = 'page__'  . $panel_page['name']; //this line doesn't seem to work?
+  };
+  // only do this for page-type nodes and only if Path module exists
+  if (module_exists('path') && isset($variables['node']) && $variables['node']->type == 'basic_page') {
+    // look up the alias from the url_alias table
+    $source = 'node/' .$variables['node']->nid;
+    $alias = db_query("SELECT alias FROM {url_alias} WHERE source = '$source'")->fetchField();
+    if ($alias != '')  {
+      // build a suggestion for every possibility
+      $parts = explode('/', $alias);
+      $suggestion = '';
+      foreach ($parts as $part) {
+        if ($suggestion == '') {
+          // first suggestion gets prefaced with 'page--'
+          $suggestion .= "page__$part";
+        } else {
+          // subsequent suggestions get appended
+          $suggestion .= "__$part";
+        }
+        // add the suggestion to the array
+        $variables['theme_hook_suggestions'][] = $suggestion;
+      }
+    }
   }
 }
 
 //similar to the directory function above, this rewrites people's names to be easier to read.
+//I have no idea if this is actually used anywhere. GOOD TIMES.
 function wwwevergreen_field__field_display_name(&$variables) {
 	$output = '';
 	
@@ -25,8 +77,23 @@ function wwwevergreen_field__field_display_name(&$variables) {
 		$name = $name[1] . ' ' . $name[0];
 		$output .= $name;
 	};
-	
 	return $output;
+}
+
+//adds class="image" to headshot images, and in fact any image field where the display style is set to "Image Class"
+//also adds classes on square and rectangular thumbnails
+function wwwevergreen_preprocess_image(&$variables) {
+  if(isset($variables['style_name'])) {
+	if($variables['style_name'] == 'image_class') {
+      $variables['attributes']['class'][] = "image";
+    };
+    if($variables['style_name'] == 'portrait_thumbnail2') {
+      $variables['attributes']['class'][] = "u-photo";
+    };
+    if($variables['style_name'] == 'portrait_thumbnail') {
+      $variables['attributes']['class'][] = "program-faculty";
+    };
+  };
 }
 
 //rewriting the submitted by/date line
@@ -56,15 +123,40 @@ function wwwevergreen_preprocess_node(&$variables) {
 	//build the submitted by text
     $variables['submitted'] = t('Written by !username on !datetime', array('!username' => $posted_name, '!datetime' => format_date($variables['node']->created, 'custom', 'F j, Y \a\t g:i a')));
   }
+  
+  //for catalog entries, let's make a nice-looking description of the quarters offered!
+  if ($variables['type'] === 'catalog_entry') {
+	$fall = $variables['field_academic_year'][0]['safe_value'];
+	$winterspring = $fall+1;
+	  
+	foreach($variables['field_quarters_offered'] as $q) {
+		  
+		$quarter = $q['value'];
+		if($quarter == 'Fall') { 
+			$quarters[] = 'Fall ' . $fall; 
+		} else {
+			$quarters[] = $quarter . ' ' . $winterspring;
+		};		  
+	}
+	
+	if(count($quarters) == 1) {
+		$quarters_intro = $quarters[0] . ' quarter';
+	}
+	elseif(count($quarters) == 2) {
+		$quarters_intro .= $quarters[0] . ' and ' . $quarters[1] . " quarters";
+	}
+	elseif(count($quarters) == 3) {
+		$quarters_intro .= $quarters[0] . ', ' . $quarters[1] . ', and ' . $quarters[2] . " quarters";
+	}
+	elseif(count($quarters) == 4) {
+		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] . " quarters";
+	};
+	$variables['quarters_intro'] = $quarters_intro;
+  };
 }
 
 
-
-//makes sure headshots appearing in content have the right class.
-//function wwwevergreen_field__field_headshot(&$variables){
-	
-//};
-
+//NOTE: in Drupal 8, probably need to redo this from scratch. This is a particularly weird and verbose way to get all the non-breaking spaces and extension bolding in various phone numbers. And it also strips out all the markup, which is maybe not always the right solution?
 //this reformats the field so that the last four digits are bolded if it's an evergreen number.
 //people like that for some reason. :)
 function wwwevergreen_field__field_phone(&$variables) {
@@ -76,23 +168,80 @@ function wwwevergreen_field__field_phone(&$variables) {
   }
 
   // Render the items.
-  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
   foreach ($variables['items'] as $delta => $item) {
 	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);
 	  	if(substr($phone, -8,3) == '867') { 
 			$ext = substr($phone, -4,4);
 			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
 		};
-    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
-    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . $phone . '</div>';
+    $output = $phone;
   }
-  $output .= '</div>';
-
-  // Render the top-level DIV.
-  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
 
   return $output;
 }
+function wwwevergreen_field__field_alternate_phone(&$variables) {
+	$output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  foreach ($variables['items'] as $delta => $item) {
+	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);
+	  	if(substr($phone, -8,3) == '867') { 
+			$ext = substr($phone, -4,4);
+			$phone = str_replace($ext, "<strong>$ext</strong>", $phone);
+		};
+    $output = $phone;
+  }
+
+  return $output;
+}
+//no bolding in fax numbers, because that would be weird.
+function wwwevergreen_field__field_fax(&$variables) {
+	$output = '';
+  foreach ($variables['items'] as $delta => $item) {
+	  $phone = drupal_render($item);
+	  $phone = str_replace(' ', '&nbsp;', $phone);	
+	  $output = $phone;
+  }
+  return $output;
+}
+
+/**
+ * Returns HTML for a managed file element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: A render element representing the file.
+ *
+ * @ingroup themeable
+ */
+/* note: this doesn't actually work.
+function wwwevergreen_theme_media_element($variables) {
+  $element = $variables['element'];
+
+  $attributes = array();
+  if (isset($element['#id'])) {
+    $attributes['id'] = $element['#id'];
+  }
+  if (!empty($element['#attributes']['class'])) {
+    $attributes['class'] = (array) $element['#attributes']['class'];
+  }
+  $attributes['class'][] = 'form-media';
+
+  // This wrapper is required to apply JS behaviors and CSS styling.
+  $output = '';
+  $output .= '<span' . drupal_attributes($attributes) . '>';
+  $output .= drupal_render_children($element);
+  $output .= ' (hello world)</span>';
+  return $output;
+}
+*/
 
 /**
  * THEME_PREPROCESS_VIEWS_VIEW
@@ -159,3 +308,12 @@ function wwwevergreen_form_alter(&$form, &$form_state, $form_id) {
     );
   }
 }*/
+
+function staticblocks($b) {
+	
+	$imagepath = base_path() . path_to_theme() . '/images/';
+	
+	include_once("pseudoblocks/$b.php");
+	
+	
+}

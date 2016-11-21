@@ -1,0 +1,129 @@
+$view = new view();
+$view->name = 'navigation_export2';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'field_collection_item';
+$view->human_name = 'Navigation Export2';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Navigation Export2';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['style_plugin'] = 'table';
+/* Relationship: Field collection item: Entity with the Section Navigation (field_section_navigation) */
+$handler->display->display_options['relationships']['field_section_navigation_taxonomy_term']['id'] = 'field_section_navigation_taxonomy_term';
+$handler->display->display_options['relationships']['field_section_navigation_taxonomy_term']['table'] = 'field_collection_item';
+$handler->display->display_options['relationships']['field_section_navigation_taxonomy_term']['field'] = 'field_section_navigation_taxonomy_term';
+$handler->display->display_options['relationships']['field_section_navigation_taxonomy_term']['required'] = TRUE;
+/* Field: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['label'] = 'id';
+$handler->display->display_options['fields']['item_id']['separator'] = '';
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_section_navigation_taxonomy_term';
+$handler->display->display_options['fields']['name']['label'] = 'sitename';
+/* Field: Field collection item: Group Title */
+$handler->display->display_options['fields']['field_group_title']['id'] = 'field_group_title';
+$handler->display->display_options['fields']['field_group_title']['table'] = 'field_data_field_group_title';
+$handler->display->display_options['fields']['field_group_title']['field'] = 'field_group_title';
+$handler->display->display_options['fields']['field_group_title']['label'] = 'group';
+$handler->display->display_options['fields']['field_group_title']['element_type'] = '0';
+$handler->display->display_options['fields']['field_group_title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_group_title']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_group_title']['element_default_classes'] = FALSE;
+/* Field: Field collection item: Links */
+$handler->display->display_options['fields']['field_links']['id'] = 'field_links';
+$handler->display->display_options['fields']['field_links']['table'] = 'field_data_field_links';
+$handler->display->display_options['fields']['field_links']['field'] = 'field_links';
+$handler->display->display_options['fields']['field_links']['label'] = 'links';
+$handler->display->display_options['fields']['field_links']['element_type'] = '0';
+$handler->display->display_options['fields']['field_links']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_links']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_links']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_links']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_links']['type'] = 'link_separate';
+$handler->display->display_options['fields']['field_links']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_links']['multi_type'] = 'ul';
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+
+/* Display: Data export */
+$handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+$handler->display->display_options['style_options']['provide_file'] = 0;
+$handler->display->display_options['style_options']['parent_sort'] = 0;
+$handler->display->display_options['style_options']['quote'] = 1;
+$handler->display->display_options['style_options']['trim'] = 0;
+$handler->display->display_options['style_options']['replace_newlines'] = 0;
+$handler->display->display_options['style_options']['newline_token'] = '1';
+$handler->display->display_options['style_options']['header'] = 1;
+$handler->display->display_options['style_options']['keep_html'] = 0;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Global: View result counter */
+$handler->display->display_options['fields']['counter']['id'] = 'counter';
+$handler->display->display_options['fields']['counter']['table'] = 'views';
+$handler->display->display_options['fields']['counter']['field'] = 'counter';
+$handler->display->display_options['fields']['counter']['label'] = 'id';
+$handler->display->display_options['fields']['counter']['counter_start'] = '1';
+$handler->display->display_options['fields']['counter']['reverse'] = 0;
+/* Field: Taxonomy term: Name */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['relationship'] = 'field_section_navigation_taxonomy_term';
+$handler->display->display_options['fields']['name']['label'] = 'Term name';
+/* Field: Field collection item: Group Title */
+$handler->display->display_options['fields']['field_group_title']['id'] = 'field_group_title';
+$handler->display->display_options['fields']['field_group_title']['table'] = 'field_data_field_group_title';
+$handler->display->display_options['fields']['field_group_title']['field'] = 'field_group_title';
+$handler->display->display_options['fields']['field_group_title']['label'] = 'group';
+$handler->display->display_options['fields']['field_group_title']['element_type'] = '0';
+$handler->display->display_options['fields']['field_group_title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_group_title']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_group_title']['element_default_classes'] = FALSE;
+/* Field: Field collection item: Links */
+$handler->display->display_options['fields']['field_links']['id'] = 'field_links';
+$handler->display->display_options['fields']['field_links']['table'] = 'field_data_field_links';
+$handler->display->display_options['fields']['field_links']['field'] = 'field_links';
+$handler->display->display_options['fields']['field_links']['label'] = 'linktitle';
+$handler->display->display_options['fields']['field_links']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_links']['alter']['text'] = '[field_links-title]';
+$handler->display->display_options['fields']['field_links']['element_type'] = '0';
+$handler->display->display_options['fields']['field_links']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_links']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['field_links']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_links']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_links']['type'] = 'link_separate';
+$handler->display->display_options['fields']['field_links']['group_rows'] = FALSE;
+$handler->display->display_options['fields']['field_links']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_links']['multi_type'] = 'ul';
+/* Field: Field collection item: Links */
+$handler->display->display_options['fields']['field_links_1']['id'] = 'field_links_1';
+$handler->display->display_options['fields']['field_links_1']['table'] = 'field_data_field_links';
+$handler->display->display_options['fields']['field_links_1']['field'] = 'field_links';
+$handler->display->display_options['fields']['field_links_1']['label'] = 'link';
+$handler->display->display_options['fields']['field_links_1']['click_sort_column'] = 'url';
+$handler->display->display_options['fields']['field_links_1']['type'] = 'link_plain';
+$handler->display->display_options['fields']['field_links_1']['group_rows'] = FALSE;
+$handler->display->display_options['fields']['field_links_1']['delta_offset'] = '0';
+$handler->display->display_options['path'] = 'export/navigation2';
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page_1');
+$handler->display->display_options['path'] = 'admin/nav-export';

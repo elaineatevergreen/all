@@ -1,0 +1,513 @@
+/**
+ * Typographic Styles
+ *
+ * Base styles that make the text look nice and readable.
+ * 
+ * Table of Contents
+ *
+ * 1.   Base Typography
+ * 2.   Headings
+ * 3.   Lists
+ * 4.   Links
+ * 4.a. Site Name Link
+ * 5.   Other Typography
+ */
+
+/**
+ * 1. Base Typography
+ *
+ * @section base-type
+ */
+html{
+	font-size: 100%;
+}
+
+body{
+	font-family: $text-face;
+	/**
+	 * OpenType features available in Proxima Nova
+	 * c2sc - Small capitals from capitals (Note: don't use font-feature-settings for small-caps)
+	 * frac - Fractions
+	 * liga - Standard ligatures
+	 * lnum - Lining figures ("uppercase" numbers)
+	 * onum - Oldstyle figures ("lowercase" numbers); at least one Win10/Chrome combination chokes on this
+	 * ordn - Ordinals (1st, 2nd) - bad support
+	 * pnum - Proportional figures (Varying width numbers)
+	 * salt - Stylistic alternates
+	 * smcp - Small capitals (Note: don't use font-feature-settings for small-caps)
+	 * ss## - Stylistic sets (## is 01-20; I don't know how many sets this font has)
+	 * subs - Subscripts
+	 * sups - Superscripts
+	 * tnum - Tabular figures (Fixed-width numbers)
+	 */
+	font-feature-settings: "kern", "liga";  // Low-level OpenType features; these could be turned off eventually
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums;
+	text-rendering: optimizeLegibility;
+}
+
+body,
+input,
+button{
+	-moz-osx-font-smoothing: grayscale;  // Reduce text chubbiness in Firefox
+	-webkit-font-smoothing: antialiased;  // Reduce text chubbiness in Safari, Chrome
+}
+
+body,
+.base{
+	@include base-type;  // Step 0.5
+
+	@include breakpoint($gamora){
+		@include base-type-lg;  // Step 1
+	}
+
+	@include breakpoint($groot){
+		@include base-type-xl;  // Step 2
+	}
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+.base{
+	@include margin-default;
+
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+	}
+
+	@include breakpoint($groot){
+		@include margin-default-xl;
+	}
+}
+
+/**
+ * Removing hyphen rules for now.
+ * English doesn't have long enough words to warrant this,
+ * and we’re not justifying text,
+ * but consider it for narrow columns.
+ */
+/*p{
+	hyphens: auto;
+	hyphenate-limit-lines: 2;
+}*/
+
+/**
+ * 2. Headings
+ *
+ * @section h
+ */
+h1{
+	// box model
+	margin: 0.96401028277635em 0 0;  // 30/31.12
+	// typography
+	font-size: 1.945rem;  // 31.12px  Step 4
+	font-weight: normal;
+	line-height: 1.44601542416452;  // 45/31.12
+
+	@include breakpoint($starlord){
+		// box model
+		margin-top: 0.818419903972065em;
+		// typography
+		font-size: 2.291rem;  // 36.656px  // Where does this come from? I don't remember.
+		line-height: 1.227629855958097;  // 45/36.656
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 0.63663179339176em;   // 30/47.123
+		// typography
+		font-size: 2.945rem;  // 47.123px  Step 5
+		line-height: 0.95494769008764;  // 45/47.123
+	}
+
+	@include breakpoint($drax){
+		color: mix($tint, $shade, 33.33333%);
+		font-weight: bold;
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-top: 1.19191879059973em;  // 60/50.339
+		// typography
+		font-size: 3.146rem;  // 50.339  Step 6
+		line-height: 1.19191879059973;  // 60/50.339
+	}
+}
+
+h2{
+	// box model
+	margin-top: 1.56014353320505em;  // 30/19.229
+	// typography
+	color: mix($tint, $black, 40%);
+	font-size: 1.202rem;  // 19.229px  Step 2
+	font-weight: bold;
+	line-height: 1.56014353320505;  // 30/19.229
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.03007828594973em;  // 30/29.124
+		// typography
+		font-size: 1.82rem;  // 29.124px  Step 3
+		line-height: 1.03007828594973; // 30/29.124
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-top: 1.44638724607868em;  // 45/31.112
+		// typography
+		font-size: 1.945rem;  // 31.112px  Step 4
+		line-height: 0.96425816405246;  // 30/31.112
+	}
+}
+
+h3{
+	// box model
+	margin-top: 1.66666666666667em;  // 30/18
+	// typography
+	color: mix($tint, $black, 20%);
+	@include base-type-lg;
+	font-weight: normal;
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.10603155876714em;  // 30/27.124
+		// typography
+		font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
+		line-height: 1.10603155876714;  // 30/27.124
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-top: 1.54575432811212em;  // 45/29.112
+		// typography
+		font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
+		line-height: 1.03050288540808;  // 30/29.112
+	}
+}
+
+h4{
+	// box model
+	margin-top: 2.14285714285714em;  // 30/14
+	// typography
+	font-size: 0.875rem;  // 14px  Step 0.5
+	font-weight: bold;
+	line-height: 1.60714285714286;  // 22.5/14
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.56014353320505em;  // 30/19.229
+		// typography
+		font-size: 1.202rem;  // 19.229px  Step 2
+		line-height: 1.56014353320505;  // 30/19.229
+	}
+
+	/*@include breakpoint($groot){
+	// box model
+	margin-top: 1.5451174289246em;  // 45/29.124
+	// typography
+	font-size: 1.82rem;  // 29.124px  Step 3
+	line-height: 1.03007828594973; // 30/29.124
+	}*/
+}
+
+h5{
+	// box model
+	margin-top: 2.14285714285714em;  // 30/14
+	// typography
+	color: mix($tint, $black, 40%);
+	font-size: 0.875rem;  // 14px  Step 0.5
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	line-height: 1.60714285714286;  // 22.5/14
+	text-transform: uppercase;
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.66666666666667em;  // 30/18
+		// typography
+		@include base-type-lg;
+	}
+}
+
+h6{
+	// box model
+	margin-top: 2.69784172661871em;  // 30/11.12
+	margin-bottom: 1.34892086330935em;  // 15/11.12
+	// typography
+	color: mix($tint, $black, 40%);
+	@include small-type;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 2.14285714285714em;  // 30/14
+		margin-bottom: 2.14285714285714em;  // 30/14
+		// typography
+		font-family: $display-face;
+		@include base-type;
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-top: 2.5em;  // 45/18
+		margin-bottom: 1.66666666666667em;  // 30/18
+		// typography
+		@include base-type-lg;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+	// Bottom margin should match the p's top margin exactly, for consistency. If they don't match, change this rule.
+	margin-bottom: 0.46875rem; // 7.5px
+
+	@include breakpoint($groot){
+		margin-bottom: 0.625rem;  // 10px
+	}
+}
+
+/**
+ * 3. Lists
+ *
+ * @section l
+ */
+ul,
+ol{
+	margin-left: 1.07142857142857em;  // 15/14
+	padding-left: 0;
+
+	@include breakpoint($gamora){
+		margin-left: 1.66666666666667em;  // 30/18
+	}
+
+	@include breakpoint($groot){
+		margin-left: 1.56014353320505em; // 30/19.229
+	}
+}
+
+ul,
+dl{
+	padding: 0;
+}
+
+ol ol{
+	list-style-type: lower-alpha;
+}
+
+dt{
+	//box model
+	margin-top: 0.535714285714286em;  // 22.5/14/3 - Same as p margin-top
+	//typography
+	font-weight: bold;
+
+	@include breakpoint($groot){
+		margin-top: 0.52004784440168em;  // 10/19.229 - Same as p margin-top
+	}
+}
+
+dd{
+	margin-bottom: 1.071428571428571em;  // 15/14 - Same as p margin-bottom
+	margin-left: 0;
+
+	@include breakpoint($groot){
+		margin-bottom: 1.04009568880337em;  // 20/19.229 - Same as p margin-bottom
+	}
+}
+
+dd > p:first-child,
+dd > ul:first-child,
+dd > ol:first-child,
+dd > blockquote:first-child,
+dd > blockquote:first-child > p:first-child{
+	margin-top: 0;
+}
+
+/**
+ * 4. Links
+ *
+ * @section a
+ */
+a,
+.internal-users a:visited,
+.search-tools a:visited,
+.tertiary-nav-list a:visited{
+	//box model
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+	//typography
+	color: $blueberry-susan;
+	font-weight: bold;
+	text-decoration: none;
+	// movement
+	transition: color 0.2s, border-color 0.2s ease;
+}
+
+a:visited{
+	// typography
+	color: $wine;
+	// decoration
+	border-bottom-color: mix($tint, $wine, 75%);
+}
+
+a:hover,
+.internal-users a:hover,
+.search-tools a:hover,
+.tertiary-nav-list a:hover{
+	// typography
+	color: $sky-blue;
+	// decoration
+	border-bottom-color: $sky-blue;
+}
+
+a:focus,
+a:active{
+	// decoration
+	background-color: transparentize($blueberry-susan, 0.9);
+	outline-width: 0;
+}
+
+/**
+ * 4.a Site Name Link
+ *
+ * @section a-site-name
+ */
+.site-name a{
+	border-bottom-width: 0;
+
+	&,
+	&:visited{
+		color: $tint;
+		text-shadow: 0 1px 3px mix($shade, $blueberry-susan, 60%);
+
+		/*@include breakpoint($drax){
+			text-shadow:
+				-1px 1px $blueberry-susan,
+				-1px 2px $blueberry-susan,
+				-2px 3px $blueberry-susan,
+				-2px 4px $blueberry-susan,
+				-3px 5px $blueberry-susan,
+				-3px 6px $blueberry-susan,
+				-4px 7px 0.5px $blueberry-susan;
+    }*/
+
+		@include breakpoint($drax){
+			color: $evergreen-old-style;
+			font-weight: normal;
+			text-shadow: 0 1px 2px $tint;
+		}
+	}
+}
+
+/**
+ * 5. Other Typography
+ *
+ * @section other-type
+ */
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+figcaption,
+small,
+.details,  // deprecated
+.caption{
+	@include small-type;
+
+	@include breakpoint($groot){
+		font-family: $text-face;
+		@include base-type;
+	}
+}
+
+figcaption p{
+	margin-top: 0.67446043165468em;  // 7.5/11.12
+	margin-bottom: 1.34892086330935em;  // 15/11.12
+}
+
+small{
+
+	[role="contentinfo"] &{
+		color: mix($tint, $shade, 80%);
+	}
+}
+
+/**
+ * Small (inline) text can inherit the line-height of its parent. Switching
+ * to inline-block forces small to use its own line-height.
+ */
+.small{
+	display: inline-block;
+}
+
+abbr{
+	// box model
+	border-bottom: 1px dotted mix($tint, $black, 75%);
+	// typography
+	text-decoration: none;
+	// misc
+	cursor: help;
+}
+
+q{
+	quotes: "“" "”" "‘" "’";
+}
+
+q::before{
+	content: open-quote;
+}
+
+q::after{
+	content: close-quote;
+}
+
+code,
+pre{
+	font-family: $monospace-face;
+}
+
+blockquote{
+	// box model
+	padding-left: 1em;
+	// typography
+	font-style: italic;
+}
+
+@supports (font-variant-position: super){
+	sup{
+		font-size: inherit;
+		font-variant-position: super;
+		vertical-align: inherit;
+	}
+}
+
+@supports (font-variant-position: sub){
+	sub{
+		font-size: inherit;
+		font-variant-position: sub;
+		vertical-align: inherit;
+	}
+}
+
+hr{
+	// box model
+	border: 0;
+	height: 5px;
+	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
+	width: 100%;
+	// backgrounds & borders
+	background-color: $evergreen-neue;
+}

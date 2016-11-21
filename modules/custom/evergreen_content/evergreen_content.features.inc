@@ -99,6 +99,28 @@ function evergreen_content_date_format_types() {
 function evergreen_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: event_image__345px_wide_.
+  $styles['event_image__345px_wide_'] = array(
+    'label' => 'Event image (345px wide)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 345,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: image_class.
+  $styles['image_class'] = array(
+    'label' => 'Image Class',
+    'effects' => array(),
+  );
+
   // Exported image style: large__800px_wide_.
   $styles['large__800px_wide_'] = array(
     'label' => 'Large (800px wide)',
@@ -131,6 +153,47 @@ function evergreen_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: portrait_thumbnail.
+  $styles['portrait_thumbnail'] = array(
+    'label' => 'Portrait Thumbnail (64x64)',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 64,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      4 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 64,
+          'height' => 64,
+          'anchor' => 'center-top',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: portrait_thumbnail2.
+  $styles['portrait_thumbnail2'] = array(
+    'label' => 'Portrait Thumbnail (100px)',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 100,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
@@ -145,6 +208,14 @@ function evergreen_content_node_info() {
       'description' => t('<em>Alerts</em> are used on the college home page to announce emergencies. Only create a manual alert if the event is NOT being announced via e2Campus.'),
       'has_title' => '1',
       'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'alumni_circles' => array(
+      'name' => t('Alumni Circles'),
+      'base' => 'node_content',
+      'description' => t('Use an <em>Alumni Circle</em> to share information about alumni groups and their gatherings.'),
+      'has_title' => '1',
+      'title_label' => t('Group Name'),
       'help' => '',
     ),
     'article' => array(
@@ -178,6 +249,14 @@ function evergreen_content_node_info() {
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
+    ),
+    'committee_page' => array(
+      'name' => t('Committee Page'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>committee page</em> to list information about committees, their members, and their meetings. This includes disappearing task forces (DTFs).'),
+      'has_title' => '1',
+      'title_label' => t('Committee Name'),
+      'help' => t('If you have information that does NOT fit this format, contact the Web Team. Your committee\'s work may need an additional web presence.'),
     ),
     'directory_individual' => array(
       'name' => t('Directory Individual'),
@@ -235,6 +314,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'job_post' => array(
+      'name' => t('Job Post'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>job post</em> to list openings. This should be deprecated by a new system by the end of 2016.'),
+      'has_title' => '1',
+      'title_label' => t('Job Title'),
+      'help' => '',
+    ),
     'library_database' => array(
       'name' => t('Library Database'),
       'base' => 'node_content',
@@ -249,6 +336,14 @@ function evergreen_content_node_info() {
       'description' => t('Use a <em>location</em> to share information about a building or other facility on campus.'),
       'has_title' => '1',
       'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'mailing_list_link' => array(
+      'name' => t('Mailing List Link'),
+      'base' => 'node_content',
+      'description' => t('Exported from duc.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
       'help' => '',
     ),
     'profile' => array(

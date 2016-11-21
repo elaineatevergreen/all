@@ -1,0 +1,338 @@
+/**
+ * A. Grid
+ *
+ * Unit layout and sizing for the grid system.
+ *
+ * Table of Contents
+ *
+ * 1. Flexbox-based Grid Layout
+ * 2. Float-based Grid Layout
+ * 3. Supplemental Content
+ */
+
+.row{
+	// box model
+	width: 100%;
+	// layout
+	clear: both;
+	display: block;
+}
+
+/**
+ * 1. Flexbox-based Grid Layout
+ *
+ * See http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ *
+ * Use the flexbox-based grid whenever possible. Styles still in
+ * the float-based grid are being updated over time. All grid units
+ * should eventually be flexbox-based for modern browsers.
+ */
+.grid,
+.grid.element-list{
+	// box model
+	margin-left: -1em;  // Compensates for the extra gutter on the last grid unit
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&.zebra-striped{
+		margin-right: 0;
+	}
+}
+
+//.grid-list,  // deprecated, use .grid-alt instead
+.grid-alt{  // Extends .grid
+	justify-content: flex-start;
+}
+
+.unit-1-1,
+.unit-1-2,
+.unit-1-3,
+.unit-1-3-alt,
+.unit-1-4,
+.unit-2-3,
+.unit-1-5,
+.unit-1-6,
+.unit-1-6-alt,
+.unit-1-7,
+.unit-2-7,
+.unit-3-7,
+.unit-4-7,
+.unit-5-7,
+.unit-6-7{
+	// box model
+	padding-left: 1em;
+	// layout
+	float: left;  // IE 9
+}
+
+.unit-1-1{
+	width: 100%;
+	// layout
+	clear: left;  // IE 9
+}
+
+.unit-1-2{
+	// box model
+	width: 100%;
+
+	@media (min-width: 32em){
+		// box model
+		width: 50%;
+
+		&:nth-child(odd){  // IE 9
+			clear: left;
+		}
+	}
+}
+
+.unit-1-3{  // Switches from a one- to a three-column layout.
+	// box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		width: 33.3333333333%;
+	}
+}
+
+.unit-1-3-alt{ // Switches up from a one- to a two- and then to a three-column layout.
+	//box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 50%;
+
+		&:nth-child(odd){
+			// layout
+			clear: left;  // IE 9
+		}
+	}
+
+	@include breakpoint($drax){
+		// box model
+		width: 33.3333333333%;
+
+		&:nth-child(odd){  // IE 9
+			clear: none;
+		}
+
+		&:nth-child(3n+1){  // IE 9
+			clear: left;
+		}
+	}
+}
+
+.unit-2-3{
+	// box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		width: 66.6666666667%;
+	}
+}
+
+.unit-1-4{
+	width: 100%;
+}
+
+.unit-1-5{
+	width: 100%;
+
+	@include breakpoint($drax){
+		width: 20%;
+	}
+}
+
+.unit-1-6{  // Switches from 1 to 2 to 3 to 6 columns.
+	// box model
+	width: 100%;
+
+	@include breakpoint($lil-groot){
+		width: 50%;
+	}
+
+	@include breakpoint($rocket){
+		width: 33.3333333333%;
+	}
+
+	@include breakpoint($gamora){
+		width: 16.666666666667%;  // 1/6
+	}
+}
+
+.unit-1-6-alt{  // Switches from 2 to 3 to 4 to 6 columns.
+	width: 50%;
+
+	@include breakpoint($lil-groot){
+		// box model
+		width: 33.3333333333%;
+	}
+
+	@include breakpoint($gamora){
+		width: 25%;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		width: 16.666666666667%;  // 1/6
+	}
+}
+
+.unit-1-7{
+	// box model
+	width: 100%;
+
+	@include breakpoint($lil-groot){
+		width: 50%;
+	}
+
+	@include breakpoint($rocket){
+		width: 33.3333333333%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		width: 14.285714285714%;
+	}
+}
+
+.unit-2-7{
+	// box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 28.571428571429%;
+	}
+}
+
+.unit-3-7{
+	// box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 42.857142857143%;
+	}
+}
+
+.unit-4-7{
+	// box model
+	padding-right: 1em;
+	padding-left: 0;
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 80%;  // 4/5
+	}
+
+	@include breakpoint($drax){
+		// box model
+		width: 57.142857142857%;  // 4/7
+	}
+}
+
+.unit-5-7{
+	//box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		// box model
+		width: 71.428571428571%;
+	}
+}
+
+.unit-6-7{
+	// box model
+	width: 100%;
+
+	@include breakpoint($gamora){
+		width: 85.714285714286%;  // 6/7
+	}
+}
+
+.standalone-unit{
+	padding: 0 1em;
+}
+
+/**
+ * 3. Supplemental Content
+ *
+ * section @supplement
+ */
+
+.right,  // deprecated
+.supplement,  // This should mirror .supplement-1-2; it’s just a more user-friendly name
+.supplement-1-2{  // deprecated, use .supplement instead
+
+	@include breakpoint($starlord){
+		// box model
+		margin-left: 1em;
+		width: calc(66.6666666667% - 1em);
+		// layout
+		float: right;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-right: -2em;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-right: -3em;
+		width: calc(50% + 2.5em);  //Half the view, plus the right margin, minus 1/2em for the left margin.
+	}
+}
+
+.supplement-alt-1-2{
+
+	@include breakpoint($rocket){
+		// box model
+		margin-right: -1em;
+		margin-left: 1em;
+		width: calc(50% + 1em);
+		// layout
+		float: right;
+	}
+
+	@include breakpoint($starlord){
+		// box model
+		margin-right: 0;
+		width: calc(66.666666667% - 1em);
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-right: 1em;
+		margin-left: calc(-25% - 2em);
+		//width: calc(25% + 1em);  // 1/4
+		width: calc((100% + 4em * 18 / 14) / 4);  // 100% + 4em is the full-width of the container (compensating for margin); 18 / 14 converts em measures
+		// layout
+		float: left;
+		// typography
+		@include base-type;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		//margin-right: 2em;
+		//margin-left: calc(-33.3333333333% - 2em);
+		//width: 33.3333333333%;
+		margin-left: calc(-25% - 3em);
+		width: calc((100% + 6em * 18 / 14) / 4);
+		// typography
+		//@include base-type;
+	}
+
+	@include breakpoint($groot){
+		// box model
+		margin-left: calc(-50% - 2em);
+		width: 50%;
+		// typography
+		@include base-type-lg;
+	}
+}

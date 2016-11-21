@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/**
+ * Q. Directories
+ *
+ * Directories of people and their contact information.
+ */
+
+/**
+ * Photo Directory
+ */
+
+.directory > thead{
+	display: none;
+
+	@include breakpoint($gamora){
+		display: table-header-group;
+	}
+}
+
+.directory > tbody > tr{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 66%);
+	@include margin-default;
+	padding: 0 1em;
+	// layout
+	display: block;
+	overflow: hidden;
+	// backgrounds & borders
+	background-color: mix($tint, $blueberry-susan, 90%);
+	border-radius: 2px;
+	// misc
+	box-shadow: 0 1px 1px $drop-shadow;
+
+	@include breakpoint($gamora){
+		// box model
+		border-width: 0;
+		padding: 0;
+		// layout
+		display: table-row;
+		// backgrounds & borders
+		background-color: transparent;
+		border-radius: 0;
+		// misc
+		box-shadow: none;
+	}
+}
+
+.directory > tbody td{
+	// box model
+	border-width: 0;
+	padding: 0;
+	// layout
+	display: block;
+
+	@include breakpoint($gamora){
+		// box model
+		border-top-width: 1px;
+		padding: 0.37037em 1.11111em 1.11111em 0;
+		// layout
+		display: table-cell;
+	}
+}
+
+.directory .p-tel::before{
+	font-weight: bold;
+	content: "Phone: ";
+}
+
+.directory .u-email::before{
+	font-weight: bold;
+	content: "Email: ";
+}
+
+.directory .p-extended-address::before{
+	font-weight: bold;
+	content: "Location: ";
+}
+
+.directory .p-tel::before,
+.directory .u-email::before,
+.directory .p-extended-address::before{
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+.directory .u-photo{
+	// box model
+	@include margin-default;
+	margin-left: 1em;
+	max-width: 75px;
+	// layout
+	float: right;
+
+	@include breakpoint($gamora){
+		// box model
+		margin: 0;
+		// layout
+		float: none;
+	}
+}

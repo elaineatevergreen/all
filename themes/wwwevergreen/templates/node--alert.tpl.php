@@ -1,3 +1,10 @@
+<?php
+/**
+ * @file
+ * All the extra markup around site alerts
+ */
+?>
+
 <div class="alert box" id="sitewide-alert">
 <div class="wrapper">
     <div class="media">
