@@ -45,7 +45,7 @@
 					<!-- SVGs are experimental, and so commented out for now. -->
 					<ul class="element-list grid transporter">
 						<li class="unit-1-6-alt icon-scale">
-							<a href="<?php print base_path() ?>/about">
+							<a href="/about">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
 									<!--<svg width="150">
@@ -56,7 +56,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="<?php print base_path() ?>/studies">
+							<a href="/studies">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
 									<!--<svg width="150">
@@ -67,7 +67,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="<?php print base_path() ?>/catalog">
+							<a href="/catalog">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
 									<!--<svg width="150">
@@ -89,7 +89,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="<?php print base_path() ?>/admissions/visit">
+							<a href="/admissions/visit">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
 									<!--<svg width="150">
@@ -100,7 +100,7 @@
 							</a>
 						</li>
 						<li class="unit-1-6-alt icon-scale">
-							<a href="<?php print base_path() ?>/admissions/apply">
+							<a href="/admissions/apply">
 								<div class="transporter-icon">
 									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
 									<!--<svg width="150">
@@ -163,14 +163,14 @@
 											<img alt="Imagine Yourself at Evergreen" src="<?php print base_path() . path_to_theme() ?>/images/homepage/beauty.jpg" />
 										</a>
 										<p>Imagine yourself at Evergreen. See a slice of what you&#8217;ll be a part of during your time here as a Greener.</p>
-										<p><a href="<?php print base_path() ?>/about/students">Explore profiles of current students</a> to see how Evergreen changes people&#8217;s lives.</p>
+										<p><a href="/about/students">Explore profiles of current students</a> to see how Evergreen changes people&#8217;s lives.</p>
 									</li>
 									<li class="unit-1-2">
 										<a class="lazy-load" href="https://www.youtube.com/watch?v=lQb5YUqSV9Y">
 											<img alt="Chico Herbison" src="<?php print base_path() . path_to_theme() ?>/images/homepage/herbison.jpg" />
 										</a>
 										<p>Faculty member Chico Herbison talks about what makes learning at Evergreen so different from other colleges.</p>
-										<p><a href="<?php print base_path() ?>/academics">Learn about Evergreen&#8217;s unique academics.</a></p>
+										<p><a href="/academics">Learn about Evergreen&#8217;s unique academics.</a></p>
 									</li>
 								</ul>
 							</div>
@@ -187,26 +187,26 @@
 							<div class="unit-1-1">
 								<ul class="element-list grid profile-list">
 									<li class="unit-1-2">
-										<a class ="profile-img-link" href="<?php print base_path() ?>/magazine/2015spring-summer/shaking-up-the-local-food-scene">
+										<a class ="profile-img-link" href="/magazine/2015spring-summer/shaking-up-the-local-food-scene">
 											<img alt="Melissa Turkington &#8217;08" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/melissa-turkington.jpg" />
 										</a>
 										<div class="box caption-box">
-											<p><a href="<?php print base_path() ?>/magazine/2015spring-summer/shaking-up-the-local-food-scene"><strong>Melissa Turkington &#8217;08</strong></a> is shaking up the local food scene.</p>
+											<p><a href="/magazine/2015spring-summer/shaking-up-the-local-food-scene"><strong>Melissa Turkington &#8217;08</strong></a> is shaking up the local food scene.</p>
 										</div>
 									</li>
 									<li class="unit-1-2">
-										<a class="profile-img-link" href="<?php print base_path() ?>/magazine/2015spring-summer/unlocking-the-story-of-a-river">
+										<a class="profile-img-link" href="/magazine/2015spring-summer/unlocking-the-story-of-a-river">
 											<img alt="Brian Footen MES &#8217;01" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/brian-footen.jpg" />
 										</a>
 										<div class="box caption-box">
-											<p><a href="<?php print base_path() ?>/magazine/2015spring-summer/unlocking-the-story-of-a-river"><strong>Brian Footen MES &#8217;01</strong></a> is unlocking the story of a river.</p>
+											<p><a href="/magazine/2015spring-summer/unlocking-the-story-of-a-river"><strong>Brian Footen MES &#8217;01</strong></a> is unlocking the story of a river.</p>
 										</div>
 									</li>
 								</ul>
 							</div>
 							<div class="unit-1-1">
-								<p><a href="<?php print base_path() ?>/about/graduates">Read more Evergreen alumni success stories.</a></p>
-								<p>Read <a href="<?php print base_path() ?>/magazine/home"><em>Evergreen Magazine</em></a> and catch up on the latest accomplishments of our alumni.</p>
+								<p><a href="/about/graduates">Read more Evergreen alumni success stories.</a></p>
+								<p>Read <a href="/magazine/home"><em>Evergreen Magazine</em></a> and catch up on the latest accomplishments of our alumni.</p>
 							</div>
 						</div>
 						
@@ -227,7 +227,7 @@
 										<div class="media-body">
 											<p>
 												You’ll be
-												<a href="<?php print base_path() ?>/academics">better equipped for the workforce</a> after graduation because our unique academics more accurately reflect the real world.
+												<a href="/academics">better equipped for the workforce</a> after graduation because our unique academics more accurately reflect the real world.
 											</p>
 										</div>
 									</div>
@@ -243,8 +243,8 @@
 										<div class="media-body">
 											<p>
 												You’ll have
-												<a href="<?php print base_path() ?>/costs">less financial worry</a>. Evergreen has one of the lowest tuition costs and fastest time to degree of any Washington four-year school.
-												<a href="<?php print base_path() ?>about/praise.htm">Fiske Guide calls it a 2015 “Best Buy.”</a>
+												<a href="/costs">less financial worry</a>. Evergreen has one of the lowest tuition costs and fastest time to degree of any Washington four-year school.
+												<a href="about/praise">Fiske Guide calls it a 2015 “Best Buy.”</a>
 											</p>
 										</div>
 									</div>
@@ -259,7 +259,7 @@
 										</div>
 										<div class="media-body">
 											<p>
-												<a href="<?php print base_path() ?>/about/graduates.htm">97 percent of our graduates are working,</a> in graduate or professional schools, or otherwise doing something personally meaningful one year after graduation.
+												<a href="/about/graduates">97 percent of our graduates are working,</a> in graduate or professional schools, or otherwise doing something personally meaningful one year after graduation.
 											</p>
 										</div>
 									</div>
@@ -275,7 +275,7 @@
 										<div class="media-body">
 											<p>
 												You’ll get hands-on experience right away because we give you
-												<a href="<?php print base_path() ?>/academics/resources.htm">access to an impressive range of tools and technologies</a> from our scanning electron microscope to a wealth of media equipment.
+												<a href="/academics/resources">access to an impressive range of tools and technologies</a> from our scanning electron microscope to a wealth of media equipment.
 											</p>
 										</div>
 									</div>
@@ -290,7 +290,7 @@
 										</div>
 										<div class="media-body">
 											<p src="<?php print base_path() . path_to_theme() ?>/images/icons/green/scene.png">
-												<a href="<?php print base_path() ?>/about/explorethearea.htm">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
+												<a href="/about/explorethearea">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
 											</p>
 										</div>
 									</div>
@@ -306,7 +306,7 @@
 										<div class="media-body">
 											<p>
 												Speedy,
-												<a href="<?php print base_path() ?>geoduck">our humble and beloved mascot,</a> happens to be a geoduck—a large clam—that inevitably tops weirdest mascot lists year after year.
+												<a href="geoduck">our humble and beloved mascot,</a> happens to be a geoduck—a large clam—that inevitably tops weirdest mascot lists year after year.
 											</p>
 										</div>
 									</div>
