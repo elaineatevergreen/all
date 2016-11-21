@@ -28,7 +28,7 @@ display office information as a "contact block" usually on a page.
         
 
         <?php
-	        if(isset($content['field_staff_page'])) {
+	        if(isset($content['field_staff_page']) or render($content['field_staff_page']) == '') {
 	        	$staffURL = $base_path . "/node/" . trim(render($content['field_staff_page']));
 	    ?>
         <p><a href="<?php print $staffURL ?>">Our staff.</a></p>
