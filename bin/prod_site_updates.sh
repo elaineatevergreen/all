@@ -5,4 +5,4 @@
 export STAGE='prod'
 export WWW_CODE='/var/www/evergreen.edu/htdocs'
 export SITE_SUFFIX="";
-run_site_updates $WWW_CODE site_updates_www
+run_site_updates $WWW_CODE $HOME/site_updates_www
