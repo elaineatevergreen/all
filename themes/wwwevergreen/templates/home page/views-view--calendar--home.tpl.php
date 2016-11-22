@@ -50,10 +50,10 @@
         <div class="unit-1-1">
           <div class="grid">
             <div class="unit-1-2">
-              <p><a href="campuscalendar/home.htm"><img alt="" class="inline-icon" src="http://www.evergreen.edu/_inc/images/icons/dark/calendar.png"/> Campus Events Calendar </a></p>
+              <p><a href="campuscalendar/home.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/calendar.png"/> Campus Events Calendar </a></p>
             </div>
             <div class="unit-1-2">
-              <p><a href="campuscalendar/ataglance.htm"><img alt="" class="inline-icon" src="http://www.evergreen.edu/_inc/images/icons/dark/academics.png"/> Academic Calendar at a Glance </a></p>
+              <p><a href="campuscalendar/ataglance.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/academics.png"/> Academic Calendar at a Glance </a></p>
             </div>
           </div>
         </div>
