@@ -21,7 +21,7 @@ deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
 
 # Perform Production updates.
-if [[ "$STAGE" != "prod" ]] ; then
+if [[ "$STAGE" = "prod" ]] ; then
   rsync -rtp --delete $HOME/bin/ www_deploy@860elwb01:./bin
   rsync -rtp --delete $HOME/bin/ www_deploy@860elwb02:./bin
   rsync -rtp --delete $HOME/etc/ www_deploy@860elwb01:./etc
