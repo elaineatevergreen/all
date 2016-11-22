@@ -82,7 +82,6 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 
 	<main id="main-row" class="main-row row wrapper" role="main">
 		<div class="grid main-row-grid">
-			HELLO WORLD
 		
 			<div class="tertiary-nav-wrapper unit-1-7">
 
