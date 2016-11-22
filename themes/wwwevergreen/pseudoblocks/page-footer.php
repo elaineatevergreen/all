@@ -78,7 +78,7 @@
 							<small>(Includes alerts about delays and closures.)</small>
 						</li>
 						<li class="do-not-print">
-							<a href="http://www.evergreen.edu/about/privacy.htm">Privacy Policy</a>
+							<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
 						</li>
 					</ul>
 				</div><!--/.unit-2-7-->
