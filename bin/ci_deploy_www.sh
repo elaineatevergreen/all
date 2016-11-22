@@ -28,5 +28,5 @@ if [[ "$STAGE" = "prod" ]] ; then
   rsync -rtp --delete $HOME/etc/ www_deploy@860elwb01:./etc
   rsync -rtp --delete $HOME/etc/ www_deploy@860elwb02:./etc
   rsync -rtp --delete site_updates_www/ www_deploy@860elwb01:./site_updates_www
-  execute_prod_updates.sh
+  bin/execute_prod_updates.sh
 fi
