@@ -12718,7 +12718,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_background_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_background_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_background_image']['empty'] = '<img src="http://www.evergreen.edu/_inc/images/hero.jpg"/>';
+  $handler->display->display_options['fields']['field_background_image']['empty'] = '<img src="http://evergreen.edu/sites/all/themes/wwwevergreen/images/background.jpg"/>';
   $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_background_image']['settings'] = array(
     'image_style' => '',
