@@ -67,8 +67,12 @@ function wwwevergreen_preprocess_page(&$variables) {
   }
   
   // Add JavaScript files
-  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('type' => 'file', 'defer' => true));
+  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
 	//print base_path() . path_to_theme() . '/js/build/scripts.min.js';
+	function hook_js_alter(&$javascript) {
+		$javascript['misc/jquery.min.js']['defer'] = 'TRUE';
+	}
+
 }
 
 //similar to the directory function above, this rewrites people's names to be easier to read.
