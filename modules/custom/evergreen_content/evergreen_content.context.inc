@@ -158,6 +158,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_nav',
           'weight' => '-10',
         ),
+        'views-catalog-offerings_by_faculty' => array(
+          'module' => 'views',
+          'delta' => 'catalog-offerings_by_faculty',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
       ),
     ),
     'css' => array(

@@ -129,7 +129,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:6' => 'offering_type',
           'xpathparser:10' => 'status_date',
           'xpathparser:0' => 'title',
-          'xpathparser:1' => 'body',
+          'xpathparser:1' => 'description',
           'xpathparser:9' => 'preparatory_for/p',
           'xpathparser:13' => 'location',
           'xpathparser:11' => 'terms[@class=\'odd\']',
@@ -151,6 +151,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:29' => 'div/options[@opt_code="Other Expenses"]/opt_comment',
           'xpathparser:30' => 'div/options[@opt_code="Variable Credit Options"]/opt_comment/p',
           'xpathparser:31' => 'offering_status',
+          'xpathparser:32' => 'curr_area',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -180,6 +181,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:22' => 0,
           'xpathparser:30' => 0,
           'xpathparser:31' => 0,
+          'xpathparser:32' => 0,
         ),
         'context' => '/html/body/div/entry',
         'exp' => array(
@@ -213,6 +215,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:29' => 0,
             'xpathparser:30' => 0,
             'xpathparser:31' => 0,
+            'xpathparser:32' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -390,6 +393,12 @@ function evergreen_content_feeds_importer_default() {
           27 => array(
             'source' => 'xpathparser:31',
             'target' => 'field_offering_status',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          28 => array(
+            'source' => 'xpathparser:32',
+            'target' => 'field_curricular_area',
             'unique' => FALSE,
           ),
         ),

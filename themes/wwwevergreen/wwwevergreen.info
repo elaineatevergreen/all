@@ -4,7 +4,7 @@ core = 7.x
 
 ;Justin's styles downloaded from github
 stylesheets[all][] = css/dist/styles.css
-scripts[] = js/build/scripts.min.js
+;scripts[] = js/build/scripts.min.js
 ;Scripts & stylesheets added by Naomi for home page and slick slider
 stylesheets[all][] = css/dist/custom-css/slick.css
 scripts[] = js/slick.min.js

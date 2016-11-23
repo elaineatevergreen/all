@@ -108,6 +108,8 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  <?php print $scripts; ?>
+  <?php
+	  print $scripts;  // Include scripts from the theme .info file.
+  ?>
 </body>
 </html>

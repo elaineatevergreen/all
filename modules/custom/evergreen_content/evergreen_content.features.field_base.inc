@@ -984,6 +984,35 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_curricular_area'.
+  $field_bases['field_curricular_area'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_curricular_area',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'UG' => 'Undergraduate',
+        'MES' => 'Master of Environmental Studies',
+        'MPA' => 'Master of Public Administration',
+        'MED' => 'MED',
+        'Summer' => 'Summer',
+        'Endorsements' => 'Endorsements',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_dates_of_operation'.
   $field_bases['field_dates_of_operation'] = array(
     'active' => 1,
@@ -4193,11 +4222,9 @@ function evergreen_content_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_website'.
