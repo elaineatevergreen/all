@@ -110,7 +110,8 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $page_bottom; ?>
   <?php
 	  print $scripts;  // Include scripts from the theme .info file.
-	  drupal_add_js('/js/build/scripts.min.js', array('group' => JS_THEME, 'defer' => true));
+	  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('defer' => true));
+	  print drupal_get_path('theme', 'wwwevergreen');
   ?>
 </body>
 </html>
