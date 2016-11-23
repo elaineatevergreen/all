@@ -31,7 +31,7 @@
 <?php if ($content): ?>
   <div class="<?php print $classes; ?>">
 	  <nav id="tertiary-nav" class="box">
-    <?php print $content; ?>
+	    <?php print $content; ?>
 	  </nav>
   </div>
 <?php endif; ?>
