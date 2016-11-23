@@ -33,7 +33,7 @@ p.box,  // WYSIWYG
 	color: mix($shade, $sky-blue, 66.667%);
 	// backgrounds & borders
 	background-color: transparentize(mix(white, $sky-blue, 80%), 0.05);
-	background-image: url("images/texture-1.png");
+	background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	border-radius: 2px;
 
 	@include breakpoint($gamora){
@@ -300,7 +300,7 @@ p.alert{  // WYSIWYG
 .full-box{
 	border: 1px solid $sky-blue;
 	padding: 0;
-	background: $sky-blue url("images/texture-1.png");
+	background: $sky-blue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
 .full-box h2,
