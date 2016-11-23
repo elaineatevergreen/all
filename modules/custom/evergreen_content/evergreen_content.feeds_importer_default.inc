@@ -129,7 +129,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:6' => 'offering_type',
           'xpathparser:10' => 'status_date',
           'xpathparser:0' => 'title',
-          'xpathparser:1' => 'body',
+          'xpathparser:1' => 'description',
           'xpathparser:9' => 'preparatory_for/p',
           'xpathparser:13' => 'location',
           'xpathparser:11' => 'terms[@class=\'odd\']',

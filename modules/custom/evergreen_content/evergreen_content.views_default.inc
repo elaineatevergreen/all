@@ -5827,7 +5827,7 @@ return($term); ';
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Current, Recent, and Upcoming Offerings</h2>';
+  $handler->display->display_options['header']['area']['content'] = '<h2>Current Offerings</h2>';
   $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -5837,22 +5837,6 @@ return($term); ';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Begin Term */
-  $handler->display->display_options['fields']['field_begin_term']['id'] = 'field_begin_term';
-  $handler->display->display_options['fields']['field_begin_term']['table'] = 'field_data_field_begin_term';
-  $handler->display->display_options['fields']['field_begin_term']['field'] = 'field_begin_term';
-  $handler->display->display_options['fields']['field_begin_term']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_begin_term']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_begin_term']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_begin_term']['field_api_classes'] = TRUE;
-  /* Field: Content: End Term */
-  $handler->display->display_options['fields']['field_end_term']['id'] = 'field_end_term';
-  $handler->display->display_options['fields']['field_end_term']['table'] = 'field_data_field_end_term';
-  $handler->display->display_options['fields']['field_end_term']['field'] = 'field_end_term';
-  $handler->display->display_options['fields']['field_end_term']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_end_term']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_end_term']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_end_term']['field_api_classes'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
