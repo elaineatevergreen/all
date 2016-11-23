@@ -31,4 +31,6 @@ if [[ "$STAGE" = "prod" ]] ; then
   bin/execute_prod_updates.sh
 else
   run_site_updates $WWW_CODE site_updates_www
+  cd $WWW_CODE
+  drush cc all
 fi
