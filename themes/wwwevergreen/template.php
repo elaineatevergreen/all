@@ -70,7 +70,7 @@ function wwwevergreen_preprocess_page(&$variables) {
   drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
 	//print base_path() . path_to_theme() . '/js/build/scripts.min.js';
 	function hook_js_alter(&$javascript) {
-		$javascript['misc/jquery.min.js']['defer'] = 'TRUE';
+		$javascript['//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js']['defer'] = 'true';
 	}
 
 }
