@@ -56,7 +56,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   	<?php print $head_title; ?>
   </title>
   <?php print $styles; ?>
-  <?php print $scripts; ?>
   
   <!-- stuff from existing page -->
 	<meta content="IE=edge" http-equiv="X-UA-Compatible" /><!-- Do not allow (In)Compatibility Mode -->
@@ -109,5 +108,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <?php print $scripts; ?>
 </body>
 </html>
