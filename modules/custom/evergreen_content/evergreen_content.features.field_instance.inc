@@ -2477,6 +2477,47 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_curricular_area'.
+  $field_instances['node-catalog_entry-field_curricular_area'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 33,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_curricular_area',
+    'label' => 'Curricular Area',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 25,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_end_term'.
   $field_instances['node-catalog_entry-field_end_term'] = array(
     'bundle' => 'catalog_entry',
@@ -13745,6 +13786,7 @@ function evergreen_content_field_default_field_instances() {
   t('Connects this item to the CMD database. Not usually displayed to mere mortals.');
   t('Current Location');
   t('Current Profession');
+  t('Curricular Area');
   t('DO NOT DISPLAY');
   t('Dates of Operation');
   t('Deadline');

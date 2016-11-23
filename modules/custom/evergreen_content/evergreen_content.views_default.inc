@@ -4644,7 +4644,7 @@ return($term); ';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Undergraduate Academic Catalog';
+  $handler->display->display_options['title'] = 'Academic Catalog';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -5187,6 +5187,56 @@ return($term); ';
       'any_label' => NULL,
       'filter_rewrite_values' => NULL,
     ),
+    'field_curricular_area_value' => array(
+      'bef_format' => 'bef_links',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
     'secondary_label' => NULL,
     'collapsible_label' => NULL,
     'combine_rewrite' => NULL,
@@ -5204,6 +5254,13 @@ return($term); ';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_curricular_area',
+      'rendered' => 1,
+      'rendered_strip' => 1,
+    ),
+  );
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
@@ -5219,6 +5276,7 @@ return($term); ';
     'field_quarters_open' => 'field_quarters_open',
     'field_maximum_credits' => 'field_maximum_credits',
     'field_academic_year' => 'field_academic_year',
+    'field_curricular_area' => 'field_curricular_area',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -5297,6 +5355,11 @@ return($term); ';
     'field_academic_year' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_curricular_area' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -5448,10 +5511,33 @@ return($term); ';
   $handler->display->display_options['fields']['field_academic_year']['element_type'] = '0';
   $handler->display->display_options['fields']['field_academic_year']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_academic_year']['element_default_classes'] = FALSE;
+  /* Field: Content: Curricular Area */
+  $handler->display->display_options['fields']['field_curricular_area']['id'] = 'field_curricular_area';
+  $handler->display->display_options['fields']['field_curricular_area']['table'] = 'field_data_field_curricular_area';
+  $handler->display->display_options['fields']['field_curricular_area']['field'] = 'field_curricular_area';
+  $handler->display->display_options['fields']['field_curricular_area']['label'] = '';
+  $handler->display->display_options['fields']['field_curricular_area']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_curricular_area']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_curricular_area']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_curricular_area']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_curricular_area']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_curricular_area']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_curricular_area']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Contextual filter: Content: Curricular Area (field_curricular_area) */
+  $handler->display->display_options['arguments']['field_curricular_area_value']['id'] = 'field_curricular_area_value';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['table'] = 'field_data_field_curricular_area';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['field'] = 'field_curricular_area_value';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['limit'] = '0';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['path_case'] = 'lower';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['transform_dash'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -5467,6 +5553,37 @@ return($term); ';
     'catalog_entry' => 'catalog_entry',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Curricular Area (field_curricular_area) */
+  $handler->display->display_options['filters']['field_curricular_area_value']['id'] = 'field_curricular_area_value';
+  $handler->display->display_options['filters']['field_curricular_area_value']['table'] = 'field_data_field_curricular_area';
+  $handler->display->display_options['filters']['field_curricular_area_value']['field'] = 'field_curricular_area_value';
+  $handler->display->display_options['filters']['field_curricular_area_value']['value'] = array(
+    'UG' => 'UG',
+    'MES' => 'MES',
+    'MPA' => 'MPA',
+  );
+  $handler->display->display_options['filters']['field_curricular_area_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_curricular_area_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['operator_id'] = 'field_curricular_area_value_op';
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['label'] = 'Graduate or Undergraduate';
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['operator'] = 'field_curricular_area_value_op';
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['identifier'] = 'area';
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_curricular_area_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Global: Combine fields filter */
   $handler->display->display_options['filters']['combine']['id'] = 'combine';
   $handler->display->display_options['filters']['combine']['table'] = 'views';
