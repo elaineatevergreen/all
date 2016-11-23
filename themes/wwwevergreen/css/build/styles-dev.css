@@ -3159,8 +3159,8 @@ input:checked + .header-dropdown {
 
 /* line 590, ../src/smacss/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited,
-.secoondary-nav-list a,
-.secoondary-nav-list a:visited {
+.secondary-nav-list a,
+.secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
   width: 100%;
@@ -3170,8 +3170,8 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 22em) {
   /* line 590, ../src/smacss/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited,
-  .secoondary-nav-list a,
-  .secoondary-nav-list a:visited {
+  .secondary-nav-list a,
+  .secondary-nav-list a:visited {
     height: auto;
     padding: 0 1em;
     display: inline-block;
@@ -3180,15 +3180,15 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 70em) {
   /* line 590, ../src/smacss/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited,
-  .secoondary-nav-list a,
-  .secoondary-nav-list a:visited {
+  .secondary-nav-list a,
+  .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
 /* line 616, ../src/smacss/modules/_header.scss */
 .secondary-nav-link:hover,
-.secoondary-nav-list a:hover {
+.secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
@@ -3196,7 +3196,7 @@ input:checked + .header-dropdown {
 }
 /* line 626, ../src/smacss/modules/_header.scss */
 .secondary-nav-link:focus,
-.secoondary-nav-list a:focus {
+.secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 
