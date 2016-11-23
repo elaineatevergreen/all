@@ -9,7 +9,7 @@
 				<div class="top-search">
 					<input id="search-flag" name="header-toggle" type="checkbox"/> 
 					<div class="header-dropdown">
-						<form action="http://evergreen.edu/search/home" class="search" method="get" role="search">
+						<form action="http://evergreen.edu/search" class="search" method="get" role="search">
 							<label for="q">Search</label> 
 							<input id="q" name="q" placeholder="Search" type="search"/><!-- -->
 							<button class="search-button">
