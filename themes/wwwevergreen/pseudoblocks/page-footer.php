@@ -62,7 +62,7 @@
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
 						<div>
-							<a href="http://evergreen.edu/directories">Phone &amp; Email Directories</a>
+							<a href="http://evergreen.edu/directory/home">Phone &amp; Email Directories</a>
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-2-7 -->
