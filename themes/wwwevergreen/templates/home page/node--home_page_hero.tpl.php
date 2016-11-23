@@ -145,7 +145,7 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
 			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
 			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more." srcset="[uri_1]" />
+			<img alt="Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more." srcset="<?php echo $xl_hero; ?>" />
 		</picture>
 		
 		<div class="wrapper">

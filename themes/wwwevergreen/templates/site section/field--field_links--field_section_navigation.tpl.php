@@ -6,11 +6,11 @@
 */
 ?>
 <div class="accordion-body">
-<ul class="accordion-inner tertiary-nav-list">
-  
-    <?php foreach ($items as $delta => $item): ?>
-      <li><?php print render($item); ?></li>
-    <?php endforeach; ?>
-
-</ul>
+	<ul class="accordion-inner tertiary-nav-list">
+		<?php foreach ($items as $delta => $item): ?>
+			<li>
+				<?php print render($item); ?>
+			</li>
+		<?php endforeach; ?>
+	</ul>
 </div>
