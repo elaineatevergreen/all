@@ -584,7 +584,8 @@ input:checked + .header-dropdown{
 	}
 }
 
-.secondary-nav-link{
+.secondary-nav-link,
+.secoondary-nav-list a{  // Drupal
 
 	&,
 	&:visited{
