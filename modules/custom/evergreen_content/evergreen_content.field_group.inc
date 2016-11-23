@@ -1514,6 +1514,7 @@ function evergreen_content_field_group_info() {
       3 => 'field_study_abroad',
       4 => 'field_upper_division',
       5 => 'field_variable_credit_options',
+      6 => 'field_fees',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
