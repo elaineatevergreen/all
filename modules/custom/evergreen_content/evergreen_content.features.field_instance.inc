@@ -2573,6 +2573,54 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_fall_registration'.
+  $field_instances['node-catalog_entry-field_fall_registration'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_fall_registration',
+    'label' => 'Fall Registration',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 21,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_fields_of_study'.
   $field_instances['node-catalog_entry-field_fields_of_study'] = array(
     'bundle' => 'catalog_entry',
@@ -3311,6 +3359,54 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_spring_registration'.
+  $field_instances['node-catalog_entry-field_spring_registration'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_spring_registration',
+    'label' => 'Spring Registration',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 23,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_status_date'.
   $field_instances['node-catalog_entry-field_status_date'] = array(
     'bundle' => 'catalog_entry',
@@ -3637,6 +3733,54 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 5,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_winter_registration'.
+  $field_instances['node-catalog_entry-field_winter_registration'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_winter_registration',
+    'label' => 'Winter Registration',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -13534,6 +13678,7 @@ function evergreen_content_field_default_field_instances() {
   t('Faculty Bios');
   t('Faculty Member(s)');
   t('Faculty directory subject area');
+  t('Fall Registration');
   t('Fax');
   t('Featured');
   t('Fields of Study');
@@ -13674,6 +13819,7 @@ function evergreen_content_field_default_field_instances() {
   t('Site Section(s)');
   t('Special Expenses');
   t('Sponsored By');
+  t('Spring Registration');
   t('Square Footage');
   t('Staff Page');
   t('Staff and Faculty Members');
@@ -13752,6 +13898,7 @@ function evergreen_content_field_default_field_instances() {
   t('When the import is run from the CMD, this value should be set to 1.');
   t('Where did they come from before they went to Evergreen?');
   t('Which is eligible to apply for this scholarship?');
+  t('Winter Registration');
   t('Year Graduated');
   t('Your image will be resized to 345 pixels wide and displayed with your event description.');
   t('id');

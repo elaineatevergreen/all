@@ -41,6 +41,18 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog-xpathparser_0-html_entity_decode';
+  $feeds_tamper->importer = 'catalog';
+  $feeds_tamper->source = 'xpathparser:0';
+  $feeds_tamper->plugin_id = 'html_entity_decode';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'HTML entity decode';
+  $export['catalog-xpathparser_0-html_entity_decode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'catalog-xpathparser_11-trim';
   $feeds_tamper->importer = 'catalog';
   $feeds_tamper->source = 'xpathparser:11';
@@ -186,7 +198,7 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->source = 'xpathparser:6';
   $feeds_tamper->plugin_id = 'rewrite';
   $feeds_tamper->settings = array(
-    'text' => 'http://www.evergreen.edu/faculty/images/portraits/[xpathparser:6].jpg',
+    'text' => 'public://faculty/images/portraits/[xpathparser:6].jpg',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Rewrite';
