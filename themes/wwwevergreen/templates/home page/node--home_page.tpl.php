@@ -189,7 +189,7 @@
 									<li class="unit-1-2">
 										<figure class="box caption-box">
 											<a class ="profile-img-link" href="/magazine/2016spring-summer/calling-to-conserve">
-												<img alt="Amanda Sargent ’10" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/amanda-sargent.jpg" />
+												<img alt="Amanda Sargent ’10" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/amanda-sargent.jpg" />
 											</a>
 											<figcaption>
 												<p>
@@ -203,7 +203,7 @@
 									<li class="unit-1-2">
 										<figure class="box caption-box">
 											<a class="profile-img-link" href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
-												<img alt="Rhys Roth ’87, MES ’90" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/rhys-roth.jpg" />
+												<img alt="Rhys Roth ’87, MES ’90" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/rhys-roth.jpg" />
 											</a>
 											<figcaption>
 												<p>
