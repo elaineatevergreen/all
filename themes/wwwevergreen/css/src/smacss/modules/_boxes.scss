@@ -21,7 +21,8 @@
  */
 .notice,  // deprecated
 .box,
-p.box{  // WYSIWYG
+p.box,  // WYSIWYG
+#views-exposed-form-catalog-page{  // Catalog nav workaround
 	// box model
 	margin-top: 2.14285714285714em;  // 30/14
 	margin-bottom: 3.21428571428571em;  // 45/14
