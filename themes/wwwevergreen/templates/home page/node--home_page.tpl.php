@@ -205,13 +205,13 @@
 											<a class="profile-img-link" href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
 												<img alt="Rhys Roth ’87, MES ’90" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/rhys-roth.jpg" />
 											</a>
-											<div class="box caption-box">
+											<figcaption>
 												<p>
 													<a href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
 														<strong>Rhys Roth ’87, MES ’90</strong>
 													</a> is positioning the Pacific Northwest to lead in sustainability.
 												</p>
-											</div>
+											</figcaption>
 										</figure>
 									</li>
 								</ul>
