@@ -3054,7 +3054,7 @@ input:checked + .header-dropdown {
   margin: 0;
   padding: 0;
   text-align: center;
-  background: #64933a url("images/texture-1.png");
+  background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   list-style-type: none;
   /*> li{
   	display: inline-block;

@@ -157,9 +157,9 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
-								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/go-beyond/slogan-wide.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/go-beyond/slogan-mobile.svg"/>
-								<img alt="Go beyond majors, classes, &amp; grades and experience your education the way you imagine" src="<?php print base_path() . path_to_theme() ?>/images/go-beyond/slogan-mobile.svg"/>
+								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-wide.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-mobile.svg"/>
+								<img alt="Go beyond majors, classes, &amp; grades and experience your education the way you imagine" src="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-mobile.svg"/>
 							</picture>
 						</h1>
 						<p class="call-to-action">See for yourself →</p>
