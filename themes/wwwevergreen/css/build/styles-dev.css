@@ -3157,8 +3157,10 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 589, ../src/smacss/modules/_header.scss */
-.secondary-nav-link, .secondary-nav-link:visited {
+/* line 590, ../src/smacss/modules/_header.scss */
+.secondary-nav-link, .secondary-nav-link:visited,
+.secoondary-nav-list a,
+.secoondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
   width: 100%;
@@ -3166,29 +3168,35 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 589, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited {
+  /* line 590, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited,
+  .secoondary-nav-list a,
+  .secoondary-nav-list a:visited {
     height: auto;
     padding: 0 1em;
     display: inline-block;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 589, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited {
+  /* line 590, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited,
+  .secoondary-nav-list a,
+  .secoondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 615, ../src/smacss/modules/_header.scss */
-.secondary-nav-link:hover {
+/* line 616, ../src/smacss/modules/_header.scss */
+.secondary-nav-link:hover,
+.secoondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all 0.1s ease-out;
 }
-/* line 625, ../src/smacss/modules/_header.scss */
-.secondary-nav-link:focus {
+/* line 626, ../src/smacss/modules/_header.scss */
+.secondary-nav-link:focus,
+.secoondary-nav-list a:focus {
   background-color: #492c5d;
 }
 
@@ -3198,12 +3206,12 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 637, ../src/smacss/modules/_header.scss */
+/* line 638, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 637, ../src/smacss/modules/_header.scss */
+  /* line 638, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3213,7 +3221,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-height: 35em) {
-  /* line 653, ../src/smacss/modules/_header.scss */
+  /* line 654, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }

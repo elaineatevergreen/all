@@ -185,22 +185,34 @@
 								<p>Evergreen alumni have gone on to become successful in every field they&#8217;ve entered, from art, business, and education to health care, media, and science.</p>
 							</div>
 							<div class="unit-1-1">
-								<ul class="element-list grid profile-list">
+								<ul class="element-list grid">
 									<li class="unit-1-2">
-										<a class ="profile-img-link" href="/magazine/2015spring-summer/shaking-up-the-local-food-scene">
-											<img alt="Melissa Turkington &#8217;08" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/melissa-turkington.jpg" />
-										</a>
-										<div class="box caption-box">
-											<p><a href="/magazine/2015spring-summer/shaking-up-the-local-food-scene"><strong>Melissa Turkington &#8217;08</strong></a> is shaking up the local food scene.</p>
-										</div>
+										<figure class="box caption-box">
+											<a class ="profile-img-link" href="/magazine/2016spring-summer/calling-to-conserve">
+												<img alt="Amanda Sargent ’10" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/amanda-sargent.jpg" />
+											</a>
+											<figcaption>
+												<p>
+													<a href="/magazine/2016spring-summer/calling-to-conserve">
+														<strong>Amanda Sargent ’10</strong>
+													</a> felt a calling to conserve.
+												</p>
+											</figcaption>
+										</figure>
 									</li>
 									<li class="unit-1-2">
-										<a class="profile-img-link" href="/magazine/2015spring-summer/unlocking-the-story-of-a-river">
-											<img alt="Brian Footen MES &#8217;01" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/brian-footen.jpg" />
-										</a>
-										<div class="box caption-box">
-											<p><a href="/magazine/2015spring-summer/unlocking-the-story-of-a-river"><strong>Brian Footen MES &#8217;01</strong></a> is unlocking the story of a river.</p>
-										</div>
+										<figure class="box caption-box">
+											<a class="profile-img-link" href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
+												<img alt="Rhys Roth ’87, MES ’90" class="profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/rhys-roth.jpg" />
+											</a>
+											<div class="box caption-box">
+												<p>
+													<a href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
+														<strong>Rhys Roth ’87, MES ’90</strong>
+													</a> is positioning the Pacific Northwest to lead in sustainability.
+												</p>
+											</div>
+										</figure>
 									</li>
 								</ul>
 							</div>
