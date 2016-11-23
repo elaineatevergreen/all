@@ -110,8 +110,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $page_bottom; ?>
   <?php
 	  print $scripts;  // Include scripts from the theme .info file.
-	  drupal_add_js(base_path() . path_to_theme() . '/js/build/scripts.min.js', array('defer' => true));
-	  print base_path() . path_to_theme() . '/js/build/scripts.min.js';
   ?>
 </body>
 </html>
