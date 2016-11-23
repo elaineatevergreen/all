@@ -8,6 +8,8 @@
  *
  * 1. Default Tertiary Nav
  * 2. Homepage Tertiary Nav
+ * 3. CSS Accordion
+ * 4. Catalog Nav Fixes
  */
 
 /**
@@ -32,7 +34,7 @@
 }
 
 #tertiary-nav,
-#views-exposed-form-catalog-page{  // Drupal; the filter form on the catalog page where #tertiary-nav would normall go... Can or should this just be changed to #tertiary-nav? -jkm
+#views-exposed-form-catalog-page{  // Drupal; the filter form on the catalog page where #tertiary-nav would normally go... Can or should this just be changed to #tertiary-nav? -jkm
 	// box model
 	margin: 0 auto;
 	padding-right: 0;
@@ -174,7 +176,7 @@
 }
 
 /**
- * CSS Accordion
+ * 3. CSS Accordion
  *
  * An accordion that relies on radio buttons and labels instead of JavaScript.
  *
@@ -294,4 +296,16 @@ ul.accordion-inner{
 	@include breakpoint($gamora){
 		padding: 0;
 	}
+}
+
+/**
+ * 4. Catalog Nav Fixes
+ *
+ * The catalog uses a special filter form in the nav, which throws
+ * everything off.
+ *
+ * @see http://evergreen.edu/catalog/index
+ */
+#views-exposed-form-catalog-page{
+	margin-top: 0;
 }

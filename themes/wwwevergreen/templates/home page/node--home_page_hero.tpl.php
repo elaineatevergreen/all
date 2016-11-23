@@ -117,9 +117,9 @@
 */
 //this is the part where we get all the raw values of the variables. Because that's all we need.
 	
-//$classes = field_get_items('node', $node, 'field_classes');
-//$classes = $classes[0]['safe_value'];
-$classes = '';
+$classes = field_get_items('node', $node, 'field_classes');
+$classes = $classes[0]['safe_value'];
+//$classes = '';
 
 //for the hero images, we need the rendered URL.
 //someday it might be nice to make these relative instead of absolute.
