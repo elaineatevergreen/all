@@ -2325,6 +2325,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_feed_importer';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_feed_importer'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_field_of_study';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -2502,6 +2511,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'menu_parent_faculty_news';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_faculty_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_feed_importer';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_feed_importer'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2718,6 +2734,16 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_feed_importer';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_feed_importer'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_field_of_study';
   $strongarm->value = array(
     0 => 'status',
@@ -2918,6 +2944,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_feed_importer';
+  $strongarm->value = '1';
+  $export['node_preview_feed_importer'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_field_of_study';
   $strongarm->value = '0';
   $export['node_preview_field_of_study'] = $strongarm;
@@ -3075,6 +3108,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_submitted_faculty_news';
   $strongarm->value = 1;
   $export['node_submitted_faculty_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_feed_importer';
+  $strongarm->value = 1;
+  $export['node_submitted_feed_importer'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -4197,6 +4237,7 @@ function evergreen_content_strongarm() {
     'database_of_databases' => 0,
     'event_formats' => 0,
     'faculty_directory_categories' => 0,
+    'fields_of_study' => 0,
   );
   $export['workbench_access_taxonomy'] = $strongarm;
 

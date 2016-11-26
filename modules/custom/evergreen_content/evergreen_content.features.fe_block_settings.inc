@@ -318,11 +318,13 @@ function evergreen_content_default_fe_block_settings() {
       2 => 'directory_individual',
       3 => 'event',
       4 => 'gallery',
-      5 => 'home_page',
+      5 => 'job_post',
       6 => 'scholarship',
       7 => 'webform',
     ),
-    'pages' => 'directory*',
+    'pages' => 'directory*
+catalog*
+calendar*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -346,10 +348,13 @@ function evergreen_content_default_fe_block_settings() {
       1 => 'basic_page',
       2 => 'event',
       3 => 'gallery',
-      4 => 'scholarship',
-      5 => 'webform',
+      4 => 'job_post',
+      5 => 'scholarship',
+      6 => 'webform',
     ),
-    'pages' => 'directory*',
+    'pages' => 'directory*
+catalog*
+calendar*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -401,10 +406,13 @@ function evergreen_content_default_fe_block_settings() {
       1 => 'basic_page',
       2 => 'event',
       3 => 'gallery',
-      4 => 'scholarship',
-      5 => 'webform',
+      4 => 'job_post',
+      5 => 'scholarship',
+      6 => 'webform',
     ),
-    'pages' => 'directory*',
+    'pages' => 'directory*
+catalog*
+calendar*',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(

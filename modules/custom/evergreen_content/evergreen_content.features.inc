@@ -282,6 +282,14 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'feed_importer' => array(
+      'name' => t('Feed Importer'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>Feed Importer</em> for importing items via Feeds. (These are used when multiple feeds are running off of the same importer.) If none of that makes sense, don\'t even think about this.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'field_of_study' => array(
       'name' => t('Field of Study'),
       'base' => 'node_content',

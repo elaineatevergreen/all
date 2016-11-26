@@ -164,6 +164,141 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_1-rewrite';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'rewrite';
+  $feeds_tamper->settings = array(
+    'text' => '[xpathparser:11]',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Rewrite';
+  $export['catalog_multi_upload-blank_source_1-rewrite'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_1-sprintf';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'sprintf';
+  $feeds_tamper->settings = array(
+    'format' => '%.4s',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Four characters only';
+  $export['catalog_multi_upload-blank_source_1-sprintf'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_0-html_entity_decode';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:0';
+  $feeds_tamper->plugin_id = 'html_entity_decode';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'HTML entity decode';
+  $export['catalog_multi_upload-xpathparser_0-html_entity_decode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_11-trim';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:11';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog_multi_upload-xpathparser_11-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_12-trim';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog_multi_upload-xpathparser_12-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_18-find_replace';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:18';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'Day, Evening and Weekend',
+    'replace' => 'Day, Evening, and Weekend',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'OXFORD COMMA, y\'all';
+  $export['catalog_multi_upload-xpathparser_18-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_21-convert_case';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:21';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '0',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['catalog_multi_upload-xpathparser_21-convert_case'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_22-explode';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:22';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 5;
+  $feeds_tamper->description = 'Explode';
+  $export['catalog_multi_upload-xpathparser_22-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_22-trim';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:22';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 6;
+  $feeds_tamper->description = 'Trim';
+  $export['catalog_multi_upload-xpathparser_22-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'faculty_directory-blank_source_1-default_value';
   $feeds_tamper->importer = 'faculty_directory';
   $feeds_tamper->source = 'Blank source 1';
