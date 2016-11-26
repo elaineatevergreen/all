@@ -20,6 +20,8 @@ results
 npm-debug.log
 node_modules
 
+libs
+
 # Ignore superfluous jquery.css file that inexplicably gets created by grunt-contrib-sass
 themes/wwwevergreen/css/dist/custom-css/jquery.css
 
