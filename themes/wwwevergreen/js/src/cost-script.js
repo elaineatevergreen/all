@@ -98,7 +98,7 @@ function createTable(costRate, cred){
     document.getElementById('tuitionTable').innerHTML = myTable;// prints myTable into the HTML in the div 'tuitionTable'
 }
 jQuery(document).ready(function($){
-    document.getElementById('Tuition-Box').innerHTML = '<aside class="box"><h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    <select id="selCSV"><option value="-1" selected="selected">Please Select Option</option><option value="tuition-csv/1516.csv">2015-16</option><option value="tuition-csv/1617.csv">2016-17</option></select></p><p><label for="creditCount">Number of credits:</label> <select id="creditCount" id="changed"><option value="-1">Please Choose Credits</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>   </p><p><label for="resident">Resident or Non-resident:</label> <select id="resident"><option value="-1" selected="selected">Please Select Option</option><option value="0">Resident</option><option value="1">Non-resident</option></select>   </p> <p><label for="graduate">Undergraduate or Graduate:</label> <select id="graduate"><option value="-1" selected="selected">Please Select Option</option><option value="0">Undergraduate</option><option value="2">Graduate</option></select>   </p> </form><button  class="prime" onclick="clickFunction()">Calculate</button><div id="tuitionTable"></div></aside>'
+    document.getElementById('Tuition-Box').innerHTML = '<aside class="box"><h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    <select id="selCSV"><option value="-1" selected="selected">Please Select Option</option><option value="tuition-csv/1516.csv">2015-16</option><option value="tuition-csv/1617.csv">2016-17</option></select></p><p><label for="creditCount">Number of credits:</label> <select id="creditCount" id="changed"><option value="-1">Please Choose Credits</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>   </p><p><label for="resident">Resident or Non-resident:</label> <select id="resident"><option value="-1" selected="selected">Please Select Option</option><option value="0">Resident</option><option value="1">Non-resident</option></select>   </p> <p><label for="graduate">Undergraduate or Graduate:</label> <select id="graduate"><option value="-1" selected="selected">Please Select Option</option><option value="0">Undergraduate</option><option value="2">Graduate</option></select>   </p> </form><button  class="prime" onclick="clickFunction()">Calculate</button><div id="tuitionTable"></div></aside>';
 });
 
 function clickFunction(){
@@ -106,7 +106,7 @@ function clickFunction(){
 /* -------------------------------------csv read in to fields array. ----------------------------------------*/
     jQuery(document).ready(function($){
         var CSV = document.getElementById("selCSV");
-        CSV = CSV.options[CSV.selectedIndex].value
+        CSV = CSV.options[CSV.selectedIndex].value;
         $.ajax({
             type: "GET",
             url: CSV,// The name of the CSV currently being used.
@@ -156,4 +156,4 @@ function clickFunction(){
         }
     }
     });
-};
+}
