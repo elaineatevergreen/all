@@ -6,6 +6,8 @@ core = 7.x
 stylesheets[all][] = css/dist/styles.css
 ;scripts[] = js/build/scripts.min.js
 ;Scripts & stylesheets added by Naomi for home page and slick slider
+scripts[] = js/libs/matchMedia.min.js
+scripts[] = js/libs/picturefill2.min.js
 stylesheets[all][] = css/dist/custom-css/slick.css
 scripts[] = js/slick.min.js
 scripts[] = js/slick-home-init.js
