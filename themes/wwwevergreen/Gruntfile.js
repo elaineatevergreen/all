@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				separator: ';',
 			},
 			scripts: {
-				src: ['js/src/events.js', 'scripts.js'],
+				src: ['js/src/events.js', 'js/src/scripts.js'],
 				dest: 'js/build/scripts-dev.js',
 			},
 		},
