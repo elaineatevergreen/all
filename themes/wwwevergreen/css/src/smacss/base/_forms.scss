@@ -103,6 +103,13 @@ select{
 	}
 }
 
+.form-type-select{
+	@extend input[type="text"]; // Drupal select box wrapper, sets a context for determining max-width of a select box
+}
+.form-type-select select{
+	width: 100%;  // Makes long select boxes not extend past their container
+}
+
 textarea{
 	// box model
 	padding: calc(7.5 / 16 * 1rem) 0.75em;
