@@ -2,7 +2,7 @@
 # Apache/PHP/Drupal settings:
 #
 
-Redirect 301 /wv3 http://schedules.evergreen.edu/wv3
+Redirect 301 /wv3 http://www2.evergreen.edu/wv3
 Redirect 301 /webmail https://webmail.evergreen.edu/owa
 Redirect 301 /kaos http://kaosradio.org/
 Redirect 301 /athletics http://www.gogeoducks.com/
