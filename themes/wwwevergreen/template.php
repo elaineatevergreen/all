@@ -67,7 +67,7 @@ function wwwevergreen_preprocess_page(&$variables) {
   }
   
   // Add JavaScript files
-  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
+  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/dist/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
 
 }
 

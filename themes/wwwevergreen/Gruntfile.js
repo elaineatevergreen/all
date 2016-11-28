@@ -21,6 +21,17 @@ module.exports = function(grunt) {
 		 * Copy files from one directory to another.
 		 */
 		copy: {
+			js_init_to_dist:{
+				files: [
+					{
+						expand: true,
+						flatten: true,  // Only copies the file, not the folder structure, too
+						src: ['js/src/init/*'],
+						dest: 'js/dist/init',
+						filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
+					}
+				],
+			},
 		  to_banner: {
 			  files: [
 				  {
@@ -262,8 +273,12 @@ module.exports = function(grunt) {
 			//},
 			scripts: {
 				src: 'js/build/scripts-dev.js',
-				dest: 'js/build/scripts.min.js'
-			}
+				dest: 'js/build/scripts.min.js'  // Deprecated; use scripts_to_dist instead
+			},
+			scripts_to_dist: {
+				src: 'js/build/scripts-dev.js',
+				dest: 'js/dist/scripts.min.js'
+			},
 		},
 
 		/**
@@ -284,8 +299,8 @@ module.exports = function(grunt) {
 				tasks: ['sass', 'postcss'],
 			},
 			js: {  // Concatenate and uglify JavaScript.
-				files: ['js/src/*.js'],
-				tasks: ['jshint', 'newer:concat', 'newer:uglify']
+				files: ['js/src/**/*.js'],
+				tasks: ['jshint', 'newer:concat', 'newer:uglify', 'copy:js_init_to_dist'],
 			},
 		},
     
