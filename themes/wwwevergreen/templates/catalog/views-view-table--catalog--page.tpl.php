@@ -42,7 +42,11 @@
     </thead>
   <?php endif; ?>
   <tbody>
-    <?php foreach ($rows as $row_count => $row): ?>
+    <?php foreach ($rows as $row_count => $row): 
+	    
+	    //add class="cancelled" for cancelled offerings.
+	    if(strstr($row['title'],'Cancelled')) { $row_classes[$row_count][] = 'cancelled'; };
+    ?>
       <tr <?php if ($row_classes[$row_count]) { print 'class="' . implode(' ', $row_classes[$row_count]) .'"';  } ?>>
         <?php 
 	        

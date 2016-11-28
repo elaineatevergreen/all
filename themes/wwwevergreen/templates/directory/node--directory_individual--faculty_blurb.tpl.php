@@ -18,7 +18,7 @@ In this entity view mode, we get a name, a tiny headshot, and their expertise. f
 	<div class="media-body">
 		<!-- Faculty name -->
 		<div class="p-name">
-			<a class="u-email" href="/faculty/instructor/buchmana"><?php print render($content['field_first_name']) . ' ' . render($content['field_last_name']); ?></a>
+			<a class="u-email" href="<?php print $node_url; ?>"><?php print render($content['field_first_name']) . ' ' . render($content['field_last_name']); ?></a>
 		</div>
 		
 		<?php if(isset($content['field_expertise'])) { ?>
