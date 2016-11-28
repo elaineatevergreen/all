@@ -100,7 +100,6 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	    <div id="index-wrapper" class="index-wrapper unit-6-7">
 		      
 				<article class="main-content">
-					<h1>Catalogz?</h1>
 		      
 				<?php 
 					/* and now, all the main column content coming out of Drupal... */	
