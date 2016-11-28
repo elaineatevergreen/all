@@ -61,7 +61,7 @@
 	        //QUARTERS: add the year to the end of the quarter name
 	        
 			//ACADEMIC YEAR: math it up!
-			$academicyear = $row['field_academic_year'] . '–' . (substr($row['field_academic_year'], 2,2)+1);
+			$academicyear = ($row['field_academic_year']-1) . '–' . substr($row['field_academic_year'], 2,2);
 			
 			//OPEN FOR REGISTRATION
 			$openreg = $row['field_quarters_open'];
