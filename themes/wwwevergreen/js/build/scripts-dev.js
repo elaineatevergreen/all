@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 	//recordEvent('test-form', 'submit', 'function-test', false);
 	
 	// Record clicks
-	recordEvent('virtual-tour-link', 'click', 'Virtual Tour', false);
+	//recordEvent('virtual-tour-link', 'click', 'Virtual Tour', false);
 	// Record submissions
 	
 });

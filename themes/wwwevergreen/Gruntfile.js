@@ -271,10 +271,10 @@ module.exports = function(grunt) {
 			//options: {
 				//banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			//},
-			scripts: {
+			/*scripts: {
 				src: 'js/build/scripts-dev.js',
 				dest: 'js/build/scripts.min.js'  // Deprecated; use scripts_to_dist instead
-			},
+			},*/
 			scripts_to_dist: {
 				src: 'js/build/scripts-dev.js',
 				dest: 'js/dist/scripts.min.js'
