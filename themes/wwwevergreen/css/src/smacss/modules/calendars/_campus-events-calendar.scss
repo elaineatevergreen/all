@@ -99,11 +99,11 @@
 	padding-bottom: 0;
 }
 
-.item-list ul{
+.item-list ul{  // Should this be qualified with .calendar-calendar or something like that?
 	margin: inherit;
 }
 
-.item-list ul li{
+.item-list ul li{  // Should this be qualified with .calendar-calendar or something like that?
 	// box model
 	margin-left: 0;
 }

@@ -1,6 +1,6 @@
 				<div class="do-not-print unit-3-7">
 					<p class="footer-map">
-						<a href="http://evergreen.edu/tour/home">
+						<a href="http://evergreen.edu/tour">
 							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-land-cover.jpg"/>
 						</a><br/>
 						<small>&#169;
@@ -15,7 +15,7 @@
 							<a href="http://evergreen.edu/give">Give to Evergreen</a>
 						</li>-->
 						<li>
-							<a href="http://evergreen.edu/tour/home">Tours and Maps</a>
+							<a href="http://evergreen.edu/tour">Tours and Maps</a>
 						</li>
 						<li>
 							<p>Stay connected:</p>
@@ -62,7 +62,7 @@
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
 						<div>
-							<a href="http://evergreen.edu/directory/home">Phone &amp; Email Directories</a>
+							<a href="http://evergreen.edu/directory">Phone &amp; Email Directories</a>
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-2-7 -->
