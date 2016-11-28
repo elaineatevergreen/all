@@ -19,6 +19,7 @@ deploy_d7_theme themes/wwwevergreen $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
+rsync .htaccess $WWW_CODE/
 
 # Perform Production updates.
 if [[ "$STAGE" = "prod" ]] ; then
@@ -27,6 +28,8 @@ if [[ "$STAGE" = "prod" ]] ; then
   rsync -rtp --delete $HOME/etc/ www_deploy@860elwb01:./etc
   rsync -rtp --delete $HOME/etc/ www_deploy@860elwb02:./etc
   rsync -rtp --delete site_updates_www/ www_deploy@860elwb01:./site_updates_www
+  rsync .htaccess www_deploy@860elwb01:$WWW_CODE/
+  rsync .htaccess www_deploy@860elwb02:$WWW_CODE/
   echo "execute Remote production updates"
   bin/execute_prod_updates.sh
 else
