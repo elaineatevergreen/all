@@ -67,7 +67,7 @@ function wwwevergreen_preprocess_page(&$variables) {
   }
   
   // Add JavaScript files
-  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/build/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
+  drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/dist/scripts.min.js', array('group' => JS_THEME, 'defer' => true, 'type' => 'file'));
 
 }
 
@@ -130,8 +130,8 @@ function wwwevergreen_preprocess_node(&$variables) {
   
   //for catalog entries, let's make a nice-looking description of the quarters offered!
   if ($variables['type'] === 'catalog_entry') {
-	$fall = $variables['field_academic_year'][0]['safe_value'];
-	$winterspring = $fall+1;
+	$winterspring = $variables['field_academic_year'][0]['safe_value'];
+	$fall = $winterspring-1;
 	  
 	foreach($variables['field_quarters_offered'] as $q) {
 		  
