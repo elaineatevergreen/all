@@ -7,7 +7,7 @@ In this entity view mode, we get a name, a tiny headshot, and their expertise. f
 
  
 ?>
-
+<div class="unit-1-2">
 <div class="h-card media">
 	<div class="media-img">
 <?php if(isset($content['field_headshot'])) {
@@ -26,4 +26,5 @@ In this entity view mode, we get a name, a tiny headshot, and their expertise. f
 		<div class="details"><?php print render($content['field_expertise']); ?></div>
 		<?php }; ?>
 	</div><!-- /.media-body -->
+</div>
 </div>
