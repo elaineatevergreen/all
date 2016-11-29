@@ -5,4 +5,5 @@ if [[ -z "$CI_BUILD_REF" ]] ; then
 fi
 . bin/www_build_environment.sh
 cd $WWW_CODE
+echo "Running cron for $WWW_CODE"
 drush --yes cron
