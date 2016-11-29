@@ -2246,7 +2246,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -2342,7 +2342,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 20,
+      'weight' => 26,
     ),
     'workbench_access_field' => 0,
   );
@@ -2389,7 +2389,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -2429,7 +2429,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -2483,7 +2483,7 @@ function evergreen_content_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_label_token' => 0,
     'deleted' => 0,
-    'description' => '',
+    'description' => '"Summer" is one of the listings in the CMD, but it\'s not very helpful. Should always be converted to UG  instead.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2513,7 +2513,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 25,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -2561,7 +2561,55 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_enrollment_conditions'.
+  $field_instances['node-catalog_entry-field_enrollment_conditions'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 34,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_enrollment_conditions',
+    'label' => 'Enrollment Conditions',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 30,
     ),
     'workbench_access_field' => 0,
   );
@@ -2594,7 +2642,7 @@ function evergreen_content_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'ul',
     'field_name' => 'field_faculty',
-    'label' => 'Taught by',
+    'label' => 'Faculty',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -2609,7 +2657,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 8,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -2657,7 +2705,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 21,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -2705,7 +2753,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 32,
     ),
     'workbench_access_field' => 0,
   );
@@ -2746,48 +2794,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-catalog_entry-field_graduate_program'.
-  $field_instances['node-catalog_entry-field_graduate_program'] = array(
-    'bundle' => 'catalog_entry',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'There\'s some overlap in grad school offerings.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_graduate_program',
-    'label' => 'Graduate Program (which one)',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -2827,7 +2834,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 16,
+      'weight' => 21,
     ),
     'workbench_access_field' => 0,
   );
@@ -2871,7 +2878,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -2914,7 +2921,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 15,
+      'weight' => 20,
     ),
     'workbench_access_field' => 0,
   );
@@ -2958,7 +2965,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -3006,7 +3013,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 36,
     ),
     'workbench_access_field' => 0,
   );
@@ -3050,7 +3057,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -3098,7 +3105,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -3146,7 +3153,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -3225,7 +3232,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 18,
+      'weight' => 23,
     ),
     'workbench_access_field' => 0,
   );
@@ -3268,7 +3275,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 14,
+      'weight' => 19,
     ),
     'workbench_access_field' => 0,
   );
@@ -3316,7 +3323,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -3364,7 +3371,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 31,
     ),
     'workbench_access_field' => 0,
   );
@@ -3448,6 +3455,47 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_quarters_signature'.
+  $field_instances['node-catalog_entry-field_quarters_signature'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 35,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_quarters_signature',
+    'label' => 'Quarters Signature',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_special_expenses'.
   $field_instances['node-catalog_entry-field_special_expenses'] = array(
     'bundle' => 'catalog_entry',
@@ -3491,7 +3539,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 33,
     ),
     'workbench_access_field' => 0,
   );
@@ -3539,7 +3587,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 23,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -3591,7 +3639,7 @@ function evergreen_content_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -3639,54 +3687,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-catalog_entry-field_term_details'.
-  $field_instances['node-catalog_entry-field_term_details'] = array(
-    'bundle' => 'catalog_entry',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_term_details',
-    'label' => 'Term Details',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 37,
     ),
     'workbench_access_field' => 0,
   );
@@ -3727,53 +3728,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 19,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-catalog_entry-field_undergrad'.
-  $field_instances['node-catalog_entry-field_undergrad'] = array(
-    'bundle' => 'catalog_entry',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_undergrad',
-    'label' => 'Undergrad',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 24,
     ),
     'workbench_access_field' => 0,
   );
@@ -3821,7 +3776,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 35,
     ),
     'workbench_access_field' => 0,
   );
@@ -3870,7 +3825,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 38,
     ),
     'workbench_access_field' => 0,
   );
@@ -3918,7 +3873,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -13798,6 +13753,7 @@ function evergreen_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('"Summer" is one of the listings in the CMD, but it\'s not very helpful. Should always be converted to UG  instead.');
   t('"Umbrella" field');
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
@@ -13878,6 +13834,7 @@ function evergreen_content_field_default_field_instances() {
   t('Eligibility');
   t('Email');
   t('End Term');
+  t('Enrollment Conditions');
   t('Enter the full URL for your profile in the link field. For example: <em>http://twitter.com/EvergreenStCol</em> rather than <em>@EvergreenStCol</em>; although please don\'t actually link the main college Twitter in your contact block!');
   t('Event Date');
   t('Event Format');
@@ -13891,6 +13848,7 @@ function evergreen_content_field_default_field_instances() {
   t('Facilities');
   t('Facilities & Resources');
   t('Facility');
+  t('Faculty');
   t('Faculty Bios');
   t('Faculty Member(s)');
   t('Faculty directory subject area');
@@ -13908,7 +13866,6 @@ function evergreen_content_field_default_field_instances() {
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
-  t('Graduate Program (which one)');
   t('Graduated');
   t('Group Categories');
   t('Group Title');
@@ -14002,6 +13959,7 @@ function evergreen_content_field_default_field_instances() {
   t('Publications');
   t('Quarters Offered');
   t('Quarters Open');
+  t('Quarters Signature');
   t('Queue items');
   t('Recent Student Projects');
   t('Reference');
@@ -14047,15 +14005,12 @@ function evergreen_content_field_default_field_instances() {
   t('Study Abroad');
   t('Subjects Studied');
   t('Subscribe');
-  t('Taught by');
-  t('Term Details');
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The maximum number of credits this offering is listed for. NB: minimum and maximum CAN be the same number.');
   t('The name of the department or series, i.e., "Career Center" or "Geoducks@Nite".');
   t('The section selected will set the page\'s site title, navigation, and background.');
   t('The smallest number of credits that this offering is listed for.');
-  t('There\'s some overlap in grad school offerings.');
   t('These may include floor plans or exterior maps.');
   t('These should come in via the Migration....');
   t('This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!');
@@ -14079,7 +14034,6 @@ function evergreen_content_field_default_field_instances() {
   t('This is generated automatically as a "corresponding entity reference" from the Office Directory. A person may belong to more than one department, apparently.');
   t('This is independent of whether the scholarship is need-based.');
   t('This is just a pointer to an office that has complete information, because this node is an outdated or alternate name.');
-  t('This is probably going to be a complicated report thingamajig with information like conditions, CRNs, and detailed schedule.');
   t('This is somewhat temporary until we can bolt the fields together with the directory better.');
   t('This is the site\'s formal name as it appears in the header and navigation.');
   t('This may add your event to a calendar on a separate section of the site (Advising, Student Activities, etc). If you are not a site editor, your placement will be reviewed by an editor before being approved.');
@@ -14097,7 +14051,6 @@ function evergreen_content_field_default_field_instances() {
   t('Tuition awards are a waiver of tuition, and are for the same value as tuition. They also don\'t appear in listings for potential donors.');
   t('Twitter');
   t('Under-represented');
-  t('Undergrad');
   t('Upcoming Deadlines');
   t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
   t('Upload meeting agendas in PDF or Word format.');

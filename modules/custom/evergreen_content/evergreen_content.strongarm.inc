@@ -1206,7 +1206,7 @@ function evergreen_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'path' => array(
           'weight' => '4',
