@@ -7,5 +7,5 @@
 # |  |  |  |  |
 # *  *  *  *  * user-name command to be executed
 # * * * * * root /bin/su - jobsub -c "/opt/evergreen/ods/cron/every_minute.sh"
-*/10 * * * * root /bin/su - www_deploy -c "bin/cron_drush.sh dev"
-*/10 * * * * root /bin/su - www_deploy -c "bin/cron_drush.sh test"
+*/10 * * * * root /bin/su - www_deploy -c bin/cron_drush.sh dev
+*/10 * * * * root /bin/su - www_deploy -c bin/cron_drush.sh test
