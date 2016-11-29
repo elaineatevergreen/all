@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export CI_BUILD_REF="$1"
+export CI_BUILD_REF_NAME="$1"
 if [[ -z "$CI_BUILD_REF_NAME" ]] ; then
   export CI_BUILD_REF_NAME="dev"
 fi
