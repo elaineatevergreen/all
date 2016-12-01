@@ -72,7 +72,7 @@ function evergreen_content_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'catalog';
-  $context->description = 'Catalog home/lists ONLY, not individual items?';
+  $context->description = 'Catalog home and items';
   $context->tag = 'sections';
   $context->conditions = array(
     'node' => array(
@@ -92,9 +92,9 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-4' => array(
+        'block-3' => array(
           'module' => 'block',
-          'delta' => '4',
+          'delta' => '3',
           'region' => 'section_title',
           'weight' => '-10',
         ),
@@ -102,6 +102,18 @@ function evergreen_content_context_default_contexts() {
           'module' => 'views',
           'delta' => '-exp-catalog-page',
           'region' => 'filters',
+          'weight' => '-10',
+        ),
+        'views-catalog-new_revised' => array(
+          'module' => 'views',
+          'delta' => 'catalog-new_revised',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
+        'views-catalog-secondary_content' => array(
+          'module' => 'views',
+          'delta' => 'catalog-secondary_content',
+          'region' => 'secondary_content',
           'weight' => '-10',
         ),
       ),
@@ -116,7 +128,7 @@ function evergreen_content_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catalog home/lists ONLY, not individual items?');
+  t('Catalog home and items');
   t('sections');
   $export['catalog'] = $context;
 

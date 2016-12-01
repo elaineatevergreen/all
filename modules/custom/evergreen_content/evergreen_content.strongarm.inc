@@ -3246,7 +3246,7 @@ function evergreen_content_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_catalog_entry_pattern';
-  $strongarm->value = 'catalog/[node:title]';
+  $strongarm->value = 'catalog/offering/[node:title]-[node:field_cmd_id]';
   $export['pathauto_node_catalog_entry_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3283,6 +3283,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_faculty_news_pattern';
   $strongarm->value = '';
   $export['pathauto_node_faculty_news_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_feed_importer_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_feed_importer_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3443,6 +3450,7 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
+    'catalog' => TRUE,
     'file' => TRUE,
     'node' => TRUE,
     'taxonomy' => TRUE,

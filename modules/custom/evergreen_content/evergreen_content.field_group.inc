@@ -785,25 +785,25 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
       2 => 'group_location_schedule',
     ),
-    'format_type' => 'div',
+    'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Program Details',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-details field-group-div',
-        'description' => '',
+        'classes' => '',
+        'element' => 'div',
         'show_label' => '1',
         'label_element' => 'h2',
-        'effect' => 'none',
-        'speed' => 'fast',
+        'attributes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
+      'formatter' => '',
     ),
   );
   $field_groups['group_details|node|catalog_entry|default'] = $field_group;
@@ -1413,21 +1413,21 @@ function evergreen_content_field_group_info() {
       0 => 'field_advertised_schedule',
       1 => 'field_location',
       2 => 'field_off_campus_location',
-      3 => 'field_time_offered',
+      3 => 'field_study_abroad',
+      4 => 'field_time_offered',
+      5 => 'field_final_schedule',
     ),
-    'format_type' => 'div',
+    'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Location and Schedule',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-location-schedule field-group-div',
-        'description' => '',
+        'classes' => '',
+        'element' => 'div',
         'show_label' => '1',
         'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
+        'attributes' => '',
       ),
-      'formatter' => 'open',
     ),
   );
   $field_groups['group_location_schedule|node|catalog_entry|default'] = $field_group;
@@ -1712,6 +1712,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_prerequisites|node|catalog_entry|default';
+  $field_group->group_name = 'group_prerequisites';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Prerequisites',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_prerequisites',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Prerequisites',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'box program-prerequisites',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_prerequisites|node|catalog_entry|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_primary|node|basic_page|form';
   $field_group->group_name = 'group_primary';
   $field_group->entity_type = 'node';
@@ -1757,11 +1787,10 @@ function evergreen_content_field_group_info() {
       3 => 'field_number_of_quarters',
       4 => 'field_quarters_offered',
       5 => 'field_quarters_open',
-      6 => 'field_term_details',
-      7 => 'field_fall_registration',
-      8 => 'field_winter_registration',
-      9 => 'field_spring_registration',
-      10 => 'field_quarters_signature',
+      6 => 'field_fall_registration',
+      7 => 'field_winter_registration',
+      8 => 'field_spring_registration',
+      9 => 'field_quarters_signature',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2065,6 +2094,7 @@ function evergreen_content_field_group_info() {
       6 => 'field_percent_freshman',
       7 => 'field_time_offered',
       8 => 'field_curricular_area',
+      9 => 'field_final_schedule',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2117,6 +2147,7 @@ function evergreen_content_field_group_info() {
   t('Our Annotations');
   t('Participants');
   t('Phone Numbers');
+  t('Prerequisites');
   t('Primary Content');
   t('Program Details');
   t('Prospective Student Nav');
