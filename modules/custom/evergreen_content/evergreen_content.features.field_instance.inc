@@ -3937,6 +3937,58 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_websites'.
+  $field_instances['node-catalog_entry-field_websites'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_websites',
+    'label' => 'Websites',
+    'required' => FALSE,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_winter_registration'.
   $field_instances['node-catalog_entry-field_winter_registration'] = array(
     'bundle' => 'catalog_entry',
