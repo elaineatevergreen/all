@@ -57,8 +57,8 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 	        
 			//ACADEMIC YEAR: math it up!
 			$academicyear = ($row['field_academic_year']-1) . '–' . substr($row['field_academic_year'], 2,2);
-			$winterspring = $row['field_academic_year'];
-			$fall = $winterspring-1;
+			$threequarters = $row['field_academic_year'];
+			$fall = $threequarters-1;
 			
 			/*
 				for each quarter offered...
@@ -88,8 +88,9 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 
 			$printquarters = str_replace('Fall', 'Fall ' . $fall, $printquarters);
 			
-			$printquarters = str_replace('Winter', 'Winter&nbsp;' . $winterspring, $printquarters);
-			$printquarters = str_replace('Spring', 'Spring&nbsp;' . $winterspring, $printquarters);
+			$printquarters = str_replace('Winter', 'Winter&nbsp;' . $threequarters, $printquarters);
+			$printquarters = str_replace('Spring', 'Spring&nbsp;' . $threequarters, $printquarters);
+			$printquarters = str_replace('Summer', 'Summer&nbsp;' . $threequarters, $printquarters);
 	        
 	        
 	        foreach ($row as $field => $content):
