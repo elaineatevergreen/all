@@ -789,7 +789,8 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
-      2 => 'group_location_schedule',
+      2 => 'field_websites',
+      3 => 'group_location_schedule',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1408,7 +1409,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_details';
   $field_group->data = array(
     'label' => 'Location and Schedule',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_advertised_schedule',
       1 => 'field_location',
