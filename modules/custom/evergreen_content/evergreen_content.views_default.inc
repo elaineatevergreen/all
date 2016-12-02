@@ -9142,19 +9142,22 @@ return($term); ';
     2 => '2',
     1 => 0,
     13 => 0,
-    12 => 0,
+    10 => 0,
     11 => 0,
     9 => 0,
     6 => 0,
-    3 => 0,
+    4 => 0,
     7 => 0,
     8 => 0,
     5 => 0,
-    10 => 0,
-    4 => 0,
+    12 => 0,
+    3 => 0,
   );
   $handler->display->display_options['filters']['combine']['fields'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name' => 'field_last_name',
     'field_expertise' => 'field_expertise',
+    'field_interests' => 'field_interests',
   );
   /* Filter criterion: Field: Related Subjects (Directory) (field_related_subjects_directory) */
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
@@ -9531,7 +9534,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_facility_value']['value'] = array(
     1 => '1',
   );
-  $handler->display->display_options['path'] = 'directory';
+  $handler->display->display_options['path'] = 'directory/browse';
 
   /* Display: Fax Page */
   $handler = $view->new_display('page', 'Fax Page', 'fax_page');
@@ -9968,7 +9971,7 @@ return($term); ';
   $handler->display->display_options['arguments']['field_last_name_value']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_last_name_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_last_name_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['base_path'] = 'directory';
+  $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['base_path'] = 'directory/browse';
   $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['count'] = FALSE;
   $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_last_name_value']['glossary'] = TRUE;
@@ -10386,7 +10389,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
   $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
   $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
-  $handler->display->display_options['path'] = 'directory/home';
+  $handler->display->display_options['path'] = 'directory';
 
   /* Display: PUC */
   $handler = $view->new_display('block', 'PUC', 'puc');
@@ -12524,14 +12527,39 @@ return($term); ';
   $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['label'] = 'Under-Represented Groups';
+  $handler->display->display_options['fields']['field_under_represented']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_under_represented']['alter']['text'] = '<strong>Under-represented groups</strong>: [field_under_represented]';
   $handler->display->display_options['fields']['field_under_represented']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_under_represented';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '2';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'No preference';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '<br/><strong>One</strong> or more [field_under_represented]:
+<ul>
+                                            <li>High level of loan indebtedness</li>
+                                            <li>African American</li>
+                                            <li>Age 24-26</li>
+                                            <li>First-generation</li>
+                                            <li>Hispanic/Latino</li>
+                                            <li>Native American</li>
+                                            <li>Parent</li>
+                                        </ul>';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: Content: Short Description */
   $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
   $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
   $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
   $handler->display->display_options['fields']['field_short_description']['label'] = 'Other Criteria';
+  $handler->display->display_options['fields']['field_short_description']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_short_description']['alter']['text'] = '[field_short_description]
+[views_conditional]';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -12601,27 +12629,6 @@ return($term); ';
   $handler->display->display_options['filters']['field_new_or_current_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    3 => 0,
-  );
-  /* Filter criterion: Content: Under-represented (field_under_represented) */
-  $handler->display->display_options['filters']['field_under_represented_value']['id'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['filters']['field_under_represented_value']['field'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator_id'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['label'] = 'Member of Under-Represented Group';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['identifier'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
-    9 => 0,
-    7 => 0,
-    6 => 0,
     3 => 0,
   );
   /* Filter criterion: Content: Common Application (field_common_application) */
@@ -13233,16 +13240,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_need_based']['label'] = '';
   $handler->display->display_options['fields']['field_need_based']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_need_based']['element_label_colon'] = FALSE;
-  /* Field: Content: Under-represented */
-  $handler->display->display_options['fields']['field_under_represented']['id'] = 'field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['label'] = '';
-  $handler->display->display_options['fields']['field_under_represented']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_under_represented']['alter']['text'] = '<strong>Under-represented groups</strong>: [field_under_represented]';
-  $handler->display->display_options['fields']['field_under_represented']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_under_represented']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
   /* Field: Table of Criteria */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -13265,10 +13262,6 @@ return($term); ';
         <tr>
             <th>Need-Based</th>
             <td>[field_need_based]</td>
-        </tr>
-<tr>
-            <th>Member of Under-represented Group</th>
-            <td>[field_under_represented]</td>
         </tr>
     </tbody>
 </table>';
@@ -13353,27 +13346,6 @@ return($term); ';
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Under-represented (field_under_represented) */
-  $handler->display->display_options['filters']['field_under_represented_value']['id'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['filters']['field_under_represented_value']['field'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator_id'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['label'] = 'Member of Under-Represented Group';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['identifier'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
-    9 => 0,
-    7 => 0,
-    6 => 0,
-    3 => 0,
-  );
   /* Filter criterion: Content: Common Application (field_common_application) */
   $handler->display->display_options['filters']['field_common_application_value']['id'] = 'field_common_application_value';
   $handler->display->display_options['filters']['field_common_application_value']['table'] = 'field_data_field_common_application';
@@ -13382,6 +13354,14 @@ return($term); ';
   $handler->display->display_options['filters']['field_common_application_value']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Field: Site Section (field_site_section) */
+  $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
+    0 => '99',
+  );
+  $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
 
   /* Display: Grad Applicant View */
   $handler = $view->new_display('block', 'Grad Applicant View', 'grad_students');
