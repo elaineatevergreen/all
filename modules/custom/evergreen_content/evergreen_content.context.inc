@@ -287,5 +287,27 @@ function evergreen_content_context_default_contexts() {
   t('design');
   $export['home'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'search';
+  $context->description = 'Adds design elements/CSS for search results';
+  $context->tag = 'design';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'search*' => 'search*',
+      ),
+    ),
+  );
+  $context->reactions = array();
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Adds design elements/CSS for search results');
+  t('design');
+  $export['search'] = $context;
+
   return $export;
 }

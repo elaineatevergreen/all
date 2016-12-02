@@ -3527,9 +3527,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -3558,8 +3557,8 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-catalog_entry-field_signature_quarters'.
-  $field_instances['node-catalog_entry-field_signature_quarters'] = array(
+  // Exported field_instance: 'node-catalog_entry-field_revisions'.
+  $field_instances['node-catalog_entry-field_revisions'] = array(
     'bundle' => 'catalog_entry',
     'default_value' => NULL,
     'deleted' => 0,
@@ -3570,6 +3569,53 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_revisions',
+    'label' => 'Revisions',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 42,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_signature_quarters'.
+  $field_instances['node-catalog_entry-field_signature_quarters'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -3949,7 +3995,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 32,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3959,22 +4005,33 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
     'field_name' => 'field_websites',
     'label' => 'Websites',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
+        'title' => '',
       ),
+      'description_display' => 'after',
       'display' => array(
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
       'title' => 'optional',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -3982,11 +4039,13 @@ function evergreen_content_field_default_field_instances() {
       'validate_url' => 1,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 41,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-catalog_entry-field_winter_registration'.
@@ -14129,6 +14188,7 @@ function evergreen_content_field_default_field_instances() {
   t('Resource Link');
   t('Resource Subject');
   t('Resource Type');
+  t('Revisions');
   t('Roles');
   t('Room');
   t('Sample Program');
