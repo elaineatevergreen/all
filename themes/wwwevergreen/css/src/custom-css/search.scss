@@ -6,8 +6,128 @@
  * into Evergreen’s website.
  *
  * These styles were originally developed by Justin McDowell.
+ *
+ * Table of Contents
+ *
+ *  I. Drupal Google Integrated Search Engine Results
+ * II. Google Embedded Search - deprecated
  */
 @import "../tools";
+
+/**
+ * I. Drupal Google Integrated Search Engine Results
+ *
+ * In Drupal, we have a Google search module that integrates into Drupal
+ * automatically, so this applies styles to the results.
+ */
+.google-search-results li{
+	padding: 0;
+}
+
+.gss-result{
+	clear: right;
+}
+
+.google-search-results .gss-result .gss-title{  // Override of gss.css
+	// The margin values at all breakpoints should match the margins of the normal h3s.
+	margin-top: calc(30 / 18 * 1em);
+	margin-bottom: calc(7.5 / 16 * 1rem);
+	
+	@include breakpoint($gamora){
+		// box model
+		margin-top: calc(30 / 27.124 * 1em);
+	}
+	
+	@include breakpoint($groot){
+		// box model
+		margin-top: calc(45 / 29.112 * 1em);
+	}
+}
+
+.gss-title a{
+	font-weight: normal;
+}
+
+.google-search-results .gss-result .gss-search-snippet-info .gss-search-snippet,  // Override of gss.css
+.google-search-results .gss-result .gss-search-snippet-info .gss-search-url{  // Override of gss.css
+	// The margin values at all breakpoints should match the margins of the normal ps.
+	@include margin-default;
+
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+	}
+
+	@include breakpoint($groot){
+		@include margin-default-xl;
+	}
+}
+
+.google-search-results .gss-result .gss-search-snippet-info .gss-info{  // Override of gss.css
+	@include margin-default;
+	@include small-type;
+}
+
+.gss-thumbnail-image{
+	// box model
+	border: 1px solid mix($shade, $sky-blue, 60%);
+	margin-left: 2ch;
+	max-height: 7em;
+	// layout
+	float: right;
+	// backgrounds & borders
+	border-radius: 2px;
+}
+
+div.item-list ul.pager{  // Override of gss.css
+	// The margin values at all breakpoints should match the vertical margins of the normal uls.
+	@include margin-default;
+	margin-top: calc(45 / 14 * 1em);
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	// typography
+	font-variant-numeric: lining-nums;
+	
+	@include breakpoint($starlord){
+		justify-content: space-between;
+	}
+
+	@include breakpoint($gamora){
+		@include margin-default-lg;
+		margin-top: calc(60 / 18 * 1em);
+	}
+
+	@include breakpoint($groot){
+		@include margin-default-xl;
+	}
+}
+
+div.item-list ul.pager li{  // Override of gss.css
+	// box model
+	padding: 0;
+	// layout
+	flex-basis: 3ch;
+	
+	@include breakpoint($starlord){
+		flex-basis: 2ch;
+	}
+	
+	@include breakpoint($gamora){
+		flex-basis: 1ch;
+	}
+}
+
+div.item-list ul.pager li.pager-next{  // Override of gss.css
+	flex-basis: auto;
+}
+
+/**
+ * II. Google Embedded Search - deprecated
+ *
+ * In Cascade, we embedded the Google search results via an iframe. Since
+ * we're no longer using Cascade, these styles have been deprecated.
+ */
 
 #___gcse_0 .cse .gsc-control-cse,
 #___gcse_0 .gsc-control-cse{  // search tool wrapper
