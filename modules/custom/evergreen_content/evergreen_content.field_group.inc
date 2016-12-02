@@ -2096,6 +2096,7 @@ function evergreen_content_field_group_info() {
       7 => 'field_time_offered',
       8 => 'field_curricular_area',
       9 => 'field_final_schedule',
+      10 => 'field_days_of_the_week',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

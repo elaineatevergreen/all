@@ -2517,6 +2517,46 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-catalog_entry-field_days_of_the_week'.
+  $field_instances['node-catalog_entry-field_days_of_the_week'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_days_of_the_week',
+    'label' => 'Days of the Week',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 26,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-catalog_entry-field_end_term'.
   $field_instances['node-catalog_entry-field_end_term'] = array(
     'bundle' => 'catalog_entry',
@@ -2856,7 +2896,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 26,
+      'weight' => 27,
     ),
     'workbench_access_field' => 0,
   );
@@ -3695,7 +3735,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 34,
+      'weight' => 33,
     ),
     'workbench_access_field' => 0,
   );
@@ -3930,7 +3970,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 35,
+      'weight' => 34,
     ),
     'workbench_access_field' => 0,
   );
@@ -14039,6 +14079,7 @@ function evergreen_content_field_default_field_instances() {
   t('Curricular Area');
   t('DO NOT DISPLAY');
   t('Dates of Operation');
+  t('Days of the Week');
   t('Deadline');
   t('Degree');
   t('Degrees');

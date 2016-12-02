@@ -165,7 +165,8 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:44' => 'div/term/signature',
           'xpathparser:45' => 'urls/url/@type',
           'xpathparser:46' => 'urls/url/text()',
-          'xpathparser:47' => 'table',
+          'xpathparser:47' => 'table[tr/td]',
+          'xpathparser:48' => 'div/term/schedules/schedule/@day',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -210,6 +211,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:44' => 0,
           'xpathparser:45' => 0,
           'xpathparser:46' => 0,
+          'xpathparser:48' => 0,
         ),
         'context' => '/html/body/div/entry',
         'exp' => array(
@@ -258,6 +260,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:45' => 0,
             'xpathparser:46' => 0,
             'xpathparser:47' => 0,
+            'xpathparser:48' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -525,6 +528,12 @@ function evergreen_content_feeds_importer_default() {
           42 => array(
             'source' => 'xpathparser:47',
             'target' => 'field_revisions',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          43 => array(
+            'source' => 'xpathparser:48',
+            'target' => 'field_days_of_the_week',
             'unique' => FALSE,
           ),
         ),
