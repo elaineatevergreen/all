@@ -20,6 +20,9 @@
  *   field id, then row number. This matches the index in $rows.
  * @ingroup views_templates
  */
+ 
+$hiddenfields = array('field_academic_year','field_quarters_open','field_quarters_signature');
+ 
 ?>
 <table <?php if ($classes) { print 'class="'. $classes . '" '; } ?><?php print $attributes; ?>>
    <?php if (!empty($title) || !empty($caption)) : ?>
@@ -29,7 +32,7 @@
     <thead>
       <tr>
         <?php foreach ($header as $field => $label):
-	        if($field != 'field_maximum_credits' and $field != 'field_academic_year' and $field != 'field_quarters_open') {
+	        if(!in_array($field,$hiddenfields)) {
 	        
 	         ?>
           <th <?php if ($header_classes[$field]) { print 'class="'. $header_classes[$field] . '" '; } ?> scope="col">
@@ -52,44 +55,57 @@
 	        
 	        /* this is maybe not ideal, but it works to build the complex markup that we want to display on the catalog */
 	        
-	        //CREDITS: show as a range of values instead of two separate fields.
-	        //does field_minimum_credits == field_maximum_credits?
-	        if($row['field_minimum_credits'] == $row['field_maximum_credits']) { 
-		        $creditrange = $row['field_minimum_credits']; 
-		        //offerings that say 0 credits *actually* offer variable credit. GOOD TIMES.
-		        if($creditrange == 0) { $creditrange = 'V'; };
-		    } else { 
-			    $creditrange = $row['field_minimum_credits'] . '–' . $row['field_maximum_credits']; 
-			};
-	        
-	        //QUARTERS: add the year to the end of the quarter name
-	        
 			//ACADEMIC YEAR: math it up!
 			$academicyear = ($row['field_academic_year']-1) . '–' . substr($row['field_academic_year'], 2,2);
+			$winterspring = $row['field_academic_year'];
+			$fall = $winterspring-1;
 			
-			//OPEN FOR REGISTRATION
-			$openreg = $row['field_quarters_open'];
+			/*
+				for each quarter offered...
+				add on S if signature required
+				add on C if closed entirely
+				add on the calendar year	
+			*/
+			
+			$quartersoffered = explode(',', $row['field_quarters_offered']);
+			$quarterssig = explode(',', $row['field_quarters_signature']);
+			$quartersopen = explode(',', $row['field_quarters_open']);
+			foreach($quartersoffered as $key => $value) {
+				if(in_array($value, $quarterssig)) { 
+					$quartersoffered[$key] = '<abbr title="signature required">' . $value . '&nbsp;(S)</abbr>';
+				};
+				if(!in_array($value, $quartersopen) and !in_array($value, $quarterssig)) { 
+					$quartersoffered[$key] = '<abbr title="enrollment closed">' . $value . '&nbsp;(C)</abbr>'; 
+				};
+			};
+			
+			$printquarters = '<ul>';
+			foreach($quartersoffered as $q) {
+				$printquarters .= "<li>$q</li>";
+			};
+			$printquarters .= '</ul>';
+			
+
+			$printquarters = str_replace('Fall', 'Fall ' . $fall, $printquarters);
+			
+			$printquarters = str_replace('Winter', 'Winter&nbsp;' . $winterspring, $printquarters);
+			$printquarters = str_replace('Spring', 'Spring&nbsp;' . $winterspring, $printquarters);
 	        
 	        
 	        foreach ($row as $field => $content):
-	        if($field != 'field_maximum_credits' and $field != 'field_academic_year' and $field != 'field_quarters_open') {
+	        if(!in_array($field,$hiddenfields)) {
 		        
 	        
 	         ?>
           <td <?php if ($field_classes[$field][$row_count]) { print 'class="'. $field_classes[$field][$row_count] . '" '; } ?><?php print drupal_attributes($field_attributes[$field][$row_count]); ?>>
             <?php 
-	            if($field == 'field_minimum_credits') { 
-		            print $creditrange; 
-		        } elseif ($field == 'field_quarters_offered') {
-			        ?>
-			     	<p><?php print $academicyear ?>
-			     	<?php print $content; ?>
-			     	<p><small>Registration open: <?php print $openreg ?></small></p>
-			     	<?php
+	            if ($field == 'field_quarters_offered') {
+		            print($printquarters);
 			    
 		        } else {
-		           print $content; //print_r($field); 
+		           print $content; 
 	            };
+	            //print_r($field);
 	             ?>
           </td>
         <?php 
