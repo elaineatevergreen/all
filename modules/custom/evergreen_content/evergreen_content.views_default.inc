@@ -4659,8 +4659,8 @@ return($term); ';
   $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
-      'allow_secondary' => 0,
-      'secondary_label' => 'Search and Filter',
+      'allow_secondary' => 1,
+      'secondary_label' => 'Filter by Day/Time',
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
       'reset_label' => NULL,
@@ -4771,7 +4771,7 @@ return($term); ';
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
-        'is_secondary' => 1,
+        'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -4821,7 +4821,7 @@ return($term); ';
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
-        'is_secondary' => 1,
+        'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -4871,63 +4871,12 @@ return($term); ';
       'more_options' => array(
         'bef_select_all_none' => 0,
         'bef_collapsible' => 0,
-        'is_secondary' => 1,
+        'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
           'available' => array(
             0 => 'global_types',
-            'secondary_label' => NULL,
-            'collapsible_label' => NULL,
-            'combine_rewrite' => NULL,
-            'reset_label' => NULL,
-            'bef_filter_description' => NULL,
-            'any_label' => NULL,
-            'filter_rewrite_values' => NULL,
-          ),
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-          'filter_rewrite_values' => NULL,
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-        ),
-        'secondary_label' => NULL,
-        'collapsible_label' => NULL,
-        'combine_rewrite' => NULL,
-        'reset_label' => NULL,
-        'filter_rewrite_values' => NULL,
-      ),
-      'secondary_label' => NULL,
-      'collapsible_label' => NULL,
-      'combine_rewrite' => NULL,
-      'reset_label' => NULL,
-      'bef_filter_description' => NULL,
-      'any_label' => NULL,
-      'filter_rewrite_values' => NULL,
-    ),
-    'field_fields_of_study_tid' => array(
-      'bef_format' => 'default',
-      'more_options' => array(
-        'bef_select_all_none' => 0,
-        'bef_collapsible' => 0,
-        'is_secondary' => 1,
-        'any_label' => '',
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            1 => 'vocabulary',
             'secondary_label' => NULL,
             'collapsible_label' => NULL,
             'combine_rewrite' => NULL,
@@ -4972,7 +4921,7 @@ return($term); ';
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
-        'is_secondary' => 1,
+        'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5084,7 +5033,7 @@ return($term); ';
         'filter_rewrite_values' => NULL,
       ),
       'more_options' => array(
-        'is_secondary' => 1,
+        'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5146,6 +5095,56 @@ return($term); ';
         'filter_rewrite_values' => NULL,
       ),
       'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_days_of_the_week_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
         'is_secondary' => 1,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -5210,11 +5209,6 @@ return($term); ';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_curricular_area',
-      'rendered' => 1,
-      'rendered_strip' => 1,
-    ),
-    1 => array(
       'field' => 'field_academic_year',
       'rendered' => 1,
       'rendered_strip' => 0,
@@ -5222,54 +5216,38 @@ return($term); ';
   );
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = array(
-    'nid' => 'nid',
-    'view' => 'view',
+    'field_status_date' => 'field_status_date',
     'field_offering_status' => 'field_offering_status',
-    'path' => 'path',
-    'title' => 'title',
     'field_location' => 'title',
     'views_conditional' => 'title',
+    'path' => 'path',
+    'title' => 'title',
     'field_faculty' => 'title',
     'field_fields_of_study' => 'title',
     'field_offering_type' => 'field_offering_type',
     'field_class_standing' => 'field_class_standing',
     'field_minimum_credits' => 'field_minimum_credits',
-    'field_time_offered' => 'field_time_offered',
-    'field_quarters_offered' => 'field_quarters_offered',
-    'body' => 'body',
-    'field_quarters_open' => 'field_quarters_open',
     'field_maximum_credits' => 'field_maximum_credits',
+    'views_conditional_1' => 'views_conditional_1',
+    'field_time_offered' => 'field_time_offered',
     'field_academic_year' => 'field_academic_year',
+    'field_quarters_offered' => 'field_quarters_offered',
+    'field_quarters_open' => 'field_quarters_open',
+    'field_quarters_signature' => 'field_quarters_signature',
+    'body' => 'body',
     'field_curricular_area' => 'field_curricular_area',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'nid' => array(
+    'field_status_date' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'view' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_offering_status' => array(
       'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'path' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'title' => array(
-      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -5283,6 +5261,18 @@ return($term); ';
       'empty_column' => 0,
     ),
     'views_conditional' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'path' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -5316,7 +5306,26 @@ return($term); ';
       'separator' => '—',
       'empty_column' => 0,
     ),
+    'field_maximum_credits' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'views_conditional_1' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_time_offered' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_academic_year' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -5326,26 +5335,17 @@ return($term); ';
       'separator' => '—',
       'empty_column' => 0,
     ),
-    'body' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'field_quarters_open' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_maximum_credits' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
+    'field_quarters_signature' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_academic_year' => array(
+    'body' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -5367,22 +5367,46 @@ return($term); ';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'This is broken or you are in the wrong place.';
   $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  /* Field: New/Revised Tag */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'New/Revised Tag';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'catalog';
-  $handler->display->display_options['fields']['view']['display'] = 'new_revised';
-  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
+  /* Field: Content: Status Date */
+  $handler->display->display_options['fields']['field_status_date']['id'] = 'field_status_date';
+  $handler->display->display_options['fields']['field_status_date']['table'] = 'field_data_field_status_date';
+  $handler->display->display_options['fields']['field_status_date']['field'] = 'field_status_date';
+  $handler->display->display_options['fields']['field_status_date']['label'] = '';
+  $handler->display->display_options['fields']['field_status_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_status_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_status_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_status_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_status_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_status_date']['type'] = 'date_plain';
+  $handler->display->display_options['fields']['field_status_date']['settings'] = array(
+    'format_type' => 'unix',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_status_date']['field_api_classes'] = TRUE;
+  /* Field: Content: Revision Date */
+  $handler->display->display_options['fields']['field_revision_date']['id'] = 'field_revision_date';
+  $handler->display->display_options['fields']['field_revision_date']['table'] = 'field_data_field_revision_date';
+  $handler->display->display_options['fields']['field_revision_date']['field'] = 'field_revision_date';
+  $handler->display->display_options['fields']['field_revision_date']['label'] = '';
+  $handler->display->display_options['fields']['field_revision_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_revision_date']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_revision_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_revision_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_revision_date']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_revision_date']['type'] = 'date_plain';
+  $handler->display->display_options['fields']['field_revision_date']['settings'] = array(
+    'format_type' => 'unix',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_revision_date']['field_api_classes'] = TRUE;
   /* Field: Content: Offering Status */
   $handler->display->display_options['fields']['field_offering_status']['id'] = 'field_offering_status';
   $handler->display->display_options['fields']['field_offering_status']['table'] = 'field_data_field_offering_status';
@@ -5431,7 +5455,7 @@ return($term); ';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="program-title"><a href="[path]">[title]</a>[views_conditional][field_offering_status]</div>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="program-title"><a href="[path]">[title]</a> [field_revision_date][field_status_date][field_offering_status]</div>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = '0';
@@ -5595,10 +5619,19 @@ return($term); ';
   $handler->display->display_options['fields']['field_curricular_area']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_curricular_area']['element_type'] = '0';
   $handler->display->display_options['fields']['field_curricular_area']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_curricular_area']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_curricular_area']['element_wrapper_type'] = 'h2';
   $handler->display->display_options['fields']['field_curricular_area']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_curricular_area']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_curricular_area']['field_api_classes'] = TRUE;
+  /* Field: Content: Faculty Name Search */
+  $handler->display->display_options['fields']['field_faculty_name_search']['id'] = 'field_faculty_name_search';
+  $handler->display->display_options['fields']['field_faculty_name_search']['table'] = 'field_data_field_faculty_name_search';
+  $handler->display->display_options['fields']['field_faculty_name_search']['field'] = 'field_faculty_name_search';
+  $handler->display->display_options['fields']['field_faculty_name_search']['label'] = '';
+  $handler->display->display_options['fields']['field_faculty_name_search']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_faculty_name_search']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_faculty_name_search']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_faculty_name_search']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_faculty_name_search']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Curricular Area (field_curricular_area) */
   $handler->display->display_options['sorts']['field_curricular_area_value']['id'] = 'field_curricular_area_value';
   $handler->display->display_options['sorts']['field_curricular_area_value']['table'] = 'field_data_field_curricular_area';
@@ -5618,7 +5651,7 @@ return($term); ';
   $handler->display->display_options['arguments']['field_curricular_area_value']['field'] = 'field_curricular_area_value';
   $handler->display->display_options['arguments']['field_curricular_area_value']['exception']['value'] = 'index';
   $handler->display->display_options['arguments']['field_curricular_area_value']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_curricular_area_value']['title'] = '%1 Catalog';
+  $handler->display->display_options['arguments']['field_curricular_area_value']['title'] = '[field_curricular_area] Catalog';
   $handler->display->display_options['arguments']['field_curricular_area_value']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_curricular_area_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_curricular_area_value']['summary']['format'] = 'default_summary';
@@ -5627,6 +5660,15 @@ return($term); ';
   $handler->display->display_options['arguments']['field_curricular_area_value']['case'] = 'upper';
   $handler->display->display_options['arguments']['field_curricular_area_value']['path_case'] = 'lower';
   $handler->display->display_options['arguments']['field_curricular_area_value']['transform_dash'] = TRUE;
+  /* Contextual filter: Content: Academic Year (field_academic_year) */
+  $handler->display->display_options['arguments']['field_academic_year_value']['id'] = 'field_academic_year_value';
+  $handler->display->display_options['arguments']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
+  $handler->display->display_options['arguments']['field_academic_year_value']['field'] = 'field_academic_year_value';
+  $handler->display->display_options['arguments']['field_academic_year_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_academic_year_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_academic_year_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_academic_year_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_academic_year_value']['limit'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -5695,7 +5737,7 @@ return($term); ';
   $handler->display->display_options['filters']['combine']['group'] = 1;
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
-  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search Title and Description';
+  $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search Title, Description, & Faculty';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
@@ -5716,6 +5758,7 @@ return($term); ';
   $handler->display->display_options['filters']['combine']['fields'] = array(
     'title' => 'title',
     'body' => 'body',
+    'field_faculty_name_search' => 'field_faculty_name_search',
   );
   /* Filter criterion: Content: Quarters Offered (field_quarters_offered) */
   $handler->display->display_options['filters']['field_quarters_offered_value']['id'] = 'field_quarters_offered_value';
@@ -5767,6 +5810,36 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
+  /* Filter criterion: Content: Fields of Study (field_fields_of_study) */
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['operator_id'] = 'field_fields_of_study_tid_op';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['label'] = 'Fields of Study';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['operator'] = 'field_fields_of_study_tid_op';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['identifier'] = 'subject';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
   $handler->display->display_options['filters']['field_class_standing_value']['table'] = 'field_data_field_class_standing';
@@ -5910,6 +5983,33 @@ return($term); ';
   $handler->display->display_options['filters']['field_offering_type_value']['value'] = array(
     'Research' => 'Research',
   );
+  $handler->display->display_options['filters']['field_offering_type_value']['group'] = 1;
+  /* Filter criterion: Content: Days of the Week (field_days_of_the_week) */
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['id'] = 'field_days_of_the_week_value';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['table'] = 'field_data_field_days_of_the_week';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['field'] = 'field_days_of_the_week_value';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['operator_id'] = 'field_days_of_the_week_value_op';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['label'] = 'Days of the Week';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['operator'] = 'field_days_of_the_week_value_op';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['identifier'] = 'field_days_of_the_week_value';
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_days_of_the_week_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
 
   /* Display: Whole Catalog */
   $handler = $view->new_display('page', 'Whole Catalog', 'page');
@@ -5919,7 +6019,7 @@ return($term); ';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '200';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -6579,94 +6679,6 @@ return($term); ';
     'Research' => 'Research',
   );
   $handler->display->display_options['path'] = 'catalog/ug/research';
-
-  /* Display: New/Revised */
-  $handler = $view->new_display('block', 'New/Revised', 'new_revised');
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Status Date */
-  $handler->display->display_options['fields']['field_status_date']['id'] = 'field_status_date';
-  $handler->display->display_options['fields']['field_status_date']['table'] = 'field_data_field_status_date';
-  $handler->display->display_options['fields']['field_status_date']['field'] = 'field_status_date';
-  $handler->display->display_options['fields']['field_status_date']['label'] = '';
-  $handler->display->display_options['fields']['field_status_date']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_status_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_status_date']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_status_date']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_status_date']['settings'] = array(
-    'format_type' => 'unix',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'show',
-  );
-  /* Field: Views: Views Conditional */
-  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
-  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
-  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
-  $handler->display->display_options['fields']['views_conditional']['label'] = '';
-  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_status_date';
-  $handler->display->display_options['fields']['views_conditional']['condition'] = '3';
-  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'DATE_UNIX-2592000';
-  $handler->display->display_options['fields']['views_conditional']['then'] = 'Revised';
-  $handler->display->display_options['fields']['views_conditional']['or'] = 'Not revised - DATE_UNIX-2592000';
-  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 1;
-  /* Field: Content: Status Date */
-  $handler->display->display_options['fields']['field_status_date_1']['id'] = 'field_status_date_1';
-  $handler->display->display_options['fields']['field_status_date_1']['table'] = 'field_data_field_status_date';
-  $handler->display->display_options['fields']['field_status_date_1']['field'] = 'field_status_date';
-  $handler->display->display_options['fields']['field_status_date_1']['label'] = '';
-  $handler->display->display_options['fields']['field_status_date_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_status_date_1']['settings'] = array(
-    'format_type' => 'long',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'show',
-  );
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'catalog_entry' => 'catalog_entry',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
   $export['catalog'] = $view;
 
   $view = new view();
@@ -8454,7 +8466,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -9142,19 +9154,22 @@ return($term); ';
     2 => '2',
     1 => 0,
     13 => 0,
-    12 => 0,
+    10 => 0,
     11 => 0,
     9 => 0,
     6 => 0,
-    3 => 0,
+    4 => 0,
     7 => 0,
     8 => 0,
     5 => 0,
-    10 => 0,
-    4 => 0,
+    12 => 0,
+    3 => 0,
   );
   $handler->display->display_options['filters']['combine']['fields'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name' => 'field_last_name',
     'field_expertise' => 'field_expertise',
+    'field_interests' => 'field_interests',
   );
   /* Filter criterion: Field: Related Subjects (Directory) (field_related_subjects_directory) */
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
@@ -9531,7 +9546,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_facility_value']['value'] = array(
     1 => '1',
   );
-  $handler->display->display_options['path'] = 'directory';
+  $handler->display->display_options['path'] = 'directory/browse';
 
   /* Display: Fax Page */
   $handler = $view->new_display('page', 'Fax Page', 'fax_page');
@@ -9968,7 +9983,7 @@ return($term); ';
   $handler->display->display_options['arguments']['field_last_name_value']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_last_name_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_last_name_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['base_path'] = 'directory';
+  $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['base_path'] = 'directory/browse';
   $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['count'] = FALSE;
   $handler->display->display_options['arguments']['field_last_name_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_last_name_value']['glossary'] = TRUE;
@@ -10386,7 +10401,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
   $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
   $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
-  $handler->display->display_options['path'] = 'directory/home';
+  $handler->display->display_options['path'] = 'directory';
 
   /* Display: PUC */
   $handler = $view->new_display('block', 'PUC', 'puc');
@@ -12524,14 +12539,39 @@ return($term); ';
   $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
   $handler->display->display_options['fields']['field_under_represented']['label'] = 'Under-Represented Groups';
+  $handler->display->display_options['fields']['field_under_represented']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_under_represented']['alter']['text'] = '<strong>Under-represented groups</strong>: [field_under_represented]';
   $handler->display->display_options['fields']['field_under_represented']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_under_represented';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '2';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'No preference';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '<br/><strong>One</strong> or more [field_under_represented]:
+<ul>
+                                            <li>High level of loan indebtedness</li>
+                                            <li>African American</li>
+                                            <li>Age 24-26</li>
+                                            <li>First-generation</li>
+                                            <li>Hispanic/Latino</li>
+                                            <li>Native American</li>
+                                            <li>Parent</li>
+                                        </ul>';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: Content: Short Description */
   $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
   $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
   $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
   $handler->display->display_options['fields']['field_short_description']['label'] = 'Other Criteria';
+  $handler->display->display_options['fields']['field_short_description']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_short_description']['alter']['text'] = '[field_short_description]
+[views_conditional]';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -12601,27 +12641,6 @@ return($term); ';
   $handler->display->display_options['filters']['field_new_or_current_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    3 => 0,
-  );
-  /* Filter criterion: Content: Under-represented (field_under_represented) */
-  $handler->display->display_options['filters']['field_under_represented_value']['id'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['filters']['field_under_represented_value']['field'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator_id'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['label'] = 'Member of Under-Represented Group';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['identifier'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
-    9 => 0,
-    7 => 0,
-    6 => 0,
     3 => 0,
   );
   /* Filter criterion: Content: Common Application (field_common_application) */
@@ -13233,16 +13252,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_need_based']['label'] = '';
   $handler->display->display_options['fields']['field_need_based']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_need_based']['element_label_colon'] = FALSE;
-  /* Field: Content: Under-represented */
-  $handler->display->display_options['fields']['field_under_represented']['id'] = 'field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['field'] = 'field_under_represented';
-  $handler->display->display_options['fields']['field_under_represented']['label'] = '';
-  $handler->display->display_options['fields']['field_under_represented']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_under_represented']['alter']['text'] = '<strong>Under-represented groups</strong>: [field_under_represented]';
-  $handler->display->display_options['fields']['field_under_represented']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_under_represented']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_under_represented']['element_default_classes'] = FALSE;
   /* Field: Table of Criteria */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -13265,10 +13274,6 @@ return($term); ';
         <tr>
             <th>Need-Based</th>
             <td>[field_need_based]</td>
-        </tr>
-<tr>
-            <th>Member of Under-represented Group</th>
-            <td>[field_under_represented]</td>
         </tr>
     </tbody>
 </table>';
@@ -13353,27 +13358,6 @@ return($term); ';
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Under-represented (field_under_represented) */
-  $handler->display->display_options['filters']['field_under_represented_value']['id'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['table'] = 'field_data_field_under_represented';
-  $handler->display->display_options['filters']['field_under_represented_value']['field'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator_id'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['label'] = 'Member of Under-Represented Group';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['operator'] = 'field_under_represented_value_op';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['identifier'] = 'field_under_represented_value';
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_under_represented_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
-    9 => 0,
-    7 => 0,
-    6 => 0,
-    3 => 0,
-  );
   /* Filter criterion: Content: Common Application (field_common_application) */
   $handler->display->display_options['filters']['field_common_application_value']['id'] = 'field_common_application_value';
   $handler->display->display_options['filters']['field_common_application_value']['table'] = 'field_data_field_common_application';
@@ -13382,6 +13366,14 @@ return($term); ';
   $handler->display->display_options['filters']['field_common_application_value']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Field: Site Section (field_site_section) */
+  $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
+  $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
+  $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
+    0 => '99',
+  );
+  $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
 
   /* Display: Grad Applicant View */
   $handler = $view->new_display('block', 'Grad Applicant View', 'grad_students');
