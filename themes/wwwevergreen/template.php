@@ -127,36 +127,6 @@ function wwwevergreen_preprocess_node(&$variables) {
 	//build the submitted by text
     $variables['submitted'] = t('Written by !username on !datetime', array('!username' => $posted_name, '!datetime' => format_date($variables['node']->created, 'custom', 'F j, Y \a\t g:i a')));
   }
-  
-  //for catalog entries, let's make a nice-looking description of the quarters offered!
-  if ($variables['type'] === 'catalog_entry') {
-	$winterspring = $variables['field_academic_year'][0]['safe_value'];
-	$fall = $winterspring-1;
-	  
-	foreach($variables['field_quarters_offered'] as $q) {
-		  
-		$quarter = $q['value'];
-		if($quarter == 'Fall') { 
-			$quarters[] = 'Fall ' . $fall; 
-		} else {
-			$quarters[] = $quarter . ' ' . $winterspring;
-		};		  
-	}
-	
-	if(count($quarters) == 1) {
-		$quarters_intro = $quarters[0] . ' quarter';
-	}
-	elseif(count($quarters) == 2) {
-		$quarters_intro .= $quarters[0] . ' and ' . $quarters[1] . " quarters";
-	}
-	elseif(count($quarters) == 3) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1] . ', and ' . $quarters[2] . " quarters";
-	}
-	elseif(count($quarters) == 4) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] . " quarters";
-	};
-	$variables['quarters_intro'] = $quarters_intro;
-  };
 }
 
 

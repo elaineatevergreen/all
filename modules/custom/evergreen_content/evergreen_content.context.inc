@@ -104,12 +104,6 @@ function evergreen_content_context_default_contexts() {
           'region' => 'filters',
           'weight' => '-10',
         ),
-        'views-catalog-new_revised' => array(
-          'module' => 'views',
-          'delta' => 'catalog-new_revised',
-          'region' => 'highlighted',
-          'weight' => '-10',
-        ),
         'views-catalog-secondary_content' => array(
           'module' => 'views',
           'delta' => 'catalog-secondary_content',
