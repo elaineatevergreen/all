@@ -785,12 +785,13 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '6',
+    'weight' => '8',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
       2 => 'field_websites',
       3 => 'group_location_schedule',
+      4 => 'group_more',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1425,7 +1426,7 @@ function evergreen_content_field_group_info() {
         'id' => '',
         'classes' => '',
         'element' => 'div',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'attributes' => '',
       ),
@@ -1531,6 +1532,40 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_misc|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_more|node|catalog_entry|default';
+  $field_group->group_name = 'group_more';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_details';
+  $field_group->data = array(
+    'label' => 'More',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_next_offered',
+      1 => 'field_online_learning',
+      2 => 'field_special_expenses',
+      3 => 'field_fees',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-more field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_more|node|catalog_entry|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1721,7 +1756,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prerequisites',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_prerequisites',
     ),
@@ -2145,6 +2180,7 @@ function evergreen_content_field_group_info() {
   t('Location: On Campus');
   t('Meetings');
   t('Misc Options');
+  t('More');
   t('Navigation');
   t('Our Annotations');
   t('Participants');
