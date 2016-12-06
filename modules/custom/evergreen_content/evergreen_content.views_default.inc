@@ -5359,6 +5359,19 @@ return($term); ';
     ),
   );
   $handler->display->display_options['style_options']['sticky'] = TRUE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="box alert">
+	<p>
+		The "save to list" feature is not yet working in our new system. It will be available again later in Winter 2016–17.</p>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Header: Global: Result summary with an additional token to change the items/page */
+  $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
+  $handler->display->display_options['header']['webform_result']['table'] = 'views';
+  $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -6026,11 +6039,6 @@ return($term); ';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25,50,100,200,500';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Result summary with an additional token to change the items/page */
-  $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
-  $handler->display->display_options['header']['webform_result']['table'] = 'views';
-  $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
   $handler->display->display_options['path'] = 'catalog';
 
   /* Display: Offerings by Field */
@@ -6091,32 +6099,28 @@ return($term); ';
   $handler = $view->new_display('block', 'Offerings by Faculty', 'offerings_by_faculty');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'table';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['columns'] = array(
-    'title' => 'title',
-  );
-  $handler->display->display_options['style_options']['default'] = '-1';
-  $handler->display->display_options['style_options']['info'] = array(
-    'title' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_academic_year',
+      'rendered' => 1,
+      'rendered_strip' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['override'] = FALSE;
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Current Offerings</h2>';
+  $handler->display->display_options['header']['area']['content'] = '<h2>Current and Upcoming Offerings</h2>';
   $handler->display->display_options['header']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -6130,14 +6134,36 @@ return($term); ';
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Offering';
+  $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
   $handler->display->display_options['fields']['title']['element_class'] = 'program-title';
   $handler->display->display_options['fields']['title']['element_label_type'] = '0';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Content: Academic Year */
+  $handler->display->display_options['fields']['field_academic_year']['id'] = 'field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['table'] = 'field_data_field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['field'] = 'field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['label'] = '';
+  $handler->display->display_options['fields']['field_academic_year']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_academic_year']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_year']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_year']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_year']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_year']['field_api_classes'] = TRUE;
+  /* Field: Content: Quarters Offered */
+  $handler->display->display_options['fields']['field_quarters_offered']['id'] = 'field_quarters_offered';
+  $handler->display->display_options['fields']['field_quarters_offered']['table'] = 'field_data_field_quarters_offered';
+  $handler->display->display_options['fields']['field_quarters_offered']['field'] = 'field_quarters_offered';
+  $handler->display->display_options['fields']['field_quarters_offered']['label'] = '';
+  $handler->display->display_options['fields']['field_quarters_offered']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_offered']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_offered']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_offered']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_offered']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Faculty (field_faculty) */
   $handler->display->display_options['arguments']['field_faculty_target_id']['id'] = 'field_faculty_target_id';
@@ -6183,6 +6209,7 @@ return($term); ';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Class Standing */
   $handler->display->display_options['fields']['field_class_standing']['id'] = 'field_class_standing';
@@ -7100,7 +7127,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_internship_opportunities_value']['field'] = 'field_internship_opportunities_value';
   $handler->display->display_options['filters']['field_internship_opportunities_value']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_internship_opportunities_value']['group'] = 2;
-  $handler->display->display_options['path'] = 'catalog';
+  $handler->display->display_options['path'] = 'catalog/individualstudy';
 
   /* Display: SOS */
   $handler = $view->new_display('page', 'SOS', 'page_3');
@@ -7459,7 +7486,7 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['path'] = 'catalog/research';
+  $handler->display->display_options['path'] = 'catalog/sos';
 
   /* Display: Study Abroad */
   $handler = $view->new_display('page', 'Study Abroad', 'page_4');
@@ -7829,7 +7856,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_study_abroad_value']['table'] = 'field_data_field_study_abroad';
   $handler->display->display_options['filters']['field_study_abroad_value']['field'] = 'field_study_abroad_value';
   $handler->display->display_options['filters']['field_study_abroad_value']['operator'] = 'not empty';
-  $handler->display->display_options['path'] = 'catalog';
+  $handler->display->display_options['path'] = 'catalog/studyabroad';
 
   /* Display: Upper Division Science */
   $handler = $view->new_display('page', 'Upper Division Science', 'page_5');
@@ -7841,11 +7868,6 @@ return($term); ';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Result summary with an additional token to change the items/page */
-  $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
-  $handler->display->display_options['header']['webform_result']['table'] = 'views';
-  $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -8194,7 +8216,7 @@ return($term); ';
   $handler->display->display_options['filters']['field_upper_division_value']['table'] = 'field_data_field_upper_division';
   $handler->display->display_options['filters']['field_upper_division_value']['field'] = 'field_upper_division_value';
   $handler->display->display_options['filters']['field_upper_division_value']['operator'] = 'not empty';
-  $handler->display->display_options['path'] = 'catalog';
+  $handler->display->display_options['path'] = 'catalog/upperdivision';
   $export['catalog'] = $view;
 
   $view = new view();
@@ -9982,7 +10004,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';

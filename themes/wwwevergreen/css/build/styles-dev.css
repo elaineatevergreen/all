@@ -5435,7 +5435,7 @@ p.alert {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  background: transparent none;
+  background: #f2f2f2 none;
 }
 @media screen and (min-width: 20em) {
   /* line 177, ../src/smacss/modules/_boxes.scss */

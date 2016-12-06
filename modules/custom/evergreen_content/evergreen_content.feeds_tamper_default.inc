@@ -276,7 +276,7 @@ function evergreen_content_feeds_tamper_default() {
   $export['faculty_directory-xpathparser_4-convert_case'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'faculty_directory-xpathparser_6-rewrite';
   $feeds_tamper->importer = 'faculty_directory';

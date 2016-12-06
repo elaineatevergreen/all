@@ -761,12 +761,6 @@ function evergreen_content_feeds_importer_default() {
             'language' => 'und',
           ),
           6 => array(
-            'source' => 'xpathparser:6',
-            'target' => 'field_headshot:uri',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          7 => array(
             'source' => 'xpathparser:7',
             'target' => 'field_planning_unit_puc',
             'unique' => FALSE,
