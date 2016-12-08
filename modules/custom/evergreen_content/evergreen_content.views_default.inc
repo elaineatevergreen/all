@@ -12436,16 +12436,19 @@ return($term); ';
   $handler->display->display_options['fields']['field_offering_status']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_offering_status']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_offering_status']['field_api_classes'] = TRUE;
-  /* Field: Content: Academic Quarter */
-  $handler->display->display_options['fields']['field_academic_quarter']['id'] = 'field_academic_quarter';
-  $handler->display->display_options['fields']['field_academic_quarter']['table'] = 'field_data_field_academic_quarter';
-  $handler->display->display_options['fields']['field_academic_quarter']['field'] = 'field_academic_quarter';
-  $handler->display->display_options['fields']['field_academic_quarter']['label'] = '';
-  $handler->display->display_options['fields']['field_academic_quarter']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_academic_quarter']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_academic_quarter']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_academic_quarter']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_academic_quarter']['field_api_classes'] = TRUE;
+  /* Field: Content: Class Standing */
+  $handler->display->display_options['fields']['field_class_standing']['id'] = 'field_class_standing';
+  $handler->display->display_options['fields']['field_class_standing']['table'] = 'field_data_field_class_standing';
+  $handler->display->display_options['fields']['field_class_standing']['field'] = 'field_class_standing';
+  $handler->display->display_options['fields']['field_class_standing']['label'] = '';
+  $handler->display->display_options['fields']['field_class_standing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_class_standing']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_class_standing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_class_standing']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_class_standing']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_class_standing']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_class_standing']['delta_first_last'] = TRUE;
+  $handler->display->display_options['fields']['field_class_standing']['separator'] = '-';
   /* Sort criterion: Content: Academic Year (field_academic_year) */
   $handler->display->display_options['sorts']['field_academic_year_value']['id'] = 'field_academic_year_value';
   $handler->display->display_options['sorts']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
@@ -12517,6 +12520,8 @@ return($term); ';
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -13501,6 +13506,67 @@ return($term); ';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Attach link to parent */
+  $handler = $view->new_display('attachment', 'Attach link to parent', 'attachment_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'box supplement';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Parent term */
+  $handler->display->display_options['relationships']['parent']['id'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['relationships']['parent']['field'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_1']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name_1']['link_to_taxonomy'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'See [name_1] for more about how this subject is taught at Evergreen.';
+  $handler->display->display_options['fields']['nothing']['element_type'] = 'p';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['displays'] = array(
+    'block_3' => 'block_3',
+    'default' => 0,
+    'all' => 0,
+    'page_1' => 0,
+    'secondary_content' => 0,
+    'block_1' => 0,
+    'block_2' => 0,
+  );
   $export['fields_of_study_taxonomy_'] = $view;
 
   $view = new view();
