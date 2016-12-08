@@ -13025,7 +13025,14 @@ return($term); ';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
   /* Relationship: Taxonomy term: Parent term */
   $handler->display->display_options['relationships']['parent']['id'] = 'parent';
   $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
@@ -13567,6 +13574,75 @@ return($term); ';
     'block_1' => 0,
     'block_2' => 0,
   );
+
+  /* Display: Attach related fields */
+  $handler = $view->new_display('attachment', 'Attach related fields', 'attachment_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Taught along with';
+  $handler->display->display_options['defaults']['group_by'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2>Related Subjects</h2>
+Offerings in this area are taught along with the subjects listed below.';
+  $handler->display->display_options['header']['area']['format'] = 'extended_tags';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Content using Fields of Study */
+  $handler->display->display_options['relationships']['reverse_field_fields_of_study_node']['id'] = 'reverse_field_fields_of_study_node';
+  $handler->display->display_options['relationships']['reverse_field_fields_of_study_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_fields_of_study_node']['field'] = 'reverse_field_fields_of_study_node';
+  $handler->display->display_options['relationships']['reverse_field_fields_of_study_node']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Term Count */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['group_type'] = 'count';
+  $handler->display->display_options['fields']['name_1']['ui_name'] = 'Term Count';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_1']['prefix'] = '(';
+  $handler->display->display_options['fields']['name_1']['suffix'] = ')';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Fields of Study (field_fields_of_study) */
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['relationship'] = 'reverse_field_fields_of_study_node';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['title'] = 'Subjects taught with %1';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['displays'] = array(
+    'secondary_content' => 'secondary_content',
+    'default' => 0,
+    'all' => 0,
+    'page_1' => 0,
+    'block_1' => 0,
+    'block_3' => 0,
+    'block_2' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
   $export['fields_of_study_taxonomy_'] = $view;
 
   $view = new view();
