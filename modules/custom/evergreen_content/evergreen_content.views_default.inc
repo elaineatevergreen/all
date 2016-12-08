@@ -8220,6 +8220,343 @@ return($term); ';
   $export['catalog'] = $view;
 
   $view = new view();
+  $view->name = 'categories_formats';
+  $view->description = 'Displays the lists of categories and formats, including descriptions if available.';
+  $view->tag = 'admin';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Categories & Formats';
+  $view->core = 0;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Category and Format Descriptions';
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'menu';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'nothing',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Taxonomy vocabulary: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy vocabulary: Description */
+  $handler->display->display_options['fields']['description_1']['id'] = 'description_1';
+  $handler->display->display_options['fields']['description_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['description_1']['field'] = 'description';
+  $handler->display->display_options['fields']['description_1']['label'] = '';
+  $handler->display->display_options['fields']['description_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description_1']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>[name_1]</h2>
+<p>[description_1]</p>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = 'p';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  /* Contextual filter: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['arguments']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['arguments']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['arguments']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['arguments']['machine_name']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['machine_name']['title'] = 'Terms in %1';
+  $handler->display->display_options['arguments']['machine_name']['breadcrumb_enable'] = TRUE;
+  $handler->display->display_options['arguments']['machine_name']['breadcrumb'] = '%1';
+  $handler->display->display_options['arguments']['machine_name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['machine_name']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['machine_name']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['machine_name']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['machine_name']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['machine_name']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['machine_name']['limit'] = '0';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'calendar_categories' => 'calendar_categories',
+  );
+  $handler->display->display_options['filters']['machine_name']['group'] = 1;
+
+  /* Display: System */
+  $handler = $view->new_display('system', 'System', 'system_1');
+  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['path'] = 'admin/structure/taxonomy/%';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'descriptions-all';
+
+  /* Display: Full Description Block */
+  $handler = $view->new_display('block', 'Full Description Block', 'full_description');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy vocabulary: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy vocabulary: Description */
+  $handler->display->display_options['fields']['description_1']['id'] = 'description_1';
+  $handler->display->display_options['fields']['description_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['description_1']['field'] = 'description';
+  $handler->display->display_options['fields']['description_1']['label'] = '';
+  $handler->display->display_options['fields']['description_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description_1']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>[name_1]</h2>
+<p>[description_1]</p>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = 'p';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term edit link */
+  $handler->display->display_options['fields']['edit_term']['id'] = 'edit_term';
+  $handler->display->display_options['fields']['edit_term']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['edit_term']['field'] = 'edit_term';
+  $handler->display->display_options['fields']['edit_term']['label'] = '';
+  $handler->display->display_options['fields']['edit_term']['element_type'] = '0';
+  $handler->display->display_options['fields']['edit_term']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_term']['element_wrapper_type'] = 'p';
+  $handler->display->display_options['fields']['edit_term']['element_wrapper_class'] = 'details';
+  $handler->display->display_options['fields']['edit_term']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['edit_term']['text'] = 'Edit this text.';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    1 => '1',
+  );
+
+  /* Display: Short List Block */
+  $handler = $view->new_display('block', 'Short List Block', 'short_list');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'nothing',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+    'description' => 'description',
+  );
+  $handler->display->display_options['row_options']['separator'] = ': ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy vocabulary: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy vocabulary: Description */
+  $handler->display->display_options['fields']['description_1']['id'] = 'description_1';
+  $handler->display->display_options['fields']['description_1']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['fields']['description_1']['field'] = 'description';
+  $handler->display->display_options['fields']['description_1']['label'] = '';
+  $handler->display->display_options['fields']['description_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description_1']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>[name_1]</h2>
+<p>[description_1]</p>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+
+  /* Display: Export Categories */
+  $handler = $view->new_display('views_data_export', 'Export Categories', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = 'Description';
+  $handler->display->display_options['fields']['description']['element_type'] = 'p';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['vid']['group'] = '0';
+  $handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
+  $handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
+  $handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
+  $handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
+  $handler->display->display_options['filters']['vid']['expose']['remember'] = TRUE;
+  $handler->display->display_options['path'] = 'export/categories';
+
+  /* Display: Export Formats */
+  $handler = $view->new_display('views_data_export', 'Export Formats', 'views_data_export_2');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = 'Description';
+  $handler->display->display_options['fields']['description']['element_type'] = 'p';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['vid']['group'] = '0';
+  $handler->display->display_options['filters']['vid']['expose']['operator_id'] = 'vid_op';
+  $handler->display->display_options['filters']['vid']['expose']['label'] = 'Vocabulary';
+  $handler->display->display_options['filters']['vid']['expose']['operator'] = 'vid_op';
+  $handler->display->display_options['filters']['vid']['expose']['identifier'] = 'vid';
+  $handler->display->display_options['filters']['vid']['expose']['remember'] = TRUE;
+  $handler->display->display_options['path'] = 'export/formats';
+  $export['categories_formats'] = $view;
+
+  $view = new view();
   $view->name = 'committees';
   $view->description = '';
   $view->tag = 'default';
@@ -10004,7 +10341,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -10438,8 +10775,14 @@ return($term); ';
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'extended_tags';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25,50,100';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['row_class'] = 'h-card';
@@ -12027,6 +12370,173 @@ return($term); ';
   $export['directory'] = $view;
 
   $view = new view();
+  $view->name = 'fields_of_studies_offering_list_';
+  $view->description = 'A view to emulate Drupal core\'s handling of taxonomy/term.';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Fields of Studies (offering list)';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'node';
+  /* Field: Content: Academic Year */
+  $handler->display->display_options['fields']['field_academic_year']['id'] = 'field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['table'] = 'field_data_field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['field'] = 'field_academic_year';
+  $handler->display->display_options['fields']['field_academic_year']['label'] = '';
+  $handler->display->display_options['fields']['field_academic_year']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_academic_year']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_academic_year']['alter']['text'] = 'Planned offerings for [field_academic_year]';
+  $handler->display->display_options['fields']['field_academic_year']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_year']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_year']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_year']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_year']['field_api_classes'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_description_plain']['id'] = 'field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['table'] = 'field_data_field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['field'] = 'field_description_plain';
+  $handler->display->display_options['fields']['field_description_plain']['label'] = '';
+  $handler->display->display_options['fields']['field_description_plain']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['field_description_plain']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_description_plain']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['field_description_plain']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_description_plain']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_description_plain']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_description_plain']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_description_plain']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Content: Offering Status */
+  $handler->display->display_options['fields']['field_offering_status']['id'] = 'field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['table'] = 'field_data_field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['field'] = 'field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['label'] = '';
+  $handler->display->display_options['fields']['field_offering_status']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_offering_status']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_status']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_offering_status']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_status']['field_api_classes'] = TRUE;
+  /* Field: Content: Academic Quarter */
+  $handler->display->display_options['fields']['field_academic_quarter']['id'] = 'field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['table'] = 'field_data_field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['field'] = 'field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['label'] = '';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_quarter']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_quarter']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Academic Year (field_academic_year) */
+  $handler->display->display_options['sorts']['field_academic_year_value']['id'] = 'field_academic_year_value';
+  $handler->display->display_options['sorts']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
+  $handler->display->display_options['sorts']['field_academic_year_value']['field'] = 'field_academic_year_value';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '10';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['break_phrase'] = TRUE;
+  /* Contextual filter: Content: Has taxonomy term ID depth modifier */
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['field'] = 'term_node_tid_depth_modifier';
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['specify_validation'] = TRUE;
+  /* Filter criterion: Content: Published or admin */
+  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 0;
+  $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'catalog_entry' => 'catalog_entry',
+  );
+  /* Filter criterion: Content: Offering Type (field_offering_type) */
+  $handler->display->display_options['filters']['field_offering_type_value']['id'] = 'field_offering_type_value';
+  $handler->display->display_options['filters']['field_offering_type_value']['table'] = 'field_data_field_offering_type';
+  $handler->display->display_options['filters']['field_offering_type_value']['field'] = 'field_offering_type_value';
+  $handler->display->display_options['filters']['field_offering_type_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_offering_type_value']['value'] = array(
+    'Research' => 'Research',
+  );
+  /* Filter criterion: Content: Offering Status (field_offering_status) */
+  $handler->display->display_options['filters']['field_offering_status_value']['id'] = 'field_offering_status_value';
+  $handler->display->display_options['filters']['field_offering_status_value']['table'] = 'field_data_field_offering_status';
+  $handler->display->display_options['filters']['field_offering_status_value']['field'] = 'field_offering_status_value';
+  $handler->display->display_options['filters']['field_offering_status_value']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_offering_status_value']['value'] = 'Cancelled';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_academic_year',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['path'] = 'taxonomy/term/%';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed');
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = 15;
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'taxonomy/term/%/%/feed';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
+  $export['fields_of_studies_offering_list_'] = $view;
+
+  $view = new view();
   $view->name = 'fields_of_study';
   $view->description = '';
   $view->tag = 'default';
@@ -12905,6 +13415,92 @@ return($term); ';
   $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
+
+  /* Display: Top Primary Content */
+  $handler = $view->new_display('block', 'Top Primary Content', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  /* Field: Field: Sample Program Description */
+  $handler->display->display_options['fields']['field_sample_program_description']['id'] = 'field_sample_program_description';
+  $handler->display->display_options['fields']['field_sample_program_description']['table'] = 'field_data_field_sample_program_description';
+  $handler->display->display_options['fields']['field_sample_program_description']['field'] = 'field_sample_program_description';
+  $handler->display->display_options['fields']['field_sample_program_description']['label'] = 'Sample Program';
+  $handler->display->display_options['fields']['field_sample_program_description']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_sample_program_description']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_sample_program_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sample_program_description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_sample_program_description']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_sample_program_description']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Lower Primary Content */
+  $handler = $view->new_display('block', 'Lower Primary Content', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: After Graduation */
+  $handler->display->display_options['fields']['field_after_graduation']['id'] = 'field_after_graduation';
+  $handler->display->display_options['fields']['field_after_graduation']['table'] = 'field_data_field_after_graduation';
+  $handler->display->display_options['fields']['field_after_graduation']['field'] = 'field_after_graduation';
+  $handler->display->display_options['fields']['field_after_graduation']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_after_graduation']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_after_graduation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_after_graduation']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_after_graduation']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_after_graduation']['hide_empty'] = TRUE;
+  /* Field: Field: Facilities & Resources */
+  $handler->display->display_options['fields']['field_facilities_resources']['id'] = 'field_facilities_resources';
+  $handler->display->display_options['fields']['field_facilities_resources']['table'] = 'field_data_field_facilities_resources';
+  $handler->display->display_options['fields']['field_facilities_resources']['field'] = 'field_facilities_resources';
+  $handler->display->display_options['fields']['field_facilities_resources']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_facilities_resources']['element_label_type'] = 'h2';
+  $handler->display->display_options['fields']['field_facilities_resources']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_facilities_resources']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_facilities_resources']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_facilities_resources']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $export['fields_of_study_taxonomy_'] = $view;
 
   $view = new view();
