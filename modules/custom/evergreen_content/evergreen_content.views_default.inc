@@ -6032,12 +6032,13 @@ return($term); ';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '75';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25,50,100,200,500';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'All';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'catalog';
 
@@ -13617,22 +13618,22 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler->display->display_options['fields']['name_1']['group_type'] = 'count';
   $handler->display->display_options['fields']['name_1']['ui_name'] = 'Term Count';
   $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name_1']['prefix'] = '(';
   $handler->display->display_options['fields']['name_1']['suffix'] = ')';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Fields of Study (field_fields_of_study) */
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['relationship'] = 'reverse_field_fields_of_study_node';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['title'] = 'Subjects taught with %1';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_fields_of_study_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['relationship'] = 'reverse_field_fields_of_study_node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '1';
   $handler->display->display_options['displays'] = array(
     'secondary_content' => 'secondary_content',
     'default' => 0,
