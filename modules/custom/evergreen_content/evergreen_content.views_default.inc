@@ -10775,8 +10775,14 @@ return($term); ';
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'extended_tags';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25,50,100';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['row_class'] = 'h-card';
@@ -12375,13 +12381,15 @@ return($term); ';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Field: Content: Academic Year */
@@ -12390,6 +12398,8 @@ return($term); ';
   $handler->display->display_options['fields']['field_academic_year']['field'] = 'field_academic_year';
   $handler->display->display_options['fields']['field_academic_year']['label'] = '';
   $handler->display->display_options['fields']['field_academic_year']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_academic_year']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_academic_year']['alter']['text'] = 'Planned offerings for [field_academic_year]';
   $handler->display->display_options['fields']['field_academic_year']['element_type'] = '0';
   $handler->display->display_options['fields']['field_academic_year']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_academic_year']['element_wrapper_type'] = '0';
@@ -12416,6 +12426,26 @@ return($term); ';
   $handler->display->display_options['fields']['field_description_plain']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Offering Status */
+  $handler->display->display_options['fields']['field_offering_status']['id'] = 'field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['table'] = 'field_data_field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['field'] = 'field_offering_status';
+  $handler->display->display_options['fields']['field_offering_status']['label'] = '';
+  $handler->display->display_options['fields']['field_offering_status']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_offering_status']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_status']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_offering_status']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_offering_status']['field_api_classes'] = TRUE;
+  /* Field: Content: Academic Quarter */
+  $handler->display->display_options['fields']['field_academic_quarter']['id'] = 'field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['table'] = 'field_data_field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['field'] = 'field_academic_quarter';
+  $handler->display->display_options['fields']['field_academic_quarter']['label'] = '';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_quarter']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_academic_quarter']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_academic_quarter']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Academic Year (field_academic_year) */
   $handler->display->display_options['sorts']['field_academic_year_value']['id'] = 'field_academic_year_value';
   $handler->display->display_options['sorts']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
@@ -12433,10 +12463,12 @@ return($term); ';
   $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
   $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '10';
   $handler->display->display_options['arguments']['term_node_tid_depth']['break_phrase'] = TRUE;
   /* Contextual filter: Content: Has taxonomy term ID depth modifier */
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['id'] = 'term_node_tid_depth_modifier';
@@ -12459,6 +12491,20 @@ return($term); ';
   $handler->display->display_options['filters']['type']['value'] = array(
     'catalog_entry' => 'catalog_entry',
   );
+  /* Filter criterion: Content: Offering Type (field_offering_type) */
+  $handler->display->display_options['filters']['field_offering_type_value']['id'] = 'field_offering_type_value';
+  $handler->display->display_options['filters']['field_offering_type_value']['table'] = 'field_data_field_offering_type';
+  $handler->display->display_options['filters']['field_offering_type_value']['field'] = 'field_offering_type_value';
+  $handler->display->display_options['filters']['field_offering_type_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_offering_type_value']['value'] = array(
+    'Research' => 'Research',
+  );
+  /* Filter criterion: Content: Offering Status (field_offering_status) */
+  $handler->display->display_options['filters']['field_offering_status_value']['id'] = 'field_offering_status_value';
+  $handler->display->display_options['filters']['field_offering_status_value']['table'] = 'field_data_field_offering_status';
+  $handler->display->display_options['filters']['field_offering_status_value']['field'] = 'field_offering_status_value';
+  $handler->display->display_options['filters']['field_offering_status_value']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_offering_status_value']['value'] = 'Cancelled';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
