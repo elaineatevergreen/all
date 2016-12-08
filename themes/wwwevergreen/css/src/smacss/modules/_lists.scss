@@ -92,6 +92,21 @@
 	}
 }
 
+.pager{  // Drupal pagination navigation, (e.g. «First ‹Previous 1 2 3 Next› Last»)
+	// box model
+	margin-left: 0;
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	// typography
+	font-variant-numeric: lining-nums;
+	
+	@include breakpoint($starlord){
+		justify-content: space-between;
+	}
+}
+
 /**
  * 3. Accordion
  *

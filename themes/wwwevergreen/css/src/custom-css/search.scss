@@ -82,16 +82,6 @@ div.item-list ul.pager{  // Override of gss.css
 	// The margin values at all breakpoints should match the vertical margins of the normal uls.
 	@include margin-default;
 	margin-top: calc(45 / 14 * 1em);
-	// layout
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	// typography
-	font-variant-numeric: lining-nums;
-	
-	@include breakpoint($starlord){
-		justify-content: space-between;
-	}
 
 	@include breakpoint($gamora){
 		@include margin-default-lg;
