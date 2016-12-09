@@ -175,6 +175,25 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_additional_schedule_detail'.
+  $field_bases['field_additional_schedule_detail'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_additional_schedule_detail',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_advertised_schedule'.
   $field_bases['field_advertised_schedule'] = array(
     'active' => 1,
@@ -2349,6 +2368,25 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_internship_opportunities'.
+  $field_bases['field_internship_opportunities'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_internship_opportunities',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_intro'.
   $field_bases['field_intro'] = array(
     'active' => 1,
@@ -2906,9 +2944,11 @@ function evergreen_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'Contract' => 'Contract',
         'Course' => 'Course',
         'Program' => 'Program',
         'Research' => 'Research',
+        'SOS' => 'Student Originated Studies',
       ),
       'allowed_values_function' => '',
     ),
@@ -3518,6 +3558,25 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_research_opportunities'.
+  $field_bases['field_research_opportunities'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_research_opportunities',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_resource_link'.

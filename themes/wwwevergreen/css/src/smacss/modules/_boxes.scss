@@ -186,7 +186,7 @@ p.alert{  // WYSIWYG
 	// typography
 	text-align: center;
 	// decoration
-	background: transparent none;
+	background: $tint none;
 
 	@include breakpoint($lil-groot){
 		flex-direction: row;

@@ -785,7 +785,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
@@ -1418,6 +1418,7 @@ function evergreen_content_field_group_info() {
       3 => 'field_study_abroad',
       4 => 'field_time_offered',
       5 => 'field_final_schedule',
+      6 => 'field_additional_schedule_detail',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1519,6 +1520,8 @@ function evergreen_content_field_group_info() {
       5 => 'field_fees',
       6 => 'field_variable_credit_options',
       7 => 'field_enrollment_conditions',
+      8 => 'field_research_opportunities',
+      9 => 'field_internship_opportunities',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2132,6 +2135,7 @@ function evergreen_content_field_group_info() {
       8 => 'field_curricular_area',
       9 => 'field_final_schedule',
       10 => 'field_days_of_the_week',
+      11 => 'field_additional_schedule_detail',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
