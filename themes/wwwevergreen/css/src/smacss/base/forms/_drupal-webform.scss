@@ -49,6 +49,17 @@
 	width: calc(4.1ch + 1em);  // 4ch for four numbers, 1em to account for padding
 }
 
+/**
+ * Checkboxes And Radios
+ */
+.form-type-checkbox, // This selector is untested, so if this breaks something, feel free to try something different
+.form-radios .form-type-radio{
+	// box model
+	margin: 0;
+	// layout
+	display: flex;
+}
+
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"]{
 	// box model
@@ -68,12 +79,19 @@
 	float: none;
 }
 
+
+/**
+ * Textareas
+ */
 .resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
 	width: 100%;
 	max-width: calc(45ch + 1em);
 	min-width: 50%;
 }
 
+/**
+ * Buttons
+ */
 .webform-client-form .button-primary{
 	@extend input.prime;
 }
