@@ -695,7 +695,6 @@ function evergreen_content_views_default_views() {
   /* Display: Home Page News */
   $handler = $view->new_display('block', 'Home Page News', 'home');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Evergreen News';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
@@ -835,7 +834,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
-    0 => '583',
+    0 => '82',
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
 
@@ -997,7 +996,7 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
   $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
   $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
-    0 => '583',
+    0 => '82',
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
   $handler->display->display_options['path'] = 'news/archive';
@@ -2212,9 +2211,8 @@ return($term); ';
   $handler->display->display_options['filters']['name']['value'] = 'Holidays (Campus Closed)';
 
   /* Display: Home List */
-  $handler = $view->new_display('block', 'Home List', 'block_2');
+  $handler = $view->new_display('block', 'Home List', 'homelist');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Events';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['query'] = FALSE;
@@ -2226,6 +2224,7 @@ return($term); ';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'unit-1-7';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -2235,6 +2234,15 @@ return($term); ';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="unit-1-1"><div class="grid"><div class="unit-1-2"><p><a href="/calendar/"><img alt="" class="inline-icon" src="/sites/all/themes/images/icons/dark/calendar.png"> Campus Events Calendar
+                                    </a></p></div><div class="unit-1-2"><p><a href="/calendar/academic"><img alt="" class="inline-icon" src="/sites/all/themes/wwwevergreen/images/icons/dark/academics.png"> Academic Calendar at a Glance
+                                    </a></p></div></div></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -2293,7 +2301,7 @@ return($term); ';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media"><div class="media-img"><div class="calendar-dt"><span class="calendar-month">[field_event_date_1]</span> <span class="calendar-day">[field_event_date]</span></div></div><div class="media-body"><p>[title]</p></div></div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="media media-column"><div class="media-img"><div class="calendar-dt"><span class="calendar-month">[field_event_date_1]</span> <span class="calendar-day">[field_event_date]</span></div></div><div class="media-body"><p>[title]</p></div></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Field: Content: Nid */
@@ -2506,6 +2514,12 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   );
   $handler->display->display_options['fields']['field_event_date_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_event_date_1']['delta_offset'] = '0';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Type */
@@ -2521,7 +2535,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_calendar_categories_tid']['table'] = 'field_data_field_calendar_categories';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['field'] = 'field_calendar_categories_tid';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['value'] = array(
-    0 => '5',
+    0 => '207',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['vocabulary'] = 'calendar_categories';
   /* Filter criterion: Content: Event Date -  start date (field_event_date) */
@@ -2530,6 +2544,11 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
+  /* Filter criterion: Workbench Moderation: Published */
+  $handler->display->display_options['filters']['published']['id'] = 'published';
+  $handler->display->display_options['filters']['published']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['published']['field'] = 'published';
+  $handler->display->display_options['filters']['published']['value'] = '1';
   $handler->display->display_options['path'] = 'calendar/holidays';
 
   /* Display: Academic Calendar Page */
@@ -2678,8 +2697,8 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_calendar_categories_tid']['table'] = 'field_data_field_calendar_categories';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['field'] = 'field_calendar_categories_tid';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['value'] = array(
-    14 => '14',
-    5 => '5',
+    207 => '207',
+    201 => '201',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_calendar_categories_tid']['type'] = 'select';
@@ -2906,7 +2925,7 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_calendar_categories_tid']['table'] = 'field_data_field_calendar_categories';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['field'] = 'field_calendar_categories_tid';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['value'] = array(
-    0 => '5',
+    0 => '207',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['vocabulary'] = 'calendar_categories';
   $handler->display->display_options['path'] = 'calendar/holidays/past';
@@ -3027,8 +3046,8 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['field_calendar_categories_tid']['table'] = 'field_data_field_calendar_categories';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['field'] = 'field_calendar_categories_tid';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['value'] = array(
-    14 => '14',
-    5 => '5',
+    207 => '207',
+    201 => '201',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_calendar_categories_tid']['type'] = 'select';
@@ -3607,10 +3626,10 @@ return($term); ';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['table'] = 'field_data_field_calendar_categories';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['field'] = 'field_calendar_categories_tid';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['value'] = array(
-    3 => '3',
-    10 => '10',
-    11 => '11',
-    7 => '7',
+    203 => '203',
+    202 => '202',
+    204 => '204',
+    206 => '206',
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_calendar_categories_tid']['reduce_duplicates'] = TRUE;
@@ -3621,11 +3640,10 @@ return($term); ';
   $handler->display->display_options['filters']['field_event_format_tid']['table'] = 'field_data_field_event_format';
   $handler->display->display_options['filters']['field_event_format_tid']['field'] = 'field_event_format_tid';
   $handler->display->display_options['filters']['field_event_format_tid']['value'] = array(
-    16 => '16',
-    22 => '22',
-    17 => '17',
-    18 => '18',
-    20 => '20',
+    213 => '213',
+    205 => '205',
+    215 => '215',
+    210 => '210',
   );
   $handler->display->display_options['filters']['field_event_format_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_event_format_tid']['reduce_duplicates'] = TRUE;
@@ -3946,8 +3964,17 @@ return($term); ';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    3 => 0,
+    13 => 0,
+    10 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
     4 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    12 => 0,
+    3 => 0,
   );
   $handler->display->display_options['filters']['field_calendar_categories_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_calendar_categories_tid']['vocabulary'] = 'calendar_categories';
@@ -4199,6 +4226,13 @@ return($term); ';
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -4243,13 +4277,6 @@ return($term); ';
   );
   $handler->display->display_options['filters']['field_event_format_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event_format_tid']['vocabulary'] = 'event_formats';
-  /* Filter criterion: Workbench Moderation: State */
-  $handler->display->display_options['filters']['state']['id'] = 'state';
-  $handler->display->display_options['filters']['state']['table'] = 'workbench_moderation_node_history';
-  $handler->display->display_options['filters']['state']['field'] = 'state';
-  $handler->display->display_options['filters']['state']['value'] = array(
-    'published' => 'published',
-  );
   $handler->display->display_options['path'] = 'calendar/month';
 
   /* Display: Week Page */
@@ -8393,13 +8420,6 @@ return($term); ';
   $handler->display->display_options['fields']['edit_term']['text'] = 'Edit this text.';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Taxonomy term: Vocabulary */
-  $handler->display->display_options['filters']['vid']['id'] = 'vid';
-  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['value'] = array(
-    1 => '1',
-  );
 
   /* Display: Short List Block */
   $handler = $view->new_display('block', 'Short List Block', 'short_list');
@@ -8470,13 +8490,6 @@ return($term); ';
   $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Taxonomy term: Vocabulary */
-  $handler->display->display_options['filters']['vid']['id'] = 'vid';
-  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['value'] = array(
-    2 => '2',
-  );
 
   /* Display: Export Categories */
   $handler = $view->new_display('views_data_export', 'Export Categories', 'views_data_export_1');

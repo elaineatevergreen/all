@@ -58,8 +58,7 @@ function evergreen_content_feeds_importer_default() {
           2 => array(
             'source' => 'Title',
             'target' => 'title',
-            'unique' => 1,
-            'language' => 'und',
+            'unique' => 0,
           ),
           3 => array(
             'source' => 'Start',
