@@ -58,14 +58,18 @@ function evergreen_content_views_api($module = NULL, $api = NULL) {
  */
 function evergreen_content_fe_date_custom_date_formats() {
   $custom_date_formats = array();
+  $custom_date_formats['D, M j - g:i a'] = 'D, M j - g:i a';
   $custom_date_formats['F Y'] = 'F Y';
   $custom_date_formats['F j, Y'] = 'F j, Y';
   $custom_date_formats['M'] = 'M';
+  $custom_date_formats['M j - g:i a'] = 'M j - g:i a';
+  $custom_date_formats['U'] = 'U';
   $custom_date_formats['Y'] = 'Y';
   $custom_date_formats['Y-m-d'] = 'Y-m-d';
   $custom_date_formats['g:i a'] = 'g:i a';
   $custom_date_formats['j'] = 'j';
   $custom_date_formats['l, F j, Y'] = 'l, F j, Y';
+  $custom_date_formats['l, F j, Y - g:i a'] = 'l, F j, Y - g:i a';
   return $custom_date_formats;
 }
 
