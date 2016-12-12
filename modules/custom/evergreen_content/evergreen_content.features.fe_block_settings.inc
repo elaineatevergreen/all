@@ -166,8 +166,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -35,
       ),
@@ -189,8 +189,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -37,
       ),
@@ -255,8 +255,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -41,
       ),
@@ -277,8 +277,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -36,
       ),

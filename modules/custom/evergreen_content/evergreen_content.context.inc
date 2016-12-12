@@ -25,6 +25,11 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'calendar*' => 'calendar*',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'calendar:page' => 'calendar:page',
@@ -51,10 +56,10 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_title',
           'weight' => '-9',
         ),
-        'bean-calendar-nav' => array(
+        'bean-section-background-calendar' => array(
           'module' => 'bean',
-          'delta' => 'calendar-nav',
-          'region' => 'section_nav',
+          'delta' => 'section-background-calendar',
+          'region' => 'background_image',
           'weight' => '-10',
         ),
       ),
@@ -83,9 +88,19 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'catalog*' => 'catalog*',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'catalog:page' => 'catalog:page',
+        'catalog:page_1' => 'catalog:page_1',
+        'catalog:page_2' => 'catalog:page_2',
+        'catalog:page_3' => 'catalog:page_3',
+        'catalog:page_4' => 'catalog:page_4',
+        'catalog:page_5' => 'catalog:page_5',
       ),
     ),
   );
@@ -98,6 +113,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_title',
           'weight' => '-10',
         ),
+        'bean-section-navigation-catalog' => array(
+          'module' => 'bean',
+          'delta' => 'section-navigation-catalog',
+          'region' => 'section_nav',
+          'weight' => '-10',
+        ),
         'views--exp-catalog-page' => array(
           'module' => 'views',
           'delta' => '-exp-catalog-page',
@@ -108,6 +129,12 @@ function evergreen_content_context_default_contexts() {
           'module' => 'views',
           'delta' => 'catalog-secondary_content',
           'region' => 'secondary_content',
+          'weight' => '-10',
+        ),
+        'bean-section-background-catalog' => array(
+          'module' => 'bean',
+          'delta' => 'section-background-catalog',
+          'region' => 'background_image',
           'weight' => '-10',
         ),
       ),
@@ -170,6 +197,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'bean-section-background-directory' => array(
+          'module' => 'bean',
+          'delta' => 'section-background-directory',
+          'region' => 'background_image',
+          'weight' => '-10',
+        ),
       ),
     ),
     'css' => array(
@@ -226,13 +259,19 @@ function evergreen_content_context_default_contexts() {
           'module' => 'views',
           'delta' => '90c9a7e2ac808644c6f1d5fbc6fd2edb',
           'region' => 'content',
-          'weight' => '-55',
+          'weight' => '-10',
+        ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-9',
         ),
         'views-13fb26238e766bb0a66779d4119adff3' => array(
           'module' => 'views',
           'delta' => '13fb26238e766bb0a66779d4119adff3',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'views-ed3eb47c482a2d265dabe239adf98fbb' => array(
           'module' => 'views',
@@ -279,6 +318,40 @@ function evergreen_content_context_default_contexts() {
     ),
   );
   $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-alerts-only_alerts' => array(
+          'module' => 'views',
+          'delta' => 'alerts-only_alerts',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-home_page_hero-block' => array(
+          'module' => 'views',
+          'delta' => 'home_page_hero-block',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+        'views-news_o_matic-block' => array(
+          'module' => 'views',
+          'delta' => 'news_o_matic-block',
+          'region' => 'content',
+          'weight' => '-6',
+        ),
+        'views-blog-home' => array(
+          'module' => 'views',
+          'delta' => 'blog-home',
+          'region' => 'content',
+          'weight' => '-5',
+        ),
+      ),
+    ),
     'css' => array(
       'www.evergreen.edu' => array(
         'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css',
@@ -306,7 +379,13 @@ function evergreen_content_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'css' => array(
+      'www.evergreen.edu' => array(
+        'sites/all/themes/wwwevergreen/css/dist/custom-css/search.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/search.css',
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
