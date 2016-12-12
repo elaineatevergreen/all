@@ -65,11 +65,11 @@ function evergreen_content_views_default_views() {
     'alert' => 'alert',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'only_alerts');
+  /* Display: Single Alert */
+  $handler = $view->new_display('block', 'Single Alert', 'only_alerts');
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'open_notice');
+  /* Display: Alert Plus Normal Status */
+  $handler = $view->new_display('block', 'Alert Plus Normal Status', 'open_notice');
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
