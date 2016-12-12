@@ -4893,6 +4893,57 @@ return($term); ';
       'any_label' => NULL,
       'filter_rewrite_values' => NULL,
     ),
+    'field_fields_of_study_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
     'field_class_standing_value' => array(
       'bef_format' => 'default',
       'more_options' => array(
@@ -5399,14 +5450,6 @@ return($term); ';
   $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
   $handler->display->display_options['header']['webform_result']['table'] = 'views';
   $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
-  /* No results behavior: Global: Text area */
-  $handler->display->display_options['empty']['area']['id'] = 'area';
-  $handler->display->display_options['empty']['area']['table'] = 'views';
-  $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['label'] = 'Placeholder No Results Text';
-  $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'This is broken or you are in the wrong place.';
-  $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   /* Field: Content: Status Date */
   $handler->display->display_options['fields']['field_status_date']['id'] = 'field_status_date';
   $handler->display->display_options['fields']['field_status_date']['table'] = 'field_data_field_status_date';
@@ -5854,7 +5897,6 @@ return($term); ';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['field'] = 'field_fields_of_study_tid';
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['value'] = '';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_fields_of_study_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['operator_id'] = 'field_fields_of_study_tid_op';
@@ -5862,23 +5904,22 @@ return($term); ';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['operator'] = 'field_fields_of_study_tid_op';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['identifier'] = 'subject';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_fields_of_study_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => '1',
     13 => 0,
-    12 => 0,
+    10 => 0,
     11 => 0,
     9 => 0,
     6 => 0,
-    3 => 0,
+    4 => 0,
     7 => 0,
     8 => 0,
     5 => 0,
-    10 => 0,
-    4 => 0,
+    12 => 0,
+    3 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
+  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -6067,7 +6108,7 @@ return($term); ';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'All';
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'catalog';
+  $handler->display->display_options['path'] = 'catalog/index';
 
   /* Display: Offerings by Field */
   $handler = $view->new_display('block', 'Offerings by Field', 'offerings_by_field');
@@ -6610,7 +6651,6 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -6799,10 +6839,43 @@ return($term); ';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="box alert">
+	<p>
+		The "save to list" feature is not yet working in our new system. It will be available again later in Winter 2016–17.</p>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary with an additional token to change the items/page */
   $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
   $handler->display->display_options['header']['webform_result']['table'] = 'views';
   $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area_1']['id'] = 'area_1';
+  $handler->display->display_options['header']['area_1']['table'] = 'views';
+  $handler->display->display_options['header']['area_1']['field'] = 'area';
+  $handler->display->display_options['header']['area_1']['content'] = '<p>
+
+
+	Individual Study
+	
+	
+	
+	
+	
+	
+  
+
+
+
+
+		includes <strong>Individual Learning Contracts</strong> (full or part time study contract that is negotiated between a student and faculty/staff sponsor who has knowledge in the area to be studied), <strong>Internship Learning Contracts</strong> (full or part time contract including applied work experience, that is negotiated among a student, a field supervisor in an organization or business, and an Evergreen faculty/staff sponsor and <strong>In Program Internship Contracts</strong> (when you are registered for a program and working on an internship as a part of the program). <a href="/individualstudy">Learn more about Individual Study.</a>
+		
+
+</p>';
+  $handler->display->display_options['header']['area_1']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
@@ -6978,7 +7051,6 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -7168,10 +7240,25 @@ return($term); ';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="box alert">
+	<p>
+		The "save to list" feature is not yet working in our new system. It will be available again later in Winter 2016–17.</p>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary with an additional token to change the items/page */
   $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
   $handler->display->display_options['header']['webform_result']['table'] = 'views';
   $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area_1']['id'] = 'area_1';
+  $handler->display->display_options['header']['area_1']['table'] = 'views';
+  $handler->display->display_options['header']['area_1']['field'] = 'area';
+  $handler->display->display_options['header']['area_1']['content'] = '<p>Student Originated Studies (SOS)  offers an opportunity for self-motivated students to create their own advanced course of study and to interact with a community of other students researching related topics. Students enrolled in an SOS design their work with input and support from the faculty member, and participate in class sessions with activities that may include seminars, workshops, lectures, and peer review. </p>';
+  $handler->display->display_options['header']['area_1']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -7343,7 +7430,6 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -7707,7 +7793,6 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -7896,6 +7981,26 @@ return($term); ';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="box alert">
+	<p>
+		The "save to list" feature is not yet working in our new system. It will be available again later in Winter 2016–17.</p>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Header: Global: Result summary with an additional token to change the items/page */
+  $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
+  $handler->display->display_options['header']['webform_result']['table'] = 'views';
+  $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area_1']['id'] = 'area_1';
+  $handler->display->display_options['header']['area_1']['table'] = 'views';
+  $handler->display->display_options['header']['area_1']['field'] = 'area';
+  $handler->display->display_options['header']['area_1']['content'] = '<p>These offerings may include upper division science credit. See individual listings for details.</p>';
+  $handler->display->display_options['header']['area_1']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -8067,7 +8172,6 @@ return($term); ';
     10 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_fields_of_study_tid']['type'] = 'textfield';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['vocabulary'] = 'fields_of_study';
   /* Filter criterion: Content: Class Standing (field_class_standing) */
   $handler->display->display_options['filters']['field_class_standing_value']['id'] = 'field_class_standing_value';
@@ -10964,12 +11068,16 @@ return($term); ';
   $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
   $handler->display->display_options['fields']['field_related_subjects_directory']['label'] = '';
   $handler->display->display_options['fields']['field_related_subjects_directory']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = '<a href="/faculty?subject=[field_related_subjects_directory]">[field_related_subjects_directory]</a>';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_type'] = '0';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_related_subjects_directory']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_related_subjects_directory']['delta_offset'] = '0';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -11070,26 +11178,28 @@ return($term); ';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['table'] = 'field_data_field_related_subjects_directory';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['field'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['value'] = '';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator_id'] = 'field_related_subjects_directory_tid_op';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['label'] = 'Filter by Related Subject Area';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['operator'] = 'field_related_subjects_directory_tid_op';
-  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['identifier'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['identifier'] = 'subject';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     13 => 0,
-    12 => 0,
+    10 => 0,
     11 => 0,
     9 => 0,
     6 => 0,
-    3 => 0,
+    4 => 0,
     7 => 0,
     8 => 0,
     5 => 0,
-    10 => 0,
-    4 => 0,
+    12 => 0,
+    3 => 0,
   );
+  $handler->display->display_options['filters']['field_related_subjects_directory_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_related_subjects_directory_tid']['vocabulary'] = 'faculty_directory_categories';
   /* Filter criterion: Content: Last name (field_last_name) */
   $handler->display->display_options['filters']['field_last_name_value']['id'] = 'field_last_name_value';
@@ -12381,6 +12491,57 @@ return($term); ';
   $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
   $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
   $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: CAS name */
+  $handler->display->display_options['fields']['field_cas_name']['id'] = 'field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['table'] = 'field_data_field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['field'] = 'field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['label'] = 'From URL';
+  $handler->display->display_options['fields']['field_cas_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_cas_name']['alter']['text'] = 'faculty/directory/[field_cas_name]';
+  $handler->display->display_options['fields']['field_cas_name']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_cas_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_cas_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_cas_name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_cas_name']['field_api_classes'] = TRUE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = 'To URL';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'directory_individual' => 'directory_individual',
+  );
+  /* Filter criterion: Content: Is Faculty (field_is_faculty) */
+  $handler->display->display_options['filters']['field_is_faculty_value']['id'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['table'] = 'field_data_field_is_faculty';
+  $handler->display->display_options['filters']['field_is_faculty_value']['field'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['path'] = 'export/faculty-redirects';
   $export['directory'] = $view;
 
   $view = new view();
@@ -13331,13 +13492,14 @@ return($term); ';
   $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
   $handler->display->display_options['fields']['field_related_subjects_directory']['label'] = 'Faculty';
   $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = 'See faculty who teach in [field_related_subjects_directory].';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = 'See faculty who teach in <a href="/faculty?subject=[field_related_subjects_directory]">[field_related_subjects_directory]</a>.';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_type'] = '0';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_related_subjects_directory']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_related_subjects_directory']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_related_subjects_directory']['delta_offset'] = '0';
   /* Field: Field: Faculty Bios */
   $handler->display->display_options['fields']['field_faculty_bios']['id'] = 'field_faculty_bios';
