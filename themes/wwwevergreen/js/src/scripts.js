@@ -88,18 +88,6 @@ jQuery(document).ready(function($){
 	});
 	
 	/**
-	 * Alert
-	 *
-	 * Show timely and important information.
-	 */
-	var alertURL = "/_inc/js/alert.txt";
-	$.get(alertURL, function(message){
-		if(message !== ""){
-		  $("#sitewide-alert").addClass("alert").append(message);
-		}
-	});
-	
-  /**
    * Run the fluidMedia function on all embeded content
    */
   window.$allVideos = $("iframe[src*='//player.vimeo'], iframe[src*='//www.youtube'], object, embed");  //Get all videos

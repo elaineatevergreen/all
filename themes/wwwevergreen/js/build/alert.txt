@@ -1,4 +1,0 @@
-<!-- This alert must be written in HTML or it’s going to look pretty nasty. -->
-<!-- Keep these comments. Anything below the line is up for grabs.          -->
-<!-- ______________________________________________________________________ -->
-<!-- <p>Hello world!</p> -->

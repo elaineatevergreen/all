@@ -166,33 +166,10 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -35,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['views-calendar-block_2'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'calendar-block_2',
-    'module' => 'views',
-    'node_types' => array(
-      0 => 'home_page',
-    ),
-    'pages' => 'currentstudent/home
-<front>',
-    'roles' => array(),
-    'themes' => array(
-      'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'wwwevergreen',
-        'weight' => -37,
       ),
     ),
     'title' => '',
@@ -255,8 +232,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -41,
       ),
@@ -277,8 +254,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'wwwevergreen',
         'weight' => -36,
       ),
