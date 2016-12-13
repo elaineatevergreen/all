@@ -2136,6 +2136,7 @@ function evergreen_content_field_group_info() {
       9 => 'field_final_schedule',
       10 => 'field_days_of_the_week',
       11 => 'field_additional_schedule_detail',
+      12 => 'field_theme_codes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

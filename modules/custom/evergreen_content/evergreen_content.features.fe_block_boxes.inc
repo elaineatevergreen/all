@@ -20,9 +20,11 @@ function evergreen_content_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Section Title: Catalog';
-  $fe_block_boxes->format = 'extended_tags';
+  $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'catalog_section_title';
-  $fe_block_boxes->body = '<h1><a href="/catalog">Academic Catalog</a></h1>';
+  $fe_block_boxes->body = '<h1>
+	<a href="/catalog">Academic Catalog</a></h1>
+';
 
   $export['catalog_section_title'] = $fe_block_boxes;
 
