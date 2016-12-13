@@ -4157,7 +4157,7 @@ function evergreen_content_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_label_token' => 0,
     'deleted' => 0,
-    'description' => 'These codes are a crazy mix of things. As we figure out what they key to, we\'ll add some quick notes here about how to use them.',
+    'description' => 'These codes are a crazy mix of things. As we figure out what they key to, we\'ll add some quick notes here about how to use them. The grad program groupings are listed at the top; I hand-organized these and added more meaningful descriptions for the values. (Keys come from CMD.) Appears to also include PUC listings.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -14583,7 +14583,7 @@ function evergreen_content_field_default_field_instances() {
   t('The section selected will set the page\'s site title, navigation, and background.');
   t('The smallest number of credits that this offering is listed for.');
   t('Theme Codes');
-  t('These codes are a crazy mix of things. As we figure out what they key to, we\'ll add some quick notes here about how to use them.');
+  t('These codes are a crazy mix of things. As we figure out what they key to, we\'ll add some quick notes here about how to use them. The grad program groupings are listed at the top; I hand-organized these and added more meaningful descriptions for the values. (Keys come from CMD.) Appears to also include PUC listings.');
   t('These may include floor plans or exterior maps.');
   t('These should come in via the Migration....');
   t('This building field is a free text field in order to handle some of the weird input we get from other sources, but I\'m still working out a system for canonical naming of buildings!');
