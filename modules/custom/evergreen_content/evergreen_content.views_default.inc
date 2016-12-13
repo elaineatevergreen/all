@@ -829,14 +829,15 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: Field: Site Section (field_site_section) */
-  $handler->display->display_options['filters']['field_site_section_tid']['id'] = 'field_site_section_tid';
-  $handler->display->display_options['filters']['field_site_section_tid']['table'] = 'field_data_field_site_section';
-  $handler->display->display_options['filters']['field_site_section_tid']['field'] = 'field_site_section_tid';
-  $handler->display->display_options['filters']['field_site_section_tid']['value'] = array(
-    0 => '82',
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    0 => '1404',
   );
-  $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
+  $handler->display->display_options['filters']['tid']['group'] = 1;
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'site_sections';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
@@ -999,6 +1000,14 @@ function evergreen_content_views_default_views() {
     0 => '82',
   );
   $handler->display->display_options['filters']['field_site_section_tid']['vocabulary'] = 'site_sections';
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    0 => '1404',
+  );
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'site_sections';
   $handler->display->display_options['path'] = 'news/archive';
 
   /* Display: Story Picker */
