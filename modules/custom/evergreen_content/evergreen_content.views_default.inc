@@ -2614,6 +2614,19 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'calendar_categories' => 'calendar_categories',
+    'tags' => 0,
+  );
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Year only */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
@@ -2640,14 +2653,13 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_event_date']['alter']['text'] = '[field_event_date], [field_event_date_1]';
   $handler->display->display_options['fields']['field_event_date']['element_type'] = '0';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'longmonthday',
+    'format_type' => 'longdate',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -2732,6 +2744,16 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    4 => '4',
+    12 => '12',
+    3 => '3',
+  );
   $handler->display->display_options['path'] = 'calendar/academic';
 
   /* Display: Academic Calendar Export */
