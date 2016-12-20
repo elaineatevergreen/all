@@ -14166,7 +14166,7 @@ return($term); ';
   $handler->display->display_options['fields']['view']['view'] = 'fields_of_study_taxonomy_';
   $handler->display->display_options['fields']['view']['display'] = 'attachment_1';
   $handler->display->display_options['fields']['view']['arguments'] = '[!name]';
-  /* Field: Field: Sample Program Description */
+  /* Field: Taxonomy term: Sample Program Description */
   $handler->display->display_options['fields']['field_sample_program_description']['id'] = 'field_sample_program_description';
   $handler->display->display_options['fields']['field_sample_program_description']['table'] = 'field_data_field_sample_program_description';
   $handler->display->display_options['fields']['field_sample_program_description']['field'] = 'field_sample_program_description';
@@ -14276,7 +14276,7 @@ return($term); ';
   $handler->display->display_options['fields']['description']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['description']['alter']['text'] = '¶';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  /* Field: Field: Facilities & Resources */
+  /* Field: Taxonomy term: Facilities & Resources */
   $handler->display->display_options['fields']['field_facilities_resources']['id'] = 'field_facilities_resources';
   $handler->display->display_options['fields']['field_facilities_resources']['table'] = 'field_data_field_facilities_resources';
   $handler->display->display_options['fields']['field_facilities_resources']['field'] = 'field_facilities_resources';
@@ -14349,7 +14349,7 @@ return($term); ';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Recent Student Projects */
+  /* Field: Taxonomy term: Recent Student Projects */
   $handler->display->display_options['fields']['field_recent_student_projects']['id'] = 'field_recent_student_projects';
   $handler->display->display_options['fields']['field_recent_student_projects']['table'] = 'field_data_field_recent_student_projects';
   $handler->display->display_options['fields']['field_recent_student_projects']['field'] = 'field_recent_student_projects';
@@ -14374,7 +14374,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_related_subjects_directory']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_related_subjects_directory']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_related_subjects_directory']['delta_offset'] = '0';
-  /* Field: Field: Faculty Bios */
+  /* Field: Taxonomy term: Faculty Bios */
   $handler->display->display_options['fields']['field_faculty_bios']['id'] = 'field_faculty_bios';
   $handler->display->display_options['fields']['field_faculty_bios']['table'] = 'field_data_field_faculty_bios';
   $handler->display->display_options['fields']['field_faculty_bios']['field'] = 'field_faculty_bios';
@@ -14498,7 +14498,7 @@ return($term); ';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
-  /* Field: Field: Sample Program Description */
+  /* Field: Taxonomy term: Sample Program Description */
   $handler->display->display_options['fields']['field_sample_program_description']['id'] = 'field_sample_program_description';
   $handler->display->display_options['fields']['field_sample_program_description']['table'] = 'field_data_field_sample_program_description';
   $handler->display->display_options['fields']['field_sample_program_description']['field'] = 'field_sample_program_description';
@@ -14532,7 +14532,7 @@ return($term); ';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: After Graduation */
+  /* Field: Taxonomy term: After Graduation */
   $handler->display->display_options['fields']['field_after_graduation']['id'] = 'field_after_graduation';
   $handler->display->display_options['fields']['field_after_graduation']['table'] = 'field_data_field_after_graduation';
   $handler->display->display_options['fields']['field_after_graduation']['field'] = 'field_after_graduation';
@@ -14542,7 +14542,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_after_graduation']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_after_graduation']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_after_graduation']['hide_empty'] = TRUE;
-  /* Field: Field: Facilities & Resources */
+  /* Field: Taxonomy term: Facilities & Resources */
   $handler->display->display_options['fields']['field_facilities_resources']['id'] = 'field_facilities_resources';
   $handler->display->display_options['fields']['field_facilities_resources']['table'] = 'field_data_field_facilities_resources';
   $handler->display->display_options['fields']['field_facilities_resources']['field'] = 'field_facilities_resources';

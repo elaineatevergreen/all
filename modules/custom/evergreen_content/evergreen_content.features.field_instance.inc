@@ -8935,249 +8935,6 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-faculty_news-field_faculty_members'.
-  $field_instances['node-faculty_news-field_faculty_members'] = array(
-    'bundle' => 'faculty_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Select whoever was involved with this news. Can be more than one if multiple faculty participated!',
-    'display' => array(
-      'contact_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_faculty_members',
-    'label' => 'Faculty Member(s)',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 43,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-faculty_news-field_image'.
-  $field_instances['node-faculty_news-field_image'] = array(
-    'bundle' => 'faculty_news',
-    'deleted' => 0,
-    'description' => 'A single image such as a book cover or conference photo.',
-    'display' => array(
-      'contact_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 3,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'description_display' => 'after',
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 45,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-faculty_news-field_layperson_blurb'.
-  $field_instances['node-faculty_news-field_layperson_blurb'] = array(
-    'bundle' => 'faculty_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.',
-    'display' => array(
-      'contact_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_layperson_blurb',
-    'label' => 'Layperson Blurb',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 42,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-faculty_news-field_professional_blurb'.
-  $field_instances['node-faculty_news-field_professional_blurb'] = array(
-    'bundle' => 'faculty_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This information can be aimed at people in the field with advanced experience.',
-    'display' => array(
-      'contact_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_professional_blurb',
-    'label' => 'Professional Blurb',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 41,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-feed_importer-body'.
   $field_instances['node-feed_importer-body'] = array(
     'bundle' => 'feed_importer',
@@ -9251,495 +9008,6 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 41,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-body'.
-  $field_instances['node-field_of_study-body'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'body',
-    'label' => 'Blurb or Introduction',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'display_summary' => 1,
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 6,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-field_after_graduation'.
-  $field_instances['node-field_of_study-field_after_graduation'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Eventually this will be amended with a View or something automagically picking one or more alumni.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 7,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_after_graduation',
-    'label' => 'After Graduation',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 10,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-field_facilities_resources'.
-  $field_instances['node-field_of_study-field_facilities_resources'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_facilities_resources',
-    'label' => 'Facilities & Resources',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 11,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-field_faculty_bios'.
-  $field_instances['node-field_of_study-field_faculty_bios'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 10,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_faculty_bios',
-    'label' => 'Faculty Bios',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 13,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
-  // 'node-field_of_study-field_faculty_directory_subject_'.
-  $field_instances['node-field_of_study-field_faculty_directory_subject_'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This helps connect the field of study to faculty who teach in that area.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_faculty_directory_subject_',
-    'label' => 'Faculty directory subject area',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'taxonomy-index' => array(
-          'status' => TRUE,
-        ),
-      ),
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
-  // 'node-field_of_study-field_recent_student_projects'.
-  $field_instances['node-field_of_study-field_recent_student_projects'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This will be replaced by a View someday.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 9,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_recent_student_projects',
-    'label' => 'Recent Student Projects',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 12,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-field_sample_program'.
-  $field_instances['node-field_of_study-field_sample_program'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 6,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_sample_program',
-    'label' => 'Sample Program',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 8,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance:
-  // 'node-field_of_study-field_sample_program_description'.
-  $field_instances['node-field_of_study-field_sample_program_description'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 11,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_sample_program_description',
-    'label' => 'Sample Program Description',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 9,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-field_of_study-field_umbrella_field'.
-  $field_instances['node-field_of_study-field_umbrella_field'] = array(
-    'bundle' => 'field_of_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
-      ),
-      'full_name' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_umbrella_field',
-    'label' => '"Umbrella" field',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -14318,12 +13586,10 @@ function evergreen_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('"Summer" is one of the listings in the CMD, but it\'s not very helpful. Should always be converted to UG  instead.');
-  t('"Umbrella" field');
   t('<b>This checkbox doesn\'t do anything yet!</b> Check this box if this person\'s profile should not be shown at all. (Does not remove magazine articles or other related items, at least not now.)');
   t('<em>The New York Times</em>, <em>Diversity: Issues in Higher Education</em>, <em>The Evergreen Magazine</em>, etc.');
   t('<strong>One</strong> or more of: African American, Hispanic/Latino, Native American, age 24-26, first-generation college student, parent, high level of loan indebtedness.');
   t('A short message explaining what is happening or about to happen including dates and times if possible.');
-  t('A single image such as a book cover or conference photo.');
   t('Abbreviated Building Name');
   t('Academic Quarter');
   t('Academic Year');
@@ -14354,7 +13620,6 @@ function evergreen_content_field_default_field_instances() {
   t('Begin Term');
   t('Biography');
   t('Blurb');
-  t('Blurb or Introduction');
   t('Body');
   t('Building');
   t('Building History');
@@ -14405,8 +13670,6 @@ function evergreen_content_field_default_field_instances() {
   t('Event Date');
   t('Event Format');
   t('Eventually these will be brought over from projects/profiles.');
-  t('Eventually this will be amended with a View or something automagically picking one or more alumni.');
-  t('Eventually this will be replaced by randomized selections from the faculty directory. (We might also need to hard-code the link to the directory in the short-term.)');
   t('Excerpt');
   t('Expertise');
   t('FAFSA or WASFA Required');
@@ -14416,7 +13679,6 @@ function evergreen_content_field_default_field_instances() {
   t('Facility');
   t('Faculty');
   t('Faculty Bios');
-  t('Faculty Member(s)');
   t('Faculty Name Search');
   t('Faculty directory subject area');
   t('Fall Registration');
@@ -14430,7 +13692,6 @@ function evergreen_content_field_default_field_instances() {
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
-  t('For shorter pages, just a quick blurb. For longer pages, the introduction up to the "Sample Program".');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
@@ -14474,7 +13735,6 @@ function evergreen_content_field_default_field_instances() {
   t('Just a short description. In the future, there will also be an option to select from the standard Fields of Study list.');
   t('Just enter the part of the URL <em>after</em> "itemcode=".');
   t('Last name');
-  t('Layperson Blurb');
   t('Link to items on our website or elsewhere about this person. You will need to include the title for best linking practices.');
   t('Links');
   t('Links to sub-offices or other related offices.');
@@ -14522,7 +13782,6 @@ function evergreen_content_field_default_field_instances() {
   t('Preparatory For');
   t('Prerequisites');
   t('Primary Content');
-  t('Professional Blurb');
   t('Proxy');
   t('Publication Type');
   t('Publications');
@@ -14562,7 +13821,6 @@ function evergreen_content_field_default_field_instances() {
   t('Select what section this page belongs to. That will set its site title, navigation, and background.');
   t('Select which calendars this event should appear on. DO NOT select Academic Calendar unless authorized to do so.');
   t('Select which office in the directory should be associated with this site section. In order for the site editors to update the information, the office will also need to be assigned to this site.');
-  t('Select whoever was involved with this news. Can be more than one if multiple faculty participated!');
   t('Short Description');
   t('Signature Quarters');
   t('Site Section');
@@ -14597,10 +13855,8 @@ function evergreen_content_field_default_field_instances() {
   t('This field helps organize the buildings so people can find what they need quickly!');
   t('This field is used to assign an office to the Contact Us section of the website.');
   t('This field may be used in lists and other summaries.');
-  t('This helps connect the field of study to faculty who teach in that area.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
-  t('This information can be aimed at people in the field with advanced experience.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.');
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
@@ -14617,9 +13873,6 @@ function evergreen_content_field_default_field_instances() {
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
-  t('This version should be written at about a 10th-grade level to read by prospective students and members of the general public. Material posted in this field may be edited by communications professionals.');
-  t('This will be replaced by a View someday.');
-  t('This will sometimes be displayed as a "top level", parent, or grouping subject for the field you\'re editing.');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
   t('Tuition Award');
