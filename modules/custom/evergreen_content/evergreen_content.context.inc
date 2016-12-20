@@ -76,6 +76,50 @@ function evergreen_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'calendar_academic';
+  $context->description = 'Adds short description of academic years';
+  $context->tag = 'custom pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'calendar/academic*' => 'calendar/academic*',
+      ),
+    ),
+  );
+  $context->reactions = array();
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Adds short description of academic years');
+  t('custom pages');
+  $export['calendar_academic'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'calendar_home';
+  $context->description = 'Add blocks to the calendar home page';
+  $context->tag = 'custom pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'calendar' => 'calendar',
+      ),
+    ),
+  );
+  $context->reactions = array();
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Add blocks to the calendar home page');
+  t('custom pages');
+  $export['calendar_home'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'catalog';
   $context->description = 'Catalog home and items';
   $context->tag = 'sections';
@@ -365,6 +409,34 @@ function evergreen_content_context_default_contexts() {
   t('Adds design elements/CSS for home page');
   t('design');
   $export['home'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'library';
+  $context->description = 'Adds library search box & JS';
+  $context->tag = '3rdparty';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'library' => 'library',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'js' => array(
+      'www.evergreen.edu' => array(
+        'sites/all/themes/wwwevergreen/js/library-search-primo.js' => 'sites/all/themes/wwwevergreen/js/library-search-primo.js',
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('3rdparty');
+  t('Adds library search box & JS');
+  $export['library'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
