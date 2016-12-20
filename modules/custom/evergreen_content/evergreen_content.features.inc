@@ -294,14 +294,6 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'field_of_study' => array(
-      'name' => t('Field of Study'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Name'),
-      'help' => t('If this field is not for a "page" field, then the name MUST match a field in the CMD in order to correctly pull offerings out of the catalog!'),
-    ),
     'gallery' => array(
       'name' => t('Gallery'),
       'base' => 'node_content',
