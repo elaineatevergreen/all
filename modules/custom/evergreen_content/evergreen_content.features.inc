@@ -321,7 +321,7 @@ function evergreen_content_node_info() {
     'job_post' => array(
       'name' => t('Job Post'),
       'base' => 'node_content',
-      'description' => t('Use a <em>job post</em> to list openings. This should be deprecated by a new system by the end of 2016.'),
+      'description' => t('Use a <em>job post</em> to list openings. This should be deprecated by a new system sometime in 2017.'),
       'has_title' => '1',
       'title_label' => t('Job Title'),
       'help' => '',
