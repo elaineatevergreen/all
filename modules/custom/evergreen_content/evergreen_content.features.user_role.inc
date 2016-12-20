@@ -13,67 +13,73 @@ function evergreen_content_user_default_roles() {
   // Exported role: academics editor.
   $roles['academics editor'] = array(
     'name' => 'academics editor',
-    'weight' => 7,
+    'weight' => 8,
   );
 
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => 12,
+    'weight' => 13,
   );
 
   // Exported role: advanced editor.
   $roles['advanced editor'] = array(
     'name' => 'advanced editor',
-    'weight' => 10,
+    'weight' => 11,
   );
 
   // Exported role: alumni programs.
   $roles['alumni programs'] = array(
     'name' => 'alumni programs',
-    'weight' => 3,
+    'weight' => 4,
   );
 
   // Exported role: calendar review.
   $roles['calendar review'] = array(
     'name' => 'calendar review',
-    'weight' => 6,
+    'weight' => 7,
   );
 
   // Exported role: committee organizer.
   $roles['committee organizer'] = array(
     'name' => 'committee organizer',
+    'weight' => 3,
+  );
+
+  // Exported role: form results.
+  $roles['form results'] = array(
+    'name' => 'form results',
     'weight' => 2,
   );
 
   // Exported role: librarian.
   $roles['librarian'] = array(
     'name' => 'librarian',
-    'weight' => 4,
+    'weight' => 5,
   );
 
   // Exported role: news promoter.
   $roles['news promoter'] = array(
     'name' => 'news promoter',
-    'weight' => 8,
+    'weight' => 9,
   );
 
   // Exported role: site editor.
   $roles['site editor'] = array(
     'name' => 'site editor',
-    'weight' => 9,
+    'weight' => 10,
   );
 
   // Exported role: student groups.
   $roles['student groups'] = array(
     'name' => 'student groups',
-    'weight' => 5,
+    'weight' => 6,
   );
 
   // Exported role: student worker administrator.
   $roles['student worker administrator'] = array(
     'name' => 'student worker administrator',
-    'weight' => 11,
+    'weight' => 12,
   );
 
   return $roles;
