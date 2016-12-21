@@ -4660,9 +4660,8 @@ function evergreen_content_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'full_name' => array(
@@ -4693,6 +4692,76 @@ function evergreen_content_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_documents'.
+  $field_instances['node-committee_page-field_documents'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'Upload any necessary supporting documents. These can include PDF, Word, Excel, or PowerPoint. Please include a clear description.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_documents',
+    'label' => 'Documents',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 0,
+      'file_directory' => 'committees',
+      'file_extensions' => 'txt doc docx pdf xls xlsx ppt pptx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -4759,9 +4828,10 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-committee_page-field_final_report'.
-  $field_instances['node-committee_page-field_final_report'] = array(
+  // Exported field_instance: 'node-committee_page-field_historical_agendas'.
+  $field_instances['node-committee_page-field_historical_agendas'] = array(
     'bundle' => 'committee_page',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4773,9 +4843,69 @@ function evergreen_content_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_historical_agendas',
+    'label' => 'Historical Agendas',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 17,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_historical_minutes'.
+  $field_instances['node-committee_page-field_historical_minutes'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 11,
       ),
       'full_name' => array(
@@ -4792,39 +4922,28 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'p',
-    'field_name' => 'field_final_report',
-    'label' => 'Final Report',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_historical_minutes',
+    'label' => 'Historical Minutes',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'description_field' => 1,
-      'file_directory' => 'committees/reports',
-      'file_extensions' => 'txt doc docx pdf',
-      'max_filesize' => '',
+      'description_display' => 'before',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'text',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 'document',
-          'image' => 0,
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'upload' => 0,
-        ),
+        'rows' => 5,
       ),
-      'type' => 'media_generic',
-      'weight' => 7,
+      'type' => 'text_textarea',
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -5077,6 +5196,146 @@ function evergreen_content_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-committee_page-field_proposal'.
+  $field_instances['node-committee_page-field_proposal'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'p',
+    'field_name' => 'field_proposal',
+    'label' => 'Proposal',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 1,
+      'file_directory' => 'committees',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 11,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_reports'.
+  $field_instances['node-committee_page-field_reports'] = array(
+    'bundle' => 'committee_page',
+    'deleted' => 0,
+    'description' => 'Upload reports in PDF or Word format. This can include a DTF\'s Final Report. Please include the name of the report in the description.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 9,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'ul',
+    'field_name' => 'field_reports',
+    'label' => 'Reports',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'description_field' => 1,
+      'file_directory' => 'committees',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 12,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-committee_page-field_short_description'.
   $field_instances['node-committee_page-field_short_description'] = array(
     'bundle' => 'committee_page',
@@ -5206,6 +5465,66 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'date_popup',
       'weight' => 13,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_web_page_reports'.
+  $field_instances['node-committee_page-field_web_page_reports'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If you need to provide new reports as web pages, contact the Web Team.',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_web_page_reports',
+    'label' => 'Web Page Reports',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -13661,6 +13980,7 @@ function evergreen_content_field_default_field_instances() {
   t('Details');
   t('Display Name');
   t('Display in alumni directories');
+  t('Documents');
   t('Each of these chunks creates one piece of the site section navigation. You can make UP TO four, but that\'s probably too many for most site. The last chunk should be "Related Links".');
   t('Eligibility');
   t('Email');
@@ -13686,7 +14006,6 @@ function evergreen_content_field_default_field_instances() {
   t('Featured');
   t('Fees');
   t('Fields of Study');
-  t('Final Report');
   t('Final Schedule and Room Assignment');
   t('First name');
   t('Flyer');
@@ -13703,6 +14022,8 @@ function evergreen_content_field_default_field_instances() {
   t('Hero Image Large');
   t('Hero Image Medium');
   t('Hero Image Small');
+  t('Historical Agendas');
+  t('Historical Minutes');
   t('Hometown');
   t('Hours');
   t('How did your Evergreen education help you?');
@@ -13711,6 +14032,7 @@ function evergreen_content_field_default_field_instances() {
   t('If this committee has a formal charge or charter document, upload it here.');
   t('If this is referring to another person (new name, nickname, etc)...');
   t('If this person received degrees of note from other colleges or universities, you can enter them here. Not strictly necessary if longer bios or articles include this information.');
+  t('If you need to provide new reports as web pages, contact the Web Team.');
   t('If you write articles or blog posts, this name will appear in the byline.');
   t('If your contact block includes a staff page, select it here.');
   t('Image');
@@ -13782,6 +14104,7 @@ function evergreen_content_field_default_field_instances() {
   t('Preparatory For');
   t('Prerequisites');
   t('Primary Content');
+  t('Proposal');
   t('Proxy');
   t('Publication Type');
   t('Publications');
@@ -13795,6 +14118,7 @@ function evergreen_content_field_default_field_instances() {
   t('Related Pieces');
   t('Related Subjects (Directory)');
   t('Remember that this will appear <em>after</em> on smaller devices. People may complete the form without reading this information.');
+  t('Reports');
   t('Research Opportunities');
   t('Resource Link');
   t('Resource Subject');
@@ -13881,7 +14205,9 @@ function evergreen_content_field_default_field_instances() {
   t('Under-represented');
   t('Upcoming Deadlines');
   t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
+  t('Upload any necessary supporting documents. These can include PDF, Word, Excel, or PowerPoint. Please include a clear description.');
   t('Upload meeting agendas in PDF or Word format.');
+  t('Upload reports in PDF or Word format. This can include a DTF\'s Final Report. Please include the name of the report in the description.');
   t('Upper Division Science Credit');
   t('Use the form "Monday – Thursday: 9 am – 6:45 pm", and always spell out "Noon" instead of writing "12 pm"');
   t('Use this field sparingly for things like most commonly used forms or additional contact details.');
@@ -13890,6 +14216,7 @@ function evergreen_content_field_default_field_instances() {
   t('Using the Banner format, where 201610 = Fall 2016.');
   t('Variable Credit Options');
   t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
+  t('Web Page Reports');
   t('Website');
   t('Websites');
   t('What are the general requirements for someone to apply for funding from this committee?');
