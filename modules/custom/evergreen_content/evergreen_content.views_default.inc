@@ -2985,22 +2985,23 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'title' => 'title',
     'field_event_date' => 'field_event_date',
+    'title' => 'title',
     'body' => 'title',
+    'edit_node' => 'title',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'title' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
+    'field_event_date' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_event_date' => array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => '',
+      'separator' => ' ',
       'empty_column' => 0,
     ),
     'body' => array(
@@ -3010,17 +3011,16 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
       'separator' => '',
       'empty_column' => 0,
     ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Includes dates starting February 2016.';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
@@ -3061,6 +3061,12 @@ A list of <a href="/calendar/holidays/past">past holidays</a> (starting Septembe
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Academic Quarter (field_academic_quarter) */
   $handler->display->display_options['arguments']['field_academic_quarter_value']['id'] = 'field_academic_quarter_value';
