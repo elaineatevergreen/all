@@ -10894,6 +10894,10 @@ return($term); ';
   $handler = $view->new_display('block', 'Block: Table of People', 'people_table');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Our Staff';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -13287,8 +13291,8 @@ return($term); ';
   $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
   $handler->display->display_options['path'] = 'directory';
 
-  /* Display: PUC */
-  $handler = $view->new_display('block', 'PUC', 'puc');
+  /* Display: Block: PUC List */
+  $handler = $view->new_display('block', 'Block: PUC List', 'puc');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Planning Unit Members';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -13421,6 +13425,239 @@ return($term); ';
     1 => '1',
   );
   $handler->display->display_options['path'] = 'export/faculty-redirects';
+
+  /* Display: Block: PUC Table */
+  $handler = $view->new_display('block', 'Block: PUC Table', 'puc_table');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Faculty Members';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_job_title' => 'title',
+    'field_email' => 'field_email',
+    'field_building_alt' => 'field_room',
+    'field_room' => 'field_room',
+    'field_mailstop' => 'field_mailstop',
+    'field_phone' => 'field_phone',
+    'field_alternate_phone' => 'field_alternate_phone',
+    'field_fax' => 'field_fax',
+    'nothing' => 'nothing',
+    'field_last_name' => 'field_last_name',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '<br/>',
+      'empty_column' => 0,
+    ),
+    'field_job_title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_email' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_building_alt' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_room' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ' ',
+      'empty_column' => 0,
+    ),
+    'field_mailstop' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_phone' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_alternate_phone' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_fax' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_last_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Headshot */
+  $handler->display->display_options['fields']['field_headshot']['id'] = 'field_headshot';
+  $handler->display->display_options['fields']['field_headshot']['table'] = 'field_data_field_headshot';
+  $handler->display->display_options['fields']['field_headshot']['field'] = 'field_headshot';
+  $handler->display->display_options['fields']['field_headshot']['label'] = '';
+  $handler->display->display_options['fields']['field_headshot']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_headshot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_headshot']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_headshot']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_headshot']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_headshot']['settings'] = array(
+    'image_style' => 'portrait_thumbnail2',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_headshot']['field_api_classes'] = TRUE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_first_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_default_classes'] = FALSE;
+  /* Field: Content: Last name */
+  $handler->display->display_options['fields']['field_last_name_1']['id'] = 'field_last_name_1';
+  $handler->display->display_options['fields']['field_last_name_1']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['field'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['label'] = '';
+  $handler->display->display_options['fields']['field_last_name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_last_name_1']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_last_name_1']['element_default_classes'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_first_name] [field_last_name_1]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Job Title */
+  $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
+  $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
+  $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
+  $handler->display->display_options['fields']['field_job_title']['alter']['text'] = ', [field_job_title]';
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['delta_offset'] = '0';
+  /* Field: Content: Building */
+  $handler->display->display_options['fields']['field_building_alt']['id'] = 'field_building_alt';
+  $handler->display->display_options['fields']['field_building_alt']['table'] = 'field_data_field_building_alt';
+  $handler->display->display_options['fields']['field_building_alt']['field'] = 'field_building_alt';
+  /* Field: Content: Room */
+  $handler->display->display_options['fields']['field_room']['id'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['table'] = 'field_data_field_room';
+  $handler->display->display_options['fields']['field_room']['field'] = 'field_room';
+  $handler->display->display_options['fields']['field_room']['label'] = 'Location';
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['exclude'] = TRUE;
+  /* Field: Content: Alternate Phone */
+  $handler->display->display_options['fields']['field_alternate_phone']['id'] = 'field_alternate_phone';
+  $handler->display->display_options['fields']['field_alternate_phone']['table'] = 'field_data_field_alternate_phone';
+  $handler->display->display_options['fields']['field_alternate_phone']['field'] = 'field_alternate_phone';
+  $handler->display->display_options['fields']['field_alternate_phone']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_alternate_phone']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_alternate_phone']['alter']['text'] = 'Alt: [field_alternate_phone]';
+  /* Field: Content: Fax */
+  $handler->display->display_options['fields']['field_fax']['id'] = 'field_fax';
+  $handler->display->display_options['fields']['field_fax']['table'] = 'field_data_field_fax';
+  $handler->display->display_options['fields']['field_fax']['field'] = 'field_fax';
+  $handler->display->display_options['fields']['field_fax']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_fax']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_fax']['alter']['text'] = 'Fax: [field_fax]';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Phone';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_phone]<br/>
+[field_alternate_phone]<br/>
+[field_fax]';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Planning Unit (PUC) (field_planning_unit_puc) */
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['id'] = 'field_planning_unit_puc_value';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['table'] = 'field_data_field_planning_unit_puc';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['field'] = 'field_planning_unit_puc_value';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_planning_unit_puc_value']['limit'] = '0';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'directory_individual' => 'directory_individual',
+  );
+  /* Filter criterion: Content: Is Faculty (field_is_faculty) */
+  $handler->display->display_options['filters']['field_is_faculty_value']['id'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['table'] = 'field_data_field_is_faculty';
+  $handler->display->display_options['filters']['field_is_faculty_value']['field'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['value'] = array(
+    1 => '1',
+  );
+  /* Filter criterion: Content: Last name (field_last_name) */
+  $handler->display->display_options['filters']['field_last_name_value']['id'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
+  $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
+  $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
   $export['directory'] = $view;
 
   $view = new view();
