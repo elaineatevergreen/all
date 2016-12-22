@@ -8443,12 +8443,9 @@ return($term); ';
     'title' => 'title',
     'field_faculty' => 'title',
     'field_fields_of_study' => 'title',
-    'field_offering_type' => 'field_offering_type',
-    'field_class_standing' => 'field_class_standing',
     'field_minimum_credits' => 'field_minimum_credits',
     'field_maximum_credits' => 'field_maximum_credits',
     'views_conditional_1' => 'views_conditional_1',
-    'field_time_offered' => 'field_time_offered',
     'field_academic_year' => 'field_academic_year',
     'field_quarters_offered' => 'field_quarters_offered',
     'field_quarters_open' => 'field_quarters_open',
@@ -8457,6 +8454,7 @@ return($term); ';
     'field_curricular_area' => 'field_curricular_area',
     'field_faculty_name_search' => 'field_faculty_name_search',
     'field_theme_codes' => 'field_theme_codes',
+    'field_advertised_schedule' => 'title',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -8515,18 +8513,6 @@ return($term); ';
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_offering_type' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_class_standing' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'field_minimum_credits' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -8542,11 +8528,6 @@ return($term); ';
       'empty_column' => 0,
     ),
     'views_conditional_1' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_time_offered' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -8593,6 +8574,13 @@ return($term); ';
       'empty_column' => 0,
     ),
     'field_theme_codes' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_advertised_schedule' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -8874,6 +8862,18 @@ return($term); ';
   $handler->display->display_options['fields']['field_theme_codes']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_theme_codes']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_theme_codes']['field_api_classes'] = TRUE;
+  /* Field: Content: Advertised Schedule */
+  $handler->display->display_options['fields']['field_advertised_schedule']['id'] = 'field_advertised_schedule';
+  $handler->display->display_options['fields']['field_advertised_schedule']['table'] = 'field_data_field_advertised_schedule';
+  $handler->display->display_options['fields']['field_advertised_schedule']['field'] = 'field_advertised_schedule';
+  $handler->display->display_options['fields']['field_advertised_schedule']['label'] = '';
+  $handler->display->display_options['fields']['field_advertised_schedule']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_advertised_schedule']['alter']['text'] = 'Schedule: [field_advertised_schedule]';
+  $handler->display->display_options['fields']['field_advertised_schedule']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_advertised_schedule']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_advertised_schedule']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_advertised_schedule']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_advertised_schedule']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Curricular Area (field_curricular_area) */
   $handler->display->display_options['sorts']['field_curricular_area_value']['id'] = 'field_curricular_area_value';
