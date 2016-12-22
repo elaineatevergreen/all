@@ -163,12 +163,6 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_nav',
           'weight' => '-10',
         ),
-        'views--exp-catalog-page' => array(
-          'module' => 'views',
-          'delta' => '-exp-catalog-page',
-          'region' => 'filters',
-          'weight' => '-10',
-        ),
         'views-catalog-secondary_content' => array(
           'module' => 'views',
           'delta' => 'catalog-secondary_content',
@@ -196,6 +190,44 @@ function evergreen_content_context_default_contexts() {
   t('Catalog home and items');
   t('sections');
   $export['catalog'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'catalog_index';
+  $context->description = 'Adds form filter block to UG indexes only';
+  $context->tag = 'custom pages';
+  $context->conditions = array(
+    'views' => array(
+      'values' => array(
+        'catalog:page' => 'catalog:page',
+        'catalog:page_1' => 'catalog:page_1',
+        'catalog:page_2' => 'catalog:page_2',
+        'catalog:page_3' => 'catalog:page_3',
+        'catalog:page_4' => 'catalog:page_4',
+        'catalog:page_5' => 'catalog:page_5',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-catalog-page_1' => array(
+          'module' => 'views',
+          'delta' => '-exp-catalog-page_1',
+          'region' => 'filters',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Adds form filter block to UG indexes only');
+  t('custom pages');
+  $export['catalog_index'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

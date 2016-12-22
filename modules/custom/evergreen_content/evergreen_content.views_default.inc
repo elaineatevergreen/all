@@ -8416,14 +8416,8 @@ return($term); ';
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '75';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '25,50,100,200,500';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = TRUE;
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = 'All';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -8609,6 +8603,16 @@ return($term); ';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="box alert">
+	<p>
+		The "save to list" feature is not yet working in our new system. It will be available again later in Winter 2016–17.</p>
+</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -8748,27 +8752,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_fields_of_study']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_fields_of_study']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_fields_of_study']['multi_type'] = 'ul';
-  /* Field: Content: Offering Type */
-  $handler->display->display_options['fields']['field_offering_type']['id'] = 'field_offering_type';
-  $handler->display->display_options['fields']['field_offering_type']['table'] = 'field_data_field_offering_type';
-  $handler->display->display_options['fields']['field_offering_type']['field'] = 'field_offering_type';
-  $handler->display->display_options['fields']['field_offering_type']['label'] = 'Offering';
-  $handler->display->display_options['fields']['field_offering_type']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_offering_type']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_offering_type']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_offering_type']['field_api_classes'] = TRUE;
-  /* Field: Content: Class Standing */
-  $handler->display->display_options['fields']['field_class_standing']['id'] = 'field_class_standing';
-  $handler->display->display_options['fields']['field_class_standing']['table'] = 'field_data_field_class_standing';
-  $handler->display->display_options['fields']['field_class_standing']['field'] = 'field_class_standing';
-  $handler->display->display_options['fields']['field_class_standing']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_class_standing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_class_standing']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_class_standing']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_class_standing']['type'] = 'list_key';
-  $handler->display->display_options['fields']['field_class_standing']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_class_standing']['delta_first_last'] = TRUE;
-  $handler->display->display_options['fields']['field_class_standing']['separator'] = '-';
   /* Field: Content: Minimum Credits */
   $handler->display->display_options['fields']['field_minimum_credits']['id'] = 'field_minimum_credits';
   $handler->display->display_options['fields']['field_minimum_credits']['table'] = 'field_data_field_minimum_credits';
@@ -8811,15 +8794,6 @@ return($term); ';
   $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_maximum_credits]';
   $handler->display->display_options['fields']['views_conditional_1']['or'] = '[field_minimum_credits]–[field_maximum_credits]';
   $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
-  /* Field: Content: Time Offered */
-  $handler->display->display_options['fields']['field_time_offered']['id'] = 'field_time_offered';
-  $handler->display->display_options['fields']['field_time_offered']['table'] = 'field_data_field_time_offered';
-  $handler->display->display_options['fields']['field_time_offered']['field'] = 'field_time_offered';
-  $handler->display->display_options['fields']['field_time_offered']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_time_offered']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_time_offered']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_time_offered']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_time_offered']['field_api_classes'] = TRUE;
   /* Field: Content: Academic Year */
   $handler->display->display_options['fields']['field_academic_year']['id'] = 'field_academic_year';
   $handler->display->display_options['fields']['field_academic_year']['table'] = 'field_data_field_academic_year';
@@ -8914,6 +8888,10 @@ return($term); ';
   $handler->display->display_options['sorts']['field_theme_codes_value']['id'] = 'field_theme_codes_value';
   $handler->display->display_options['sorts']['field_theme_codes_value']['table'] = 'field_data_field_theme_codes';
   $handler->display->display_options['sorts']['field_theme_codes_value']['field'] = 'field_theme_codes_value';
+  /* Sort criterion: Content: Begin Term (field_begin_term) */
+  $handler->display->display_options['sorts']['field_begin_term_value']['id'] = 'field_begin_term_value';
+  $handler->display->display_options['sorts']['field_begin_term_value']['table'] = 'field_data_field_begin_term';
+  $handler->display->display_options['sorts']['field_begin_term_value']['field'] = 'field_begin_term_value';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
