@@ -246,6 +246,11 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'faculty/retired' => 'faculty/retired',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'directory' => 'directory',

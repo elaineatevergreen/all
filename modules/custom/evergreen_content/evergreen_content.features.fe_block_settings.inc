@@ -361,7 +361,9 @@ function evergreen_content_default_fe_block_settings() {
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+faculty
+faculty/retired',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -391,7 +393,10 @@ calendar*',
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+studies*
+faculty/retired
+faculty',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -449,7 +454,10 @@ calendar*',
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+studies*
+faculty
+faculty/retired',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
