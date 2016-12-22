@@ -1300,6 +1300,29 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_documents'.
+  $field_bases['field_documents'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_documents',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
   // Exported field_base: 'field_eligibility'.
   $field_bases['field_eligibility'] = array(
     'active' => 1,
@@ -1681,43 +1704,6 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_faculty_members'.
-  $field_bases['field_faculty_members'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_faculty_members',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'views',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'entityqueue' => array(
-            'status' => 0,
-          ),
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => 'entityreference_3',
-          'view_name' => 'page_picker',
-        ),
-      ),
-      'target_type' => 'node',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_faculty_name_search'.
   $field_bases['field_faculty_name_search'] = array(
     'active' => 1,
@@ -1908,29 +1894,6 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_final_report'.
-  $field_bases['field_final_report'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_final_report',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'file',
-    'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 0,
-    'type' => 'file',
   );
 
   // Exported field_base: 'field_final_schedule'.
@@ -2231,6 +2194,44 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_historical_agendas'.
+  $field_bases['field_historical_agendas'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_historical_agendas',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_historical_minutes'.
+  $field_bases['field_historical_minutes'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_historical_minutes',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_hometown'.
   $field_bases['field_hometown'] = array(
     'active' => 1,
@@ -2471,25 +2472,6 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_layperson_blurb'.
-  $field_bases['field_layperson_blurb'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_layperson_blurb',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_links'.
@@ -3204,23 +3186,27 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_professional_blurb'.
-  $field_bases['field_professional_blurb'] = array(
+  // Exported field_base: 'field_proposal'.
+  $field_bases['field_proposal'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_professional_blurb',
+    'field_name' => 'field_proposal',
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'file',
   );
 
   // Exported field_base: 'field_proxy'.
@@ -3558,6 +3544,29 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_reports'.
+  $field_bases['field_reports'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_reports',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
   );
 
   // Exported field_base: 'field_research_opportunities'.
@@ -4187,9 +4196,9 @@ function evergreen_content_field_default_field_bases() {
         '2nd Yr Core' => '2nd Year Core',
         'Elective' => 'Electives',
         'MPA' => 'MPA',
-        '1st Yr Core - General' => 'General (Public & Nonprofit Administration/Public Policy) — 1st Year Core',
-        '2nd Yr Core - General' => 'General — 2nd Year Core',
-        'General Concentration' => 'General — Public Policy Concentration',
+        '1st Yr Core - General' => 'Public & Nonprofit Administration and Public Policy — 1st Year Core',
+        '2nd Yr Core - General' => 'Public & Nonprofit Administration and Public Policy  — 2nd Year Core',
+        'General Concentration' => 'Public Policy Concentration',
         '1st Yr Core - Tribal' => 'Tribal Governance — 1st Year Core',
         '2nd Yr Core - Tribal' => 'Tribal Governance — 2nd Year Core',
         'Tribal Concentration' => 'Tribal Governance Concentration',
@@ -4343,46 +4352,6 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_umbrella_field'.
-  $field_bases['field_umbrella_field'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_umbrella_field',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'entityqueue' => array(
-            'status' => 0,
-          ),
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'direction' => 'ASC',
-          'property' => 'title',
-          'type' => 'property',
-        ),
-        'target_bundles' => array(
-          'field_of_study' => 'field_of_study',
-        ),
-      ),
-      'target_type' => 'node',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_under_represented'.
   $field_bases['field_under_represented'] = array(
     'active' => 1,
@@ -4465,6 +4434,25 @@ function evergreen_content_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_variable_credit_options',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_web_page_reports'.
+  $field_bases['field_web_page_reports'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_web_page_reports',
     'indexes' => array(
       'format' => array(
         0 => 'format',
