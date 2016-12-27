@@ -8609,9 +8609,9 @@ return($term); ';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Please select a graduate program catalog:</p>
 <ul>
-<li><a href="catalog/grad/mes">Master of Environmental Studies (MES)</a></li>
-<li><a href="catalog/grad/mpa">Master of Public Administration (MPA)</a></li>
-<li><a href="catalog/grad/mit">Master in Teaching (MiT)</a></li>
+<li><a href="/catalog/grad/mes">Master of Environmental Studies (MES)</a></li>
+<li><a href="/catalog/grad/mpa">Master of Public Administration (MPA)</a></li>
+<li><a href="/catalog/grad/mit">Master in Teaching (MiT)</a></li>
 </ul>';
   $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;

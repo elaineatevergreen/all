@@ -62,8 +62,8 @@ function evergreen_content_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'secondary_content',
+        'status' => 1,
         'theme' => 'wwwevergreen',
         'weight' => 0,
       ),
