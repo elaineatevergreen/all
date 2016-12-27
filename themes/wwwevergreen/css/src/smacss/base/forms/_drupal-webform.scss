@@ -32,7 +32,7 @@
 
 .webform-client-form .description{
 	// box model
-	margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
+	margin: 0 0 calc(22.5 / 11.12 * 1em);
 	// typography
 	@include small-type;
 

@@ -1151,7 +1151,7 @@ select:hover {
 }
 
 /* line 110, ../src/smacss/base/_forms.scss */
-.form-type-select select {
+.tertiary-nav-wrapper .form-type-select select {
   width: 100%;
 }
 
@@ -1306,7 +1306,7 @@ input[type="radio"] + label {
 
 /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
-  margin: calc(15 / 11.12 * -1em) 0 calc(22.5 / 11.12 * 1em);
+  margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
   line-height: 1.34831460674157;
