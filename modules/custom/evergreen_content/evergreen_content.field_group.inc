@@ -61,7 +61,6 @@ function evergreen_content_field_group_info() {
       0 => 'body',
       1 => 'field_short_description',
       2 => 'field_charge',
-      3 => 'field_final_report',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -167,6 +166,69 @@ function evergreen_content_field_group_info() {
     ),
   );
   $field_groups['group_applicant|node|scholarship|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_archived|node|committee_page|default';
+  $field_group->group_name = 'group_archived';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Archived Materials',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_historical_agendas',
+      1 => 'field_historical_minutes',
+      2 => 'field_web_page_reports',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Archived Materials',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-archived field-group-html-element',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_archived|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_archived|node|committee_page|form';
+  $field_group->group_name = 'group_archived';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Archived Materials',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_historical_agendas',
+      1 => 'field_historical_minutes',
+      2 => 'field_web_page_reports',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Archived Materials',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-archived field-group-fieldset',
+        'description' => 'These fields should only be used for items prior to 2017 that are stored on archives.evergreen.edu.',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_archived|node|committee_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1045,7 +1107,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Funding',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_eligibility',
       1 => 'field_upcoming_deadlines',
@@ -1446,11 +1508,10 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Meetings',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_meetings',
-      1 => 'field_agendas',
-      2 => 'field_minutes',
+      0 => 'field_agendas',
+      1 => 'field_minutes',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -2151,6 +2212,70 @@ function evergreen_content_field_group_info() {
   );
   $field_groups['group_whowhenwhere|node|catalog_entry|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_work|node|committee_page|default';
+  $field_group->group_name = 'group_work';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Work Products',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_proposal',
+      1 => 'field_reports',
+      2 => 'field_documents',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => 'group-work field-group-html-element',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_work|node|committee_page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_work|node|committee_page|form';
+  $field_group->group_name = 'group_work';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'committee_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Work Products',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_proposal',
+      1 => 'field_reports',
+      2 => 'field_documents',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Work Products',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-work field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_work|node|committee_page|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('About the Building');
@@ -2159,6 +2284,7 @@ function evergreen_content_field_group_info() {
   t('Additional Settings');
   t('Alumni Directories');
   t('Applicant Criteria');
+  t('Archived Materials');
   t('Article Information');
   t('Articles & Images');
   t('Author Info');
@@ -2204,6 +2330,7 @@ function evergreen_content_field_group_info() {
   t('Website-Specific Content');
   t('Where');
   t('Who, When, and Where');
+  t('Work Products');
   t('group');
 
   return $field_groups;

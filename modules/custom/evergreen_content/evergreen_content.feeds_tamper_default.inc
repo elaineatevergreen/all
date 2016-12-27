@@ -367,6 +367,26 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory-xpathparser_12-find_replace';
+  $feeds_tamper->importer = 'office_directory';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'CABrd Floor',
+    'replace' => 'CAB',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Fix whole floor rooms in CAB';
+  $export['office_directory-xpathparser_12-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'office_directory-xpathparser_12-find_replace_regex';
   $feeds_tamper->importer = 'office_directory';
   $feeds_tamper->source = 'xpathparser:12';
@@ -380,6 +400,60 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'REGEX to remove Room';
   $export['office_directory-xpathparser_12-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory-xpathparser_14-convert_case';
+  $feeds_tamper->importer = 'office_directory';
+  $feeds_tamper->source = 'xpathparser:14';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '0',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['office_directory-xpathparser_14-convert_case'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory-xpathparser_9-find_replace';
+  $feeds_tamper->importer = 'office_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '3Floor',
+    'replace' => '3rd Floor',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Fix whole floor rooms in CAB (3rd floor)';
+  $export['office_directory-xpathparser_9-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'office_directory-xpathparser_9-find_replace2';
+  $feeds_tamper->importer = 'office_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '2Floor',
+    'replace' => '2nd Floor',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Fix whole floor rooms in CAB (2nd floor)';
+  $export['office_directory-xpathparser_9-find_replace2'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

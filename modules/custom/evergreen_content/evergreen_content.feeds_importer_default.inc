@@ -928,7 +928,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:11' => 'fax',
           'xpathparser:12' => 'location',
           'xpathparser:13' => 'url',
-          'xpathparser:14' => 'members/people/person/name',
+          'xpathparser:14' => 'members/people/person/email',
           'xpathparser:15' => 'reference',
           'xpathparser:16' => 'members/offices/office/name',
           'xpathparser:17' => 'members/facilities/facility/name',

@@ -52,6 +52,26 @@ function evergreen_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-faculty_directory_secondary'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'faculty_directory_secondary',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'faculty',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['block-fields_section_title'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -130,6 +150,46 @@ function evergreen_content_default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 0,
+  );
+
+  $export['views--exp-calendar-page'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-calendar-page',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'calendar/category*',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'secondary_content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views--exp-calendar_by_date-page_1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => '-exp-calendar_by_date-page_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'calendar/month*',
+    'roles' => array(),
+    'themes' => array(
+      'wwwevergreen' => array(
+        'region' => 'secondary_content',
+        'status' => 1,
+        'theme' => 'wwwevergreen',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
   );
 
   $export['views-alerts-only_alerts'] = array(
@@ -301,7 +361,9 @@ function evergreen_content_default_fe_block_settings() {
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+faculty
+faculty/retired',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -331,7 +393,10 @@ calendar*',
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+studies*
+faculty/retired
+faculty',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
@@ -389,7 +454,10 @@ calendar*',
     ),
     'pages' => 'directory*
 catalog*
-calendar*',
+calendar*
+studies*
+faculty
+faculty/retired',
     'roles' => array(),
     'themes' => array(
       'wwwevergreen' => array(
