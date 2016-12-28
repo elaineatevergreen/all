@@ -440,7 +440,7 @@ input:checked + .header-dropdown{
 .secondary-nav-link{
 	// box model
 	border-bottom-width: 0;
-	padding: 0.46875rem 1ch;  // 7.5/16
+	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
@@ -534,7 +534,7 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($starlord){
 		font-family: $text-face;
-		line-height: calc(30/14);
+		line-height: 2.14285714285714;  // 30/14 - Edge doesn't support unitless calc() line-heights
 	}
 }
 
@@ -547,16 +547,19 @@ input:checked + .header-dropdown{
 	@include breakpoint($lil-groot){
 		margin: 0;
 		// layout
-		flex-grow: 1;
 		flex-basis: 25%;
 	}
 
 	@include breakpoint($rocket){
 	}
+	
+	@include breakpoint($starlord){
+		flex-basis: auto;
+	}
 
 	@include breakpoint($gamora){
 		@include base-type;
-		line-height: 3.21428571428571;  // 45/14
+		line-height: 3.21428571428571;  // 45/14 - Edge doesn't support unitless calc() line-heights
 	}
 
 	@include breakpoint($groot){
@@ -591,6 +594,17 @@ input:checked + .header-dropdown{
 			// layout
 			display: inline-block;
 			flex-basis: auto;
+		}
+
+		@include breakpoint($starlord){
+			padding: 0 1ch;
+		}
+		
+		@include breakpoint($gamora){
+			// box model
+			padding: 0 2ch;
+			// typography
+			font-weight: bold;
 		}
 
 		@include breakpoint($drax){

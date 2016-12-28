@@ -11,29 +11,29 @@
 //@import "compass";
 @import "smacss/css-header";  //Just for funsies
 /*!*
- * View the source and fork these styles on Github:
+ * View the source and fork these styles on Gitlab:
  *
- * @see https://github.com/revoltpuppy/Evergreen
+ * See https://git.evergreen.edu/web-team/www-drupal
  */
 /**
  * Responsive Styles
  *
- * Styles for a new responsive template, to be rolled out across
- * the website sooner or later.
+ * Styles for responsive templates for the primary website for The
+ * Evergreen State College.
  *
- * These styles were originally developed by Justin McDowell. They
- * set up a mobile-first website that expands to three, then seven
- * columns as the browser width increases. The baseline is set at
+ * The template was designed mobile-first and expands to three, and then
+ * seven columns as the browser width increases. The baseline is set at
  * 15 pixels.
  *
- * Styles in this file are organized according to the SMACSS
- * principles: http://smacss.com/
+ * Styles in this file are organized according to the SMACSS principles.
  *
- * @project    The Evergreen State College
- * @author     The Evergreen State College
- * @copyright  2014 by the author
- * @cssdoc     0.2.22
- * @license    Copyrighted
+ * See http://smacss.com/
+ *
+ * Project    The Evergreen State College
+ * Designer   Justin McDowell
+ * Author     The Evergreen State College
+ * Copyright  2014 by the author
+ * License    Copyrighted
  */
 
 @import "tools";  //constants, mixins, functions, etc.
