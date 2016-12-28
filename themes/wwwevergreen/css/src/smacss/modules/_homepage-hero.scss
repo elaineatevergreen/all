@@ -46,7 +46,7 @@
 .homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
 	display: block;
 
-	@include breakpoint($drax){
+	@include breakpoint($gamora){
 		width: 100%;
 	}
 }

@@ -440,7 +440,7 @@ input:checked + .header-dropdown{
 .secondary-nav-link{
 	// box model
 	border-bottom-width: 0;
-	padding: 0.46875rem 1ch;  // 7.5/16
+	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
