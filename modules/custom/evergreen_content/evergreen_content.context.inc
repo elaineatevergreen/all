@@ -229,9 +229,9 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-catalog-page_1' => array(
+        'views--exp-catalog-page' => array(
           'module' => 'views',
-          'delta' => '-exp-catalog-page_1',
+          'delta' => '-exp-catalog-page',
           'region' => 'filters',
           'weight' => '-10',
         ),
