@@ -547,7 +547,6 @@ input:checked + .header-dropdown{
 	@include breakpoint($lil-groot){
 		margin: 0;
 		// layout
-		flex-grow: 1;
 		flex-basis: 25%;
 	}
 
