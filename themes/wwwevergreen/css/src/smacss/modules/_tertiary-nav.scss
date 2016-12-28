@@ -178,7 +178,9 @@
 /**
  * 3. CSS Accordion
  *
- * An accordion that relies on radio buttons and labels instead of JavaScript.
+ * An accordion that relies on radio buttons and labels for controls
+ * instead of JavaScript. This accordion automatically expands and
+ * disappears at the $gamora breakpoint.
  *
  * @see http://cssconf.com/talk-seddon.html
  */
@@ -192,7 +194,7 @@
 	// typgography
 	color: $shade;
 	// miscellaneous
-	content: "▶\00A0";  // non-breaking space
+	content: "▶\00A0";  // Right-pointing triangle followed by a non-breaking space
 
 	@include breakpoint($gamora){
 		content: "";
@@ -200,11 +202,12 @@
 }
 
 [name="accordion-group"] + .accordion-h label::before{
+	// behavior
 	transition: transform 0.1s linear;
 }
 
 [name="accordion-group"]:checked + .accordion-h label::before{
-	// animations, transforms, and transitions
+	// behavior
 	transform: rotate(90deg);
 	transition: transform 0.1s linear;
 }
@@ -216,6 +219,7 @@
 	cursor: pointer;
 
 	&:hover{
+		// typography
 		color: $sky-blue;
 	}
 
@@ -226,6 +230,7 @@
 		cursor: default;
 
 		&:hover{
+			// typography
 			color: mix($shade, $sky-blue, 50%);
 		}
 	}

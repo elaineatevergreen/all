@@ -120,9 +120,9 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	position: relative;
 
 	@include breakpoint($lil-groot){
+		// Font metrics for non-condensed fallback
 		font-size: 0.695rem;  // Step -1
-		letter-spacing: -0.01em;  // Gives margins a touch more breathing room
-		line-height: 1.34831460674157;  // 15/11.125
+		line-height: calc(15 / 11.125);  // 15/11.125
 	}
 
 	@include breakpoint($starlord){
@@ -143,10 +143,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 	@include breakpoint($lil-groot){
 		@include base-type;
-	}
-
-	@include breakpoint($rocket){
-		letter-spacing: 0.05em; // Gives letters a touch more breathing room
+		line-height: calc(15 / 14);
 	}
 }
 
@@ -155,7 +152,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 	@include breakpoint($gamora){
 		@include base-type-lg;
-		letter-spacing: normal;
 	}
 
 	@include breakpoint($drax){
