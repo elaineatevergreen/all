@@ -553,6 +553,10 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($rocket){
 	}
+	
+	@include breakpoint($starlord){
+		flex-basis: auto;
+	}
 
 	@include breakpoint($gamora){
 		@include base-type;
@@ -591,6 +595,17 @@ input:checked + .header-dropdown{
 			// layout
 			display: inline-block;
 			flex-basis: auto;
+		}
+
+		@include breakpoint($starlord){
+			padding: 0 1ch;
+		}
+		
+		@include breakpoint($gamora){
+			// box model
+			padding: 0 2ch;
+			// typography
+			font-weight: bold;
 		}
 
 		@include breakpoint($drax){

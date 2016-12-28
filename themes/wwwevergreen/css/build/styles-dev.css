@@ -30,29 +30,29 @@
  *      `'---'                                                        '..'                       '--'   '--'              
  */
 /*!*
- * View the source and fork these styles on Github:
+ * View the source and fork these styles on Gitlab:
  *
- * @see https://github.com/revoltpuppy/Evergreen
+ * See https://git.evergreen.edu/web-team/www-drupal
  */
 /**
  * Responsive Styles
  *
- * Styles for a new responsive template, to be rolled out across
- * the website sooner or later.
+ * Styles for responsive templates for the primary website for The
+ * Evergreen State College.
  *
- * These styles were originally developed by Justin McDowell. They
- * set up a mobile-first website that expands to three, then seven
- * columns as the browser width increases. The baseline is set at
+ * The template was designed mobile-first and expands to three, and then
+ * seven columns as the browser width increases. The baseline is set at
  * 15 pixels.
  *
- * Styles in this file are organized according to the SMACSS
- * principles: http://smacss.com/
+ * Styles in this file are organized according to the SMACSS principles.
  *
- * @project    The Evergreen State College
- * @author     The Evergreen State College
- * @copyright  2014 by the author
- * @cssdoc     0.2.22
- * @license    Copyrighted
+ * See http://smacss.com/
+ *
+ * Project    The Evergreen State College
+ * Designer   Justin McDowell
+ * Author     The Evergreen State College
+ * Copyright  2014 by the author
+ * License    Copyrighted
  */
 /**
  * Sass Constants
@@ -3137,6 +3137,14 @@ input:checked + .header-dropdown {
             flex-basis: 25%;
   }
 }
+@media screen and (min-width: 32em) {
+  /* line 541, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list > li {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+  }
+}
 @media screen and (min-width: 43em) {
   /* line 541, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
@@ -3154,7 +3162,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 571, ../src/smacss/modules/_header.scss */
+/* line 575, ../src/smacss/modules/_header.scss */
 .secondary-nav-link, .secondary-nav-link:visited,
 .secondary-nav-list a,
 .secondary-nav-list a:visited {
@@ -3166,7 +3174,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 571, ../src/smacss/modules/_header.scss */
+  /* line 575, ../src/smacss/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited,
   .secondary-nav-list a,
   .secondary-nav-list a:visited {
@@ -3182,7 +3190,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 571, ../src/smacss/modules/_header.scss */
+  /* line 575, ../src/smacss/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited,
   .secondary-nav-list a,
   .secondary-nav-list a:visited {
@@ -3192,8 +3200,25 @@ input:checked + .header-dropdown {
             flex-basis: auto;
   }
 }
+@media screen and (min-width: 32em) {
+  /* line 575, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited,
+  .secondary-nav-list a,
+  .secondary-nav-list a:visited {
+    padding: 0 1ch;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 575, ../src/smacss/modules/_header.scss */
+  .secondary-nav-link, .secondary-nav-link:visited,
+  .secondary-nav-list a,
+  .secondary-nav-list a:visited {
+    padding: 0 2ch;
+    font-weight: bold;
+  }
+}
 @media screen and (min-width: 70em) {
-  /* line 571, ../src/smacss/modules/_header.scss */
+  /* line 575, ../src/smacss/modules/_header.scss */
   .secondary-nav-link, .secondary-nav-link:visited,
   .secondary-nav-list a,
   .secondary-nav-list a:visited {
@@ -3201,7 +3226,7 @@ input:checked + .header-dropdown {
     line-height: inherit;
   }
 }
-/* line 602, ../src/smacss/modules/_header.scss */
+/* line 617, ../src/smacss/modules/_header.scss */
 .secondary-nav-link:hover,
 .secondary-nav-list a:hover {
   color: #f2f2f2;
@@ -3209,7 +3234,7 @@ input:checked + .header-dropdown {
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all 0.1s ease-out;
 }
-/* line 612, ../src/smacss/modules/_header.scss */
+/* line 627, ../src/smacss/modules/_header.scss */
 .secondary-nav-link:focus,
 .secondary-nav-list a:focus {
   background-color: #492c5d;
@@ -3221,12 +3246,12 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 624, ../src/smacss/modules/_header.scss */
+/* line 639, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 624, ../src/smacss/modules/_header.scss */
+  /* line 639, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3236,7 +3261,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-height: 35em) {
-  /* line 640, ../src/smacss/modules/_header.scss */
+  /* line 655, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
