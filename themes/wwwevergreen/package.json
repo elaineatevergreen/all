@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://revoltpuppy@github.com/revoltpuppy/Evergreen"
+    "url": "https://git.evergreen.edu/web-team/www-drupal"
   },
   "author": "Justin McDowell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/revoltpuppy/Evergreen/issues"
+    "url": "https://git.evergreen.edu/web-team/www-drupal/issues"
   },
   "homepage": "https://evergreen.edu",
   "devDependencies": {
-    "grunt": "0.4.x",
+    "grunt": "1.0.x",
     "grunt-contrib-concat": "1.0.x",
     "grunt-contrib-copy": "1.x",
     "grunt-contrib-imagemin": "1.x",
@@ -31,7 +31,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass-lint": "^0.2.0",
     "grunt-svgstore": "1.x",
-    "postcss-reporter": "^1.4.1"
+    "postcss-reporter": "3.0.x"
   },
   "_comment": "Run “npm update” in the project directory to get the latest version of dependencies."
 }

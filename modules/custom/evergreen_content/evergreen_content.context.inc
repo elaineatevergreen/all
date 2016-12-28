@@ -56,6 +56,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_title',
           'weight' => '-9',
         ),
+        'bean-calendar-nav' => array(
+          'module' => 'bean',
+          'delta' => 'calendar-nav',
+          'region' => 'section_nav',
+          'weight' => '-10',
+        ),
         'bean-section-background-calendar' => array(
           'module' => 'bean',
           'delta' => 'section-background-calendar',
@@ -86,7 +92,18 @@ function evergreen_content_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => '7',
+          'region' => 'secondary_content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
@@ -151,11 +168,11 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-3' => array(
+        'block-4' => array(
           'module' => 'block',
-          'delta' => '3',
+          'delta' => '4',
           'region' => 'section_title',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'bean-section-navigation-catalog' => array(
           'module' => 'bean',
@@ -212,9 +229,9 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-catalog-page_1' => array(
+        'views--exp-catalog-page' => array(
           'module' => 'views',
-          'delta' => '-exp-catalog-page_1',
+          'delta' => '-exp-catalog-page',
           'region' => 'filters',
           'weight' => '-10',
         ),
@@ -431,6 +448,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '-5',
         ),
+        'views-calendar-homelist' => array(
+          'module' => 'views',
+          'delta' => 'calendar-homelist',
+          'region' => 'content',
+          'weight' => '-7',
+        ),
       ),
     ),
     'css' => array(
@@ -461,6 +484,16 @@ function evergreen_content_context_default_contexts() {
     ),
   );
   $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-8' => array(
+          'module' => 'block',
+          'delta' => '8',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
     'js' => array(
       'www.evergreen.edu' => array(
         'sites/all/themes/wwwevergreen/js/library-search-primo.js' => 'sites/all/themes/wwwevergreen/js/library-search-primo.js',

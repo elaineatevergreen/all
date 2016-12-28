@@ -5501,6 +5501,15 @@ return($term); ';
   $handler->display->display_options['header']['webform_result']['id'] = 'webform_result';
   $handler->display->display_options['header']['webform_result']['table'] = 'views';
   $handler->display->display_options['header']['webform_result']['field'] = 'webform_result';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<div class="box alert"><p>No courses or programs are available for the options you have selected.</p>
+
+<p>Summer offerings are listed beginning in late January or early February each year.</p></div>';
+  $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   /* Field: Content: Status Date */
   $handler->display->display_options['fields']['field_status_date']['id'] = 'field_status_date';
   $handler->display->display_options['fields']['field_status_date']['table'] = 'field_data_field_status_date';
@@ -8609,9 +8618,9 @@ return($term); ';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Please select a graduate program catalog:</p>
 <ul>
-<li><a href="catalog/grad/mes">Master of Environmental Studies (MES)</a></li>
-<li><a href="catalog/grad/mpa">Master of Public Administration (MPA)</a></li>
-<li><a href="catalog/grad/mit">Master in Teaching (MiT)</a></li>
+<li><a href="/catalog/grad/mes">Master of Environmental Studies (MES)</a></li>
+<li><a href="/catalog/grad/mpa">Master of Public Administration (MPA)</a></li>
+<li><a href="/catalog/grad/mit">Master in Teaching (MiT)</a></li>
 </ul>';
   $handler->display->display_options['empty']['area']['format'] = 'extended_tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;

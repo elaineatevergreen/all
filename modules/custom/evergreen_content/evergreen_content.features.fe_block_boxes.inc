@@ -130,5 +130,31 @@ function evergreen_content_default_fe_block_boxes() {
 
   $export['ical_link'] = $fe_block_boxes;
 
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Library Search Form';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'library_search';
+  $fe_block_boxes->body = '<style type="text/css"><!--
+a.button.prime, a.button.prime:visited {
+background: #6e597e;
+}
+a.button.prime:hover, a.button.prime:focus  {
+color: #FFFFFF;
+background: #b6acbf;
+}
+--></style>
+<form action="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?" class="base ui-group" enctype="application/x-www-form-urlencoded; charset=utf-8" id="simple" method="get" name="searchForm"><!-- form should have  role="search" -->
+<h2>Library Catalog</h2>
+<input name="institution" value="Alliance_EVSC" type="hidden" /> <input name="vid" value="EVSC" type="hidden" /> <input name="group" value="GUEST" type="hidden" /> <input name="onCampus" value="true" type="hidden" /> <input name="displayMode" value="full" type="hidden" /> <input id="primoQuery" name="query" type="hidden" />
+<div><label for="queryTemp">Search for:</label> <input id="primoQueryTemp" name="queryTemp" onkeypress="searchKeyPress(event);" value="" type="text" /> <label for="search_scope"> In:</label><select id="search_scope" name="search_scope">
+<option value="tesc_alma_summit">Evergreen + Summit</option>
+<option value="tesc_alma">Evergreen Only</option>
+<option value="everything">Articles, Books, and More</option>
+</select>&#160;<input alt="Search" class="prime" id="go" onclick="searchPrimo()" title="Search" value="Search" type="button" /></div>
+<p><a href="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/login.do?loginFn=signin&amp;vid=EVSC&amp;targetURL=http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/myAccountMenu.do?vid=EVSC" title="Log into your library account, renew items, check due dates.">My Account</a> &#8226; <a href="https://clio.evergreen.edu/illiad/EVER/" title="Interlibrary loan login">Interlibrary Loan</a>&#160;&#8226; <a href="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?mode=Advanced&amp;ct=AdvancedSearch&amp;dscnt=0&amp;fromLogin=true&amp;dstmp=1388508776718&amp;filler=GUEST&amp;vid=EVSC" title="Use this search for narrowing results by language, material type, etc.">Advanced Search</a> &#8226; <a href="http://alliance-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?mode=Basic&amp;ct=BasicSearch&amp;vl(457139437UI5)=all_items&amp;vl(309590236UI6)=00&amp;vl(D309590230UI2)=any&amp;dscnt=0&amp;vl(1UIStartWith0)=contains&amp;vl(1UIStartWith1)=contains&amp;vl(464222367UI0)=any&amp;vl(309590234UI6)=00&amp;vl(1UIStartWith2)=contains&amp;vid=EVSC&amp;vl(309590238UI6)=Year&amp;vl(boolOperator1)=AND&amp;tab=course_reserves&amp;vl(boolOperator0)=AND&amp;vl(D309590232UI1)=any&amp;vl(739997557UI4)=all_items&amp;vl(D309590229UI3)=all_items&amp;vl(boolOperator2)=AND&amp;vl(309590237UI6)=00&amp;vl(309590235UI6)=Year&amp;vl(309590233UI6)=00&amp;dstmp=1453498857210" title="program reserves">Program Reserves</a> &#8226;&#160;<strong><a href="/library/databases" title="Explore our electronic article indexes, databases, websites and more.">Research Databases</a>&#160;&#8226; <a href="http://evergreen.worldcat.org/" title="WorldCat - search for items held by libraries all over the world">WorldCat</a></strong></p>
+</form>';
+
+  $export['library_search'] = $fe_block_boxes;
+
   return $export;
 }

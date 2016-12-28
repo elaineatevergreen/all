@@ -367,6 +367,16 @@ input:checked + .header-dropdown{
 		// layout
 		align-items: stretch;
 		display: flex;
+		// typography
+		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
+	}
+
+	/**
+	 * See Typekit override for breakpoint($rocket) below.
+	 */
+
+	@include breakpoint($starlord){
+		letter-spacing: normal;
 	}
 
 	&::before,
@@ -381,6 +391,17 @@ input:checked + .header-dropdown{
 	}
 }
 
+/**
+ * Typekit Override
+ */
+.wf-active .top-nav-list{
+	
+	@include breakpoint($rocket){
+		// typography
+		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
+	}
+}
+
 .top-nav-list > li{
 	display: inline-block;
 
@@ -389,12 +410,9 @@ input:checked + .header-dropdown{
 		border-left: 1px solid mix($tint, $shade, 20%);
 		// layout
 		align-items: stretch;
-		display: inline-block;  // IE9
 		display: flex;
 		flex-grow: 1;
 		overflow: hidden;
-		// typography
-		//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", Helvetica, Arial, sans-serif;
 
 		&:first-child{
 			// box model
@@ -422,7 +440,7 @@ input:checked + .header-dropdown{
 .secondary-nav-link{
 	// box model
 	border-bottom-width: 0;
-	padding: 0.46875rem 1rem;  // 7.5/16
+	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
@@ -444,7 +462,7 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($lil-groot){
 		// box model
-		padding: 0.46875rem 0.25rem;  // 7.5/16 2.48/16
+		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		// layout
 		align-items: center;
 		display: flex;
@@ -485,8 +503,7 @@ input:checked + .header-dropdown{
 /**
  * 5. Secondary Nav
  *
- * The textured nav immediately below the primary nav on the
- * homepage only.
+ * The textured nav immediately below the primary nav on the homepage only.
  */
 .secondary-nav-list{
 	// box model
@@ -495,87 +512,54 @@ input:checked + .header-dropdown{
 	padding: 0;
 	// typography
 	text-align: center;
-	// backgrounds & borders
+	// decoration
 	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	// list
 	list-style-type: none;
 
-	/*> li{
-		display: inline-block;
-	}*/
-
 	@include breakpoint($lil-groot){
+		// layout
+		align-items: stretch;
 		display: flex;
-		overflow: hidden;  // IE 9
-
-		/*> li:first-child,
-		> li:last-child{
-			margin: 0;
-		}
-
-		> li{
-			margin: 0;
-			width: 25%;  // IE 9
-			// layout
-			flex-grow: 1;
-			float: left;  // IE9
-		}*/
+		// typography
+		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
 
 	@include breakpoint($rocket){
 		// layout
 		justify-content: flex-end;
-
-		/*> li{
-			// box model
-			width: auto;
-			// layout
-			display: inline-block;  // IE9
-			flex-grow: 0;
-			float: none;  // IE 9
-			// typography
-			line-height: 2.52440255806126;  // 30/11.884
-			white-space: nowrap;
-		}*/
+		// typography
+		letter-spacing: normal;
 	}
 
 	@include breakpoint($starlord){
 		font-family: $text-face;
-		line-height: 2.14285714285714;  // 30/14
+		line-height: 2.14285714285714;  // 30/14 - Edge doesn't support unitless calc() line-heights
 	}
 }
 
 .secondary-nav-list > li{
+	// box model
+	margin-right: 1ch;
+	// layout
 	display: inline-block;
 
 	@include breakpoint($lil-groot){
 		margin: 0;
-		width: 25%;  // IE 9
 		// layout
-		flex-grow: 1;
-		float: left;  // IE 9
-
-		&:first-child,
-		&:last-child{
-			margin: 0;
-		}
+		flex-basis: 25%;
 	}
 
 	@include breakpoint($rocket){
-		// box model
-		width: auto;
-		// layout
-		display: inline-block;  // IE 9
-		flex-grow: 0;
-		float: none;  // IE 9
-		// typography
-		line-height: 2.52440255806126;  // 30/11.884
-		white-space: nowrap;
+	}
+	
+	@include breakpoint($starlord){
+		flex-basis: auto;
 	}
 
 	@include breakpoint($gamora){
 		@include base-type;
-		line-height: 3.21428571428571;  // 45/14
+		line-height: 3.21428571428571;  // 45/14 - Edge doesn't support unitless calc() line-heights
 	}
 
 	@include breakpoint($groot){
@@ -584,13 +568,14 @@ input:checked + .header-dropdown{
 	}
 }
 
-.secondary-nav-link,
+.secondary-nav-link,  // Deprecated in Drupal
 .secondary-nav-list a{  // Drupal
 
 	&,
 	&:visited{
 		// box model
 		border-bottom: 0;
+		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		height: 100%;
 		width: 100%;
 		// layout
@@ -599,12 +584,27 @@ input:checked + .header-dropdown{
 		color: $tint;
 		font-weight: normal;
 
+		@include breakpoint($lil-groot){
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
 		@include breakpoint($rocket){
-			// box model
-			height: auto;
-			padding: 0 1em;
 			// layout
 			display: inline-block;
+			flex-basis: auto;
+		}
+
+		@include breakpoint($starlord){
+			padding: 0 1ch;
+		}
+		
+		@include breakpoint($gamora){
+			// box model
+			padding: 0 2ch;
+			// typography
+			font-weight: bold;
 		}
 
 		@include breakpoint($drax){
