@@ -534,7 +534,7 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($starlord){
 		font-family: $text-face;
-		line-height: calc(30/14);
+		line-height: 2.14285714285714;  // 30/14 - Edge doesn't support unitless calc() line-heights
 	}
 }
 
@@ -559,7 +559,7 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($gamora){
 		@include base-type;
-		line-height: 3.21428571428571;  // 45/14
+		line-height: 3.21428571428571;  // 45/14 - Edge doesn't support unitless calc() line-heights
 	}
 
 	@include breakpoint($groot){

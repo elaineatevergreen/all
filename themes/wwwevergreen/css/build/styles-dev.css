@@ -3116,7 +3116,7 @@ input:checked + .header-dropdown {
   /* line 508, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-    line-height: calc(30/14);
+    line-height: 2.14285714285714;
   }
 }
 
