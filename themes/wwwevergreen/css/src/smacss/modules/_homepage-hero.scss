@@ -46,7 +46,7 @@
 .homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
 	display: block;
 
-	@include breakpoint($gamora){
+	@include breakpoint($starlord){
 		width: 100%;
 	}
 }
@@ -250,6 +250,10 @@
 		font-size: 2.291rem;  //36.656
 		line-height: 1.227629855958097;  //45/36.656
 	}
+}
+
+.homepage-hero-copy img{
+	width: 100%;  // IE 11
 }
 
 /**
