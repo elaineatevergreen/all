@@ -292,6 +292,40 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'faculty_directory-xpathparser_8-find_replace_regex';
+  $feeds_tamper->importer = 'faculty_directory';
+  $feeds_tamper->source = 'xpathparser:8';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/[^,]*, /',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'REGEX to remove last name';
+  $export['faculty_directory-xpathparser_8-find_replace_regex'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'faculty_directory-xpathparser_9-find_replace_regex2';
+  $feeds_tamper->importer = 'faculty_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'find_replace_regex';
+  $feeds_tamper->settings = array(
+    'find' => '/, (.)*/',
+    'replace' => '',
+    'limit' => '',
+    'real_limit' => -1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'REGEX to remove first name';
+  $export['faculty_directory-xpathparser_9-find_replace_regex2'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'mailing_lists_feed_importer-xpathparser_3-community';
   $feeds_tamper->importer = 'mailing_lists_feed_importer';
   $feeds_tamper->source = 'xpathparser:3';
