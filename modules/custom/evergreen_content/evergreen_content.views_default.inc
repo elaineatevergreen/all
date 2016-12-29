@@ -9857,6 +9857,8 @@ return($term); ';
   $handler->display->display_options['fields']['field_proxy']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_proxy']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_proxy']['empty'] = '[field_resource_link]';
+  $handler->display->display_options['fields']['field_proxy']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_proxy']['type'] = 'list_key';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -10007,24 +10009,46 @@ return($term); ';
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Resource Link */
   $handler->display->display_options['fields']['field_resource_link']['id'] = 'field_resource_link';
   $handler->display->display_options['fields']['field_resource_link']['table'] = 'field_data_field_resource_link';
   $handler->display->display_options['fields']['field_resource_link']['field'] = 'field_resource_link';
   $handler->display->display_options['fields']['field_resource_link']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_resource_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resource_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_resource_link']['type'] = 'link_plain';
+  /* Field: Content: Proxy */
+  $handler->display->display_options['fields']['field_proxy']['id'] = 'field_proxy';
+  $handler->display->display_options['fields']['field_proxy']['table'] = 'field_data_field_proxy';
+  $handler->display->display_options['fields']['field_proxy']['field'] = 'field_proxy';
+  $handler->display->display_options['fields']['field_proxy']['label'] = '';
+  $handler->display->display_options['fields']['field_proxy']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_proxy']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_proxy']['alter']['text'] = 'https://evergreen.idm.oclc.org/login?url=[field_resource_link]';
+  $handler->display->display_options['fields']['field_proxy']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_proxy']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_proxy']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_proxy']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_proxy']['empty'] = '[field_resource_link]';
+  $handler->display->display_options['fields']['field_proxy']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_proxy']['type'] = 'list_key';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_proxy]">[title]</a>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -10057,6 +10081,19 @@ return($term); ';
     4 => '4',
     11 => '11',
   );
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p>Go to the <a href="http://www.evergreen.edu/library/databases">Library Databases page</a> to see this list as presented to users. Featured databases are show at the top of the page as a bulleted list. Contact the Web Team if you need to change the proxy URL.</p>';
+  $handler->display->display_options['header']['area']['format'] = 'extended_tags';
+  /* Header: Global: Result summary */
+  $handler->display->display_options['header']['result']['id'] = 'result';
+  $handler->display->display_options['header']['result']['table'] = 'views';
+  $handler->display->display_options['header']['result']['field'] = 'result';
+  $handler->display->display_options['header']['result']['empty'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
@@ -10073,7 +10110,7 @@ return($term); ';
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
-      'label' => 'Update Databases',
+      'label' => 'Add Categories or Set as Featured',
       'settings' => array(
         'show_all_tokens' => 0,
         'display_values' => array(
@@ -10110,7 +10147,6 @@ return($term); ';
   $handler->display->display_options['fields']['field_proxy']['empty'] = '[field_resource_link]';
   $handler->display->display_options['fields']['field_proxy']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_proxy']['type'] = 'list_key';
-  $handler->display->display_options['fields']['field_proxy']['field_api_classes'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -10140,6 +10176,10 @@ return($term); ';
   $handler->display->display_options['fields']['field_featured']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_featured']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_featured']['field_api_classes'] = TRUE;
+  /* Field: Content: Proxy */
+  $handler->display->display_options['fields']['field_proxy_1']['id'] = 'field_proxy_1';
+  $handler->display->display_options['fields']['field_proxy_1']['table'] = 'field_data_field_proxy';
+  $handler->display->display_options['fields']['field_proxy_1']['field'] = 'field_proxy';
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
