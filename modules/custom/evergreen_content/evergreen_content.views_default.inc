@@ -13315,7 +13315,7 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler->display->display_options['style_options']['class'] = 'element-list';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entityqueue: Node Queue */
+  /* Relationship: Entityqueue: Content Queue */
   $handler->display->display_options['relationships']['entityqueue_relationship']['id'] = 'entityqueue_relationship';
   $handler->display->display_options['relationships']['entityqueue_relationship']['table'] = 'node';
   $handler->display->display_options['relationships']['entityqueue_relationship']['field'] = 'entityqueue_relationship';
