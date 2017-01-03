@@ -3331,7 +3331,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_off_campus_location',
     'label' => 'Off Campus Location',
     'required' => 0,
@@ -3342,7 +3342,7 @@ function evergreen_content_field_default_field_instances() {
         'enable' => 0,
         'profile' => '',
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
