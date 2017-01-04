@@ -3331,7 +3331,7 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_off_campus_location',
     'label' => 'Off Campus Location',
     'required' => 0,
@@ -3342,7 +3342,7 @@ function evergreen_content_field_default_field_instances() {
         'enable' => 0,
         'profile' => '',
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4499,7 +4499,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -4691,6 +4691,64 @@ function evergreen_content_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-committee_page-field_contact_information'.
+  $field_instances['node-committee_page-field_contact_information'] = array(
+    'bundle' => 'committee_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If the committee should be contacted through an existing office in the directory, add it here to display contact information. Otherwise, add contact information in the "Details" section. ',
+    'display' => array(
+      'contact_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'full_name' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_contact_information',
+    'label' => 'Contact Information',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -5027,7 +5085,7 @@ function evergreen_content_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -5153,7 +5211,7 @@ function evergreen_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full_name' => array(
         'label' => 'above',
@@ -8889,7 +8947,7 @@ function evergreen_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'display_all_day' => 0,
+        'display_all_day' => 1,
         'increment' => 15,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
@@ -13965,6 +14023,7 @@ function evergreen_content_field_default_field_instances() {
   t('Committee Type');
   t('Common Application');
   t('Connects this item to the CMD database. Not usually displayed to mere mortals.');
+  t('Contact Information');
   t('Current Location');
   t('Current Profession');
   t('Curricular Area');
@@ -14026,6 +14085,7 @@ function evergreen_content_field_default_field_instances() {
   t('Hometown');
   t('Hours');
   t('How did your Evergreen education help you?');
+  t('If the committee should be contacted through an existing office in the directory, add it here to display contact information. Otherwise, add contact information in the "Details" section. ');
   t('If there is a single "canonical" biography that we use throughout the site, enter it here. Otherwise, use the Related Pieces field to link to magazine articles, etc.');
   t('If they are an alumnus, where do they live now?');
   t('If this committee has a formal charge or charter document, upload it here.');

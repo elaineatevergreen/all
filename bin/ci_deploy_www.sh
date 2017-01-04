@@ -14,6 +14,7 @@ fi
 # Required Libraries
 deploy_d7_library libraries/iCalcreator $WWW_CODE
 deploy_d7_library libraries/plupload $WWW_CODE
+deploy_d7_library libraries/juicebox $WWW_CODE
 # Feature modules
 deploy_d7_theme themes/wwwevergreen $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
