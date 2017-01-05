@@ -14446,10 +14446,21 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler->display->display_options['fields']['field_cashnet_code']['table'] = 'field_data_field_cashnet_code';
   $handler->display->display_options['fields']['field_cashnet_code']['field'] = 'field_cashnet_code';
   $handler->display->display_options['fields']['field_cashnet_code']['label'] = '';
-  $handler->display->display_options['fields']['field_cashnet_code']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_cashnet_code']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_cashnet_code']['alter']['text'] = '<a href=https://commerce.cashnet.com/givetoevergreen?itemcode=[field_cashnet_code]">Donate</a>';
   $handler->display->display_options['fields']['field_cashnet_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_cashnet_code']['type'] = 'text_plain';
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_cashnet_code';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '6';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '<a href="https://commerce.cashnet.com/givetoevergreen?itemcode=[field_cashnet_code]">Donate</a>';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '<a href="https://commerce.cashnet.com/givetoevergreen?itemcode=ALUMNI-SCHOL">Donate</a>';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

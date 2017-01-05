@@ -12480,7 +12480,11 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-scholarship-field_cashnet_code'.
   $field_instances['node-scholarship-field_cashnet_code'] = array(
     'bundle' => 'scholarship',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'ALUMNI-SCHOL',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Just enter the part of the URL <em>after</em> "itemcode=".',
     'display' => array(
@@ -12883,13 +12887,10 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-scholarship-field_site_section'.
   $field_instances['node-scholarship-field_site_section'] = array(
     'bundle' => 'scholarship',
-    'default_value' => array(
-      0 => array(
-        'tid' => 75,
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
-    'description' => 'We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.',
+    'description' => 'For this content type, select "scholarships" for undergrad, and the appropriate graduate program for grad scholarships.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -12920,7 +12921,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 3,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-scholarship-field_tuition_award'.
@@ -14138,6 +14139,7 @@ function evergreen_content_field_default_field_instances() {
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
+  t('For this content type, select "scholarships" for undergrad, and the appropriate graduate program for grad scholarships.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
@@ -14344,7 +14346,6 @@ function evergreen_content_field_default_field_instances() {
   t('Uses the username/CAS name as a bridge to people in the directory.');
   t('Using the Banner format, where 201610 = Fall 2016.');
   t('Variable Credit Options');
-  t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Web Page Reports');
   t('Website');
   t('Websites');
