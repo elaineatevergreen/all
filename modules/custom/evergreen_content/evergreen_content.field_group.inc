@@ -27,6 +27,7 @@ function evergreen_content_field_group_info() {
       1 => 'field_members',
       2 => 'field_other_members',
       3 => 'field_charge',
+      4 => 'field_contact_information',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -61,6 +62,7 @@ function evergreen_content_field_group_info() {
       0 => 'body',
       1 => 'field_short_description',
       2 => 'field_charge',
+      3 => 'field_contact_information',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
