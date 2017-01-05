@@ -760,6 +760,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'wysiwyg' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'file',
     'fences_wrapper' => 'no_wrapper',
@@ -816,6 +822,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'wysiwyg' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'file',
     'fences_wrapper' => 'no_wrapper',
@@ -825,7 +837,6 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
-      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -857,6 +868,12 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wysiwyg' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -922,6 +939,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'wysiwyg' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'file',
     'fences_wrapper' => 'div',
@@ -977,6 +1000,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'wysiwyg' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'file',
     'fences_wrapper' => 'no_wrapper',
@@ -986,7 +1015,6 @@ function evergreen_content_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
-      'wysiwyg_override' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -2438,7 +2466,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -2649,7 +2677,7 @@ function evergreen_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -2838,7 +2866,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -3304,7 +3332,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -3620,6 +3648,47 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 31,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_quarters_conditional'.
+  $field_instances['node-catalog_entry-field_quarters_conditional'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 35,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_quarters_conditional',
+    'label' => 'Quarters Conditional',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -4434,7 +4503,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -9770,7 +9839,7 @@ function evergreen_content_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'description_display' => 'before',
-      'file_directory' => 'go-beyond',
+      'file_directory' => 'files/go-beyond',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -9835,7 +9904,7 @@ function evergreen_content_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'description_display' => 'after',
-      'file_directory' => 'go-beyond',
+      'file_directory' => 'files/go-beyond',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -9900,7 +9969,7 @@ function evergreen_content_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'description_display' => 'after',
-      'file_directory' => 'go-beyond',
+      'file_directory' => 'files/go-beyond',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -9965,7 +10034,7 @@ function evergreen_content_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'description_display' => 'after',
-      'file_directory' => 'go-beyond',
+      'file_directory' => 'files/go-beyond',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -12411,7 +12480,11 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-scholarship-field_cashnet_code'.
   $field_instances['node-scholarship-field_cashnet_code'] = array(
     'bundle' => 'scholarship',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'ALUMNI-SCHOL',
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Just enter the part of the URL <em>after</em> "itemcode=".',
     'display' => array(
@@ -12814,13 +12887,10 @@ function evergreen_content_field_default_field_instances() {
   // Exported field_instance: 'node-scholarship-field_site_section'.
   $field_instances['node-scholarship-field_site_section'] = array(
     'bundle' => 'scholarship',
-    'default_value' => array(
-      0 => array(
-        'tid' => 75,
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
-    'description' => 'We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.',
+    'description' => 'For this content type, select "scholarships" for undergrad, and the appropriate graduate program for grad scholarships.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -12851,7 +12921,7 @@ function evergreen_content_field_default_field_instances() {
       'type' => 'options_select',
       'weight' => 3,
     ),
-    'workbench_access_field' => TRUE,
+    'workbench_access_field' => 1,
   );
 
   // Exported field_instance: 'node-scholarship-field_tuition_award'.
@@ -14069,6 +14139,7 @@ function evergreen_content_field_default_field_instances() {
   t('Flyer');
   t('For most scholarships, this will be February 1 each year.');
   t('For now, this combines the original construction date, any renovation dates, names of architects, etc. We may break this info out with more granularity in the future.');
+  t('For this content type, select "scholarships" for undergrad, and the appropriate graduate program for grad scholarships.');
   t('Full four-digit year. May be in the future for current students, as in <em>Class of 2038</em>.');
   t('Funding Status');
   t('Gallery');
@@ -14167,6 +14238,7 @@ function evergreen_content_field_default_field_instances() {
   t('Proxy');
   t('Publication Type');
   t('Publications');
+  t('Quarters Conditional');
   t('Quarters Offered');
   t('Quarters Open');
   t('Quarters Signature');
@@ -14274,7 +14346,6 @@ function evergreen_content_field_default_field_instances() {
   t('Uses the username/CAS name as a bridge to people in the directory.');
   t('Using the Banner format, where 201610 = Fall 2016.');
   t('Variable Credit Options');
-  t('We may need to work around this later, since scholarships appear on both the Give and Scholarship sections.');
   t('Web Page Reports');
   t('Website');
   t('Websites');

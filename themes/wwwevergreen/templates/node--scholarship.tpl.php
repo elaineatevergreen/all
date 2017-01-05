@@ -38,6 +38,10 @@
 	<?php 
 		//add the donation box if this scholarship is seeking funding
 		if(isset($content['field_funding_status'])) {
+			if(trim(render($content['field_cashnet_code'])) != '') { $cashnet = trim(render($content['field_cashnet_code'])); }
+			else { $cashnet = 'ALUMNI-SCHOL'; };
+			
+			
 	?>
 	<div class="box supplement"><p>
 	<?php
@@ -45,7 +49,7 @@
 			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet funded."; } 
 			elseif(strstr(render($content['field_funding_status']),'Seeking donors')) { print "Keep this scholarship funded for future generations."; };
 	?>
-	</p><p><a href="https://commerce.cashnet.com/givetoevergreen?itemcode=<?php print trim(render($content['field_cashnet_code'])) ?>">Please donate today.</a></p></div>
+	</p><p><a href="https://commerce.cashnet.com/givetoevergreen?itemcode=<?php print $cashnet ?>">Please donate today.</a></p></div>
 	<?php
 		};
 		?>  
