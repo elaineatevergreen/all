@@ -11416,6 +11416,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-profile-field_business_type'] = array(
     'bundle' => 'profile',
     'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => 'Pick up to two.',
     'display' => array(

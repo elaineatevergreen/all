@@ -670,7 +670,7 @@ function evergreen_content_field_default_field_bases() {
         'Environmental Services' => 'Environmental Services',
         'Farming, Fishing and Forestry' => 'Farming, Fishing and Forestry',
         'Healthcare' => 'Healthcare',
-        'ospitality (lodging food and beverage)' => 'ospitality (lodging food and beverage)',
+        'ospitality (lodging food and beverage)' => 'Hospitality (lodging food and beverage)',
         'Installation, Maintenance and Repair' => 'Installation, Maintenance and Repair',
         'Legal' => 'Legal',
         'Life, Physical and Social Science' => 'Life, Physical and Social Science',
