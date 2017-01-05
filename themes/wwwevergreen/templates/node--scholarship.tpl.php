@@ -46,7 +46,7 @@
 	<div class="box supplement"><p>
 	<?php
 			//switch out language depending on whether scholarship is fully funded.
-			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet funded."; } 
+			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet fully funded."; } 
 			elseif(strstr(render($content['field_funding_status']),'Seeking donors')) { print "Keep this scholarship funded for future generations."; };
 	?>
 	</p><p><a href="https://commerce.cashnet.com/givetoevergreen?itemcode=<?php print $cashnet ?>">Please donate today.</a></p></div>
