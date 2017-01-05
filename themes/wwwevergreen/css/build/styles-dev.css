@@ -2143,7 +2143,7 @@ body > div + header,
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
-    line-height: calc(15 / 14);
+    line-height: 1.07142857142857;
   }
 }
 
@@ -6763,24 +6763,25 @@ p.alert {
 }
 
 /* line 331, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+.calendar-calendar .month-view .full td {
+  padding: 0;
+  min-width: 8ch;
+}
+
+/* line 336, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar-empty,
 .calendar-calendar .month-view .full td.single-day.empty,
 .calendar-calendar .month-view .full td.date-box.empty {
   background: transparent none;
 }
 
-/* line 337, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
-.calendar-calendar .month-view .full td {
-  padding: 0;
-}
-
-/* line 341, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 342, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td .inner div.day,
 .calendar-calendar .month-view .full td .inner div.day a {
   width: auto;
 }
 
-/* line 346, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 347, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.today,
 .calendar-calendar .month-view .full tr td.single-day.today,
 .calendar-calendar .month-view .full tr.odd td.today,
@@ -6791,12 +6792,12 @@ p.alert {
   border-color: #46502b;
 }
 
-/* line 357, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 358, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.multi-day.ends-today {
   border-color: #46502b;
 }
 
-/* line 362, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 363, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr.date-box,
 .calendar-calendar .month-view .full tr.date-box td,
 .calendar-calendar .month-view .full tr.multi-day,
@@ -6805,7 +6806,7 @@ p.alert {
   max-height: none;
 }
 
-/* line 370, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 371, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
@@ -6829,13 +6830,13 @@ p.alert {
 /**
  * f. Multi-day
  */
-/* line 396, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 397, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   background-color: #e1dee3;
 }
 
-/* line 402, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 403, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
   height: inherit;
@@ -6843,7 +6844,7 @@ p.alert {
   padding: 0;
 }
 
-/* line 409, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 410, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
   border-top: 1px solid #d0cad4;
@@ -6860,7 +6861,7 @@ p.alert {
   background-color: #e1dee3;
 }
 
-/* line 426, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 427, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
   border-top: 1px solid #d0cad4;
@@ -6875,24 +6876,24 @@ p.alert {
 /**
  * g. Events by Category
  */
-/* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view-calendar .views-field-title {
   margin-top: 0.535714285714286em;
 }
 @media screen and (min-width: 43em) {
-  /* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.41666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 443, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .date-display-range,
 .view-calendar .date-display-range,
 .date-display-single {
@@ -6900,7 +6901,7 @@ p.alert {
   display: inline;
 }
 @media screen and (min-width: 43em) {
-  /* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -6908,7 +6909,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 455, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -6916,7 +6917,7 @@ p.alert {
   }
 }
 
-/* line 472, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 473, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .views-exposed-form label {
   font-weight: inherit;
 }

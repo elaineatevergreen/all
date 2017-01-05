@@ -328,14 +328,15 @@
 	color: inherit;
 }
 
+.calendar-calendar .month-view .full td{
+	padding: 0;
+	min-width: 8ch;  // Avg. English word length: 5.1ch, round up to 6, plus 1ch whitespace on either side.
+}
+
 .calendar-calendar .month-view .full td.single-day .calendar-empty,
 .calendar-calendar .month-view .full td.single-day.empty,
 .calendar-calendar .month-view .full td.date-box.empty{
 	background: transparent none;
-}
-
-.calendar-calendar .month-view .full td{
-	padding: 0;
 }
 
 .calendar-calendar .month-view .full td .inner div.day,
