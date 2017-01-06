@@ -1893,6 +1893,7 @@ function evergreen_content_field_group_info() {
       7 => 'field_winter_registration',
       8 => 'field_spring_registration',
       9 => 'field_quarters_signature',
+      10 => 'field_quarters_conditional',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

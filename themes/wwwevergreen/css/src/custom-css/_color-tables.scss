@@ -1,4 +1,6 @@
-//New Colors
+/**
+ * 2012 Colors
+ */
 .morning-light{
 	background-color: $morning-light;
 }
@@ -189,14 +191,16 @@
 	background-color: mix(black, $wine, 80%);
 }
 
-
-
-
-//Old Colors
+/**
+ * Pre-2012 Colors
+ *
+ * This color palette is deprecated, but do note that Evergreen Old Style
+ * and Black are held over to the new colors.
+ */
 $red-old-style: #7c1300;
 $gold-old-style: #960;
 $blue-old-style: #205f7a;
-//Note that Evergreen Old Style and Black are held over to the new colors.
+
 .red-old-style{
 	background-color: #7c1300;
 }

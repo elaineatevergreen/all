@@ -180,6 +180,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:52' => 'div/options[@opt_code="Research Possibilities"]/opt_comment',
           'xpathparser:53' => 'div/options[@opt_code="Internship Possibilities"]/opt_comment',
           'xpathparser:54' => 'themes/theme/@code',
+          'xpathparser:55' => 'div/term[@entry_code="Conditional"]/@term_name',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -231,6 +232,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:49' => 0,
           'xpathparser:50' => 0,
           'xpathparser:54' => 0,
+          'xpathparser:55' => 0,
         ),
         'context' => '/html/body/div/entry',
         'exp' => array(
@@ -286,6 +288,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:52' => 0,
             'xpathparser:53' => 0,
             'xpathparser:54' => 0,
+            'xpathparser:55' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -595,6 +598,12 @@ function evergreen_content_feeds_importer_default() {
           49 => array(
             'source' => 'xpathparser:54',
             'target' => 'field_theme_codes',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          50 => array(
+            'source' => 'xpathparser:55',
+            'target' => 'field_quarters_conditional',
             'unique' => FALSE,
           ),
         ),

@@ -670,7 +670,7 @@ function evergreen_content_field_default_field_bases() {
         'Environmental Services' => 'Environmental Services',
         'Farming, Fishing and Forestry' => 'Farming, Fishing and Forestry',
         'Healthcare' => 'Healthcare',
-        'ospitality (lodging food and beverage)' => 'ospitality (lodging food and beverage)',
+        'ospitality (lodging food and beverage)' => 'Hospitality (lodging food and beverage)',
         'Installation, Maintenance and Repair' => 'Installation, Maintenance and Repair',
         'Legal' => 'Legal',
         'Life, Physical and Social Science' => 'Life, Physical and Social Science',
@@ -3343,6 +3343,35 @@ function evergreen_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_quarters_conditional'.
+  $field_bases['field_quarters_conditional'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_quarters_conditional',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Fall' => 'Fall',
+        'Winter' => 'Winter',
+        'Spring' => 'Spring',
+        'Summer Full Session' => 'Summer Full Session',
+        'Summer Session I' => 'Summer Session I',
+        'Summer Session II' => 'Summer Session II',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_quarters_offered'.

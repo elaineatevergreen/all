@@ -213,8 +213,8 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					
 				?>
 	      	
-	      </article>
-	    </div> <!-- /.main-content, /#content-wrapper -->
+	      </article> <!-- /.main-content -->
+	    </div> <!-- /#content-wrapper -->
 	      
 			<div id="sidebar-wrapper" class="sidebar-wrapper unit-2-7">
 				<section class="sidebar">

@@ -1616,6 +1616,9 @@ function evergreen_content_strongarm() {
         'metatags' => array(
           'weight' => '6',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
