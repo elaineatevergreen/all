@@ -1201,6 +1201,12 @@ function evergreen_content_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
+  /* Filter criterion: Content: Event Date - end date (field_event_date:value2) */
+  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -3731,20 +3737,20 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Field: Site Section (field_site_section) */
-  $handler->display->display_options['arguments']['field_site_section_tid']['id'] = 'field_site_section_tid';
-  $handler->display->display_options['arguments']['field_site_section_tid']['table'] = 'field_data_field_site_section';
-  $handler->display->display_options['arguments']['field_site_section_tid']['field'] = 'field_site_section_tid';
-  $handler->display->display_options['arguments']['field_site_section_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_site_section_tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_site_section_tid']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['field_site_section_tid']['default_argument_options']['limit'] = TRUE;
-  $handler->display->display_options['arguments']['field_site_section_tid']['default_argument_options']['vocabularies'] = array(
+  /* Contextual filter: Content: Add to Sections (field_add_to_sections) */
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['id'] = 'field_add_to_sections_target_id';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['table'] = 'field_data_field_add_to_sections';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['field'] = 'field_add_to_sections_target_id';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['default_argument_options']['vocabularies'] = array(
     'site_sections' => 'site_sections',
   );
-  $handler->display->display_options['arguments']['field_site_section_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_site_section_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_site_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_add_to_sections_target_id']['summary_options']['items_per_page'] = '25';
   $export['calendar'] = $view;
 
   $view = new view();
@@ -13155,7 +13161,12 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Home Page Hero';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    7 => '7',
+    12 => '12',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -13224,6 +13235,7 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $export['home_page_hero'] = $view;
 
   $view = new view();
