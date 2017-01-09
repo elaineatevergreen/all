@@ -16,7 +16,7 @@ if($output) {
 	    //for now(?) instead, links to listing of offerings in that subject
 	    //print $fos['rendered']['#href']
 		?>
-		<li><a href="?subject=<?php print $fos['rendered']['#title'] ?>"><?php print $fos['rendered']['#title'] ?></a></li>	 
+		<li><a href="?subject=<?php print $fos['rendered']['#options']['entity']->tid ?>"><?php print $fos['rendered']['#title'] ?></a></li>	 
 		<?php   
     };
 };    
