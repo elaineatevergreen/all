@@ -9,7 +9,7 @@
 					</p>
 					<ul class="element-list text-list-alt">
 						<li>
-							<a href="https://evergreen.peopleadmin.com/">Jobs at Evergreen</a>
+							<a href="http://evergreen.edu/employment">Jobs at Evergreen</a>
 						</li>
 						<!--<li>
 							<a href="http://evergreen.edu/give">Give to Evergreen</a>
