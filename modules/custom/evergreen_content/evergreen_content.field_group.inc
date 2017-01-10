@@ -849,7 +849,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
@@ -1822,7 +1822,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prerequisites',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_prerequisites',
     ),
