@@ -217,6 +217,19 @@ p.alert{  // WYSIWYG
 	width: calc(50% - 1em);
 }
 
+.action-call{
+	@include base-type-lg;
+	
+	@include breakpoint($starlord){
+		@include base-type-xl;
+	}
+	
+	@include breakpoint($gamora){
+		font-size: calc(29.124 / 16 * 1rem);
+		line-height: 1.03007828594973;  // 30/29.124
+	}
+}
+
 /**
  * 6. Pull Quotes
  */
