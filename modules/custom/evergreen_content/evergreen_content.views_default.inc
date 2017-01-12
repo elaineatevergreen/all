@@ -3737,7 +3737,7 @@ return($term); ';
   );
   $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Site Section(s) (field_add_to_sections) */
+  /* Contextual filter: Content: Add to Sections (field_add_to_sections) */
   $handler->display->display_options['arguments']['field_add_to_sections_target_id']['id'] = 'field_add_to_sections_target_id';
   $handler->display->display_options['arguments']['field_add_to_sections_target_id']['table'] = 'field_data_field_add_to_sections';
   $handler->display->display_options['arguments']['field_add_to_sections_target_id']['field'] = 'field_add_to_sections_target_id';
