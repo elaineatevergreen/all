@@ -1751,13 +1751,16 @@ function evergreen_content_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '2',
+          'weight' => '4',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '8',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '7',
         ),
       ),
       'display' => array(),
