@@ -406,7 +406,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Basics',
-    'weight' => '15',
+    'weight' => '6',
     'children' => array(
       0 => 'group_contact',
       1 => 'group_faculty',
@@ -628,7 +628,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_basics';
   $field_group->data = array(
     'label' => 'Contact Information',
-    'weight' => '17',
+    'weight' => '9',
     'children' => array(
       0 => 'field_alternate_phone',
       1 => 'field_building',
@@ -1075,7 +1075,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_basics';
   $field_group->data = array(
     'label' => 'Faculty Information',
-    'weight' => '18',
+    'weight' => '10',
     'children' => array(
       0 => 'field_background',
       1 => 'field_expertise',
@@ -1284,14 +1284,13 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = 'group_basics';
   $field_group->data = array(
     'label' => 'Identity',
-    'weight' => '16',
+    'weight' => '8',
     'children' => array(
       0 => 'field_cas_name',
       1 => 'field_first_name',
-      2 => 'field_headshot',
-      3 => 'field_job_title',
-      4 => 'field_last_name',
-      5 => 'field_department',
+      2 => 'field_job_title',
+      3 => 'field_last_name',
+      4 => 'field_department',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1814,6 +1813,35 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_photos|node|directory_individual|form';
+  $field_group->group_name = 'group_photos';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'directory_individual';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Photos',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_headshot',
+      1 => 'field_square_portrait',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-photos field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_photos|node|directory_individual|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_prerequisites|node|catalog_entry|default';
   $field_group->group_name = 'group_prerequisites';
   $field_group->entity_type = 'node';
@@ -2319,6 +2347,7 @@ function evergreen_content_field_group_info() {
   t('Our Annotations');
   t('Participants');
   t('Phone Numbers');
+  t('Photos');
   t('Prerequisites');
   t('Primary Content');
   t('Program Details');

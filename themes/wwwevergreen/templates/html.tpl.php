@@ -103,5 +103,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php
 	  print $scripts;  // Include scripts from the theme .info file.
   ?>
+  <!-- reach local tracking script -->
+  <script type="text/javascript">var rl_siteid = "6ab3611f-6d7c-4500-9c31-c90eb2895e4a";</script><script type="text/javascript" src="//cdn.rlets.com/capture_static/mms/mms.js" async="async"></script>
 </body>
 </html>
