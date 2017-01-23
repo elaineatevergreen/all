@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
-drush en --yes views_sexy_throbber
+drush en --yes cpn
 drush --yes cc all
 
