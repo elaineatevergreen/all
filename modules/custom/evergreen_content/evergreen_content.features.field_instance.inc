@@ -1418,7 +1418,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -1520,7 +1520,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => 'Upload an image to be displayed at the top of your story or in lists and other highlights.',
+    'description' => 'This image will be displayed at the top of your article.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1543,12 +1543,14 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_image',
-    'label' => 'Image',
+    'label' => 'Highlight',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1562,20 +1564,26 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'oembed' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
           'audio' => 0,
-          'default' => 0,
+          'document' => 0,
           'image' => 'image',
           'video' => 0,
         ),
-        'browser_plugins' => array(),
-        'progress_indicator' => 'throbber',
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
       ),
       'type' => 'media_generic',
       'weight' => 5,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-article-field_site_section'.
@@ -1616,6 +1624,73 @@ function evergreen_content_field_default_field_instances() {
       'weight' => 1,
     ),
     'workbench_access_field' => TRUE,
+  );
+
+  // Exported field_instance: 'node-article-field_thumbnail'.
+  $field_instances['node-article-field_thumbnail'] = array(
+    'bundle' => 'article',
+    'deleted' => 0,
+    'description' => 'This image may be used in lists of stories.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_thumbnail',
+    'label' => 'Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'description_display' => 'before',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'oembed' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-basic_page-body'.
@@ -14236,6 +14311,7 @@ function evergreen_content_field_default_field_instances() {
   t('Hero Image Large');
   t('Hero Image Medium');
   t('Hero Image Small');
+  t('Highlight');
   t('Historical Agendas');
   t('Historical Minutes');
   t('Hometown');
@@ -14399,6 +14475,8 @@ function evergreen_content_field_default_field_instances() {
   t('This field may be used in lists and other summaries.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
+  t('This image may be used in lists of stories.');
+  t('This image will be displayed at the top of your article.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.');
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
@@ -14415,6 +14493,7 @@ function evergreen_content_field_default_field_instances() {
   t('This optional text appears in green at the top of the page below the title. It can be a summary or highlight of what is found in this page or in this site section.');
   t('This should be the plain URL, without any proxy details.');
   t('This text may display with lists of stories or other ways of featuring. Be brief and clear, but a little intriguing.');
+  t('Thumbnail');
   t('Time Offered');
   t('Title should be the original title of the article. Use the Search button to find an article on the Evergreen website.');
   t('Tuition Award');
@@ -14422,7 +14501,6 @@ function evergreen_content_field_default_field_instances() {
   t('Twitter');
   t('Under-represented');
   t('Upcoming Deadlines');
-  t('Upload an image to be displayed at the top of your story or in lists and other highlights.');
   t('Upload any necessary supporting documents. These can include PDF, Word, Excel, or PowerPoint. Please include a clear description.');
   t('Upload meeting agendas in PDF or Word format.');
   t('Upload reports in PDF or Word format. This can include a DTF\'s Final Report. Please include the name of the report in the description.');
