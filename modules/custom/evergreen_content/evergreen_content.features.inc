@@ -98,6 +98,57 @@ function evergreen_content_date_format_types() {
 }
 
 /**
+ * Implements hook_flag_default_flags().
+ */
+function evergreen_content_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Catalog Save List".
+  $flags['catalog_save_list'] = array(
+    'entity_type' => 'node',
+    'title' => 'Catalog Save List',
+    'global' => 0,
+    'types' => array(
+      0 => 'catalog_entry',
+    ),
+    'flag_short' => 'Save to list',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'Remove from list',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 'full',
+      'teaser' => 'teaser',
+      'rss' => 0,
+      'search_index' => 0,
+      'search_result' => 0,
+      'ical' => 0,
+      'diff_standard' => 0,
+      'full_name' => 0,
+      'contact_block' => 0,
+      'contact_row' => 0,
+      'faculty_blurb' => 0,
+      'token' => 0,
+    ),
+    'show_as_field' => 1,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'i18n' => 0,
+    'module' => 'evergreen_content',
+    'locked' => array(
+      0 => 'name',
+    ),
+    'api_version' => 3,
+  );
+  return $flags;
+
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function evergreen_content_image_default_styles() {
@@ -285,6 +336,14 @@ function evergreen_content_node_info() {
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
+    ),
+    'faculty_updates' => array(
+      'name' => t('Faculty Updates'),
+      'base' => 'node_content',
+      'description' => t('Use a <em>Faculty Update</em> to add news about things that one or more faculty have done that is of interest to other faculty, students, or the general public.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => t('Your submission will be edited and not all submissions will be published.'),
     ),
     'feed_importer' => array(
       'name' => t('Feed Importer'),
