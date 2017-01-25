@@ -53,4 +53,5 @@ features[] = main_menu
 
 ; theme setting defaults
 settings[evergreen_blocks] = 1
+settings[evergreen_ad_tracking] = 0
 
