@@ -170,6 +170,22 @@ function evergreen_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: image.
+  $styles['image'] = array(
+    'label' => 'Image',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 800,
+          'height' => 800,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: image_class.
   $styles['image_class'] = array(
     'label' => 'Image Class',

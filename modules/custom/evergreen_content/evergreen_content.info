@@ -795,6 +795,7 @@ features[filter][] = minimal_formatting
 features[filter][] = plain_text
 features[flag][] = catalog_save_list
 features[image][] = event_image__345px_wide_
+features[image][] = image
 features[image][] = image_class
 features[image][] = large__800px_wide_
 features[image][] = medium__500px_wide_
