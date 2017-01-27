@@ -14718,10 +14718,7 @@ function evergreen_content_field_default_field_instances() {
   t('This field may be used in lists and other summaries.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
-<<<<<<< HEAD
   t('This image may be used in lists of stories.');
-=======
->>>>>>> f1be970... Adds better faculty picker to faculty notes
   t('This image will be displayed at the top of your article.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.');
