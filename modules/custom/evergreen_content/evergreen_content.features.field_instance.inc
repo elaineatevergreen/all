@@ -9611,7 +9611,7 @@ function evergreen_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -9621,7 +9621,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'faculty_updates',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Pick the faculty members who were involved in this news. Names will be displayed in alphabetical order by last name and will appear as shown in the college directory.',
+    'description' => 'Start typing a person\'s name to search the faculty directory. Names will appear as shown in the college directory.',
     'display' => array(
       'contact_block' => array(
         'label' => 'above',
@@ -9666,12 +9666,12 @@ function evergreen_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'ul',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_faculty',
     'label' => 'Faculty',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -9682,7 +9682,7 @@ function evergreen_content_field_default_field_instances() {
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete_tags',
+      'type' => 'entityreference_autocomplete',
       'weight' => 1,
     ),
     'workbench_access_field' => 0,
@@ -9747,7 +9747,7 @@ function evergreen_content_field_default_field_instances() {
       'file_directory' => 'files/faculty-news',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '500x500',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -9774,7 +9774,7 @@ function evergreen_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -14691,6 +14691,7 @@ function evergreen_content_field_default_field_instances() {
   t('Square Portrait');
   t('Staff Page');
   t('Staff and Faculty Members');
+  t('Start typing a person\'s name to search the faculty directory. Names will appear as shown in the college directory.');
   t('Status Date');
   t('Students, Trustees, members of the public, etc.');
   t('Study Abroad');
@@ -14717,8 +14718,6 @@ function evergreen_content_field_default_field_instances() {
   t('This field may be used in lists and other summaries.');
   t('This image appears in the background/header off all pages in this section and provides a visual cue. If not uploaded here, a default image will appear instead.');
   t('This image may be used along with descriptions of the group. FWIW, group photos of people standing together looking at the camera are kinda boring.');
-  t('This image may be used in lists of stories.');
-  t('This image will be displayed at the top of your article.');
   t('This information only needs to be added to items that appear on the Academic Calendar at a Glance.');
   t('This is always the same as the office\'s name, ie the node title. But duplicated here for consistent ordering in directories.');
   t('This is an alternative for the field collection version of describing a graduate\'s degree, primarily for the initial import from the alumni directories.');
