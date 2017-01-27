@@ -11982,6 +11982,77 @@ False|',
   $handler->display->display_options['filters']['field_last_name_value']['field'] = 'field_last_name_value';
   $handler->display->display_options['filters']['field_last_name_value']['operator'] = 'longerthan';
   $handler->display->display_options['filters']['field_last_name_value']['value'] = '0';
+
+  /* Display: Faculty Picker */
+  $handler = $view->new_display('entityreference', 'Faculty Picker', 'faculty_picker');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name_1' => 'field_last_name_1',
+    'field_cas_name' => 'field_cas_name',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_first_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_first_name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_first_name']['field_api_classes'] = TRUE;
+  /* Field: Content: Last name */
+  $handler->display->display_options['fields']['field_last_name_1']['id'] = 'field_last_name_1';
+  $handler->display->display_options['fields']['field_last_name_1']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['field'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name_1']['label'] = '';
+  $handler->display->display_options['fields']['field_last_name_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name_1']['alter']['text'] = '[field_first_name] [field_last_name_1]';
+  $handler->display->display_options['fields']['field_last_name_1']['element_label_colon'] = FALSE;
+  /* Field: Content: CAS name */
+  $handler->display->display_options['fields']['field_cas_name']['id'] = 'field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['table'] = 'field_data_field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['field'] = 'field_cas_name';
+  $handler->display->display_options['fields']['field_cas_name']['label'] = '';
+  $handler->display->display_options['fields']['field_cas_name']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_cas_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cas_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_cas_name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_cas_name']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'directory_individual' => 'directory_individual',
+  );
+  /* Filter criterion: Content: Is Faculty (field_is_faculty) */
+  $handler->display->display_options['filters']['field_is_faculty_value']['id'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['table'] = 'field_data_field_is_faculty';
+  $handler->display->display_options['filters']['field_is_faculty_value']['field'] = 'field_is_faculty_value';
+  $handler->display->display_options['filters']['field_is_faculty_value']['value'] = array(
+    1 => '1',
+  );
   $export['directory'] = $view;
 
   $view = new view();
