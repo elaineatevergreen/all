@@ -295,6 +295,12 @@ function evergreen_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'views-faculty_update-block' => array(
+          'module' => 'views',
+          'delta' => 'faculty_update-block',
+          'region' => 'secondary_content',
+          'weight' => '-10',
+        ),
         'bean-section-background-directory' => array(
           'module' => 'bean',
           'delta' => 'section-background-directory',
