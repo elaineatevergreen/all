@@ -21,7 +21,7 @@
  * @ingroup views_templates
  */
  
-$hiddenfields = array('field_academic_year','field_quarters_open','field_quarters_signature','field_quarters_conditional');
+$hiddenfields = array('field_academic_year','field_quarters_open','field_quarters_signature','field_quarters_closed');
  
 ?>
 <table <?php if ($classes) { print 'class="'. $classes . '" '; } ?><?php print $attributes; ?>>
@@ -73,12 +73,12 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 			$quartersoffered = explode(',', $row['field_quarters_offered']);
 			$quarterssig = explode(',', $row['field_quarters_signature']);
 			$quartersopen = explode(',', $row['field_quarters_open']);
-			$quarterscond = explode(',', $row['field_quarters_conditional']);
+			$quartersclosed = explode(',', $row['field_quarters_closed']);
 			foreach($quartersoffered as $key => $value) {
 				if(in_array($value, $quarterssig)) { 
 					$quartersoffered[$key] = '<abbr title="signature required">' . $value . '&nbsp;(S)</abbr>';
 				};
-				if(!in_array($value, $quartersopen) and !in_array($value, $quarterssig) and !in_array($value, $quarterscond)) { 
+				if(in_array($value, $quartersclosed)) { 
 					$quartersoffered[$key] = '<abbr title="enrollment closed">' . $value . '&nbsp;(C)</abbr>'; 
 				};
 			};
