@@ -5844,14 +5844,17 @@ False|',
   $handler->display->display_options['fields']['field_faculty_name_search']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_faculty_name_search']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_faculty_name_search']['element_default_classes'] = FALSE;
-  /* Field: Content: Quarters Conditional */
-  $handler->display->display_options['fields']['field_quarters_conditional']['id'] = 'field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['table'] = 'field_data_field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['field'] = 'field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_quarters_conditional']['delta_offset'] = '0';
+  /* Field: Content: Quarters Closed */
+  $handler->display->display_options['fields']['field_quarters_closed']['id'] = 'field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['table'] = 'field_data_field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['field'] = 'field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['label'] = '';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_closed']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_closed']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_quarters_closed']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Academic Year (field_academic_year) */
   $handler->display->display_options['sorts']['field_academic_year_value']['id'] = 'field_academic_year_value';
   $handler->display->display_options['sorts']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
@@ -6555,6 +6558,15 @@ False|',
   $handler->display->display_options['fields']['field_quarters_signature']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_quarters_signature']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_quarters_signature']['separator'] = ',';
+  /* Field: Content: Quarters Closed */
+  $handler->display->display_options['fields']['field_quarters_closed']['id'] = 'field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['table'] = 'field_data_field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['field'] = 'field_quarters_closed';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_closed']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_quarters_closed']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_quarters_closed']['delta_offset'] = '0';
   /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -6587,14 +6599,6 @@ False|',
   $handler->display->display_options['fields']['field_faculty_name_search']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_faculty_name_search']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_faculty_name_search']['element_default_classes'] = FALSE;
-  /* Field: Content: Quarters Conditional */
-  $handler->display->display_options['fields']['field_quarters_conditional']['id'] = 'field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['table'] = 'field_data_field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['field'] = 'field_quarters_conditional';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_quarters_conditional']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_quarters_conditional']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'catalog/index';
 
   /* Display: Offerings by Field */

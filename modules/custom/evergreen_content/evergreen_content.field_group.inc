@@ -1951,6 +1951,8 @@ function evergreen_content_field_group_info() {
       8 => 'field_spring_registration',
       9 => 'field_quarters_signature',
       10 => 'field_quarters_conditional',
+      11 => 'field_quarters_closed',
+      12 => 'field_summer_registration',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
