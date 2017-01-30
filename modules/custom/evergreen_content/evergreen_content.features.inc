@@ -356,8 +356,8 @@ function evergreen_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'faculty_updates' => array(
-      'name' => t('Faculty Updates'),
+    'faculty_update' => array(
+      'name' => t('Faculty Update'),
       'base' => 'node_content',
       'description' => t('Use a <em>Faculty Update</em> to add news about things that one or more faculty have done that is of interest to other faculty, students, or the general public.'),
       'has_title' => '1',

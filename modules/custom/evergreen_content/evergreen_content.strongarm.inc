@@ -20,6 +20,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_faculty_update';
+  $strongarm->value = '2';
+  $export['auto_entitylabel_node_faculty_update'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_node_profile';
   $strongarm->value = '1';
   $export['auto_entitylabel_node_profile'] = $strongarm;
@@ -27,9 +34,23 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_faculty_update';
+  $strongarm->value = '[node:created:month_year]';
+  $export['auto_entitylabel_pattern_node_faculty_update'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_profile';
   $strongarm->value = '[node:field-first-name] [node:field-last-name]';
   $export['auto_entitylabel_pattern_node_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_faculty_update';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -838,6 +859,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_basic_page';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_enable_revisions_page_node_blurb';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_blurb'] = $strongarm;
@@ -869,6 +897,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'diff_enable_revisions_page_node_event';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_faculty_update';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -978,6 +1013,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_basic_page';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_blurb';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_blurb'] = $strongarm;
@@ -1009,6 +1051,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'diff_show_preview_changes_node_event';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_faculty_update';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1118,6 +1167,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_basic_page';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_view_mode_preview_node_blurb';
   $strongarm->value = 'full';
   $export['diff_view_mode_preview_node_blurb'] = $strongarm;
@@ -1149,6 +1205,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'diff_view_mode_preview_node_event';
   $strongarm->value = 'full';
   $export['diff_view_mode_preview_node_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_faculty_update';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1451,10 +1514,16 @@ function evergreen_content_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '8',
+        ),
+        'metatags' => array(
+          'weight' => '11',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -1922,6 +1991,72 @@ function evergreen_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__faculty_update';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact_row' => array(
+        'custom_settings' => FALSE,
+      ),
+      'faculty_blurb' => array(
+        'custom_settings' => FALSE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '7',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '4',
+        ),
+        'redirect' => array(
+          'weight' => '6',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2760,6 +2895,15 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_faculty_update';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_faculty_update'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_faculty_updates';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -2955,6 +3099,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'menu_parent_faculty_news';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_faculty_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_faculty_update';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3184,6 +3335,17 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_faculty_update';
+  $strongarm->value = array(
+    0 => 'promote',
+    1 => 'moderation',
+    2 => 'revision',
+  );
+  $export['node_options_faculty_update'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_faculty_updates';
   $strongarm->value = array(
     0 => 'promote',
@@ -3398,6 +3560,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_faculty_update';
+  $strongarm->value = '0';
+  $export['node_preview_faculty_update'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_faculty_updates';
   $strongarm->value = '0';
   $export['node_preview_faculty_updates'] = $strongarm;
@@ -3562,6 +3731,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'node_submitted_faculty_news';
   $strongarm->value = 1;
   $export['node_submitted_faculty_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_faculty_update';
+  $strongarm->value = 1;
+  $export['node_submitted_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -3744,6 +3920,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'pathauto_node_faculty_updates_pattern';
   $strongarm->value = 'faculty/news/[node:title]';
   $export['pathauto_node_faculty_updates_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_faculty_update_pattern';
+  $strongarm->value = 'faculty/news/[node:title]';
+  $export['pathauto_node_faculty_update_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -4824,6 +5007,100 @@ function evergreen_content_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_alumni_circles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_basic_page';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_faculty_update';
+  $strongarm->value = array(
+    'entity' => 'node',
+    'bundle' => 'faculty_updates',
+    'info' => array(
+      'label' => 'Faculty Updates',
+      'admin' => array(
+        'path' => 'admin/structure/types/manage/%node_type',
+        'real path' => 'admin/structure/types/manage/faculty-updates',
+        'bundle argument' => 4,
+        'access arguments' => array(
+          0 => 'administer content types',
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'sioc:Item',
+          1 => 'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            0 => 'dc:date',
+            1 => 'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            0 => 'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            0 => 'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            0 => 'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            0 => 'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            0 => 'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'xmlsitemap' => array(
+        'entity' => 'node',
+        'bundle' => 'faculty_updates',
+        'status' => '1',
+        'priority' => '0.5',
+      ),
+    ),
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
