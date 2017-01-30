@@ -1013,6 +1013,13 @@ function evergreen_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_basic_page';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_blurb';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_blurb'] = $strongarm;
@@ -1156,6 +1163,13 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'diff_view_mode_preview_node_article';
   $strongarm->value = 'full';
   $export['diff_view_mode_preview_node_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_basic_page';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_basic_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1307,7 +1321,12 @@ function evergreen_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
-    'file' => array(),
+    'file' => array(
+      'image_full_width' => array(
+        'label' => 'Image Full-Width',
+        'custom settings' => 1,
+      ),
+    ),
     'field_collection_item' => array(
       'summary' => array(
         'label' => 'Summary',
@@ -4988,6 +5007,100 @@ function evergreen_content_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_alumni_circles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_basic_page';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_faculty_update';
+  $strongarm->value = array(
+    'entity' => 'node',
+    'bundle' => 'faculty_updates',
+    'info' => array(
+      'label' => 'Faculty Updates',
+      'admin' => array(
+        'path' => 'admin/structure/types/manage/%node_type',
+        'real path' => 'admin/structure/types/manage/faculty-updates',
+        'bundle argument' => 4,
+        'access arguments' => array(
+          0 => 'administer content types',
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'sioc:Item',
+          1 => 'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            0 => 'dc:date',
+            1 => 'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            0 => 'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            0 => 'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            0 => 'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            0 => 'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            0 => 'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'xmlsitemap' => array(
+        'entity' => 'node',
+        'bundle' => 'faculty_updates',
+        'status' => '1',
+        'priority' => '0.5',
+      ),
+    ),
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_faculty_update'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

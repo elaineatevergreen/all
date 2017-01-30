@@ -9837,7 +9837,7 @@ False|',
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -12895,7 +12895,7 @@ False|',
 
   $view = new view();
   $view->name = 'fields_of_study_taxonomy_';
-  $view->description = '';
+  $view->description = 'Content layout for fields of study pages, and so much more.';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Fields of Study (taxonomy)';
@@ -13188,7 +13188,29 @@ False|',
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Parent term */
+  $handler->display->display_options['relationships']['parent']['id'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['relationships']['parent']['field'] = 'parent';
+  /* Relationship: Field: Related Subjects (Directory) (field_related_subjects_directory) */
+  $handler->display->display_options['relationships']['field_related_subjects_directory_tid']['id'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['relationships']['field_related_subjects_directory_tid']['table'] = 'field_data_field_related_subjects_directory';
+  $handler->display->display_options['relationships']['field_related_subjects_directory_tid']['field'] = 'field_related_subjects_directory_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Term ID for the related directory subject */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['relationship'] = 'field_related_subjects_directory_tid';
+  $handler->display->display_options['fields']['tid']['ui_name'] = 'Term ID for the related directory subject';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_type'] = '0';
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Recent Student Projects */
   $handler->display->display_options['fields']['field_recent_student_projects']['id'] = 'field_recent_student_projects';
   $handler->display->display_options['fields']['field_recent_student_projects']['table'] = 'field_data_field_recent_student_projects';
@@ -13205,7 +13227,7 @@ False|',
   $handler->display->display_options['fields']['field_related_subjects_directory']['field'] = 'field_related_subjects_directory';
   $handler->display->display_options['fields']['field_related_subjects_directory']['label'] = 'Faculty';
   $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = 'See faculty who teach in <a href="/faculty?subject=[field_related_subjects_directory]">[field_related_subjects_directory]</a>.';
+  $handler->display->display_options['fields']['field_related_subjects_directory']['alter']['text'] = 'See faculty who teach in <a href="/faculty?subject=[tid]">[field_related_subjects_directory]</a>.';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_type'] = '0';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_related_subjects_directory']['element_label_colon'] = FALSE;
