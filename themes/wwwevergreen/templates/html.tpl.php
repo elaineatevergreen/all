@@ -103,5 +103,11 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php
 	  print $scripts;  // Include scripts from the theme .info file.
   ?>
+  <?php 
+	  //any site-wide ad tracking scripts go here. this allows them to be turned off for service center, test, or local sites.
+	  if(theme_get_setting('evergreen_ad_tracking')) { ?>
+  <!-- reach local tracking script -->
+  <script type="text/javascript">var rl_siteid = "6ab3611f-6d7c-4500-9c31-c90eb2895e4a";</script><script type="text/javascript" src="//cdn.rlets.com/capture_static/mms/mms.js" async="async"></script>
+  <?php }; ?>
 </body>
 </html>
