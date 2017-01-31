@@ -16,7 +16,7 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Basic tags',
     'cache' => 0,
     'status' => 1,
-    'weight' => -8,
+    'weight' => -10,
     'filters' => array(
       'media_filter' => array(
         'weight' => -49,
@@ -58,7 +58,7 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Extended tags',
     'cache' => 0,
     'status' => 1,
-    'weight' => -10,
+    'weight' => -9,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
@@ -100,7 +100,7 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 0,
     'status' => 1,
-    'weight' => -9,
+    'weight' => -8,
     'filters' => array(
       'insert_view' => array(
         'weight' => 0,
