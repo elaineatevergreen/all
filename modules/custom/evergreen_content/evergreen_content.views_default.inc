@@ -3720,6 +3720,26 @@ return($term); ';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Location: Off Campus */
+  $handler->display->display_options['fields']['field_location_off_campus']['id'] = 'field_location_off_campus';
+  $handler->display->display_options['fields']['field_location_off_campus']['table'] = 'field_data_field_location_off_campus';
+  $handler->display->display_options['fields']['field_location_off_campus']['field'] = 'field_location_off_campus';
+  $handler->display->display_options['fields']['field_location_off_campus']['label'] = '';
+  $handler->display->display_options['fields']['field_location_off_campus']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_location_off_campus']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_location_off_campus']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_location_off_campus']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_location_off_campus']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_location_off_campus']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_location_off_campus']['settings'] = array(
+    'use_widget_handlers' => 0,
+    'format_handlers' => array(
+      'address-hide-postal-code' => 'address-hide-postal-code',
+      'address-hide-country' => 'address-hide-country',
+      'organisation' => 'organisation',
+    ),
+  );
+  $handler->display->display_options['fields']['field_location_off_campus']['field_api_classes'] = TRUE;
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
