@@ -380,7 +380,8 @@ function evergreen_content_field_group_info() {
       7 => 'field_fields_of_study',
       8 => 'field_preparatory_for',
       9 => 'field_offering_status',
-      10 => 'title',
+      10 => 'field_credits',
+      11 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -849,7 +850,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
@@ -1879,7 +1880,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prerequisites',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_prerequisites',
     ),
@@ -1951,6 +1952,8 @@ function evergreen_content_field_group_info() {
       8 => 'field_spring_registration',
       9 => 'field_quarters_signature',
       10 => 'field_quarters_conditional',
+      11 => 'field_quarters_closed',
+      12 => 'field_summer_registration',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

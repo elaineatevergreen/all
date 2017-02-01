@@ -1,5 +1,11 @@
 /**
- * Icons
+ * I. Icons
+ *
+ * Table of Contents
+ *
+ * 1. Inline Icons
+ * 2. Related Nav (aka The Transporter)
+ * 3. Progress, Loaders, and Throbbers
  */
 
 /**
@@ -108,4 +114,41 @@
 		transition: transform 0.1s ease;
 		// miscellaneous
 	}
+}
+
+/**
+ * 3. Progress, Loaders, and Throbbers
+ */
+/**
+ * AJAX Loader
+ *
+ * The ajax loader module provides you alternatives to the default Drupal
+ * core AJAX throbber. When this module is configured, it overrides the
+ * default Drupal throbber. (The custom throbbers are pure CSS.)
+ *
+ * See: https://www.drupal.org/project/ajax_loader
+ */
+div.ajax-progress {
+  background: rgba(0,0,0,0.8);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+}
+
+div.throbber {
+  background: url("/sites/all/themes/wwwevergreen/images/icons/fading-line.gif") no-repeat scroll 50% 50%;
+  background-color: transparent;
+  border-radius: 0px;
+  height: 32px;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  width: 32px;
+  z-index: 9999;
 }
