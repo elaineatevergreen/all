@@ -3862,6 +3862,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-catalog_entry-field_quarters_offered'] = array(
     'bundle' => 'catalog_entry',
     'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3881,6 +3882,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_quarters_offered',
     'label' => 'Quarters Offered',
     'required' => 0,
@@ -3902,6 +3904,7 @@ function evergreen_content_field_default_field_instances() {
   $field_instances['node-catalog_entry-field_quarters_open'] = array(
     'bundle' => 'catalog_entry',
     'default_value' => NULL,
+    'default_value_label_token' => 0,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -3920,6 +3923,7 @@ function evergreen_content_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_quarters_open',
     'label' => 'Quarters Open',
     'required' => 0,
