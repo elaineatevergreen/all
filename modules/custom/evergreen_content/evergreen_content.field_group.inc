@@ -380,7 +380,8 @@ function evergreen_content_field_group_info() {
       7 => 'field_fields_of_study',
       8 => 'field_preparatory_for',
       9 => 'field_offering_status',
-      10 => 'title',
+      10 => 'field_credits',
+      11 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
