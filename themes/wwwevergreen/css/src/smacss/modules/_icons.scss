@@ -128,27 +128,40 @@
  *
  * See: https://www.drupal.org/project/ajax_loader
  */
-div.ajax-progress {
-  background: rgba(0,0,0,0.8);
+div.ajax-progress{
+	// box model
   height: 100%;
+  width: 100%;
+	// layout
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 9998;
+	// decoration
+  background: transparentize($shade, 0.2);
 }
 
-div.throbber {
-  background: url("/sites/all/themes/wwwevergreen/images/icons/fading-line.gif") no-repeat scroll 50% 50%;
-  background-color: transparent;
-  border-radius: 0px;
+@keyframes spinner{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.ajax-progress .throbber{
+	// box model
   height: 32px;
-  left: 50%;
   margin-left: -16px;
   margin-top: -16px;
   padding: 10px;
+  width: 32px;
+	// layout
+  left: 50%;
   position: fixed;
   top: 50%;
-  width: 32px;
   z-index: 9999;
+	// decoration
+  background: transparent url("/sites/all/themes/wwwevergreen/images/icons/spinner.svg") no-repeat scroll 50% 50%;
+  border-radius: 0px;
+  // behavior
+  animation: spinner .6s linear infinite;
 }
