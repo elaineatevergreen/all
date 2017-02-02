@@ -1000,6 +1000,21 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_credits'.
+  $field_bases['field_credits'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_credits',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_current_location'.
   $field_bases['field_current_location'] = array(
     'active' => 1,
@@ -3390,9 +3405,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3419,9 +3432,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3448,9 +3459,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3477,9 +3486,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
