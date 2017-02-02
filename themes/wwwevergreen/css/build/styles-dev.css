@@ -4986,29 +4986,43 @@ ul.accordion-inner {
  */
 /* line 131, ../src/smacss/modules/_icons.scss */
 div.ajax-progress {
-  background: rgba(0, 0, 0, 0.8);
   height: 100%;
+  width: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 9998;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* line 141, ../src/smacss/modules/_icons.scss */
-div.throbber {
-  background: url("/sites/all/themes/wwwevergreen/images/icons/fading-line.gif") no-repeat scroll 50% 50%;
-  background-color: transparent;
-  border-radius: 0px;
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/* line 150, ../src/smacss/modules/_icons.scss */
+.ajax-progress .throbber {
   height: 32px;
-  left: 50%;
   margin-left: -16px;
   margin-top: -16px;
   padding: 10px;
+  width: 32px;
+  left: 50%;
   position: fixed;
   top: 50%;
-  width: 32px;
   z-index: 9999;
+  background: transparent url("/sites/all/themes/wwwevergreen/images/icons/spinner.svg") no-repeat scroll 50% 50%;
+  border-radius: 0px;
+  -webkit-animation: spinner .6s linear infinite;
+          animation: spinner .6s linear infinite;
 }
 
 /**
