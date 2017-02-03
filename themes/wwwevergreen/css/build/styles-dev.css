@@ -5885,7 +5885,7 @@ p.alert {
  */
 /* line 117, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
-  max-height: 480px;
+  height: 600px;
 }
 
 /**

@@ -115,7 +115,7 @@
  * Support: https://juicebox.net/forum/index.php
  */
 .primary-content-wrapper .juicebox-parent{
-	max-height: 480px;  // 30 * 16
+	height: 600px;  // 30 * 20  - FYI, max-height doesn't work here
 }
 
 /**
