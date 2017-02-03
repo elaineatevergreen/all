@@ -1,19 +1,8 @@
-				<div class="do-not-print unit-3-7">
-					<p class="footer-map">
-						<a href="http://evergreen.edu/tour">
-							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-land-cover.jpg"/>
-						</a><br/>
-						<small>&#169;
-							<abbr title="Washington">WA</abbr> <abbr title="Department">Dept.</abbr> of&nbsp;Ecology
-						</small>
-					</p>
+				<div class="do-not-print unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
 							<a href="http://evergreen.edu/employment">Jobs at Evergreen</a>
 						</li>
-						<!--<li>
-							<a href="http://evergreen.edu/give">Give to Evergreen</a>
-						</li>-->
 						<li>
 							<a href="http://evergreen.edu/tour">Tours and Maps</a>
 						</li>
@@ -48,9 +37,21 @@
 							</ul>
 						</li>
 					</ul>
-				</div><!-- /.do-not-print.unit-3-7 -->
-				<div class="unit-2-7">
-					<div class="base vcard">
+				</div><!-- /.do-not-print.unit-1-5 -->
+				<div class="do-not-print unit-1-5">
+					<!-- This column left intentionally blank. -->
+				</div>
+				<div class="unit-1-5">
+					<p class="footer-map">
+						<a href="http://evergreen.edu/tour">
+							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-land-cover.jpg"/>
+						</a><br/>
+						<small>
+							©
+							<abbr title="Washington">WA</abbr> <abbr title="Department">Dept.</abbr> of&nbsp;Ecology
+						</small>
+					</p>
+					<div class="vcard">
 						<div class="fn org">The&nbsp;Evergreen State&nbsp;College</div>
 						<div class="adr">
 							<div class="street-address">2700 Evergreen Parkway&nbsp;NW</div>
@@ -65,20 +66,35 @@
 							<a href="http://evergreen.edu/directory">Phone &amp; Email Directories</a>
 						</div>
 					</div><!-- /.vcard -->
-				</div><!-- /.unit-2-7 -->
-				<div class="unit-2-7">
+				</div><!-- /.unit-1-5 -->
+				<div class="do-not-print unit-1-5">
+					<!-- This column left intentionally blank. -->
+				</div>
+				<div class="unit-1-5">
 					<ul class="element-list text-list-alt">
+						<li class="do-not-print">
+							<p>
+								<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a>
+								<small>(Includes alerts about delays and closures.)</small>
+							</p>
+						</li>
+						<li class="do-not-print">
+							<p>
+								<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
+							</p>
+						</li>
 						<li>
-							<div class="copyright">©
+							<p class="copyright">
+								©
 								<?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College
-							</div>
+							</p>
 						</li>
-						<li class="do-not-print">
-							<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a>
-							<small>(Includes alerts about delays and closures.)</small>
-						</li>
-						<li class="do-not-print">
-							<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
-						</li>
-					</ul>
-				</div><!--/.unit-2-7-->
+					</ul><!-- /.element-list.text-list-alt -->
+				</div><!--/.unit-1-5-->
+				<div class="unit-1-1">
+					<div class="motto-footer">
+						<p>
+							<i>—Omnia Extares—</i>
+						</p>
+					</div>
+				</div>
