@@ -5879,6 +5879,16 @@ p.alert {
 }
 
 /**
+ * Juicebox Gallery
+ *
+ * Support: https://juicebox.net/forum/index.php
+ */
+/* line 117, ../src/smacss/modules/_images.scss */
+.primary-content-wrapper .juicebox-parent {
+  max-height: 480px;
+}
+
+/**
  * Badges
  *
  * Logos, labels, and stickers that are not necessarily
