@@ -19,18 +19,32 @@ theme for individual person pages
     
     <?php if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { ?>
 	    
+	    <?php print render($content['body']) ?>
+	    
+	    <?php 
+		    if(isset($content['field_background'])) {
+			    print "<p>" . render($content['field_background']) . "</p>";
+		    };
+		    
+		    if(isset($content['field_expertise'])) {
+			    print "<p>" . render($content['field_expertise']) . "</p>";
+		    };
+		    
+		    if(isset($content['field_interests'])) {
+			    print "<p>" . render($content['field_interests']) . "</p>";
+		    };
+		    
+		    
+		?>
+
 	    
 	    
-	    <?php print render($content['field_background']) ?>
-	    
-	    <?php print render($content['field_expertise']) ?>
-	    
-	    
-	    <?php print render($content['field_interests']) ?>
-	    
+	    <?php if (isset($content['field_related_subjects_directory'])) { ?>
 	    <h2>Related Subject Areas</h2>
 	    
 	    <?php print render($content['field_related_subjects_directory']) ?>
+	    <?php }; ?>
+	    
 	    
 	    
 	<?php }; ?>
@@ -40,7 +54,16 @@ theme for individual person pages
 
   <div>
     <h2><span>Contact Information</span></h2>
-    <?php if (isset($content['group_contact']['field_email'])) { ?>
+    <?php 
+	    if(isset($content['field_website'])) {
+		?>
+        <div>
+          <span class="field-label">Website:</span>
+          <span class="field-website"><?php print render($content['field_website']) ?></span>
+      </div>
+      <?php };
+	    
+	    if (isset($content['group_contact']['field_email'])) { ?>
     <div>
       <span class="field-label">Email:</span>
       <span class="field-email">

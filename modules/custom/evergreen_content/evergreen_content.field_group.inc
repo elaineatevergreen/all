@@ -1085,6 +1085,7 @@ function evergreen_content_field_group_info() {
       4 => 'field_related_subjects_directory',
       5 => 'field_faculty_directory_subject_',
       6 => 'field_planning_unit_puc',
+      7 => 'body',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

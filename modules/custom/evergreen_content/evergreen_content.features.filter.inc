@@ -34,7 +34,7 @@ function evergreen_content_filter_default_formats() {
         'weight' => -47,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <figure> <figcaption> <table> <tr> <th><td><tbody><thead><aside><pre><br><iframe><!--',
+          'allowed_html' => '<a> <aside> <blockquote> <br> <code> <cite> <div> <em> <figcaption> <figure> <h2> <h3> <h4> <iframe> <img> <li> <ol> <p> <pre> <q> <span> <strong> <table> <tbody> <td> <th> <thead> <tr> <ul> <!--',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
@@ -64,7 +64,7 @@ function evergreen_content_filter_default_formats() {
         'weight' => -10,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <figure> <figcaption> <table> <tr> <th><td><tbody><thead><aside><pre><br><iframe><form><input><section><button><!--',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <figcaption> <figure> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <pre> <q> <table> <tbody> <td> <th> <thead> <tr> <aside><br><iframe><form><input><section><button><!--',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
