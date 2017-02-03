@@ -7,7 +7,7 @@ Redirect 301 /webmail https://webmail.evergreen.edu/owa
 Redirect 301 /kaos http://kaosradio.org/
 Redirect 301 /athletics http://www.gogeoducks.com/
 Redirect 301 /athletic.htm    http://www.gogeoducks.com/
-Redirect 301 /bookstore http://www.greenerstore.org/
+Redirect 301 /bookstore https://www.evergreen-greener-bookstore.com/
 Redirect 301 /greenerstore http://www.greenerstore.org/
 Redirect 301 /guestcoda http://www.myinterfase.com/evergreen/student
 Redirect 301 /crc https://apm.activecommunities.com/evergreengeoducks/Home
