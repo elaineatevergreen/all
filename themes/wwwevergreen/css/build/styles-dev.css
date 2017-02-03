@@ -1784,6 +1784,12 @@ a:link,
 .unit-1-5 {
   width: 100%;
 }
+@media screen and (min-width: 32em) {
+  /* line 140, ../src/smacss/layout/_grid.scss */
+  .unit-1-5 {
+    width: 66.6666666667%;
+  }
+}
 @media screen and (min-width: 70em) {
   /* line 140, ../src/smacss/layout/_grid.scss */
   .unit-1-5 {
@@ -1791,139 +1797,139 @@ a:link,
   }
 }
 
-/* line 148, ../src/smacss/layout/_grid.scss */
+/* line 152, ../src/smacss/layout/_grid.scss */
 .unit-1-6 {
   width: 100%;
 }
 @media screen and (min-width: 20em) {
-  /* line 148, ../src/smacss/layout/_grid.scss */
+  /* line 152, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 50%;
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 148, ../src/smacss/layout/_grid.scss */
+  /* line 152, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 148, ../src/smacss/layout/_grid.scss */
+  /* line 152, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 16.666666666667%;
   }
 }
 
-/* line 165, ../src/smacss/layout/_grid.scss */
+/* line 169, ../src/smacss/layout/_grid.scss */
 .unit-1-6-alt {
   width: 50%;
 }
 @media screen and (min-width: 20em) {
-  /* line 165, ../src/smacss/layout/_grid.scss */
+  /* line 169, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 165, ../src/smacss/layout/_grid.scss */
+  /* line 169, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 25%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 165, ../src/smacss/layout/_grid.scss */
+  /* line 169, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 16.666666666667%;
   }
 }
 
-/* line 183, ../src/smacss/layout/_grid.scss */
+/* line 187, ../src/smacss/layout/_grid.scss */
 .unit-1-7 {
   width: 100%;
 }
 @media screen and (min-width: 20em) {
-  /* line 183, ../src/smacss/layout/_grid.scss */
+  /* line 187, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 50%;
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 183, ../src/smacss/layout/_grid.scss */
+  /* line 187, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 183, ../src/smacss/layout/_grid.scss */
+  /* line 187, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 14.285714285714%;
   }
 }
 
-/* line 201, ../src/smacss/layout/_grid.scss */
+/* line 205, ../src/smacss/layout/_grid.scss */
 .unit-2-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 201, ../src/smacss/layout/_grid.scss */
+  /* line 205, ../src/smacss/layout/_grid.scss */
   .unit-2-7 {
     width: 28.571428571429%;
   }
 }
 
-/* line 211, ../src/smacss/layout/_grid.scss */
+/* line 215, ../src/smacss/layout/_grid.scss */
 .unit-3-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 211, ../src/smacss/layout/_grid.scss */
+  /* line 215, ../src/smacss/layout/_grid.scss */
   .unit-3-7 {
     width: 42.857142857143%;
   }
 }
 
-/* line 221, ../src/smacss/layout/_grid.scss */
+/* line 225, ../src/smacss/layout/_grid.scss */
 .unit-4-7 {
   padding-right: 1em;
   padding-left: 0;
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/layout/_grid.scss */
+  /* line 225, ../src/smacss/layout/_grid.scss */
   .unit-4-7 {
     width: 80%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 221, ../src/smacss/layout/_grid.scss */
+  /* line 225, ../src/smacss/layout/_grid.scss */
   .unit-4-7 {
     width: 57.142857142857%;
   }
 }
 
-/* line 238, ../src/smacss/layout/_grid.scss */
+/* line 242, ../src/smacss/layout/_grid.scss */
 .unit-5-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 238, ../src/smacss/layout/_grid.scss */
+  /* line 242, ../src/smacss/layout/_grid.scss */
   .unit-5-7 {
     width: 71.428571428571%;
   }
 }
 
-/* line 248, ../src/smacss/layout/_grid.scss */
+/* line 252, ../src/smacss/layout/_grid.scss */
 .unit-6-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 248, ../src/smacss/layout/_grid.scss */
+  /* line 252, ../src/smacss/layout/_grid.scss */
   .unit-6-7 {
     width: 85.714285714286%;
   }
 }
 
-/* line 257, ../src/smacss/layout/_grid.scss */
+/* line 261, ../src/smacss/layout/_grid.scss */
 .standalone-unit {
   padding: 0 1em;
 }
@@ -1934,7 +1940,7 @@ a:link,
  * section @supplement
  */
 @media screen and (min-width: 32em) {
-  /* line 267, ../src/smacss/layout/_grid.scss */
+  /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -1944,7 +1950,7 @@ a:link,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 267, ../src/smacss/layout/_grid.scss */
+  /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -1952,7 +1958,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 267, ../src/smacss/layout/_grid.scss */
+  /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -1962,7 +1968,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 291, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1em;
     margin-left: 1em;
@@ -1971,14 +1977,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 291, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 291, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 1em;
     margin-left: calc(-25% - 2em);
@@ -1989,14 +1995,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 291, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-25% - 3em);
     width: calc((100% + 6em * 18 / 14) / 4);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 291, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -4175,34 +4181,46 @@ ul.accordion-inner {
 
 /* line 53, ../src/smacss/modules/_footer.scss */
 .footer-map {
-  margin-left: 1em;
-  width: 35%;
   display: block;
-  float: right;
-}
-@media screen and (min-width: 22em) {
-  /* line 53, ../src/smacss/modules/_footer.scss */
-  .footer-map {
-    width: 50%;
-    max-width: 280px;
-  }
 }
 
-/* line 67, ../src/smacss/modules/_footer.scss */
+/* line 58, ../src/smacss/modules/_footer.scss */
+.footer-map img {
+  max-height: calc(150 / 16 * 1rem);
+}
+
+/* line 62, ../src/smacss/modules/_footer.scss */
 .footer-map a {
   border-width: 0;
 }
 
-@media screen and (min-width: 43em) {
-  /* line 71, ../src/smacss/modules/_footer.scss */
-  .footer-map img {
-    max-height: 112.5px;
+/* line 66, ../src/smacss/modules/_footer.scss */
+.motto-footer p {
+  color: #242424;
+  text-align: center;
+}
+@media screen and (min-width: 20em) {
+  /* line 66, ../src/smacss/modules/_footer.scss */
+  .motto-footer p {
+    margin: calc(30 / 16 * 1rem) 0;
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+    letter-spacing: 0.3333333333ch;
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 66, ../src/smacss/modules/_footer.scss */
+  .motto-footer p {
+    font-size: 1.82rem;
+    line-height: 1.03007828594973;
   }
 }
 
-/* line 78, ../src/smacss/modules/_footer.scss */
-.school-contact {
-  margin: 0.535714285714286em 0 1.071428571428571em;
+/* line 85, ../src/smacss/modules/_footer.scss */
+.motto-footer i {
+  font-style: normal;
+  font-weight: bold;
 }
 
 /**
@@ -4394,9 +4412,9 @@ ul.accordion-inner {
 }*/
 /* line 80, ../src/smacss/modules/_lists.scss */
 .lineup > li img {
-  height: 3em;
+  height: 2.5em;
   margin: 0 1ch 1em 0;
-  width: 3em;
+  width: 2.5em;
   display: block;
 }
 @media screen and (min-width: 43em) {
