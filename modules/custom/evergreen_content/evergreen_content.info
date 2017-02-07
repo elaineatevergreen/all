@@ -646,6 +646,7 @@ features[field_instance][] = node-committee_page-field_reports
 features[field_instance][] = node-committee_page-field_short_description
 features[field_instance][] = node-committee_page-field_upcoming_deadlines
 features[field_instance][] = node-committee_page-field_web_page_reports
+features[field_instance][] = node-directory_individual-body
 features[field_instance][] = node-directory_individual-field_alternate_phone
 features[field_instance][] = node-directory_individual-field_background
 features[field_instance][] = node-directory_individual-field_building
