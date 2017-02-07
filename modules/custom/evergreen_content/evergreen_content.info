@@ -1290,6 +1290,7 @@ features[variable][] = workbench_moderation_default_state_student_group
 features[variable][] = workbench_moderation_default_state_webform
 features[variable][] = workbench_myworkbench_disabled
 features[variable][] = workbench_scheduler_article
+features[variable][] = xmlsitemap_settings_node_alert
 features[variable][] = xmlsitemap_settings_node_alumni_circles
 features[variable][] = xmlsitemap_settings_node_basic_page
 features[variable][] = xmlsitemap_settings_node_faculty_update
