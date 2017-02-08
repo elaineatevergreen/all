@@ -269,10 +269,10 @@
 	font-family: $monospace-face;
 }
 
-.main-content > p:last-child::after,
-.main-content > ul:last-child > li:last-child::after,
-.main-content > ol:last-child > li:last-child::after,
-.main-content > dl:last-child > dd:last-child::after{
+.main-content .content > p:last-child::after,
+.main-content .content > ul:last-child > li:last-child::after,
+.main-content .content > ol:last-child > li:last-child::after,
+.main-content .content > dl:last-child > dd:last-child::after{
 	white-space: nowrap;
 	content: "\00A0" url("/sites/all/themes/wwwevergreen/images/endnote.png");
 
