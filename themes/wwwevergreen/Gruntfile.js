@@ -32,6 +32,16 @@ module.exports = function(grunt) {
 					}
 				],
 			},
+			to_local: {
+			  files: [
+				  {
+					  cwd: 'css/dist/',
+					  expand: true,
+					  src: ['**'],
+			      dest: '../../../devdesktop/drupal-7.53/sites/all/themes/wwwevergreen/css/dist/',
+					},
+				],
+			},
 		  to_banner: {
 			  files: [
 				  {
