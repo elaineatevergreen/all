@@ -9,6 +9,9 @@ theme for individual person pages
 <!-- need to add back faculty information -->
     
     <div class="p-job-title"><?php print render($content['field_job_title']) ?></div>
+    <?php if(isset($content['field_department'])) { ?>
+    <p><?php print render($content['field_department']) ?></p>
+    <?php }; ?>
     
     <?php 
 	    if(isset($content['field_headshot'])) {
