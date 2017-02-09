@@ -9169,6 +9169,7 @@ False|',
     'title' => 'title',
     'title_1' => 'title_1',
     'field_reference' => 'field_reference',
+    'field_department' => 'field_reference',
     'field_job_title' => 'field_reference',
     'field_email' => 'field_email',
     'field_building_alt' => 'field_room',
@@ -9202,6 +9203,11 @@ False|',
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => ', ',
+      'empty_column' => 0,
+    ),
+    'field_department' => array(
+      'align' => '',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'field_job_title' => array(
@@ -9321,6 +9327,20 @@ False|',
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
   $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['alter']['text'] = ', [field_job_title]';
+  /* Field: Content: Office/Department */
+  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
+  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['label'] = '';
+  $handler->display->display_options['fields']['field_department']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_department']['field_api_classes'] = TRUE;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
@@ -10039,7 +10059,7 @@ False|',
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
@@ -10795,9 +10815,12 @@ False|',
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name_1' => 'field_last_name_1',
     'title' => 'title',
     'field_reference' => 'field_reference',
     'field_job_title' => 'field_reference',
+    'field_department' => 'field_reference',
     'field_related_offices' => 'field_related_offices',
     'field_facilities' => 'field_reference',
     'field_email' => 'field_email',
@@ -10813,6 +10836,20 @@ False|',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_first_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_last_name_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -10830,6 +10867,11 @@ False|',
     'field_job_title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_department' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -10974,6 +11016,19 @@ False|',
   $handler->display->display_options['fields']['field_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_job_title']['alter']['text'] = ', [field_job_title]';
   $handler->display->display_options['fields']['field_job_title']['element_label_colon'] = FALSE;
+  /* Field: Content: Office/Department */
+  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
+  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['label'] = '';
+  $handler->display->display_options['fields']['field_department']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
   /* Field: Content: Related Offices */
   $handler->display->display_options['fields']['field_related_offices']['id'] = 'field_related_offices';
   $handler->display->display_options['fields']['field_related_offices']['table'] = 'field_data_field_related_offices';
@@ -11465,10 +11520,16 @@ False|',
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_first_name' => 'field_first_name',
+    'field_last_name_1' => 'field_last_name_1',
     'title' => 'title',
     'field_reference' => 'field_reference',
     'field_job_title' => 'field_reference',
+    'field_department' => 'field_reference',
+    'field_related_offices' => 'field_reference',
+    'field_facilities' => 'field_reference',
     'field_email' => 'field_email',
+    'field_websites' => 'field_email',
     'field_building_alt' => 'field_room',
     'field_room' => 'field_room',
     'field_mailstop' => 'field_mailstop',
@@ -11477,12 +11538,23 @@ False|',
     'field_fax' => 'field_fax',
     'nothing' => 'nothing',
     'field_last_name' => 'field_last_name',
-    'field_websites' => 'field_email',
-    'field_facilities' => 'field_reference',
-    'field_related_offices' => 'field_reference',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_first_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_last_name_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -11504,9 +11576,29 @@ False|',
       'separator' => '',
       'empty_column' => 0,
     ),
+    'field_department' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_related_offices' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_facilities' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_email' => array(
       'align' => '',
       'separator' => '<br/>',
+      'empty_column' => 0,
+    ),
+    'field_websites' => array(
+      'align' => '',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'field_building_alt' => array(
@@ -11559,21 +11651,6 @@ False|',
     'field_last_name' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_websites' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_facilities' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_related_offices' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -11649,6 +11726,20 @@ False|',
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
   $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['alter']['text'] = ', [field_job_title]';
+  /* Field: Content: Office/Department */
+  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
+  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['label'] = '';
+  $handler->display->display_options['fields']['field_department']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_department']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_department']['field_api_classes'] = TRUE;
   /* Field: Content: Related Offices */
   $handler->display->display_options['fields']['field_related_offices']['id'] = 'field_related_offices';
   $handler->display->display_options['fields']['field_related_offices']['table'] = 'field_data_field_related_offices';
