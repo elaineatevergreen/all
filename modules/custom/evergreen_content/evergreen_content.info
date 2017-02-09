@@ -139,6 +139,7 @@ features[context][] = calendar
 features[context][] = calendar_academic
 features[context][] = calendar_home
 features[context][] = catalog
+features[context][] = catalog_grad
 features[context][] = catalog_index
 features[context][] = directories
 features[context][] = fields_of_study
