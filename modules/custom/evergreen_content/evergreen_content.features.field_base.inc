@@ -2424,6 +2424,31 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_internship_boolean'.
+  $field_bases['field_internship_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_internship_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_internship_opportunities'.
   $field_bases['field_internship_opportunities'] = array(
     'active' => 1,
@@ -3672,6 +3697,31 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_research_boolean'.
+  $field_bases['field_research_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_research_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_research_opportunities'.
   $field_bases['field_research_opportunities'] = array(
     'active' => 1,
@@ -4237,6 +4287,31 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_study_abroad_boolean'.
+  $field_bases['field_study_abroad_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_study_abroad_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_subjects_studied'.
   $field_bases['field_subjects_studied'] = array(
     'active' => 1,
@@ -4570,6 +4645,31 @@ function evergreen_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_upper_division_boolean'.
+  $field_bases['field_upper_division_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_upper_division_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_variable_credit_options'.

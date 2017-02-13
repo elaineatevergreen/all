@@ -110,6 +110,37 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_advanced|node|catalog_entry|form';
+  $field_group->group_name = 'group_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Advanced Opportunities',
+    'weight' => '48',
+    'children' => array(
+      0 => 'field_internship_boolean',
+      1 => 'field_research_boolean',
+      2 => 'field_study_abroad_boolean',
+      3 => 'field_upper_division_boolean',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-advanced field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_advanced|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_advanced|node|event|form';
   $field_group->group_name = 'group_advanced';
   $field_group->entity_type = 'node';
@@ -2346,6 +2377,7 @@ function evergreen_content_field_group_info() {
   t('About this Committee');
   t('Additional Names');
   t('Additional Settings');
+  t('Advanced Opportunities');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Archived Materials');
