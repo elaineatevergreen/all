@@ -5,7 +5,7 @@ case "$CI_BUILD_REF_NAME" in
   *test*)
     STAGE="test"
     export WWW_CODE='/var/www/wwwtest.evergreen.edu/htdocs'
-    export SITE_SUqFIX="test";
+    export SITE_SUFFIX="test";
     ;;
   *master*)
     STAGE="prod"
