@@ -103,7 +103,7 @@
 	font-variant-numeric: lining-nums;
 	
 	@include breakpoint($starlord){
-		justify-content: space-between;
+		justify-content: center;
 	}
 }
 
