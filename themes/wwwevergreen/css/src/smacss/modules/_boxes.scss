@@ -31,7 +31,7 @@ p.box,  // WYSIWYG
 	overflow: hidden;
 	// typography
 	color: mix($shade, $sky-blue, 66.667%);
-	// backgrounds & borders
+	// decoration
 	background-color: transparentize(mix(white, $sky-blue, 80%), 0.05);
 	background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	border-radius: 2px;

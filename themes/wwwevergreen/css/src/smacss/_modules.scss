@@ -407,6 +407,9 @@
 /**
  * R. Embeded Content
  */
+/**
+ * Lazy-load video by only embedding it after a static image is clicked.
+ */
 .lazy-load{
 	// box model
 	border-bottom-width: 0;

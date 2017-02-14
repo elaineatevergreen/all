@@ -139,6 +139,10 @@
 
 .unit-1-5{
 	width: 100%;
+	
+	@include breakpoint($starlord){
+		width: 66.6666666667%;
+	}
 
 	@include breakpoint($drax){
 		width: 20%;

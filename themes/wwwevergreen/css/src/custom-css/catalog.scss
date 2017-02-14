@@ -1,5 +1,25 @@
 @charset "UTF-8";
 
+/**
+ * Catalog
+ *
+ * Styles specific to the catalog pages.
+ *
+ * Table of Contents
+ *
+ *   I. Cascade Catalog - Deprecated
+ *  II. Program Pages - Deprecated
+ * III. Drupal Catalog
+ */
+
+/**
+ * I. Cascade Catalog - Deprecated
+ *
+ * These styles are specific to the catalog in Cascade, which we’re no
+ * longer using. If any of these styles are still in use, move them into
+ * the Drupal section, below.
+ */
+
 @import "../tools";
 
 .compare-box{
@@ -55,14 +75,14 @@
 		overflow: hidden;
 		// typography
 		text-align: center;
-		// backgrounds & borders
+		// decoration
 		background-color: mix($tint, $blueberry-susan, 90%);
 		border-radius: 2px;
 		// misc
 		box-shadow: 0 1px 1px $drop-shadow;
 
 		&.cancelled{
-			// backgrounds & borders
+			// decoration
 			background-color: $tint;
 			border-color: mix($tint, $blueberry-susan, 75%);
 			border-style: dashed;
@@ -149,9 +169,9 @@
 	float: left;
 }
 
-.title{
+/*.title{
 	margin: 0 2%;
-}
+}*/
 
 .program-title{
 	@media screen and (min-width: 55em){
@@ -328,51 +348,7 @@
 	}
 }
 
-.keyword-list ul > li{
-	// box model
-	margin: 0.234375rem 0;  //3.75px
-	// layout
-	display: inline-block;
-	// typography
-	color: $tint;
-}
-
-.keyword-list ul > li > a{
-	// box model
-	border-bottom-width: 0;
-	margin: 0 0.4375rem 0 0;  //7.5px
-	// layout
-	display: block;
-}
-
-.keyword-list ul > li > a:before{
-	content: "#";
-}
-
-.keyword-list ul > li > a:after{
-	@media print{
-		content: "";  // Hide appended URLs from print styles
-	}
-}
-
-.keyword-list ul > li > a,
-.keyword-list ul > li > a:visited{
-	// typography
-	color: mix($tint, $blueberry-susan, 50%);
-	font-weight: normal;
-}
-
-.keyword-list ul > li > a:hover{
-	color: mix($tint, $sky-blue, 66%);
-	background-color: $blueberry-susan;
-}
-
-.keyword-list ul > li:last-child > a{
-	margin-right: 0;
-}
-
 .cancelled{
-	opacity: 0.4;
 
 	.fall,
 	.winter,
@@ -399,9 +375,11 @@
 }
 
 /**
- * Program Pages
+ * II. Program Pages - Deprecated
  *
- * Styles for the detail pages for each of the individual programs.
+ * Styles for the detail pages for each of the individual programs. These
+ * styles are deprecated for now, though they may still be in use in the
+ * Drupal catalog. Double-check this and make the appropriate updates here.
  */
 
 .program-faculty{  // Deprecated; use .mini-bio-photo instead.
@@ -444,4 +422,201 @@
 	.course-index > tbody > tr{
 		page-break-inside: avoid;
 	}
+}
+
+/**
+ * III. Drupal Catalog
+ *
+ * Currently active catalog.
+ */
+
+.sticky-header{
+	visibility: hidden;
+	
+	@include breakpoint($gamora){
+		visibility: visible;
+	}
+}
+
+.view-catalog .views-table{  // The main catalog table
+	display: block;
+	
+	@include breakpoint($gamora){
+		display: table;
+	}
+}
+
+/*.view-catalog caption{
+	display: block;
+	
+	@include breakpoint($gamora){
+		display: table-caption;
+	}
+}*/
+
+.view-catalog tbody{
+	display: block;
+	
+	@include breakpoint($gamora){
+		display: table-row-group;
+	}
+}
+
+.view-catalog tr{
+	display: block;
+	
+	@include breakpoint($gamora){
+		display: table-row;
+	}
+}
+
+.view-catalog thead{
+	display: none;
+	
+	@include breakpoint($gamora){
+		display: table-row-group;
+	}
+}
+
+.view-catalog tr{
+	// box model
+	border-top: 1px solid $shade;
+	margin-bottom: calc(30 / 16 * 1rem);
+	padding-top: calc(15 / 16 * 1rem);
+	padding-left: 6ch;
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	
+	@include breakpoint($gamora){
+		// box model
+		border-top: none;
+		display: table-row;
+	}
+}
+
+.view-catalog td{
+	// box model
+	border-top-width: 0;
+	padding: 0;
+	// layout
+	display: inline-block;
+	
+	@include breakpoint($gamora){
+		// box model
+		border-top-width: 1px;
+		padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;  // 5/13.5  15/13.5
+		// layout
+		display: table-cell;
+	}
+}
+
+.view-catalog .views-field-ops{
+	// box model
+	margin-left: -6ch;
+	padding-right: 1ch;
+	width: 6ch;
+}
+
+.view-catalog .catalog-title{
+	// layout
+	flex-basis: 100%;
+}
+
+.keyword-list ul > li{
+	// box model
+	margin: 0.234375rem 1ch 0.234375rem 0;  //3.75px
+	// layout
+	display: inline-block;
+	// typography
+	//color: $tint;
+}
+
+.keyword-list ul > li > a{
+	// box model
+	border-bottom-width: 0;
+	//margin: 0 0.4375rem 0 0;  //7.5px
+	// layout
+	display: block;
+}
+
+.keyword-list ul > li > a,
+.keyword-list ul > li > a:visited{
+	// typography
+	color: mix($tint, $blueberry-susan, 50%);
+	font-weight: normal;
+}
+
+.keyword-list ul > li > a:hover{
+	color: mix($tint, $blueberry-susan, 25%);
+	//background-color: $blueberry-susan;
+}
+
+.keyword-list ul > li > a:before{
+	content: "#";
+}
+
+.keyword-list ul > li > a:after{
+	@media print{
+		content: "";  // Hide appended URLs from print styles
+	}
+}
+
+.keyword-list ul > li:last-child > a{
+	margin-right: 0;
+}
+
+.catalog-time-offered p::after{
+	content: "\00A0";
+	
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+.catalog-offering p::after{
+	content: "\00A0";
+	
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+.catalog-class-standing p{
+	
+	&::before{
+		content: "for" "\00A0";
+	}
+	
+	&::after{
+		content: ",\00A0";
+	}
+	
+	@include breakpoint($gamora){
+		
+		&::before,
+		&::after{
+			content: "";
+		}
+	}
+}
+
+.catalog-credits p::after{
+	content: "\00A0" "credits";  // \00A0 is a non-breaking space (&nbsp;)
+	
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+.catalog-quarters-offered{
+	flex-basis: 100%;
+}
+
+.program-title{
+	@include base-type-lg;
+}
+
+.cancelled{
+	opacity: 0.4;
 }

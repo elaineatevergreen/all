@@ -110,6 +110,37 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_advanced|node|catalog_entry|form';
+  $field_group->group_name = 'group_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Advanced Opportunities',
+    'weight' => '48',
+    'children' => array(
+      0 => 'field_internship_boolean',
+      1 => 'field_research_boolean',
+      2 => 'field_study_abroad_boolean',
+      3 => 'field_upper_division_boolean',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-advanced field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_advanced|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_advanced|node|event|form';
   $field_group->group_name = 'group_advanced';
   $field_group->entity_type = 'node';
@@ -380,7 +411,8 @@ function evergreen_content_field_group_info() {
       7 => 'field_fields_of_study',
       8 => 'field_preparatory_for',
       9 => 'field_offering_status',
-      10 => 'title',
+      10 => 'field_credits',
+      11 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -849,7 +881,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
@@ -1084,6 +1116,7 @@ function evergreen_content_field_group_info() {
       4 => 'field_related_subjects_directory',
       5 => 'field_faculty_directory_subject_',
       6 => 'field_planning_unit_puc',
+      7 => 'body',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1879,7 +1912,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prerequisites',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_prerequisites',
     ),
@@ -1951,6 +1984,8 @@ function evergreen_content_field_group_info() {
       8 => 'field_spring_registration',
       9 => 'field_quarters_signature',
       10 => 'field_quarters_conditional',
+      11 => 'field_quarters_closed',
+      12 => 'field_summer_registration',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -2342,6 +2377,7 @@ function evergreen_content_field_group_info() {
   t('About this Committee');
   t('Additional Names');
   t('Additional Settings');
+  t('Advanced Opportunities');
   t('Alumni Directories');
   t('Applicant Criteria');
   t('Archived Materials');

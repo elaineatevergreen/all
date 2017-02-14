@@ -220,6 +220,13 @@ module.exports = function(grunt) {
 			},
 		},
 		
+		/**
+		 * Sasslint
+		 *
+		 * Tests Sass to make sure it's written in a standardized way.
+		 * Configuration of these tests is located in a hidden file, documented
+		 * in an option below.
+		 */
 		sasslint: {
 			options: {
 				configFile: 'css/config/.sass-lint.yml',

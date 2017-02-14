@@ -48,7 +48,7 @@ class SiteSectionMigration extends EvergreenMigration {
     // Here we specify the directory containing the source files.
     $this->addFieldMapping('field_background_image:source_dir')->defaultValue('http://www.evergreen.edu/_inc/inventory/backgrounds/');
     $this->addFieldMapping('field_background_image:destination_dir')->defaultValue('public://images/backgrounds');
-    $this->addFieldMapping('field_background_image:file_replace')->defaultValue(FILE_EXISTS_REUSE);
+    $this->addFieldMapping('field_background_image:file_replace')->defaultValue(FILE_EXISTS_REPLACE);
 
 
 

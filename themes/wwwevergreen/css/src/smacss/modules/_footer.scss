@@ -51,30 +51,38 @@
 }
 
 .footer-map{
-	// box model
-	margin-left: 1em;
-	width: 35%;
 	// layout
 	display: block;
-	float: right;
+}
 
-	@include breakpoint($rocket){
-		width: 50%;
-		max-width: 280px;
-	}
+.footer-map img{
+	max-height: calc(150 / 16 * 1rem);
 }
 
 .footer-map a{
 	border-width: 0;
 }
 
-.footer-map img{
-
-	@include breakpoint($gamora){
-		max-height: 112.5px;
+.motto-footer p{
+	color: mix($tint, $shade, 15%);
+	text-align: center;
+	
+	@include breakpoint($lil-groot){
+		// layout
+		margin: calc(30 / 16 * 1rem) 0;
+		// typography
+		@include base-type-lg;
+		letter-spacing: 0.3333333333ch;
+		text-transform: uppercase;
+	}
+	
+	@include breakpoint($starlord){
+		font-size: 1.82rem;  // Step 3
+		line-height: 1.03007828594973;  // 30 / 29.124
 	}
 }
 
-.school-contact{
-	@include margin-default;
+.motto-footer i{
+	font-style: normal;
+	font-weight: bold;
 }

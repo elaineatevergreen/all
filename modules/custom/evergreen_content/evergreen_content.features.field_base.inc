@@ -1000,6 +1000,21 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_credits'.
+  $field_bases['field_credits'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_credits',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_current_location'.
   $field_bases['field_current_location'] = array(
     'active' => 1,
@@ -2409,6 +2424,31 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_internship_boolean'.
+  $field_bases['field_internship_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_internship_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_internship_opportunities'.
   $field_bases['field_internship_opportunities'] = array(
     'active' => 1,
@@ -3344,6 +3384,33 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_quarters_closed'.
+  $field_bases['field_quarters_closed'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_quarters_closed',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Fall' => 'Fall',
+        'Winter' => 'Winter',
+        'Spring' => 'Spring',
+        'Summer' => 'Summer',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_quarters_conditional'.
   $field_bases['field_quarters_conditional'] = array(
     'active' => 1,
@@ -3363,9 +3430,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3392,9 +3457,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3421,9 +3484,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3450,9 +3511,7 @@ function evergreen_content_field_default_field_bases() {
         'Fall' => 'Fall',
         'Winter' => 'Winter',
         'Spring' => 'Spring',
-        'Summer Full Session' => 'Summer Full Session',
-        'Summer Session I' => 'Summer Session I',
-        'Summer Session II' => 'Summer Session II',
+        'Summer' => 'Summer',
       ),
       'allowed_values_function' => '',
     ),
@@ -3636,6 +3695,31 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'file',
+  );
+
+  // Exported field_base: 'field_research_boolean'.
+  $field_bases['field_research_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_research_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_research_opportunities'.
@@ -3995,27 +4079,6 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_signature_quarters'.
-  $field_bases['field_signature_quarters'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_signature_quarters',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_site_section'.
   $field_bases['field_site_section'] = array(
     'active' => 1,
@@ -4224,6 +4287,31 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_study_abroad_boolean'.
+  $field_bases['field_study_abroad_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_study_abroad_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_subjects_studied'.
   $field_bases['field_subjects_studied'] = array(
     'active' => 1,
@@ -4264,6 +4352,25 @@ function evergreen_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_summer_registration'.
+  $field_bases['field_summer_registration'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_summer_registration',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_theme_codes'.
@@ -4538,6 +4645,31 @@ function evergreen_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_upper_division_boolean'.
+  $field_bases['field_upper_division_boolean'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_upper_division_boolean',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_variable_credit_options'.

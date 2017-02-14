@@ -41,14 +41,14 @@ function evergreen_migration_views_default_views() {
   $handler->display->display_options['fields']['field_section_navigation']['id'] = 'field_section_navigation';
   $handler->display->display_options['fields']['field_section_navigation']['table'] = 'field_data_field_section_navigation';
   $handler->display->display_options['fields']['field_section_navigation']['field'] = 'field_section_navigation';
+  $handler->display->display_options['fields']['field_section_navigation']['label'] = 'navigation';
   $handler->display->display_options['fields']['field_section_navigation']['element_type'] = '0';
   $handler->display->display_options['fields']['field_section_navigation']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_section_navigation']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_section_navigation']['settings'] = array(
-    'view_mode' => 'full',
+    'view_mode' => 'data_export',
   );
   $handler->display->display_options['fields']['field_section_navigation']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_section_navigation']['field_api_classes'] = TRUE;
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -70,6 +70,9 @@ function evergreen_migration_views_default_views() {
   $handler->display->display_options['style_options']['transform'] = 1;
   $handler->display->display_options['style_options']['root_node'] = 'sections';
   $handler->display->display_options['style_options']['item_node'] = 'section';
+  $handler->display->display_options['style_options']['no_entity_encode'] = array(
+    'field_section_navigation' => 'field_section_navigation',
+  );
   $handler->display->display_options['path'] = 'export/navigation';
   $export['navigation_export'] = $view;
 
