@@ -6646,6 +6646,16 @@ Off|No',
   $handler->display->display_options['fields']['field_spring_registration']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_spring_registration']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_spring_registration']['hide_empty'] = TRUE;
+  /* Field: Content: Summer Registration */
+  $handler->display->display_options['fields']['field_summer_registration']['id'] = 'field_summer_registration';
+  $handler->display->display_options['fields']['field_summer_registration']['table'] = 'field_data_field_summer_registration';
+  $handler->display->display_options['fields']['field_summer_registration']['field'] = 'field_summer_registration';
+  $handler->display->display_options['fields']['field_summer_registration']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_summer_registration']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_summer_registration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_summer_registration']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_summer_registration']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_summer_registration']['hide_empty'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -9763,7 +9773,7 @@ Off|No',
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Members */
+  /* Field: Content: Staff and Faculty Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
