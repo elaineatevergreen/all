@@ -118,7 +118,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced Opportunities',
-    'weight' => '48',
+    'weight' => '13',
     'children' => array(
       0 => 'field_internship_boolean',
       1 => 'field_research_boolean',
@@ -1986,6 +1986,7 @@ function evergreen_content_field_group_info() {
       10 => 'field_quarters_conditional',
       11 => 'field_quarters_closed',
       12 => 'field_summer_registration',
+      13 => 'field_summer_session',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

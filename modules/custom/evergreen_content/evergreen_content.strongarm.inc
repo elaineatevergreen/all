@@ -1712,7 +1712,7 @@ function evergreen_content_strongarm() {
           'weight' => '6',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '7',
         ),
       ),
       'display' => array(
