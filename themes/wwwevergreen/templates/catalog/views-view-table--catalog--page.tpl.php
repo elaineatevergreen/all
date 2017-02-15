@@ -21,7 +21,7 @@
  * @ingroup views_templates
  */
  
-$hiddenfields = array('field_academic_year','field_quarters_open','field_quarters_signature','field_quarters_closed');
+$hiddenfields = array('field_academic_year','field_quarters_open','field_quarters_signature','field_quarters_closed','field_summer_session');
  
 ?>
 <table <?php if ($classes) { print 'class="'. $classes . '" '; } ?><?php print $attributes; ?>>
@@ -85,7 +85,12 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 			
 			$printquarters = '<ul>';
 			foreach($quartersoffered as $q) {
-				$printquarters .= "<li>" . trim($q) . "</li>";
+				$printquarters .= "<li>" . trim($q);
+				//if this is summer, add the session info.
+				if($row['field_summer_session'] != '') {
+					$printquarters .= " (" . trim($row['field_summer_session']) . "&nbsp;Session)";
+				}
+				$printquarters .= "</li>";
 			};
 			$printquarters .= '</ul>';
 			

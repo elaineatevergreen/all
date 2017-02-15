@@ -2937,7 +2937,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 44,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -3233,7 +3233,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 39,
+      'weight' => 40,
     ),
     'workbench_access_field' => 0,
   );
@@ -3826,9 +3826,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 37,
       ),
       'teaser' => array(
@@ -4109,7 +4108,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 38,
+      'weight' => 39,
     ),
     'workbench_access_field' => 0,
   );
@@ -4170,7 +4169,7 @@ function evergreen_content_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 43,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -4218,7 +4217,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 42,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -4422,7 +4421,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 37,
     ),
     'workbench_access_field' => 0,
   );
@@ -4516,6 +4515,46 @@ function evergreen_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 17,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-catalog_entry-field_summer_session'.
+  $field_instances['node-catalog_entry-field_summer_session'] = array(
+    'bundle' => 'catalog_entry',
+    'default_value' => NULL,
+    'default_value_label_token' => 0,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_summer_session',
+    'label' => 'Summer Session',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -4737,7 +4776,7 @@ function evergreen_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 37,
+      'weight' => 38,
     ),
     'workbench_access_field' => 0,
   );
@@ -4802,7 +4841,7 @@ function evergreen_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 41,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -15237,6 +15276,7 @@ function evergreen_content_field_default_field_instances() {
   t('Subjects Studied');
   t('Subscribe');
   t('Summer Registration');
+  t('Summer Session');
   t('The extra-large version.');
   t('The last time this entry was updated in the CMD. Often used to determine "new" items?');
   t('The maximum number of credits this offering is listed for. NB: minimum and maximum CAN be the same number.');
