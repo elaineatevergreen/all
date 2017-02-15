@@ -183,6 +183,8 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:55' => 'div/term[@entry_code="Conditional"]/@term_name',
           'xpathparser:56' => 'div/term[@entry_code="Closed"]/@term_name',
           'xpathparser:57' => 'credits/credit',
+          'xpathparser:58' => 'summer_session_final',
+          'xpathparser:59' => 'div/term[@term_name="Summer"]/div',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -202,6 +204,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:51' => 'xpathparser:51',
           'xpathparser:52' => 'xpathparser:52',
           'xpathparser:53' => 'xpathparser:53',
+          'xpathparser:59' => 'xpathparser:59',
           'xpathparser:5' => 0,
           'xpathparser:4' => 0,
           'xpathparser:6' => 0,
@@ -237,6 +240,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:55' => 0,
           'xpathparser:56' => 0,
           'xpathparser:57' => 0,
+          'xpathparser:58' => 0,
         ),
         'context' => '/html/body/div/entry',
         'exp' => array(
@@ -295,6 +299,8 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:55' => 0,
             'xpathparser:56' => 0,
             'xpathparser:57' => 0,
+            'xpathparser:58' => 0,
+            'xpathparser:59' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -646,6 +652,18 @@ function evergreen_content_feeds_importer_default() {
           56 => array(
             'source' => 'Blank source 5',
             'target' => 'field_upper_division_boolean',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          57 => array(
+            'source' => 'xpathparser:58',
+            'target' => 'field_summer_session',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          58 => array(
+            'source' => 'xpathparser:59',
+            'target' => 'field_summer_registration',
             'unique' => FALSE,
           ),
         ),

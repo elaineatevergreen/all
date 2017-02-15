@@ -4188,25 +4188,26 @@ ul.accordion-inner {
 /* line 53, ../src/smacss/modules/_footer.scss */
 .footer-map {
   display: block;
+  text-align: center;
 }
 
-/* line 58, ../src/smacss/modules/_footer.scss */
+/* line 60, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
 
-/* line 62, ../src/smacss/modules/_footer.scss */
+/* line 64, ../src/smacss/modules/_footer.scss */
 .footer-map a {
   border-width: 0;
 }
 
-/* line 66, ../src/smacss/modules/_footer.scss */
+/* line 68, ../src/smacss/modules/_footer.scss */
 .motto-footer p {
   color: #242424;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 66, ../src/smacss/modules/_footer.scss */
+  /* line 68, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4216,14 +4217,14 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 66, ../src/smacss/modules/_footer.scss */
+  /* line 68, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 
-/* line 85, ../src/smacss/modules/_footer.scss */
+/* line 87, ../src/smacss/modules/_footer.scss */
 .motto-footer i {
   font-style: normal;
   font-weight: bold;
@@ -4320,19 +4321,19 @@ ul.accordion-inner {
 }
 
 /* line 272, ../src/smacss/_modules.scss */
-.main-content > p:last-child::after,
-.main-content > ul:last-child > li:last-child::after,
-.main-content > ol:last-child > li:last-child::after,
-.main-content > dl:last-child > dd:last-child::after {
+.main-content .content > p:last-child::after,
+.main-content .content > ul:last-child > li:last-child::after,
+.main-content .content > ol:last-child > li:last-child::after,
+.main-content .content > dl:last-child > dd:last-child::after {
   white-space: nowrap;
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
   /* line 272, ../src/smacss/_modules.scss */
-  .main-content > p:last-child::after,
-  .main-content > ul:last-child > li:last-child::after,
-  .main-content > ol:last-child > li:last-child::after,
-  .main-content > dl:last-child > dd:last-child::after {
+  .main-content .content > p:last-child::after,
+  .main-content .content > ul:last-child > li:last-child::after,
+  .main-content .content > ol:last-child > li:last-child::after,
+  .main-content .content > dl:last-child > dd:last-child::after {
     content: " " url("/sites/all/themes/wwwevergreen/images/endnote.svg");
   }
 }

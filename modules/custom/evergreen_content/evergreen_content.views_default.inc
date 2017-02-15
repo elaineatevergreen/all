@@ -4785,8 +4785,8 @@ return($term); ';
           'format' => 'basic_tags',
         ),
       ),
-      'allow_secondary' => 0,
-      'secondary_label' => 'Filter by Day/Time',
+      'allow_secondary' => 1,
+      'secondary_label' => 'Advanced Opportunities',
       'secondary_collapse_override' => '0',
     ),
     'flagged' => array(
@@ -4936,6 +4936,25 @@ False|',
         ),
       ),
     ),
+    'field_summer_session_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 1,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
     'field_fields_of_study_tid' => array(
       'bef_format' => 'default',
       'more_options' => array(
@@ -5066,7 +5085,7 @@ False|',
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
         'autosubmit' => 0,
-        'is_secondary' => 0,
+        'is_secondary' => 1,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5086,7 +5105,7 @@ Off|No',
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
         'autosubmit' => 0,
-        'is_secondary' => 0,
+        'is_secondary' => 1,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5106,7 +5125,7 @@ Off|No',
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
         'autosubmit' => 0,
-        'is_secondary' => 0,
+        'is_secondary' => 1,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5126,7 +5145,7 @@ Off|No',
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
         'autosubmit' => 0,
-        'is_secondary' => 0,
+        'is_secondary' => 1,
         'any_label' => '',
         'bef_filter_description' => '',
         'tokens' => array(
@@ -5307,8 +5326,8 @@ Off|No',
   $handler->display->display_options['header']['area']['content'] = '<div class="box">
 <h3>Catalog Updates</h3>
 <ul>
-	<li><strong>Save to list</strong> is back! We\'re still working out a few bugs, but you can now save items. Select "My List" under the filters to see your saved items.</li>
-<li><strong>Summer 2017</strong> items do not yet indicate which session. This information will be available very soon.</li>
+<li><strong>Summer 2017</strong> items now show which session they will be offered.</li>	
+<li><strong>Advanced Opportunity</strong> filters are now available. Search for offerings with options for internships, research, study abroad, or upper division science credits.</li>
 </ul>
 </div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
@@ -5600,13 +5619,22 @@ Off|No',
   $handler->display->display_options['fields']['field_quarters_closed']['id'] = 'field_quarters_closed';
   $handler->display->display_options['fields']['field_quarters_closed']['table'] = 'field_data_field_quarters_closed';
   $handler->display->display_options['fields']['field_quarters_closed']['field'] = 'field_quarters_closed';
-  $handler->display->display_options['fields']['field_quarters_closed']['label'] = '';
   $handler->display->display_options['fields']['field_quarters_closed']['element_type'] = '0';
   $handler->display->display_options['fields']['field_quarters_closed']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_quarters_closed']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_quarters_closed']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_quarters_closed']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_quarters_closed']['field_api_classes'] = TRUE;
+  /* Field: Content: Summer Session */
+  $handler->display->display_options['fields']['field_summer_session']['id'] = 'field_summer_session';
+  $handler->display->display_options['fields']['field_summer_session']['table'] = 'field_data_field_summer_session';
+  $handler->display->display_options['fields']['field_summer_session']['field'] = 'field_summer_session';
+  $handler->display->display_options['fields']['field_summer_session']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_summer_session']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_summer_session']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_summer_session']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_summer_session']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_summer_session']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Academic Year (field_academic_year) */
   $handler->display->display_options['sorts']['field_academic_year_value']['id'] = 'field_academic_year_value';
   $handler->display->display_options['sorts']['field_academic_year_value']['table'] = 'field_data_field_academic_year';
@@ -5921,6 +5949,35 @@ Off|No',
     10 => 0,
     4 => 0,
   );
+  /* Filter criterion: Content: Summer Session (field_summer_session) */
+  $handler->display->display_options['filters']['field_summer_session_value']['id'] = 'field_summer_session_value';
+  $handler->display->display_options['filters']['field_summer_session_value']['table'] = 'field_data_field_summer_session';
+  $handler->display->display_options['filters']['field_summer_session_value']['field'] = 'field_summer_session_value';
+  $handler->display->display_options['filters']['field_summer_session_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_summer_session_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['operator_id'] = 'field_summer_session_value_op';
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['label'] = 'Summer Session';
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['description'] = 'Some offerings listed as "Full" may be available for First/Second registration.';
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['operator'] = 'field_summer_session_value_op';
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['identifier'] = 'field_summer_session_value';
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_summer_session_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    14 => 0,
+    13 => 0,
+    12 => 0,
+    11 => 0,
+    9 => 0,
+    6 => 0,
+    3 => 0,
+    7 => 0,
+    8 => 0,
+    5 => 0,
+    10 => 0,
+    4 => 0,
+  );
   /* Filter criterion: Content: Fields of Study (field_fields_of_study) */
   $handler->display->display_options['filters']['field_fields_of_study_tid']['id'] = 'field_fields_of_study_tid';
   $handler->display->display_options['filters']['field_fields_of_study_tid']['table'] = 'field_data_field_fields_of_study';
@@ -6182,14 +6239,16 @@ Off|No',
   $handler->display->display_options['filters']['field_internship_boolean_value']['id'] = 'field_internship_boolean_value';
   $handler->display->display_options['filters']['field_internship_boolean_value']['table'] = 'field_data_field_internship_boolean';
   $handler->display->display_options['filters']['field_internship_boolean_value']['field'] = 'field_internship_boolean_value';
+  $handler->display->display_options['filters']['field_internship_boolean_value']['group'] = 1;
   $handler->display->display_options['filters']['field_internship_boolean_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['operator_id'] = 'field_internship_boolean_value_op';
   $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['label'] = 'Includes Internships';
   $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['operator'] = 'field_internship_boolean_value_op';
   $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['identifier'] = 'field_internship_boolean_value';
+  $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_internship_boolean_value']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
+    1 => '1',
     14 => 0,
     13 => 0,
     12 => 0,
@@ -6207,14 +6266,16 @@ Off|No',
   $handler->display->display_options['filters']['field_research_boolean_value']['id'] = 'field_research_boolean_value';
   $handler->display->display_options['filters']['field_research_boolean_value']['table'] = 'field_data_field_research_boolean';
   $handler->display->display_options['filters']['field_research_boolean_value']['field'] = 'field_research_boolean_value';
+  $handler->display->display_options['filters']['field_research_boolean_value']['group'] = 1;
   $handler->display->display_options['filters']['field_research_boolean_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_research_boolean_value']['expose']['operator_id'] = 'field_research_boolean_value_op';
   $handler->display->display_options['filters']['field_research_boolean_value']['expose']['label'] = 'Research Opportunities';
   $handler->display->display_options['filters']['field_research_boolean_value']['expose']['operator'] = 'field_research_boolean_value_op';
   $handler->display->display_options['filters']['field_research_boolean_value']['expose']['identifier'] = 'field_research_boolean_value';
+  $handler->display->display_options['filters']['field_research_boolean_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_research_boolean_value']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
+    1 => '1',
     14 => 0,
     13 => 0,
     12 => 0,
@@ -6232,14 +6293,16 @@ Off|No',
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['id'] = 'field_study_abroad_boolean_value';
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['table'] = 'field_data_field_study_abroad_boolean';
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['field'] = 'field_study_abroad_boolean_value';
+  $handler->display->display_options['filters']['field_study_abroad_boolean_value']['group'] = 1;
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['operator_id'] = 'field_study_abroad_boolean_value_op';
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['label'] = 'Study Abroad';
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['operator'] = 'field_study_abroad_boolean_value_op';
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['identifier'] = 'field_study_abroad_boolean_value';
+  $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_study_abroad_boolean_value']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
+    1 => '1',
     14 => 0,
     13 => 0,
     12 => 0,
@@ -6257,14 +6320,16 @@ Off|No',
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['id'] = 'field_upper_division_boolean_value';
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['table'] = 'field_data_field_upper_division_boolean';
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['field'] = 'field_upper_division_boolean_value';
+  $handler->display->display_options['filters']['field_upper_division_boolean_value']['group'] = 1;
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['operator_id'] = 'field_upper_division_boolean_value_op';
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['label'] = 'Upper-Division Science Credit Options';
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['operator'] = 'field_upper_division_boolean_value_op';
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['identifier'] = 'field_upper_division_boolean_value';
+  $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_upper_division_boolean_value']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
+    1 => '1',
     14 => 0,
     13 => 0,
     12 => 0,
@@ -9773,7 +9838,7 @@ Off|No',
   );
   $handler->display->display_options['fields']['field_related_offices']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_related_offices']['field_api_classes'] = TRUE;
-  /* Field: Content: Staff and Faculty Members */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_members']['id'] = 'field_members';
   $handler->display->display_options['fields']['field_members']['table'] = 'field_data_field_members';
   $handler->display->display_options['fields']['field_members']['field'] = 'field_members';
