@@ -65,6 +65,134 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_2-default_value';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 2';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['catalog_multi_upload-blank_source_2-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_2-feeds_tamper_conditional';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 2';
+  $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+  $feeds_tamper->settings = array(
+    'conditional_field' => 'xpathparser:53',
+    'operator' => 'empty',
+    'negate' => 1,
+    'value' => '',
+  );
+  $feeds_tamper->weight = 3;
+  $feeds_tamper->description = 'Conditional';
+  $export['catalog_multi_upload-blank_source_2-feeds_tamper_conditional'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_3-default_value';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 3';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['catalog_multi_upload-blank_source_3-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_3-feeds_tamper_conditional';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 3';
+  $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+  $feeds_tamper->settings = array(
+    'conditional_field' => 'xpathparser:52',
+    'operator' => 'empty',
+    'negate' => 1,
+    'value' => '',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Conditional';
+  $export['catalog_multi_upload-blank_source_3-feeds_tamper_conditional'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_4-default_value';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 4';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['catalog_multi_upload-blank_source_4-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_4-feeds_tamper_conditional';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 4';
+  $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+  $feeds_tamper->settings = array(
+    'conditional_field' => 'xpathparser:39',
+    'operator' => 'empty',
+    'negate' => 1,
+    'value' => '',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Conditional';
+  $export['catalog_multi_upload-blank_source_4-feeds_tamper_conditional'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_5-default_value';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 5';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['catalog_multi_upload-blank_source_5-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-blank_source_5-feeds_tamper_conditional';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'Blank source 5';
+  $feeds_tamper->plugin_id = 'feeds_tamper_conditional';
+  $feeds_tamper->settings = array(
+    'conditional_field' => 'xpathparser:37',
+    'operator' => 'empty',
+    'negate' => 1,
+    'value' => '',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Conditional';
+  $export['catalog_multi_upload-blank_source_5-feeds_tamper_conditional'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'catalog_multi_upload-xpathparser_0-html_entity_decode';
   $feeds_tamper->importer = 'catalog_multi_upload';
   $feeds_tamper->source = 'xpathparser:0';
@@ -329,6 +457,20 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Implode';
   $export['catalog_multi_upload-xpathparser_50-implode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_58-convert_case';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:58';
+  $feeds_tamper->plugin_id = 'convert_case';
+  $feeds_tamper->settings = array(
+    'mode' => '2',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert case';
+  $export['catalog_multi_upload-xpathparser_58-convert_case'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

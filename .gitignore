@@ -103,3 +103,4 @@ features.module
 .idea*
 
 /modules/custom/evergreen_content/migrations/sitesections-old.csv
+*.orig

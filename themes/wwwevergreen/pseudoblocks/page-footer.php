@@ -44,12 +44,12 @@
 				<div class="unit-1-5">
 					<p class="footer-map">
 						<a href="http://evergreen.edu/tour">
-							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-land-cover.jpg"/>
-						</a><br/>
+							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
+						</a><!--<br/>
 						<small>
 							©
 							<abbr title="Washington">WA</abbr> <abbr title="Department">Dept.</abbr> of&nbsp;Ecology
-						</small>
+						</small>-->
 					</p>
 					<div class="vcard">
 						<div class="fn org">The&nbsp;Evergreen State&nbsp;College</div>

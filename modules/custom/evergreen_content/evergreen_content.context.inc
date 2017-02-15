@@ -211,6 +211,38 @@ function evergreen_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'catalog_grad';
+  $context->description = '';
+  $context->tag = 'sections';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'catalog/grad/*' => 'catalog/grad/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-catalog-grad_programs' => array(
+          'module' => 'views',
+          'delta' => '-exp-catalog-grad_programs',
+          'region' => 'filters',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('sections');
+  $export['catalog_grad'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'catalog_index';
   $context->description = 'Adds form filter block to UG indexes only';
   $context->tag = 'custom pages';
