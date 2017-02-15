@@ -8,7 +8,7 @@
 
  */
  
-  //dpm($content['group_details']['group_location_schedule']);
+  //dpm($content['field_summer_session']);
  
  
  //for catalog entries, let's make a nice-looking description of the quarters offered!
@@ -40,6 +40,9 @@
 	elseif(count($quarters) == 4) {
 		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] . " quarters";
 	};
+	if(render($content['field_summer_session']) != '') {
+		$quarters_intro .= " (" . trim(render($content['field_summer_session'])) . " Session)";
+	}
 	//$variables['quarters_intro'] = $quarters_intro;
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
