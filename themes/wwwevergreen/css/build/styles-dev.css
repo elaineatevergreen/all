@@ -68,19 +68,9 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * Deprecated Modular Scale - Do not use!
- *
- * The typographic scale we are using for measurements.
- * Ideal text size is 17px
- * The important number is 345px. This was the size of images in
- * the previous Admissions template, which guided image sizes in
- * the new template.
- *
- * @see http://www.modularscale.com/?17,345&px&1.618&web&text
- */
-/**
  * New Modular Scale
  *
+ * The typographic scale we are using for measurements.
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -1151,11 +1141,6 @@ select:hover {
 }
 
 /* line 110, ../src/smacss/base/_forms.scss */
-.tertiary-nav-wrapper .form-type-select select {
-  width: 100%;
-}
-
-/* line 114, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1163,13 +1148,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 114, ../src/smacss/base/_forms.scss */
+  /* line 110, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 127, ../src/smacss/base/_forms.scss */
+/* line 123, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1180,7 +1165,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 123, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1188,7 +1173,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 123, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1198,20 +1183,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 152, ../src/smacss/base/_forms.scss */
+/* line 148, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 152, ../src/smacss/base/_forms.scss */
+  /* line 148, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 161, ../src/smacss/base/_forms.scss */
+/* line 157, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1219,7 +1204,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/base/_forms.scss */
+  /* line 157, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1229,43 +1214,90 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
+/**
+ * 2. Views Module Forms
+ *
+ * Forms in Drupal’s Views module. It's worth cross-checking changes you
+ * make here with a few different form pages, because this stuff gets weird
+ * and unpredictable.
+ *
+ * Add to this list as you find more weirdness.
+ *
+ * Left-nav fiters: http://evergreen.edu/catalog/index/ug
+ * Main content filters: http://evergreen.edu/activities/groups
+ *
+ * Table of Contents
+ *
+ * a. Views Exposed Widget
+ * b. Secondary Options
+ */
+/**
+ * b. Views Exposed Widget
+ *
+ * These are the bulk of the form widgets in the Views-type forms.
+ */
+/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
-  display: inline-block;
+  display: block;
 }
 
-/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin-top: calc(20 / 16 * 1rem);
-}
-@media screen and (min-width: 43em) {
-  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
-  .views-exposed-form .views-exposed-widget .form-submit {
-    margin-top: calc(22.5 / 16 * 1rem);
-  }
+/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget {
+  /* box model */
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  padding: 0;
+  /* layout */
+  float: none;
 }
 
-/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
-.views-widget-filter-combine input {
+/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-widget input,
+.views-exposed-widget select {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .form-type-select select {
+  width: 100%;
+}
+
+/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin: 0;
+  	/*margin-top: calc(20 / 16 * 1rem);
+  
+  	@include breakpoint($gamora){
+  		margin-top: calc(22.5 / 16 * 1rem);
+  	}*/
+}
+
+/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
+	margin-bottom: 0;
+}*/
+/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
-.tertiary-nav-wrapper .views-exposed-widget {
-  padding: 0;
+/**
+ * b. Secondary Options
+ *
+ * Better Exposed Filters offeres a place to put “advanced” options. For
+ * whatever reason, these options don't follow the same pattern as the rest
+ * of the form fields, so they need special rules.
+ */
+/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
+.bef-secondary-options .form-select {
+  margin-bottom: calc(15 / 16 * 1rem);
 }
 
 /**

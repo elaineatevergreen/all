@@ -1,19 +1,61 @@
+/**
+ * 2. Views Module Forms
+ *
+ * Forms in Drupal’s Views module. It's worth cross-checking changes you
+ * make here with a few different form pages, because this stuff gets weird
+ * and unpredictable.
+ *
+ * Add to this list as you find more weirdness.
+ *
+ * Left-nav fiters: http://evergreen.edu/catalog/index/ug
+ * Main content filters: http://evergreen.edu/activities/groups
+ *
+ * Table of Contents
+ *
+ * a. Views Exposed Widget
+ * b. Secondary Options
+ */
+
+/**
+ * b. Views Exposed Widget
+ *
+ * These are the bulk of the form widgets in the Views-type forms.
+ */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button{
-	display: inline-block;
+	display: block;
+}
+
+.views-exposed-form .views-exposed-widget{
+	/* box model */
+	@include margin-default;
+	padding: 0;  // Overrides Views style
+	/* layout */
+	float: none;  // Overrides Views style
+}
+
+.views-exposed-widget input,
+.views-exposed-widget select{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.tertiary-nav-wrapper .form-type-select select{
+	width: 100%;  // Makes long select boxes not extend past their container
 }
 
 .views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-top: calc(20 / 16 * 1rem);
+	margin: 0;  // Overrides Views style
+	/*margin-top: calc(20 / 16 * 1rem);
 
 	@include breakpoint($gamora){
 		margin-top: calc(22.5 / 16 * 1rem);
-	}
+	}*/
 }
 
-.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
+/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
 	margin-bottom: 0;
-}
+}*/
 
 .tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
@@ -23,6 +65,13 @@
 	}
 }
 
-.tertiary-nav-wrapper .views-exposed-widget{
-	padding: 0;
+/**
+ * b. Secondary Options
+ *
+ * Better Exposed Filters offeres a place to put “advanced” options. For
+ * whatever reason, these options don't follow the same pattern as the rest
+ * of the form fields, so they need special rules.
+ */
+.bef-secondary-options .form-select{
+	margin-bottom: calc(15 / 16 * 1rem);
 }
