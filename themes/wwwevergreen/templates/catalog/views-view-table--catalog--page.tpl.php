@@ -74,6 +74,9 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 			$quarterssig = explode(',', $row['field_quarters_signature']);
 			$quartersopen = explode(',', $row['field_quarters_open']);
 			$quartersclosed = explode(',', $row['field_quarters_closed']);
+			
+			/* original working code 
+			
 			foreach($quartersoffered as $key => $value) {
 				if(in_array($value, $quarterssig)) { 
 					$quartersoffered[$key] = '<abbr title="signature required">' . $value . '&nbsp;(S)</abbr>';
@@ -93,8 +96,66 @@ $hiddenfields = array('field_academic_year','field_quarters_open','field_quarter
 				$printquarters .= "</li>";
 			};
 			$printquarters .= '</ul>';
+			*/
 			
+			
+			
+			
+			/* experimental code */
+			
+			$quarters = array('Fall','Winter','Spring');
+			$printquarters = '<div class="quarter-indicator-group">';
+			foreach($quarters as $q) {
+				$classname = strtolower($q);
+				
+				//open
+				if(in_array($q,$quartersopen)) { 
+					$printquarters .= "<div class='qi qi-$classname'><abbr title='$q quarter'>$q quarter</abbr></div>"; 
+				}
+				//signature
+				elseif(in_array($q, $quarterssig)) { 
+					$printquarters .= "<div class='qi qi-signature qi-$classname'><abbr title='$q quarter, signature required'>$q quarter, signature required</abbr></div>";
+				}
+				//closed
+				elseif(in_array($q, $quartersclosed)) { 
+					$printquarters .= "<div class='qi qi-closed qi-$classname'><abbr title='$q quarter, enrollment closed'>$value quarter, enrollment closed</abbr></div>";
+				}
+				else {
+					$printquarters .= "<div class='qi qi-signature qi-$classname'></div>";  
+				};
+				
+				
+			};
+			
+			
+			/* summer is special! */
+			
+			//still needs signature info :(
+			
+			$printquarters .= '<div class="summer-indicator-group">';
+			if(trim($row['field_summer_session']) == 'Full') {
+					$printquarters .= '<div class="qi qi-summer-session1'; 
+					if(in_array('Summer',$quarterssig)) { $printquarters .= ' qi-signature '; };
+					$printquarters .= '"><abbr title="Summer Session 1">Summer Session 1</abbr></div><div class="qi qi-summer-session2';
+					if(in_array('Summer',$quarterssig)) { $printquarters .= ' qi-signature '; };
+					$printquarters .= '"><abbr title="">Summer Session 2 (continued)</abbr></div>';
+			}
+			elseif(trim($row['field_summer_session']) == 'First') {
+					$printquarters .= '<div class="qi qi-summer-session1"><abbr title="Summer Session 1">Summer Session 1</abbr></div><div class="qi qi-summer-session2 qi-na"></div>';
+			}
+			elseif(trim($row['field_summer_session']) == 'Second') {
+					$printquarters .= '<div class="qi qi-summer-session1 qi-na"></div><div class="qi qi-summer-session2"><abbr title="Summer Session 2">Summer Session 2</abbr></div>';
+			} else {
+				//blank entry for non-Summer offerings
+				$printquarters .= '<div class="qi qi-summer-session1 qi-na"></div><div class="qi qi-summer-session2 qi-na"></div>';
+			};
+			$printquarters .= '</div>';
 
+			
+			//end the whole goddamn div
+			$printquarters .= "</div>";
+		
+			//add in the calendar year associated with this quarter
 			$printquarters = str_replace('Fall', 'Fall&nbsp;' . $fall, $printquarters);
 			
 			$printquarters = str_replace('Winter', 'Winter&nbsp;' . $threequarters, $printquarters);
