@@ -475,6 +475,41 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_60-copy';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:60';
+  $feeds_tamper->plugin_id = 'copy';
+  $feeds_tamper->settings = array(
+    'to_from' => 'from',
+    'source' => 'xpathparser:32',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Copy source value';
+  $export['catalog_multi_upload-xpathparser_60-copy'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_60-find_replace';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:60';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'Summer',
+    'replace' => 'UG',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace Summer to UG';
+  $export['catalog_multi_upload-xpathparser_60-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'faculty_directory-blank_source_1-default_value';
   $feeds_tamper->importer = 'faculty_directory';
   $feeds_tamper->source = 'Blank source 1';
