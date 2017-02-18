@@ -5537,9 +5537,11 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_block',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 9,
       ),
       'full_name' => array(
