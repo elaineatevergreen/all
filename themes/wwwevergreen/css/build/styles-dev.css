@@ -5822,8 +5822,21 @@ p.alert {
  * J. Images
  *
  * Image modules, typically for laying them out within an article.
+ *
+ * Table of Contents
+ *
+ * 1. Illustrative Images
+ * 2. Juicebox Gallery
+ * 3. Overrides
+ * 4. Badges (deprecated)
  */
-/* line 6, ../src/smacss/modules/_images.scss */
+/**
+ * 1. Illustrative Images
+ *
+ * Images for standard design use, either pulled off to the right, or
+ * centered on the page.
+ */
+/* line 20, ../src/smacss/modules/_images.scss */
 .left,
 .image,
 .image img,
@@ -5842,7 +5855,7 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 32, ../src/smacss/modules/_images.scss */
+/* line 42, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
 .field-image img {
@@ -5851,7 +5864,7 @@ p.alert {
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 32, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
   .field-image img {
@@ -5861,7 +5874,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 32, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
   .field-image img {
@@ -5872,7 +5885,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 52, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -5884,14 +5897,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 52, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 71, ../src/smacss/modules/_images.scss */
+  /* line 79, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
@@ -5900,7 +5913,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 52, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -5910,7 +5923,7 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 82, ../src/smacss/modules/_images.scss */
+  /* line 90, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
@@ -5919,7 +5932,7 @@ p.alert {
     max-width: calc(50% + 2.5em);
   }
 
-  /* line 94, ../src/smacss/modules/_images.scss */
+  /* line 99, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -5929,24 +5942,32 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 106, ../src/smacss/modules/_images.scss */
+  /* line 111, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
 }
 
 /**
- * Juicebox Gallery
+ * 2. Juicebox Gallery
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 117, ../src/smacss/modules/_images.scss */
+/* line 123, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
 
 /**
- * Badges
+ * 3. Overrides
+ */
+/* line 131, ../src/smacss/modules/_images.scss */
+.media.media-element-container {
+  display: block;
+}
+
+/**
+ * 4. Badges
  *
  * Logos, labels, and stickers that are not necessarily
  * important content to the audience, but are important to

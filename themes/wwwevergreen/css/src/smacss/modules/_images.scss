@@ -2,11 +2,22 @@
  * J. Images
  *
  * Image modules, typically for laying them out within an article.
+ *
+ * Table of Contents
+ *
+ * 1. Illustrative Images
+ * 2. Juicebox Gallery
+ * 3. Overrides
+ * 4. Badges (deprecated)
+ */
+
+/**
+ * 1. Illustrative Images
+ *
+ * Images for standard design use, either pulled off to the right, or
+ * centered on the page.
  */
 .left,  // deprecated
-//.illus,  // deprecated
-//.illus-alt,  // deprecated
-//.illus-full,  // deprecated
 .image,
 .image img,  // WYSIWYG
 .image-alt,
@@ -28,7 +39,6 @@
 	box-shadow: 0 2px 2px $drop-shadow;
 }
 
-//.illus-full,  // deprecated
 .image-full,
 .image-full img,  // WYSIWYG
 .field-image img{  // Drupal event calendar
@@ -50,8 +60,6 @@
 }
 
 .left,  // deprecated
-//.illus,  // deprecated
-//.illus-alt,  // deprecated
 .image,
 .image img,  // WYSIWYG
 .image-alt{
@@ -80,8 +88,6 @@
 
 @include breakpoint($drax){
 	.left,  // deprecated
-	//.illus,  // deprecated
-	//.illus-alt,  // deprecated
 	.main-content .image,
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
@@ -90,7 +96,6 @@
 		max-width: calc(50% + 2.5em);
 	}
 
-	//.illus-alt,  // deprecated
 	.image-alt{
 		// box model
 		margin-right: 0;
@@ -102,7 +107,7 @@
 	}
 }
 
-//This overrides the margin-right: -em for images in boxes so that they don't get cut off. 
+//Overrides the negative margin-right for images in boxes so that they don't get cut off. 
 .box .image{
 	@include breakpoint($gamora){
 		margin-right: 0;
@@ -110,16 +115,25 @@
 }
 
 /**
- * Juicebox Gallery
+ * 2. Juicebox Gallery
  *
  * Support: https://juicebox.net/forum/index.php
  */
+
 .primary-content-wrapper .juicebox-parent{
 	height: 600px;  // 30 * 20  - FYI, max-height doesn't work here
 }
 
 /**
- * Badges
+ * 3. Overrides
+ */
+
+.media.media-element-container{
+	display: block;  // Resolves conflict with .media layout block and Drupal media module.
+}
+
+/**
+ * 4. Badges
  *
  * Logos, labels, and stickers that are not necessarily
  * important content to the audience, but are important to
