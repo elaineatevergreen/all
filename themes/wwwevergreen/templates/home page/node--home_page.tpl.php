@@ -23,6 +23,7 @@
 	*/
 ?>
 
+<!-- Location Transporter -->
 <div class="row">
 	<div class="wrapper">
 		<div class="grid">
