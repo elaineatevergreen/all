@@ -7,7 +7,7 @@
  * 
  * A. Header
  * B. Background Image
- * C. Homepage Hero Image
+ * C. Homepage
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -122,63 +122,33 @@
 }
 
 /**
- * C. Homepage Hero Image
+ * C. Homepage
  */
 @import "modules/homepage-hero";
 
-/*.profile-list > li{  // deprecated
-	// layout
-	overflow: hidden;
-	// position
-  position: relative;
-}
-
-.profile-list .profile-img-link{
-  // layout
-  display: block;
-  overflow: hidden;
-}
-
-.profile-list .box{
+.location-transporter{
 	// box model
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: calc(30 / 18 * 1em) 1ch;
+	// typography
+	font-weight: bold;
+	@include base-type-lg;
+	text-align: center;
+	
+	@include breakpoint($starlord){
+		// box model
+		margin: calc(30 / 19.229 * 1em) 1ch;
+		// typography
+		@include base-type-xl;
+	}
+	
+	@include breakpoint($groot){
+		// box model
+		margin: calc(30 / 29.124 * 1em) 1ch;
+		// typography
+		font-size: 1.82rem;
+		line-height: 1.03007828594973;  // 30 / 29.124
+	}
 }
-
-.profile-img{
-	// box model
-	margin-left: -50%;
-  width: 200%;
-  max-width: 685px;
-  // layout
-  display: block;
-  
-  @include breakpoint($lil-groot){
-    margin-left: -25%;
-    width: 150%;
-  }
-  
-  @include breakpoint($starlord){
-    margin-left: 0%;
-    width: 100%;
-  }
-  
-  @include breakpoint($gamora){
-    width: 120%;
-    margin-left: -10%;
-  }
-  
-  @media screen and (min-width: 60em){
-    width: 100%;
-    margin-left: 0%;
-  }
-}
-.profile-list .box{
-	margin-top: -1.40625rem;  //22.5/16
-  //margin-top: -2.142857142857143em;  //30/14
-  position: absolute;
-  bottom: 0;
-}*/
 
 /**
  * D. Tertiary Nav
