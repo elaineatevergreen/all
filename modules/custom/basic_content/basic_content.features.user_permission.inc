@@ -31,6 +31,16 @@ function basic_content_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: 'access all webform results'.
+  $permissions['access all webform results'] = array(
+    'name' => 'access all webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -61,6 +71,31 @@ function basic_content_user_default_permissions() {
       'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'access own webform results'.
+  $permissions['access own webform results'] = array(
+    'name' => 'access own webform results',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'form results reviewer' => 'form results reviewer',
+      'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: 'access own webform submissions'.
+  $permissions['access own webform submissions'] = array(
+    'name' => 'access own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'site editor' => 'site editor',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'access site in maintenance mode'.
@@ -551,6 +586,15 @@ function basic_content_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'delete all webform submissions'.
+  $permissions['delete all webform submissions'] = array(
+    'name' => 'delete all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete any article content'.
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
@@ -679,6 +723,15 @@ function basic_content_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'delete own webform submissions'.
+  $permissions['delete own webform submissions'] = array(
+    'name' => 'delete own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
@@ -784,6 +837,15 @@ function basic_content_user_default_permissions() {
       'student worker administrator' => 'student worker administrator',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: 'edit all webform submissions'.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'edit any article content'.
@@ -922,6 +984,15 @@ function basic_content_user_default_permissions() {
     'module' => 'file_entity',
   );
 
+  // Exported permission: 'edit own webform submissions'.
+  $permissions['edit own webform submissions'] = array(
+    'name' => 'edit own webform submissions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'webform',
+  );
+
   // Exported permission: 'edit terms in site_sections'.
   $permissions['edit terms in site_sections'] = array(
     'name' => 'edit terms in site_sections',
@@ -929,6 +1000,17 @@ function basic_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit webform components'.
+  $permissions['edit webform components'] = array(
+    'name' => 'edit webform components',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'advanced editor' => 'advanced editor',
+      'student worker administrator' => 'student worker administrator',
+    ),
+    'module' => 'webform',
   );
 
   // Exported permission: 'generate features'.
