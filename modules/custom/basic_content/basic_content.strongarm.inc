@@ -552,6 +552,13 @@ function basic_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_basic_page';
+  $strongarm->value = 1;
+  $export['webform_node_basic_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access';
   $strongarm->value = 'taxonomy';
   $export['workbench_access'] = $strongarm;
