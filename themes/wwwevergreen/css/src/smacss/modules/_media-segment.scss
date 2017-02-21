@@ -1,7 +1,11 @@
 /**
- * H. Media Segment
+ * H. Compound Segment
  *
  * A common pattern wherein copy is tightly coupled to an icon.
+ *
+ * This used to be called the Media Segment, but there were conflicts with
+ * Drupal’s Media module, so that term has been deprecated. I never really
+ * liked “media” for this kind of segment, anyway. —jkm
  *
  * Table of Contents
  *
@@ -13,24 +17,25 @@
 /**
  * 1. Default
  *
- * .media
- * +---------+ +------------------+
- * |         | |                  |
- * | .media- | | .media-body      |
- * |  img    | |                  |
- * |         | |                  |
- * +---------+ |                  |
- *             |                  |
- *             +------------------+
+ * .compound
+ * +------------+ +---------------------+
+ * |            | |                     |
+ * | .compound- | | .compound-body      |
+ * |  img       | |                     |
+ * |            | |                     |
+ * +------------+ |                     |
+ *                |                     |
+ *                +---------------------+
  */
-.media{
-	clear: left;  // IE 9
-	display: block;  // IE 9
-	display: flex;  // W3C
+.media,  // deprecated, conflicts with Drupal Media module
+.compound{
+	display: flex;
 }
 
-.media-img,
-.media-img:link{
+.media-img,  // deprecated
+.media-img:link,  // deprecated
+.compound-img,
+.compound-img:link{
 	// box model
 	border-bottom-width: 0;
 	margin-bottom: 1.071428571428571em;  // 15px
@@ -38,132 +43,136 @@
 	max-width: 31.3333333333%;
 	// layout
 	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
-	float: left;  // IE9
 
 	@include breakpoint($gamora){
 		padding-right: 0.882352941176471em;  // 15px
 	}
 }
 
-.media-img img{
-	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
+.media-img img,  // deprecated
+.compound-img img{
+	margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
 	display: block;
 }
 
 // Extends .media-img img(?)
-.media-img-icon{
+.media-img-icon,  // deprecated
+// Extends .compound-img img(?)
+.compound-img-icon{
 	max-height: 3.75rem;
 }
 
-.media-body{
+.media-body,  // deprecated
+.compound-body{
 	// layout
 	flex: 1 1 auto;
-	overflow: auto;  // IE 9  // Gives block formatting context
-	/**
-	 * Alternate way to give block formatting context:
-	 *  * display: table-cell;  // Gives block formatting context (pretty
-	 *    nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
-	 *  * width: 3000px;  // Stretches box to fit the remaining width; this is
-	 *    not the actual value that comes out.
-	 */
 }
 
-.media-body > :first-child{
-	margin-top: 0.46875rem;  // Align the .media-body content with the .media-img content.
+.media-body > :first-child,  // deprecated
+.compound-body > :first-child{
+	margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
 }
 
 /**
  * 2. Alternate
  *
- * Put .media-img on the right. Extends .media
+ * Put .compound-img on the right. Extends .compound
  *
- * .media
- * +------------------+ +---------+
- * |                  | |         |
- * | .media-body      | | .media- |
- * |                  | |  img    |
- * |                  | |         |
- * |                  | +---------+
- * |                  |
- * +------------------+
+ * .compound
+ * +---------------------+ +------------+
+ * |                     | |            |
+ * | .compound-body      | | .compound- |
+ * |                     | |  img       |
+ * |                     | |            |
+ * |                     | +------------+
+ * |                     |
+ * +---------------------+
  */
-.media-alt{
+
+.media-alt,  // deprecated
+.compound-alt{
 	flex-direction: row-reverse;
 }
 
-.media-alt .media-img{
+.media-alt .media-img,  // deprecated
+.compound-alt .compound-img{
 	padding-right: 0;
 	padding-left: 1.071428571428571em;
-	float: right;  // IE 9
 }
 
 /**
  * 3. Vertically-Centered
  * 
- * Vertically center .media-child-alt. Extends .media-img or .media-body.
+ * Vertically center .compound-child-alt with the rest of the compound.
+ * Extends .compound-img or .compound-body.
  *
- * .media
- *                 +------------------+
- * +-------------+ |                  |
- * |             | | .media-body      |
- * | .media-     | |                  |
- * |  img.media- | |                  |
- * |  child-alt  | |                  |
- * |             | |                  |
- * +-------------+ |                  |
- *                 +------------------+
+ * .compound
+ *                    +---------------------+
+ * +----------------+ |                     |
+ * |                | | .compound-body      |
+ * | .compound-     | |                     |
+ * |  img.compound- | |                     |
+ * |  child-alt     | |                     |
+ * |                | |                     |
+ * +----------------+ |                     |
+ *                    +---------------------+
  *
  * OR
  *
- * .media
+ * .compound
  * +-------------+
- * |             | +--------------------+
- * | .media-     | |                    |
- * |  img        | | .media-body.media- |
- * |             | |  child-alt         |
- * |             | |                    |
- * |             | +--------------------+
+ * |             | +--------------------------+
+ * | .compound-  | |                          |
+ * |  img        | | .compound-body.compound- |
+ * |             | |  child-alt               |
+ * |             | |                          |
+ * |             | +--------------------------+
  * +-------------+
  */
-.media-img-alt,  // deprecated, use .media-child-alt instead
-.media-child-alt{
-	align-self: center;  // W3C
+
+.media-img-alt,  // deprecated, use .compound-child-alt instead
+.media-child-alt,  // deprecated, use .compound-child-alt instead
+.compound-child-alt{
+	align-self: center;
 }
 
 /**
  * 4. Column And Squishy
  *
- * .media-column puts .media-img on the top. Extends .media.
+ * .compound-column puts .compound-img on the top. Extends .compound.
  *
- * .media-squish puts .media-img on top, then moves it to the side (as
- * above) as screen width increases. Extends .media
+ * .compound-squishy puts .compound-img on top, then moves it to the side
+ * (as above) as screen width increases. Extends .compound.
  *
- * .media.media-column or .media.media-squishy
- *    +------------+
- *    |            |
- *    | .media-img |
- *    |            |
- *    |            |
- *    |            |
- *    +------------+
- * +------------------+
- * |                  |
- * | .media-body      |
- * |                  |
- * |                  |
- * |                  |
- * |                  |
- * |                  |
- * +------------------+
+ * .compound.compound-column or .compound.compound-squishy
+ *    +---------------+
+ *    |               |
+ *    | .compound-img |
+ *    |               |
+ *    |               |
+ *    |               |
+ *    +---------------+
+ * +---------------------+
+ * |                     |
+ * | .compound-body      |
+ * |                     |
+ * |                     |
+ * |                     |
+ * |                     |
+ * |                     |
+ * +---------------------+
  */
 
-.media-column,
-.media-squishy{  // Put .media-img on top, then move to the side
+.media-column,  // deprecated
+.media-squishy,  // deprecated, Put .media-img on top, then move to the side
+.compound-column,
+.compound-squishy{  // Put .compound-img on top, then move to the side
 	align-items: stretch;
 	flex-direction: column;
 }
 
-.media-squishy{
+.media-squishy,  //deprecated
+.compound-squishy{
 
 	@include breakpoint($starlord){
 		align-items: stretch;
@@ -171,15 +180,17 @@
 	}
 }
 
-.media-column > .media-img,
-.media-squishy > .media-img{
+.media-column > .media-img,  // deprecated
+.media-squishy > .media-img,  // deprecated
+.compound-column > .compound-img,
+.compound-squishy > .compound-img{
 	padding-right: 0;
 	max-width: 100%;
-	float: none;  // IE 9
 	text-align: center;
 }
 
-.media-squishy > .media-img{
+.media-squishy > .media-img, // deprecated
+.compound-squishy > .compound-img{
 
 	@include breakpoint($starlord){
 		margin-bottom: 1.071428571428571em;  // 15px
@@ -187,7 +198,6 @@
 		max-width: 31.3333333333%;
 		// layout
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
-		float: left;  // IE9
 	}
 
 	@include breakpoint($gamora){
@@ -195,7 +205,9 @@
 	}
 }
 
-.media-column > .media-img img,
-.media-squishy > .media-img img{
+.media-column > .media-img img,  // deprecated
+.media-squishy > .media-img img,  // deprecated
+.compound-column > .compound-img img,
+.compound-sqishy > .compound-img img{
 	margin: 0 auto;
 }

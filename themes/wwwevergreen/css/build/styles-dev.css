@@ -5054,9 +5054,13 @@ div.ajax-progress {
  * J. Media Segment
  */
 /**
- * H. Media Segment
+ * H. Compound Segment
  *
  * A common pattern wherein copy is tightly coupled to an icon.
+ *
+ * This used to be called the Media Segment, but there were conflicts with
+ * Drupal’s Media module, so that term has been deprecated. I never really
+ * liked “media” for this kind of segment, anyway. —jkm
  *
  * Table of Contents
  *
@@ -5068,28 +5072,29 @@ div.ajax-progress {
 /**
  * 1. Default
  *
- * .media
- * +---------+ +------------------+
- * |         | |                  |
- * | .media- | | .media-body      |
- * |  img    | |                  |
- * |         | |                  |
- * +---------+ |                  |
- *             |                  |
- *             +------------------+
+ * .compound
+ * +------------+ +---------------------+
+ * |            | |                     |
+ * | .compound- | | .compound-body      |
+ * |  img       | |                     |
+ * |            | |                     |
+ * +------------+ |                     |
+ *                |                     |
+ *                +---------------------+
  */
-/* line 26, ../src/smacss/modules/_media-segment.scss */
-.media {
-  clear: left;
-  display: block;
+/* line 30, ../src/smacss/modules/_media-segment.scss */
+.media,
+.compound {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 32, ../src/smacss/modules/_media-segment.scss */
+/* line 35, ../src/smacss/modules/_media-segment.scss */
 .media-img,
-.media-img:link {
+.media-img:link,
+.compound-img,
+.compound-img:link {
   border-bottom-width: 0;
   margin-bottom: 1.071428571428571em;
   padding-right: 1.071428571428571em;
@@ -5097,107 +5102,107 @@ div.ajax-progress {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 32, ../src/smacss/modules/_media-segment.scss */
+  /* line 35, ../src/smacss/modules/_media-segment.scss */
   .media-img,
-  .media-img:link {
+  .media-img:link,
+  .compound-img,
+  .compound-img:link {
     padding-right: 0.882352941176471em;
   }
 }
 
-/* line 48, ../src/smacss/modules/_media-segment.scss */
-.media-img img {
+/* line 52, ../src/smacss/modules/_media-segment.scss */
+.media-img img,
+.compound-img img {
   margin-top: 0.46875rem;
   display: block;
 }
 
-/* line 54, ../src/smacss/modules/_media-segment.scss */
-.media-img-icon {
+/* line 59, ../src/smacss/modules/_media-segment.scss */
+.media-img-icon,
+.compound-img-icon {
   max-height: 3.75rem;
 }
 
-/* line 58, ../src/smacss/modules/_media-segment.scss */
-.media-body {
+/* line 65, ../src/smacss/modules/_media-segment.scss */
+.media-body,
+.compound-body {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  overflow: auto;
-  /**
-   * Alternate way to give block formatting context:
-   *  * display: table-cell;  // Gives block formatting context (pretty
-   *    nifty!): http://www.youtube.com/watch?v=8YtQwv1cUVs
-   *  * width: 3000px;  // Stretches box to fit the remaining width; this is
-   *    not the actual value that comes out.
-   */
 }
 
 /* line 71, ../src/smacss/modules/_media-segment.scss */
-.media-body > :first-child {
+.media-body > :first-child,
+.compound-body > :first-child {
   margin-top: 0.46875rem;
 }
 
 /**
  * 2. Alternate
  *
- * Put .media-img on the right. Extends .media
+ * Put .compound-img on the right. Extends .compound
  *
- * .media
- * +------------------+ +---------+
- * |                  | |         |
- * | .media-body      | | .media- |
- * |                  | |  img    |
- * |                  | |         |
- * |                  | +---------+
- * |                  |
- * +------------------+
+ * .compound
+ * +---------------------+ +------------+
+ * |                     | |            |
+ * | .compound-body      | | .compound- |
+ * |                     | |  img       |
+ * |                     | |            |
+ * |                     | +------------+
+ * |                     |
+ * +---------------------+
  */
-/* line 90, ../src/smacss/modules/_media-segment.scss */
-.media-alt {
+/* line 92, ../src/smacss/modules/_media-segment.scss */
+.media-alt,
+.compound-alt {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-/* line 94, ../src/smacss/modules/_media-segment.scss */
-.media-alt .media-img {
+/* line 97, ../src/smacss/modules/_media-segment.scss */
+.media-alt .media-img,
+.compound-alt .compound-img {
   padding-right: 0;
   padding-left: 1.071428571428571em;
-  float: right;
 }
 
 /**
  * 3. Vertically-Centered
  * 
- * Vertically center .media-child-alt. Extends .media-img or .media-body.
+ * Vertically center .compound-child-alt with the rest of the compound.
+ * Extends .compound-img or .compound-body.
  *
- * .media
- *                 +------------------+
- * +-------------+ |                  |
- * |             | | .media-body      |
- * | .media-     | |                  |
- * |  img.media- | |                  |
- * |  child-alt  | |                  |
- * |             | |                  |
- * +-------------+ |                  |
- *                 +------------------+
+ * .compound
+ *                    +---------------------+
+ * +----------------+ |                     |
+ * |                | | .compound-body      |
+ * | .compound-     | |                     |
+ * |  img.compound- | |                     |
+ * |  child-alt     | |                     |
+ * |                | |                     |
+ * +----------------+ |                     |
+ *                    +---------------------+
  *
  * OR
  *
- * .media
+ * .compound
  * +-------------+
- * |             | +--------------------+
- * | .media-     | |                    |
- * |  img        | | .media-body.media- |
- * |             | |  child-alt         |
- * |             | |                    |
- * |             | +--------------------+
+ * |             | +--------------------------+
+ * | .compound-  | |                          |
+ * |  img        | | .compound-body.compound- |
+ * |             | |  child-alt               |
+ * |             | |                          |
+ * |             | +--------------------------+
  * +-------------+
  */
-/* line 128, ../src/smacss/modules/_media-segment.scss */
+/* line 133, ../src/smacss/modules/_media-segment.scss */
 .media-img-alt,
-.media-child-alt {
+.media-child-alt,
+.compound-child-alt {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
               -ms-grid-row-align: center;
@@ -5207,32 +5212,34 @@ div.ajax-progress {
 /**
  * 4. Column And Squishy
  *
- * .media-column puts .media-img on the top. Extends .media.
+ * .compound-column puts .compound-img on the top. Extends .compound.
  *
- * .media-squish puts .media-img on top, then moves it to the side (as
- * above) as screen width increases. Extends .media
+ * .compound-squishy puts .compound-img on top, then moves it to the side
+ * (as above) as screen width increases. Extends .compound.
  *
- * .media.media-column or .media.media-squishy
- *    +------------+
- *    |            |
- *    | .media-img |
- *    |            |
- *    |            |
- *    |            |
- *    +------------+
- * +------------------+
- * |                  |
- * | .media-body      |
- * |                  |
- * |                  |
- * |                  |
- * |                  |
- * |                  |
- * +------------------+
+ * .compound.compound-column or .compound.compound-squishy
+ *    +---------------+
+ *    |               |
+ *    | .compound-img |
+ *    |               |
+ *    |               |
+ *    |               |
+ *    +---------------+
+ * +---------------------+
+ * |                     |
+ * | .compound-body      |
+ * |                     |
+ * |                     |
+ * |                     |
+ * |                     |
+ * |                     |
+ * +---------------------+
  */
-/* line 160, ../src/smacss/modules/_media-segment.scss */
+/* line 166, ../src/smacss/modules/_media-segment.scss */
 .media-column,
-.media-squishy {
+.media-squishy,
+.compound-column,
+.compound-squishy {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -5242,8 +5249,9 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 166, ../src/smacss/modules/_media-segment.scss */
-  .media-squishy {
+  /* line 174, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy,
+  .compound-squishy {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -5253,37 +5261,41 @@ div.ajax-progress {
   }
 }
 
-/* line 174, ../src/smacss/modules/_media-segment.scss */
+/* line 183, ../src/smacss/modules/_media-segment.scss */
 .media-column > .media-img,
-.media-squishy > .media-img {
+.media-squishy > .media-img,
+.compound-column > .compound-img,
+.compound-squishy > .compound-img {
   padding-right: 0;
   max-width: 100%;
-  float: none;
   text-align: center;
 }
 
 @media screen and (min-width: 32em) {
-  /* line 182, ../src/smacss/modules/_media-segment.scss */
-  .media-squishy > .media-img {
+  /* line 192, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy > .media-img,
+  .compound-squishy > .compound-img {
     margin-bottom: 1.071428571428571em;
     padding-right: 1.071428571428571em;
     max-width: 31.3333333333%;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    float: left;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 182, ../src/smacss/modules/_media-segment.scss */
-  .media-squishy > .media-img {
+  /* line 192, ../src/smacss/modules/_media-segment.scss */
+  .media-squishy > .media-img,
+  .compound-squishy > .compound-img {
     padding-right: 0.882352941176471em;
   }
 }
 
-/* line 198, ../src/smacss/modules/_media-segment.scss */
+/* line 208, ../src/smacss/modules/_media-segment.scss */
 .media-column > .media-img img,
-.media-squishy > .media-img img {
+.media-squishy > .media-img img,
+.compound-column > .compound-img img,
+.compound-sqishy > .compound-img img {
   margin: 0 auto;
 }
 
