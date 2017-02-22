@@ -23,21 +23,16 @@
 	*/
 ?>
 
-<!--Intro Sentence-->
 <div class="row">
-	<div class="wrapper">
+	<div class="grid wrapper">
 		<div class="standalone-unit unit-1-1">
+			<!--Intro Sentence-->
 			<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
+			<!-- Location Transporter -->
+			<p class="location-transporter">
+				Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
+			</p>
 		</div>
-	</div>
-</div>
-
-<!-- Location Transporter -->
-<div class="row">
-	<div class="wrapper">
-		<p class="location-transporter">
-			Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
-		</p>
 	</div>
 </div>
 
@@ -149,19 +144,20 @@
 						
 						
 						<div class="grid"><!--<div class="unit-1-1"><a href="/graduation/home"><img alt="See photos and more from graduation day" class="image-full" src="/graduation/images/grad-homepage-banner.jpg" /></a></div>-->
-<figure class="unit-1-1">
-<div class="box pull-box pull-box-alt">
-<p class="pull-quote"><q>Evergreen had an impact on me that I still feel. The skills I learned at Evergreen in communication, setting goals, leadership and personal ethics are with me every day. Evergreen was the perfect place for me.</q></p>
-<figcaption>
-<p>—Chere Weiss, Community Outreach Coordinator, St. Johns Medical Center, Longview, Washington</p>
-</figcaption>
-</div>
-</figure>
-</div>
-						
-						<!-- Incredible Experiences -->
-	
-						<div class="grid">
+							<figure class="unit-1-1">
+								<div class="box pull-box pull-box-alt">
+									<p class="pull-quote">
+										<q>Evergreen had an impact on me that I still feel. The skills I learned at Evergreen in communication, setting goals, leadership and personal ethics are with me every day. Evergreen was the perfect place for me.</q>
+									</p>
+									<figcaption>
+										<p>—Chere Weiss, Community Outreach Coordinator, St. Johns Medical Center, Longview, Washington</p>
+									</figcaption>
+								</div>
+							</figure>
+
+
+
+							<!-- Incredible Experiences -->
 							<div class="unit-1-1">
 								<h2>Incredible Experiences</h2>
 								<p>You&#8217;ll have many opportunities to explore your interests and discover new ones.</p>
