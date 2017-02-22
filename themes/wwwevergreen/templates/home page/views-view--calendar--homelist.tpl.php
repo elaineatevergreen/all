@@ -48,7 +48,7 @@
 							<div class="unit-1-7" aria-hidden="true" style="">
 								<div class="media media-column">
 									<div class="media-img">
-										<div class="calendar-dt">
+										<div class="calendar-dt calendar-dt-null">
 											<span class="calendar-month">
 												<span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-03-07T09:30:00-08:00">&nbsp;</span>
 											</span>
