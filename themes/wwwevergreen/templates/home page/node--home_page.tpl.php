@@ -23,15 +23,88 @@
 	*/
 ?>
 
-<!--Intro Sentence-->
-
+<!-- Location Transporter -->
 <div class="row">
 	<div class="wrapper">
-		<div class="standalone-unit unit-1-1">
-			<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
-		</div>
+		<p class="location-transporter">
+			Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
+		</p>
 	</div>
 </div>
+
+<!-- Site Transporter -->
+<div class="row">
+	<div class="wrapper">
+		<!-- SVGs are experimental, and so commented out for now. -->
+		<ul class="element-list grid transporter">
+			<li class="unit-1-7 icon-scale">
+				<a href="/about">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
+					</div>
+					<div class="transporter-text">About Evergreen</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/studies">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
+					</div>
+					<div class="transporter-text">Fields of Study</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/visit">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
+					</div>
+					<div class="transporter-text">See Campus</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/apply">
+					<div class="transporter-icon transporter-icon-call">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
+					</div>
+					<div class="transporter-text">Apply Now</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/catalog">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
+					</div>
+					<div class="transporter-text">Catalog</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/apply">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/evening-weekend.png"/>
+					</div>
+					<div class="transporter-text">Evening and Weekend</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/apply">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/graduate-degrees.png"/>
+					</div>
+					<div class="transporter-text">Graduate Degrees</div>
+				</a>
+			</li>
+			<!--<li class="unit-1-6-alt icon-scale">
+				<a href="http://youvis.it/kcrkJP">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
+					</div>
+					<div class="transporter-text">Virtual Tour</div>
+				</a>
+			</li>-->
+		</ul><!-- /.element-list.grid.transporter -->
+	</div><!-- /.wrapper -->
+</div><!-- /.row -->
+
 <section class="site-content">
 	<main class="main-row row wrapper" id="main-row" role="main">
 		<div class="grid main-row-grid">
@@ -40,79 +113,7 @@
 			</div>
 			<div class="index-wrapper unit-6-7" id="index-wrapper">
 				<!-- Main Content -->
-				<article class="main-content">
-					<!-- Transporter Menu -->
-					<!-- SVGs are experimental, and so commented out for now. -->
-					<ul class="element-list grid transporter">
-						<li class="unit-1-6-alt icon-scale">
-							<a href="/about">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#info"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">About Evergreen</div>
-							</a>
-						</li>
-						<li class="unit-1-6-alt icon-scale">
-							<a href="/studies">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#apple"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">Fields of Study</div>
-							</a>
-						</li>
-						<li class="unit-1-6-alt icon-scale">
-							<a href="/catalog">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#book"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">Catalog</div>
-							</a>
-						</li>
-						<li class="unit-1-6-alt icon-scale">
-							<a href="http://youvis.it/kcrkJP">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#location"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">Virtual Tour</div>
-							</a>
-						</li>
-						<li class="unit-1-6-alt icon-scale">
-							<a href="/admissions/visit">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#direction"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">Plan a Visit</div>
-							</a>
-						</li>
-						<li class="unit-1-6-alt icon-scale">
-							<a href="/admissions/apply">
-								<div class="transporter-icon">
-									<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
-									<!--<svg width="150">
-										<use xlink:href="#graduation"></use>
-									</svg>-->
-								</div>
-								<div class="transporter-text">Apply Now</div>
-							</a>
-						</li>
-					</ul>
-	
-	
+				<article class="main-content">	
 						<!--Tertiary Navigation-->
 						<nav class="box tertiary-nav-homepage" id="tertiary-nav">
 							<?php print render($content['field_section_navigation']); ?>
