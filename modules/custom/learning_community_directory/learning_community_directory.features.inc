@@ -34,14 +34,6 @@ function learning_community_directory_views_api($module = NULL, $api = NULL) {
  */
 function learning_community_directory_node_info() {
   $items = array(
-    'basic_page' => array(
-      'name' => t('Basic Page'),
-      'base' => 'node_content',
-      'description' => t('A <em>basic page</em> is used to post general information about the Directory.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'institution' => array(
       'name' => t('Institution'),
       'base' => 'node_content',
@@ -54,14 +46,6 @@ function learning_community_directory_node_info() {
       'name' => t('Learning Community Program'),
       'base' => 'node_content',
       'description' => t('A <em>Learning Community Program</em> is a specific project connected with an institution.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'webform' => array(
-      'name' => t('Webform'),
-      'base' => 'node_content',
-      'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
