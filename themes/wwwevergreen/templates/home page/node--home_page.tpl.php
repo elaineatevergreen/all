@@ -49,7 +49,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/about">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/info.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
 					</div>
 					<div class="transporter-text">About Evergreen</div>
 				</a>
@@ -57,7 +57,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/studies">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/programs.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
 					</div>
 					<div class="transporter-text">Fields of Study</div>
 				</a>
@@ -65,7 +65,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/visit">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/visit.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
 					</div>
 					<div class="transporter-text">See Campus</div>
 				</a>
@@ -73,7 +73,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/apply">
 					<div class="transporter-icon transporter-icon-call">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/apply.png"/>
 					</div>
 					<div class="transporter-text">Apply Now</div>
 				</a>
@@ -81,7 +81,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/catalog">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/catalog.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
 					</div>
 					<div class="transporter-text">Catalog</div>
 				</a>
@@ -89,7 +89,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/apply">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/evening-weekend.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
 					</div>
 					<div class="transporter-text">Evening and Weekend</div>
 				</a>
@@ -97,7 +97,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/apply">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/graduate-degrees.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
 					</div>
 					<div class="transporter-text">Graduate Degrees</div>
 				</a>
