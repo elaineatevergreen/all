@@ -270,6 +270,7 @@
 
 .right,  // deprecated
 .supplement,  // This should mirror .supplement-1-2; it’s just a more user-friendly name
+.media-supplement,  // Drupal Media module
 .supplement-1-2{  // deprecated, use .supplement instead
 
 	@include breakpoint($starlord){
