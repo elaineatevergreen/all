@@ -73,7 +73,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/apply">
 					<div class="transporter-icon transporter-icon-call">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/apply.png"/>
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
 					</div>
 					<div class="transporter-text">Apply Now</div>
 				</a>
