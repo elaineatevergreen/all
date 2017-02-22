@@ -1975,6 +1975,7 @@ a:link,
   /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 1em;
     width: calc(66.6666666667% - 1em);
@@ -1985,6 +1986,7 @@ a:link,
   /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2em;
   }
@@ -1993,6 +1995,7 @@ a:link,
   /* line 271, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3em;
     width: calc(50% + 2.5em);
@@ -2000,7 +2003,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 295, ../src/smacss/layout/_grid.scss */
+  /* line 296, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1em;
     margin-left: 1em;
@@ -2009,14 +2012,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 295, ../src/smacss/layout/_grid.scss */
+  /* line 296, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 295, ../src/smacss/layout/_grid.scss */
+  /* line 296, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 1em;
     margin-left: calc(-25% - 2em);
@@ -2027,14 +2030,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 295, ../src/smacss/layout/_grid.scss */
+  /* line 296, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-25% - 3em);
     width: calc((100% + 6em * 18 / 14) / 4);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 295, ../src/smacss/layout/_grid.scss */
+  /* line 296, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -5834,6 +5837,8 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
+.file-default,
+.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -5846,18 +5851,22 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 42, ../src/smacss/modules/_images.scss */
+/* line 44, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
+.file-default,
+.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 42, ../src/smacss/modules/_images.scss */
+  /* line 44, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
+  .file-default,
+  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -5865,9 +5874,11 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 42, ../src/smacss/modules/_images.scss */
+  /* line 44, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
+  .file-default,
+  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -5876,7 +5887,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -5888,14 +5899,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 79, ../src/smacss/modules/_images.scss */
+  /* line 83, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
@@ -5904,7 +5915,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -5914,7 +5925,7 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 90, ../src/smacss/modules/_images.scss */
+  /* line 93, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
@@ -5922,8 +5933,10 @@ p.alert {
     margin-right: -3em;
     max-width: calc(50% + 2.5em);
   }
+}
 
-  /* line 99, ../src/smacss/modules/_images.scss */
+@media screen and (min-width: 70em) {
+  /* line 105, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -5932,8 +5945,9 @@ p.alert {
     float: left;
   }
 }
+
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/modules/_images.scss */
+  /* line 119, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -5944,7 +5958,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 123, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -5952,7 +5966,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 139, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }

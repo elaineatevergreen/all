@@ -23,6 +23,8 @@
 .image-alt,
 .image-full,
 .image-full img,  // WYSIWYG
+.file-default,  // Drupal Media module - matches .image-full
+.file-supplement,  // Drupal Media module - also matches .image-full
 .field-image img{  // Drupal event calendar
 	// box model
 	border: 1px solid mix($shade, $sky-blue, 60%);
@@ -41,6 +43,8 @@
 
 .image-full,
 .image-full img,  // WYSIWYG
+.file-default,
+.file-supplement,
 .field-image img{  // Drupal event calendar
 	@include margin-default;
 	margin-right: auto;
@@ -86,17 +90,21 @@
 	}
 }
 
-@include breakpoint($drax){
-	.left,  // deprecated
-	.main-content .image,
-	.main-content .image img,  // WYSIWYG
-	.image-alt{
+.left,  // deprecated
+.main-content .image,
+.main-content .image img,  // WYSIWYG
+.image-alt{
+	
+	@include breakpoint($drax){
 		// box model
 		margin-right: -3em;
 		max-width: calc(50% + 2.5em);
 	}
-
-	.image-alt{
+}
+	
+.image-alt{
+	
+	@include breakpoint($drax){
 		// box model
 		margin-right: 0;
 		margin-left: -36.699751769518%;  // Weird math for the left margin.
