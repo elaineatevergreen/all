@@ -11,6 +11,9 @@ function basic_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
+  if ($module == "file_entity" && $api == "file_default_displays") {
+    return array("version" => "1");
+  }
   if ($module == "linkit" && $api == "linkit_profiles") {
     return array("version" => "1");
   }
@@ -24,6 +27,31 @@ function basic_content_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function basic_content_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function basic_content_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: image.
+  $styles['image'] = array(
+    'label' => 'Image (800x800px)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 800,
+          'height' => 800,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
 }
 
 /**
