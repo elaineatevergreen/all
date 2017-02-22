@@ -66,7 +66,7 @@ function native_cases_default_page_manager_pages() {
           1 => 1,
         ),
         'parent' => NULL,
-        'class' => '',
+        'class' => 'unit-6-7',
         'column_class' => '',
         'row_class' => '',
         'region_class' => '',
@@ -85,7 +85,7 @@ function native_cases_default_page_manager_pages() {
           0 => 'main-row',
         ),
         'parent' => 'canvas',
-        'class' => 'primary-content-wrapper unit-4-7',
+        'class' => 'unit-2-3',
         'hide_empty' => 0,
       ),
       'main-row' => array(
@@ -102,7 +102,7 @@ function native_cases_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => 'main-content',
+        'class' => '',
         'hide_empty' => 1,
       ),
       1 => array(
@@ -113,7 +113,7 @@ function native_cases_default_page_manager_pages() {
         'children' => array(
           0 => 2,
         ),
-        'class' => 'sidebar-wrapper unit-2-7',
+        'class' => 'unit-1-3',
         'hide_empty' => 1,
       ),
       2 => array(
@@ -132,7 +132,7 @@ function native_cases_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '2',
-        'class' => 'sidebar',
+        'class' => '',
         'hide_empty' => 1,
       ),
     ),
@@ -143,167 +143,166 @@ function native_cases_default_page_manager_pages() {
       'center' => NULL,
       'secondary' => NULL,
     ),
+    'style' => 'naked',
   );
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'fa28336d-0a85-4fc6-8c86-8f269b3553a6';
-  $display->storage_type = 'page_manager';
-  $display->storage_id = 'page_home__panel';
   $display->content = array();
   $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
-  $pane->panel = 'center';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Intro content',
-    'title' => '',
-    'body' => '<p class="intro">Engage your students and expand your curriculum with case studies on Native American subjects.</p>',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
-  $display->content['new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2'] = $pane;
-  $display->panels['center'][0] = 'new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
-  $pane = new stdClass();
-  $pane->pid = 'new-2ffce4b7-5ce9-4508-a63a-18d8977b401a';
-  $pane->panel = 'center';
-  $pane->type = 'views';
-  $pane->subtype = 'all_cases';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '3',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
-    'args' => '',
-    'url' => '',
-    'display' => 'block_2',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '2ffce4b7-5ce9-4508-a63a-18d8977b401a';
-  $display->content['new-2ffce4b7-5ce9-4508-a63a-18d8977b401a'] = $pane;
-  $display->panels['center'][1] = 'new-2ffce4b7-5ce9-4508-a63a-18d8977b401a';
-  $pane = new stdClass();
-  $pane->pid = 'new-d7b11769-2d95-4e68-a8bd-cf76afcf9480';
-  $pane->panel = 'center';
-  $pane->type = 'block';
-  $pane->subtype = 'menu-menu-case-facets';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 2;
-  $pane->locks = array();
-  $pane->uuid = 'd7b11769-2d95-4e68-a8bd-cf76afcf9480';
-  $display->content['new-d7b11769-2d95-4e68-a8bd-cf76afcf9480'] = $pane;
-  $display->panels['center'][2] = 'new-d7b11769-2d95-4e68-a8bd-cf76afcf9480';
-  $pane = new stdClass();
-  $pane->pid = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
-  $pane->panel = 'secondary';
-  $pane->type = 'views';
-  $pane->subtype = 'events';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '5',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
-    'args' => '',
-    'url' => '',
-    'display' => 'block',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '649490fd-a921-49ab-ad9f-5b0d9ef74902';
-  $display->content['new-649490fd-a921-49ab-ad9f-5b0d9ef74902'] = $pane;
-  $display->panels['secondary'][0] = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
-  $pane = new stdClass();
-  $pane->pid = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
-  $pane->panel = 'secondary';
-  $pane->type = 'views';
-  $pane->subtype = 'news';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '5',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
-    'args' => '',
-    'url' => '',
-    'display' => 'home',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '13417020-ecb1-4947-a3a9-0c7e85f81142';
-  $display->content['new-13417020-ecb1-4947-a3a9-0c7e85f81142'] = $pane;
-  $display->panels['secondary'][1] = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
+    $pane = new stdClass();
+    $pane->pid = 'new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
+    $pane->panel = 'center';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Intro content',
+      'title' => '',
+      'body' => '<p class="intro">Engage your students and expand your curriculum with case studies on Native American subjects.</p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
+    $display->content['new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2'] = $pane;
+    $display->panels['center'][0] = 'new-f3b45162-5e27-4dd0-ad6e-3940ad1e50c2';
+    $pane = new stdClass();
+    $pane->pid = 'new-2ffce4b7-5ce9-4508-a63a-18d8977b401a';
+    $pane->panel = 'center';
+    $pane->type = 'views';
+    $pane->subtype = 'all_cases';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '3',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_2',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '2ffce4b7-5ce9-4508-a63a-18d8977b401a';
+    $display->content['new-2ffce4b7-5ce9-4508-a63a-18d8977b401a'] = $pane;
+    $display->panels['center'][1] = 'new-2ffce4b7-5ce9-4508-a63a-18d8977b401a';
+    $pane = new stdClass();
+    $pane->pid = 'new-d7b11769-2d95-4e68-a8bd-cf76afcf9480';
+    $pane->panel = 'center';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-case-facets';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'd7b11769-2d95-4e68-a8bd-cf76afcf9480';
+    $display->content['new-d7b11769-2d95-4e68-a8bd-cf76afcf9480'] = $pane;
+    $display->panels['center'][2] = 'new-d7b11769-2d95-4e68-a8bd-cf76afcf9480';
+    $pane = new stdClass();
+    $pane->pid = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
+    $pane->panel = 'secondary';
+    $pane->type = 'views';
+    $pane->subtype = 'events';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '649490fd-a921-49ab-ad9f-5b0d9ef74902';
+    $display->content['new-649490fd-a921-49ab-ad9f-5b0d9ef74902'] = $pane;
+    $display->panels['secondary'][0] = 'new-649490fd-a921-49ab-ad9f-5b0d9ef74902';
+    $pane = new stdClass();
+    $pane->pid = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
+    $pane->panel = 'secondary';
+    $pane->type = 'views';
+    $pane->subtype = 'news';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'home',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '13417020-ecb1-4947-a3a9-0c7e85f81142';
+    $display->content['new-13417020-ecb1-4947-a3a9-0c7e85f81142'] = $pane;
+    $display->panels['secondary'][1] = 'new-13417020-ecb1-4947-a3a9-0c7e85f81142';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

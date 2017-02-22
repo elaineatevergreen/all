@@ -56,34 +56,10 @@ function native_cases_date_format_types() {
  */
 function native_cases_node_info() {
   $items = array(
-    'article' => array(
-      'name' => t('Article'),
-      'base' => 'node_content',
-      'description' => t('News items for the site\'s home page'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'case_study' => array(
       'name' => t('Case Study'),
       'base' => 'node_content',
       'description' => t('A <em>case study</em> tells a story about a problem and its history, then ends with a leading question so that students work through the case themselves.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'event' => array(
-      'name' => t('Event'),
-      'base' => 'node_content',
-      'description' => t('Use an <em>event</em> to post a workshop or institute.'),
-      'has_title' => '1',
-      'title_label' => t('Event Name'),
-      'help' => '',
-    ),
-    'page' => array(
-      'name' => t('Page'),
-      'base' => 'node_content',
-      'description' => t('A <em>page</em> is a static content type, just text and images.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
