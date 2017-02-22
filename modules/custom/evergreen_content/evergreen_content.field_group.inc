@@ -1737,7 +1737,6 @@ function evergreen_content_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_section_navigation',
-      1 => 'description',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
