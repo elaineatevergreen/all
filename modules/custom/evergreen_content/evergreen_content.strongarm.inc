@@ -1308,6 +1308,11 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
     'file' => array(),
+      'supplement' => array(
+        'label' => 'Floated Image',
+        'custom settings' => 1,
+      ),
+    ),
     'field_collection_item' => array(
       'summary' => array(
         'label' => 'Summary',
