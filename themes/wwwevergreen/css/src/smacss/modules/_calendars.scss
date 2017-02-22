@@ -11,6 +11,13 @@
 
 /**
  * 1. Event Calendar
+ *
+ * .calendar-dt
+ * +-----+
+ * | Apr | .calendar-month
+ * |-----|
+ * |  17 | .calendar-day
+ * +-----+
  */
 .calendar-dt{
 	// box model
@@ -43,18 +50,15 @@
 }
 
 .calendar-dt-mini{  // A calendar that starts small and then expands to normal size.
+
 	@media screen{
 		width: 2em;
 
 		.calendar-month{
 			// box model
-			//height: 2px;
 			padding: 0;
 			min-height: 0.875rem;  // 14/16; magic number - the smallest size that accomodates the text
-			// layout
-			//overflow: hidden;
 			// typography
-			//color: transparent;
 			font-size: 0.625rem;  // 10/16; magic number - the biggest font size it can be and still fit in the box
 			font-weight: normal;
 		}
@@ -68,15 +72,13 @@
 	}
 }
 
-.calendar-dt-null{
+.calendar-dt-null{  // An empty or invalid calendar placeholder
 	background-color: mix($tint, $blueberry-susan, 80%);
-
-	.calendar-month{
-		background-color: mix($tint, $blueberry-susan, 60%);
-	}
 }
 
-
+.calendar-dt-null .calendar-month{
+	background-color: mix($tint, $blueberry-susan, 60%);
+}
 
 /**
  * 2. Homepage Upcoming Events
