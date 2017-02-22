@@ -1322,8 +1322,8 @@ function evergreen_content_strongarm() {
   $strongarm->name = 'entity_view_modes';
   $strongarm->value = array(
     'file' => array(
-      'image_full_width' => array(
-        'label' => 'Image Full-Width',
+      'supplement' => array(
+        'label' => 'Floated Image',
         'custom settings' => 1,
       ),
     ),
