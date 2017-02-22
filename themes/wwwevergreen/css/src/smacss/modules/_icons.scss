@@ -61,8 +61,8 @@
 		color: $sky-blue;
 
 		.transporter-icon{
-			background: $sky-blue;
-			// misc
+			// decoration
+			//background: $sky-blue;
 			box-shadow: 0 0 0.2em $highlight inset;
 		}
 	}
@@ -74,18 +74,17 @@
 
 .transporter-icon{
 	// box model
-	//padding: 15%;  // Whatever feels right.
 	//padding-top: 85%;  // For responsive SVG.
 	max-width: 100%;
 	// layout
 	display: inline-block;
 	// positioning
-	position: relative;  // For responsive SVG.
+	//position: relative;  // For responsive SVG.
 	// typography
 	color: $tint;
 	text-align: center;
 	// decoration
-	background-color: $evergreen-neue;
+	//background-color: $evergreen-neue;
 	border-radius: 50%;
 	// misc
 	transition: all 0.2s;
@@ -102,17 +101,24 @@
 	@include breakpoint($drax){
 		max-width: 90%;
 	}
+}
 
-	img{
-		// layout
-		display: block;
-		//position: absolute;  // For responsive SVG.
-		//top: 0;
-		//left: 0;
-		transform: scale(0.6);
-		// behavior
-		transition: transform 0.1s ease;
-		// miscellaneous
+.transporter-icon img{
+	// layout
+	display: block;
+	//position: absolute;  // For responsive SVG.
+	//top: 0;
+	//left: 0;
+	transform: scale(0.6);
+	// behavior
+	transition: transform 0.1s ease;
+}
+
+.transporter-icon-call{
+	background-color: $evergreen-neue;
+	
+	&:hover{
+		background-color: $sky-blue;
 	}
 }
 
