@@ -62,7 +62,7 @@
 		position: static;
 	}
 }
-	
+
 .transporter > li:nth-child(1),
 .transporter > li:nth-child(3){
 	top: calc(45 / 16 * 1rem);
@@ -75,6 +75,10 @@
 
 .transporter-call{
 	flex-basis: 100%;
+	
+	@include breakpoint($gamora){
+		flex-basis: inherit;
+	}
 }
 
 .transporter a{
