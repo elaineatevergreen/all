@@ -36,7 +36,14 @@
  * Related links with iconographic circles.
  */
 .transporter{
+	// box model
 	padding: 0 1ch;
+	// layout
+	flex-direction: column;
+	
+	@include breakpoint($lil-groot){
+		flex-direction: row;
+	}
 	
 	@include breakpoint($rocket){
 		//padding: 0 2ch;  // We may not want to sacrifice this much room when we're squeezing in seven columns.
@@ -46,14 +53,17 @@
 .transporter > li{
 	// box model
 	margin: calc(15 / 16 * 1rem) 0;
-	width: 33.3333333333%;
-	// layout
-	display: block;  // IE 9
-	float: left;  // IE 9
-	position: relative;
 	// typography
 	text-align: center;
 	vertical-align: top;  // IE 9
+	
+	@include breakpoint($lil-groot){
+		// box model
+		width: 33.3333333333%;
+		// layout
+		float: left;  // IE 9
+		position: relative;
+	}
 	
 	@include breakpoint($gamora){
 		// box model
@@ -66,6 +76,14 @@
 .transporter > li:nth-child(1),
 .transporter > li:nth-child(3){
 	top: calc(45 / 16 * 1rem);
+}
+
+.transporter > li:nth-child(4){
+	order: 1;
+	
+	@include breakpoint($lil-groot){
+		order: initial;
+	}
 }
 	
 .transporter > li:nth-child(5),
