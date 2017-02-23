@@ -24,85 +24,84 @@
 ?>
 
 <div class="row">
-	<div class="grid wrapper">
-		<div class="standalone-unit unit-1-1">
-			<!--Intro Sentence-->
-			<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
-			<!-- Location Transporter -->
-			<p class="location-transporter">
-				Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
-			</p>
-		</div><!-- /.standalone-unit.unit-1-1 -->
-	</div><!-- /.grid.wrapper -->
-	
-	<!-- Site Transporter -->
-	<ul class="element-list grid transporter">
-		<li class="unit-1-7 icon-scale">
-			<a href="/about">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
-				</div>
-				<div class="transporter-text">About Evergreen</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale">
-			<a href="/studies">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
-				</div>
-				<div class="transporter-text">Fields of Study</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale">
-			<a href="/admissions/visit">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
-				</div>
-				<div class="transporter-text">See Campus</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale transporter-call">
-			<a href="/admissions/apply">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
-				</div>
-				<div class="transporter-text">Apply Now</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale">
-			<a href="/catalog">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
-				</div>
-				<div class="transporter-text">Catalog</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale">
-			<a href="/admissions/apply">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
-				</div>
-				<div class="transporter-text">Evening and Weekend</div>
-			</a>
-		</li>
-		<li class="unit-1-7 icon-scale">
-			<a href="/admissions/apply">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
-				</div>
-				<div class="transporter-text">Graduate Degrees</div>
-			</a>
-		</li>
-		<!--<li class="unit-1-6-alt icon-scale">
-			<a href="http://youvis.it/kcrkJP">
-				<div class="transporter-icon">
-					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
-				</div>
-				<div class="transporter-text">Virtual Tour</div>
-			</a>
-		</li>-->
-	</ul><!-- /.element-list.grid.transporter -->
-	
+	<div class="wrapper">
+		<div class="grid">
+			<div class="standalone-unit unit-1-1">
+				<!-- Location Transporter -->
+				<p class="location-transporter">
+					Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
+				</p>
+			</div><!-- /.standalone-unit.unit-1-1 -->
+		</div><!-- /.grid -->
+		
+		<!-- Site Transporter -->
+		<ul class="element-list grid transporter">
+			<li class="unit-1-7 icon-scale">
+				<a href="/about">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
+					</div>
+					<div class="transporter-text">About Evergreen</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/studies">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
+					</div>
+					<div class="transporter-text">Fields of Study</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/visit">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
+					</div>
+					<div class="transporter-text">See Campus</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale transporter-call">
+				<a href="/admissions/apply">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
+					</div>
+					<div class="transporter-text">Apply Now</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/catalog">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
+					</div>
+					<div class="transporter-text">Catalog</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/apply">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
+					</div>
+					<div class="transporter-text">Evening and Weekend</div>
+				</a>
+			</li>
+			<li class="unit-1-7 icon-scale">
+				<a href="/admissions/apply">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
+					</div>
+					<div class="transporter-text">Graduate Degrees</div>
+				</a>
+			</li>
+			<!--<li class="unit-1-6-alt icon-scale">
+				<a href="http://youvis.it/kcrkJP">
+					<div class="transporter-icon">
+						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
+					</div>
+					<div class="transporter-text">Virtual Tour</div>
+				</a>
+			</li>-->
+		</ul><!-- /.element-list.grid.transporter -->
+	</div><!-- /.wrapper -->
 </div><!-- /.row -->
 
 <section class="site-content">
@@ -113,7 +112,7 @@
 			</div>
 			<div class="index-wrapper unit-6-7" id="index-wrapper">
 				<!-- Main Content -->
-				<article class="main-content">	
+				<article class="main-content">
 						<!--Tertiary Navigation-->
 						<nav class="box tertiary-nav-homepage" id="tertiary-nav">
 							<?php print render($content['field_section_navigation']); ?>
@@ -138,6 +137,9 @@
 							</figure>
 						</div> -->
 						
+						
+						<!--Intro Sentence-->
+						<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
 						
 						<div class="grid"><!--<div class="unit-1-1"><a href="/graduation/home"><img alt="See photos and more from graduation day" class="image-full" src="/graduation/images/grad-homepage-banner.jpg" /></a></div>-->
 							<figure class="unit-1-1">
