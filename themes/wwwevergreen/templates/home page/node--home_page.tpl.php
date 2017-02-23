@@ -32,81 +32,77 @@
 			<p class="location-transporter">
 				Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
 			</p>
-		</div>
-	</div>
-</div>
-
-<!-- Site Transporter -->
-<div class="row">
-	<div class="wrapper">
-		<!-- SVGs are experimental, and so commented out for now. -->
-		<ul class="element-list grid transporter">
-			<li class="unit-1-7 icon-scale">
-				<a href="/about">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
-					</div>
-					<div class="transporter-text">About Evergreen</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/studies">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
-					</div>
-					<div class="transporter-text">Fields of Study</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/visit">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
-					</div>
-					<div class="transporter-text">See Campus</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/apply">
-					<div class="transporter-icon transporter-icon-call">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
-					</div>
-					<div class="transporter-text">Apply Now</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/catalog">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
-					</div>
-					<div class="transporter-text">Catalog</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/apply">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
-					</div>
-					<div class="transporter-text">Evening and Weekend</div>
-				</a>
-			</li>
-			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/apply">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
-					</div>
-					<div class="transporter-text">Graduate Degrees</div>
-				</a>
-			</li>
-			<!--<li class="unit-1-6-alt icon-scale">
-				<a href="http://youvis.it/kcrkJP">
-					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
-					</div>
-					<div class="transporter-text">Virtual Tour</div>
-				</a>
-			</li>-->
-		</ul><!-- /.element-list.grid.transporter -->
-	</div><!-- /.wrapper -->
+		</div><!-- /.standalone-unit.unit-1-1 -->
+	</div><!-- /.grid.wrapper -->
+	
+	<!-- Site Transporter -->
+	<ul class="element-list grid transporter">
+		<li class="unit-1-7 icon-scale">
+			<a href="/about">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
+				</div>
+				<div class="transporter-text">About Evergreen</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale">
+			<a href="/studies">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
+				</div>
+				<div class="transporter-text">Fields of Study</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale">
+			<a href="/admissions/visit">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
+				</div>
+				<div class="transporter-text">See Campus</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale transporter-call">
+			<a href="/admissions/apply">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply.png"/>
+				</div>
+				<div class="transporter-text">Apply Now</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale">
+			<a href="/catalog">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
+				</div>
+				<div class="transporter-text">Catalog</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale">
+			<a href="/admissions/apply">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
+				</div>
+				<div class="transporter-text">Evening and Weekend</div>
+			</a>
+		</li>
+		<li class="unit-1-7 icon-scale">
+			<a href="/admissions/apply">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
+				</div>
+				<div class="transporter-text">Graduate Degrees</div>
+			</a>
+		</li>
+		<!--<li class="unit-1-6-alt icon-scale">
+			<a href="http://youvis.it/kcrkJP">
+				<div class="transporter-icon">
+					<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/tour.png"/>
+				</div>
+				<div class="transporter-text">Virtual Tour</div>
+			</a>
+		</li>-->
+	</ul><!-- /.element-list.grid.transporter -->
+	
 </div><!-- /.row -->
 
 <section class="site-content">
@@ -234,15 +230,15 @@
 							<h2>Go Beyond</h2>
 							<ul class="element-list grid">
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<!-- <img alt="Testing svgs" src="<?php //echo($base_path . $directory) ?>/images/icons/svg-icons-homepage/academic-resources.svg" /> -->
 											<img alt="Academic resources icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/academic-resources.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-brain"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p>
 												You’ll be
 												<a href="/academics">better equipped for the workforce</a> after graduation because our unique academics more accurately reflect the real world.
@@ -251,14 +247,14 @@
 									</div>
 								</li>
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<img alt="Value icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/value.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-coins"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p>
 												You’ll have
 												<a href="/costs">less financial worry</a>. Evergreen has one of the lowest tuition costs and fastest time to degree of any Washington four-year school.
@@ -268,14 +264,14 @@
 									</div>
 								</li>
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<img alt="Sun icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/sun.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-sun2"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p>
 												<a href="/about/graduates">97 percent of our graduates are working,</a> in graduate or professional schools, or otherwise doing something personally meaningful one year after graduation.
 											</p>
@@ -283,14 +279,14 @@
 									</div>
 								</li>
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<img alt="Tools icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/tools.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-tools"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p>
 												You’ll get hands-on experience right away because we give you
 												<a href="/academics/resources">access to an impressive range of tools and technologies</a> from our scanning electron microscope to a wealth of media equipment.
@@ -299,14 +295,14 @@
 									</div>
 								</li>
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<img alt="Scene icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/scene.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-guitar"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p src="<?php print base_path() . path_to_theme() ?>/images/icons/green/scene.png">
 												<a href="/about/explorethearea">As one of the Pacific Northwest’s cultural centers, Olympia</a> offers a vibrant independent music and art scene, theater, restaurants, bars, parks, and a full slate of events and activities to enrich your free time.
 											</p>
@@ -314,14 +310,14 @@
 									</div>
 								</li>
 								<li class="unit-1-3-alt">
-									<div class="media">
-										<div class="media-img">
+									<div class="compound">
+										<div class="compound-img">
 											<img alt="Mascot icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/speedy.png">
 											<!--<svg width="75">
 												<use xlink:href="#icon-speedy"></use>
 											</svg>-->
 										</div>
-										<div class="media-body">
+										<div class="compound-body">
 											<p>
 												Speedy,
 												<a href="geoduck">our humble and beloved mascot,</a> happens to be a geoduck—a large clam—that inevitably tops weirdest mascot lists year after year.
