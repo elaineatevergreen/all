@@ -28,59 +28,57 @@
 ?>
 
 <!--Upcoming Events-->
-<section class="row">
-	<section class="box upcoming-events">
-		<div class="upcoming-events-homepage2 wrapper">
-			<h3>Upcoming Events</h3>
-			<div class="grid">
-				<div class="unit-1-1">
-					<div class="upcoming-events-list-wrapper">
-						<div class="grid upcoming-events-list" id="upcoming-events-list">
-				
-							<?php
-								if ($rows):
-									print $rows;
-								elseif ($empty):
-									print $empty;
-								endif;
-							?>
-				
-							<div class="unit-1-7" aria-hidden="true" style="">
-								<div class="media media-column">
-									<div class="media-img">
-										<div class="calendar-dt calendar-dt-null">
-											<span class="calendar-month">
-												<span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-03-07T09:30:00-08:00">&nbsp;</span>
-											</span>
-											<span class="calendar-day">
-												<span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-03-07T09:30:00-08:00">&nbsp;</span>
-											</span>
-										</div>
+<section class="row upcoming-events">
+	<div class="upcoming-events-homepage2 wrapper">
+		<h2>Don’t Miss These</h2>
+		<div class="grid">
+			<div class="unit-1-1">
+				<div class="upcoming-events-list-wrapper">
+					<div class="grid upcoming-events-list" id="upcoming-events-list">
+			
+						<?php
+							if ($rows):
+								print $rows;
+							elseif ($empty):
+								print $empty;
+							endif;
+						?>
+			
+						<div class="unit-1-7" aria-hidden="true" style="">
+							<div class="compound compound-column">
+								<div class="compound-img">
+									<div class="calendar-dt calendar-dt-null">
+										<span class="calendar-month">
+											<span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-03-07T09:30:00-08:00">&nbsp;</span>
+										</span>
+										<span class="calendar-day">
+											<span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-03-07T09:30:00-08:00">&nbsp;</span>
+										</span>
 									</div>
-									<div class="media-body">
-										<p>
-											<a href="/calendar">More Upcoming Events…</a>
-										</p>
-									</div>
-								</div><!-- /.media.media-column -->
-							</div><!-- /.unit-1-7 -->
-						</div>
+								</div>
+								<div class="compound-body">
+									<p>
+										<a href="/calendar">More Upcoming Events…</a>
+									</p>
+								</div>
+							</div><!-- /.compound.compound-column -->
+						</div><!-- /.unit-1-7 -->
 					</div>
-	      </div><!-- /.unit-1-1 -->
-        
-        <!--<div class="unit-1-1">
-          <div class="grid">
-            <div class="unit-1-2">
-              <p><a href="campuscalendar/home.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/calendar.png"/> Campus Events Calendar </a></p>
-            </div>
-            <div class="unit-1-2">
-              <p><a href="campuscalendar/ataglance.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/academics.png"/> Academic Calendar at a Glance </a></p>
-            </div>
+				</div>
+      </div><!-- /.unit-1-1 -->
+      
+      <!--<div class="unit-1-1">
+        <div class="grid">
+          <div class="unit-1-2">
+            <p><a href="campuscalendar/home.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/calendar.png"/> Campus Events Calendar </a></p>
           </div>
-        </div>--><!-- /.unit-1-1 -->
-        
-      </div><!-- /.grid -->
-    </div><!-- /.upcoing-events-homepage2.wrapper -->
-  </section><!-- /.box.upcoming-events -->
-</section><!-- /.row -->
+          <div class="unit-1-2">
+            <p><a href="campuscalendar/ataglance.htm"><img alt="" class="inline-icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/dark/academics.png"/> Academic Calendar at a Glance </a></p>
+          </div>
+        </div>
+      </div>--><!-- /.unit-1-1 -->
+      
+    </div><!-- /.grid -->
+  </div><!-- /.upcoing-events-homepage2.wrapper -->
+</section><!-- /.row.upcoming-events -->
 <!--End Upcoming Events Section-->

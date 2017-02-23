@@ -30,7 +30,7 @@
 .grid,
 .grid.element-list{
 	// box model
-	margin-left: -1em;  // Compensates for the extra gutter on the last grid unit
+	margin-left: -2ch;  // Compensates for the extra gutter on the last grid unit
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -62,7 +62,7 @@
 .unit-5-7,
 .unit-6-7{
 	// box model
-	padding-left: 1em;
+	padding-left: 2ch;
 	// layout
 	float: left;  // IE 9
 }
@@ -259,7 +259,11 @@
 }
 
 .standalone-unit{
-	padding: 0 1em;
+	padding: 0 1ch;
+	
+	@include breakpoint($rocket){
+		padding: 0 2ch;
+	}
 }
 
 /**
