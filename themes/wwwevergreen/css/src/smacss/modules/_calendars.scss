@@ -89,14 +89,6 @@
 	// box model
 	margin: 0 auto;
 
-	.media{
-		border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
-	}
-
-	.media-body{
-		text-align: center;
-	}
-
 	@include breakpoint($starlord){
 		margin: 0 auto 1rem;
 		max-width: 66.6666666666%;
@@ -118,10 +110,23 @@
 		margin-left: -25.520833333333%;
 		width: 23.484848484848%;
 		@include base-type-lg;
+	}
+}
 
-		li{
-			@include margin-default-lg;
-		}
+.upcoming-events-homepage .media,
+.upcoming-events-homepage .compound{
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
+}
+
+.upcoming-events-homepage .media-body,
+.upcoming-events-homepage .compound-body{
+	text-align: center;
+}
+
+.upcoming-events-homepage li{
+	
+	@include breakpoint($drax){
+		@include margin-default-lg;
 	}
 }
 
@@ -142,14 +147,14 @@
 		// typography
 		@include base-type-xl;
 	}
+}
 
-	li{
-		@include margin-default;
+.upcoming-events-homepage2 li{
+	@include margin-default;
 
-		@include breakpoint($drax){
-			// box model
-			@include margin-default-lg;
-		}
+	@include breakpoint($drax){
+		// box model
+		@include margin-default-lg;
 	}
 }
 
@@ -259,7 +264,8 @@
 	}
 }
 
-.grid.upcoming-events-list .media-body{
+.grid.upcoming-events-list .media-body,
+.grid.upcoming-events-list .compound-body{
 	text-align: center;
 }
 
