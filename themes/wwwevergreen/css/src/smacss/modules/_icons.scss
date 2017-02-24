@@ -67,7 +67,7 @@
 	
 	@include breakpoint($gamora){
 		// box model
-		width: calc(1 / 7 * 100%);
+		width: 14.285714285714%;  // 1/7
 		// layout
 		position: static;
 	}
@@ -121,7 +121,7 @@
 	}
 }
 
-.transporter a:hover .icon{
+.transporter a:hover .transporter-icon{
 	transform: scale(1);
 }
 
@@ -131,6 +131,7 @@
 	max-width: 100%;
 	// layout
 	display: inline-block;
+	transform: scale(0.8);
 	// positioning
 	//position: relative;  // For responsive SVG.
 	// typography
@@ -139,7 +140,7 @@
 	// decoration
 	//background-color: $evergreen-neue;
 	border-radius: 50%;
-	// misc
+	// behavior
 	transition: all 0.2s;
 
 	@include breakpoint($rocket){
@@ -162,7 +163,6 @@
 	//position: absolute;  // For responsive SVG.
 	//top: 0;
 	//left: 0;
-	transform: scale(0.8);
 	// behavior
 	transition: transform 0.1s ease;
 }
@@ -173,6 +173,10 @@
 	&:hover{
 		background-color: $sky-blue;
 	}
+}
+
+.transporter-call .icon{
+	transform: scale(0.6);
 }
 
 /**
