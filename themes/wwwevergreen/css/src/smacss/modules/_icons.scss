@@ -76,6 +76,7 @@
 .transporter > li:nth-child(1),
 .transporter > li:nth-child(3){
 	top: calc(45 / 16 * 1rem);
+	z-index: 1;  // Moves them on top of the central call to action, so they're still clickable.
 }
 
 .transporter > li:nth-child(4){
@@ -118,6 +119,15 @@
 			//background: $sky-blue;
 			box-shadow: 0 0 0.2em $highlight inset;
 		}
+	}
+}
+
+.transporter-call a{
+	margin: 0 auto;
+	width: 33.3333333333%;
+	
+	@include breakpoint($gamora){
+		width: 100%;
 	}
 }
 
