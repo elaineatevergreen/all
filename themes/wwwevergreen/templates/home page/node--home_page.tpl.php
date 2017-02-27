@@ -138,20 +138,23 @@
 						</div> -->
 						
 						
-						<!--Intro Sentence-->
-						<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
 						
-						<div class="grid"><!--<div class="unit-1-1"><a href="/graduation/home"><img alt="See photos and more from graduation day" class="image-full" src="/graduation/images/grad-homepage-banner.jpg" /></a></div>-->
-							<figure class="unit-1-1">
-								<div class="box pull-box pull-box-alt">
+						
+						<div class="grid">
+							<!--Intro Sentence-->
+							<div class="unit-1-1">
+								<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
+								<!--<div class="unit-1-1"><a href="/graduation/home"><img alt="See photos and more from graduation day" class="image-full" src="/graduation/images/grad-homepage-banner.jpg" /></a></div>-->
+								<figure class="box pull-box pull-box-alt">
 									<p class="pull-quote">
 										<q>Evergreen had an impact on me that I still feel. The skills I learned at Evergreen in communication, setting goals, leadership and personal ethics are with me every day. Evergreen was the perfect place for me.</q>
 									</p>
 									<figcaption>
 										<p>—Chere Weiss, Community Outreach Coordinator, St. Johns Medical Center, Longview, Washington</p>
 									</figcaption>
-								</div>
-							</figure>
+								</figure>
+							</div>
+
 
 
 
@@ -159,8 +162,6 @@
 							<div class="unit-1-1">
 								<h2>Incredible Experiences</h2>
 								<p>You&#8217;ll have many opportunities to explore your interests and discover new ones.</p>
-							</div>
-							<div class="unit-1-1">
 								<ul class="element-list grid">
 									<li class="unit-1-2">
 										<a class="lazy-load" href="https://www.youtube.com/watch?v=a3hHMKwLvcc">
@@ -179,10 +180,11 @@
 								</ul>
 							</div>
 						</div>
-	
-						
+
+
+
+
 						<!-- Magazine Features -->
-	
 						<div class="grid">
 							<div class="unit-1-1">
 								<h2>Professional Success</h2>
