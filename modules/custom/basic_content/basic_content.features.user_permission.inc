@@ -166,6 +166,15 @@ function basic_content_user_default_permissions() {
     'module' => 'workbench_access',
   );
 
+  // Exported permission: 'add media from remote sources'.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media_internet',
+  );
+
   // Exported permission: 'administer actions'.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
@@ -292,6 +301,15 @@ function basic_content_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'media',
+  );
+
+  // Exported permission: 'administer media oembed'.
+  $permissions['administer media oembed'] = array(
+    'name' => 'administer media oembed',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media_oembed',
   );
 
   // Exported permission: 'administer menu'.
