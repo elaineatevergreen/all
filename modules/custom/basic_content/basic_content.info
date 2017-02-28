@@ -35,6 +35,7 @@ dependencies[] = text
 dependencies[] = toolbar
 dependencies[] = user
 dependencies[] = views
+dependencies[] = views_data_export
 dependencies[] = webform
 dependencies[] = workbench
 dependencies[] = workbench_access
