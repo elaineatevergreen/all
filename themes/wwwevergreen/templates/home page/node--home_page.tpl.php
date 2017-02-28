@@ -77,7 +77,7 @@
 				</a>
 			</li>
 			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/apply">
+				<a href="/eveningweekend">
 					<div class="transporter-icon">
 						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
 					</div>
@@ -85,7 +85,7 @@
 				</a>
 			</li>
 			<li class="unit-1-7 icon-scale">
-				<a href="/admissions/apply">
+				<a href="/graduatestudies">
 					<div class="transporter-icon">
 						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
 					</div>
