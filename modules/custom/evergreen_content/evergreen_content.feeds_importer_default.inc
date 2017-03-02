@@ -187,6 +187,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:59' => 'div/term[@term_name="Summer"]/div',
           'xpathparser:60' => 'alt_curr_area',
           'xpathparser:61' => 'div/term/@long_name',
+          'xpathparser:62' => 'faculty[not(text())]/@name',
         ),
         'rawXML' => array(
           'xpathparser:1' => 'xpathparser:1',
@@ -245,6 +246,7 @@ function evergreen_content_feeds_importer_default() {
           'xpathparser:58' => 0,
           'xpathparser:60' => 0,
           'xpathparser:61' => 0,
+          'xpathparser:62' => 0,
         ),
         'context' => '/html/body/div/entry',
         'exp' => array(
@@ -307,6 +309,7 @@ function evergreen_content_feeds_importer_default() {
             'xpathparser:59' => 0,
             'xpathparser:60' => 0,
             'xpathparser:61' => 0,
+            'xpathparser:62' => 0,
           ),
         ),
         'allow_override' => 0,
@@ -682,6 +685,12 @@ function evergreen_content_feeds_importer_default() {
           60 => array(
             'source' => 'xpathparser:61',
             'target' => 'field_quarters',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          61 => array(
+            'source' => 'xpathparser:62',
+            'target' => 'field_non_directory_faculty',
             'unique' => FALSE,
           ),
         ),
