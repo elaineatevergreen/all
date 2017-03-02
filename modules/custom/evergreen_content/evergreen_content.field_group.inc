@@ -412,7 +412,8 @@ function evergreen_content_field_group_info() {
       8 => 'field_preparatory_for',
       9 => 'field_offering_status',
       10 => 'field_credits',
-      11 => 'title',
+      11 => 'field_non_directory_faculty',
+      12 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -881,7 +882,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Program Details',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(
       0 => 'field_fields_of_study',
       1 => 'field_preparatory_for',
@@ -1912,7 +1913,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Prerequisites',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_prerequisites',
     ),
