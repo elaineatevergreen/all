@@ -250,11 +250,6 @@ function evergreen_content_context_default_contexts() {
     'views' => array(
       'values' => array(
         'catalog:page' => 'catalog:page',
-        'catalog:page_1' => 'catalog:page_1',
-        'catalog:page_2' => 'catalog:page_2',
-        'catalog:page_3' => 'catalog:page_3',
-        'catalog:page_4' => 'catalog:page_4',
-        'catalog:page_5' => 'catalog:page_5',
       ),
     ),
   );
