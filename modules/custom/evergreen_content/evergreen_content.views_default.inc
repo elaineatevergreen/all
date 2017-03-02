@@ -17348,6 +17348,23 @@ Offerings in this area are taught along with the subjects listed below.';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Section (as relationship) */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['ui_name'] = 'Section (as relationship)';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'section';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'site_sections' => 'site_sections',
+    'calendar_categories' => 0,
+    'tags' => 0,
+  );
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_section_contact_info_target_id']['id'] = 'field_section_contact_info_target_id';
+  $handler->display->display_options['relationships']['field_section_contact_info_target_id']['table'] = 'field_data_field_section_contact_info';
+  $handler->display->display_options['relationships']['field_section_contact_info_target_id']['field'] = 'field_section_contact_info_target_id';
+  $handler->display->display_options['relationships']['field_section_contact_info_target_id']['relationship'] = 'term_node_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Taxonomy term: Section Contact Info */
   $handler->display->display_options['fields']['field_section_contact_info']['id'] = 'field_section_contact_info';
@@ -17367,6 +17384,14 @@ Offerings in this area are taught along with the subjects listed below.';
     'use_content_language' => 1,
   );
   $handler->display->display_options['fields']['field_section_contact_info']['field_api_classes'] = TRUE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['relationship'] = 'field_section_contact_info_target_id';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit directory information';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   $export['site_section_background'] = $view;
