@@ -1986,6 +1986,7 @@ function evergreen_content_field_group_info() {
       11 => 'field_quarters_closed',
       12 => 'field_summer_registration',
       13 => 'field_summer_session',
+      14 => 'field_quarters',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -3384,6 +3384,45 @@ function evergreen_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_quarters'.
+  $field_bases['field_quarters'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_quarters',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Fall Open' => 'Fall Open',
+        'Fall Signature' => 'Fall Signature',
+        'Fall Conditional' => 'Fall Conditional',
+        'Fall Closed' => 'Fall Closed',
+        'Winter Open' => 'Winter Open',
+        'Winter Signature' => 'Winter Signature',
+        'Winter Conditional' => 'Winter Conditional',
+        'Winter Closed' => 'Winter Closed',
+        'Spring Open' => 'Spring Open',
+        'Spring Signature' => 'Spring Signature',
+        'Spring Conditional' => 'Spring Conditional',
+        'Spring Closed' => 'Spring Closed',
+        'Summer Open' => 'Summer Open',
+        'Summer Signature' => 'Summer Signature',
+        'Summer Conditional' => 'Summer Conditional',
+        'Summer Closed' => 'Summer Closed',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_quarters_closed'.
   $field_bases['field_quarters_closed'] = array(
     'active' => 1,

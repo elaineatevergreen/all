@@ -1,0 +1,384 @@
+<style type="text/css" media="screen">
+	.quarter-indicator-group{
+		display: flex;
+	}
+	
+	.qi-fall,
+	.qi-winter,
+	.qi-spring,
+	.qi-summer-session1,
+	.qi-summer-session2{
+		/* box model */
+		border-width: 1px;
+		height: 2em;
+		margin-right: 0.5ch;
+		width: 4ch;
+		/* layout */
+		overflow: hidden;
+		/* typography */
+		text-indent: 100%;
+		white-space: nowrap;
+		/* decoration */
+		border-radius: 50%;
+		border-style: solid;
+	}
+	
+	.qi-cont-start{
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.qi-cont{
+		border-radius: 0;
+	}
+	
+	.qi-cont-end{
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	
+	.qi-fall{
+		/* decoration */
+		background-color: #C09A00;
+		border-color: #C09A00;
+	}
+	
+	.qi-fall.qi-expired{
+		background-color: #E5D8A3;
+	}
+	
+	.qi-winter{
+		background-color: #006BBE;
+		border-color: #006BBE;
+	}
+	
+	.qi-winter.qi-expired{
+		background-color: #99CEF8;
+	}
+	
+	.qi-spring{
+		background-color: #6D567D;
+		border-color: #6D567D;
+	}
+	
+	.qi-spring.qi-expired{
+		background-color: #DAD4DE;
+	}
+	
+	.summer-indicator-group{
+		display: flex;
+	}
+	
+	.qi-summer-session1,
+	.qi-summer-session2{
+		width: 2ch;
+	}
+	
+	.qi-summer-session1{
+		background-color: #64933A;
+		border-color: #64933A;
+		border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	}
+	
+	.qi-summer-session1.qi-expired{
+		background-color: #A2BE88;
+	}
+	
+	.qi-cont-start.qi-signature,
+	.qi-cont-start.quarter-conditional,
+	.qi-summer-session1.qi-signature,
+	.qi-summer-session1.quarter-conditional{
+		background-position-x: 0.85ch;
+	}
+	
+	.qi-summer-session2{
+		background-color: #46502B;
+		border-color: #46502B;
+		border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	}
+	
+	.qi-summer-session2.qi-expired{
+		background-color: #B5B9AA;
+	}
+	
+	.qi-summer-session1.qi-signature{
+		/* box model */
+		width: 2em;
+		/* decoration */
+		border-top-left-radius: 50%;
+		border-bottom-left-radius: 50%;
+	}
+	
+	.qi-summer-session2.qi-signature{
+		/* box model */
+		width: 2em;
+		/* decoration */
+		border-top-right-radius: 50%;
+		border-bottom-right-radius: 50%;
+	}
+	
+	.qi-expired{
+		border-style: dashed;
+		/*opacity: 0.4;*/
+	}
+	
+	.quarter-conditional{
+		background-image: url("../_inc/images/icons/png/conditional-icon.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 1em;
+	}
+	
+	.qi-signature{
+		background-image: url("../_inc/images/icons/png/signature-icon.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 1.5em;
+	}
+	
+	.quarter-future{
+		background-image: url("../_inc/images/textures/texture-2.png");
+		background-size: auto 100%;
+	}
+	
+	.quarter-future.qi-signature{
+		background-image: url("../_inc/images/textures/texture-2.png"),
+		                  url("../_inc/images/icons/png/signature-icon.png");
+		background-size: 100%,
+		                 1.5em;
+	}
+	
+	.qi-signature.qi-cont-start{
+		background-position-x: 0,
+		                       0.85ch;
+		background-repeat: repeat,
+		                   no-repeat;
+	}
+	
+	.qi-na{
+		/* decoration */
+		background: transparent none;
+		border-color: #aaa;
+	}
+</style>
+
+<h2>Individual or Repeating Quarters</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall">
+		<abbr title="Fall Quarter">Fall</abbr>
+	</div>
+	<div class="qi qi-winter">
+		Winter
+	</div>
+	<div class="qi qi-spring">
+		Spring
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1">
+			Summer Session 1
+		</div>
+		<div class="qi qi-summer-session2">
+			Summer Session 2
+		</div>
+	</div>
+</div>
+
+<h3>Single Quarter</h3>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-na"></div>
+	<div class="qi qi-winter qi-na"></div>
+	<div class="qi qi-spring">
+		Spring
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h4>Summer</h4>
+<h5>Full Quarter</h5>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-na"></div>
+	<div class="qi qi-winter qi-na"></div>
+	<div class="qi qi-spring qi-na"></div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1">
+			Summer Session 1
+		</div>
+		<div class="qi qi-summer-session2">
+			Summer Session 2 (continued)
+		</div>
+	</div>
+</div>
+
+<h5>Session 1</h5>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-na"></div>
+	<div class="qi qi-winter qi-na"></div>
+	<div class="qi qi-spring qi-na"></div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1">
+			Summer Session 1
+		</div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h5>Session 2</h5>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-na"></div>
+	<div class="qi qi-winter qi-na"></div>
+	<div class="qi qi-spring qi-na"></div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2">
+			Summer Session 2
+		</div>
+	</div>
+</div>
+
+<h2>Three Contiguous Quarters</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-cont-start qi-fall">
+		Fall
+	</div>
+	<div class="qi qi-cont qi-winter">
+		Winter (continued)
+	</div>
+	<div class="qi qi-cont-end qi-spring">
+		Spring (continued)
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h2>Two Contiguous Quarters</h2>
+<h3>Fall and Winter</h3>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-cont-start">
+		Fall
+	</div>
+	<div class="qi qi-winter qi-cont-end">
+		Winter (continued)
+	</div>
+	<div class="qi qi-spring qi-na"></div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h3>Winter and Spring</h3>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-na"></div>
+	<div class="qi qi-winter qi-cont-start">
+		Winter
+	</div>
+	<div class="qi qi-spring qi-cont-end">
+		Spring (continued)
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h2>Expired Quarters</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-fall qi-expired">
+		Fall
+	</div>
+	<div class="qi qi-winter qi-expired">
+		Winter
+	</div>
+	<div class="qi qi-spring qi-expired">
+		Spring
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-expired">
+			Summer Session 1
+		</div>
+		<div class="qi qi-summer-session2 qi-expired">
+			Summer Session 2
+		</div>
+	</div>
+</div>
+
+<h2>Conditional Registration</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-cont-start qi-fall">
+		Fall
+	</div>
+	<div class="qi quarter-conditional qi-cont qi-winter">
+		Winter (continued)
+	</div>
+	<div class="qi quarter-conditional qi-cont-end qi-spring">
+		Spring (continued)
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
+
+<h2>Signature Required</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-cont-start qi-fall">
+		Fall
+	</div>
+	<div class="qi qi-cont qi-signature qi-winter">
+		Winter (continued), signature required
+	</div>
+	<div class="qi qi-cont-end qi-signature qi-spring">
+		Spring (continued), signature required
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-signature">
+			Summer Session 1, signature required
+		</div>
+		<div class="qi qi-summer-session2 qi-signature">
+			Summer Session 2 (continued), signature required
+		</div>
+	</div>
+</div>
+
+<h2>Upcoming Catalog</h2>
+<div class="quarter-indicator-group">
+	<div class="qi qi-signature qi-cont-start quarter-future qi-fall">
+		Fall, signature required
+	</div>
+	<div class="qi qi-cont quarter-future qi-winter">
+		Winter (continued)
+	</div>
+	<div class="qi qi-signature quarter-future qi-cont-end qi-spring">
+		Spring (continued), signature required
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi quarter-future qi-summer-session1">
+			Summer Session 1
+		</div>
+		<div class="qi quarter-future qi-summer-session2">
+			Summer Session 2 (continued)
+		</div>
+	</div>
+</div>
+
+<h3>Upcoming, but Cancelled</h3>
+<div class="quarter-indicator-group">
+	<div class="qi qi-cont-start quarter-future qi-expired qi-fall">
+		Fall, upcoming, cancelled
+	</div>
+	<div class="qi qi-cont quarter-future quarter-conditional qi-expired qi-winter">
+		Winter (continued), upcoming, cancelled
+	</div>
+	<div class="qi qi-cont-end quarter-future qi-expired qi-signature qi-spring">
+		Spring (continued), upcoming, cancelled, signature required
+	</div>
+	<div class="summer-indicator-group">
+		<div class="qi qi-summer-session1 qi-na"></div>
+		<div class="qi qi-summer-session2 qi-na"></div>
+	</div>
+</div>
