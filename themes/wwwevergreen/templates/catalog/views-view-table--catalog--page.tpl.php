@@ -1,6 +1,10 @@
 <?php
 	
-	/* there is some severly hacky template code here, sorry. Nov 2016. emn */
+	/* 
+		This builds the index list for the catalog.
+		At the moment, a few things have to be hacked together to get the quarters to display in a way that makes sense.
+		
+		 */
 
 /**
  * @file
@@ -20,7 +24,10 @@
  *   field id, then row number. This matches the index in $rows.
  * @ingroup views_templates
  */
- 
+
+//these fields need to be non-hidden in the view so we can use them to amend the quarter display.
+//OTOH, they don't show up in the actual table, so we want an easy way to hide them.
+//FWIW, there used to be a LOT more, which is why I wrote them into an array.
 $hiddenfields = array('field_academic_year','field_summer_session');
  
 ?>
@@ -66,6 +73,38 @@ $hiddenfields = array('field_academic_year','field_summer_session');
 			//now format all the quarters!
 			$quarters = explode(',', $row['field_quarters']);
 			
+			//this is a version that does a ul instead of the icon divs
+			$printquarters = '<ul>';
+			foreach($quarters as $q) {
+				$classes = explode(' ', $q);
+				$quarterclass = strtolower($classes[0]);
+				$statusclass = strtolower($classes[1]);
+				
+				//if this is summer, show the session info
+				if($row['field_summer_session'] != '') {
+					//do something here.
+					//$printquarters .= " (" . trim($row['field_summer_session']) . "&nbsp;Session)";
+					
+					$summer = trim($row['field_summer_session']);
+					if($summer == 'Full') {
+						$printquarters .= "<li>Summer Full Session</li>";
+					};
+					if($summer == 'First') {
+						$printquarters .= "<li>Summer Session 1</li>";
+					};
+					if($summer == 'Second') {
+						$printquarters .= "<li>Summer Session 2</li>";
+					};
+
+				} else {
+					
+					$printquarters .= "<li>$q</li>";
+				}; //end check for summer
+			}; //end foreach
+			$printquarters .= '</ul>';
+			
+			
+			/* this is the version that does the fancy icons
 			$printquarters = '<div class="quarter-indicator-group">';
 			foreach($quarters as $q) {
 				$classes = explode(' ', $q);
@@ -98,6 +137,7 @@ $hiddenfields = array('field_academic_year','field_summer_session');
 				}; //end check for summer
 			}; //end foreach
 			$printquarters .= '</div>';
+			*/
 			
 			
 			//add year to each quarter
@@ -109,22 +149,26 @@ $hiddenfields = array('field_academic_year','field_summer_session');
 			//format status text
 			$printquarters = str_replace('Open', '', $printquarters);
 			$printquarters = str_replace('Conditional', '', $printquarters);
-			$printquarters = str_replace('Signature', ' signature required', $printquarters);
-			$printquarters = str_replace('Closed', ' enrollment closed', $printquarters);
+			$printquarters = str_replace('Signature', '&nbsp;(<abbr title="Signature required">S</abbr>)', $printquarters);
+			$printquarters = str_replace('Closed', '&nbsp;(<abbr title="enrollment closed">C</abbr>)', $printquarters);
 			
+			//the icon view has slightly different text for sig/closed
+			//$printquarters = str_replace('Signature', ' signature required', $printquarters);
+			//$printquarters = str_replace('Closed', ' enrollment closed', $printquarters);
+
 	        
-	        
+	        //this is the normal iteration thru rows
 	        foreach ($row as $field => $content):
-	        if(!in_array($field,$hiddenfields)) {
-		        
-	        
-	         ?>
+	        	//don't show hidden fields. :)
+	        	if(!in_array($field,$hiddenfields)) {
+?>
           <td <?php if ($field_classes[$field][$row_count]) { print 'class="'. $field_classes[$field][$row_count] . '" '; } ?><?php print drupal_attributes($field_attributes[$field][$row_count]); ?>>
             <?php 
+	            //if it's the quarters field, show the fancy stuff we did earlier.
 	            if ($field == 'field_quarters') {
 		            print($printquarters);
-		        
 		        } else {
+			       //otherwise, do the usual Views thing.
 		           print $content; 
 	            };
 	            //print_r($field);
