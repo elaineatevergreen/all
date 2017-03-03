@@ -278,10 +278,10 @@
  */
 
 .sticky-header{
-	opacity: 0;
+	opacity: 0;  // Don't show at non-tabular sizes
 	
 	@include breakpoint($gamora){
-		opacity: 1;
+		opacity: 1;  // Show when the layout becomes a table again
 	}
 }
 
@@ -375,14 +375,11 @@
 	margin: 0.234375rem 1ch 0.234375rem 0;  //3.75px
 	// layout
 	display: inline-block;
-	// typography
-	//color: $tint;
 }
 
 .keyword-list ul > li > a{
 	// box model
 	border-bottom-width: 0;
-	//margin: 0 0.4375rem 0 0;  //7.5px
 	// layout
 	display: block;
 }
@@ -396,7 +393,6 @@
 
 .keyword-list ul > li > a:hover{
 	color: mix($tint, $blueberry-susan, 25%);
-	//background-color: $blueberry-susan;
 }
 
 .keyword-list ul > li > a:before{
@@ -639,4 +635,16 @@
 	/* decoration */
 	background: transparent none;
 	border-color: #aaa;
+}
+
+/**
+ * B. Simple Filters
+ *
+ * Simple filters are buttons on the catalog homepage that simply take you
+ * to a pre-filtererd version of the catalog without having to fiddle
+ * around with the filter form doohickies.
+ */
+.simple-filter{
+	display: flex;
+	flex-wrap: wrap;
 }
