@@ -225,8 +225,8 @@ p.alert{  // WYSIWYG
 	}
 	
 	@include breakpoint($gamora){
-		font-size: calc(29.124 / 16 * 1rem);
-		line-height: 1.03007828594973;  // 30/29.124
+		font-size: calc(29.124 / 16 * 1rem);  // Step 3
+		line-height: 1.28759785743717;  // 37.5/29.124
 	}
 }
 
