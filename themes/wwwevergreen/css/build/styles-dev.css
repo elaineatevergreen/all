@@ -2436,49 +2436,67 @@ body > div + header,
  *
  * For main-content and sidebar inside an index-wrapper, e.g., used
  * in the catalog. Use sparingly!
+ *
+ * #faux-content-wrapper          #faux-sidebar-wrapper
+ * +------------------------------+---------------------+
+ * |                              | .faux-sidebar       |
+ * | Lorem ipsum ipsum dolor sit  | +-------------------+
+ * | amet olim ut gravis si vero. | | Pagus quidem      |
+ * | Facilisis tation qui nostrud | | loquor duis       |
+ * | minim te importunus.         | | tation feugait    |
+ * |                              | | paulatim paratus  |
+ * | Sino nonummy modo lucidus    | | nobis genitus.    |
+ * | molior usitas secundum jugis | | Loquor bis loquor |
+ * | at multo. Molior quia nobis  | | iriure a ex.      |
+ * | duis camur vel virtus. Autem | | Pneum saluto at.  |
+ * | consequat similis autem.     | +-------------------+
+ * |                              |                     |
+ * +------------------------------+---------------------+
  */
-/* line 364, ../src/smacss/_layout.scss */
+/* line 380, ../src/smacss/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 364, ../src/smacss/_layout.scss */
+  /* line 380, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 364, ../src/smacss/_layout.scss */
+  /* line 380, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     width: 66.6666666667%;
+    float: left;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 377, ../src/smacss/_layout.scss */
+  /* line 397, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 377, ../src/smacss/_layout.scss */
+  /* line 397, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
+    float: left;
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
 @media screen and (min-width: 70em) {
-  /* line 391, ../src/smacss/_layout.scss */
+  /* line 413, ../src/smacss/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #c2c2c2;
     padding-left: 1em;
   }
 }
 
-/* line 400, ../src/smacss/_layout.scss */
+/* line 422, ../src/smacss/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -2490,37 +2508,37 @@ body > div + header,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 411, ../src/smacss/_layout.scss */
+  /* line 433, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 417, ../src/smacss/_layout.scss */
+  /* line 439, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 423, ../src/smacss/_layout.scss */
+  /* line 445, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 433, ../src/smacss/_layout.scss */
+  /* line 455, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 439, ../src/smacss/_layout.scss */
+  /* line 461, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 445, ../src/smacss/_layout.scss */
+  /* line 467, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -5761,7 +5779,7 @@ p.alert {
   /* line 220, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
-    line-height: 1.03007828594973;
+    line-height: 1.28759785743717;
   }
 }
 
