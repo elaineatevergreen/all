@@ -11,59 +11,58 @@
 			
 	* Canvas > Canvas settings
 	* Column > Column settings
-	
-	
  */
 ?>
 
 <?php
-$evergreen_blocks = theme_get_setting('evergreen_blocks');
+	$evergreen_blocks = theme_get_setting('evergreen_blocks');
 ?>
 
+<!-- I believe we're no longer using this #sitewide-alert. -->
 <div class="row box" id="sitewide-alert"><!--This is a placeholder. Keep it empty.--></div>
-	<header class="row" role="banner">
+<header class="row" role="banner">
 		
+	<?php 
+		/* one of the locations where we can switch between standard Evergreen site elements
+			and customizations for public service centers.
+			*/
 		
-<?php 
-			/* one of the locations where we can switch between standard Evergreen site elements
-				and customizations for public service centers.
-				*/
-			
-			//main site
-			if($evergreen_blocks == 1):
-				staticblocks('page-header');
-			
-			// markup & regions for service center sites
-			else:
-		?>
-			<div class="header-dropdowns">
-				<div class="header-dropdown">
-					<?php print render($page['header_dropdowns']);  ?>
-				</div>
+		//main site
+		if($evergreen_blocks == 1):
+			staticblocks('page-header');
+		
+		// markup & regions for service center sites
+		else:
+	?>
+		<div class="header-dropdowns">
+			<div class="header-dropdown">
+				<?php print render($page['header_dropdowns']);  ?>
 			</div>
-			
-			<div class="page-header">
-				<div class="logo">
-					<?php
-					 if ($logo): 
-					 ?>
+		</div>
+				
+		<div class="page-header">
+			<div class="logo">
+				<?php
+					if ($logo): 
+				?>
 		      <a href="<?php print $front_page; ?>" rel="home" id="logo">
-		        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
+						<img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
 		      </a>
-		      	<?php else:
-			      	//what should happen if the logo doesn't exist?
-			      	?>
-			      	<a href="<?php print $front_page; ?>" rel="home" id="logo"><?php print $site_name; ?></a>
-		      <?php
-			      	endif; //end check for logo
-			    ?>
-				</div>
+				<?php else:
+	      	//what should happen if the logo doesn't exist?
+				?>
+					<a href="<?php print $front_page; ?>" rel="home" id="logo">
+						<?php print $site_name; ?>
+					</a>
+	      <?php
+	      	endif; //end check for logo
+		    ?>
 			</div>
-		
-		<?php
+		</div>
 			
-			endif; //end check for public service center
-		?>
+	<?php
+		endif; //end check for public service center
+	?>
 
 	<nav class="top-nav" role="navigation">
 		<?php 
