@@ -89,7 +89,6 @@
 		<?php print render($page['background_image']); ?>
 	</div>
 	
-
 	<header class="row">
 		<div class="grid grid-alt wrapper">
 			<div class="site-name unit-5-7"><?php print render($page['section_title']); ?></div>
@@ -98,6 +97,30 @@
 
 	<main id="main-row" class="main-row row wrapper" role="main">
 		<div class="grid main-row-grid">
+			
+			<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
+			<?php print $messages; ?>
+			<?php if ($page['highlighted']): ?>
+				<div id="highlighted">
+					<?php print render($page['highlighted']); ?>
+				</div>
+			<?php endif; ?>
+			<?php print render($title_prefix); ?>
+			<?php if ($title and $title!='Home'): ?>
+				<h1 class="title" id="page-title"><?php print $title; ?></h1>
+			<?php endif; ?>
+			<?php print render($title_suffix); ?>
+			<?php if ($tabs): ?>
+				<div class="tabs">
+					<?php print render($tabs); ?>
+				</div>
+			<?php endif; ?>
+			<?php print render($page['help']); ?>
+			<?php if ($action_links): ?>
+				<ul class="action-links">
+					<?php print render($action_links); ?>
+				</ul>
+			<?php endif; ?>
 		
 			<?php /* Do we take out this entire column of the grid on panel pages? */ ?>
 			<div class="tertiary-nav-wrapper unit-1-7">
@@ -109,23 +132,9 @@
 					print render($page['filters']); 
 				?>
 			</div>
-			
-		<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
-			<?php print $messages; ?>
-	        <?php if ($page['highlighted']): ?>
-	        	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
-	        <?php endif; ?>
-	        <a id="main-content"></a>
-	        <?php print render($title_prefix); ?>
-	        <?php if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-	        <?php print render($title_suffix); ?>
-	        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-	        <?php print render($page['help']); ?>
-	        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-	        <?php print render($page['content']); ?>
-	        <?php print $feed_icons; ?>
-	      	
-		
+			<?php print render($page['content']); ?>
+			<?php print $feed_icons; ?>
+
 		</div> <!-- end .main-row-grid -->
 	</main>
 
