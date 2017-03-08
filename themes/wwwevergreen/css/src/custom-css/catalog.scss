@@ -645,6 +645,44 @@
  * around with the filter form doohickies.
  */
 .simple-filter{
+	
+	@include breakpoint($starlord){
+		display: flex;
+	}
+}
+
+.simple-filter-label{
+	// box model
+	margin-right: 2ch;
+	// layout
+	flex-basis: 13ch;
+}
+
+.simple-filter-list{
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.simple-filter-list li{
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 80%);
+	margin: 0 1ch calc(15 / 14 * 1em) 0;
+	padding: calc(7.5 / 14 * 1em) 1ch calc(15 / 14 * 1em);
+	// layout
+	display: inline-block;
+	// decoration
+	background-color: $tint;
+	
+	@include breakpoint($gamora){
+		margin-bottom: (15 / 18 * 1em);
+		padding: calc(7.5 / 18 * 1em) 1ch calc(15 / 18 * 1em);
+	}
+	
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.simple-filter-list a{
+	//border-width: 0;  // We should do this, but it needs more thought; maybe the border re-appers on hover?
 }
