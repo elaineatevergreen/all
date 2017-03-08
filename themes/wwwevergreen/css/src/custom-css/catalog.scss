@@ -802,10 +802,7 @@
  * around with the filter form doohickies.
  */
 .simple-filter{
-	
-	@include breakpoint($starlord){
-		display: flex;
-	}
+	display: flex;
 }
 
 .simple-filter-label{
@@ -816,6 +813,9 @@
 }
 
 .simple-filter-list{
+	// box model
+	margin-bottom: 0;
+	// layout
 	display: flex;
 	flex-wrap: wrap;
 }
