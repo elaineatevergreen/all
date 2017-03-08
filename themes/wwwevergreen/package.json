@@ -27,7 +27,6 @@
     "grunt-contrib-uglify": "2.x",
     "grunt-contrib-watch": "1.x",
     "grunt-newer": "1.2.x",
-    "grunt-perfbudget": "^0.1.8",
     "grunt-postcss": "^0.8.0",
     "grunt-sass-lint": "^0.2.0",
     "grunt-svgstore": "1.x",
