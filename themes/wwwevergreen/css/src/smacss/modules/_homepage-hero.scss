@@ -21,13 +21,10 @@
  * 3. Copy
  * 4. Copy Modifiers
  */
-.homepage-hero,
-.homepage-hero-content{
-	height: 100%;
-	overflow: hidden;
-}
 
 .homepage-hero{
+	height: 100%;
+	overflow: hidden;
 
 	@include breakpoint($lil-groot){
 		// box model
@@ -117,8 +114,11 @@
 
 .homepage-hero-content{  // Holds the .caption-box and .homepage-hero-copy
 	// box model
+	height: 100%;
 	width: 100%;
 	max-width: 82em;
+	// layout
+	overflow: hidden;
 	// decoration
 	background-color: $blueberry-susan;
 
