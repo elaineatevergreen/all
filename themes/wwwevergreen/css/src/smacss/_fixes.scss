@@ -16,6 +16,18 @@
  *
  * Drupal Panels
  */
-.sidebar.panels-flexible-region{
+
+.unit-1-3.panels-flexible-column{
+	width: calc(33.3333333333% - 1ch);
+}
+
+.unit-2-3.panels-flexible-column{
 	padding-left: 2ch;
+	width: calc(66.6666666667% + 1ch);
+}
+
+.sidebar.panels-flexible-region{
+	margin-right: 0;
+	padding-left: 2ch;
+	width: 100%;  // Overrides panels percentage fudge
 }
