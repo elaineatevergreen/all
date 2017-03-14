@@ -2276,7 +2276,7 @@ body > div + header,
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
-    width: calc(80% - 1ch);
+    width: calc(80% - 2ch);
     overflow: visible;
   }
 }
@@ -2291,7 +2291,7 @@ body > div + header,
 /* line 270, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
-  margin: 0 0.75em 2.14285714285714em;
+  margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
   /* line 270, ../src/smacss/_layout.scss */
@@ -7654,6 +7654,28 @@ p.alert {
 /* line 59, ../src/smacss/_states.scss */
 .is-hidden {
   display: none !important;
+}
+
+/**
+ * V. Style Fixes
+ *
+ * Fixes are for isolating bugs and workarounds typically caused by
+ * interferring third-party styles, but could include browser hacks. For
+ * example, a Drupal plugin whose styles override one of our modules, or a
+ * WYSIWYG editor that needs special attention paid to the styles therein.
+ *
+ * Table of Contents
+ *
+ * A. Panels
+ */
+/**
+ * A. Panels
+ *
+ * Drupal Panels
+ */
+/* line 19, ../src/smacss/_fixes.scss */
+.sidebar.panels-flexible-region {
+  padding-left: 2ch;
 }
 
 /**
