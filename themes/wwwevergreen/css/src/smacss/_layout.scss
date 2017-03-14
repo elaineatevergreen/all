@@ -253,7 +253,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		// box model
 		margin-left: 20%;
 		padding-left: 1em;
-		width: calc(80% - 1ch);  // 4/5; this should match .primary-content-wrapper.
+		width: calc(80% - 2ch);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
 	}
@@ -269,7 +269,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 // content on the page.
 .main-content,
 .sidebar{
-	margin: 0 0.75em 2.14285714285714em;  // 30/14
+	margin: 0 1.25ch 2.14285714285714em;  // 30/14
 
 	@include breakpoint($rocket){
 		margin-right: 2ch;
