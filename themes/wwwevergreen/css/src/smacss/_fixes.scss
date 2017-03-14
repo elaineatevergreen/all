@@ -1,0 +1,21 @@
+/**
+ * V. Style Fixes
+ *
+ * Fixes are for isolating bugs and workarounds typically caused by
+ * interferring third-party styles, but could include browser hacks. For
+ * example, a Drupal plugin whose styles override one of our modules, or a
+ * WYSIWYG editor that needs special attention paid to the styles therein.
+ *
+ * Table of Contents
+ *
+ * A. Panels
+ */
+
+/**
+ * A. Panels
+ *
+ * Drupal Panels
+ */
+.sidebar.panels-flexible-region{
+	padding-left: 2ch;
+}

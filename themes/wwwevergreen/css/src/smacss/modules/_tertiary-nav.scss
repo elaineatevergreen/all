@@ -17,7 +17,7 @@
  */
 .tertiary-nav-wrapper{
 	width: 100%;
-	max-width: calc(100% - 0.5em);
+	max-width: calc(100% - 1ch);
 	min-height: 1px;  // gives the box layout even when empty (taking pity on IE 9)
 
 	@include breakpoint($rocket){
