@@ -66,8 +66,8 @@
 
 	@include breakpoint($starlord){
 		// box model
-		margin: 0 0 0.53571428571429em 1em;  // 7.5/14
-		max-width: calc(66.6666666667% - 0.5em);
+		margin: 0 0 0.53571428571429em 2ch;  // 7.5/14
+		max-width: calc(66.6666666667% - 1ch);
 		// layout
 		clear: right;
 		float: right;
@@ -77,7 +77,7 @@
 		margin-bottom: 0.83333333333333em;  // 15/18
 
 		.main-content &{
-			margin-right: -2em;
+			margin-right: -3ch;
 		}
 	}
 
@@ -92,8 +92,8 @@
 	.main-content .image img,  // WYSIWYG
 	.image-alt{
 		// box model
-		margin-right: -3em;
-		max-width: calc(50% + 2.5em);
+		margin-right: -3ch;
+		max-width: calc(50% + 4ch);  // 3ch right margin + 1ch to equalize the 2ch left margin
 	}
 
 	.image-alt{

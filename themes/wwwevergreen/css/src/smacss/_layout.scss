@@ -182,10 +182,10 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 .primary-content-wrapper{
 	// box model
 	border-top: 5px solid $evergreen-old-style;
-	margin: -5px 0 0 1em;  // Compensate for 5px border
+	margin: -5px 0 0 2ch;  // Compensate for 5px border
 	//margin-left: 1em;
 	padding: 0;
-	width: calc(100% - 1.5em);
+	width: calc(100% - 3ch);
 	// decoration
 	background-color: transparentize($tint, 0.05);
 	border-radius: 2px;
@@ -194,7 +194,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		// box model
 		margin-right: 0;
 		margin-left: 0;
-		width: calc(80% - 1em);  // 4/5 - 1em; 0.5em margin on either side
+		width: calc(80% - 2ch);  // 4/5 - 2ch; 1ch margin on either side
 		// layout
 		overflow: visible;
 		// borders and backgrounds
@@ -241,9 +241,9 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 // Wraps the secondary content area.
 .sidebar-wrapper{
 	// box model
-	margin-left: 1em;
+	margin-left: 2ch;
 	padding: 0;
-	width: calc(100% - 1.5em);  // 0.25 margin on either side
+	width: calc(100% - 3ch);  // 0.5ch margin on either side
 	// layout
 	overflow: hidden;
 	// decoration
@@ -253,7 +253,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		// box model
 		margin-left: 20%;
 		padding-left: 1em;
-		width: calc(80% - 1em);  // 4/5; this should match .primary-content-wrapper.
+		width: calc(80% - 1ch);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
 	}
@@ -272,8 +272,8 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	margin: 0 0.75em 2.14285714285714em;  // 30/14
 
 	@include breakpoint($rocket){
-		margin-right: 1em;
-		margin-left: 1em;
+		margin-right: 2ch;
+		margin-left: 2ch;
 	}
 
 	@include breakpoint($starlord){
@@ -288,8 +288,8 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 .index-wrapper .main-content{  // specified in .index-wrapper to not affect .primary-content-wrapper
 
 	@include breakpoint($gamora){
-		margin-right: 3em;
-		margin-left: 3em;
+		margin-right: 3ch;
+		margin-left: 3ch;
 	}
 }
 
@@ -298,13 +298,13 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 	@include breakpoint($gamora){
 		@include breakpoint($gamora){
-			margin-right: 2em;
-			margin-left: 2em;
+			margin-right: 2ch;
+			margin-left: 2ch;
 		}
 
 		@include breakpoint($drax){
-			margin-right: 3em;
-			margin-left: 3em;
+			margin-right: 3ch;
+			margin-left: 3ch;
 		}
 	}
 }

@@ -96,7 +96,7 @@
 	}
 }
 
-.unit-1-3-alt{ // Switches up from a one- to a two- and then to a three-column layout.
+.unit-1-3-alt{  // Switches up from a one- to a two- and then to a three-column layout.
 	//box model
 	width: 100%;
 
@@ -278,21 +278,21 @@
 
 	@include breakpoint($starlord){
 		// box model
-		margin-left: 1em;
-		width: calc(66.6666666667% - 1em);
+		margin-left: 2ch;
+		width: calc(66.6666666667% + 1ch);
 		// layout
 		float: right;
 	}
 
 	@include breakpoint($gamora){
 		// box model
-		margin-right: -2em;
+		margin-right: -2ch;
 	}
 
 	@include breakpoint($drax){
 		// box model
-		margin-right: -3em;
-		width: calc(50% + 2.5em);  //Half the view, plus the right margin, minus 1/2em for the left margin.
+		margin-right: -3ch;
+		width: calc(50% + 2ch);  //Half the view, plus the right margin, minus 1/2em for the left margin.
 	}
 }
 
@@ -300,9 +300,9 @@
 
 	@include breakpoint($rocket){
 		// box model
-		margin-right: -1em;
-		margin-left: 1em;
-		width: calc(50% + 1em);
+		margin-right: -1ch;
+		margin-left: 2ch;
+		width: calc(50% - 0.5ch);
 		// layout
 		float: right;
 	}
@@ -310,30 +310,22 @@
 	@include breakpoint($starlord){
 		// box model
 		margin-right: 0;
-		width: calc(66.666666667% - 1em);
+		width: calc(66.666666667% - 1ch);
 	}
 
 	@include breakpoint($gamora){
 		// box model
-		margin-right: 1em;
-		margin-left: calc(-25% - 2em);
-		//width: calc(25% + 1em);  // 1/4
-		width: calc((100% + 4em * 18 / 14) / 4);  // 100% + 4em is the full-width of the container (compensating for margin); 18 / 14 converts em measures
+		margin-right: 2ch;
+		margin-left: calc(-1ch - ((100% + 4ch) / 4));  // 100% + 4ch is the full-width of the container (compensating for margin), so 25% of the full container.
+		width: calc((100% + 4ch) / 4 + 2ch);  // 100% + 4ch is the full-width of the container (compensating for margin), so 25% of the full container; + 1ch to make it feel a bit more intentional
 		// layout
 		float: left;
-		// typography
-		@include base-type;
 	}
 
 	@include breakpoint($drax){
 		// box model
-		//margin-right: 2em;
-		//margin-left: calc(-33.3333333333% - 2em);
-		//width: 33.3333333333%;
-		margin-left: calc(-25% - 3em);
-		width: calc((100% + 6em * 18 / 14) / 4);
-		// typography
-		//@include base-type;
+		margin-left: calc(-1ch - ((100% + 6ch) / 4));
+		width: calc((100% + 6ch) / 4 + 2ch);
 	}
 
 	@include breakpoint($groot){
