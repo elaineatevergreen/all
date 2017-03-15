@@ -107,16 +107,15 @@
 <section class="site-content">
 	<main class="main-row row wrapper" id="main-row" role="main">
 		<div class="grid main-row-grid">
+			<!--Tertiary Navigation-->
 			<div class="tertiary-nav-wrapper unit-1-7">
-				<!-- nothing to see here. -->
+				<nav class="box" id="tertiary-nav">
+					<?php print render($content['field_section_navigation']); ?>
+				</nav>
 			</div>
 			<div class="index-wrapper unit-6-7" id="index-wrapper">
 				<!-- Main Content -->
 				<article class="main-content">
-						<!--Tertiary Navigation-->
-						<nav class="box tertiary-nav-homepage" id="tertiary-nav">
-							<?php print render($content['field_section_navigation']); ?>
-						</nav>
 						
 						<!--This is the placeholder for the blob content. I commented it out
 						because we're currently not using any Blobby content :P-->

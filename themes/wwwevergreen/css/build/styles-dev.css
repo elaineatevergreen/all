@@ -68,9 +68,19 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * New Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -211,29 +221,36 @@ svg {
 }
 
 /* line 56, ../src/smacss/_base.scss */
+img[height="0"][width="0"] {
+  height: 0;
+  width: 0;
+  display: block;
+}
+
+/* line 64, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 60, ../src/smacss/_base.scss */
+/* line 68, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 65, ../src/smacss/_base.scss */
+/* line 73, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 69, ../src/smacss/_base.scss */
+/* line 77, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 78, ../src/smacss/_base.scss */
+/* line 86, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -517,7 +534,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -725,7 +742,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 424, ../src/smacss/base/_typography.scss */
@@ -1141,6 +1158,11 @@ select:hover {
 }
 
 /* line 110, ../src/smacss/base/_forms.scss */
+.tertiary-nav-wrapper .form-type-select select {
+  width: 100%;
+}
+
+/* line 114, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1148,13 +1170,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 110, ../src/smacss/base/_forms.scss */
+  /* line 114, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 123, ../src/smacss/base/_forms.scss */
+/* line 127, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1165,7 +1187,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 127, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1173,7 +1195,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 127, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1183,20 +1205,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 148, ../src/smacss/base/_forms.scss */
+/* line 152, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 148, ../src/smacss/base/_forms.scss */
+  /* line 152, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 157, ../src/smacss/base/_forms.scss */
+/* line 161, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1204,7 +1226,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 157, ../src/smacss/base/_forms.scss */
+  /* line 161, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1214,90 +1236,43 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/**
- * 2. Views Module Forms
- *
- * Forms in Drupal’s Views module. It's worth cross-checking changes you
- * make here with a few different form pages, because this stuff gets weird
- * and unpredictable.
- *
- * Add to this list as you find more weirdness.
- *
- * Left-nav fiters: http://evergreen.edu/catalog/index/ug
- * Main content filters: http://evergreen.edu/activities/groups
- *
- * Table of Contents
- *
- * a. Views Exposed Widget
- * b. Secondary Options
- */
-/**
- * b. Views Exposed Widget
- *
- * These are the bulk of the form widgets in the Views-type forms.
- */
-/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
-  display: block;
+  display: inline-block;
 }
 
-/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget {
-  /* box model */
-  margin: 0.535714285714286em 0 1.071428571428571em;
-  padding: 0;
-  /* layout */
-  float: none;
+/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
 }
 
-/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-widget input,
-.views-exposed-widget select {
-  margin-top: 0;
+/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
   margin-bottom: 0;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
-.tertiary-nav-wrapper .form-type-select select {
-  width: 100%;
-}
-
-/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin: 0;
-  	/*margin-top: calc(20 / 16 * 1rem);
-  
-  	@include breakpoint($gamora){
-  		margin-top: calc(22.5 / 16 * 1rem);
-  	}*/
-}
-
-/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}*/
-/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/**
- * b. Secondary Options
- *
- * Better Exposed Filters offeres a place to put “advanced” options. For
- * whatever reason, these options don't follow the same pattern as the rest
- * of the form fields, so they need special rules.
- */
-/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
-.bef-secondary-options .form-select {
-  margin-bottom: calc(15 / 16 * 1rem);
+/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-widget {
+  padding: 0;
 }
 
 /**
@@ -1341,7 +1316,7 @@ input[type="radio"] + label {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
   /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
@@ -1633,7 +1608,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 119, ../src/smacss/_base.scss */
+/* line 127, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -1981,10 +1956,9 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-left: 1em;
-    width: calc(66.6666666667% - 1em);
+    margin-left: 2ch;
+    width: calc(66.6666666667% + 1ch);
     float: right;
   }
 }
@@ -1992,58 +1966,54 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-right: -2em;
+    margin-right: -2ch;
   }
 }
 @media screen and (min-width: 70em) {
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-right: -3em;
-    width: calc(50% + 2.5em);
+    margin-right: -3ch;
+    width: calc(50% + 2ch);
   }
 }
 
 @media screen and (min-width: 22em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-right: -1em;
-    margin-left: 1em;
-    width: calc(50% + 1em);
+    margin-right: -1ch;
+    margin-left: 2ch;
+    width: calc(50% - 0.5ch);
     float: right;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
-    width: calc(66.666666667% - 1em);
+    width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-right: 1em;
-    margin-left: calc(-25% - 2em);
-    width: calc((100% + 4em * 18 / 14) / 4);
+    margin-right: 2ch;
+    margin-left: calc(-1ch - ((100% + 4ch) / 4));
+    width: calc((100% + 4ch) / 4 + 2ch);
     float: left;
-    font-size: 0.875rem;
-    line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-left: calc(-25% - 3em);
-    width: calc((100% + 6em * 18 / 14) / 4);
+    margin-left: calc(-1ch - ((100% + 6ch) / 4));
+    width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2238,9 +2208,9 @@ body > div + header,
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
-  margin: -5px 0 0 1em;
+  margin: -5px 0 0 2ch;
   padding: 0;
-  width: calc(100% - 1.5em);
+  width: calc(100% - 3ch);
   background-color: rgba(242, 242, 242, 0.95);
   border-radius: 2px;
 }
@@ -2250,7 +2220,7 @@ body > div + header,
   .primary-content-wrapper {
     margin-right: 0;
     margin-left: 0;
-    width: calc(80% - 1em);
+    width: calc(80% - 2ch);
     overflow: visible;
     border-radius: 0 0 2px 2px;
   }
@@ -2295,9 +2265,9 @@ body > div + header,
 
 /* line 242, ../src/smacss/_layout.scss */
 .sidebar-wrapper {
-  margin-left: 1em;
+  margin-left: 2ch;
   padding: 0;
-  width: calc(100% - 1.5em);
+  width: calc(100% - 3ch);
   overflow: hidden;
   background-color: rgba(242, 242, 242, 0.95);
 }
@@ -2306,7 +2276,7 @@ body > div + header,
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
-    width: calc(80% - 1em);
+    width: calc(80% - 2ch);
     overflow: visible;
   }
 }
@@ -2321,14 +2291,14 @@ body > div + header,
 /* line 270, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
-  margin: 0 0.75em 2.14285714285714em;
+  margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
   /* line 270, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 2ch;
+    margin-left: 2ch;
   }
 }
 @media screen and (min-width: 32em) {
@@ -2349,8 +2319,8 @@ body > div + header,
 @media screen and (min-width: 43em) {
   /* line 288, ../src/smacss/_layout.scss */
   .index-wrapper .main-content {
-    margin-right: 3em;
-    margin-left: 3em;
+    margin-right: 3ch;
+    margin-left: 3ch;
   }
 }
 
@@ -2361,15 +2331,15 @@ body > div + header,
 @media screen and (min-width: 43em) and (min-width: 43em) {
   /* line 296, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
-    margin-right: 2em;
-    margin-left: 2em;
+    margin-right: 2ch;
+    margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
   /* line 296, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
-    margin-right: 3em;
-    margin-left: 3em;
+    margin-right: 3ch;
+    margin-left: 3ch;
   }
 }
 
@@ -2553,7 +2523,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3422,7 +3392,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3784,31 +3754,59 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 129, ../src/smacss/_modules.scss */
-.location-transporter {
-  margin: calc(30 / 18 * 1em) 1ch;
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 1.38888888888889;
-  text-align: center;
-}
-@media screen and (min-width: 32em) {
-  /* line 129, ../src/smacss/_modules.scss */
-  .location-transporter {
-    margin: calc(30 / 19.229 * 1em) 1ch;
-    font-size: 1.202rem;
-    line-height: 1.30011961100421;
-  }
-}
-@media screen and (min-width: 125em) {
-  /* line 129, ../src/smacss/_modules.scss */
-  .location-transporter {
-    margin: calc(30 / 29.124 * 1em) 1ch;
-    font-size: 1.82rem;
-    line-height: 1.03007828594973;
-  }
+/*.profile-list > li{  // deprecated
+	// layout
+	overflow: hidden;
+	// position
+  position: relative;
 }
 
+.profile-list .profile-img-link{
+  // layout
+  display: block;
+  overflow: hidden;
+}
+
+.profile-list .box{
+	// box model
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.profile-img{
+	// box model
+	margin-left: -50%;
+  width: 200%;
+  max-width: 685px;
+  // layout
+  display: block;
+  
+  @include breakpoint($lil-groot){
+    margin-left: -25%;
+    width: 150%;
+  }
+  
+  @include breakpoint($starlord){
+    margin-left: 0%;
+    width: 100%;
+  }
+  
+  @include breakpoint($gamora){
+    width: 120%;
+    margin-left: -10%;
+  }
+  
+  @media screen and (min-width: 60em){
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+.profile-list .box{
+	margin-top: -1.40625rem;  //22.5/16
+  //margin-top: -2.142857142857143em;  //30/14
+  position: absolute;
+  bottom: 0;
+}*/
 /**
  * D. Tertiary Nav
  */
@@ -3831,7 +3829,7 @@ input:checked + .header-dropdown {
 /* line 18, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-wrapper {
   width: 100%;
-  max-width: calc(100% - 0.5em);
+  max-width: calc(100% - 1ch);
   min-height: 1px;
 }
 @media screen and (min-width: 22em) {
@@ -3993,23 +3991,23 @@ input:checked + .header-dropdown {
 /**
  * 2. Homepage Tertiary Nav
  */
-@media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav.tertiary-nav-homepage {
-    margin-left: calc(-25% + 1em);
-    width: calc(25% + 1.5em);
-    position: absolute;
-    left: 0;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav.tertiary-nav-homepage {
-    margin-left: calc(-16.6666666667% + 1em);
-    width: calc(16.6666666667% + 1em);
-  }
-}
+/*#tertiary-nav.tertiary-nav-homepage{
 
+	@include breakpoint($gamora){
+		// box model
+		margin-left: calc(-25% + 1em);
+		width: calc(25% + 1.5em);
+		// layout
+		position: absolute;
+		left: 0;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-left: calc(-3ch - ((100% + 6ch) / 6));  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container.
+		width: calc((100% + 6ch) / 6 + 1ch);  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container; + 1ch to make it feel a bit more intentional
+	}
+}*/
 /**
  * 3. CSS Accordion
  *
@@ -4267,17 +4265,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 169, ../src/smacss/_modules.scss */
+/* line 199, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 173, ../src/smacss/_modules.scss */
+/* line 203, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 177, ../src/smacss/_modules.scss */
+/* line 207, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4286,7 +4284,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 207, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4295,7 +4293,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 207, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4304,33 +4302,33 @@ ul.accordion-inner {
   }
 }
 
-/* line 202, ../src/smacss/_modules.scss */
+/* line 232, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
 }
 
-/* line 207, ../src/smacss/_modules.scss */
+/* line 237, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 237, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 237, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 221, ../src/smacss/_modules.scss */
+/* line 251, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4340,19 +4338,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/_modules.scss */
+  /* line 251, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 238, ../src/smacss/_modules.scss */
+/* line 268, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 272, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4361,7 +4359,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 242, ../src/smacss/_modules.scss */
+  /* line 272, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4909,7 +4907,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 262, ../src/smacss/_modules.scss */
+/* line 292, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -5555,7 +5553,7 @@ p.box,
 #views-exposed-form-catalog-page {
   margin-top: 2.14285714285714em;
   margin-bottom: 3.21428571428571em;
-  padding: 0 1em;
+  padding: 0 1.5ch;
   overflow: hidden;
   color: #002d4f;
   background-color: rgba(204, 231, 252, 0.95);
@@ -6009,8 +6007,6 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -6023,22 +6019,18 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 44, ../src/smacss/modules/_images.scss */
+/* line 42, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -6046,11 +6038,9 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -6059,35 +6049,35 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
-    margin: 0 0 0.53571428571429em 1em;
-    max-width: calc(66.6666666667% - 0.5em);
+    margin: 0 0 0.53571428571429em 2ch;
+    max-width: calc(66.6666666667% - 1ch);
     clear: right;
     float: right;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 83, ../src/smacss/modules/_images.scss */
+  /* line 79, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
   .image-alt {
-    margin-right: -2em;
+    margin-right: -3ch;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6097,18 +6087,16 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 93, ../src/smacss/modules/_images.scss */
+  /* line 90, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
   .image-alt {
-    margin-right: -3em;
-    max-width: calc(50% + 2.5em);
+    margin-right: -3ch;
+    max-width: calc(50% + 4ch);
   }
-}
 
-@media screen and (min-width: 70em) {
-  /* line 105, ../src/smacss/modules/_images.scss */
+  /* line 99, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -6117,9 +6105,8 @@ p.alert {
     float: left;
   }
 }
-
 @media screen and (min-width: 43em) {
-  /* line 119, ../src/smacss/modules/_images.scss */
+  /* line 111, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -6130,7 +6117,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 123, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -6138,7 +6125,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 139, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }
@@ -6199,7 +6186,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6774,10 +6761,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7102,7 +7089,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7321,18 +7308,18 @@ p.alert {
 /**
  * O. News
  */
-/* line 304, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 314, ../src/smacss/_modules.scss */
+/* line 344, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 320, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7352,7 +7339,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 337, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7368,7 +7355,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 346, ../src/smacss/_modules.scss */
+/* line 376, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7377,13 +7364,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 353, ../src/smacss/_modules.scss */
+/* line 383, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 353, ../src/smacss/_modules.scss */
+  /* line 383, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7391,7 +7378,7 @@ p.alert {
   }
 }
 
-/* line 363, ../src/smacss/_modules.scss */
+/* line 393, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7507,7 +7494,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 383, ../src/smacss/_modules.scss */
+/* line 413, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7515,7 +7502,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 393, ../src/smacss/_modules.scss */
+/* line 423, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7534,24 +7521,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 412, ../src/smacss/_modules.scss */
+/* line 442, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 416, ../src/smacss/_modules.scss */
+/* line 446, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 424, ../src/smacss/_modules.scss */
+/* line 454, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 432, ../src/smacss/_modules.scss */
+/* line 462, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7562,30 +7549,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 443, ../src/smacss/_modules.scss */
+/* line 473, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 447, ../src/smacss/_modules.scss */
+/* line 477, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 477, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 477, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 460, ../src/smacss/_modules.scss */
+/* line 490, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7597,7 +7584,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 472, ../src/smacss/_modules.scss */
+/* line 502, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7605,7 +7592,7 @@ p.alert {
   display: block;
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 511, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
@@ -7667,6 +7654,41 @@ p.alert {
 /* line 59, ../src/smacss/_states.scss */
 .is-hidden {
   display: none !important;
+}
+
+/**
+ * V. Style Fixes
+ *
+ * Fixes are for isolating bugs and workarounds typically caused by
+ * interferring third-party styles, but could include browser hacks. For
+ * example, a Drupal plugin whose styles override one of our modules, or a
+ * WYSIWYG editor that needs special attention paid to the styles therein.
+ *
+ * Table of Contents
+ *
+ * A. Panels
+ */
+/**
+ * A. Panels
+ *
+ * Drupal Panels
+ */
+/* line 20, ../src/smacss/_fixes.scss */
+.unit-1-3.panels-flexible-column {
+  width: calc(33.3333333333% - 1ch);
+}
+
+/* line 24, ../src/smacss/_fixes.scss */
+.unit-2-3.panels-flexible-column {
+  padding-left: 2ch;
+  width: calc(66.6666666667% + 1ch);
+}
+
+/* line 29, ../src/smacss/_fixes.scss */
+.sidebar.panels-flexible-region {
+  margin-right: 0;
+  padding-left: 2ch;
+  width: 100%;
 }
 
 /**
