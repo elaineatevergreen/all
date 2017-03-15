@@ -5626,9 +5626,11 @@ function evergreen_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'contact_row',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 9,
       ),
       'full_name' => array(
@@ -6219,7 +6221,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 4,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -6363,9 +6365,10 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 16,
       ),
       'contact_row' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 10,
       ),
       'default' => array(
@@ -6428,7 +6431,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 6,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -6644,7 +6647,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 2,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -6712,7 +6715,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 11,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -6859,7 +6862,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 5,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -6931,9 +6934,10 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 17,
       ),
       'contact_row' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 11,
       ),
       'default' => array(
@@ -7004,7 +7008,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 13,
       ),
       'contact_row' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -7102,7 +7106,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 12,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -7321,9 +7325,10 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 18,
       ),
       'contact_row' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 12,
       ),
       'default' => array(
@@ -7495,7 +7500,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 8,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -7570,7 +7575,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 3,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone',
@@ -7707,7 +7712,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 19,
       ),
       'contact_row' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -7846,7 +7851,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 7,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -8005,7 +8010,7 @@ function evergreen_content_field_default_field_instances() {
         'weight' => 1,
       ),
       'contact_row' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -8790,7 +8795,7 @@ function evergreen_content_field_default_field_instances() {
         'settings' => array(
           'links' => 0,
           'use_content_language' => 1,
-          'view_mode' => 'contact_block',
+          'view_mode' => 'contact_row',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 10,
@@ -14977,7 +14982,7 @@ function evergreen_content_field_default_field_instances() {
     'bundle' => 'site_sections',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select which office in the directory should be associated with this site section. In order for the site editors to update the information, the office will also need to be assigned to this site.',
+    'description' => 'Select which office or peerson in the directory should be associated with this site section.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -15351,7 +15356,7 @@ function evergreen_content_field_default_field_instances() {
   t('Select the types of resources that can be found at the link.');
   t('Select what section this page belongs to. That will set its site title, navigation, and background.');
   t('Select which calendars this event should appear on. DO NOT select Academic Calendar unless authorized to do so.');
-  t('Select which office in the directory should be associated with this site section. In order for the site editors to update the information, the office will also need to be assigned to this site.');
+  t('Select which office or peerson in the directory should be associated with this site section.');
   t('Short Description');
   t('Site Section');
   t('Site Section(s)');
