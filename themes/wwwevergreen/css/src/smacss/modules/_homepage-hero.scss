@@ -126,6 +126,7 @@
 		// layout
 		display: flex;  // W3C
 		flex-direction: column;
+		justify-content: center;
 		// positioning
 		position: absolute;
 		bottom: 0;
@@ -210,22 +211,25 @@
 
 	@include breakpoint($lil-groot){
 		// box model
-		width: calc(66.6666666667% - 1em);
+		width: calc(66.6666666667% - 2ch);
 		// layout
 		float: left;
 	}
 
 	@include breakpoint($starlord){
 		// box model
-		margin: 0 1em;
-		width: calc(50% - 1em);
+		margin: 0 2ch;
+		width: calc(50% - 2ch);
 		color: $tint;
 		// typography
 		text-shadow: 0 1px 2px mix($shade, $blueberry-susan, 80%);
 	}
 
-	@include breakpoint($drax){
-		width: calc((3 / 7 * 100%) - 1em);  //3/7
+	//@include breakpoint($drax){
+	@include breakpoint($gamora){
+		margin: 5em 2ch 0;
+		//width: calc((3 / 7 * 100%) - 1em);  //3/7
+		width: calc(100% - 4ch);
 	}
 }
 
