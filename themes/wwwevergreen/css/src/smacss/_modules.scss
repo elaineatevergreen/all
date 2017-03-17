@@ -126,21 +126,21 @@
  */
 @import "modules/homepage-hero";
 
-.location-transporter {
+.location-transporter{
   margin: calc(30 / 18 * 1em) 1ch;
   font-weight: bold;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   text-align: center;
   
-	@media breakpoint($starlord) {
+	@include breakpoint($starlord){
 		// box model
 		margin: calc(30 / 19.229 * 1em) 1ch;
 		// typography
 		@include base-type-xl;
 	}
 
-	@media screen and (min-width: 125em) {
+	@include breakpoint($groot){
 		margin: calc(30 / 29.124 * 1em) 1ch;
 		font-size: 1.82rem;
 		line-height: 1.03007828594973;
