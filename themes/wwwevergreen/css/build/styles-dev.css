@@ -534,7 +534,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -742,7 +742,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 424, ../src/smacss/base/_typography.scss */
@@ -1316,7 +1316,7 @@ input[type="radio"] + label {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
   /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
@@ -2523,7 +2523,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3392,7 +3392,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3417,15 +3417,13 @@ input:checked + .header-dropdown {
  * 3. Copy
  * 4. Copy Modifiers
  */
-/* line 24, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero,
-.homepage-hero-content {
+/* line 25, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero {
   height: 100%;
   overflow: hidden;
 }
-
 @media screen and (min-width: 20em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
@@ -3433,24 +3431,24 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     display: table;
   }
 }
 
-/* line 46, ../src/smacss/modules/_homepage-hero.scss */
+/* line 43, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-picture img {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 46, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 43, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-picture img {
     width: 100%;
   }
 }
 
-/* line 55, ../src/smacss/modules/_homepage-hero.scss */
+/* line 52, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img {
   margin-left: -50%;
   width: 200%;
@@ -3458,32 +3456,32 @@ input:checked + .header-dropdown {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 63, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 60, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 71, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 68, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -10%;
     width: 120%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 78, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 75, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: 0;
     width: 100%;
   }
 }
-/* line 84, ../src/smacss/modules/_homepage-hero.scss */
+/* line 81, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-alt .homepage-hero-img {
   margin-left: 0;
 }
 
-/* line 89, ../src/smacss/modules/_homepage-hero.scss */
+/* line 86, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3492,7 +3490,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 97, ../src/smacss/modules/_homepage-hero.scss */
+/* line 94, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3500,40 +3498,58 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 108, ../src/smacss/modules/_homepage-hero.scss */
+/* line 105, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
+@media screen and (min-width: 32em) {
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    font-size: calc(1rem + 1vh);
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    float: right;
+  }
+}
 @media screen and (min-width: 70em) {
-  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 118, ../src/smacss/modules/_homepage-hero.scss */
+/* line 125, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
+  height: 100%;
   width: 100%;
-  max-width: 82em;
+  max-width: 77em;
+  overflow: hidden;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 25em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3541,18 +3557,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 145, ../src/smacss/modules/_homepage-hero.scss */
+/* line 156, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 20em) {
-  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 156, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3568,54 +3584,54 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 164, ../src/smacss/modules/_homepage-hero.scss */
+/* line 175, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 168, ../src/smacss/modules/_homepage-hero.scss */
+/* line 179, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 172, ../src/smacss/modules/_homepage-hero.scss */
+/* line 183, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 188, ../src/smacss/modules/_homepage-hero.scss */
+/* line 199, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 203, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
@@ -3624,61 +3640,61 @@ input:checked + .header-dropdown {
 /**
  * 3. Copy
  */
-/* line 208, ../src/smacss/modules/_homepage-hero.scss */
+/* line 219, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy {
   margin: 0 calc(15 / 14 * 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc(66.6666666667% - 1em);
-    float: left;
+    width: calc(66.6666666667% - 2ch);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    margin: 0 1em;
-    width: calc(50% - 1em);
+    margin: 0 2ch;
+    width: calc(50% - 2ch);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 43em) {
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc((3 / 7 * 100%) - 1em);
+    margin: 5em 2ch 0;
+    width: calc(100% - 4ch);
   }
 }
 
-/* line 232, ../src/smacss/modules/_homepage-hero.scss */
+/* line 246, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 246, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 246, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 246, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 255, ../src/smacss/modules/_homepage-hero.scss */
+/* line 269, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy img {
   width: 100%;
 }
@@ -3695,62 +3711,51 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 284, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
-    float: right;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 284, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
-    float: right;
   }
 }
 
-/* line 285, ../src/smacss/modules/_homepage-hero.scss */
+/* line 297, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
-  height: 100%;
   margin: 0;
-  padding: 0 calc(7.5 / 15 * 1em);
+  padding: 0 1ch;
   width: 66.6666666667%;
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
-}
-@media screen and (min-width: 22em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 14 * 1em);
-  }
+  	/*@include breakpoint($drax){
+  		width: calc(3 / 7 * 100%);
+  	}
+  
+  	@include breakpoint($groot){
+  		padding: 0 calc(30 / 19.23333333333 * 1em);
+  	}*/
 }
 @media screen and (min-width: 32em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    height: auto;
+    padding: 0 2ch;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 17 * 1em);
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    width: calc(3 / 7 * 100%);
-  }
-}
-@media screen and (min-width: 125em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(30 / 19.23333333333 * 1em);
+    margin: 0 2ch;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
   }
 }
 
@@ -4237,17 +4242,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 169, ../src/smacss/_modules.scss */
+/* line 166, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 173, ../src/smacss/_modules.scss */
+/* line 170, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 177, ../src/smacss/_modules.scss */
+/* line 174, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4256,7 +4261,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4265,7 +4270,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4274,33 +4279,33 @@ ul.accordion-inner {
   }
 }
 
-/* line 202, ../src/smacss/_modules.scss */
+/* line 199, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
 }
 
-/* line 207, ../src/smacss/_modules.scss */
+/* line 204, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 204, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 204, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 221, ../src/smacss/_modules.scss */
+/* line 218, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4310,19 +4315,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/_modules.scss */
+  /* line 218, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 238, ../src/smacss/_modules.scss */
+/* line 235, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 239, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4331,7 +4336,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 242, ../src/smacss/_modules.scss */
+  /* line 239, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4879,7 +4884,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 262, ../src/smacss/_modules.scss */
+/* line 259, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -6158,7 +6163,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -7061,7 +7066,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7280,18 +7285,18 @@ p.alert {
 /**
  * O. News
  */
-/* line 304, ../src/smacss/_modules.scss */
+/* line 301, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 314, ../src/smacss/_modules.scss */
+/* line 311, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 320, ../src/smacss/_modules.scss */
+/* line 317, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7311,7 +7316,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 337, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7327,7 +7332,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 346, ../src/smacss/_modules.scss */
+/* line 343, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7336,13 +7341,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 353, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 353, ../src/smacss/_modules.scss */
+  /* line 350, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7350,7 +7355,7 @@ p.alert {
   }
 }
 
-/* line 363, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7466,7 +7471,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 383, ../src/smacss/_modules.scss */
+/* line 380, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7474,7 +7479,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 393, ../src/smacss/_modules.scss */
+/* line 390, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7493,24 +7498,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 412, ../src/smacss/_modules.scss */
+/* line 409, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 416, ../src/smacss/_modules.scss */
+/* line 413, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 424, ../src/smacss/_modules.scss */
+/* line 421, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 432, ../src/smacss/_modules.scss */
+/* line 429, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7521,30 +7526,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 443, ../src/smacss/_modules.scss */
+/* line 440, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 447, ../src/smacss/_modules.scss */
+/* line 444, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 444, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 444, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 460, ../src/smacss/_modules.scss */
+/* line 457, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7556,7 +7561,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 472, ../src/smacss/_modules.scss */
+/* line 469, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7564,7 +7569,7 @@ p.alert {
   display: block;
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 478, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
