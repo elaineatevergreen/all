@@ -307,13 +307,14 @@
 
 	@include breakpoint($gamora){
 		padding: 0 calc(15 / 17 * 1em);
+		width: 100%;
 	}
 
-	@include breakpoint($drax){
+	/*@include breakpoint($drax){
 		width: calc(3 / 7 * 100%);
 	}
 
 	@include breakpoint($groot){
 		padding: 0 calc(30 / 19.23333333333 * 1em);
-	}
+	}*/
 }
