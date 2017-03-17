@@ -3764,6 +3764,7 @@ input:checked + .header-dropdown {
     padding: 0 calc(15 / 17 * 1em);
     width: 100%;
   }
+<<<<<<< HEAD
 }
 
 /*.profile-list > li{  // deprecated
@@ -3777,6 +3778,8 @@ input:checked + .header-dropdown {
   // layout
   display: block;
   overflow: hidden;
+=======
+>>>>>>> a0787d7... Slogan: Fixes .homepage-hero-img-detailed bugs.
 }
 
 .profile-list .box{
