@@ -3752,9 +3752,9 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 43em) {
   /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    margin: 0 2ch;
+    margin: 5em 2ch 0;
     padding: 0;
-    width: 100%;
+    width: calc(100% - 4ch);
     background-color: transparent;
   }
 }
