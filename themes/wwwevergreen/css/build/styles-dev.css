@@ -68,9 +68,19 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * New Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -524,7 +534,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -732,7 +742,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 424, ../src/smacss/base/_typography.scss */
@@ -1148,6 +1158,11 @@ select:hover {
 }
 
 /* line 110, ../src/smacss/base/_forms.scss */
+.tertiary-nav-wrapper .form-type-select select {
+  width: 100%;
+}
+
+/* line 114, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1155,13 +1170,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 110, ../src/smacss/base/_forms.scss */
+  /* line 114, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 123, ../src/smacss/base/_forms.scss */
+/* line 127, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1172,7 +1187,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 127, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1180,7 +1195,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 127, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1190,20 +1205,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 148, ../src/smacss/base/_forms.scss */
+/* line 152, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 148, ../src/smacss/base/_forms.scss */
+  /* line 152, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 157, ../src/smacss/base/_forms.scss */
+/* line 161, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1211,7 +1226,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 157, ../src/smacss/base/_forms.scss */
+  /* line 161, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1221,112 +1236,55 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/**
- * 2. Views Module Forms
- *
- * Forms in Drupal’s Views module. It's worth cross-checking changes you
- * make here with a few different form pages, because this stuff gets weird
- * and unpredictable.
- *
- * Add to this list as you find more weirdness.
- *
- * Left-nav fiters: http://evergreen.edu/catalog/index/ug
- * Main content filters: http://evergreen.edu/activities/groups
- *
- * Table of Contents
- *
- * a. Views Exposed Widget
- * b. Secondary Options
- */
-/**
- * b. Views Exposed Widget
- *
- * These are the bulk of the form widgets in the Views-type forms.
- */
-/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
-  display: block;
+  display: inline-block;
 }
 
-/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget {
-  /* box model */
-  margin: 0.535714285714286em 0 1.071428571428571em;
-  padding: 0;
-  /* layout */
-  float: none;
+/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
 }
 
-/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-widget input,
-.views-exposed-widget select {
-  margin-top: 0;
+/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
   margin-bottom: 0;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
-.tertiary-nav-wrapper .form-type-select select {
-  width: 100%;
-}
-
-/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin: 0;
-  	/*margin-top: calc(20 / 16 * 1rem);
-  
-  	@include breakpoint($gamora){
-  		margin-top: calc(22.5 / 16 * 1rem);
-  	}*/
-}
-
-/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}*/
-/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/**
- * b. Secondary Options
- *
- * Better Exposed Filters offeres a place to put “advanced” options. For
- * whatever reason, these options don't follow the same pattern as the rest
- * of the form fields, so they need special rules.
- */
-/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
-.bef-secondary-options .form-select {
-  margin-bottom: calc(15 / 16 * 1rem);
+/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-widget {
+  padding: 0;
 }
 
 /**
  * 3. Webform Module
  */
 /**
- * 3. Webform Module
- *
- * Table of Contents
- *
- * a. Webform Forms
- * b. Checkboxes and Radios
- * c. Textareas
- * d. Grid
- * e. Buttons
- *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1334,34 +1292,34 @@ input[type="radio"] + label {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
-  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1370,15 +1328,15 @@ input[type="radio"] + label {
   }
 }
 
-/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * b. Checkboxes And Radios
+ * Checkboxes And Radios
  */
-/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1387,28 +1345,28 @@ input[type="radio"] + label {
   display: flex;
 }
 
-/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
 /**
- * c. Textareas
+ * Textareas
  */
-/* line 96, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 86, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1416,24 +1374,7 @@ input[type="radio"] + label {
 }
 
 /**
- * d. Grid
- *
- * A form grid that's useful for sliding scales, e.g. tracking a range from
- * unsatisfied to satisfied.
- */
-/* line 108, ../src/smacss/base/forms/_drupal-webform.scss */
-.checkbox.webform-grid-option {
-  text-align: center;
-}
-
-/* line 112, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-grid-option .form-radio,
-.webform-grid-option .form-checkbox {
-  float: none;
-}
-
-/**
- * e. Buttons
+ * Buttons
  */
 /**
  * 4. Search
@@ -2015,7 +1956,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2026,7 +1966,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2035,7 +1974,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2043,7 +1981,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2052,14 +1990,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2068,14 +2006,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2585,7 +2523,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3454,7 +3392,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3778,7 +3716,6 @@ input:checked + .header-dropdown {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
-    float: right;
   }
 }
 @media screen and (min-width: 32em) {
@@ -3787,15 +3724,13 @@ input:checked + .header-dropdown {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
-    float: right;
   }
 }
 
-/* line 299, ../src/smacss/modules/_homepage-hero.scss */
+/* line 297, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
-  height: 100%;
   margin: 0;
-  padding: 0 calc(7.5 / 15 * 1em);
+  padding: 0 1ch;
   width: 66.6666666667%;
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
@@ -3807,25 +3742,19 @@ input:checked + .header-dropdown {
   		padding: 0 calc(30 / 19.23333333333 * 1em);
   	}*/
 }
-@media screen and (min-width: 22em) {
-  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 14 * 1em);
-  }
-}
 @media screen and (min-width: 32em) {
-  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    height: auto;
+    padding: 0 2ch;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    margin: 5em 2ch 0;
+    margin: 0 2ch;
     padding: 0;
-    width: calc(100% - 4ch);
+    width: 100%;
     background-color: transparent;
   }
 }
@@ -6055,8 +5984,6 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -6069,22 +5996,18 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 44, ../src/smacss/modules/_images.scss */
+/* line 42, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -6092,11 +6015,9 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -6105,7 +6026,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6117,14 +6038,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 83, ../src/smacss/modules/_images.scss */
+  /* line 79, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
@@ -6133,7 +6054,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6143,7 +6064,7 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 93, ../src/smacss/modules/_images.scss */
+  /* line 90, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
@@ -6151,10 +6072,8 @@ p.alert {
     margin-right: -3ch;
     max-width: calc(50% + 4ch);
   }
-}
 
-@media screen and (min-width: 70em) {
-  /* line 105, ../src/smacss/modules/_images.scss */
+  /* line 99, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -6163,9 +6082,8 @@ p.alert {
     float: left;
   }
 }
-
 @media screen and (min-width: 43em) {
-  /* line 119, ../src/smacss/modules/_images.scss */
+  /* line 111, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -6176,7 +6094,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 123, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -6184,7 +6102,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 139, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }
@@ -6245,7 +6163,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6820,10 +6738,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7148,7 +7066,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
