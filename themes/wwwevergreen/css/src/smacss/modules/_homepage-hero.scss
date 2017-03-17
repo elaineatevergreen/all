@@ -316,8 +316,12 @@
 	}
 
 	@include breakpoint($gamora){
-		padding: 0 calc(15 / 17 * 1em);
-		width: 100%;
+		// box model
+		margin: 5em 2ch 0;
+		padding: 0;
+		width: calc(100% - 4ch);
+		// decoration
+		background-color: transparent;
 	}
 
 	/*@include breakpoint($drax){
