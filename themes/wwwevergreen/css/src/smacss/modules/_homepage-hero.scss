@@ -105,6 +105,16 @@
 	&:hover{
 		background-color: $sky-blue;
 	}
+	
+	@include breakpoint($starlord){
+		font-size: calc(1rem + 1vh);
+		line-height: 1.5;
+	}
+
+	@include breakpoint($gamora){
+		// layout
+		float: right;
+	}
 
 	@include breakpoint($drax){
 		font-size: 1.82rem;  // Step 3
@@ -116,7 +126,7 @@
 	// box model
 	height: 100%;
 	width: 100%;
-	max-width: 82em;
+	max-width: 77em;  // Should match the max-width of .wrapper
 	// layout
 	overflow: hidden;
 	// decoration
@@ -125,8 +135,8 @@
 	@include breakpoint($lil-groot){
 		// layout
 		display: flex;  // W3C
-		flex-direction: column;
-		justify-content: center;
+		flex-direction: column-reverse;
+		justify-content: flex-start;
 		// positioning
 		position: absolute;
 		bottom: 0;
@@ -134,7 +144,7 @@
 		background-color: transparent;
 	}
 
-	@media screen and (min-width: 25em){
+	@include breakpoint($starlord){
 		justify-content: center;
 	}
 
@@ -146,7 +156,7 @@
 .homepage-hero-content .box{
 	margin: 0;
 
-	@include breakpoint($lil-groot){
+	@include breakpoint($starlord){
 		position: absolute;
 		bottom: 0;
 	}
@@ -213,7 +223,7 @@
 		// box model
 		width: calc(66.6666666667% - 2ch);
 		// layout
-		float: left;
+		//float: left;
 	}
 
 	@include breakpoint($starlord){
