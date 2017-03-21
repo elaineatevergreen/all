@@ -8,8 +8,8 @@ In this entity view mode, we get a name, a tiny headshot, and their expertise. f
  
 ?>
 <div class="unit-1-2">
-<div class="h-card media">
-	<div class="media-img">
+<div class="h-card compound">
+	<div class="compound-img">
 <?php 
 	/* this goes thru all the options for photos... */
 	
@@ -23,13 +23,13 @@ elseif(isset($content['field_headshot'])) {
 } 
 //finally, if no photo use the small square "no photo" image
 else { ?>
-<img src="<?php print base_path() . path_to_theme() ?>/images/directory/_blank-square.png" alt=""/>
+<img src="<?php print base_path() . path_to_theme() ?>/images/directory/_blank-square.png" alt="" class="image-full"/>
 <?php	
 };
 ?>
 	</div>
 	
-	<div class="media-body">
+	<div class="compound-body">
 		<!-- Faculty name -->
 		<div class="p-name">
 			<a class="u-email" href="<?php print $node_url; ?>"><?php print render($content['field_first_name']) . ' ' . render($content['field_last_name']); ?></a>
