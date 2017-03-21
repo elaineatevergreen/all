@@ -1,4 +1,14 @@
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
@@ -50,7 +60,7 @@
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
 .form-type-checkbox, // This selector is untested, so if this breaks something, feel free to try something different
 .form-radios .form-type-radio{
@@ -81,7 +91,7 @@
 
 
 /**
- * Textareas
+ * c. Textareas
  */
 .resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
 	width: 100%;
@@ -90,7 +100,22 @@
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+.checkbox.webform-grid-option{
+	text-align: center;
+}
+
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox{
+	float: none;
+}
+
+/**
+ * e. Buttons
  */
 .webform-client-form .button-primary{
 	@extend input.prime;
