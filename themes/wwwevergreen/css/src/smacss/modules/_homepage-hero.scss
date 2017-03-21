@@ -237,9 +237,14 @@
 
 	//@include breakpoint($drax){
 	@include breakpoint($gamora){
-		margin: 5em 2ch 0;
+		margin: 33% auto 0;
 		//width: calc((3 / 7 * 100%) - 1em);  //3/7
-		width: calc(100% - 4ch);
+		width: 90vw;
+		max-width: calc(100% - 4ch);
+	}
+	
+	@include breakpoint($drax){
+		width: 70vw;
 	}
 }
 
