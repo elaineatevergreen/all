@@ -534,7 +534,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -742,7 +742,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 424, ../src/smacss/base/_typography.scss */
@@ -1316,7 +1316,7 @@ input[type="radio"] + label {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
   /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
@@ -2523,7 +2523,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3392,7 +3392,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -4237,17 +4237,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 169, ../src/smacss/_modules.scss */
+/* line 166, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 173, ../src/smacss/_modules.scss */
+/* line 170, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 177, ../src/smacss/_modules.scss */
+/* line 174, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4256,7 +4256,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4265,7 +4265,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4274,33 +4274,43 @@ ul.accordion-inner {
   }
 }
 
-/* line 202, ../src/smacss/_modules.scss */
+/* line 199, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
 }
 
-/* line 207, ../src/smacss/_modules.scss */
+/* line 204, ../src/smacss/_modules.scss */
+.byline {
+  color: #283b17;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+}
+
+/* line 211, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 221, ../src/smacss/_modules.scss */
+/* line 225, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4310,19 +4320,19 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/_modules.scss */
+  /* line 225, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 238, ../src/smacss/_modules.scss */
+/* line 242, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 246, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4331,7 +4341,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 242, ../src/smacss/_modules.scss */
+  /* line 246, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4879,7 +4889,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 262, ../src/smacss/_modules.scss */
+/* line 266, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -6158,7 +6168,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -7061,7 +7071,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7280,18 +7290,18 @@ p.alert {
 /**
  * O. News
  */
-/* line 304, ../src/smacss/_modules.scss */
+/* line 308, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 314, ../src/smacss/_modules.scss */
+/* line 318, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 2em);
 }
 
-/* line 320, ../src/smacss/_modules.scss */
+/* line 324, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7311,7 +7321,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 337, ../src/smacss/_modules.scss */
+/* line 341, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7327,7 +7337,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 346, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7336,13 +7346,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 353, ../src/smacss/_modules.scss */
+/* line 357, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 353, ../src/smacss/_modules.scss */
+  /* line 357, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7350,7 +7360,7 @@ p.alert {
   }
 }
 
-/* line 363, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7466,7 +7476,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 383, ../src/smacss/_modules.scss */
+/* line 387, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7474,7 +7484,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 393, ../src/smacss/_modules.scss */
+/* line 397, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7493,24 +7503,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 412, ../src/smacss/_modules.scss */
+/* line 416, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 416, ../src/smacss/_modules.scss */
+/* line 420, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 424, ../src/smacss/_modules.scss */
+/* line 428, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 432, ../src/smacss/_modules.scss */
+/* line 436, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7521,30 +7531,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 443, ../src/smacss/_modules.scss */
+/* line 447, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 447, ../src/smacss/_modules.scss */
+/* line 451, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 451, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 451, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 460, ../src/smacss/_modules.scss */
+/* line 464, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7556,7 +7566,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 472, ../src/smacss/_modules.scss */
+/* line 476, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7564,7 +7574,7 @@ p.alert {
   display: block;
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 485, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
