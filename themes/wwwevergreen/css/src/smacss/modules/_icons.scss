@@ -23,6 +23,7 @@
 .inline-icon{
 	// box model
 	//margin-right: 0.25em;
+	height: 100%;  // IE 11
 	max-height: 1.25em;
 	// layout
 	display: inline;
