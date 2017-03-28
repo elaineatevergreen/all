@@ -4922,6 +4922,7 @@ ul.accordion-inner {
 
 /* line 23, ../src/smacss/modules/_icons.scss */
 .inline-icon {
+  height: 100%;
   max-height: 1.25em;
   display: inline;
   position: relative;
