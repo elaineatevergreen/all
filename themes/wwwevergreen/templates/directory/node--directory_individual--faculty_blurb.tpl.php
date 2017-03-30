@@ -12,9 +12,9 @@ In this entity view mode, we get a name, a tiny headshot, and their expertise. f
 	<div class="compound-img">
 <?php 
 	/* this goes thru all the options for photos... */
-	
 //square portrait is the best option
 if(isset($content['field_square_portrait'])) {
+	
 	print render($content['field_square_portrait']);
 } 
 //second best: the rectangular headshot, which gets CSS-shrunk
@@ -23,7 +23,7 @@ elseif(isset($content['field_headshot'])) {
 } 
 //finally, if no photo use the small square "no photo" image
 else { ?>
-<img src="<?php print base_path() . path_to_theme() ?>/images/directory/_blank-square.png" alt="" class="image-full"/>
+<img src="<?php print base_path() . path_to_theme() ?>/images/directory/_blank-square.png" alt="" class="program-faculty"/>
 <?php	
 };
 ?>
