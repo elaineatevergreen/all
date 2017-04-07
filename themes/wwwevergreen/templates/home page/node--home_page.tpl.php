@@ -209,7 +209,7 @@
 									<li class="unit-1-2">
 										<figure class="box caption-box">
 											<a class="profile-img-link" href="/magazine/winter-2017/upwardly-mobile">
-												<img alt="Rhys Roth ’87, MES ’90" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/melanie-white.jpg" />
+												<img alt="Melanie White ’14" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/melanie-white-portrait.jpg" />
 											</a>
 											<figcaption>
 												<p>
