@@ -215,7 +215,7 @@
 												<p>
 													<a href="/magazine/winter-2017/upwardly-mobile">
 														<strong>Melanie White ’14</strong>
-													</a> empowers Latino immigrant community through social entrepreneurship.
+													</a> empowers the Latino immigrant community through social entrepreneurship.
 												</p>
 											</figcaption>
 										</figure>
