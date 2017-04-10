@@ -10,7 +10,7 @@
  * Photo Directory
  */
 
-.directory > thead{
+.directory table > thead{
 	display: none;
 
 	@include breakpoint($gamora){
@@ -18,7 +18,7 @@
 	}
 }
 
-.directory > tbody > tr{
+.directory table > tbody > tr{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 66%);
 	@include margin-default;
@@ -46,7 +46,7 @@
 	}
 }
 
-.directory > tbody td{
+.directory table > tbody td{
 	// box model
 	border-width: 0;
 	padding: 0;
