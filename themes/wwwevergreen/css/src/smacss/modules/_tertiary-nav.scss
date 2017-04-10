@@ -45,6 +45,7 @@
 	z-index: 1;  // Fixes an issue where the nav goes under the content in #index-wrapper.
 	// typography
 	@include base-type;
+	font-family: $text-face-alt;
 
 	@include breakpoint($starlord){
 		margin: 0 auto calc(15 / 16 * 1rem);

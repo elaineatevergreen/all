@@ -345,6 +345,7 @@ p.alert{  // WYSIWYG
 	margin: 0.44117647058824em 0 0.88235294117647em;  // 7.5/17 15/17
 	// typography
 	@include base-type-lg;
+	font-family: $text-face-alt;
 	font-style: italic;
 
 	@include breakpoint($drax){
