@@ -62,6 +62,10 @@
 	}
 }
 
+.directory table > tbody td:last-child{
+	padding-right: 0;
+}
+
 .directory .p-tel::before{
 	font-weight: bold;
 	content: "Phone: ";
