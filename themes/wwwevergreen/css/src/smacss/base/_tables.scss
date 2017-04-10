@@ -25,6 +25,7 @@ table{
 	max-width: 100%;
 	// typography
 	@include base-type;
+	font-family: $text-face-alt;
 }
 
 caption{
