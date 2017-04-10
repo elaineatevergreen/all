@@ -1,0 +1,1051 @@
+
+
+	
+	
+	
+	
+		
+		
+
+
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+		
+		<title>/financialservices/tuition-csv/1516.csv - [
+		
+		View
+	
+	] Cascade Server
+		</title>
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/css/images/favicon.ico"/>
+<!-- JQuery UI basic theme -->
+<link rel="stylesheet" type="text/css" href="/javascript/jquery/css/smoothness/jquery-ui-1.10.2.custom.min.css?v=7_6-08082013"/>
+
+<link rel="stylesheet" type="text/css" href="/css/styles.css?v=7_6-08082013"/>
+
+<link rel="stylesheet" type="text/css" href="/css/menu.css?v=7_6-08082013"/>
+<!-- YUI Stylesheets -->
+<link rel="stylesheet" type="text/css" href="/javascript/yui-2.9/yui/build/container/assets/skins/sam/container-skin.css"/>
+<link rel="stylesheet" type="text/css" href="/css/broadcast.css?v=7_6-08082013"/>
+<!-- Image cropper -->
+<link rel="stylesheet" type="text/css" href="/javascript/jquery/jquery.imgareaselect-0.9.2/css/imgareaselect-animated.css?v=7_6-08082013"/>
+
+<!-- TextExt custom css -->
+<link rel="stylesheet" type="text/css" href="/javascript/jquery/css/jquery-textext.css?v=7_6-08082013"/>
+<script type="text/javascript">
+	// Global Cascade object
+	if (!Cascade) {
+		var Cascade = {
+			// Stores locale-specific messages for use in js files
+			Messages : {}
+		};
+	}
+</script>
+
+<script type="text/javascript" src="/javascript/onload.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/json2.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/interact.js?v=7_6-08082013"></script>
+
+<script type="text/javascript" src="/javascript/wysiwyg.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/ajax-rpc.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/validate.js?v=7_6-08082013"></script>
+
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="/javascript/pngfix.js?v="></script>
+<![endif]-->
+
+<!-- JQuery -->
+<script type="text/javascript" src="/javascript/jquery/jquery-1.7.2-hh-custom.min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery-ui-1.10.2.min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery-ui-autocomplete-html.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery-hashtable-1.1.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery.iframe-transport.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery.fileupload-8.2.1.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery.cookie.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/jquery/jquery-textext-full-1.3.1.min.js?v=7_6-08082013"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/javascript/jquery/jquery.flot-0.8.1/excanvas.min.js?v=7_6-08082013"></script>
+<![endif]-->
+
+<!-- Yahoo Libraries -->
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/yahoo/yahoo-min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/yahoo-dom-event/yahoo-dom-event.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/animation/animation.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/container/container-min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/menu/menu.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/json/json-min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/element/element-min.js?v=7_6-08082013"></script>
+<script type="text/javascript" src="/javascript/yui-2.9/yui/build/connection/connection-min.js?v=7_6-08082013"></script>
+
+
+<script type="text/javascript" src="/javascript/broadcast.js?v=7_6-08082013"></script>
+<script type="text/javascript">
+YAHOO.util.Event.onContentReady("global-nav", function () {
+	var oMenuBar = new YAHOO.widget.MenuBar("menu", {	 
+		autosubmenudisplay: false, 
+		hidedelay: 1000,		
+		lazyload: true,
+		scrollincrement: 3					
+		});
+	oMenuBar.render();
+});
+
+
+	
+
+var canMove = true;
+</script>
+
+<script type="text/javascript" src="/javascript/tiny_mce-3.5.8/tiny_mce.js?v=7_6-08082013"></script>
+
+
+		
+		
+		
+		<script type="text/javascript" src="/javascript/drafts.js?v=7_6-08082013"></script>
+	
+	
+	
+	
+	</head>
+	<body>
+		
+		
+		
+		
+		<script type="text/javascript">
+			var currentSiteId = '7f267f6dc0d3104d00a9cde2d099bc7e';
+			
+				var entityId = '5878ccb1c0d3104d00db89c2d29ba2ed';
+				var entityType = 'file';
+			
+			var errorOccuredMessage = 'An error occurred';
+		</script>
+		<p class="hidden"><a href="#center-stage">Skip navigation</a></p>
+		<div id="wrapper">
+			<div id="header">
+				<a href="/home.act"><img src="/css/images/logo-small.gif" alt="Cascade Home"/></a>
+				<span id="siteselection">
+	<span class="ui-combobox"><input type="text" id="siteselect" name="siteselect" onchange="changeSite('')" value="evergreen.edu"/><img class="loading" src="/css/icons/loading.gif"></span>
+	
+</span>
+				<span id="current-user">
+					pleskog
+					|
+					<a href="#" accesskey="q" class="top-dropdown" title="Access Key q" onclick="toggleDisplay('quick-links', this, true); return false">Quick Links</a>
+					|
+					<a href="/preferences.act?tab=u" title="My Settings">My Settings</a>
+					|
+					<a href="#" class="top-dropdown" onclick="toggleDisplay('help-menu', this, true); return false;">Help</a>					
+					|
+					<a href="http://ideas.hannonhill.com" title="Give Us Feedback" onclick="return openAndFocus(this.href, 'global_help');">Give Us Feedback</a>
+					| 
+					<a href="/logoff.act">Log Out</a>
+				</span>
+				
+				<div id="quick-links" style="display: none;" class="menu-content">
+					<table>
+						<tr>
+							<th><a href="/home.act">Dashboard</a></th>
+							<th><a href="/history.act">History</a></th>
+							
+								<th><a href="/admin/dashboard.act">Administration</a></th>
+							
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li><a href="/home.act?tab=m" class="icon-message">Messages</a></li>
+									<li><a href="/home.act?tab=w" class="icon-workflow">Workflows</a></li>
+									<li><a href="/home.act?tab=co" class="icon-lock">Locked Assets</a></li>
+									<li><a href="/home.act?tab=d" class="icon-draft">Drafts</a></li>
+									<li><a href="/home.act?tab=s" class="icon-stale">Stale Content</a></li>
+									
+										<li><a href="/rb.act?siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-recycle">Recycle Bin</a></li>
+									
+								</ul>
+							</td>
+							<td>
+								
+									<ul>
+										
+											<li>
+												<a href="/home.act?" class="icon-home"> Dashboard Overview</a>
+
+											</li>
+										
+											<li>
+												<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=62c3c640c0d3104d00db89c29e08b0b5&amp;type=page" class="icon-page"> financialservices/tuition</a><a href="#" onclick="toggleContextDropDown(this, '62c3c640c0d3104d00db89c29e08b0b5', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span>
+
+											</li>
+										
+											<li>
+												<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e342ba75c0d3104d00db89c217eae447&amp;type=file" class="icon-file"> _inc/js/cost-script.js</a><a href="#" onclick="toggleContextDropDown(this, 'e342ba75c0d3104d00db89c217eae447', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span>
+
+											</li>
+										
+									</ul>
+								
+								&#160;
+							</td>
+						
+							<td>
+								<ul>
+									
+
+
+
+
+
+	
+		<li>
+			<a href="/entity/open.act?type=assetfactorycontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-assetfactory">Asset Factories</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=pageconfigurationsetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-pageconfigurationset">Configuration Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=metadatasetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-metadataset">Metadata Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=structureddatadefinitioncontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-structureddatadefinition">Data Definitions</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=contenttypecontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-contenttype">Content Types</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=workflowdefinitioncontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-workflowdefinition">Workflow Definitions</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=publishsetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-publishset">Publish Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=transportcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-transport">Transports</a>
+		</li>
+	
+	
+    
+        <li>
+            <a href="/entity/open.act?type=sitedestinationcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-destination">Destinations</a>
+        </li>
+    
+	
+	
+		<li>
+			<a href="/entity/open.act?type=connectorcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-connector">Connectors</a>
+		</li>
+	
+
+								</ul>
+							</td>
+						
+						</tr>		
+						<tr>
+							<td colspan="3"><a href="#" onclick="toggleDisplay('quick-links', this); return false">Close</a></td>
+						</tr>
+					</table>
+				</div>
+				<div id="help-menu" style="display: none;" class="menu-content">
+					<ul>
+						<li>
+							<a href="http://help.hannonhill.com" onclick="toggleDisplay('help-menu', false); return openAndFocus(this.href, 'global_help');">Get Help</a>
+						</li>
+						<li>
+							<a href="http://knowledgebase.hannonhill.com" onclick="toggleDisplay('help-menu', false); return openAndFocus(this.href, 'global_help');">Knowledge base</a>
+						</li>
+						<li>
+							<a href="http://www.hannonhill.com/kb/glossary.html" onclick="toggleDisplay('help-menu', false); return openAndFocus(this.href, 'global_help');">Glossary</a>
+						</li>
+						<li>
+							<a href="/about.act">About</a>
+						</li>
+					</ul>					
+				</div>			
+			</div>
+			
+<div id="sub-header">
+	<div id="global-nav">
+		<div id="menu" class="yuimenubar">
+			<div class="bd">
+				<ul>
+					
+
+<li style="border-right: 1px solid #003366" class="system-menu"><a
+	accesskey="y">&nbsp;<span class="hidden">System</span></a>
+<div class="yuimenu">
+<div class="bd">
+<ul>
+	<li><a class="icon-search"> Search
+	</a>
+	<div class="yuimenu">
+	<div class="bd">
+	<ul>
+		<li><a href="/search.act?mode=basic">Basic</a></li>
+		<li><a href="/search.act?mode=advanced">Advanced</a></li>
+		<li>
+			<a href="/searchandreplace.act?mode=search">Replace</a>
+		</li>
+	</ul>
+	</div>
+	</div>
+	</li>
+
+	
+		<li><a href="#" class="icon-publish">Publisher</a>
+		<div class="yuimenu">
+		<div class="bd">
+		<ul>
+			<li><a href="/publisherstatus.act?siteId=7f267f6dc0d3104d00a9cde2d099bc7e">Active Jobs</a></li>
+			<li><a href="/publisherstatus.act?siteId=7f267f6dc0d3104d00a9cde2d099bc7e&amp;tab=sj">Scheduled Jobs</a></li>
+		</ul>
+		</div>
+		</div>
+		</li>
+	
+
+
+	
+		<li><a href="#">Utilities</a>
+		<div class="yuimenu">
+		<div class="bd">
+		<ul>
+			
+				<li><a href="/entity/sitemigration/startmigration.act">Site Migration Wizard</a></li>
+			
+			
+				<li><a href="#">Database Tools</a>
+					<div class="yuimenu">
+					<div class="bd">
+						<ul>	
+							
+								<li><a href="/loadoptimizedb.act">Optimize Database</a></li>
+							
+							
+								<li><a href="/startDatabaseExport.act">Export Database</a></li>
+							
+							
+								<li><a href="/recycleBinChecker.act">Recycle Bin Checker</a>
+								</li>
+							
+							
+								<li><a href="/pathRepairTool.act">Path Repair Tool</a>
+								</li>
+							
+						</ul>
+					</div>
+					</div>
+				</li>
+			
+			
+				<li><a href="/syncldap.act">Sync LDAP</a></li>
+			
+			
+				<li><a href="/admin/logging/configure.act">Logging</a></li>
+			
+			
+				<li><a href="/search/loadrebuildindex.act">Search Indexing</a></li>
+			
+			
+				<li>
+					<a href="/broadcastMessages.act">Broadcast Messages</a>
+				</li>
+			
+		</ul>
+		</div>
+		</div>
+	</li>
+	
+
+	
+		<li><a href="/sites/dashboard.act">Site Management</a></li>
+	
+
+	<li><a href="#">Preferences</a>
+	<div class="yuimenu">
+	<div class="bd">
+	<ul>
+		
+			<li><a href="/preferences.act">General</a></li>
+			<li><a href="/preferences.act?tab=e">Email</a></li>
+			<li><a href="/preferences.act?tab=c">Content</a></li>
+		
+		<li><a href="/preferences.act?tab=u">User</a></li>
+	</ul>
+	</div>
+	</div>
+	</li>
+
+	
+		<li><a href="#">Configuration</a>
+		<div class="yuimenu">
+		<div class="bd">
+		<ul>
+			<li><a href="/updateConfiguration.act?cfType=ca">Custom Authentication</a></li>
+			<li><a href="/loadLdapConfig.act">LDAP</a></li>
+			<li><a href="/updateConfiguration.act?cfType=pt">Publish Trigger</a></li>
+			<li><a href="/updateConfiguration.act?cfType=lic">Product License</a></li>
+		</ul>
+		</div>
+		</div>
+		</li>
+	
+</ul>
+</div>
+</div>
+</li>
+
+					<li>
+	<a href="/home.act" accesskey="h"><em>H</em>ome</a>
+</li>			
+					<li><a accesskey="n"><span class="arrow-down"><em>N</em>ew</span></a>
+<div class="yuimenu">
+<div class="bd">
+	<ul>
+		<li><a>Loading...</a></li>
+	</ul>
+	</div>
+</div>
+</li>
+					
+<li>
+	<a accesskey="i"><span class="arrow-down">H<em>i</em>story</span></a>
+	<div class="yuimenu">
+	<div class="bd">
+		<ul>
+			<li><a>Loading...</a></li>
+		</ul>
+		</div>
+	</div>
+	</li>
+</li>
+					
+
+
+
+
+
+
+
+	 
+	 	
+	 
+
+
+
+	<li><a accesskey="t"><span
+		class="arrow-down"><em>T</em>ools</span></a>
+	<div class="yuimenu">
+	<div class="bd">
+	<ul>
+		
+			<li><a href="/entity/unpack.act" class="icon-zip">Zip Archive</a></li>
+		
+		
+	
+		
+		
+			<li><a href="/entity/integratefolder.act">Integrate Folder</a></li>
+		
+		
+			<li><a href="/entity/bulkchange.act">Bulk Change</a></li>
+		
+	</ul>
+	</div>
+	</div>
+	</li>
+
+					
+
+
+	<li><a accesskey="a"><span
+		class="arrow-down"><em>A</em>dministration</span></a>
+		<div class="yuimenu">
+			<div class="bd">
+				<ul>
+					<li>
+						<a href="/admin/dashboard.act" accesskey="" class="icon-administration">Dashboard</a>
+					</li>	
+					
+
+
+
+
+
+	
+		<li>
+			<a href="/entity/open.act?type=assetfactorycontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-assetfactory">Asset Factories</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=pageconfigurationsetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-pageconfigurationset">Configuration Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=metadatasetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-metadataset">Metadata Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=structureddatadefinitioncontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-structureddatadefinition">Data Definitions</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=contenttypecontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-contenttype">Content Types</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=workflowdefinitioncontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-workflowdefinition">Workflow Definitions</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=publishsetcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-publishset">Publish Sets</a>
+		</li>
+	
+	
+	
+		<li>
+			<a href="/entity/open.act?type=transportcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-transport">Transports</a>
+		</li>
+	
+	
+    
+        <li>
+            <a href="/entity/open.act?type=sitedestinationcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-destination">Destinations</a>
+        </li>
+    
+	
+	
+		<li>
+			<a href="/entity/open.act?type=connectorcontainer&amp;siteId=7f267f6dc0d3104d00a9cde2d099bc7e" class="icon-connector">Connectors</a>
+		</li>
+	
+				
+				</ul>
+			</div>
+		</div>
+	</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="search">
+    <form action="/searchsubmit.act" method="post">
+        <div>
+            <label for="quickQuery" title="Type your search term and press Enter - Access key 3" accesskey="3">Search</label> <input type="text" id="quickQuery" name="quickQuery" onkeyup="performAjaxSearch(this)"/>
+            <input type="hidden" name="mode" value="basic" />
+            <div id="typeAheadSearchResults"><div id="typeAheadSearchResultsDiv"></div></div> 
+            <script type="text/javascript">
+                var listAllText = "List all";
+                var searchResultsText = "Search Results";
+                var errorText =  "Error";
+                var closeText = "Close";
+            </script>           
+        </div>
+    </form>
+</div>
+</div>			
+			<div id="middle">
+				<div id="side-bar">
+					
+						
+							<ul id="tree" class="tree"><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/minus.png" onclick="toggleChildren(this, '7f268134c0d3104d00a9cde218021041', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f268134c0d3104d00a9cde218021041&amp;type=folder&amp;" class="icon-folder">Base Folder</a><a href="#" onclick="toggleContextDropDown(this, '7f268134c0d3104d00a9cde218021041', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span><ul><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '23ed3138c0d3104d0116b9e11d92c165', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=23ed3138c0d3104d0116b9e11d92c165&amp;type=folder&amp;" class="icon-folder">_assets</a><a href="#" onclick="toggleContextDropDown(this, '23ed3138c0d3104d0116b9e11d92c165', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '31b074b7c0d3104d00bbfa4c6e3c0ef3', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=31b074b7c0d3104d00bbfa4c6e3c0ef3&amp;type=folder&amp;" class="icon-folder">_blank</a><a href="#" onclick="toggleContextDropDown(this, '31b074b7c0d3104d00bbfa4c6e3c0ef3', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'b3fb69d8c0d3104d01af431c0d610cc7', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=b3fb69d8c0d3104d01af431c0d610cc7&amp;type=folder&amp;" class="icon-folder">_draft-advising</a><a href="#" onclick="toggleContextDropDown(this, 'b3fb69d8c0d3104d01af431c0d610cc7', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b236c0d3104d00a9cde2b437299e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b236c0d3104d00a9cde2b437299e&amp;type=folder&amp;" class="icon-folder">_inc</a><a href="#" onclick="toggleContextDropDown(this, '7f26b236c0d3104d00a9cde2b437299e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b1dcc0d3104d00a9cde238b1c9c8', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b1dcc0d3104d00a9cde238b1c9c8&amp;type=folder&amp;" class="icon-folder">_internal</a><a href="#" onclick="toggleContextDropDown(this, '7f26b1dcc0d3104d00a9cde238b1c9c8', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '70026da3c0d31a2700bad09428951454', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=70026da3c0d31a2700bad09428951454&amp;type=folder&amp;" class="icon-folder">about</a><a href="#" onclick="toggleContextDropDown(this, '70026da3c0d31a2700bad09428951454', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b15ec0d3104d00a9cde280af8206', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b15ec0d3104d00a9cde280af8206&amp;type=folder&amp;" class="icon-folder">academics</a><a href="#" onclick="toggleContextDropDown(this, '7f26b15ec0d3104d00a9cde280af8206', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '9adc0907c0d3104d01af431c01d3dc83', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9adc0907c0d3104d01af431c01d3dc83&amp;type=folder&amp;" class="icon-folder">academicstatement</a><a href="#" onclick="toggleContextDropDown(this, '9adc0907c0d3104d01af431c01d3dc83', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'f77d949dc0d3104d0005fd83ce5f5dac', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=f77d949dc0d3104d0005fd83ce5f5dac&amp;type=folder&amp;" class="icon-folder">activities</a><a href="#" onclick="toggleContextDropDown(this, 'f77d949dc0d3104d0005fd83ce5f5dac', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '47d152e6c0d3104d01af431c9b9ef924', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=47d152e6c0d3104d01af431c9b9ef924&amp;type=folder&amp;" class="icon-folder">ad-direct</a><a href="#" onclick="toggleContextDropDown(this, '47d152e6c0d3104d01af431c9b9ef924', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '15c2095ec0d3104d00136a8296c5bee6', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=15c2095ec0d3104d00136a8296c5bee6&amp;type=folder&amp;" class="icon-folder">advising</a><a href="#" onclick="toggleContextDropDown(this, '15c2095ec0d3104d00136a8296c5bee6', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '5b198b6dc0d3104d014de1c82d16f324', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=5b198b6dc0d3104d014de1c82d16f324&amp;type=folder&amp;" class="icon-folder">aglab</a><a href="#" onclick="toggleContextDropDown(this, '5b198b6dc0d3104d014de1c82d16f324', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '38d30918c0d3104d007c42fe0b8cb223', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=38d30918c0d3104d007c42fe0b8cb223&amp;type=folder&amp;" class="icon-folder">alumni</a><a href="#" onclick="toggleContextDropDown(this, '38d30918c0d3104d007c42fe0b8cb223', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6fd6eb99c0d3104d00e9aaf5e76035af', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6fd6eb99c0d3104d00e9aaf5e76035af&amp;type=folder&amp;" class="icon-folder">annualreport</a><a href="#" onclick="toggleContextDropDown(this, '6fd6eb99c0d3104d00e9aaf5e76035af', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '5978b453c0d3104d0084810785ca4c8c', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=5978b453c0d3104d0084810785ca4c8c&amp;type=folder&amp;" class="icon-folder">archives</a><a href="#" onclick="toggleContextDropDown(this, '5978b453c0d3104d0084810785ca4c8c', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'e533b675c0d3104d0116b9e1b7bee514', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e533b675c0d3104d0116b9e1b7bee514&amp;type=folder&amp;" class="icon-folder">beyond</a><a href="#" onclick="toggleContextDropDown(this, 'e533b675c0d3104d0116b9e1b7bee514', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '1cd73e18c0d3104d007b524c4db5c3b5', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=1cd73e18c0d3104d007b524c4db5c3b5&amp;type=folder&amp;" class="icon-folder">budget</a><a href="#" onclick="toggleContextDropDown(this, '1cd73e18c0d3104d007b524c4db5c3b5', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '9986c4d8c0d3104d011eaca2f02db865', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9986c4d8c0d3104d011eaca2f02db865&amp;type=folder&amp;" class="icon-folder">campaign</a><a href="#" onclick="toggleContextDropDown(this, '9986c4d8c0d3104d011eaca2f02db865', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b125c0d3104d00a9cde27b372372', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b125c0d3104d00a9cde27b372372&amp;type=folder&amp;" class="icon-folder">campuslife</a><a href="#" onclick="toggleContextDropDown(this, '7f26b125c0d3104d00a9cde27b372372', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '48be51aac0d3104d01459d2c96f608c4', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=48be51aac0d3104d01459d2c96f608c4&amp;type=folder&amp;" class="icon-folder">career</a><a href="#" onclick="toggleContextDropDown(this, '48be51aac0d3104d01459d2c96f608c4', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '9e329086c0d3104d00a9cde2f9014d9c', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9e329086c0d3104d00a9cde2f9014d9c&amp;type=folder&amp;" class="icon-folder">catalog</a><a href="#" onclick="toggleContextDropDown(this, '9e329086c0d3104d00a9cde2f9014d9c', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'be39bde8c0d3104d0003bf22adbf57ae', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=be39bde8c0d3104d0003bf22adbf57ae&amp;type=folder&amp;" class="icon-folder">ccam</a><a href="#" onclick="toggleContextDropDown(this, 'be39bde8c0d3104d0003bf22adbf57ae', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '2ec5ed08c0d3104d005d66339bb5a6a7', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2ec5ed08c0d3104d005d66339bb5a6a7&amp;type=folder&amp;" class="icon-folder">civicengagement</a><a href="#" onclick="toggleContextDropDown(this, '2ec5ed08c0d3104d005d66339bb5a6a7', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '925253b3c0d3104d00ba71acf988376e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=925253b3c0d3104d00ba71acf988376e&amp;type=folder&amp;" class="icon-folder">commute</a><a href="#" onclick="toggleContextDropDown(this, '925253b3c0d3104d00ba71acf988376e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '35dbc729c0d3104d0005fd8346f0e9a6', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=35dbc729c0d3104d0005fd8346f0e9a6&amp;type=folder&amp;" class="icon-folder">connect</a><a href="#" onclick="toggleContextDropDown(this, '35dbc729c0d3104d0005fd8346f0e9a6', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '104b5df3c0d3104d00a06c639bb60d37', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=104b5df3c0d3104d00a06c639bb60d37&amp;type=folder&amp;" class="icon-folder">copyright</a><a href="#" onclick="toggleContextDropDown(this, '104b5df3c0d3104d00a06c639bb60d37', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b193c0d3104d00a9cde287ec9a3f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b193c0d3104d00a9cde287ec9a3f&amp;type=folder&amp;" class="icon-folder">costs</a><a href="#" onclick="toggleContextDropDown(this, '7f26b193c0d3104d00a9cde287ec9a3f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '0040b5a2c0d3104d00b4216d564e1f1f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0040b5a2c0d3104d00b4216d564e1f1f&amp;type=folder&amp;" class="icon-folder">currentstudent</a><a href="#" onclick="toggleContextDropDown(this, '0040b5a2c0d3104d00b4216d564e1f1f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7ae6830dc0d3104d00bbfa4cec4f374e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7ae6830dc0d3104d00bbfa4cec4f374e&amp;type=folder&amp;" class="icon-folder">dining</a><a href="#" onclick="toggleContextDropDown(this, '7ae6830dc0d3104d00bbfa4cec4f374e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6677c0ecc0d3104d00bbfa4c2b51606e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6677c0ecc0d3104d00bbfa4c2b51606e&amp;type=folder&amp;" class="icon-folder">directory</a><a href="#" onclick="toggleContextDropDown(this, '6677c0ecc0d3104d00bbfa4c2b51606e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '2a36f07ac0d3104d0166c37e21266ad6', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2a36f07ac0d3104d0166c37e21266ad6&amp;type=folder&amp;" class="icon-folder">dmca</a><a href="#" onclick="toggleContextDropDown(this, '2a36f07ac0d3104d0166c37e21266ad6', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '862e5decc0d3104d007c42fece5356f9', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=862e5decc0d3104d007c42fece5356f9&amp;type=folder&amp;" class="icon-folder">elearningforeducators</a><a href="#" onclick="toggleContextDropDown(this, '862e5decc0d3104d007c42fece5356f9', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '4f2b8173c0d3104d005a41ecc78acf12', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=4f2b8173c0d3104d005a41ecc78acf12&amp;type=folder&amp;" class="icon-folder">electronicmedia</a><a href="#" onclick="toggleContextDropDown(this, '4f2b8173c0d3104d005a41ecc78acf12', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '13d9dc85c0d3104d00a06c63275c06d7', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=13d9dc85c0d3104d00a06c63275c06d7&amp;type=folder&amp;" class="icon-folder">emergencyresponse</a><a href="#" onclick="toggleContextDropDown(this, '13d9dc85c0d3104d00a06c63275c06d7', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '0f4e84bfc0d3104d007c42fe52e0bea3', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0f4e84bfc0d3104d007c42fe52e0bea3&amp;type=folder&amp;" class="icon-folder">employment</a><a href="#" onclick="toggleContextDropDown(this, '0f4e84bfc0d3104d007c42fe52e0bea3', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '5551dc87c0d3104d014de1c87b8c3915', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=5551dc87c0d3104d014de1c87b8c3915&amp;type=folder&amp;" class="icon-folder">equalopportunity</a><a href="#" onclick="toggleContextDropDown(this, '5551dc87c0d3104d014de1c87b8c3915', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'd9f77e7cc0d3104d01596ee0dfb283ef', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=d9f77e7cc0d3104d01596ee0dfb283ef&amp;type=folder&amp;" class="icon-folder">equity</a><a href="#" onclick="toggleContextDropDown(this, 'd9f77e7cc0d3104d01596ee0dfb283ef', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'fbba3116c0d3104d007c42fedabf6a28', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fbba3116c0d3104d007c42fedabf6a28&amp;type=folder&amp;" class="icon-folder">evaluations</a><a href="#" onclick="toggleContextDropDown(this, 'fbba3116c0d3104d007c42fedabf6a28', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '65ecf7dac0d3104d007c42fe47a75c40', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=65ecf7dac0d3104d007c42fe47a75c40&amp;type=folder&amp;" class="icon-folder">eveningweekend</a><a href="#" onclick="toggleContextDropDown(this, '65ecf7dac0d3104d007c42fe47a75c40', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '26d252abc0d3104d0005fd83b3812615', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=26d252abc0d3104d0005fd83b3812615&amp;type=folder&amp;" class="icon-folder">events</a><a href="#" onclick="toggleContextDropDown(this, '26d252abc0d3104d0005fd83b3812615', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '8b9c3311c0d3104d0002c8619c758eda', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=8b9c3311c0d3104d0002c8619c758eda&amp;type=folder&amp;" class="icon-folder">faculty</a><a href="#" onclick="toggleContextDropDown(this, '8b9c3311c0d3104d0002c8619c758eda', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '0042614fc0d3104d00b4216d3c036724', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0042614fc0d3104d00b4216d3c036724&amp;type=folder&amp;" class="icon-folder">facultystaff</a><a href="#" onclick="toggleContextDropDown(this, '0042614fc0d3104d00b4216d3c036724', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '8a4afd2ac0d3104d007880e8cbe1aaec', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=8a4afd2ac0d3104d007880e8cbe1aaec&amp;type=folder&amp;" class="icon-folder">financialaid</a><a href="#" onclick="toggleContextDropDown(this, '8a4afd2ac0d3104d007880e8cbe1aaec', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/minus.png" onclick="toggleChildren(this, 'fc9c7e70c0d3104d00a06c6326461dd6', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fc9c7e70c0d3104d00a06c6326461dd6&amp;type=folder&amp;" class="icon-folder">financialservices</a><a href="#" onclick="toggleContextDropDown(this, 'fc9c7e70c0d3104d00a06c6326461dd6', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span><ul><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '62c4087dc0d3104d00db89c2dd9de3b8', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=62c4087dc0d3104d00db89c2dd9de3b8&amp;type=folder&amp;" class="icon-folder">_archive</a><a href="#" onclick="toggleContextDropDown(this, '62c4087dc0d3104d00db89c2dd9de3b8', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '2661aadfc0d3104d00a06c638d3e3cad', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2661aadfc0d3104d00a06c638d3e3cad&amp;type=folder&amp;" class="icon-folder">docs</a><a href="#" onclick="toggleContextDropDown(this, '2661aadfc0d3104d00a06c638d3e3cad', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'fc9c7eafc0d3104d00a06c63a4a03c15', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fc9c7eafc0d3104d00a06c63a4a03c15&amp;type=folder&amp;" class="icon-folder">images</a><a href="#" onclick="toggleContextDropDown(this, 'fc9c7eafc0d3104d00a06c63a4a03c15', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/minus.png" onclick="toggleChildren(this, '587707f0c0d3104d00db89c21fd56af1', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=587707f0c0d3104d00db89c21fd56af1&amp;type=folder&amp;" class="icon-folder">tuition-csv</a><a href="#" onclick="toggleContextDropDown(this, '587707f0c0d3104d00db89c21fd56af1', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span><ul><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file&amp;" id="highlight" class="icon-file"><span class=" highlight">1516.csv</span></a><a href="#" onclick="toggleContextDropDown(this, '5878ccb1c0d3104d00db89c2d29ba2ed', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=58788ad5c0d3104d00db89c219e9e5e3&amp;type=file&amp;" class="icon-file">1617.csv</a><a href="#" onclick="toggleContextDropDown(this, '58788ad5c0d3104d00db89c219e9e5e3', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li></ul></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fc9c7f3fc0d3104d00a06c63bc99f03d&amp;type=block&amp;" class="icon-block_STRUCTUREDDATA">_contact</a><a href="#" onclick="toggleContextDropDown(this, 'fc9c7f3fc0d3104d00a06c63bc99f03d', 'block');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fc9c7f7fc0d3104d00a06c63cadbcc7d&amp;type=block&amp;" class="icon-block_STRUCTUREDDATA">_info</a><a href="#" onclick="toggleContextDropDown(this, 'fc9c7f7fc0d3104d00a06c63cadbcc7d', 'block');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a588700fc0d3104d00db89c229d43312&amp;type=page&amp;" class="icon-page">billing</a><a href="#" onclick="toggleContextDropDown(this, 'a588700fc0d3104d00db89c229d43312', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e9d87f1cc0d3104d014de1c85ca333bf&amp;type=page&amp;" class="icon-page">deadlines</a><a href="#" onclick="toggleContextDropDown(this, 'e9d87f1cc0d3104d014de1c85ca333bf', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=aff27642c0d3104d00db89c2808397e8&amp;type=page&amp;" class="icon-page">fees</a><a href="#" onclick="toggleContextDropDown(this, 'aff27642c0d3104d00db89c2808397e8', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fc9c7ef9c0d3104d00a06c63e923d7cf&amp;type=page&amp;" class="icon-page">home</a><a href="#" onclick="toggleContextDropDown(this, 'fc9c7ef9c0d3104d00a06c63e923d7cf', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=48e0d9c4c0d3104d00e0e49fcf7cf50c&amp;type=page&amp;" class="icon-page">home1</a><a href="#" onclick="toggleContextDropDown(this, '48e0d9c4c0d3104d00e0e49fcf7cf50c', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a5b415ccc0d3104d00db89c23dfaae34&amp;type=page&amp;" class="icon-page">payments</a><a href="#" onclick="toggleContextDropDown(this, 'a5b415ccc0d3104d00db89c23dfaae34', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a575631ec0d3104d00db89c2b8aa4344&amp;type=page&amp;" class="icon-page">perkins</a><a href="#" onclick="toggleContextDropDown(this, 'a575631ec0d3104d00db89c2b8aa4344', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=c9549e3fc0d3104d00db89c2a9484d99&amp;type=page&amp;" class="icon-page">prepayment</a><a href="#" onclick="toggleContextDropDown(this, 'c9549e3fc0d3104d00db89c2a9484d99', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=62c3c640c0d3104d00db89c29e08b0b5&amp;type=page&amp;" class="icon-page">tuition</a><a href="#" onclick="toggleContextDropDown(this, '62c3c640c0d3104d00db89c29e08b0b5', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7da8c0a6c0d3104d005ab32809eca65c&amp;type=page&amp;" class="icon-page">tuition-2016-2017</a><a href="#" onclick="toggleContextDropDown(this, '7da8c0a6c0d3104d005ab32809eca65c', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7da5e807c0d3104d005ab3287ce12430&amp;type=page&amp;" class="icon-page">tuition-summer2016</a><a href="#" onclick="toggleContextDropDown(this, '7da5e807c0d3104d005ab3287ce12430', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=ed4c3397c0d3104d00db89c25a403b40&amp;type=page&amp;" class="icon-page">tuitionoverview</a><a href="#" onclick="toggleContextDropDown(this, 'ed4c3397c0d3104d00db89c25a403b40', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li></ul></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'ccee5fb0c0d3104d01f4c3466f54ec7c', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=ccee5fb0c0d3104d01f4c3466f54ec7c&amp;type=folder&amp;" class="icon-folder">foundation</a><a href="#" onclick="toggleContextDropDown(this, 'ccee5fb0c0d3104d01f4c3466f54ec7c', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'b256a33cc0d3104d0116b9e157544c34', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=b256a33cc0d3104d0116b9e157544c34&amp;type=folder&amp;" class="icon-folder">gallery</a><a href="#" onclick="toggleContextDropDown(this, 'b256a33cc0d3104d0116b9e157544c34', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '0a8b1df7c0d3104d00a06c6305676e04', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0a8b1df7c0d3104d00a06c6305676e04&amp;type=folder&amp;" class="icon-folder">gateways</a><a href="#" onclick="toggleContextDropDown(this, '0a8b1df7c0d3104d00a06c6305676e04', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b2a8c0d3104d00a9cde259e4284b', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b2a8c0d3104d00a9cde259e4284b&amp;type=folder&amp;" class="icon-folder">geoduck</a><a href="#" onclick="toggleContextDropDown(this, '7f26b2a8c0d3104d00a9cde259e4284b', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'bea70981c0d3104d0005fd839a5e27af', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=bea70981c0d3104d0005fd839a5e27af&amp;type=folder&amp;" class="icon-folder">give</a><a href="#" onclick="toggleContextDropDown(this, 'bea70981c0d3104d0005fd839a5e27af', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'd265e161c0d3104d0003bf22b162491f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=d265e161c0d3104d0003bf22b162491f&amp;type=folder&amp;" class="icon-folder">govrelations</a><a href="#" onclick="toggleContextDropDown(this, 'd265e161c0d3104d0003bf22b162491f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '9449c72ac0d3104d0003bf2266d17c93', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9449c72ac0d3104d0003bf2266d17c93&amp;type=folder&amp;" class="icon-folder">graduatestudies</a><a href="#" onclick="toggleContextDropDown(this, '9449c72ac0d3104d0003bf2266d17c93', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '05aa5d98c0d3104d00bbfa4c59632bb2', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=05aa5d98c0d3104d00bbfa4c59632bb2&amp;type=folder&amp;" class="icon-folder">graduation</a><a href="#" onclick="toggleContextDropDown(this, '05aa5d98c0d3104d00bbfa4c59632bb2', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7e510c36c0d3104d00bbfa4cc2a6ffea', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7e510c36c0d3104d00bbfa4cc2a6ffea&amp;type=folder&amp;" class="icon-folder">housing</a><a href="#" onclick="toggleContextDropDown(this, '7e510c36c0d3104d00bbfa4cc2a6ffea', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '1f23c2bbc0d3104d007c42fe99208255', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=1f23c2bbc0d3104d007c42fe99208255&amp;type=folder&amp;" class="icon-folder">humanresources</a><a href="#" onclick="toggleContextDropDown(this, '1f23c2bbc0d3104d007c42fe99208255', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '009fcf8dc0d3104d01af431cd0f6479d', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=009fcf8dc0d3104d01af431cd0f6479d&amp;type=folder&amp;" class="icon-folder">instrumentation</a><a href="#" onclick="toggleContextDropDown(this, '009fcf8dc0d3104d01af431cd0f6479d', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '760e9938c0d3104d0066f9879122f542', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=760e9938c0d3104d0066f9879122f542&amp;type=folder&amp;" class="icon-folder">international</a><a href="#" onclick="toggleContextDropDown(this, '760e9938c0d3104d0066f9879122f542', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '70a3b62cc0d3104d011eaca267ab3092', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=70a3b62cc0d3104d011eaca267ab3092&amp;type=folder&amp;" class="icon-folder">library</a><a href="#" onclick="toggleContextDropDown(this, '70a3b62cc0d3104d011eaca267ab3092', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '2938601ec0d3104d00e4c6d4e6ed75e8', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2938601ec0d3104d00e4c6d4e6ed75e8&amp;type=folder&amp;" class="icon-folder">magazine</a><a href="#" onclick="toggleContextDropDown(this, '2938601ec0d3104d00e4c6d4e6ed75e8', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'e7cdf3d2c0d3104d01f4a741687df50d', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e7cdf3d2c0d3104d01f4a741687df50d&amp;type=folder&amp;" class="icon-folder">marketing</a><a href="#" onclick="toggleContextDropDown(this, 'e7cdf3d2c0d3104d01f4a741687df50d', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '19313ed5c0d3104d007c42fea34fbd12', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=19313ed5c0d3104d007c42fea34fbd12&amp;type=folder&amp;" class="icon-folder">medialoan</a><a href="#" onclick="toggleContextDropDown(this, '19313ed5c0d3104d007c42fea34fbd12', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6dd2785dc0d3104d0005fd837dafd34e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6dd2785dc0d3104d0005fd837dafd34e&amp;type=folder&amp;" class="icon-folder">mediaservices</a><a href="#" onclick="toggleContextDropDown(this, '6dd2785dc0d3104d0005fd837dafd34e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'fdb0bb52c0d3104d01f519aed0381c5b', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=fdb0bb52c0d3104d01f519aed0381c5b&amp;type=folder&amp;" class="icon-folder">mentoringdays</a><a href="#" onclick="toggleContextDropDown(this, 'fdb0bb52c0d3104d01f519aed0381c5b', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'd2c07157c0d3104d0003bf220b5cd35e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=d2c07157c0d3104d0003bf220b5cd35e&amp;type=folder&amp;" class="icon-folder">mes</a><a href="#" onclick="toggleContextDropDown(this, 'd2c07157c0d3104d0003bf220b5cd35e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'b2e64217c0d3104d007c42fe30c05148', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=b2e64217c0d3104d007c42fe30c05148&amp;type=folder&amp;" class="icon-folder">mit</a><a href="#" onclick="toggleContextDropDown(this, 'b2e64217c0d3104d007c42fe30c05148', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f87fbb2c0d3104d01af431ce4471f57', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f87fbb2c0d3104d01af431ce4471f57&amp;type=folder&amp;" class="icon-folder">motorpool</a><a href="#" onclick="toggleContextDropDown(this, '7f87fbb2c0d3104d01af431ce4471f57', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'ffdccc3dc0d3104d00bbfa4c1feda743', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=ffdccc3dc0d3104d00bbfa4c1feda743&amp;type=folder&amp;" class="icon-folder">mpa</a><a href="#" onclick="toggleContextDropDown(this, 'ffdccc3dc0d3104d00bbfa4c1feda743', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '66d514a6c0d3104d0003bf226dfc02fd', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=66d514a6c0d3104d0003bf226dfc02fd&amp;type=folder&amp;" class="icon-folder">native</a><a href="#" onclick="toggleContextDropDown(this, '66d514a6c0d3104d0003bf226dfc02fd', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'eb459aa9c0d3104d00b4216d82c23a0e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=eb459aa9c0d3104d00b4216d82c23a0e&amp;type=folder&amp;" class="icon-folder">news</a><a href="#" onclick="toggleContextDropDown(this, 'eb459aa9c0d3104d00b4216d82c23a0e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '26d343d3c0d3104d0005fd834b93c16f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=26d343d3c0d3104d0005fd834b93c16f&amp;type=folder&amp;" class="icon-folder">orientation</a><a href="#" onclick="toggleContextDropDown(this, '26d343d3c0d3104d0005fd834b93c16f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '38f45287c0d3104d01f4c3469a8b2d44', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=38f45287c0d3104d01f4c3469a8b2d44&amp;type=folder&amp;" class="icon-folder">payroll</a><a href="#" onclick="toggleContextDropDown(this, '38f45287c0d3104d01f4c3469a8b2d44', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6cb98cbfc0d3104d00a06c63f83e00e4', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6cb98cbfc0d3104d00a06c63f83e00e4&amp;type=folder&amp;" class="icon-folder">policeservices</a><a href="#" onclick="toggleContextDropDown(this, '6cb98cbfc0d3104d00a06c63f83e00e4', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'ffe4e9b0c0d3104d0116b9e184917f54', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=ffe4e9b0c0d3104d0116b9e184917f54&amp;type=folder&amp;" class="icon-folder">president</a><a href="#" onclick="toggleContextDropDown(this, 'ffe4e9b0c0d3104d0116b9e184917f54', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'd2a19bb6c0d3104d0003bf223ce67ca4', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=d2a19bb6c0d3104d0003bf223ce67ca4&amp;type=folder&amp;" class="icon-folder">press</a><a href="#" onclick="toggleContextDropDown(this, 'd2a19bb6c0d3104d0003bf223ce67ca4', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'cac4cdb9c0d3104d014de1c8288dccd0', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=cac4cdb9c0d3104d014de1c8288dccd0&amp;type=folder&amp;" class="icon-folder">provostsearch</a><a href="#" onclick="toggleContextDropDown(this, 'cac4cdb9c0d3104d014de1c8288dccd0', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '0d273049c0d3104d00bb6b37fc463789', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0d273049c0d3104d00bb6b37fc463789&amp;type=folder&amp;" class="icon-folder">publicrecords</a><a href="#" onclick="toggleContextDropDown(this, '0d273049c0d3104d00bb6b37fc463789', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6ef97d9ac0d3104d00e4c6d46085e9c8', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6ef97d9ac0d3104d00e4c6d46085e9c8&amp;type=folder&amp;" class="icon-folder">purchasing</a><a href="#" onclick="toggleContextDropDown(this, '6ef97d9ac0d3104d00e4c6d46085e9c8', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '86c21e98c0d3104d008481071da0aac7', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=86c21e98c0d3104d008481071da0aac7&amp;type=folder&amp;" class="icon-folder">recreation</a><a href="#" onclick="toggleContextDropDown(this, '86c21e98c0d3104d008481071da0aac7', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'a700d619c0d3104d00ba71accd7b195c', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a700d619c0d3104d00ba71accd7b195c&amp;type=folder&amp;" class="icon-folder">registration</a><a href="#" onclick="toggleContextDropDown(this, 'a700d619c0d3104d00ba71accd7b195c', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '26d38a45c0d3104d0005fd8396a8a38f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=26d38a45c0d3104d0005fd8396a8a38f&amp;type=folder&amp;" class="icon-folder">return</a><a href="#" onclick="toggleContextDropDown(this, '26d38a45c0d3104d0005fd8396a8a38f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'dc891d11c0d3104d00a06c63afa1b883', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=dc891d11c0d3104d00a06c63afa1b883&amp;type=folder&amp;" class="icon-folder">salt</a><a href="#" onclick="toggleContextDropDown(this, 'dc891d11c0d3104d00a06c63afa1b883', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7de94336c0d3104d0084810729a7ed5f', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7de94336c0d3104d0084810729a7ed5f&amp;type=folder&amp;" class="icon-folder">schedules</a><a href="#" onclick="toggleContextDropDown(this, '7de94336c0d3104d0084810729a7ed5f', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '28bfc8fbc0d3104d00a2bfd5778b4e5d', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=28bfc8fbc0d3104d00a2bfd5778b4e5d&amp;type=folder&amp;" class="icon-folder">scholarships</a><a href="#" onclick="toggleContextDropDown(this, '28bfc8fbc0d3104d00a2bfd5778b4e5d', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'a07e1ff2c0d3104d00a06c632143eccc', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a07e1ff2c0d3104d00a06c632143eccc&amp;type=folder&amp;" class="icon-folder">sciencecarnival</a><a href="#" onclick="toggleContextDropDown(this, 'a07e1ff2c0d3104d00a06c632143eccc', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '83411889c0d3104d00ba71ac7b6bffcc', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=83411889c0d3104d00ba71ac7b6bffcc&amp;type=folder&amp;" class="icon-folder">sciencesupport</a><a href="#" onclick="toggleContextDropDown(this, '83411889c0d3104d00ba71ac7b6bffcc', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '3f6ce7cdc0d3104d01904ab4ed138d04', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=3f6ce7cdc0d3104d01904ab4ed138d04&amp;type=folder&amp;" class="icon-folder">search</a><a href="#" onclick="toggleContextDropDown(this, '3f6ce7cdc0d3104d01904ab4ed138d04', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '5680fb10c0d3104d007c42fe40a36aed', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=5680fb10c0d3104d007c42fe40a36aed&amp;type=folder&amp;" class="icon-folder">strategicplan</a><a href="#" onclick="toggleContextDropDown(this, '5680fb10c0d3104d007c42fe40a36aed', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '6625a77ec0d3104d01a5049a670a2fc7', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=6625a77ec0d3104d01a5049a670a2fc7&amp;type=folder&amp;" class="icon-folder">streams</a><a href="#" onclick="toggleContextDropDown(this, '6625a77ec0d3104d01a5049a670a2fc7', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b2dac0d3104d00a9cde2d4cc572e', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b2dac0d3104d00a9cde2d4cc572e&amp;type=folder&amp;" class="icon-folder">studies</a><a href="#" onclick="toggleContextDropDown(this, '7f26b2dac0d3104d00a9cde2d4cc572e', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7f26b0b8c0d3104d00a9cde24c94e715', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b0b8c0d3104d00a9cde24c94e715&amp;type=folder&amp;" class="icon-folder">styleguide</a><a href="#" onclick="toggleContextDropDown(this, '7f26b0b8c0d3104d00a9cde24c94e715', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '494675a8c0d3104d007880e802b18ca1', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=494675a8c0d3104d007880e802b18ca1&amp;type=folder&amp;" class="icon-folder">summer</a><a href="#" onclick="toggleContextDropDown(this, '494675a8c0d3104d007880e802b18ca1', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '32901ff1c0d3104d00bbfa4c7ea6f2eb', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=32901ff1c0d3104d00bbfa4c7ea6f2eb&amp;type=folder&amp;" class="icon-folder">surf</a><a href="#" onclick="toggleContextDropDown(this, '32901ff1c0d3104d00bbfa4c7ea6f2eb', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '25a0e6cac0d3104d00e4c6d4b4bd7a32', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=25a0e6cac0d3104d00e4c6d4b4bd7a32&amp;type=folder&amp;" class="icon-folder">sustainableinfrastructure</a><a href="#" onclick="toggleContextDropDown(this, '25a0e6cac0d3104d00e4c6d4b4bd7a32', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '7e0d3326c0d3104d00ba71ac2bd2a547', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7e0d3326c0d3104d00ba71ac2bd2a547&amp;type=folder&amp;" class="icon-folder">tacoma</a><a href="#" onclick="toggleContextDropDown(this, '7e0d3326c0d3104d00ba71ac2bd2a547', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'e1919b11c0d3104d011eaca2df538b89', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e1919b11c0d3104d011eaca2df538b89&amp;type=folder&amp;" class="icon-folder">technology</a><a href="#" onclick="toggleContextDropDown(this, 'e1919b11c0d3104d011eaca2df538b89', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '286d1007c0d3104d00bbfa4cd4250293', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=286d1007c0d3104d00bbfa4cd4250293&amp;type=folder&amp;" class="icon-folder">test</a><a href="#" onclick="toggleContextDropDown(this, '286d1007c0d3104d00bbfa4cd4250293', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'a2f0bfabc0d3104d01af431ccee23867', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=a2f0bfabc0d3104d01af431ccee23867&amp;type=folder&amp;" class="icon-folder">titleix</a><a href="#" onclick="toggleContextDropDown(this, 'a2f0bfabc0d3104d01af431ccee23867', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '30522ac6c0d3104d0113ea1a163624dd', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=30522ac6c0d3104d0113ea1a163624dd&amp;type=folder&amp;" class="icon-folder">tour</a><a href="#" onclick="toggleContextDropDown(this, '30522ac6c0d3104d0113ea1a163624dd', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '975d3dc5c0d3104d01596ee09ec4ddd1', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=975d3dc5c0d3104d01596ee09ec4ddd1&amp;type=folder&amp;" class="icon-folder">tqc</a><a href="#" onclick="toggleContextDropDown(this, '975d3dc5c0d3104d01596ee09ec4ddd1', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '2d56e6bec0d3104d00bbfa4c96642da5', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2d56e6bec0d3104d00bbfa4c96642da5&amp;type=folder&amp;" class="icon-folder">veterans</a><a href="#" onclick="toggleContextDropDown(this, '2d56e6bec0d3104d00bbfa4c96642da5', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, 'cca71748c0d3104d0003bf220eaf8ab0', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=cca71748c0d3104d0003bf220eaf8ab0&amp;type=folder&amp;" class="icon-folder">wacla</a><a href="#" onclick="toggleContextDropDown(this, 'cca71748c0d3104d0003bf220eaf8ab0', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="container-node"><img alt="" class="nav-icon" src="/css/icons/plus.png" onclick="toggleChildren(this, '76988a92c0d31a27018db7ce72894365', 'folder', '', 'false'); return false;"/><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=76988a92c0d31a27018db7ce72894365&amp;type=folder&amp;" class="icon-folder">webresources</a><a href="#" onclick="toggleContextDropDown(this, '76988a92c0d31a27018db7ce72894365', 'folder');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=f2a69833c0d3104d0005fd8383c75697&amp;type=page&amp;" class="icon-page">404</a><a href="#" onclick="toggleContextDropDown(this, 'f2a69833c0d3104d0005fd8383c75697', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=8174cea3c0d3104d0005fd83b090ab8e&amp;type=block&amp;" class="icon-block_INDEX">all-the-content</a><a href="#" onclick="toggleContextDropDown(this, '8174cea3c0d3104d0005fd83b090ab8e', 'block');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=99ef4339c0d3104d0003bf22b583ae3a&amp;type=file&amp;" class="icon-file">apple-pinned-tab.svg</a><a href="#" onclick="toggleContextDropDown(this, '99ef4339c0d3104d0003bf22b583ae3a', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=14046c04c0d3104d01f519aea8b368c2&amp;type=file&amp;" class="icon-file">apple-touch-icon-114-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '14046c04c0d3104d01f519aea8b368c2', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9a07de4bc0d3104d00a9cde244bb14ed&amp;type=file&amp;" class="icon-file">apple-touch-icon-120-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '9a07de4bc0d3104d00a9cde244bb14ed', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=1404bb2dc0d3104d01f519ae6e51cb3d&amp;type=file&amp;" class="icon-file">apple-touch-icon-144-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '1404bb2dc0d3104d01f519ae6e51cb3d', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9a096ec2c0d3104d00a9cde2dc8de01c&amp;type=file&amp;" class="icon-file">apple-touch-icon-152-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '9a096ec2c0d3104d00a9cde2dc8de01c', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=140428efc0d3104d01f519aecb2b8ec5&amp;type=file&amp;" class="icon-file">apple-touch-icon-72-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '140428efc0d3104d01f519aecb2b8ec5', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9a070f78c0d3104d00a9cde2783096a0&amp;type=file&amp;" class="icon-file">apple-touch-icon-76-precomposed.png</a><a href="#" onclick="toggleContextDropDown(this, '9a070f78c0d3104d00a9cde2783096a0', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec4bcc0d3104d007c42fed4861e27&amp;type=file&amp;" class="icon-file">browserconfig.xml</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec4bcc0d3104d007c42fed4861e27', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=450f120cc0d3104d01a388913e2c9856&amp;type=page&amp;" class="icon-page">directories</a><a href="#" onclick="toggleContextDropDown(this, '450f120cc0d3104d01a388913e2c9856', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9ec8761cc0d3104d007c42fe01b42265&amp;type=file&amp;" class="icon-file">favicon-16.png</a><a href="#" onclick="toggleContextDropDown(this, '9ec8761cc0d3104d007c42fe01b42265', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9ec8768fc0d3104d007c42fe0ffc43b2&amp;type=file&amp;" class="icon-file">favicon-24.png</a><a href="#" onclick="toggleContextDropDown(this, '9ec8768fc0d3104d007c42fe0ffc43b2', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9ec876d7c0d3104d007c42feb1b8ee95&amp;type=file&amp;" class="icon-file">favicon-32.png</a><a href="#" onclick="toggleContextDropDown(this, '9ec876d7c0d3104d007c42feb1b8ee95', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9ec8772cc0d3104d007c42fe439bc802&amp;type=file&amp;" class="icon-file">favicon-64.png</a><a href="#" onclick="toggleContextDropDown(this, '9ec8772cc0d3104d007c42fe439bc802', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=68980e0fc0d3104d0154c72cd1be7b6d&amp;type=file&amp;" class="icon-file">favicon.ico</a><a href="#" onclick="toggleContextDropDown(this, '68980e0fc0d3104d0154c72cd1be7b6d', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=014367fac0d3104d01f4a74175ea067d&amp;type=file&amp;" class="icon-file">favicon.png</a><a href="#" onclick="toggleContextDropDown(this, '014367fac0d3104d01f4a74175ea067d', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9a38ee36c0d3104d0003bf22d490b414&amp;type=file&amp;" class="icon-file">favicon.svg</a><a href="#" onclick="toggleContextDropDown(this, '9a38ee36c0d3104d0003bf22d490b414', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0e3b4d51c0d3104d005a41ecb1708277&amp;type=page&amp;" class="icon-page">home</a><a href="#" onclick="toggleContextDropDown(this, '0e3b4d51c0d3104d005a41ecb1708277', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7d286f44c0d3104d00a06c63ba75f957&amp;type=page&amp;" class="icon-page">home-grad</a><a href="#" onclick="toggleContextDropDown(this, '7d286f44c0d3104d00a06c63ba75f957', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=ed83a6a1c0d3104d00db89c2f5460541&amp;type=page&amp;" class="icon-page">home-inauguration</a><a href="#" onclick="toggleContextDropDown(this, 'ed83a6a1c0d3104d00db89c2f5460541', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=eff94989c0d3104d005a41eca0dbcf23&amp;type=page&amp;" class="icon-page">home-new</a><a href="#" onclick="toggleContextDropDown(this, 'eff94989c0d3104d005a41eca0dbcf23', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=0e3a6bd1c0d3104d005a41ec21d442e2&amp;type=page&amp;" class="icon-page">home-old</a><a href="#" onclick="toggleContextDropDown(this, '0e3a6bd1c0d3104d005a41ec21d442e2', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=e25670fec0d3104d0003bf22e9eaee1f&amp;type=page&amp;" class="icon-page">home-orientation</a><a href="#" onclick="toggleContextDropDown(this, 'e25670fec0d3104d0003bf22e9eaee1f', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=223c97f9c0d3104d005d6633576e4cd1&amp;type=page&amp;" class="icon-page">home-preview-day</a><a href="#" onclick="toggleContextDropDown(this, '223c97f9c0d3104d005d6633576e4cd1', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=2b965164c0d3104d00a06c639acf2847&amp;type=page&amp;" class="icon-page">home-svg-fun</a><a href="#" onclick="toggleContextDropDown(this, '2b965164c0d3104d00a06c639acf2847', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=86bf0a04c0d3104d00848107e219b9f0&amp;type=page&amp;" class="icon-page">home-svg-slogan</a><a href="#" onclick="toggleContextDropDown(this, '86bf0a04c0d3104d00848107e219b9f0', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=208c05aac0d3104d0003bf222b3cdbb3&amp;type=page&amp;" class="icon-page">home_page_draft</a><a href="#" onclick="toggleContextDropDown(this, '208c05aac0d3104d0003bf222b3cdbb3', 'page');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec530c0d3104d007c42fe50769ecd&amp;type=file&amp;" class="icon-file">mstile-144x144.png</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec530c0d3104d007c42fe50769ecd', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec5a0c0d3104d007c42feba593f4f&amp;type=file&amp;" class="icon-file">mstile-150x150.png</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec5a0c0d3104d007c42feba593f4f', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec61fc0d3104d007c42fe29175d7c&amp;type=file&amp;" class="icon-file">mstile-310x150.png</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec61fc0d3104d007c42fe29175d7c', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec6a9c0d3104d007c42fe4e6a34c9&amp;type=file&amp;" class="icon-file">mstile-310x310.png</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec6a9c0d3104d007c42fe4e6a34c9', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9f0ec702c0d3104d007c42fe785c143f&amp;type=file&amp;" class="icon-file">mstile-70x70.png</a><a href="#" onclick="toggleContextDropDown(this, '9f0ec702c0d3104d007c42fe785c143f', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=67da7fbbc0d3104d0154c72c4e37b396&amp;type=file&amp;" class="icon-file">robots.txt</a><a href="#" onclick="toggleContextDropDown(this, '67da7fbbc0d3104d0154c72c4e37b396', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li><li class="node"><span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=9399a279c0d3104d008481074242a29b&amp;type=file&amp;" class="icon-file">site-icon.png</a><a href="#" onclick="toggleContextDropDown(this, '9399a279c0d3104d008481074242a29b', 'file');" class="icon-context-drop-down-arrow">&#160;</a></span></li></ul></li></ul>
+						
+						
+						
+						
+					
+				</div>
+				<div id="main-wrapper">
+					
+
+
+
+					
+					<div id="show-hide"><a href="#" title="Toggle Side Bar"></a></div>
+					
+					<div id="main">
+						<h1>
+							<span id="help">
+								
+		
+		
+		<a href="http://hannonhill.com/kb?id=1024&amp;version=VERSION" onclick="return openAndFocus(this.href, 'contextual_help');">Learn More</a>
+	
+	
+	
+							</span>
+							
+		<!-- if there is a DOM present use the name of the DOM's entity type -->
+		
+			<span class="icon-file" >
+				<a href="/entity/open.act?id=7f268134c0d3104d00a9cde218021041&amp;type=folder">/</a><a href="/entity/open.act?id=fc9c7e70c0d3104d00a06c6326461dd6&amp;type=folder">financialservices</a>/<a href="/entity/open.act?id=587707f0c0d3104d00db89c21fd56af1&amp;type=folder">tuition-csv</a>/<a href="/entity/open.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file">1516.csv</a>						 
+			</span>
+		
+		<!-- else use the "type" parameter from the requesting URL -->
+		
+	
+						</h1>
+						
+		
+		
+<div id="tabs">
+<ul>
+
+	
+		<li class="selected">
+			<a href="/entity/open.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="v"><em>V</em>iew</a>
+		</li>
+	
+		<li>
+			<a href="/entity/edit.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="e"><em>E</em>dit</a>
+		</li>
+	
+		<li>
+			<a href="/entity/move.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="m"><em>M</em>ove/Rename</a>
+		</li>
+	
+		<li>
+			<a href="/entity/copy.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="y">Cop<em>y</em></a>
+		</li>
+	
+		<li>
+			<a href="/entity/publish.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="p"><em>P</em>ublish</a>
+		</li>
+	
+
+	
+	
+	
+		
+	
+		<li>
+			<a href="#" onclick="toggleDisplay('advanced-links', this); return false">More <img src="/css/images/arrow-right-dark.png" class="icon" alt="Right arrow" /></a>
+			<div id="advanced-links-holder">
+				<ul id="advanced-links" style="display: none;">
+					
+						<li>
+							<a href="/entity/delete.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="d"><em>D</em>elete</a>
+						</li>
+					
+						<li>
+							<a href="/entity/access.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="c">A<em>c</em>cess</a>
+						</li>
+					
+						<li>
+							<a href="/entity/audit.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="u">A<em>u</em>dits</a>
+						</li>
+					
+						<li>
+							<a href="/entity/reference.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="f">Re<em>f</em>erence</a>
+						</li>
+					
+						<li>
+							<a href="/entity/versions.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file" accesskey="r">Ve<em>r</em>sions</a>
+						</li>
+						
+				</ul>
+			</div>
+		</li>
+	
+</ul>
+</div>
+
+	
+	
+						
+		
+		
+
+	
+
+<div id="panes">
+	<ul>
+		
+		
+			<li  ><a href="#">
+				Content
+			</a></li>
+		
+		
+			<li  ><a href="#">
+				Properties
+			</a></li>
+		
+		
+			
+				<li  ><a href="#">
+					Lock
+				</a></li>
+			
+		
+		
+	
+	</ul>
+</div>
+	
+	
+						<div id="center-stage">
+							
+		
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				
+				
+				
+				
+				
+		
+			
+		
+			
+			
+			
+							
+			
+				
+			
+			
+			
+		<div class="pane">
+
+			<div id="outputs">
+				<ul>
+					<li>
+						<a href="/render/file.act?id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file&amp;forceDownload=true&amp;rewrite=false" class="icon-down">Download</a>
+						(4051 Bytes)
+					</li>
+				</ul>
+			</div>
+			<div id="content-render">
+				<a href="/render/file.act?forceMime=true&amp;isImage=false&amp;id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file">Content Render</a>
+			</div>
+		
+</div>
+
+		<div class="pane" style="display: none;">
+
+			
+
+	<div class="key-value">
+	<h2>System Metadata</h2>
+	<ul>
+		
+		<li>
+	<label >Created By</label>
+	<span>
+			<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=nelsone&amp;type=user" class="icon-user">nelsone</a><a href="#" onclick="toggleContextDropDown(this, 'nelsone', 'user');" class="icon-context-drop-down-arrow">&#160;</a></span>
+		</span>
+</li>
+		
+		<li>
+	<label >Created On</label>
+	<span>
+			
+				Apr 27, 2016 9:06 AM
+			
+		</span>
+</li>
+		
+		<li>
+	<label >Last Modified By</label>
+	<span>
+			<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=pleskog&amp;type=user" class="icon-user">pleskog</a><a href="#" onclick="toggleContextDropDown(this, 'pleskog', 'user');" class="icon-context-drop-down-arrow">&#160;</a></span>
+		</span>
+</li>
+		
+		<li>
+	<label >Last Modified On</label>
+	<span>
+			
+				May 4, 2016 1:28 PM
+			
+		</span>
+</li>
+
+		<li>
+	<label >Last Published By</label>
+	<span>
+			
+				<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=pleskog&amp;type=user" class="icon-user">pleskog</a><a href="#" onclick="toggleContextDropDown(this, 'pleskog', 'user');" class="icon-context-drop-down-arrow">&#160;</a></span>
+			
+		</span>
+</li>
+				
+		<li>
+	<label >Last Published On</label>
+	<span>
+			
+				
+					Nov 18, 2016 3:34 PM
+				
+			
+		</span>
+</li>
+		
+		
+		
+	
+	</ul>
+</div>
+
+
+			
+<div class="key-value">
+	<h2>User Metadata</h2>
+	<ul>
+		
+	<li>
+	<label >Display Name</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >Title</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >Summary</label>
+	<span>&#160;</span>
+</li>
+
+	<li>
+	<label >Teaser</label>
+	<span>&#160;</span>
+</li>
+
+	<li>
+	<label >Keywords</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >Description</label>
+	<span>&#160;</span>
+</li>
+
+	<li>
+	<label >Author</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >Review Date</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >Start Date</label>
+	<span>&#160;</span>
+</li>
+	
+	<li>
+	<label >End Date</label>
+	<span>&#160;</span>
+</li>
+
+	</ul>
+</div>
+
+			
+<div class="key-value">
+	<h2>Custom Metadata</h2>
+	<ul>
+		
+	<li>
+	<label >Metadata Set</label>
+	<span>
+	
+			<span class="link-with-context" style="margin-left:0;"><a href="/entity/open.act?id=7f26b35fc0d3104d00a9cde225feced1&amp;type=metadataset" class="icon-metadataset">Minimal Info</a><a href="#" onclick="toggleContextDropDown(this, '7f26b35fc0d3104d00a9cde225feced1', 'metadataset');" class="icon-context-drop-down-arrow">&#160;</a></span>
+		
+		
+	</span>
+</li>
+	
+		
+	
+
+	</ul>
+</div>
+			
+
+	<div class="key-value">
+	<h2>Access Rights</h2>
+	<ul>
+		
+		<li>
+	<label >All</label>
+	<span>
+			NONE
+		</span>
+</li>
+		<li>
+	<label >Read</label>
+	<span>&#160;</span>
+</li>
+		<li>
+	<label >Write</label>
+	<span>&#160;</span>
+</li>
+	
+	</ul>
+</div>
+
+
+		
+</div>
+
+		
+			<div class="pane" style="display: none;">
+
+				
+
+
+
+
+
+
+
+
+<div class="key-value">
+	<h2>Actions</h2>
+	<ul>
+		
+
+	
+		<li>
+	<label >Check-out</label>
+	<span>
+			<a href="/entity/submitlock.act?action=co&amp;id=5878ccb1c0d3104d00db89c2d29ba2ed&amp;type=file">Check-out this asset</a>
+		</span>
+</li>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	</ul>
+</div>
+			
+</div>
+
+		
+		
+
+	
+	
+	 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="copyright">
+					<a href="http://www.hannonhill.com" title="Visit the Hannon Hill site">&#169; 2013 Hannon Hill Corporation</a>
+				</div>
+				<div id="organization">Evergreen - Content Management System</div>
+				<div id="utility-nav">
+					<ul>
+						<li>Cascade Server v7.6 | </li>
+						<li><a title="RSS" class="rss" href="/rss.act?feedKey=workflows&amp;userHash=05c27710c0d3104d0003bf22d5a49bc3"> </a> </li>
+						
+						
+						<li>| <a href="/home.act" title="Access key h">Home</a></li>
+						
+						
+						<li>| <a href="/entity/bottommenu.act" accesskey="1" title="Access key">Menu</a></li>
+						
+						
+						<li>| <a href="/logoff.act" accesskey="2" title="Access key">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+</html>
