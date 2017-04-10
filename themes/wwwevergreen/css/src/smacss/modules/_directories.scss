@@ -91,11 +91,14 @@
 
 .directory .u-photo{
 	// box model
+	border: 1px solid mix($shade, $sky-blue, 60%);
 	@include margin-default;
 	margin-left: 1em;
 	max-width: 75px;
 	// layout
 	float: right;
+	// decoration
+	border-radius: 2px;
 
 	@include breakpoint($gamora){
 		// box model
