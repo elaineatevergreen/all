@@ -7428,7 +7428,7 @@ p.alert {
 /* line 327, ../src/smacss/_modules.scss */
 .news-title-link {
   border-bottom-width: 0;
-  color: black;
+  color: #000;
 }
 
 /* line 334, ../src/smacss/_modules.scss */
