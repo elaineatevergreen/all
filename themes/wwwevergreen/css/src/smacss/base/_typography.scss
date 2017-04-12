@@ -105,6 +105,7 @@ h1{
 	// box model
 	margin: 0.96401028277635em 0 0;  // 30/31.12
 	// typography
+	font-family: $display-face-alt;
 	font-size: 1.945rem;  // 31.12px  Step 4
 	font-weight: normal;
 	line-height: 1.44601542416452;  // 45/31.12
@@ -113,6 +114,7 @@ h1{
 		// box model
 		margin-top: 0.818419903972065em;
 		// typography
+		font-family: $display-face;
 		font-size: 2.291rem;  // 36.656px  // Where does this come from? I don't remember.
 		line-height: 1.227629855958097;  // 45/36.656
 	}
@@ -144,9 +146,14 @@ h2{
 	margin-top: 1.56014353320505em;  // 30/19.229
 	// typography
 	color: mix($tint, $black, 40%);
+	font-family: $display-face-alt;
 	font-size: 1.202rem;  // 19.229px  Step 2
 	font-weight: bold;
 	line-height: 1.56014353320505;  // 30/19.229
+	
+	@include breakpoint($rocket){
+		font-family: $display-face;
+	}
 
 	@include breakpoint($gamora){
 		// box model
@@ -170,8 +177,13 @@ h3{
 	margin-top: 1.66666666666667em;  // 30/18
 	// typography
 	color: mix($tint, $black, 20%);
+	font-family: $display-face-alt;
 	@include base-type-lg;
 	font-weight: normal;
+	
+	@include breakpoint($rocket){
+		font-family: $display-face;
+	}
 
 	@include breakpoint($gamora){
 		// box model

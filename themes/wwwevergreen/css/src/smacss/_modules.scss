@@ -358,6 +358,19 @@
 	width: calc(100% - 2em);
 }
 
+/**
+ * Override news title links to make them look like regular, unlinked h4s
+ * again. While I normally don't like to make links not look like links, I
+ * think in this case, it’s warranted because there is a link under every
+ * article. See also: nytimes.com and washingtonpost.com.
+ */
+.news-title-link{
+	// box model
+	border-bottom-width: 0;
+	// typography
+	color: black;
+}
+
 .news-story{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 80%);

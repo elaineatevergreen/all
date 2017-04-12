@@ -91,9 +91,9 @@
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
-    <div class="submitted">
+    <p class="byline submitted">
       <?php print $submitted; ?>
-    </div>
+    </p>
   <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
