@@ -399,6 +399,7 @@ figure,
 /* line 104, ../src/smacss/base/_typography.scss */
 h1 {
   margin: 0.96401028277635em 0 0;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.945rem;
   font-weight: normal;
   line-height: 1.44601542416452;
@@ -407,6 +408,7 @@ h1 {
   /* line 104, ../src/smacss/base/_typography.scss */
   h1 {
     margin-top: 0.818419903972065em;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
@@ -435,16 +437,23 @@ h1 {
   }
 }
 
-/* line 142, ../src/smacss/base/_typography.scss */
+/* line 144, ../src/smacss/base/_typography.scss */
 h2 {
   margin-top: 1.56014353320505em;
   color: #616161;
+  font-family: display-face-alt;
   font-size: 1.202rem;
   font-weight: bold;
   line-height: 1.56014353320505;
 }
+@media screen and (min-width: 22em) {
+  /* line 144, ../src/smacss/base/_typography.scss */
+  h2 {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
-  /* line 142, ../src/smacss/base/_typography.scss */
+  /* line 144, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.03007828594973em;
     font-size: 1.82rem;
@@ -452,7 +461,7 @@ h2 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 142, ../src/smacss/base/_typography.scss */
+  /* line 144, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.44638724607868em;
     font-size: 1.945rem;
@@ -460,16 +469,23 @@ h2 {
   }
 }
 
-/* line 168, ../src/smacss/base/_typography.scss */
+/* line 175, ../src/smacss/base/_typography.scss */
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
+  font-family: display-face-alt;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   font-weight: normal;
 }
+@media screen and (min-width: 22em) {
+  /* line 175, ../src/smacss/base/_typography.scss */
+  h3 {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
-  /* line 168, ../src/smacss/base/_typography.scss */
+  /* line 175, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.10603155876714em;
     font-size: 1.69525rem;
@@ -477,7 +493,7 @@ h3 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 168, ../src/smacss/base/_typography.scss */
+  /* line 175, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.54575432811212em;
     font-size: 1.8195rem;
@@ -485,7 +501,7 @@ h3 {
   }
 }
 
-/* line 193, ../src/smacss/base/_typography.scss */
+/* line 205, ../src/smacss/base/_typography.scss */
 h4 {
   margin-top: 2.14285714285714em;
   font-size: 0.875rem;
@@ -500,7 +516,7 @@ h4 {
   }*/
 }
 @media screen and (min-width: 43em) {
-  /* line 193, ../src/smacss/base/_typography.scss */
+  /* line 205, ../src/smacss/base/_typography.scss */
   h4 {
     margin-top: 1.56014353320505em;
     font-size: 1.202rem;
@@ -508,7 +524,7 @@ h4 {
   }
 }
 
-/* line 218, ../src/smacss/base/_typography.scss */
+/* line 230, ../src/smacss/base/_typography.scss */
 h5 {
   margin-top: 2.14285714285714em;
   color: #616161;
@@ -519,7 +535,7 @@ h5 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 218, ../src/smacss/base/_typography.scss */
+  /* line 230, ../src/smacss/base/_typography.scss */
   h5 {
     margin-top: 1.66666666666667em;
     font-size: 1.125rem;
@@ -527,7 +543,7 @@ h5 {
   }
 }
 
-/* line 237, ../src/smacss/base/_typography.scss */
+/* line 249, ../src/smacss/base/_typography.scss */
 h6 {
   margin-top: 2.69784172661871em;
   margin-bottom: 1.34892086330935em;
@@ -540,7 +556,7 @@ h6 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 237, ../src/smacss/base/_typography.scss */
+  /* line 249, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.14285714285714em;
     margin-bottom: 2.14285714285714em;
@@ -550,7 +566,7 @@ h6 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 237, ../src/smacss/base/_typography.scss */
+  /* line 249, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.5em;
     margin-bottom: 1.66666666666667em;
@@ -559,7 +575,7 @@ h6 {
   }
 }
 
-/* line 266, ../src/smacss/base/_typography.scss */
+/* line 278, ../src/smacss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -568,7 +584,7 @@ h5 {
   margin-bottom: 0.46875rem;
 }
 @media screen and (min-width: 125em) {
-  /* line 266, ../src/smacss/base/_typography.scss */
+  /* line 278, ../src/smacss/base/_typography.scss */
   h1,
   h2,
   h3,
@@ -583,63 +599,63 @@ h5 {
  *
  * @section l
  */
-/* line 284, ../src/smacss/base/_typography.scss */
+/* line 296, ../src/smacss/base/_typography.scss */
 ul,
 ol {
   margin-left: 1.07142857142857em;
   padding-left: 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 284, ../src/smacss/base/_typography.scss */
+  /* line 296, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 284, ../src/smacss/base/_typography.scss */
+  /* line 296, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 298, ../src/smacss/base/_typography.scss */
+/* line 310, ../src/smacss/base/_typography.scss */
 ul,
 dl {
   padding: 0;
 }
 
-/* line 303, ../src/smacss/base/_typography.scss */
+/* line 315, ../src/smacss/base/_typography.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
 
-/* line 307, ../src/smacss/base/_typography.scss */
+/* line 319, ../src/smacss/base/_typography.scss */
 dt {
   margin-top: 0.535714285714286em;
   font-weight: bold;
 }
 @media screen and (min-width: 125em) {
-  /* line 307, ../src/smacss/base/_typography.scss */
+  /* line 319, ../src/smacss/base/_typography.scss */
   dt {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 318, ../src/smacss/base/_typography.scss */
+/* line 330, ../src/smacss/base/_typography.scss */
 dd {
   margin-bottom: 1.071428571428571em;
   margin-left: 0;
 }
 @media screen and (min-width: 125em) {
-  /* line 318, ../src/smacss/base/_typography.scss */
+  /* line 330, ../src/smacss/base/_typography.scss */
   dd {
     margin-bottom: 1.04009568880337em;
   }
 }
 
-/* line 327, ../src/smacss/base/_typography.scss */
+/* line 339, ../src/smacss/base/_typography.scss */
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -653,7 +669,7 @@ dd > blockquote:first-child > p:first-child {
  *
  * @section a
  */
-/* line 340, ../src/smacss/base/_typography.scss */
+/* line 352, ../src/smacss/base/_typography.scss */
 a,
 .internal-users a:visited,
 .search-tools a:visited,
@@ -665,13 +681,13 @@ a,
   transition: color 0.2s, border-color 0.2s ease;
 }
 
-/* line 354, ../src/smacss/base/_typography.scss */
+/* line 366, ../src/smacss/base/_typography.scss */
 a:visited {
   color: #600f21;
   border-bottom-color: #ceb9be;
 }
 
-/* line 361, ../src/smacss/base/_typography.scss */
+/* line 373, ../src/smacss/base/_typography.scss */
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
@@ -680,7 +696,7 @@ a:hover,
   border-bottom-color: #0086ee;
 }
 
-/* line 371, ../src/smacss/base/_typography.scss */
+/* line 383, ../src/smacss/base/_typography.scss */
 a:focus,
 a:active {
   background-color: rgba(73, 44, 93, 0.1);
@@ -692,11 +708,11 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 383, ../src/smacss/base/_typography.scss */
+/* line 395, ../src/smacss/base/_typography.scss */
 .site-name a {
   border-bottom-width: 0;
 }
-/* line 386, ../src/smacss/base/_typography.scss */
+/* line 398, ../src/smacss/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #f2f2f2;
   text-shadow: 0 1px 3px #1d1225;
@@ -712,7 +728,7 @@ a:active {
       }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 386, ../src/smacss/base/_typography.scss */
+  /* line 398, ../src/smacss/base/_typography.scss */
   .site-name a, .site-name a:visited {
     color: #46502b;
     font-weight: normal;
@@ -725,17 +741,17 @@ a:active {
  *
  * @section other-type
  */
-/* line 416, ../src/smacss/base/_typography.scss */
+/* line 428, ../src/smacss/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 420, ../src/smacss/base/_typography.scss */
+/* line 432, ../src/smacss/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 424, ../src/smacss/base/_typography.scss */
+/* line 436, ../src/smacss/base/_typography.scss */
 figcaption,
 small,
 .details,
@@ -745,7 +761,7 @@ small,
   line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
-  /* line 424, ../src/smacss/base/_typography.scss */
+  /* line 436, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -756,13 +772,13 @@ small,
   }
 }
 
-/* line 436, ../src/smacss/base/_typography.scss */
+/* line 448, ../src/smacss/base/_typography.scss */
 figcaption p {
   margin-top: 0.67446043165468em;
   margin-bottom: 1.34892086330935em;
 }
 
-/* line 443, ../src/smacss/base/_typography.scss */
+/* line 455, ../src/smacss/base/_typography.scss */
 [role="contentinfo"] small {
   color: #c2c2c2;
 }
@@ -771,47 +787,47 @@ figcaption p {
  * Small (inline) text can inherit the line-height of its parent. Switching
  * to inline-block forces small to use its own line-height.
  */
-/* line 452, ../src/smacss/base/_typography.scss */
+/* line 464, ../src/smacss/base/_typography.scss */
 .small {
   display: inline-block;
 }
 
-/* line 456, ../src/smacss/base/_typography.scss */
+/* line 468, ../src/smacss/base/_typography.scss */
 abbr {
   border-bottom: 1px dotted #b6b6b6;
   text-decoration: none;
   cursor: help;
 }
 
-/* line 465, ../src/smacss/base/_typography.scss */
+/* line 477, ../src/smacss/base/_typography.scss */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 469, ../src/smacss/base/_typography.scss */
+/* line 481, ../src/smacss/base/_typography.scss */
 q::before {
   content: open-quote;
 }
 
-/* line 473, ../src/smacss/base/_typography.scss */
+/* line 485, ../src/smacss/base/_typography.scss */
 q::after {
   content: close-quote;
 }
 
-/* line 477, ../src/smacss/base/_typography.scss */
+/* line 489, ../src/smacss/base/_typography.scss */
 code,
 pre {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 482, ../src/smacss/base/_typography.scss */
+/* line 494, ../src/smacss/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 490, ../src/smacss/base/_typography.scss */
+  /* line 502, ../src/smacss/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -819,14 +835,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 498, ../src/smacss/base/_typography.scss */
+  /* line 510, ../src/smacss/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 505, ../src/smacss/base/_typography.scss */
+/* line 517, ../src/smacss/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
@@ -3299,8 +3315,13 @@ input:checked + .header-dropdown {
     border-radius: 2px 2px 0 0;
   }
 }
+
+/* line 655, ../src/smacss/modules/_header.scss */
+.site-name h1 {
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+}
 @media screen and (min-height: 35em) {
-  /* line 654, ../src/smacss/modules/_header.scss */
+  /* line 655, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -3834,7 +3855,6 @@ input:checked + .header-dropdown {
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin: 0 auto;
-  padding-right: 0;
   width: 100%;
   max-width: none;
   z-index: 1;
@@ -6454,20 +6474,21 @@ p.alert {
 /* line 267, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body {
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
 /**
  * 3. Schedule of Events
  */
-/* line 275, ../src/smacss/modules/_calendars.scss */
+/* line 276, ../src/smacss/modules/_calendars.scss */
 .schedule {
   border: 1px solid #c8c1cd;
   margin: 0.535714285714286em 0 1.071428571428571em;
   border-radius: 2px;
 }
 
-/* line 283, ../src/smacss/modules/_calendars.scss */
+/* line 284, ../src/smacss/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -6483,46 +6504,46 @@ p.alert {
   }*/
 }
 
-/* line 298, ../src/smacss/modules/_calendars.scss */
+/* line 299, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 301, ../src/smacss/modules/_calendars.scss */
+/* line 302, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 305, ../src/smacss/modules/_calendars.scss */
+/* line 306, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(odd) {
   background-color: #ebede9;
 }
-/* line 309, ../src/smacss/modules/_calendars.scss */
+/* line 310, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(even) {
   background-color: #e4e9e0;
 }
-/* line 313, ../src/smacss/modules/_calendars.scss */
+/* line 314, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required .p-name {
   color: #46502b;
 }
 
-/* line 318, ../src/smacss/modules/_calendars.scss */
+/* line 319, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-morning {
   background-color: #fdf4b6;
 }
 
-/* line 324, ../src/smacss/modules/_calendars.scss */
+/* line 325, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(odd) {
   background-color: #e6edf2;
 }
-/* line 328, ../src/smacss/modules/_calendars.scss */
+/* line 329, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(even) {
   background-color: #dae7f2;
 }
-/* line 332, ../src/smacss/modules/_calendars.scss */
+/* line 333, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening .p-name {
   color: #00365f;
 }
 
-/* line 337, ../src/smacss/modules/_calendars.scss */
+/* line 338, ../src/smacss/modules/_calendars.scss */
 .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -6531,7 +6552,7 @@ p.alert {
   content: "Evening Events";
 }
 
-/* line 349, ../src/smacss/modules/_calendars.scss */
+/* line 350, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before,
 .schedule-event-group-required::before {
   border-width: 0 0 1px;
@@ -6541,13 +6562,13 @@ p.alert {
   border-style: solid;
 }
 
-/* line 362, ../src/smacss/modules/_calendars.scss */
+/* line 363, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before {
   border-bottom-color: #64933a;
   content: "Geoducks@Nite";
 }
 
-/* line 369, ../src/smacss/modules/_calendars.scss */
+/* line 370, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite {
   background-color: #ebede9;
 }
@@ -6555,17 +6576,17 @@ p.alert {
 /*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
 	background-color: mix($tint, $evergreen-neue, 90%);
 }*/
-/* line 378, ../src/smacss/modules/_calendars.scss */
+/* line 379, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite .p-name {
   color: #283b17;
 }
 
-/* line 382, ../src/smacss/modules/_calendars.scss */
+/* line 383, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required::before {
   border-bottom-color: #600f21;
 }
 
-/* line 387, ../src/smacss/modules/_calendars.scss */
+/* line 388, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required {
   background-color: #ebe7e8;
 }
@@ -6573,12 +6594,12 @@ p.alert {
 /*.schedule-event-group-required .h-event:nth-child(even){
 	background-color: mix($tint, $wine, 90%);
 }*/
-/* line 396, ../src/smacss/modules/_calendars.scss */
+/* line 397, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required .p-name {
   color: #26060d;
 }
 
-/* line 400, ../src/smacss/modules/_calendars.scss */
+/* line 401, ../src/smacss/modules/_calendars.scss */
 .schedule-event-time {
   border-bottom: 1px solid #9ca18f;
   padding-right: 1em;
@@ -6591,7 +6612,7 @@ p.alert {
  *
  * The section that says, “This is Week X”.
  */
-/* line 415, ../src/smacss/modules/_calendars.scss */
+/* line 416, ../src/smacss/modules/_calendars.scss */
 .bulletin {
   border-bottom: 1px solid #aea3b6;
   background-color: #e1dee3;
@@ -6599,25 +6620,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 415, ../src/smacss/modules/_calendars.scss */
+  /* line 416, ../src/smacss/modules/_calendars.scss */
   .bulletin {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
-/* line 427, ../src/smacss/modules/_calendars.scss */
+/* line 428, ../src/smacss/modules/_calendars.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 432, ../src/smacss/modules/_calendars.scss */
+/* line 433, ../src/smacss/modules/_calendars.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 436, ../src/smacss/modules/_calendars.scss */
+/* line 437, ../src/smacss/modules/_calendars.scss */
 .bulletin-header,
 .bulletin-body {
   padding-left: 1em;
@@ -6625,30 +6646,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 442, ../src/smacss/modules/_calendars.scss */
+  /* line 443, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 442, ../src/smacss/modules/_calendars.scss */
+  /* line 443, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 451, ../src/smacss/modules/_calendars.scss */
+/* line 452, ../src/smacss/modules/_calendars.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 451, ../src/smacss/modules/_calendars.scss */
+  /* line 452, ../src/smacss/modules/_calendars.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 464, ../src/smacss/modules/_calendars.scss */
+/* line 465, ../src/smacss/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -6659,7 +6680,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 464, ../src/smacss/modules/_calendars.scss */
+  /* line 465, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -6671,7 +6692,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 464, ../src/smacss/modules/_calendars.scss */
+  /* line 465, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -6684,7 +6705,7 @@ p.alert {
   }
 }
 
-/* line 491, ../src/smacss/modules/_calendars.scss */
+/* line 492, ../src/smacss/modules/_calendars.scss */
 .chrono-meter > li {
   border: 1px solid #aea3b6;
   height: 7.5px;
@@ -6692,7 +6713,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 491, ../src/smacss/modules/_calendars.scss */
+  /* line 492, ../src/smacss/modules/_calendars.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -6701,31 +6722,31 @@ p.alert {
   }
 }
 
-/* line 510, ../src/smacss/modules/_calendars.scss */
+/* line 511, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-current {
   background-color: #d0cad4;
 }
 
-/* line 515, ../src/smacss/modules/_calendars.scss */
+/* line 516, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-complete {
   background-color: #aea3b6;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 520, ../src/smacss/modules/_calendars.scss */
+  /* line 521, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 520, ../src/smacss/modules/_calendars.scss */
+  /* line 521, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 530, ../src/smacss/modules/_calendars.scss */
+  /* line 531, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6734,7 +6755,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 536, ../src/smacss/modules/_calendars.scss */
+  /* line 537, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar > li {
     padding-left: 1em;
     width: 33.333333333%;
@@ -7275,30 +7296,30 @@ p.alert {
  *
  * A single event’s individual page with all event details and a summary.
  */
-/* line 557, ../src/smacss/modules/_calendars.scss */
+/* line 558, ../src/smacss/modules/_calendars.scss */
 .event-details {
   font-weight: bold;
 }
 
-/* line 561, ../src/smacss/modules/_calendars.scss */
+/* line 562, ../src/smacss/modules/_calendars.scss */
 .event-description {
   margin-top: calc(2.14285714285714em);
   margin-bottom: calc(2.14285714285714em);
 }
 @media screen and (min-width: 43em) {
-  /* line 561, ../src/smacss/modules/_calendars.scss */
+  /* line 562, ../src/smacss/modules/_calendars.scss */
   .event-description {
     margin-top: calc(2.8125);
     margin-bottom: calc(2.8125);
   }
 }
 
-/* line 571, ../src/smacss/modules/_calendars.scss */
+/* line 572, ../src/smacss/modules/_calendars.scss */
 .event-sponsor {
   font-style: italic;
 }
 
-/* line 575, ../src/smacss/modules/_calendars.scss */
+/* line 576, ../src/smacss/modules/_calendars.scss */
 .field-flyer {
   border: 1px solid #a1a1a1;
   padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
@@ -7319,7 +7340,19 @@ p.alert {
   width: calc(100% - 2em);
 }
 
-/* line 328, ../src/smacss/_modules.scss */
+/**
+ * Override news title links to make them look like regular, unlinked h4s
+ * again. While I normally don't like to make links not look like links, I
+ * think in this case, it’s warranted because there is a link under every
+ * article. See also: nytimes.com and washingtonpost.com.
+ */
+/* line 334, ../src/smacss/_modules.scss */
+.news-title-link {
+  border-bottom-width: 0;
+  color: black;
+}
+
+/* line 341, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7339,7 +7372,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 345, ../src/smacss/_modules.scss */
+/* line 358, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7355,7 +7388,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 354, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7364,13 +7397,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 361, ../src/smacss/_modules.scss */
+/* line 374, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 361, ../src/smacss/_modules.scss */
+  /* line 374, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7378,7 +7411,7 @@ p.alert {
   }
 }
 
-/* line 371, ../src/smacss/_modules.scss */
+/* line 384, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7501,7 +7534,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 391, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7509,7 +7542,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 401, ../src/smacss/_modules.scss */
+/* line 414, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7528,24 +7561,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 420, ../src/smacss/_modules.scss */
+/* line 433, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 424, ../src/smacss/_modules.scss */
+/* line 437, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 432, ../src/smacss/_modules.scss */
+/* line 445, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 440, ../src/smacss/_modules.scss */
+/* line 453, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7556,30 +7589,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 451, ../src/smacss/_modules.scss */
+/* line 464, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 455, ../src/smacss/_modules.scss */
+/* line 468, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 455, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 455, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 468, ../src/smacss/_modules.scss */
+/* line 481, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7591,7 +7624,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 480, ../src/smacss/_modules.scss */
+/* line 493, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7599,7 +7632,7 @@ p.alert {
   display: block;
 }
 
-/* line 489, ../src/smacss/_modules.scss */
+/* line 502, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
