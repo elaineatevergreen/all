@@ -650,11 +650,12 @@ input:checked + .header-dropdown{
 		background-color: transparentize($tint, 0.33);
 		border-radius: 2px 2px 0 0;
 	}
+}
 
-	h1{
+.site-name h1{
+	font-family: $display-face;
 
-		@media screen and (min-height: 35em){  // Note this is a height-based media query
-			margin-bottom: calc(30 / 16 * 1rem);
-		}
+	@media screen and (min-height: 35em){  // Note this is a height-based media query
+		margin-bottom: calc(30 / 16 * 1rem);
 	}
 }
