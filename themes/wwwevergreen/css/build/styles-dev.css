@@ -441,7 +441,7 @@ h1 {
 h2 {
   margin-top: 1.56014353320505em;
   color: #616161;
-  font-family: display-face-alt;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.202rem;
   font-weight: bold;
   line-height: 1.56014353320505;
@@ -473,7 +473,7 @@ h2 {
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
-  font-family: display-face-alt;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   font-weight: normal;
@@ -7349,7 +7349,7 @@ p.alert {
 /* line 334, ../src/smacss/_modules.scss */
 .news-title-link {
   border-bottom-width: 0;
-  color: black;
+  color: #000;
 }
 
 /* line 341, ../src/smacss/_modules.scss */
