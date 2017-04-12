@@ -352,11 +352,11 @@
  * think in this case, it’s warranted because there is a link under every
  * article. See also: nytimes.com and washingtonpost.com.
  */
-.news-title-link{
+.news-title-link a{
 	// box model
 	border-bottom-width: 0;
 	// typography
-	color: black;
+	color: $black;
 }
 
 .news-story{
