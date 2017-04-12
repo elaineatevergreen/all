@@ -146,7 +146,7 @@ h2{
 	margin-top: 1.56014353320505em;  // 30/19.229
 	// typography
 	color: mix($tint, $black, 40%);
-	font-family: display-face-alt;
+	font-family: $display-face-alt;
 	font-size: 1.202rem;  // 19.229px  Step 2
 	font-weight: bold;
 	line-height: 1.56014353320505;  // 30/19.229
@@ -177,7 +177,7 @@ h3{
 	margin-top: 1.66666666666667em;  // 30/18
 	// typography
 	color: mix($tint, $black, 20%);
-	font-family: display-face-alt;
+	font-family: $display-face-alt;
 	@include base-type-lg;
 	font-weight: normal;
 	
