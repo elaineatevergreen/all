@@ -38,7 +38,7 @@
 #views-exposed-form-catalog-grad-programs{  // Drupal; the filter form on the grad program catalog page
 	// box model
 	margin: 0 auto;
-	padding-right: 0;
+	//padding-right: 0;  // Why was this set to 0? Will it cause problems if it's not? Just speaking to myself. -jkm
 	width: 100%;
 	max-width: none;
 	// layout
