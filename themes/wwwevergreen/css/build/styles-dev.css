@@ -7347,7 +7347,7 @@ p.alert {
  * article. See also: nytimes.com and washingtonpost.com.
  */
 /* line 334, ../src/smacss/_modules.scss */
-.news-title-link {
+.news-title-link a {
   border-bottom-width: 0;
   color: #000;
 }
