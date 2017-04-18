@@ -355,7 +355,7 @@
 .news-wrapper{
 	// box model
 	margin: 0 auto;
-	width: calc(100% - 2em);
+	width: calc(100% - 4ch);
 }
 
 /**
@@ -378,9 +378,9 @@
 	margin-bottom: 1em;
 	padding: 1em 1em 0;
 	// layout
-	display: flex;  // Drupal style
-	flex-direction: column;  // Drupal style
-	justify-content: flex-start;  // Drupal style
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	// typography
 	color: mix($tint, $shade, 20%);
 	// decoration
@@ -419,7 +419,7 @@
 	// box model
 	border: 1px solid mix($shade, $sky-blue, 60%);
 	height: 3rem;
-	// backgrounds & borders;
+	// decoration
 	border-radius: 50%;
 }
 
