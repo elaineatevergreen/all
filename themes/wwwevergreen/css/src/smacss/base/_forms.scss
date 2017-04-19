@@ -49,7 +49,7 @@ textarea{
 	//typography
 	font-family: $text-face;
 	@include base-type;
-	// backgrounds & borders
+	// decoration
 	border-radius: 2px;
 
 	&:focus{
@@ -65,7 +65,7 @@ textarea{
 input{
 	// box model
 	height: 1.875rem;  // Step 3
-	padding: 0 0.5em;
+	padding: 0 1ch;
 	// typography
 	font-size: 1em;
 }
@@ -92,12 +92,13 @@ select{
 	padding: 0 0.5em;
 	// typography
 	text-shadow: 0 1px 0 $highlight;
-	// misc
+	// decoration
 	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
+	// misc
 	cursor: pointer;
 
 	&:hover{
-		// backgrounds & borders
+		// decoration
 		background-color: mix($tint, $blueberry-susan, 90%);
 		border-bottom-style: dashed;
 	}
