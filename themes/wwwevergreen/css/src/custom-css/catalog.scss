@@ -844,3 +844,66 @@
 .simple-filter-list a{
 	//border-width: 0;  // We should do this, but it needs more thought; maybe the border re-appers on hover?
 }
+
+/**
+ * C. Advanced Filters
+ *
+ * Advanced filters are the filters in the left sidebar that allow for
+ * very granular filtering of catalog results.
+ */
+#views-exposed-form-catalog-page fieldset{
+	/**
+	 * These styles should closely fit with the rest of the OS-level form
+	 * fields, for example inputs and selects.
+	 */
+	
+	// box model
+	border: 1px solid mix($tint, $blueberry-susan, 60%);
+	margin: 0 0 calc(15 / 16 * 1rem);
+	padding: 0 1ch;
+	max-width: 100%;
+	// decoration
+	background-color: $tint;
+	border-radius: 2px;
+	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
+	
+	&:hover{
+		background-color: mix($tint, $blueberry-susan, 90%);
+	}
+}
+
+#views-exposed-form-catalog-page legend{
+	// box model
+	border-width: 1px;
+	padding: 0.25em 0;
+	// decoration
+	background-color: $tint;
+	background-image: linear-gradient(white 75%, $tint);
+	border-color: mix($tint, $blueberry-susan, 60%);
+	border-bottom-color: $tint;  // Hides bottom border to avoid jumping on hover
+	border-radius: 2px 2px 0 0;
+	border-style: solid;
+	//box-shadow: 0 0.1em 0.5em $drop-shadow;
+}
+
+#views-exposed-form-catalog-page fieldset:hover legend{
+	background-color: mix($tint, $blueberry-susan, 90%);
+	background-image: none;
+	border-bottom-color: mix($tint, $blueberry-susan, 90%);
+	
+	&:hover{
+		border-bottom: 1px dashed mix($tint, $blueberry-susan, 60%);
+	}
+}
+
+#views-exposed-form-catalog-page fieldset .fieldset-title{
+	// box model
+	border-bottom: 0;
+	
+	&:focus,
+	&:active{
+		//decoration
+		background-color: transparent;
+		outline: 1px dotted $shade;
+	}
+}
