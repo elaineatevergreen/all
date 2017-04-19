@@ -1137,7 +1137,7 @@ textarea:focus {
 /* line 65, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
-  padding: 0 0.5em;
+  padding: 0 1ch;
   font-size: 1em;
 }
 
@@ -1168,18 +1168,18 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 99, ../src/smacss/base/_forms.scss */
+/* line 100, ../src/smacss/base/_forms.scss */
 select:hover {
   background-color: #e1dee3;
   border-bottom-style: dashed;
 }
 
-/* line 110, ../src/smacss/base/_forms.scss */
+/* line 111, ../src/smacss/base/_forms.scss */
 .tertiary-nav-wrapper .form-type-select select {
   width: 100%;
 }
 
-/* line 114, ../src/smacss/base/_forms.scss */
+/* line 115, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1187,13 +1187,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 114, ../src/smacss/base/_forms.scss */
+  /* line 115, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 127, ../src/smacss/base/_forms.scss */
+/* line 128, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1204,7 +1204,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 128, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1212,7 +1212,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 128, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1222,20 +1222,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 152, ../src/smacss/base/_forms.scss */
+/* line 153, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 152, ../src/smacss/base/_forms.scss */
+  /* line 153, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 161, ../src/smacss/base/_forms.scss */
+/* line 162, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1243,7 +1243,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/base/_forms.scss */
+  /* line 162, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -6248,18 +6248,23 @@ p.alert {
  * The box on the homepage featuring upcoming events from the calendar.
  */
 /* line 88, ../src/smacss/modules/_calendars.scss */
+.upcoming-events {
+  max-width: calc(100% - 4ch);
+}
+
+/* line 92, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
 @media screen and (min-width: 32em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -6270,7 +6275,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
@@ -6279,75 +6284,75 @@ p.alert {
   }
 }
 
-/* line 116, ../src/smacss/modules/_calendars.scss */
+/* line 120, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media,
 .upcoming-events-homepage .compound {
   border-bottom: 1px solid #b9afbf;
 }
 
-/* line 121, ../src/smacss/modules/_calendars.scss */
+/* line 125, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media-body,
 .upcoming-events-homepage .compound-body {
   text-align: center;
 }
 
 @media screen and (min-width: 70em) {
-  /* line 126, ../src/smacss/modules/_calendars.scss */
+  /* line 130, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 133, ../src/smacss/modules/_calendars.scss */
+/* line 137, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 
-/* line 152, ../src/smacss/modules/_calendars.scss */
+/* line 156, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 70em) {
-  /* line 152, ../src/smacss/modules/_calendars.scss */
+  /* line 156, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 161, ../src/smacss/modules/_calendars.scss */
+/* line 165, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-list-wrapper {
   overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_calendars.scss */
+  /* line 165, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-list-wrapper {
     overflow-x: visible;
   }
 }
 
-/* line 170, ../src/smacss/modules/_calendars.scss */
+/* line 174, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -6369,7 +6374,7 @@ p.alert {
           scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 170, ../src/smacss/modules/_calendars.scss */
+  /* line 174, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -6382,7 +6387,7 @@ p.alert {
             scroll-snap-type: none;
   }
 }
-/* line 198, ../src/smacss/modules/_calendars.scss */
+/* line 202, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list::after {
   height: 100%;
   width: 100%;
@@ -6394,13 +6399,13 @@ p.alert {
   content: "";
 }
 @media screen and (min-width: 43em) {
-  /* line 198, ../src/smacss/modules/_calendars.scss */
+  /* line 202, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list::after {
     display: none;
   }
 }
 
-/* line 217, ../src/smacss/modules/_calendars.scss */
+/* line 221, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4,
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
@@ -6412,20 +6417,20 @@ p.alert {
           scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
-/* line 234, ../src/smacss/modules/_calendars.scss */
+/* line 238, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4:last-child,
 .grid.upcoming-events-list > .unit-1-7:last-child {
   -webkit-scroll-snap-coordinate: -50% 0;
@@ -6433,7 +6438,7 @@ p.alert {
           scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: -150% 0;
@@ -6442,7 +6447,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: none;
@@ -6452,7 +6457,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 247, ../src/smacss/modules/_calendars.scss */
+  /* line 251, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4 {
     width: 25%;
     -webkit-flex-shrink: 1;
@@ -6462,7 +6467,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 257, ../src/smacss/modules/_calendars.scss */
+  /* line 261, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -6471,7 +6476,7 @@ p.alert {
   }
 }
 
-/* line 267, ../src/smacss/modules/_calendars.scss */
+/* line 271, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
@@ -6481,14 +6486,14 @@ p.alert {
 /**
  * 3. Schedule of Events
  */
-/* line 276, ../src/smacss/modules/_calendars.scss */
+/* line 280, ../src/smacss/modules/_calendars.scss */
 .schedule {
   border: 1px solid #c8c1cd;
   margin: 0.535714285714286em 0 1.071428571428571em;
   border-radius: 2px;
 }
 
-/* line 284, ../src/smacss/modules/_calendars.scss */
+/* line 288, ../src/smacss/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -6504,46 +6509,46 @@ p.alert {
   }*/
 }
 
-/* line 299, ../src/smacss/modules/_calendars.scss */
+/* line 303, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 302, ../src/smacss/modules/_calendars.scss */
+/* line 306, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 306, ../src/smacss/modules/_calendars.scss */
+/* line 310, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(odd) {
   background-color: #ebede9;
 }
-/* line 310, ../src/smacss/modules/_calendars.scss */
+/* line 314, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(even) {
   background-color: #e4e9e0;
 }
-/* line 314, ../src/smacss/modules/_calendars.scss */
+/* line 318, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required .p-name {
   color: #46502b;
 }
 
-/* line 319, ../src/smacss/modules/_calendars.scss */
+/* line 323, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-morning {
   background-color: #fdf4b6;
 }
 
-/* line 325, ../src/smacss/modules/_calendars.scss */
+/* line 329, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(odd) {
   background-color: #e6edf2;
 }
-/* line 329, ../src/smacss/modules/_calendars.scss */
+/* line 333, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(even) {
   background-color: #dae7f2;
 }
-/* line 333, ../src/smacss/modules/_calendars.scss */
+/* line 337, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening .p-name {
   color: #00365f;
 }
 
-/* line 338, ../src/smacss/modules/_calendars.scss */
+/* line 342, ../src/smacss/modules/_calendars.scss */
 .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -6552,7 +6557,7 @@ p.alert {
   content: "Evening Events";
 }
 
-/* line 350, ../src/smacss/modules/_calendars.scss */
+/* line 354, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before,
 .schedule-event-group-required::before {
   border-width: 0 0 1px;
@@ -6562,13 +6567,13 @@ p.alert {
   border-style: solid;
 }
 
-/* line 363, ../src/smacss/modules/_calendars.scss */
+/* line 367, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before {
   border-bottom-color: #64933a;
   content: "Geoducks@Nite";
 }
 
-/* line 370, ../src/smacss/modules/_calendars.scss */
+/* line 374, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite {
   background-color: #ebede9;
 }
@@ -6576,17 +6581,17 @@ p.alert {
 /*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
 	background-color: mix($tint, $evergreen-neue, 90%);
 }*/
-/* line 379, ../src/smacss/modules/_calendars.scss */
+/* line 383, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite .p-name {
   color: #283b17;
 }
 
-/* line 383, ../src/smacss/modules/_calendars.scss */
+/* line 387, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required::before {
   border-bottom-color: #600f21;
 }
 
-/* line 388, ../src/smacss/modules/_calendars.scss */
+/* line 392, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required {
   background-color: #ebe7e8;
 }
@@ -6594,12 +6599,12 @@ p.alert {
 /*.schedule-event-group-required .h-event:nth-child(even){
 	background-color: mix($tint, $wine, 90%);
 }*/
-/* line 397, ../src/smacss/modules/_calendars.scss */
+/* line 401, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required .p-name {
   color: #26060d;
 }
 
-/* line 401, ../src/smacss/modules/_calendars.scss */
+/* line 405, ../src/smacss/modules/_calendars.scss */
 .schedule-event-time {
   border-bottom: 1px solid #9ca18f;
   padding-right: 1em;
@@ -6612,7 +6617,7 @@ p.alert {
  *
  * The section that says, “This is Week X”.
  */
-/* line 416, ../src/smacss/modules/_calendars.scss */
+/* line 420, ../src/smacss/modules/_calendars.scss */
 .bulletin {
   border-bottom: 1px solid #aea3b6;
   background-color: #e1dee3;
@@ -6620,25 +6625,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 416, ../src/smacss/modules/_calendars.scss */
+  /* line 420, ../src/smacss/modules/_calendars.scss */
   .bulletin {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
-/* line 428, ../src/smacss/modules/_calendars.scss */
+/* line 432, ../src/smacss/modules/_calendars.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 433, ../src/smacss/modules/_calendars.scss */
+/* line 437, ../src/smacss/modules/_calendars.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 437, ../src/smacss/modules/_calendars.scss */
+/* line 441, ../src/smacss/modules/_calendars.scss */
 .bulletin-header,
 .bulletin-body {
   padding-left: 1em;
@@ -6646,30 +6651,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 443, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 443, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 452, ../src/smacss/modules/_calendars.scss */
+/* line 456, ../src/smacss/modules/_calendars.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 452, ../src/smacss/modules/_calendars.scss */
+  /* line 456, ../src/smacss/modules/_calendars.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 465, ../src/smacss/modules/_calendars.scss */
+/* line 469, ../src/smacss/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -6680,7 +6685,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 465, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -6692,7 +6697,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 465, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -6705,7 +6710,7 @@ p.alert {
   }
 }
 
-/* line 492, ../src/smacss/modules/_calendars.scss */
+/* line 496, ../src/smacss/modules/_calendars.scss */
 .chrono-meter > li {
   border: 1px solid #aea3b6;
   height: 7.5px;
@@ -6713,7 +6718,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 492, ../src/smacss/modules/_calendars.scss */
+  /* line 496, ../src/smacss/modules/_calendars.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -6722,31 +6727,31 @@ p.alert {
   }
 }
 
-/* line 511, ../src/smacss/modules/_calendars.scss */
+/* line 515, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-current {
   background-color: #d0cad4;
 }
 
-/* line 516, ../src/smacss/modules/_calendars.scss */
+/* line 520, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-complete {
   background-color: #aea3b6;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 521, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 521, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 531, ../src/smacss/modules/_calendars.scss */
+  /* line 535, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6755,7 +6760,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 537, ../src/smacss/modules/_calendars.scss */
+  /* line 541, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar > li {
     padding-left: 1em;
     width: 33.333333333%;
@@ -7296,30 +7301,30 @@ p.alert {
  *
  * A single event’s individual page with all event details and a summary.
  */
-/* line 558, ../src/smacss/modules/_calendars.scss */
+/* line 562, ../src/smacss/modules/_calendars.scss */
 .event-details {
   font-weight: bold;
 }
 
-/* line 562, ../src/smacss/modules/_calendars.scss */
+/* line 566, ../src/smacss/modules/_calendars.scss */
 .event-description {
   margin-top: calc(2.14285714285714em);
   margin-bottom: calc(2.14285714285714em);
 }
 @media screen and (min-width: 43em) {
-  /* line 562, ../src/smacss/modules/_calendars.scss */
+  /* line 566, ../src/smacss/modules/_calendars.scss */
   .event-description {
     margin-top: calc(2.8125);
     margin-bottom: calc(2.8125);
   }
 }
 
-/* line 572, ../src/smacss/modules/_calendars.scss */
+/* line 576, ../src/smacss/modules/_calendars.scss */
 .event-sponsor {
   font-style: italic;
 }
 
-/* line 576, ../src/smacss/modules/_calendars.scss */
+/* line 580, ../src/smacss/modules/_calendars.scss */
 .field-flyer {
   border: 1px solid #a1a1a1;
   padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
@@ -7337,7 +7342,7 @@ p.alert {
 /* line 322, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
-  width: calc(100% - 2em);
+  width: calc(100% - 4ch);
 }
 
 /**
