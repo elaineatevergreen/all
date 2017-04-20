@@ -68,19 +68,9 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * Deprecated Modular Scale - Do not use!
- *
- * The typographic scale we are using for measurements.
- * Ideal text size is 17px
- * The important number is 345px. This was the size of images in
- * the previous Admissions template, which guided image sizes in
- * the new template.
- *
- * @see http://www.modularscale.com/?17,345&px&1.618&web&text
- */
-/**
  * New Modular Scale
  *
+ * The typographic scale we are using for measurements.
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -550,7 +540,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -758,7 +748,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
 }
 @media screen and (min-width: 125em) {
   /* line 436, ../src/smacss/base/_typography.scss */
@@ -1137,7 +1127,7 @@ textarea:focus {
 /* line 65, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
-  padding: 0 0.5em;
+  padding: 0 1ch;
   font-size: 1em;
 }
 
@@ -1168,18 +1158,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 99, ../src/smacss/base/_forms.scss */
+/* line 100, ../src/smacss/base/_forms.scss */
 select:hover {
   background-color: #e1dee3;
   border-bottom-style: dashed;
 }
 
-/* line 110, ../src/smacss/base/_forms.scss */
-.tertiary-nav-wrapper .form-type-select select {
-  width: 100%;
-}
-
-/* line 114, ../src/smacss/base/_forms.scss */
+/* line 111, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1187,13 +1172,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 114, ../src/smacss/base/_forms.scss */
+  /* line 111, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 127, ../src/smacss/base/_forms.scss */
+/* line 124, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1204,7 +1189,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 124, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1212,7 +1197,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 124, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1222,20 +1207,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 152, ../src/smacss/base/_forms.scss */
+/* line 149, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 152, ../src/smacss/base/_forms.scss */
+  /* line 149, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 161, ../src/smacss/base/_forms.scss */
+/* line 158, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1243,7 +1228,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/base/_forms.scss */
+  /* line 158, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1253,55 +1238,112 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
+/**
+ * 2. Views Module Forms
+ *
+ * Forms in Drupal’s Views module. It's worth cross-checking changes you
+ * make here with a few different form pages, because this stuff gets weird
+ * and unpredictable.
+ *
+ * Add to this list as you find more weirdness.
+ *
+ * Left-nav fiters: http://evergreen.edu/catalog/index/ug
+ * Main content filters: http://evergreen.edu/activities/groups
+ *
+ * Table of Contents
+ *
+ * a. Views Exposed Widget
+ * b. Secondary Options
+ */
+/**
+ * b. Views Exposed Widget
+ *
+ * These are the bulk of the form widgets in the Views-type forms.
+ */
+/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
-  display: inline-block;
+  display: block;
 }
 
-/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin-top: calc(20 / 16 * 1rem);
-}
-@media screen and (min-width: 43em) {
-  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
-  .views-exposed-form .views-exposed-widget .form-submit {
-    margin-top: calc(22.5 / 16 * 1rem);
-  }
+/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget {
+  /* box model */
+  margin: 0.535714285714286em 0 1.071428571428571em;
+  padding: 0;
+  /* layout */
+  float: none;
 }
 
-/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
-.views-widget-filter-combine input {
+/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-widget input,
+.views-exposed-widget select {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .form-type-select select {
+  width: 100%;
+}
+
+/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin: 0;
+  	/*margin-top: calc(20 / 16 * 1rem);
+  
+  	@include breakpoint($gamora){
+  		margin-top: calc(22.5 / 16 * 1rem);
+  	}*/
+}
+
+/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
+	margin-bottom: 0;
+}*/
+/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
-.tertiary-nav-wrapper .views-exposed-widget {
-  padding: 0;
+/**
+ * b. Secondary Options
+ *
+ * Better Exposed Filters offeres a place to put “advanced” options. For
+ * whatever reason, these options don't follow the same pattern as the rest
+ * of the form fields, so they need special rules.
+ */
+/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
+.bef-secondary-options .form-select {
+  margin-bottom: calc(15 / 16 * 1rem);
 }
 
 /**
  * 3. Webform Module
  */
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1309,34 +1351,34 @@ input[type="radio"] + label {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
 }
 @media screen and (min-width: 43em) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1345,15 +1387,15 @@ input[type="radio"] + label {
   }
 }
 
-/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
-/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1362,33 +1404,28 @@ input[type="radio"] + label {
   display: flex;
 }
 
-/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-grid-option .form-radio {
-  float: none;
-}
-
 /**
- * Textareas
+ * c. Textareas
  */
-/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 96, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1396,7 +1433,24 @@ input[type="radio"] + label {
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+/* line 108, ../src/smacss/base/forms/_drupal-webform.scss */
+.checkbox.webform-grid-option {
+  text-align: center;
+}
+
+/* line 112, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox {
+  float: none;
+}
+
+/**
+ * e. Buttons
  */
 /**
  * 4. Search
@@ -1978,6 +2032,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -1988,6 +2043,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -1996,6 +2052,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2003,7 +2060,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2012,14 +2069,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2028,14 +2085,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2545,7 +2602,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage Hero Image
+ * C. Homepage
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3419,7 +3476,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage Hero Image
+ * C. Homepage
  */
 /**
  * C. Homepage Hero Image
@@ -3444,15 +3501,13 @@ input:checked + .header-dropdown {
  * 3. Copy
  * 4. Copy Modifiers
  */
-/* line 24, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero,
-.homepage-hero-content {
+/* line 25, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero {
   height: 100%;
   overflow: hidden;
 }
-
 @media screen and (min-width: 20em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
@@ -3460,24 +3515,24 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     display: table;
   }
 }
 
-/* line 46, ../src/smacss/modules/_homepage-hero.scss */
+/* line 43, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-picture img {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 46, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 43, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-picture img {
     width: 100%;
   }
 }
 
-/* line 55, ../src/smacss/modules/_homepage-hero.scss */
+/* line 52, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img {
   margin-left: -50%;
   width: 200%;
@@ -3485,32 +3540,32 @@ input:checked + .header-dropdown {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 63, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 60, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 71, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 68, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -10%;
     width: 120%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 78, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 75, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: 0;
     width: 100%;
   }
 }
-/* line 84, ../src/smacss/modules/_homepage-hero.scss */
+/* line 81, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-alt .homepage-hero-img {
   margin-left: 0;
 }
 
-/* line 89, ../src/smacss/modules/_homepage-hero.scss */
+/* line 86, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3519,7 +3574,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 97, ../src/smacss/modules/_homepage-hero.scss */
+/* line 94, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3527,40 +3582,58 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 108, ../src/smacss/modules/_homepage-hero.scss */
+/* line 105, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
+@media screen and (min-width: 32em) {
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    font-size: calc(1rem + 1vh);
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    float: right;
+  }
+}
 @media screen and (min-width: 70em) {
-  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 118, ../src/smacss/modules/_homepage-hero.scss */
+/* line 125, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
+  height: 100%;
   width: 100%;
-  max-width: 82em;
+  max-width: 77em;
+  overflow: hidden;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 25em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3568,18 +3641,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 145, ../src/smacss/modules/_homepage-hero.scss */
+/* line 156, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 20em) {
-  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 156, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3595,54 +3668,54 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 164, ../src/smacss/modules/_homepage-hero.scss */
+/* line 175, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 168, ../src/smacss/modules/_homepage-hero.scss */
+/* line 179, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 172, ../src/smacss/modules/_homepage-hero.scss */
+/* line 183, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 188, ../src/smacss/modules/_homepage-hero.scss */
+/* line 199, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 203, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
@@ -3651,61 +3724,68 @@ input:checked + .header-dropdown {
 /**
  * 3. Copy
  */
-/* line 208, ../src/smacss/modules/_homepage-hero.scss */
+/* line 219, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy {
   margin: 0 calc(15 / 14 * 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc(66.6666666667% - 1em);
-    float: left;
+    width: calc(66.6666666667% - 2ch);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    margin: 0 1em;
-    width: calc(50% - 1em);
+    margin: 0 2ch;
+    width: calc(50% - 2ch);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 43em) {
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc((3 / 7 * 100%) - 1em);
+    margin: 33% auto 0;
+    width: 90vw;
+    max-width: calc(100% - 4ch);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: 70vw;
   }
 }
 
-/* line 232, ../src/smacss/modules/_homepage-hero.scss */
+/* line 251, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 255, ../src/smacss/modules/_homepage-hero.scss */
+/* line 274, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy img {
   width: 100%;
 }
@@ -3722,7 +3802,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3731,7 +3811,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3740,7 +3820,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 285, ../src/smacss/modules/_homepage-hero.scss */
+/* line 304, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   height: 100%;
   margin: 0;
@@ -3748,36 +3828,34 @@ input:checked + .header-dropdown {
   width: 66.6666666667%;
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
+  	/*@include breakpoint($drax){
+  		width: calc(3 / 7 * 100%);
+  	}
+  
+  	@include breakpoint($groot){
+  		padding: 0 calc(30 / 19.23333333333 * 1em);
+  	}*/
 }
 @media screen and (min-width: 22em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     height: auto;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 17 * 1em);
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    width: calc(3 / 7 * 100%);
-  }
-}
-@media screen and (min-width: 125em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(30 / 19.23333333333 * 1em);
+    margin: 5em 2ch 0;
+    padding: 0;
+    width: calc(100% - 4ch);
+    background-color: transparent;
   }
 }
 
@@ -4155,7 +4233,8 @@ ul.accordion-inner {
  * @see http://evergreen.edu/catalog/index
  */
 /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
-#views-exposed-form-catalog-page {
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs {
   margin-top: 0;
 }
 
@@ -4308,36 +4387,26 @@ ul.accordion-inner {
 }
 
 /* line 204, ../src/smacss/_modules.scss */
-.byline {
-  color: #283b17;
-  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-  font-size: 0.695rem;
-  line-height: 1.34831460674157;
-  letter-spacing: 0.1ch;
-  text-transform: uppercase;
-}
-
-/* line 211, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 204, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 204, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 225, ../src/smacss/_modules.scss */
+/* line 218, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4347,24 +4416,24 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 225, ../src/smacss/_modules.scss */
+  /* line 218, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 235, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 246, ../src/smacss/_modules.scss */
+/* line 239, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 250, ../src/smacss/_modules.scss */
+/* line 243, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4373,7 +4442,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 250, ../src/smacss/_modules.scss */
+  /* line 243, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4921,7 +4990,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 270, ../src/smacss/_modules.scss */
+/* line 263, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -5569,7 +5638,8 @@ div.ajax-progress {
 .notice,
 .box,
 p.box,
-#views-exposed-form-catalog-page {
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs {
   margin-top: 2.14285714285714em;
   margin-bottom: 3.21428571428571em;
   padding: 0 1.5ch;
@@ -5584,13 +5654,14 @@ p.box,
   .notice,
   .box,
   p.box,
-  #views-exposed-form-catalog-page {
+  #views-exposed-form-catalog-page,
+  #views-exposed-form-catalog-grad-programs {
     margin-top: 2.5em;
     margin-bottom: 3.33333333333333em;
   }
 }
 
-/* line 45, ../src/smacss/modules/_boxes.scss */
+/* line 46, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5598,13 +5669,13 @@ p.box,
   color: #004377;
 }
 
-/* line 52, ../src/smacss/modules/_boxes.scss */
+/* line 53, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 57, ../src/smacss/modules/_boxes.scss */
+/* line 58, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5613,7 +5684,7 @@ p.box,
 }
 
 @media screen and (min-width: 20em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5621,7 +5692,7 @@ p.box,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5631,7 +5702,7 @@ p.box,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5644,13 +5715,13 @@ p.box,
  *
  * Stands out a little bit more than a default box.
  */
-/* line 92, ../src/smacss/modules/_boxes.scss */
+/* line 93, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 92, ../src/smacss/modules/_boxes.scss */
+  /* line 93, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5662,7 +5733,7 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 107, ../src/smacss/modules/_boxes.scss */
+/* line 108, ../src/smacss/modules/_boxes.scss */
 .alert,
 p.alert {
   color: #600f21;
@@ -5670,7 +5741,7 @@ p.alert {
   border-radius: 0;
 }
 
-/* line 118, ../src/smacss/modules/_boxes.scss */
+/* line 119, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5685,13 +5756,13 @@ p.alert {
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 137, ../src/smacss/modules/_boxes.scss */
+/* line 138, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 144, ../src/smacss/modules/_boxes.scss */
+/* line 145, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5725,7 +5796,7 @@ p.alert {
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 177, ../src/smacss/modules/_boxes.scss */
+/* line 178, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5744,7 +5815,7 @@ p.alert {
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 177, ../src/smacss/modules/_boxes.scss */
+  /* line 178, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-flex-direction: row;
@@ -5753,7 +5824,7 @@ p.alert {
   }
 }
 
-/* line 204, ../src/smacss/modules/_boxes.scss */
+/* line 205, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -5763,7 +5834,7 @@ p.alert {
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 213, ../src/smacss/modules/_boxes.scss */
+  /* line 214, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -5775,7 +5846,7 @@ p.alert {
   }
 }
 
-/* line 227, ../src/smacss/modules/_boxes.scss */
+/* line 228, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -5783,7 +5854,7 @@ p.alert {
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 234, ../src/smacss/modules/_boxes.scss */
+/* line 235, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -5810,7 +5881,7 @@ p.alert {
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 263, ../src/smacss/modules/_boxes.scss */
+/* line 264, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -5821,7 +5892,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 272, ../src/smacss/modules/_boxes.scss */
+  /* line 273, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -5829,7 +5900,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 280, ../src/smacss/modules/_boxes.scss */
+  /* line 281, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -5837,20 +5908,20 @@ p.alert {
   }
 }
 
-/* line 289, ../src/smacss/modules/_boxes.scss */
+/* line 290, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 289, ../src/smacss/modules/_boxes.scss */
+  /* line 290, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 289, ../src/smacss/modules/_boxes.scss */
+  /* line 290, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -5860,39 +5931,39 @@ p.alert {
 /**
  * 6. Pull Quotes
  */
-/* line 305, ../src/smacss/modules/_boxes.scss */
+/* line 306, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 305, ../src/smacss/modules/_boxes.scss */
+  /* line 306, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 317, ../src/smacss/modules/_boxes.scss */
+/* line 318, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 324, ../src/smacss/modules/_boxes.scss */
+/* line 325, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 331, ../src/smacss/modules/_boxes.scss */
+/* line 332, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 339, ../src/smacss/modules/_boxes.scss */
+/* line 340, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 343, ../src/smacss/modules/_boxes.scss */
+/* line 344, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -5901,7 +5972,7 @@ p.alert {
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 343, ../src/smacss/modules/_boxes.scss */
+  /* line 344, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -5909,7 +5980,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 343, ../src/smacss/modules/_boxes.scss */
+  /* line 344, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -5918,7 +5989,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 368, ../src/smacss/modules/_boxes.scss */
+  /* line 369, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -5932,20 +6003,20 @@ p.alert {
  *
  * @section box-full
  */
-/* line 383, ../src/smacss/modules/_boxes.scss */
+/* line 384, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 389, ../src/smacss/modules/_boxes.scss */
+/* line 390, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 394, ../src/smacss/modules/_boxes.scss */
+/* line 395, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
@@ -5959,7 +6030,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 408, ../src/smacss/modules/_boxes.scss */
+/* line 409, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -5977,24 +6048,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 429, ../src/smacss/modules/_boxes.scss */
+  /* line 430, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 436, ../src/smacss/modules/_boxes.scss */
+  /* line 437, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 441, ../src/smacss/modules/_boxes.scss */
+  /* line 442, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 447, ../src/smacss/modules/_boxes.scss */
+/* line 448, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -6027,6 +6098,8 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
+.file-default,
+.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -6039,18 +6112,22 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 42, ../src/smacss/modules/_images.scss */
+/* line 44, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
+.file-default,
+.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 42, ../src/smacss/modules/_images.scss */
+  /* line 44, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
+  .file-default,
+  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -6058,9 +6135,11 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 42, ../src/smacss/modules/_images.scss */
+  /* line 44, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
+  .file-default,
+  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -6069,7 +6148,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6081,14 +6160,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 79, ../src/smacss/modules/_images.scss */
+  /* line 83, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
@@ -6097,7 +6176,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 62, ../src/smacss/modules/_images.scss */
+  /* line 66, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6107,7 +6186,7 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 90, ../src/smacss/modules/_images.scss */
+  /* line 93, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
@@ -6115,8 +6194,10 @@ p.alert {
     margin-right: -3ch;
     max-width: calc(50% + 4ch);
   }
+}
 
-  /* line 99, ../src/smacss/modules/_images.scss */
+@media screen and (min-width: 70em) {
+  /* line 105, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -6125,8 +6206,9 @@ p.alert {
     float: left;
   }
 }
+
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/modules/_images.scss */
+  /* line 119, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -6137,7 +6219,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 123, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -6145,7 +6227,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 139, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }
@@ -6206,7 +6288,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6248,18 +6330,23 @@ p.alert {
  * The box on the homepage featuring upcoming events from the calendar.
  */
 /* line 88, ../src/smacss/modules/_calendars.scss */
+.upcoming-events {
+  max-width: calc(100% - 4ch);
+}
+
+/* line 92, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
 @media screen and (min-width: 32em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -6270,7 +6357,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
@@ -6279,75 +6366,75 @@ p.alert {
   }
 }
 
-/* line 116, ../src/smacss/modules/_calendars.scss */
+/* line 120, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media,
 .upcoming-events-homepage .compound {
   border-bottom: 1px solid #b9afbf;
 }
 
-/* line 121, ../src/smacss/modules/_calendars.scss */
+/* line 125, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media-body,
 .upcoming-events-homepage .compound-body {
   text-align: center;
 }
 
 @media screen and (min-width: 70em) {
-  /* line 126, ../src/smacss/modules/_calendars.scss */
+  /* line 130, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 133, ../src/smacss/modules/_calendars.scss */
+/* line 137, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 
-/* line 152, ../src/smacss/modules/_calendars.scss */
+/* line 156, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 70em) {
-  /* line 152, ../src/smacss/modules/_calendars.scss */
+  /* line 156, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 161, ../src/smacss/modules/_calendars.scss */
+/* line 165, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-list-wrapper {
   overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_calendars.scss */
+  /* line 165, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-list-wrapper {
     overflow-x: visible;
   }
 }
 
-/* line 170, ../src/smacss/modules/_calendars.scss */
+/* line 174, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -6369,7 +6456,7 @@ p.alert {
           scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 170, ../src/smacss/modules/_calendars.scss */
+  /* line 174, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -6382,7 +6469,7 @@ p.alert {
             scroll-snap-type: none;
   }
 }
-/* line 198, ../src/smacss/modules/_calendars.scss */
+/* line 202, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list::after {
   height: 100%;
   width: 100%;
@@ -6394,13 +6481,13 @@ p.alert {
   content: "";
 }
 @media screen and (min-width: 43em) {
-  /* line 198, ../src/smacss/modules/_calendars.scss */
+  /* line 202, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list::after {
     display: none;
   }
 }
 
-/* line 217, ../src/smacss/modules/_calendars.scss */
+/* line 221, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4,
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
@@ -6412,20 +6499,20 @@ p.alert {
           scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
-/* line 234, ../src/smacss/modules/_calendars.scss */
+/* line 238, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4:last-child,
 .grid.upcoming-events-list > .unit-1-7:last-child {
   -webkit-scroll-snap-coordinate: -50% 0;
@@ -6433,7 +6520,7 @@ p.alert {
           scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: -150% 0;
@@ -6442,7 +6529,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: none;
@@ -6452,7 +6539,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 247, ../src/smacss/modules/_calendars.scss */
+  /* line 251, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4 {
     width: 25%;
     -webkit-flex-shrink: 1;
@@ -6462,7 +6549,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 257, ../src/smacss/modules/_calendars.scss */
+  /* line 261, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -6471,7 +6558,7 @@ p.alert {
   }
 }
 
-/* line 267, ../src/smacss/modules/_calendars.scss */
+/* line 271, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
@@ -6481,14 +6568,14 @@ p.alert {
 /**
  * 3. Schedule of Events
  */
-/* line 276, ../src/smacss/modules/_calendars.scss */
+/* line 280, ../src/smacss/modules/_calendars.scss */
 .schedule {
   border: 1px solid #c8c1cd;
   margin: 0.535714285714286em 0 1.071428571428571em;
   border-radius: 2px;
 }
 
-/* line 284, ../src/smacss/modules/_calendars.scss */
+/* line 288, ../src/smacss/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -6504,46 +6591,46 @@ p.alert {
   }*/
 }
 
-/* line 299, ../src/smacss/modules/_calendars.scss */
+/* line 303, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 302, ../src/smacss/modules/_calendars.scss */
+/* line 306, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 306, ../src/smacss/modules/_calendars.scss */
+/* line 310, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(odd) {
   background-color: #ebede9;
 }
-/* line 310, ../src/smacss/modules/_calendars.scss */
+/* line 314, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(even) {
   background-color: #e4e9e0;
 }
-/* line 314, ../src/smacss/modules/_calendars.scss */
+/* line 318, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required .p-name {
   color: #46502b;
 }
 
-/* line 319, ../src/smacss/modules/_calendars.scss */
+/* line 323, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-morning {
   background-color: #fdf4b6;
 }
 
-/* line 325, ../src/smacss/modules/_calendars.scss */
+/* line 329, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(odd) {
   background-color: #e6edf2;
 }
-/* line 329, ../src/smacss/modules/_calendars.scss */
+/* line 333, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(even) {
   background-color: #dae7f2;
 }
-/* line 333, ../src/smacss/modules/_calendars.scss */
+/* line 337, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening .p-name {
   color: #00365f;
 }
 
-/* line 338, ../src/smacss/modules/_calendars.scss */
+/* line 342, ../src/smacss/modules/_calendars.scss */
 .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -6552,7 +6639,7 @@ p.alert {
   content: "Evening Events";
 }
 
-/* line 350, ../src/smacss/modules/_calendars.scss */
+/* line 354, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before,
 .schedule-event-group-required::before {
   border-width: 0 0 1px;
@@ -6562,13 +6649,13 @@ p.alert {
   border-style: solid;
 }
 
-/* line 363, ../src/smacss/modules/_calendars.scss */
+/* line 367, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before {
   border-bottom-color: #64933a;
   content: "Geoducks@Nite";
 }
 
-/* line 370, ../src/smacss/modules/_calendars.scss */
+/* line 374, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite {
   background-color: #ebede9;
 }
@@ -6576,17 +6663,17 @@ p.alert {
 /*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
 	background-color: mix($tint, $evergreen-neue, 90%);
 }*/
-/* line 379, ../src/smacss/modules/_calendars.scss */
+/* line 383, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite .p-name {
   color: #283b17;
 }
 
-/* line 383, ../src/smacss/modules/_calendars.scss */
+/* line 387, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required::before {
   border-bottom-color: #600f21;
 }
 
-/* line 388, ../src/smacss/modules/_calendars.scss */
+/* line 392, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required {
   background-color: #ebe7e8;
 }
@@ -6594,12 +6681,12 @@ p.alert {
 /*.schedule-event-group-required .h-event:nth-child(even){
 	background-color: mix($tint, $wine, 90%);
 }*/
-/* line 397, ../src/smacss/modules/_calendars.scss */
+/* line 401, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required .p-name {
   color: #26060d;
 }
 
-/* line 401, ../src/smacss/modules/_calendars.scss */
+/* line 405, ../src/smacss/modules/_calendars.scss */
 .schedule-event-time {
   border-bottom: 1px solid #9ca18f;
   padding-right: 1em;
@@ -6612,7 +6699,7 @@ p.alert {
  *
  * The section that says, “This is Week X”.
  */
-/* line 416, ../src/smacss/modules/_calendars.scss */
+/* line 420, ../src/smacss/modules/_calendars.scss */
 .bulletin {
   border-bottom: 1px solid #aea3b6;
   background-color: #e1dee3;
@@ -6620,25 +6707,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 416, ../src/smacss/modules/_calendars.scss */
+  /* line 420, ../src/smacss/modules/_calendars.scss */
   .bulletin {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
-/* line 428, ../src/smacss/modules/_calendars.scss */
+/* line 432, ../src/smacss/modules/_calendars.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 433, ../src/smacss/modules/_calendars.scss */
+/* line 437, ../src/smacss/modules/_calendars.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 437, ../src/smacss/modules/_calendars.scss */
+/* line 441, ../src/smacss/modules/_calendars.scss */
 .bulletin-header,
 .bulletin-body {
   padding-left: 1em;
@@ -6646,30 +6733,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 443, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 443, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 452, ../src/smacss/modules/_calendars.scss */
+/* line 456, ../src/smacss/modules/_calendars.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 452, ../src/smacss/modules/_calendars.scss */
+  /* line 456, ../src/smacss/modules/_calendars.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 465, ../src/smacss/modules/_calendars.scss */
+/* line 469, ../src/smacss/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -6680,7 +6767,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 465, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -6692,7 +6779,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 465, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -6705,7 +6792,7 @@ p.alert {
   }
 }
 
-/* line 492, ../src/smacss/modules/_calendars.scss */
+/* line 496, ../src/smacss/modules/_calendars.scss */
 .chrono-meter > li {
   border: 1px solid #aea3b6;
   height: 7.5px;
@@ -6713,7 +6800,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 492, ../src/smacss/modules/_calendars.scss */
+  /* line 496, ../src/smacss/modules/_calendars.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -6722,31 +6809,31 @@ p.alert {
   }
 }
 
-/* line 511, ../src/smacss/modules/_calendars.scss */
+/* line 515, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-current {
   background-color: #d0cad4;
 }
 
-/* line 516, ../src/smacss/modules/_calendars.scss */
+/* line 520, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-complete {
   background-color: #aea3b6;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 521, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 521, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 531, ../src/smacss/modules/_calendars.scss */
+  /* line 535, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6755,7 +6842,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 537, ../src/smacss/modules/_calendars.scss */
+  /* line 541, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar > li {
     padding-left: 1em;
     width: 33.333333333%;
@@ -6782,10 +6869,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d. Calendar Week and Month View
- *  e. Single Day
- *  f. Multi-day
- *  g. Events By Category
+ *  d.    Calendar Week and Month View
+ *  e.    Single Day
+ *  f.    Multi-day
+ *  g.    Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7110,7 +7197,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7296,30 +7383,30 @@ p.alert {
  *
  * A single event’s individual page with all event details and a summary.
  */
-/* line 558, ../src/smacss/modules/_calendars.scss */
+/* line 562, ../src/smacss/modules/_calendars.scss */
 .event-details {
   font-weight: bold;
 }
 
-/* line 562, ../src/smacss/modules/_calendars.scss */
+/* line 566, ../src/smacss/modules/_calendars.scss */
 .event-description {
   margin-top: calc(2.14285714285714em);
   margin-bottom: calc(2.14285714285714em);
 }
 @media screen and (min-width: 43em) {
-  /* line 562, ../src/smacss/modules/_calendars.scss */
+  /* line 566, ../src/smacss/modules/_calendars.scss */
   .event-description {
     margin-top: calc(2.8125);
     margin-bottom: calc(2.8125);
   }
 }
 
-/* line 572, ../src/smacss/modules/_calendars.scss */
+/* line 576, ../src/smacss/modules/_calendars.scss */
 .event-sponsor {
   font-style: italic;
 }
 
-/* line 576, ../src/smacss/modules/_calendars.scss */
+/* line 580, ../src/smacss/modules/_calendars.scss */
 .field-flyer {
   border: 1px solid #a1a1a1;
   padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
@@ -7329,15 +7416,15 @@ p.alert {
 /**
  * O. News
  */
-/* line 312, ../src/smacss/_modules.scss */
+/* line 305, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 322, ../src/smacss/_modules.scss */
+/* line 315, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
-  width: calc(100% - 2em);
+  width: calc(100% - 4ch);
 }
 
 /**
@@ -7346,13 +7433,13 @@ p.alert {
  * think in this case, it’s warranted because there is a link under every
  * article. See also: nytimes.com and washingtonpost.com.
  */
-/* line 334, ../src/smacss/_modules.scss */
+/* line 327, ../src/smacss/_modules.scss */
 .news-title-link a {
   border-bottom-width: 0;
   color: #000;
 }
 
-/* line 341, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7372,7 +7459,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 358, ../src/smacss/_modules.scss */
+/* line 351, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7388,7 +7475,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 367, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7397,13 +7484,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 374, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 374, ../src/smacss/_modules.scss */
+  /* line 367, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7411,7 +7498,7 @@ p.alert {
   }
 }
 
-/* line 384, ../src/smacss/_modules.scss */
+/* line 377, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7534,7 +7621,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 404, ../src/smacss/_modules.scss */
+/* line 397, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7542,7 +7629,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 414, ../src/smacss/_modules.scss */
+/* line 407, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7561,24 +7648,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 433, ../src/smacss/_modules.scss */
+/* line 426, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 437, ../src/smacss/_modules.scss */
+/* line 430, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 445, ../src/smacss/_modules.scss */
+/* line 438, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 453, ../src/smacss/_modules.scss */
+/* line 446, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7589,30 +7676,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 464, ../src/smacss/_modules.scss */
+/* line 457, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 468, ../src/smacss/_modules.scss */
+/* line 461, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 468, ../src/smacss/_modules.scss */
+  /* line 461, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 468, ../src/smacss/_modules.scss */
+  /* line 461, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 474, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7624,7 +7711,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 493, ../src/smacss/_modules.scss */
+/* line 486, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7632,7 +7719,7 @@ p.alert {
   display: block;
 }
 
-/* line 502, ../src/smacss/_modules.scss */
+/* line 495, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
@@ -7781,7 +7868,15 @@ p.alert {
  * 
  * modules/_media-segment
  * ----------------------
- * .media-img-alt  Use .media-child-alt
+ * Do not use .media properties; they clash with the Drupal Media module.
+ * Instead, use the matching .compound property.
+ * .media          Use .compound
+ * .media-img      Use .compound-img
+ * .media-body     Use .compound-body
+ * Et cetera
+ *
+ * Note the following special consideration:
+ * .media-img-alt  Use .compound-child-alt
  *
  * modules/_search
  * ---------------
