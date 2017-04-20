@@ -68,9 +68,19 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * New Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -189,12 +199,16 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -540,7 +554,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -668,6 +682,7 @@ a,
   color: #492c5d;
   font-weight: bold;
   text-decoration: none;
+  -webkit-transition: color 0.2s, border-color 0.2s ease;
   transition: color 0.2s, border-color 0.2s ease;
 }
 
@@ -748,7 +763,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 436, ../src/smacss/base/_typography.scss */
@@ -1165,6 +1180,11 @@ select:hover {
 }
 
 /* line 111, ../src/smacss/base/_forms.scss */
+.tertiary-nav-wrapper .form-type-select select {
+  width: 100%;
+}
+
+/* line 115, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1172,13 +1192,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/base/_forms.scss */
+  /* line 115, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 124, ../src/smacss/base/_forms.scss */
+/* line 128, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1189,7 +1209,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 124, ../src/smacss/base/_forms.scss */
+  /* line 128, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1197,7 +1217,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 124, ../src/smacss/base/_forms.scss */
+  /* line 128, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1207,20 +1227,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 149, ../src/smacss/base/_forms.scss */
+/* line 153, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 149, ../src/smacss/base/_forms.scss */
+  /* line 153, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 158, ../src/smacss/base/_forms.scss */
+/* line 162, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1228,7 +1248,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 158, ../src/smacss/base/_forms.scss */
+  /* line 162, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1.25em);
@@ -1238,112 +1258,55 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  */
-/**
- * 2. Views Module Forms
- *
- * Forms in Drupal’s Views module. It's worth cross-checking changes you
- * make here with a few different form pages, because this stuff gets weird
- * and unpredictable.
- *
- * Add to this list as you find more weirdness.
- *
- * Left-nav fiters: http://evergreen.edu/catalog/index/ug
- * Main content filters: http://evergreen.edu/activities/groups
- *
- * Table of Contents
- *
- * a. Views Exposed Widget
- * b. Secondary Options
- */
-/**
- * b. Views Exposed Widget
- *
- * These are the bulk of the form widgets in the Views-type forms.
- */
-/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
-  display: block;
+  display: inline-block;
 }
 
-/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget {
-  /* box model */
-  margin: 0.535714285714286em 0 1.071428571428571em;
-  padding: 0;
-  /* layout */
-  float: none;
+/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
 }
 
-/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-widget input,
-.views-exposed-widget select {
-  margin-top: 0;
+/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
   margin-bottom: 0;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
-.tertiary-nav-wrapper .form-type-select select {
-  width: 100%;
-}
-
-/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin: 0;
-  	/*margin-top: calc(20 / 16 * 1rem);
-  
-  	@include breakpoint($gamora){
-  		margin-top: calc(22.5 / 16 * 1rem);
-  	}*/
-}
-
-/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}*/
-/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/**
- * b. Secondary Options
- *
- * Better Exposed Filters offeres a place to put “advanced” options. For
- * whatever reason, these options don't follow the same pattern as the rest
- * of the form fields, so they need special rules.
- */
-/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
-.bef-secondary-options .form-select {
-  margin-bottom: calc(15 / 16 * 1rem);
+/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-widget {
+  padding: 0;
 }
 
 /**
  * 3. Webform Module
  */
 /**
- * 3. Webform Module
- *
- * Table of Contents
- *
- * a. Webform Forms
- * b. Checkboxes and Radios
- * c. Textareas
- * d. Grid
- * e. Buttons
- *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1351,34 +1314,34 @@ input[type="radio"] + label {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
-  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1387,45 +1350,51 @@ input[type="radio"] + label {
   }
 }
 
-/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * b. Checkboxes And Radios
+ * Checkboxes And Radios
  */
-/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
+/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio {
+  float: none;
+}
+
 /**
- * c. Textareas
+ * Textareas
  */
-/* line 96, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1433,24 +1402,7 @@ input[type="radio"] + label {
 }
 
 /**
- * d. Grid
- *
- * A form grid that's useful for sliding scales, e.g. tracking a range from
- * unsatisfied to satisfied.
- */
-/* line 108, ../src/smacss/base/forms/_drupal-webform.scss */
-.checkbox.webform-grid-option {
-  text-align: center;
-}
-
-/* line 112, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-grid-option .form-radio,
-.webform-grid-option .form-checkbox {
-  float: none;
-}
-
-/**
- * e. Buttons
+ * Buttons
  */
 /**
  * 4. Search
@@ -1545,6 +1497,7 @@ input[type="submit"] {
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #d0cad4;
+  background-image: -webkit-linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
   background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
   border-radius: 0.2em;
   box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
@@ -1567,6 +1520,7 @@ input[type="button"]:hover,
 input[type="submit"]:hover {
   color: #2c1a38;
   background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
   background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
   border-color: #8d7b99;
 }
@@ -1586,6 +1540,7 @@ button:active,
 input[type="button"]:active,
 input[type="submit"]:active {
   background-color: #8d7b99;
+  background-image: -webkit-linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
   background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
   box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
@@ -1605,6 +1560,7 @@ input.prime,
   color: #f2f2f2;
   text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #64933a;
+  background-image: -webkit-linear-gradient(#a1ba6c, #64933a);
   background-image: linear-gradient(#a1ba6c, #64933a);
   border-color: #46502b;
 }
@@ -1616,6 +1572,7 @@ input.prime:hover,
   color: #46502b;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #80a65f;
+  background-image: -webkit-linear-gradient(#c0cd84, #80a65f);
   background-image: linear-gradient(#c0cd84, #80a65f);
   border-bottom-color: #46502b;
 }
@@ -1632,6 +1589,7 @@ input.prime:focus,
 input.prime:active,
 .webform-client-form .button-primary:active {
   background-color: #9db984;
+  background-image: -webkit-linear-gradient(#64933a, #83a653);
   background-image: linear-gradient(#64933a, #83a653);
 }
 
@@ -1743,12 +1701,14 @@ a:link,
 .grid,
 .grid.element-list {
   margin-left: -2ch;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1761,6 +1721,7 @@ a:link,
 
 /* line 45, ../src/smacss/layout/_grid.scss */
 .grid-alt {
+  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2032,7 +1993,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2043,7 +2003,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2052,7 +2011,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2060,7 +2018,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2069,14 +2027,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2085,14 +2043,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2124,6 +2082,7 @@ a:link,
 }
 /* line 49, ../src/smacss/_layout.scss */
 .wrapper.grid, .wrapper.grid-alt {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2151,6 +2110,7 @@ a:link,
 [role="banner"],
 body > div + header,
 .header-nav-wrapper {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2166,6 +2126,8 @@ body > div + header,
   [role="banner"],
   body > div + header,
   .header-nav-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
     -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
@@ -2174,6 +2136,7 @@ body > div + header,
 
 /* line 91, ../src/smacss/_layout.scss */
 .page-header {
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
@@ -2602,7 +2565,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -2686,12 +2649,14 @@ input[name="header-toggle"] {
 input + .header-dropdown {
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
 /* line 52, ../src/smacss/modules/_header.scss */
 input:checked + .header-dropdown {
   max-height: 8em;
+  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
@@ -3029,9 +2994,11 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 20em) {
   /* line 353, ../src/smacss/modules/_header.scss */
   .top-nav-list {
+    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3070,12 +3037,15 @@ input:checked + .header-dropdown {
   /* line 405, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
+    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -3090,6 +3060,7 @@ input:checked + .header-dropdown {
   /* line 405, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
+    -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -3120,6 +3091,7 @@ input:checked + .header-dropdown {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
+  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 /* line 459, ../src/smacss/modules/_header.scss */
@@ -3134,12 +3106,15 @@ input:checked + .header-dropdown {
   .top-nav-list a,
   .secondary-nav-link {
     padding: calc(7.5 / 16 * 1rem) 0.5ch;
+    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3209,9 +3184,11 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 20em) {
   /* line 508, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
+    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3221,6 +3198,7 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 22em) {
   /* line 508, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
+    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -3290,12 +3268,15 @@ input:checked + .header-dropdown {
   .secondary-nav-link, .secondary-nav-link:visited,
   .secondary-nav-list a,
   .secondary-nav-list a:visited {
+    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3344,6 +3325,7 @@ input:checked + .header-dropdown {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
+  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 /* line 626, ../src/smacss/modules/_header.scss */
@@ -3476,7 +3458,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3501,13 +3483,15 @@ input:checked + .header-dropdown {
  * 3. Copy
  * 4. Copy Modifiers
  */
-/* line 25, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero {
+/* line 24, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero,
+.homepage-hero-content {
   height: 100%;
   overflow: hidden;
 }
+
 @media screen and (min-width: 20em) {
-  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
@@ -3515,24 +3499,24 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     display: table;
   }
 }
 
-/* line 43, ../src/smacss/modules/_homepage-hero.scss */
+/* line 46, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-picture img {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 43, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 46, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-picture img {
     width: 100%;
   }
 }
 
-/* line 52, ../src/smacss/modules/_homepage-hero.scss */
+/* line 55, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img {
   margin-left: -50%;
   width: 200%;
@@ -3540,32 +3524,32 @@ input:checked + .header-dropdown {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 60, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 63, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 68, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 71, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -10%;
     width: 120%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 75, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 78, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: 0;
     width: 100%;
   }
 }
-/* line 81, ../src/smacss/modules/_homepage-hero.scss */
+/* line 84, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-alt .homepage-hero-img {
   margin-left: 0;
 }
 
-/* line 86, ../src/smacss/modules/_homepage-hero.scss */
+/* line 89, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3574,7 +3558,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 94, ../src/smacss/modules/_homepage-hero.scss */
+/* line 97, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3582,77 +3566,63 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 105, ../src/smacss/modules/_homepage-hero.scss */
+/* line 108, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
-@media screen and (min-width: 32em) {
-  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    font-size: calc(1rem + 1vh);
-    line-height: 1.5;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    float: right;
-  }
-}
 @media screen and (min-width: 70em) {
-  /* line 94, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 125, ../src/smacss/modules/_homepage-hero.scss */
+/* line 118, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
-  height: 100%;
   width: 100%;
-  max-width: 77em;
-  overflow: hidden;
+  max-width: 82em;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 32em) {
-  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 25em) {
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 125, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 156, ../src/smacss/modules/_homepage-hero.scss */
+/* line 145, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 32em) {
-  /* line 156, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 20em) {
+  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3668,54 +3638,55 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 175, ../src/smacss/modules/_homepage-hero.scss */
+/* line 164, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
+  -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 179, ../src/smacss/modules/_homepage-hero.scss */
+/* line 168, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 183, ../src/smacss/modules/_homepage-hero.scss */
+/* line 172, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 183, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 199, ../src/smacss/modules/_homepage-hero.scss */
+/* line 188, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 203, ../src/smacss/modules/_homepage-hero.scss */
+/* line 192, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 203, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
@@ -3724,68 +3695,61 @@ input:checked + .header-dropdown {
 /**
  * 3. Copy
  */
-/* line 219, ../src/smacss/modules/_homepage-hero.scss */
+/* line 208, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy {
   margin: 0 calc(15 / 14 * 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc(66.6666666667% - 2ch);
+    width: calc(66.6666666667% - 1em);
+    float: left;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    margin: 0 2ch;
-    width: calc(50% - 2ch);
+    margin: 0 1em;
+    width: calc(50% - 1em);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
-@media screen and (min-width: 43em) {
-  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-copy {
-    margin: 33% auto 0;
-    width: 90vw;
-    max-width: calc(100% - 4ch);
-  }
-}
 @media screen and (min-width: 70em) {
-  /* line 219, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: 70vw;
+    width: calc((3 / 7 * 100%) - 1em);
   }
 }
 
-/* line 251, ../src/smacss/modules/_homepage-hero.scss */
+/* line 232, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 251, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 274, ../src/smacss/modules/_homepage-hero.scss */
+/* line 255, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy img {
   width: 100%;
 }
@@ -3802,7 +3766,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3811,7 +3775,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3820,7 +3784,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 304, ../src/smacss/modules/_homepage-hero.scss */
+/* line 285, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   height: 100%;
   margin: 0;
@@ -3828,34 +3792,36 @@ input:checked + .header-dropdown {
   width: 66.6666666667%;
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
-  	/*@include breakpoint($drax){
-  		width: calc(3 / 7 * 100%);
-  	}
-  
-  	@include breakpoint($groot){
-  		padding: 0 calc(30 / 19.23333333333 * 1em);
-  	}*/
 }
 @media screen and (min-width: 22em) {
-  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     height: auto;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 304, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    margin: 5em 2ch 0;
-    padding: 0;
-    width: calc(100% - 4ch);
-    background-color: transparent;
+    padding: 0 calc(15 / 17 * 1em);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(30 / 19.23333333333 * 1em);
   }
 }
 
@@ -4114,6 +4080,7 @@ input:checked + .header-dropdown {
 
 /* line 206, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"] + .accordion-h label::before {
+  -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
@@ -4124,6 +4091,7 @@ input:checked + .header-dropdown {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
@@ -4178,6 +4146,7 @@ input:checked + .header-dropdown {
   overflow: hidden;
   background-color: rgba(242, 242, 242, 0.25);
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
+  -webkit-transition: max-height 0.25s ease 0s;
   transition: max-height 0.25s ease 0s;
 }
 @media screen and (min-width: 43em) {
@@ -4204,7 +4173,8 @@ input:checked + .header-dropdown {
 /* line 289, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .accordion-body {
   max-height: 500px;
-  transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
 }
 @media screen and (min-width: 43em) {
   /* line 289, ../src/smacss/modules/_tertiary-nav.scss */
@@ -4387,26 +4357,36 @@ ul.accordion-inner {
 }
 
 /* line 204, ../src/smacss/_modules.scss */
+.byline {
+  color: #283b17;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+}
+
+/* line 211, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 204, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 204, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 218, ../src/smacss/_modules.scss */
+/* line 225, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4416,24 +4396,24 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 218, ../src/smacss/_modules.scss */
+  /* line 225, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 235, ../src/smacss/_modules.scss */
+/* line 242, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 239, ../src/smacss/_modules.scss */
+/* line 246, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 243, ../src/smacss/_modules.scss */
+/* line 250, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4442,7 +4422,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 243, ../src/smacss/_modules.scss */
+  /* line 250, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4519,6 +4499,7 @@ ul.accordion-inner {
  */
 /* line 70, ../src/smacss/modules/_lists.scss */
 .lineup {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4548,12 +4529,14 @@ ul.accordion-inner {
 /* line 95, ../src/smacss/modules/_lists.scss */
 .pager {
   margin-left: 0;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -4562,6 +4545,7 @@ ul.accordion-inner {
 @media screen and (min-width: 32em) {
   /* line 95, ../src/smacss/modules/_lists.scss */
   .pager {
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -4602,6 +4586,7 @@ ul.accordion-inner {
   background-color: #e1dee3;
   border-color: #d0cad4;
   border-top-color: #311d3e;
+  -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
 
@@ -4904,6 +4889,7 @@ ul.accordion-inner {
 @media screen and (min-width: 32em) {
   /* line 427, ../src/smacss/modules/_lists.scss */
   .alpha-index {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -4940,9 +4926,11 @@ ul.accordion-inner {
  */
 /* line 478, ../src/smacss/modules/_lists.scss */
 .badge-list {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4990,7 +4978,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 263, ../src/smacss/_modules.scss */
+/* line 270, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -5038,6 +5026,8 @@ ul.accordion-inner {
 /* line 38, ../src/smacss/modules/_icons.scss */
 .transporter {
   padding: 0 1ch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5045,6 +5035,8 @@ ul.accordion-inner {
 @media screen and (min-width: 20em) {
   /* line 38, ../src/smacss/modules/_icons.scss */
   .transporter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -5082,6 +5074,7 @@ ul.accordion-inner {
 
 /* line 82, ../src/smacss/modules/_icons.scss */
 .transporter > li:nth-child(4) {
+  -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1;
@@ -5089,6 +5082,7 @@ ul.accordion-inner {
 @media screen and (min-width: 20em) {
   /* line 82, ../src/smacss/modules/_icons.scss */
   .transporter > li:nth-child(4) {
+    -webkit-box-ordinal-group: NaN;
     -webkit-order: initial;
         -ms-flex-order: initial;
             order: initial;
@@ -5163,6 +5157,7 @@ ul.accordion-inner {
   color: #f2f2f2;
   text-align: center;
   border-radius: 50%;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
@@ -5188,6 +5183,7 @@ ul.accordion-inner {
 /* line 170, ../src/smacss/modules/_icons.scss */
 .transporter-icon img {
   display: block;
+  -webkit-transition: -webkit-transform 0.1s ease;
   transition: -webkit-transform 0.1s ease;
   transition: transform 0.1s ease;
   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
@@ -5297,6 +5293,7 @@ div.ajax-progress {
 /* line 30, ../src/smacss/modules/_compound-segment.scss */
 .media,
 .compound {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5341,6 +5338,7 @@ div.ajax-progress {
 /* line 65, ../src/smacss/modules/_compound-segment.scss */
 .media-body,
 .compound-body {
+  -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -5370,6 +5368,8 @@ div.ajax-progress {
 /* line 92, ../src/smacss/modules/_compound-segment.scss */
 .media-alt,
 .compound-alt {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
@@ -5456,9 +5456,12 @@ div.ajax-progress {
 .media-squishy,
 .compound-column,
 .compound-squishy {
+  -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5468,9 +5471,12 @@ div.ajax-progress {
   /* line 178, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
+    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -5534,12 +5540,16 @@ div.ajax-progress {
 /* line 15, ../src/smacss/modules/_spread-segment.scss */
 .spread {
   margin: 4.28571428571429em auto;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5547,6 +5557,8 @@ div.ajax-progress {
 @media screen and (min-width: 70em) {
   /* line 15, ../src/smacss/modules/_spread-segment.scss */
   .spread {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -5747,6 +5759,7 @@ p.alert {
   width: 100%;
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
   border-radius: 0;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
@@ -5802,12 +5815,16 @@ p.alert {
   margin-right: auto;
   margin-left: auto;
   padding: 0 1ch;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5818,6 +5835,8 @@ p.alert {
   /* line 178, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -6098,8 +6117,6 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -6112,22 +6129,18 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 44, ../src/smacss/modules/_images.scss */
+/* line 42, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -6135,11 +6148,9 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -6148,7 +6159,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6160,14 +6171,14 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 83, ../src/smacss/modules/_images.scss */
+  /* line 79, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
@@ -6176,7 +6187,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6186,7 +6197,7 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 93, ../src/smacss/modules/_images.scss */
+  /* line 90, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
@@ -6194,10 +6205,8 @@ p.alert {
     margin-right: -3ch;
     max-width: calc(50% + 4ch);
   }
-}
 
-@media screen and (min-width: 70em) {
-  /* line 105, ../src/smacss/modules/_images.scss */
+  /* line 99, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -6206,9 +6215,8 @@ p.alert {
     float: left;
   }
 }
-
 @media screen and (min-width: 43em) {
-  /* line 119, ../src/smacss/modules/_images.scss */
+  /* line 111, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -6219,7 +6227,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 123, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -6227,7 +6235,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 139, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }
@@ -6288,7 +6296,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6439,6 +6447,7 @@ p.alert {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -6461,6 +6470,7 @@ p.alert {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6578,9 +6588,12 @@ p.alert {
 /* line 288, ../src/smacss/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -6720,6 +6733,7 @@ p.alert {
 
 /* line 437, ../src/smacss/modules/_calendars.scss */
 .bulletin .grid {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6759,9 +6773,11 @@ p.alert {
 /* line 469, ../src/smacss/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -6771,6 +6787,8 @@ p.alert {
   .chrono-meter {
     margin-right: 1em;
     width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -6783,9 +6801,12 @@ p.alert {
   .chrono-meter {
     margin-right: 0;
     width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -6835,6 +6856,7 @@ p.alert {
 @media screen and (min-width: 43em) {
   /* line 535, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -6869,10 +6891,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7122,12 +7144,15 @@ p.alert {
 .calendar-calendar .day-view .full td.single-day {
   height: inherit;
   margin-bottom: inherit;
+  -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: stretch;
   -webkit-justify-content: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
@@ -7197,7 +7222,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7268,12 +7293,15 @@ p.alert {
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   border-top: 1px solid #d0cad4;
   width: auto;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -7307,9 +7335,11 @@ p.alert {
   height: inherit;
   padding: 0 0.25em 0 0;
   width: auto;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7416,12 +7446,12 @@ p.alert {
 /**
  * O. News
  */
-/* line 305, ../src/smacss/_modules.scss */
+/* line 312, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 315, ../src/smacss/_modules.scss */
+/* line 322, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 4ch);
@@ -7433,24 +7463,28 @@ p.alert {
  * think in this case, it’s warranted because there is a link under every
  * article. See also: nytimes.com and washingtonpost.com.
  */
-/* line 327, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news-title-link a {
   border-bottom-width: 0;
   color: #000;
 }
 
-/* line 334, ../src/smacss/_modules.scss */
+/* line 341, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
   margin-bottom: 1em;
   padding: 1em 1em 0;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -7459,14 +7493,18 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 351, ../src/smacss/_modules.scss */
+/* line 358, ../src/smacss/_modules.scss */
 .news-story footer {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -7475,7 +7513,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 360, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7484,13 +7522,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 367, ../src/smacss/_modules.scss */
+/* line 374, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 367, ../src/smacss/_modules.scss */
+  /* line 374, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7498,7 +7536,7 @@ p.alert {
   }
 }
 
-/* line 377, ../src/smacss/_modules.scss */
+/* line 384, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7621,7 +7659,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 397, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7629,16 +7667,19 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 407, ../src/smacss/_modules.scss */
+/* line 414, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -7648,24 +7689,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 426, ../src/smacss/_modules.scss */
+/* line 433, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 430, ../src/smacss/_modules.scss */
+/* line 437, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 438, ../src/smacss/_modules.scss */
+/* line 445, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 446, ../src/smacss/_modules.scss */
+/* line 453, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7676,30 +7717,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 457, ../src/smacss/_modules.scss */
+/* line 464, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 461, ../src/smacss/_modules.scss */
+/* line 468, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 461, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 461, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 474, ../src/smacss/_modules.scss */
+/* line 481, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7711,7 +7752,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 486, ../src/smacss/_modules.scss */
+/* line 493, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7719,7 +7760,7 @@ p.alert {
   display: block;
 }
 
-/* line 495, ../src/smacss/_modules.scss */
+/* line 502, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
@@ -7764,6 +7805,7 @@ p.alert {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -7868,15 +7910,7 @@ p.alert {
  * 
  * modules/_media-segment
  * ----------------------
- * Do not use .media properties; they clash with the Drupal Media module.
- * Instead, use the matching .compound property.
- * .media          Use .compound
- * .media-img      Use .compound-img
- * .media-body     Use .compound-body
- * Et cetera
- *
- * Note the following special consideration:
- * .media-img-alt  Use .compound-child-alt
+ * .media-img-alt  Use .media-child-alt
  *
  * modules/_search
  * ---------------
