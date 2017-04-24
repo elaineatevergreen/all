@@ -3763,7 +3763,7 @@ return($term); ';
   $handler->display->display_options['fields']['field_room']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_room']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_room']['element_default_classes'] = FALSE;
-  /* Field: Content: Location: Off Campus */
+  /* Field: Content: Location Off Campus */
   $handler->display->display_options['fields']['field_location_off_campus']['id'] = 'field_location_off_campus';
   $handler->display->display_options['fields']['field_location_off_campus']['table'] = 'field_data_field_location_off_campus';
   $handler->display->display_options['fields']['field_location_off_campus']['field'] = 'field_location_off_campus';

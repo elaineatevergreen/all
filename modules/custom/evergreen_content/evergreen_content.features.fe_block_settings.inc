@@ -14,13 +14,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['block-catalog_section_title'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
-    'js' => NULL,
     'machine_name' => 'catalog_section_title',
     'module' => 'block',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -37,13 +34,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['block-directory_section_title'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
-    'js' => NULL,
     'machine_name' => 'directory_section_title',
     'module' => 'block',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -60,13 +54,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['block-faculty_directory_secondary'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
-    'js' => NULL,
     'machine_name' => 'faculty_directory_secondary',
     'module' => 'block',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => 'faculty',
     'roles' => array(),
     'themes' => array(
@@ -83,13 +74,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['block-fields_section_title'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
-    'js' => NULL,
     'machine_name' => 'fields_section_title',
     'module' => 'block',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -106,13 +94,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['search-form'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'form',
-    'js' => NULL,
     'module' => 'search',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -129,13 +114,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['system-navigation'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'navigation',
-    'js' => NULL,
     'module' => 'system',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -152,13 +134,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['system-powered-by'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'powered-by',
-    'js' => NULL,
     'module' => 'system',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -175,13 +154,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views--exp-calendar-page'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => '-exp-calendar-page',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => 'calendar/category*',
     'roles' => array(),
     'themes' => array(
@@ -198,13 +174,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views--exp-calendar_by_date-page_1'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => '-exp-calendar_by_date-page_1',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => 'calendar/month*',
     'roles' => array(),
     'themes' => array(
@@ -221,15 +194,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-alerts-only_alerts'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'alerts-only_alerts',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'home_page',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -246,15 +216,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-blog-home'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'blog-home',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'home_page',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -271,15 +238,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-catalog-offerings_by_faculty'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'catalog-offerings_by_faculty',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'directory_individual',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -296,15 +260,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-catalog-offerings_by_field'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'catalog-offerings_by_field',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'field_of_study',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -321,15 +282,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-home_page_hero-block'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'home_page_hero-block',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'home_page',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -346,15 +304,12 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-news_o_matic-block'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'news_o_matic-block',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'home_page',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -371,13 +326,10 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-secondary_content-block'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'secondary_content-block',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -394,10 +346,8 @@ function evergreen_content_default_fe_block_settings() {
 
   $export['views-site_section_background-block'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'site_section_background-block',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'article',
@@ -409,7 +359,6 @@ function evergreen_content_default_fe_block_settings() {
       6 => 'scholarship',
       7 => 'webform',
     ),
-    'noscript' => NULL,
     'pages' => 'directory*
 catalog*
 calendar*
@@ -430,10 +379,8 @@ faculty/retired',
 
   $export['views-site_section_background-block_1'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'site_section_background-block_1',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'article',
@@ -444,7 +391,6 @@ faculty/retired',
       5 => 'scholarship',
       6 => 'webform',
     ),
-    'noscript' => NULL,
     'pages' => 'directory*
 catalog*
 calendar*
@@ -466,10 +412,8 @@ faculty',
 
   $export['views-site_section_background-block_3'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'site_section_background-block_3',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'article',
@@ -480,7 +424,6 @@ faculty',
       5 => 'scholarship',
       6 => 'webform',
     ),
-    'noscript' => NULL,
     'pages' => '',
     'roles' => array(),
     'themes' => array(
@@ -497,10 +440,8 @@ faculty',
 
   $export['views-site_section_background-nav'] = array(
     'cache' => -1,
-    'css' => NULL,
     'custom' => 0,
     'delta' => 'site_section_background-nav',
-    'js' => NULL,
     'module' => 'views',
     'node_types' => array(
       0 => 'article',
@@ -511,7 +452,6 @@ faculty',
       5 => 'scholarship',
       6 => 'webform',
     ),
-    'noscript' => NULL,
     'pages' => 'directory*
 catalog*
 calendar*

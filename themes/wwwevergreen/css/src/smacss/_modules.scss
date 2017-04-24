@@ -201,6 +201,13 @@
 	font-weight: bold;
 }
 
+.byline{
+	color: mix($shade, $evergreen-neue, 60%);
+	@include small-type;
+	letter-spacing: 0.1ch;
+	text-transform: uppercase;
+}
+
 .big-fact{
 	@include base-type-xl;
 

@@ -26,9 +26,6 @@ function evergreen_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
-  if ($module == "file_entity" && $api == "file_default_displays") {
-    return array("version" => "1");
-  }
   if ($module == "linkit" && $api == "linkit_profiles") {
     return array("version" => "1");
   }
@@ -141,11 +138,11 @@ function evergreen_content_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'api_version' => 3,
     'module' => 'evergreen_content',
     'locked' => array(
       0 => 'name',
     ),
-    'api_version' => 3,
   );
   return $flags;
 
