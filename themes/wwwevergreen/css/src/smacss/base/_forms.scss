@@ -138,7 +138,7 @@ input[type="radio"]{
 
 	@include breakpoint($gamora){
 		height: calc(18 / 16 * 1rem);
-		margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+		margin: calc(2.5 / 16 * 1rem) 0.5ch calc(20 / 16 * 1rem) 0;
 	}
 
 	@include breakpoint($groot){
@@ -163,12 +163,12 @@ input[type="checkbox"] + label,
 input[type="radio"] + label{
 	// box model
 	margin-bottom: (15 / 16 * 1rem);
-	width: calc(100% - 1em - 0.5ch);
+	width: calc(100% - 1em - 0.5ch - 1px);  // -1 extra px to fudge labels into place; I think browsers have somewhat fuzzy widths in form components —jkm
 	// layout
 	float: left;
 
 	@include breakpoint($gamora){
-		width: calc(100% - 1.25em);
+		width: calc(100% - 1em - 0.5ch - 1px);  // -1 extra px to fudge labels into place; I think browsers have somewhat fuzzy widths in form components —jkm
 	}
 }
 
