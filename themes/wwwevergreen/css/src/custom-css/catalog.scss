@@ -221,159 +221,6 @@
 	content: "";
 }
 
-.fall{
-	//layout
-	clear: left;
-
-	&,
-	abbr{
-		// decoration
-		background-color: #c09a00;
-		border-color: #c09a00;
-		//color: mix($tint, #c09a00, 60%);
-	}
-}
-
-.winter{
-	&,
-	abbr{
-		// decoration
-		background-color: mix($shade, $sky-blue, 25%);
-		border-color: mix($shade, $sky-blue, 25%);
-
-		&.closed{
-			// typography
-			color: mix($shade, $sky-blue, 50%);
-			// decoration
-			background-color: mix($tint, $sky-blue, 66%);
-			border-style: dashed;
-		}
-	}
-}
-
-.spring{
-	&,
-	abbr{
-		// decoration
-		background-color: mix($tint, $blueberry-susan, 25%);
-		border-color: mix($tint, $blueberry-susan, 25%);
-
-		&.closed{
-			//typography
-			color: mix($shade, $blueberry-susan, 25%);
-			// decoration
-			background-color: mix($tint, $blueberry-susan, 75%);
-			border-style: dashed;
-		}
-	}
-}
-
-.summer{
-	&,
-	abbr{
-		// decoration
-		background-color: $evergreen-neue;
-		border-color: $evergreen-neue;
-
-		&.closed{
-			//typography
-			color: mix($shade, $evergreen-neue, 25%);
-			// decoration
-			background-color: mix($tint, $evergreen-neue, 50%);
-			border-style: dashed;
-		}
-	}
-}
-
-.summer-session-1{
-	&,
-	abbr{
-		// decoration
-		background-color: $evergreen-old-style;
-		border-color: $evergreen-old-style;
-	}
-}
-
-.summer-session-2{
-	&,
-	abbr{
-		// decoration
-		background-color: $wine;
-		border-color: $wine;
-
-		&.closed{
-			//typography
-			color: mix($shade, $wine, 25%);
-			// decoration
-			background-color: mix($tint, $wine, 50%);
-			border-style: dashed;
-		}
-	}
-}
-
-.fall,
-.winter,
-.spring,
-.summer,
-.summer-session-1,
-.summer-session-2{
-	// box model
-	margin-top: 0.9375rem;
-	width: 25%;
-	// layout
-	float: left;
-	// typography
-	color: $tint;
-	text-align: center;
-
-	abbr{
-		// box model
-		border-width: 1px;
-		//border-bottom-width: 0;
-		padding: 0.234375rem;
-		// layout
-		display: block;
-		// decoration
-		border-radius: 2px;
-		border-style: solid;
-	}
-
-	@media screen and (min-width: 55em){
-		// box model
-		width: auto;
-		// layout
-		float: none;
-		// decoration
-		background-color: transparent;
-	}
-}
-
-.cancelled{
-
-	.fall,
-	.winter,
-	.spring,
-	.summer{
-		// typography
-		color: $shade;
-		// decoration
-		background-color: mix($tint, $blueberry-susan, 80%);
-
-		abbr{
-			background-color: mix($tint, $blueberry-susan, 80%);
-		}
-	}
-
-	@media screen and (min-width: 55em){
-		.fall,
-		.winter,
-		.spring,
-		.summer{
-			background-color: transparent;
-		}
-	}
-}
-
 /**
  * II. Program Pages - Deprecated
  *
@@ -431,10 +278,10 @@
  */
 
 .sticky-header{
-	visibility: hidden;
+	opacity: 0;  // Don't show at non-tabular sizes
 	
 	@include breakpoint($gamora){
-		visibility: visible;
+		opacity: 1;  // Show when the layout becomes a table again
 	}
 }
 
@@ -446,13 +293,13 @@
 	}
 }
 
-/*.view-catalog caption{
+.view-catalog caption{
 	display: block;
 	
 	@include breakpoint($gamora){
 		display: table-caption;
 	}
-}*/
+}
 
 .view-catalog tbody{
 	display: block;
@@ -528,14 +375,11 @@
 	margin: 0.234375rem 1ch 0.234375rem 0;  //3.75px
 	// layout
 	display: inline-block;
-	// typography
-	//color: $tint;
 }
 
 .keyword-list ul > li > a{
 	// box model
 	border-bottom-width: 0;
-	//margin: 0 0.4375rem 0 0;  //7.5px
 	// layout
 	display: block;
 }
@@ -549,7 +393,6 @@
 
 .keyword-list ul > li > a:hover{
 	color: mix($tint, $blueberry-susan, 25%);
-	//background-color: $blueberry-susan;
 }
 
 .keyword-list ul > li > a:before{
@@ -859,6 +702,7 @@
 	
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
+	height: auto;
 	margin: 0 0 calc(15 / 16 * 1rem);
 	padding: 0 1ch;
 	max-width: 100%;
@@ -876,6 +720,8 @@
 	// box model
 	border-width: 1px;
 	padding: 0.25em 0;
+	// typography
+	line-height: 1.07142857142857;  // 15/14, slightly compressed compared to $base-type so that multi-line legends are clickable in between lines
 	// decoration
 	background-color: $tint;
 	background-image: linear-gradient(white 75%, $tint);

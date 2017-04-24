@@ -173,13 +173,14 @@ p.alert{  // WYSIWYG
  *   |      item-1-2)      |      item-2-2)      |
  *   |                                           |
  *   +-------------------------------------------+
- * Seen on New Student Orientation: http://www.evergreen.edu/events/orientation/
+ * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
 .action-box{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 80%);
 	margin-right: auto;
 	margin-left: auto;
+	padding: 0 1ch;
 	// layout
 	align-items: center;
 	display: flex;
@@ -190,11 +191,14 @@ p.alert{  // WYSIWYG
 	background: $tint none;
 
 	@include breakpoint($lil-groot){
-		flex-direction: row;
+		//flex-direction: row;
 	}
 
 	@include breakpoint($starlord){
+		// box model
 		width: 75%;
+		// layout
+		flex-direction: row;
 	}
 }
 
@@ -202,20 +206,85 @@ p.alert{  // WYSIWYG
 	margin: 0 auto;
 }
 
-.action-item-1-2,
+/*.action-item-1-2,
 .action-item-2-2{
 	float: left;
-}
+}*/
 
 .action-item-1-2{
-	border-right: 1px solid mix($tint, $blueberry-susan, 80%);
-	padding-right: 1em;
-	width: 50%;
+	
+	@include breakpoint($starlord){
+		// box model
+		border-width: 0 1px 0 0;
+		padding-right: 1ch;
+		// layout
+		flex-basis: 50%;
+		// decoration
+		border-color: mix($tint, $blueberry-susan, 80%);
+		border-style: solid;
+	}
 }
 
 .action-item-2-2{
-	margin-left: 1em;
-	width: calc(50% - 1em);
+	// box model
+	margin-left: 1ch;
+	// layout
+	flex-basis: calc(50% - 1ch);
+}
+
+.action-box-full{
+	// box model
+	width: 100%;
+}
+
+/*.action-box-full .action-item-1-2,
+.action-box-full .action-item-2-2{
+	flex-basis: 100%;
+}
+
+.action-box-full .action-item-1-2{
+	border-width: 0 0 1px 0;
+}*/
+
+/**
+ * Three calls-to-action:
+ * 
+ * Three calls-to-action should only be used with .action-box-full.
+ *
+ *   +---------------------+---------------------+---------------------+
+ *   |                     |                     |                     |
+ *   |   Primary call-to-  |  Secondary call-to- |  Tertiary call-to-  |
+ *   |   action (.action-  |   action (.action-  |   action (.action-  |
+ *   |      item-1-3)      |      item-2-3)      |      item-3-3)      |
+ *   |                     |                     |                     |
+ *   +---------------------+---------------------+---------------------+
+ * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
+ */
+
+.action-box-full .action-item-1-3,  // Scopes these to .action-box-full only
+.action-box-full .action-item-2-3,
+.action-box-full .action-item-3-3{
+	// box model
+	border: 0 solid mix($tint, $blueberry-susan, 80%);
+	// layout
+	flex-basis: 33.3333333333%;
+}
+
+.action-box-full .action-item-1-3{
+	
+	@include breakpoint($starlord){
+		border-right-width: 1px;
+		padding-right: 1ch;
+	}
+}
+
+.action-box-full .action-item-2-3{
+	
+	@include breakpoint($starlord){
+		border-right-width: 1px;
+		padding-right: 1ch;
+		padding-left: 1ch;
+	}
 }
 
 .action-call{

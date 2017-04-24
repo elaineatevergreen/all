@@ -388,6 +388,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	@include breakpoint($drax){
 		// box model
 		border-bottom-width: 0;
+		padding-right: 1em;
 		width: 66.6666666667%;  // 1/3
 		// layout
 		float: left;

@@ -145,28 +145,7 @@
 		font-size: 1.82rem;
 		line-height: 1.03007828594973;
   }
-  
-  @include breakpoint($starlord){
-    margin-left: 0%;
-    width: 100%;
-  }
-  
-  @include breakpoint($gamora){
-    width: 120%;
-    margin-left: -10%;
-  }
-  
-  @media screen and (min-width: 60em){
-    width: 100%;
-    margin-left: 0%;
-  }
 }
-.profile-list .box{
-	margin-top: -1.40625rem;  //22.5/16
-  //margin-top: -2.142857142857143em;  //30/14
-  position: absolute;
-  bottom: 0;
-}*/
 
 /**
  * D. Tertiary Nav
