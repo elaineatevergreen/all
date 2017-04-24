@@ -1208,7 +1208,7 @@ input[type="radio"] {
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
-    margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+    margin: calc(2.5 / 16 * 1rem) 0.5ch calc(20 / 16 * 1rem) 0;
   }
 }
 @media screen and (min-width: 125em) {
@@ -1239,14 +1239,14 @@ input[type="radio"] {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
-  width: calc(100% - 1em - 0.5ch);
+  width: calc(100% - 1em - 1.5ch - 1px);
   float: left;
 }
 @media screen and (min-width: 43em) {
   /* line 162, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
-    width: calc(100% - 1.25em);
+    width: calc(100% - 1em - 1.5ch - 1px);
   }
 }
 
