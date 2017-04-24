@@ -702,6 +702,7 @@
 	
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
+	height: auto;
 	margin: 0 0 calc(15 / 16 * 1rem);
 	padding: 0 1ch;
 	max-width: 100%;
@@ -719,6 +720,8 @@
 	// box model
 	border-width: 1px;
 	padding: 0.25em 0;
+	// typography
+	line-height: 1.07142857142857;  // 15/14, slightly compressed compared to $base-type so that multi-line legends are clickable in between lines
 	// decoration
 	background-color: $tint;
 	background-image: linear-gradient(white 75%, $tint);
