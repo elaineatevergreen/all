@@ -9,6 +9,26 @@
  * 2. Views Module Forms
  * 3. Webform Module
  * 4. Search
+ *
+ * A note on forms:
+ * There are several different kinds of forms:
+ * • Default forms
+ * • Drupal Views
+ * • Drupal Webforms
+ *
+ * Each of these forms have their own peculiarities, so you need to check
+ * out a few different forms, in order to make sure improvements you make
+ * to one form don't become bugs in another form. The following list are
+ * forms that tend to be troublesome, but the list is not exhaustive.
+ * Please add to this whenever you run into a cantankerous form problem.
+ * (Ideally, this could be aided by visual regression testing. Can anybody
+ * help with that?)
+ *
+ * Name                 Form type       URL
+ * ------------------------------------------
+ * Catalog filters      Drupal Views    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter    Drupal Views    http://wwwtest.evergreen.edu/activities/groups
+ * Rain opinion survey  Drupal Webform  http://wwwtest.evergreen.edu/marketing/rain-opinion-survey
  */
 
 /**

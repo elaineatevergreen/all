@@ -1,9 +1,36 @@
+/**
+ * 2. Views Module Forms
+ *
+ * Views forms seem typically to be filters on tables.
+ *
+ * Notable Views forms:
+ * Catalog filters    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter  http://wwwtest.evergreen.edu/activities/groups
+ *
+ * Table of Contents:
+ *
+ * a. Form Components
+ * b. Buttons
+ * c. Tertiary Nav Filter Styles
+ */
+
+
+/**
+ * a. Form Components
+ */
+.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
+	margin-bottom: 0;
+}
+
+/**
+ * b. Buttons
+ */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button{
 	display: inline-block;
 }
 
-.views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
+.views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
 	margin-top: calc(20 / 16 * 1rem);
 
 	@include breakpoint($gamora){
@@ -11,10 +38,9 @@
 	}
 }
 
-.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}
-
+/**
+ * c. Tertiary Nav Filter Styles
+ */
 .tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
 
