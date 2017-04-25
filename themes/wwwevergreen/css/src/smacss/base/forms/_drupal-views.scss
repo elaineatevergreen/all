@@ -11,9 +11,9 @@
  *
  * a. Form Components
  * b. Buttons
- * c. Tertiary Nav Filter Styles
+ * c. Better Exposed Filters
+ * d. Tertiary Nav Filter Styles
  */
-
 
 /**
  * a. Form Components
@@ -40,6 +40,14 @@
 
 .views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
 	margin-bottom: 0;
+}
+
+.form-type-select{
+	@extend input[type="text"]; // Drupal select box wrapper, sets a context for determining max-width of a select box
+}
+
+.tertiary-nav-wrapper .form-type-select select{
+	width: 100%;  // Makes long select boxes not extend past their container
 }
 
 div[id$="-range-wrapper"] .slider-filter-processed{
@@ -74,7 +82,31 @@ input[id$="-range-max"]{
 }
 
 /**
- * c. Tertiary Nav Filter Styles
+ * c. Better Exposed Filters
+ *
+ * Better Exposed Filters (BEF) allow us to do some fancier form things,
+ * but they change up some of the code patterns that Drupal Views uses.
+ *
+ * See the Catalog Filter’s “Advanced Opportunities” for an example:
+ * http://wwwtest.evergreen.edu/catalog/index?year=1
+ */
+.bef-checkboxes .form-item,
+.bef-secondary-options .form-item{
+	margin-bottom: calc(15 / 16 * 1rem);
+}
+
+.bef-checkboxes .form-type-bef-checkbox{
+	// layout
+	align-items: center;
+	display: flex;
+}
+
+.form-type-bef-checkbox input + label{
+	margin-bottom: 0;
+}
+
+/**
+ * d. Tertiary Nav Filter Styles
  */
 .tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
