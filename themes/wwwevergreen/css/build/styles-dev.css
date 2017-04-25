@@ -1075,18 +1075,38 @@ table a {
  * 2. Views Module Forms
  * 3. Webform Module
  * 4. Search
+ *
+ * A note on forms:
+ * There are several different kinds of forms:
+ * • Default forms
+ * • Drupal Views
+ * • Drupal Webforms
+ *
+ * Each of these forms have their own peculiarities, so you need to check
+ * out a few different forms, in order to make sure improvements you make
+ * to one form don't become bugs in another form. The following list are
+ * forms that tend to be troublesome, but the list is not exhaustive.
+ * Please add to this whenever you run into a cantankerous form problem.
+ * (Ideally, this could be aided by visual regression testing. Can anybody
+ * help with that?)
+ *
+ * Name                 Form type       URL
+ * ------------------------------------------
+ * Catalog filters      Drupal Views    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter    Drupal Views    http://wwwtest.evergreen.edu/activities/groups
+ * Rain opinion survey  Drupal Webform  http://wwwtest.evergreen.edu/marketing/rain-opinion-survey
  */
 /**
  * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
  */
-/* line 17, ../src/smacss/base/_forms.scss */
+/* line 37, ../src/smacss/base/_forms.scss */
 fieldset {
   border-width: 0;
   margin: calc(30 / 16 * 1rem) 0;
   padding: 0;
 }
 
-/* line 23, ../src/smacss/base/_forms.scss */
+/* line 43, ../src/smacss/base/_forms.scss */
 legend {
   margin: 0.535714285714286em 0 1.071428571428571em;
   padding: 0;
@@ -1095,18 +1115,18 @@ legend {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 23, ../src/smacss/base/_forms.scss */
+  /* line 43, ../src/smacss/base/_forms.scss */
   legend {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 38, ../src/smacss/base/_forms.scss */
+/* line 58, ../src/smacss/base/_forms.scss */
 label {
   display: inline;
 }
 
-/* line 42, ../src/smacss/base/_forms.scss */
+/* line 62, ../src/smacss/base/_forms.scss */
 input,
 select,
 textarea {
@@ -1118,14 +1138,14 @@ textarea {
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 55, ../src/smacss/base/_forms.scss */
+/* line 75, ../src/smacss/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 42, ../src/smacss/base/_forms.scss */
+  /* line 62, ../src/smacss/base/_forms.scss */
   input,
   select,
   textarea {
@@ -1134,33 +1154,33 @@ textarea:focus {
   }
 }
 
-/* line 65, ../src/smacss/base/_forms.scss */
+/* line 85, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
   padding: 0 1ch;
   font-size: 1em;
 }
 
-/* line 73, ../src/smacss/base/_forms.scss */
+/* line 93, ../src/smacss/base/_forms.scss */
 input[type="text"], .form-type-select {
   width: 100%;
   max-width: calc(45ch + 1em);
 }
 
-/* line 78, ../src/smacss/base/_forms.scss */
+/* line 98, ../src/smacss/base/_forms.scss */
 input[type="email"] {
   width: 100%;
   max-width: calc(30ch + 1em);
 }
 
-/* line 83, ../src/smacss/base/_forms.scss */
+/* line 103, ../src/smacss/base/_forms.scss */
 input[type="password"],
 input[type="tel"] {
   width: 100%;
   max-width: calc(15ch + 1em);
 }
 
-/* line 89, ../src/smacss/base/_forms.scss */
+/* line 109, ../src/smacss/base/_forms.scss */
 select {
   height: calc(30 / 16 * 1rem);
   padding: 0 0.5em;
@@ -1168,18 +1188,18 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 100, ../src/smacss/base/_forms.scss */
+/* line 120, ../src/smacss/base/_forms.scss */
 select:hover {
   background-color: #e1dee3;
   border-bottom-style: dashed;
 }
 
-/* line 111, ../src/smacss/base/_forms.scss */
+/* line 131, ../src/smacss/base/_forms.scss */
 .tertiary-nav-wrapper .form-type-select select {
   width: 100%;
 }
 
-/* line 115, ../src/smacss/base/_forms.scss */
+/* line 135, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1187,13 +1207,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 115, ../src/smacss/base/_forms.scss */
+  /* line 135, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 128, ../src/smacss/base/_forms.scss */
+/* line 148, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1204,7 +1224,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 128, ../src/smacss/base/_forms.scss */
+  /* line 148, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1212,7 +1232,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 128, ../src/smacss/base/_forms.scss */
+  /* line 148, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1222,74 +1242,148 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 153, ../src/smacss/base/_forms.scss */
+/* line 173, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 153, ../src/smacss/base/_forms.scss */
+  /* line 173, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 162, ../src/smacss/base/_forms.scss */
+/* line 182, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
-  width: calc(100% - 1em - 1.5ch - 1px);
+  width: calc(100% - 1em - 0.5ch - 1px);
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 162, ../src/smacss/base/_forms.scss */
+  /* line 182, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
-    width: calc(100% - 1em - 1.5ch - 1px);
+    width: calc(100% - 1em - 0.5ch - 1px);
   }
 }
 
 /**
  * 2. Views Module Forms
  */
-/* line 1, ../src/smacss/base/forms/_drupal-views.scss */
+/**
+ * 2. Views Module Forms
+ *
+ * Views forms seem typically to be filters on tables.
+ *
+ * Notable Views forms:
+ * Catalog filters    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter  http://wwwtest.evergreen.edu/activities/groups
+ *
+ * Table of Contents:
+ *
+ * a. Form Components
+ * b. Buttons
+ * c. Tertiary Nav Filter Styles
+ */
+/**
+ * a. Form Components
+ */
+/* line 21, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget {
+  margin-bottom: calc(15 / 16 * 1rem);
+}
+
+/* line 25, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-widgets {
+  margin-bottom: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* line 33, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-widget input,
+.views-exposed-widget select,
+.views-exposed-widget textarea,
+.views-exposed-widget fieldset {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 41, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
+  margin-bottom: 0;
+}
+
+/* line 45, ../src/smacss/base/forms/_drupal-views.scss */
+div[id$="-range-wrapper"] .slider-filter-processed {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 51, ../src/smacss/base/forms/_drupal-views.scss */
+div[class$="-range-min"],
+div[class$="-range-max"] {
+  width: 6ch;
+}
+
+/* line 56, ../src/smacss/base/forms/_drupal-views.scss */
+input[id$="-range-max"] {
+  text-align: right;
+}
+
+/**
+ * b. Buttons
+ */
+/* line 63, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
   display: inline-block;
 }
 
-/* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 68, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: calc(20 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 6, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 68, ../src/smacss/base/forms/_drupal-views.scss */
   .views-exposed-form .views-exposed-widget .form-submit {
     margin-top: calc(22.5 / 16 * 1rem);
   }
 }
 
-/* line 14, ../src/smacss/base/forms/_drupal-views.scss */
-.views-widget-filter-combine input {
-  margin-bottom: 0;
-}
-
-/* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+/**
+ * c. Tertiary Nav Filter Styles
+ */
+/* line 79, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 79, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 87, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
+  clear: left;
 }
 
 /**
