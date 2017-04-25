@@ -18,8 +18,43 @@
 /**
  * a. Form Components
  */
+.views-exposed-form .views-exposed-widget{
+	margin-bottom: calc(15 / 16 * 1rem);
+}
+
+.views-exposed-widgets{
+	// box model
+	margin-bottom: 0;
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.views-exposed-widget input,
+.views-exposed-widget select,
+.views-exposed-widget textarea,
+.views-exposed-widget fieldset{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
 	margin-bottom: 0;
+}
+
+div[id$="-range-wrapper"] .slider-filter-processed{
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+}
+
+div[class$="-range-min"],
+div[class$="-range-max"]{
+	width: 6ch;  // 3ch for three characters, 2ch for padding, and 1ch for space between characters, borders, etc.
+}
+
+input[id$="-range-max"]{
+	text-align: right;
 }
 
 /**
@@ -50,5 +85,8 @@
 }
 
 .tertiary-nav-wrapper .views-exposed-widget{
+	// box model
 	padding: 0;
+	// layout
+	clear: left;  // Makes forms layout better on mobile
 }

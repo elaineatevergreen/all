@@ -694,6 +694,10 @@
  * Advanced filters are the filters in the left sidebar that allow for
  * very granular filtering of catalog results.
  */
+#views-exposed-form-catalog-page .views-exposed-widgets{
+	flex-direction: column;
+}
+
 #views-exposed-form-catalog-page fieldset{
 	/**
 	 * These styles should closely fit with the rest of the OS-level form
@@ -703,7 +707,7 @@
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
 	height: auto;
-	margin: 0 0 calc(15 / 16 * 1rem);
+	//margin: 0 0 calc(15 / 16 * 1rem);
 	padding: 0 1ch;
 	max-width: 100%;
 	// decoration
