@@ -4934,32 +4934,26 @@ ul.accordion-inner {
   border: 1px solid #c8c1cd;
   border-bottom-width: 0;
   margin-bottom: -1px;
-  padding: 0 1em;
+  padding: 0 1ch;
   display: inline-block;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0.5em;
   z-index: 1;
   background-color: #d9d4dc;
   border-radius: 2px 2px 0 0;
 }
 
-/* line 427, ../src/smacss/modules/_lists.scss */
+/* line 424, ../src/smacss/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #c8c1cd;
-  margin-left: 0;
+  margin: 0;
   padding-left: 0;
   display: block;
-  position: -webkit-sticky;
-  position: sticky;
-  top: calc(0.5em + 0.875rem * 1.60714);
   word-wrap: break-word;
   background-color: #d9d4dc;
   border-radius: 2px;
   list-style-type: none;
 }
 @media screen and (min-width: 32em) {
-  /* line 427, ../src/smacss/modules/_lists.scss */
+  /* line 424, ../src/smacss/modules/_lists.scss */
   .alpha-index {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4969,20 +4963,14 @@ ul.accordion-inner {
             justify-content: space-around;
   }
 }
-@media screen and (min-width: 43em) {
-  /* line 427, ../src/smacss/modules/_lists.scss */
-  .alpha-index {
-    top: calc(0.5em + 1.202rem * 1.46814);
-  }
-}
 
-/* line 456, ../src/smacss/modules/_lists.scss */
+/* line 447, ../src/smacss/modules/_lists.scss */
 .alpha-label + .alpha-index {
   margin-top: -1px;
   border-top-left-radius: 0;
 }
 
-/* line 463, ../src/smacss/modules/_lists.scss */
+/* line 454, ../src/smacss/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -4995,7 +4983,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 478, ../src/smacss/modules/_lists.scss */
+/* line 469, ../src/smacss/modules/_lists.scss */
 .badge-list {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -5011,19 +4999,19 @@ ul.accordion-inner {
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 485, ../src/smacss/modules/_lists.scss */
+/* line 476, ../src/smacss/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 495, ../src/smacss/modules/_lists.scss */
+/* line 486, ../src/smacss/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 499, ../src/smacss/modules/_lists.scss */
+/* line 490, ../src/smacss/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -5034,12 +5022,12 @@ ul.accordion-inner {
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 510, ../src/smacss/modules/_lists.scss */
+/* line 501, ../src/smacss/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 514, ../src/smacss/modules/_lists.scss */
+/* line 505, ../src/smacss/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #d9d4dc;
 }
