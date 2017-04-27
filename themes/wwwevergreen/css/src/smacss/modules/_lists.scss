@@ -411,15 +411,12 @@
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	border-bottom-width: 0;
 	margin-bottom: -1px;
-	padding: 0 1em;
+	padding: 0 1ch;
 	// layout
 	display: inline-block;
 	// position
-	position: sticky;
-	// position
-	top: 0.5em;
 	z-index: 1;
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
 }
@@ -427,13 +424,11 @@
 .alpha-index{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
-	margin-left: 0;
+	margin: 0;
 	padding-left: 0;
 	// layout
 	display: block;
 	// position
-	position: sticky;
-	top: calc(0.5em + 0.875rem * 1.60714);
 	// typography
 	word-wrap: break-word;
 	// decoration
@@ -446,10 +441,6 @@
 		// layout
 		display: flex;
 		justify-content: space-around;
-	}
-
-	@media screen and (min-width: 43em){
-		top: calc(0.5em + 1.202rem * 1.46814);
 	}
 }
 
