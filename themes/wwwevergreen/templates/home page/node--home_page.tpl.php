@@ -30,7 +30,7 @@
 			<div class="standalone-unit unit-1-1">
 				<!-- Location Transporter -->
 				<p class="location-transporter">
-					Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Reservation-based Program</a>
+					Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Native Pathways Program</a>
 				</p>
 			</div><!-- /.standalone-unit.unit-1-1 -->
 		</div><!-- /.grid -->
