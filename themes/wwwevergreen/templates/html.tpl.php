@@ -78,17 +78,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<!--<link href="<?php print base_path() . path_to_theme() ?>/css/dist/styles.css" media="all" rel="stylesheet" />-->
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-456756-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
-	
 	<!-- Typekit -->
 	<script src="https://use.typekit.net/rtm8ksn.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>

@@ -67,10 +67,11 @@ textarea{
 	margin-bottom: calc(15 / 16 * 1rem);
 	max-width: 100%;
 	//typography
-	font-family: $text-face;
+	font-family: $text-face-alt;
 	@include base-type;
 	// decoration
 	border-radius: 2px;
+	caret-color: mix($shade, $evergreen-neue, 20%);
 
 	&:focus{
 		// misc
