@@ -1,62 +1,113 @@
 /**
  * 2. Views Module Forms
  *
- * Forms in Drupal’s Views module. It's worth cross-checking changes you
- * make here with a few different form pages, because this stuff gets weird
- * and unpredictable.
+ * Views forms seem typically to be filters on tables.
  *
- * Add to this list as you find more weirdness.
+ * Notable Views forms:
+ * Catalog filters    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter  http://wwwtest.evergreen.edu/activities/groups
  *
- * Left-nav fiters: http://evergreen.edu/catalog/index/ug
- * Main content filters: http://evergreen.edu/activities/groups
+ * Table of Contents:
  *
- * Table of Contents
- *
- * a. Views Exposed Widget
- * b. Secondary Options
+ * a. Form Components
+ * b. Buttons
+ * c. Better Exposed Filters
+ * d. Tertiary Nav Filter Styles
  */
 
 /**
- * b. Views Exposed Widget
- *
- * These are the bulk of the form widgets in the Views-type forms.
+ * a. Form Components
  */
-.views-exposed-form .views-submit-button,
-.views-exposed-form .views-reset-button{
-	display: block;
+.views-exposed-form .views-exposed-widget{
+	margin-bottom: calc(15 / 16 * 1rem);
 }
 
-.views-exposed-form .views-exposed-widget{
-	/* box model */
-	@include margin-default;
-	padding: 0;  // Overrides Views style
-	/* layout */
-	float: none;  // Overrides Views style
+.views-exposed-widgets{
+	// box model
+	margin-bottom: 0;
+	// layout
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .views-exposed-widget input,
-.views-exposed-widget select{
+.views-exposed-widget select,
+.views-exposed-widget textarea,
+.views-exposed-widget fieldset{
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
+	margin-bottom: 0;
+}
+
+.form-type-select{
+	@extend input[type="text"]; // Drupal select box wrapper, sets a context for determining max-width of a select box
 }
 
 .tertiary-nav-wrapper .form-type-select select{
 	width: 100%;  // Makes long select boxes not extend past their container
 }
 
-.views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin: 0;  // Overrides Views style
-	/*margin-top: calc(20 / 16 * 1rem);
+div[id$="-range-wrapper"] .slider-filter-processed{
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+}
+
+div[class$="-range-min"],
+div[class$="-range-max"]{
+	width: 6ch;  // 3ch for three characters, 2ch for padding, and 1ch for space between characters, borders, etc.
+}
+
+input[id$="-range-max"]{
+	text-align: right;
+}
+
+/**
+ * b. Buttons
+ */
+.views-exposed-form .views-submit-button,
+.views-exposed-form .views-reset-button{
+	display: inline-block;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit{  // Inline submit button? See Activites filter page: http://wwwtest.evergreen.edu/activities/groups
+	margin-top: calc(20 / 16 * 1rem);
 
 	@include breakpoint($gamora){
 		margin-top: calc(22.5 / 16 * 1rem);
-	}*/
+	}
 }
 
-/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}*/
+/**
+ * c. Better Exposed Filters
+ *
+ * Better Exposed Filters (BEF) allow us to do some fancier form things,
+ * but they change up some of the code patterns that Drupal Views uses.
+ *
+ * See the Catalog Filter’s “Advanced Opportunities” for an example:
+ * http://wwwtest.evergreen.edu/catalog/index?year=1
+ */
+.bef-checkboxes .form-item,
+.bef-secondary-options .form-item{
+	margin-bottom: calc(15 / 16 * 1rem);
+}
 
+.bef-checkboxes .form-type-bef-checkbox{
+	// layout
+	align-items: center;
+	display: flex;
+}
+
+.form-type-bef-checkbox input + label{
+	margin-bottom: 0;
+}
+
+/**
+ * d. Tertiary Nav Filter Styles
+ */
 .tertiary-nav-wrapper .views-exposed-form{
 	@include margin-default;
 
@@ -65,13 +116,9 @@
 	}
 }
 
-/**
- * b. Secondary Options
- *
- * Better Exposed Filters offeres a place to put “advanced” options. For
- * whatever reason, these options don't follow the same pattern as the rest
- * of the form fields, so they need special rules.
- */
-.bef-secondary-options .form-select{
-	margin-bottom: calc(15 / 16 * 1rem);
+.tertiary-nav-wrapper .views-exposed-widget{
+	// box model
+	padding: 0;
+	// layout
+	clear: left;  // Makes forms layout better on mobile
 }

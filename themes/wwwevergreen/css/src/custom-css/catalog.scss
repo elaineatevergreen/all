@@ -330,7 +330,7 @@
 	border-top: 1px solid $shade;
 	margin-bottom: calc(30 / 16 * 1rem);
 	padding-top: calc(15 / 16 * 1rem);
-	padding-left: 6ch;
+	padding-left: 7ch;
 	// layout
 	display: flex;
 	flex-wrap: wrap;
@@ -360,9 +360,9 @@
 
 .view-catalog .views-field-ops{
 	// box model
-	margin-left: -6ch;
+	margin-left: -7ch;
 	padding-right: 1ch;
-	width: 6ch;
+	width: 7ch;
 }
 
 .view-catalog .catalog-title{
@@ -694,6 +694,11 @@
  * Advanced filters are the filters in the left sidebar that allow for
  * very granular filtering of catalog results.
  */
+#views-exposed-form-catalog-page .views-exposed-widgets{
+	align-items: flex-start;
+	flex-direction: column;
+}
+
 #views-exposed-form-catalog-page fieldset{
 	/**
 	 * These styles should closely fit with the rest of the OS-level form
@@ -702,7 +707,8 @@
 	
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
-	margin: 0 0 calc(15 / 16 * 1rem);
+	height: auto;
+	//margin: 0 0 calc(15 / 16 * 1rem);
 	padding: 0 1ch;
 	max-width: 100%;
 	// decoration
@@ -719,6 +725,8 @@
 	// box model
 	border-width: 1px;
 	padding: 0.25em 0;
+	// typography
+	line-height: 1.33928571428571;  // (15 + 3.75)/14, slightly compressed compared to $base-type so that multi-line legends are clickable in between lines
 	// decoration
 	background-color: $tint;
 	background-image: linear-gradient(white 75%, $tint);
@@ -749,4 +757,8 @@
 		background-color: transparent;
 		outline: 1px dotted $shade;
 	}
+}
+
+#views-exposed-form-catalog-grad-programs{
+	@extend #views-exposed-form-catalog-page;
 }
