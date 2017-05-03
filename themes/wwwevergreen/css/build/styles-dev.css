@@ -68,19 +68,9 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * Deprecated Modular Scale - Do not use!
- *
- * The typographic scale we are using for measurements.
- * Ideal text size is 17px
- * The important number is 345px. This was the size of images in
- * the previous Admissions template, which guided image sizes in
- * the new template.
- *
- * @see http://www.modularscale.com/?17,345&px&1.618&web&text
- */
-/**
  * New Modular Scale
  *
+ * The typographic scale we are using for measurements.
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -550,7 +540,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -758,7 +748,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
 }
 @media screen and (min-width: 125em) {
   /* line 436, ../src/smacss/base/_typography.scss */
@@ -1133,12 +1123,13 @@ textarea {
   border: 1px solid #aea3b6;
   margin-bottom: calc(15 / 16 * 1rem);
   max-width: 100%;
-  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
   border-radius: 2px;
+  caret-color: #50762e;
 }
-/* line 75, ../src/smacss/base/_forms.scss */
+/* line 76, ../src/smacss/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
@@ -1154,33 +1145,33 @@ textarea:focus {
   }
 }
 
-/* line 85, ../src/smacss/base/_forms.scss */
+/* line 86, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
   padding: 0 1ch;
   font-size: 1em;
 }
 
-/* line 93, ../src/smacss/base/_forms.scss */
+/* line 94, ../src/smacss/base/_forms.scss */
 input[type="text"], .form-type-select {
   width: 100%;
   max-width: calc(45ch + 1em);
 }
 
-/* line 98, ../src/smacss/base/_forms.scss */
+/* line 99, ../src/smacss/base/_forms.scss */
 input[type="email"] {
   width: 100%;
   max-width: calc(30ch + 1em);
 }
 
-/* line 103, ../src/smacss/base/_forms.scss */
+/* line 104, ../src/smacss/base/_forms.scss */
 input[type="password"],
 input[type="tel"] {
   width: 100%;
   max-width: calc(15ch + 1em);
 }
 
-/* line 109, ../src/smacss/base/_forms.scss */
+/* line 110, ../src/smacss/base/_forms.scss */
 select {
   height: calc(30 / 16 * 1rem);
   padding: 0 0.5em;
@@ -1188,13 +1179,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 120, ../src/smacss/base/_forms.scss */
+/* line 121, ../src/smacss/base/_forms.scss */
 select:hover {
   background-color: #e1dee3;
   border-bottom-style: dashed;
 }
 
-/* line 127, ../src/smacss/base/_forms.scss */
+/* line 128, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1202,13 +1193,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 127, ../src/smacss/base/_forms.scss */
+  /* line 128, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 140, ../src/smacss/base/_forms.scss */
+/* line 141, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1219,7 +1210,7 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 140, ../src/smacss/base/_forms.scss */
+  /* line 141, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
@@ -1227,7 +1218,7 @@ input[type="radio"] {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 140, ../src/smacss/base/_forms.scss */
+  /* line 141, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1237,20 +1228,20 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 165, ../src/smacss/base/_forms.scss */
+/* line 166, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 165, ../src/smacss/base/_forms.scss */
+  /* line 166, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 174, ../src/smacss/base/_forms.scss */
+/* line 175, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
@@ -1258,7 +1249,7 @@ input[type="radio"] + label {
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 174, ../src/smacss/base/_forms.scss */
+  /* line 175, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     width: calc(100% - 1em - 0.5ch - 1px);
@@ -1421,12 +1412,22 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1434,34 +1435,34 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
 }
 @media screen and (min-width: 43em) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1470,15 +1471,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
-/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1487,33 +1488,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * Textareas
+ * c. Textareas
  */
-/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1521,7 +1522,24 @@ input[id$="-range-max"] {
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+/* line 111, ../src/smacss/base/forms/_drupal-webform.scss */
+.checkbox.webform-grid-option {
+  text-align: center;
+}
+
+/* line 115, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox {
+  float: none;
+}
+
+/**
+ * e. Buttons
  */
 /**
  * 4. Search
@@ -2103,6 +2121,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2113,6 +2132,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2121,6 +2141,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2128,7 +2149,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2137,14 +2158,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2153,14 +2174,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2670,7 +2691,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage Hero Image
+ * C. Homepage
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3544,7 +3565,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage Hero Image
+ * C. Homepage
  */
 /**
  * C. Homepage Hero Image
@@ -3566,18 +3587,16 @@ input:checked + .header-dropdown {
  *
  * 1. Default
  * 2. Graduation Day Hero Image
- * 3. Copy
- * 4. Copy Modifiers
+ * 3. Slogan
+ * 4. Slogan Modifiers
  */
-/* line 24, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero,
-.homepage-hero-content {
+/* line 25, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero {
   height: 100%;
   overflow: hidden;
 }
-
 @media screen and (min-width: 20em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
@@ -3585,24 +3604,24 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     display: table;
   }
 }
 
-/* line 46, ../src/smacss/modules/_homepage-hero.scss */
+/* line 43, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-picture img {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 46, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 43, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-picture img {
     width: 100%;
   }
 }
 
-/* line 55, ../src/smacss/modules/_homepage-hero.scss */
+/* line 52, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img {
   margin-left: -50%;
   width: 200%;
@@ -3610,32 +3629,42 @@ input:checked + .header-dropdown {
   display: block;
 }
 @media screen and (min-width: 32em) {
-  /* line 63, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 60, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -25%;
     width: 150%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 71, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 68, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: -10%;
     width: 120%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 78, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 75, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img .homepage-hero-img {
     margin-left: 0;
     width: 100%;
   }
 }
-/* line 84, ../src/smacss/modules/_homepage-hero.scss */
+/* line 81, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-alt .homepage-hero-img {
   margin-left: 0;
 }
 
-/* line 89, ../src/smacss/modules/_homepage-hero.scss */
+/* line 86, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-caption {
+  position: absolute;
+}
+
+/* line 90, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-caption .caption-box {
+  margin: 0;
+}
+
+/* line 94, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3644,7 +3673,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 97, ../src/smacss/modules/_homepage-hero.scss */
+/* line 102, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3652,40 +3681,60 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 108, ../src/smacss/modules/_homepage-hero.scss */
+/* line 113, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
+@media screen and (min-width: 32em) {
+  /* line 102, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    font-size: calc(1rem + 1vh);
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 102, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero .call-to-action {
+    float: right;
+  }
+}
 @media screen and (min-width: 70em) {
-  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 102, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 118, ../src/smacss/modules/_homepage-hero.scss */
+/* line 133, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
+  height: 100%;
   width: 100%;
-  max-width: 82em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 133, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 25em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 133, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3693,18 +3742,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 133, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 145, ../src/smacss/modules/_homepage-hero.scss */
+/* line 165, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 20em) {
-  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 32em) {
+  /* line 165, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3720,117 +3769,128 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 164, ../src/smacss/modules/_homepage-hero.scss */
+/* line 184, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 168, ../src/smacss/modules/_homepage-hero.scss */
+/* line 188, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 172, ../src/smacss/modules/_homepage-hero.scss */
+/* line 192, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 188, ../src/smacss/modules/_homepage-hero.scss */
+/* line 208, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 212, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 212, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 212, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
 }
 
 /**
- * 3. Copy
+ * 3. Slogan
  */
-/* line 208, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-copy {
-  margin: 0 calc(15 / 14 * 1em);
+/* line 228, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-slogan-wrapper {
+  margin: 0 2ch;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
+
 @media screen and (min-width: 20em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc(66.6666666667% - 1em);
-    float: left;
+    width: calc(66.6666666667% - 2ch);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    margin: 0 1em;
-    width: calc(50% - 1em);
+    margin: 0 2ch;
+    width: calc(50% - 2ch);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 43em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy {
-    width: calc((3 / 7 * 100%) - 1em);
+    margin: 33% auto 0;
+    width: 90vw;
+    max-width: calc(100% - 4ch);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: 70vw;
   }
 }
 
-/* line 232, ../src/smacss/modules/_homepage-hero.scss */
+/* line 268, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 268, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 268, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 268, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 255, ../src/smacss/modules/_homepage-hero.scss */
+/* line 291, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy img {
   width: 100%;
 }
@@ -3847,7 +3907,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 306, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3856,7 +3916,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 306, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3865,7 +3925,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 285, ../src/smacss/modules/_homepage-hero.scss */
+/* line 321, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   height: 100%;
   margin: 0;
@@ -3873,36 +3933,34 @@ input:checked + .header-dropdown {
   width: 66.6666666667%;
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
+  	/*@include breakpoint($drax){
+  		width: calc(3 / 7 * 100%);
+  	}
+  
+  	@include breakpoint($groot){
+  		padding: 0 calc(30 / 19.23333333333 * 1em);
+  	}*/
 }
 @media screen and (min-width: 22em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 321, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 321, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     height: auto;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 321, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 17 * 1em);
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    width: calc(3 / 7 * 100%);
-  }
-}
-@media screen and (min-width: 125em) {
-  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(30 / 19.23333333333 * 1em);
+    margin: 5em 2ch 0;
+    padding: 0;
+    width: calc(100% - 4ch);
+    background-color: transparent;
   }
 }
 
@@ -4438,7 +4496,7 @@ ul.accordion-inner {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   letter-spacing: 0.1ch;
   text-transform: uppercase;
 }
@@ -6322,7 +6380,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6903,10 +6961,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d. Calendar Week and Month View
- *  e. Single Day
- *  f. Multi-day
- *  g. Events By Category
+ *  d.    Calendar Week and Month View
+ *  e.    Single Day
+ *  f.    Multi-day
+ *  g.    Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7231,7 +7289,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34831460674157;
+  line-height: 1.34892086330935;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7902,7 +7960,15 @@ p.alert {
  * 
  * modules/_media-segment
  * ----------------------
- * .media-img-alt  Use .media-child-alt
+ * Do not use .media properties; they clash with the Drupal Media module.
+ * Instead, use the matching .compound property.
+ * .media          Use .compound
+ * .media-img      Use .compound-img
+ * .media-body     Use .compound-body
+ * Et cetera
+ *
+ * Note the following special consideration:
+ * .media-img-alt  Use .compound-child-alt
  *
  * modules/_search
  * ---------------

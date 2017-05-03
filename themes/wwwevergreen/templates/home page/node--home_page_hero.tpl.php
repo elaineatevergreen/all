@@ -53,7 +53,7 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 		</div>
 		
 		<!--<div class="wrapper">-->
-		<div class="homepage-hero-copy-wrapper">
+		<div class="homepage-hero-slogan-wrapper">
 			<a href="/academics">
 				<!--<div class="homepage-hero-content">-->
 					<div class="homepage-hero-copy">

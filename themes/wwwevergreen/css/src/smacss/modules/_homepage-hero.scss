@@ -18,8 +18,8 @@
  *
  * 1. Default
  * 2. Graduation Day Hero Image
- * 3. Copy
- * 4. Copy Modifiers
+ * 3. Slogan
+ * 4. Slogan Modifiers
  */
 
 .homepage-hero{
@@ -83,6 +83,14 @@
 	}
 }
 
+.homepage-hero-caption{
+	position: absolute;
+}
+
+.homepage-hero-caption .caption-box{
+	margin: 0;
+}
+
 .homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
 .homepage-hero a:visited,
 .homepage-hero a:hover{
@@ -126,17 +134,18 @@
 	// box model
 	height: 100%;
 	width: 100%;
-	max-width: 77em;  // Should match the max-width of .wrapper
+	//max-width: 77em;  // Should match the max-width of .wrapper
 	// layout
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	overflow: hidden;
 	// decoration
 	background-color: $blueberry-susan;
 
 	@include breakpoint($lil-groot){
 		// layout
-		display: flex;  // W3C
 		flex-direction: column-reverse;
-		justify-content: flex-start;
 		// positioning
 		position: absolute;
 		bottom: 0;
@@ -214,11 +223,19 @@
 }
 
 /**
- * 3. Copy
+ * 3. Slogan
  */
-.homepage-hero-copy{
-	margin: 0 calc(15 / 14 * 1em);
+.homepage-hero-slogan-wrapper{
+	// box model
+	margin: 0 2ch;
+	width: 100%;
+	// positioning
+	position: absolute;
+	top: 0;
+}
 
+.homepage-hero-copy{
+	
 	@include breakpoint($lil-groot){
 		// box model
 		width: calc(66.6666666667% - 2ch);
