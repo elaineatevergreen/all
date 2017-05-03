@@ -43,7 +43,7 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
 			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
 			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more." srcset="<?php echo $xl_hero; ?>" />
+			<img alt="Experience more." srcset="<?php echo $xl_hero; ?>" />
 		</picture>
 		
 		<div class="wrapper">
@@ -55,12 +55,12 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
-								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-your-education/exp-yr-edu-lg.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-your-education/exp-yr-edu-sm.svg"/>
-								<img alt="Experience your education" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-your-education/exp-yr-edu-sm.svg"/>
+								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-lg.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-sm.svg"/>
+								<img alt="Experience your education" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-sm.svg"/>
 							</picture>
 						</h1>
-						<p class="call-to-action">Learn how →</p>
+						<!--<p class="call-to-action">Learn how →</p>-->
 					</div>
 				</div>
 			</a>
