@@ -46,23 +46,27 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 			<img alt="Experience more." srcset="<?php echo $xl_hero; ?>" />
 		</picture>
 		
-		<div class="wrapper">
+		<div class="homepage-hero-caption">
+			<div class="box caption-box">
+				<p class="caption">Photo: <?php print render($title) ?></p>
+			</div>
+		</div>
+		
+		<!--<div class="wrapper">-->
+		<div class="homepage-hero-copy-wrapper">
 			<a href="/academics">
-				<div class="homepage-hero-content">
-					<div class="box caption-box">
-						<p class="caption">Photo: <?php print render($title) ?></p>
-					</div>
+				<!--<div class="homepage-hero-content">-->
 					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
 								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-lg.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-sm.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
 								<img alt="Experience more." src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
 							</picture>
 						</h1>
 						<!--<p class="call-to-action">Learn how →</p>-->
 					</div>
-				</div>
+				<!--</div>-->
 			</a>
 		</div>
 	</div>
