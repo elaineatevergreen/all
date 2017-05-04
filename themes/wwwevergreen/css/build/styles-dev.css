@@ -3950,19 +3950,19 @@ input:checked + .header-dropdown {
 
 @-webkit-keyframes spinDown {
   from {
-    bottom: 0;
+    margin-top: -100%;
   }
   to {
-    bottom: -100em;
+    margin-top: 0%;
   }
 }
 
 @keyframes spinDown {
   from {
-    bottom: 0;
+    margin-top: -100%;
   }
   to {
-    bottom: -100em;
+    margin-top: 0%;
   }
 }
 /* line 372, ../src/smacss/modules/_homepage-hero.scss */
