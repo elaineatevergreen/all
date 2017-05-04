@@ -56,7 +56,7 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 		<div class="homepage-hero-slogan-wrapper">
 			<a href="/academics">
 				<!--<div class="homepage-hero-content">-->
-					<div class="homepage-hero-copy">
+					<div class="homepage-hero-slogan">
 						<h1>
 							<picture>
 								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-lg.svg"/>
@@ -64,7 +64,9 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 								<img alt="Experience more." src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
 							</picture>
 						</h1>
-						<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>
+						<div class="homepage-hero-slogan-keywords">
+							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>
+						</div>
 						<!--<p class="call-to-action">Learn how →</p>-->
 					</div>
 				<!--</div>-->
