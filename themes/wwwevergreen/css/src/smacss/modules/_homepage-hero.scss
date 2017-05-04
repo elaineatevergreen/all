@@ -236,7 +236,6 @@
  */
 .homepage-hero-slogan-wrapper{
 	// box model
-	margin-right: 2ch;
 	padding-left: 2ch;
 	width: 75%;
 	// layout
@@ -298,6 +297,7 @@
 
 .homepage-hero-slogan h1{
 	// box model
+	margin-right: 1ch;
 	width: 61%;
 	// layout
 	float: left;
@@ -306,15 +306,31 @@
 	line-height: 1.169925124792013;  //22.5/19.232
 
 	@include breakpoint($lil-groot){
+		// box model
+		margin-top: 2em;
 		//typography
 		color: $tint;
 		text-shadow: 0 2px 1px mix($shade, $blueberry-susan, 80%);
 	}
+	
+	@include breakpoint($starlord){
+		// box model
+		margin-top: 1em;
+		width: 65%;
+	}
 
 	@include breakpoint($gamora){
+		// box model
+		margin-top: 1.5em;
+		width: 70%;
 		//typography
 		font-size: 1.416rem;
 		line-height: 1.324152542372881;  //30/22.656
+	}
+	
+	@include breakpoint($drax){
+		// box model
+		margin-top: 3.5em;
 	}
 
 	@media screen and (min-width: 86em){  // Odd-sized media query, for better text appearance.
@@ -329,6 +345,14 @@
 	width: 39%;
 	// layout
 	float: left;
+	
+	@include breakpoint($starlord){
+		width: 35%;
+	}
+	
+	@include breakpoint($gamora){
+		width: 30%;
+	}
 }
 
 .homepage-hero-slogan img{
