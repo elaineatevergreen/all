@@ -38,9 +38,9 @@
 		position: relative;  // Creates a stage for absolute positioning of child elements
 	}
 
-	@include breakpoint($drax){
+	/*@include breakpoint($drax){
 		display: table;  // Gives it a block formatting context
-	}
+	}*/
 }
 
 .homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
@@ -91,8 +91,9 @@
 	position: relative;
 	z-index: 1;
 	
-	@include breakpoint($starlord){
+	@include breakpoint($gamora){
 		position: absolute;
+		bottom: 0;
 	}
 }
 
@@ -235,17 +236,35 @@
  */
 .homepage-hero-slogan-wrapper{
 	// box model
-	margin: 0 2ch;
-	width: calc(50% - 4ch);
+	margin-right: 2ch;
+	padding-left: 2ch;
+	width: 75%;
 	// layout
 	position: absolute;
 	top: 0;
 	// decoration
-	background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.667), hsla(0, 0%, 0%, 0.5) 75%, hsla(0, 0%, 0%, 0));
+	background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.667), hsla(0, 0%, 0%, 0.5) 66.6666666667%, hsla(0, 0%, 0%, 0));
+	
+	@include breakpoint($starlord){
+		width: 66.6666666667%;
+	}
+	
+	@include breakpoint($gamora){
+		width: calc(4 / 7 * 100%);
+	}
+	
+	@include breakpoint($drax){
+		width: calc(3 / 7 * 100%);
+	}
+	
+	@include breakpoint($groot){
+		width: calc(3 / 7 * 100%);
+	}
 }
 
 .homepage-hero-slogan{
 	// layout
+	align-items: center;
 	display: flex;
 	
 	@include breakpoint($lil-groot){
@@ -279,7 +298,7 @@
 
 .homepage-hero-slogan h1{
 	// box model
-	width: 60%;
+	width: 61%;
 	// layout
 	float: left;
 	// typography
@@ -307,7 +326,7 @@
 
 .homepage-hero-slogan-keywords{
 	// box model
-	width: 40%;
+	width: 39%;
 	// layout
 	float: left;
 }

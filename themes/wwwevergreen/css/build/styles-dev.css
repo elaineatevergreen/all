@@ -3595,6 +3595,9 @@ input:checked + .header-dropdown {
   height: 100%;
   overflow: hidden;
   position: relative;
+  /*@include breakpoint($drax){
+  	display: table;  // Gives it a block formatting context
+  }*/
 }
 @media screen and (min-width: 20em) {
   /* line 25, ../src/smacss/modules/_homepage-hero.scss */
@@ -3602,12 +3605,6 @@ input:checked + .header-dropdown {
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero {
-    display: table;
   }
 }
 
@@ -3660,19 +3657,20 @@ input:checked + .header-dropdown {
   position: relative;
   z-index: 1;
 }
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 43em) {
   /* line 89, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-caption {
     position: absolute;
+    bottom: 0;
   }
 }
 
-/* line 99, ../src/smacss/modules/_homepage-hero.scss */
+/* line 100, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-caption .caption-box {
   margin: 0;
 }
 
-/* line 103, ../src/smacss/modules/_homepage-hero.scss */
+/* line 104, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3681,7 +3679,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 111, ../src/smacss/modules/_homepage-hero.scss */
+/* line 112, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3689,32 +3687,32 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 122, ../src/smacss/modules/_homepage-hero.scss */
+/* line 123, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
 @media screen and (min-width: 32em) {
-  /* line 111, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: calc(1rem + 1vh);
     line-height: 1.5;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     float: right;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 111, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 142, ../src/smacss/modules/_homepage-hero.scss */
+/* line 143, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
   height: 100%;
   width: 100%;
@@ -3731,7 +3729,7 @@ input:checked + .header-dropdown {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 142, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
@@ -3742,7 +3740,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 142, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3750,18 +3748,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 142, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 173, ../src/smacss/modules/_homepage-hero.scss */
+/* line 174, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 173, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 174, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3777,54 +3775,54 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 193, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 196, ../src/smacss/modules/_homepage-hero.scss */
+/* line 197, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 200, ../src/smacss/modules/_homepage-hero.scss */
+/* line 201, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 200, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 201, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 200, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 201, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 216, ../src/smacss/modules/_homepage-hero.scss */
+/* line 217, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 220, ../src/smacss/modules/_homepage-hero.scss */
+/* line 221, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 220, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 221, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 220, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 221, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
@@ -3833,65 +3831,93 @@ input:checked + .header-dropdown {
 /**
  * 3. Slogan
  */
-/* line 236, ../src/smacss/modules/_homepage-hero.scss */
+/* line 237, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan-wrapper {
-  margin: 0 2ch;
-  width: calc(50% - 4ch);
+  margin-right: 2ch;
+  padding-left: 2ch;
+  width: 75%;
   position: absolute;
   top: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.667), rgba(0, 0, 0, 0.5) 75%, transparent);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.667), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
+}
+@media screen and (min-width: 32em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-slogan-wrapper {
+    width: 66.6666666667%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-slogan-wrapper {
+    width: calc(4 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-slogan-wrapper {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-slogan-wrapper {
+    width: calc(3 / 7 * 100%);
+  }
 }
 
-/* line 247, ../src/smacss/modules/_homepage-hero.scss */
+/* line 265, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 32em) {
-  /* line 247, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 265, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan {
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
 
-/* line 280, ../src/smacss/modules/_homepage-hero.scss */
+/* line 299, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan h1 {
-  width: 60%;
+  width: 61%;
   float: left;
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 280, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 280, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 280, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 299, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 308, ../src/smacss/modules/_homepage-hero.scss */
+/* line 327, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan-keywords {
-  width: 40%;
+  width: 39%;
   float: left;
 }
 
-/* line 315, ../src/smacss/modules/_homepage-hero.scss */
+/* line 334, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan img {
   width: 100%;
 }
@@ -3908,7 +3934,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 330, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 349, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3917,7 +3943,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 330, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 349, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
@@ -3926,7 +3952,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 345, ../src/smacss/modules/_homepage-hero.scss */
+/* line 364, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   height: 100%;
   margin: 0;
@@ -3943,20 +3969,20 @@ input:checked + .header-dropdown {
   	}*/
 }
 @media screen and (min-width: 22em) {
-  /* line 345, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 364, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 345, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 364, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     height: auto;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 345, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 364, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     margin: 5em 2ch 0;
     padding: 0;
