@@ -3866,9 +3866,6 @@ input:checked + .header-dropdown {
 
 /* line 264, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3881,7 +3878,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 298, ../src/smacss/modules/_homepage-hero.scss */
+/* line 297, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan h1 {
   margin-right: 1ch;
   width: 61%;
@@ -3890,7 +3887,7 @@ input:checked + .header-dropdown {
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 298, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 2em;
     color: #f2f2f2;
@@ -3898,14 +3895,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 298, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 1em;
     width: 65%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 298, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 1.5em;
     width: 70%;
@@ -3914,38 +3911,61 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 298, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 3.5em;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 298, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 343, ../src/smacss/modules/_homepage-hero.scss */
+/* line 342, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan-keywords {
   width: 39%;
   float: left;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: spinDown;
+          animation-name: spinDown;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 @media screen and (min-width: 32em) {
-  /* line 343, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 342, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan-keywords {
     width: 35%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 343, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 342, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan-keywords {
     width: 30%;
   }
 }
 
-/* line 358, ../src/smacss/modules/_homepage-hero.scss */
+@-webkit-keyframes spinDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100em;
+  }
+}
+
+@keyframes spinDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100em;
+  }
+}
+/* line 372, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan img {
   width: 100%;
 }
@@ -3962,63 +3982,45 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 373, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-copy-alt .homepage-hero-copy {
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-    float: right;
-  }
-}
-@media screen and (min-width: 32em) {
-  /* line 373, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-copy-alt .homepage-hero-copy {
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-    float: right;
+  /* line 387, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-slogan-wrapper {
+    padding-right: 2ch;
+    padding-left: 0;
+    right: 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
   }
 }
 
-/* line 388, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-img-detailed .homepage-hero-copy {
-  height: 100%;
-  margin: 0;
-  padding: 0 calc(7.5 / 15 * 1em);
-  width: 66.6666666667%;
-  background-color: rgba(73, 44, 93, 0.5);
-  border-radius: 2px;
-  	/*@include breakpoint($drax){
-  		width: calc(3 / 7 * 100%);
-  	}
-  
-  	@include breakpoint($groot){
-  		padding: 0 calc(30 / 19.23333333333 * 1em);
-  	}*/
-}
-@media screen and (min-width: 22em) {
-  /* line 388, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    padding: 0 calc(15 / 14 * 1em);
-  }
-}
-@media screen and (min-width: 32em) {
-  /* line 388, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    height: auto;
-    width: 50%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 388, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-img-detailed .homepage-hero-copy {
-    margin: 5em 2ch 0;
-    padding: 0;
-    width: calc(100% - 4ch);
-    background-color: transparent;
-  }
-}
+/* I do  not believe this entire section is needed for the latest slogan. */
+/*
+.homepage-hero-img-detailed .homepage-hero-copy{
+	// box model
+	height: 100%;
+	margin: 0;
+	padding: 0 calc(7.5 / 15 * 1em);
+	width: 66.6666666667%;
+	// decoration
+	background-color: transparentize($blueberry-susan, 0.5);
+	border-radius: 2px;
 
+	@include breakpoint($rocket){
+		padding: 0 calc(15 / 14 * 1em);
+	}
+
+	@include breakpoint($starlord){
+		height: auto;
+		width: 50%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin: 5em 2ch 0;
+		padding: 0;
+		width: calc(100% - 4ch);
+		// decoration
+		background-color: transparent;
+	}
+}*/
 /* line 129, ../src/smacss/_modules.scss */
 .location-transporter {
   margin: calc(30 / 18 * 1em) 1ch;
