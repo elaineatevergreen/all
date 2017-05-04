@@ -64,6 +64,7 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 								<img alt="Experience more." src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
 							</picture>
 						</h1>
+						<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>
 						<!--<p class="call-to-action">Learn how →</p>-->
 					</div>
 				<!--</div>-->
