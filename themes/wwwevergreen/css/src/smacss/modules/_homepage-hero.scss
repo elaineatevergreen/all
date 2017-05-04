@@ -361,11 +361,11 @@
 
 @keyframes spinDown{
 	from{
-		bottom: 0;
+		margin-top: -100%;
 	}
 	
 	to{
-		bottom: -100em;
+		margin-top: 0%;
 	}
 }
 
