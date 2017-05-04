@@ -27,7 +27,7 @@
 	height: 100%;
 	// layout
 	overflow: hidden;
-	// positioning
+	// layout
 	position: relative;
 
 	@include breakpoint($lil-groot){
@@ -35,7 +35,6 @@
 		width: 100%;
 		// layout
 		overflow: hidden;
-		// positioning
 		position: relative;  // Creates a stage for absolute positioning of child elements
 	}
 
@@ -88,7 +87,13 @@
 }
 
 .homepage-hero-caption{
-	position: absolute;
+	// layout
+	position: relative;
+	z-index: 1;
+	
+	@include breakpoint($starlord){
+		position: absolute;
+	}
 }
 
 .homepage-hero-caption .caption-box{
@@ -150,7 +155,6 @@
 	@include breakpoint($lil-groot){
 		// layout
 		flex-direction: column-reverse;
-		// positioning
 		position: absolute;
 		bottom: 0;
 		// decoration
@@ -233,12 +237,15 @@
 	// box model
 	margin: 0 2ch;
 	width: calc(50% - 4ch);
-	// positioning
+	// layout
 	position: absolute;
 	top: 0;
+	// decoration
+	background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.667), hsla(0, 0%, 0%, 0.5) 75%, hsla(0, 0%, 0%, 0));
 }
 
-.homepage-hero-copy{
+.homepage-hero-slogan{
+	// layout
 	display: flex;
 	
 	@include breakpoint($lil-groot){
@@ -270,7 +277,12 @@
 	}
 }
 
-.homepage-hero-copy h1{
+.homepage-hero-slogan h1{
+	// box model
+	width: 60%;
+	// layout
+	float: left;
+	// typography
 	font-size: 1.202rem;
 	line-height: 1.169925124792013;  //22.5/19.232
 
@@ -293,7 +305,14 @@
 	}
 }
 
-.homepage-hero-copy img{
+.homepage-hero-slogan-keywords{
+	// box model
+	width: 40%;
+	// layout
+	float: left;
+}
+
+.homepage-hero-slogan img{
 	width: 100%;  // IE 11
 }
 
