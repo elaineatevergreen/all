@@ -23,8 +23,12 @@
  */
 
 .homepage-hero{
+	// box model
 	height: 100%;
+	// layout
 	overflow: hidden;
+	// positioning
+	position: relative;
 
 	@include breakpoint($lil-groot){
 		// box model
@@ -228,25 +232,26 @@
 .homepage-hero-slogan-wrapper{
 	// box model
 	margin: 0 2ch;
-	width: 100%;
+	width: calc(50% - 4ch);
 	// positioning
 	position: absolute;
 	top: 0;
 }
 
 .homepage-hero-copy{
+	display: flex;
 	
 	@include breakpoint($lil-groot){
 		// box model
-		width: calc(66.6666666667% - 2ch);
+		//width: calc(66.6666666667% - 2ch);
 		// layout
 		//float: left;
 	}
 
 	@include breakpoint($starlord){
 		// box model
-		margin: 0 2ch;
-		width: calc(50% - 2ch);
+		//margin: 0 2ch;
+		//width: calc(50% - 2ch);
 		color: $tint;
 		// typography
 		text-shadow: 0 1px 2px mix($shade, $blueberry-susan, 80%);
@@ -254,14 +259,14 @@
 
 	//@include breakpoint($drax){
 	@include breakpoint($gamora){
-		margin: 33% auto 0;
+		//margin: 33% auto 0;
 		//width: calc((3 / 7 * 100%) - 1em);  //3/7
-		width: 90vw;
-		max-width: calc(100% - 4ch);
+		//width: 90vw;
+		//max-width: calc(100% - 4ch);
 	}
 	
 	@include breakpoint($drax){
-		width: 70vw;
+		//width: 70vw;
 	}
 }
 
