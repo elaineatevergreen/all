@@ -263,7 +263,6 @@
 
 .homepage-hero-slogan{
 	// layout
-	align-items: center;
 	display: flex;
 	
 	@include breakpoint($lil-groot){
@@ -345,6 +344,11 @@
 	width: 39%;
 	// layout
 	float: left;
+	// animation
+	animation-duration: 5s;
+	animation-name: spinDown;
+	animation-timing-function: ease-out;
+	
 	
 	@include breakpoint($starlord){
 		width: 35%;
@@ -352,6 +356,16 @@
 	
 	@include breakpoint($gamora){
 		width: 30%;
+	}
+}
+
+@keyframes spinDown{
+	from{
+		bottom: 0;
+	}
+	
+	to{
+		bottom: -100em;
 	}
 }
 
@@ -370,21 +384,30 @@
  * - .homepage-hero-img-detailed  Adds a violet background to make the text
  *                                more readable on detailed images.
  */
-.homepage-hero-copy-alt .homepage-hero-copy{
+.homepage-hero-copy-alt .homepage-hero-slogan-wrapper{
 
 	@include breakpoint($lil-groot){
+		// box model
+		padding-right: 2ch;
+		padding-left: 0;
 		//layout
-		align-self: flex-end;
-		float: right;
+		//align-self: flex-end;
+		//float: right;
+		right: 0;
+		// decoration
+		background-image: linear-gradient(to left, hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.5) 66.66667%, transparent);
 	}
 
 	@include breakpoint($starlord){
 		//layout
-		align-self: flex-end;  //W3C
-		float: right;  //IE9
+		//align-self: flex-end;  //W3C
+		//float: right;  //IE9
 	}
 }
 
+
+/* I do  not believe this entire section is needed for the latest slogan. */
+/*
 .homepage-hero-img-detailed .homepage-hero-copy{
 	// box model
 	height: 100%;
@@ -412,12 +435,4 @@
 		// decoration
 		background-color: transparent;
 	}
-
-	/*@include breakpoint($drax){
-		width: calc(3 / 7 * 100%);
-	}
-
-	@include breakpoint($groot){
-		padding: 0 calc(30 / 19.23333333333 * 1em);
-	}*/
-}
+}*/
