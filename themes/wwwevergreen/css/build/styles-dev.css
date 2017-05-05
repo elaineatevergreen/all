@@ -3833,7 +3833,7 @@ input:checked + .header-dropdown {
  */
 /* line 237, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan-wrapper {
-  padding-left: 2ch;
+  padding-left: 4ch;
   width: 75%;
   position: absolute;
   top: 0;
@@ -3851,12 +3851,6 @@ input:checked + .header-dropdown {
     width: calc(4 / 7 * 100%);
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: calc(3 / 7 * 100%);
-  }
-}
 @media screen and (min-width: 125em) {
   /* line 237, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan-wrapper {
@@ -3864,21 +3858,21 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 264, ../src/smacss/modules/_homepage-hero.scss */
+/* line 260, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 32em) {
-  /* line 264, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 260, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan {
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
 
-/* line 297, ../src/smacss/modules/_homepage-hero.scss */
+/* line 293, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan h1 {
   margin-right: 1ch;
   width: 61%;
@@ -3887,7 +3881,7 @@ input:checked + .header-dropdown {
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 2em;
     color: #f2f2f2;
@@ -3895,14 +3889,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 1em;
     width: 65%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 1.5em;
     width: 70%;
@@ -3911,38 +3905,38 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     margin-top: 3.5em;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 297, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 342, ../src/smacss/modules/_homepage-hero.scss */
+/* line 338, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan-keywords {
   width: 39%;
   float: left;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-name: spinDown;
           animation-name: spinDown;
   -webkit-animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
           animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
 }
 @media screen and (min-width: 32em) {
-  /* line 342, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 338, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan-keywords {
     width: 35%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 342, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 338, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-slogan-keywords {
     width: 30%;
   }
@@ -3950,7 +3944,7 @@ input:checked + .header-dropdown {
 
 @-webkit-keyframes spinDown {
   from {
-    margin-top: -200vh;
+    margin-top: -100vh;
   }
   to {
     margin-top: -10vh;
@@ -3959,13 +3953,13 @@ input:checked + .header-dropdown {
 
 @keyframes spinDown {
   from {
-    margin-top: -200vh;
+    margin-top: -100vh;
   }
   to {
     margin-top: -10vh;
   }
 }
-/* line 373, ../src/smacss/modules/_homepage-hero.scss */
+/* line 369, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan img {
   width: 100%;
 }
@@ -3982,9 +3976,9 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 388, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 384, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-slogan-wrapper {
-    padding-right: 2ch;
+    padding-right: 4ch;
     padding-left: 0;
     right: 0;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
