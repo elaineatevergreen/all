@@ -37,24 +37,23 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 	?>
 <div class="row">
 	<div class="homepage-hero <?php print $classes ?>">  
-		
-		<picture class="homepage-hero-picture">
-  		<source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
-			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
-			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
-			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="Experience more." srcset="<?php echo $xl_hero; ?>" />
-		</picture>
-		
-		<div class="homepage-hero-caption">
-			<div class="box caption-box">
-				<p class="caption">Photo: <?php print render($title) ?></p>
+		<a class="homepage-hero-link" href="/academics">
+			<picture class="homepage-hero-picture">
+	  		<source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
+				<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
+				<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
+				<source srcset="<?php echo $small_hero; ?>"/>
+				<img alt="Experience more." srcset="<?php echo $xl_hero; ?>" />
+			</picture>
+			
+			<div class="homepage-hero-caption">
+				<div class="box caption-box">
+					<p class="caption">Photo: <?php print render($title) ?></p>
+				</div>
 			</div>
-		</div>
-		
-		<!--<div class="wrapper">-->
-		<div class="homepage-hero-slogan-wrapper">
-			<a href="/academics">
+			
+			<!--<div class="wrapper">-->
+				<div class="homepage-hero-slogan-wrapper">
 				<!--<div class="homepage-hero-content">-->
 					<div class="homepage-hero-slogan">
 						<h1>
@@ -66,13 +65,14 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 						</h1>
 						<div class="homepage-hero-slogan-keywords">
 							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/><br/>
-							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/><!--<br/>
-							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>-->
+							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/><br/>
+							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>
 						</div>
 						<!--<p class="call-to-action">Learn how →</p>-->
 					</div>
 				<!--</div>-->
-			</a>
-		</div>
+				
+			</div>
+		</a>
 	</div>
 </div>
