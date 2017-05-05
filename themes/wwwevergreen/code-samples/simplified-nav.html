@@ -47,7 +47,7 @@
 
 <div class="region region-section-nav">
 	<nav id="tertiary-nav" class="box">
-		<ul class="field-section-navigation" id="section-nav-list"><!-- Add id -->
+		<ul class="field-section-navigation"><!-- Add id #section-nav-list? -->
 			<li>
 				<h4 class="field-group-title">Navigation Group One</h4>
 				<ul class="field-links">
@@ -92,9 +92,9 @@
 <script>
 	/* Pure JS, v2 */
 	var tertiaryNav = document.getElementById('tertiary-nav');
-	/* If we can get classnames on the lis, we can avoid this step. */
+	/* If we can get class names on the lis, we can avoid this step. */
 	var sectionNavItems = tertiaryNav.getElementsByTagName('li');
-	var sectionNavItems = document.querySelectorAll('#section-nav-list > li')
+	//var sectionNavItems = document.querySelectorAll('#section-nav-list > li')
 	function setupAccordion(){
 		for (var i = 0; i < sectionNavItems.length; ++i) {
 			sectionNavItems[i].className = "nav-item close";
