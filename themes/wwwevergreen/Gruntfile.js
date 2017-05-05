@@ -340,5 +340,6 @@ module.exports = function(grunt) {
 
 	// Default task(s) (in the order you want to run them).
 	grunt.registerTask('default', ['sass', 'postcss', 'newer:concat', 'newer:uglify', 'copy']);
+	grunt.registerTask('scripts', ['newer:concat', 'newer:uglify', 'copy:js_init_to_dist']);
 
 };
