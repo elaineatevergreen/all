@@ -9,7 +9,8 @@
  * 1. Default Tertiary Nav
  * 2. Homepage Tertiary Nav
  * 3. CSS Accordion
- * 4. Catalog Nav Fixes
+ * 4. Drupal Nav With JS Accordion
+ * 5. Catalog Nav Fixes
  */
 
 /**
@@ -306,9 +307,53 @@ ul.accordion-inner{
 }
 
 /**
- * 4. Catalog Nav Fixes
+ * 4. Drupal Navigation With JS Accordion
  *
- * The catalog uses a special filter form in the nav, which throws
+ * Drupal does things in its own funny way, and rather than shoehorn my
+ * system into it, let’s just play along and use the classes it tends to
+ * want to use automatically.
+ */
+.field-section-navigation{
+	//border: 1px solid red;
+	list-style-type: none;
+}
+
+.field-group-title::before{
+	margin-right: 0.5ch;
+	display: inline-block;
+	content: "▶";
+	transition: transform 0.33s ease;
+}
+
+.open .field-group-title::before{
+	transform: rotate(90deg);
+	transition: transform 0.33s ease;
+}
+	
+.field-links{
+	//border: 1px solid green;
+	overflow: hidden;
+}
+
+.nav-item .field-links{
+	max-height: none;
+}
+
+.close .field-links{
+	max-height: 0;
+	transition: max-height 0.25s ease;
+}
+
+.open .field-links{
+	max-height: 20em;
+	transition: max-height 1s ease;
+}
+
+
+/**
+ * 5. Catalog Nav Fixes
+ *
+ * The catalogs use a special filter form in the nav, which throws
  * everything off.
  *
  * @see http://evergreen.edu/catalog/index
