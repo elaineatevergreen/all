@@ -3928,12 +3928,12 @@ input:checked + .header-dropdown {
 .homepage-hero-slogan-keywords {
   width: 39%;
   float: left;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-name: spinDown;
           animation-name: spinDown;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
+          animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
 }
 @media screen and (min-width: 32em) {
   /* line 342, ../src/smacss/modules/_homepage-hero.scss */
@@ -3953,7 +3953,7 @@ input:checked + .header-dropdown {
     margin-top: -200vh;
   }
   to {
-    margin-top: -1vh;
+    margin-top: -10vh;
   }
 }
 
@@ -3962,10 +3962,10 @@ input:checked + .header-dropdown {
     margin-top: -200vh;
   }
   to {
-    margin-top: -1vh;
+    margin-top: -10vh;
   }
 }
-/* line 372, ../src/smacss/modules/_homepage-hero.scss */
+/* line 373, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-slogan img {
   width: 100%;
 }
@@ -3982,7 +3982,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 387, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 388, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-slogan-wrapper {
     padding-right: 2ch;
     padding-left: 0;

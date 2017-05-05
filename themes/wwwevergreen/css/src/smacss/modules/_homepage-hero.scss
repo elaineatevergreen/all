@@ -345,9 +345,10 @@
 	// layout
 	float: left;
 	// animation
-	animation-duration: 5s;
+	animation-duration: 3s;
 	animation-name: spinDown;
-	animation-timing-function: ease-out;
+	//animation-timing-function: ease-out;
+	animation-timing-function: cubic-bezier(0.240, 0.820, 0.695, 1.145);  // Custom, with bounce
 	
 	
 	@include breakpoint($starlord){
@@ -365,7 +366,7 @@
 	}
 	
 	to{
-		margin-top: -1vh;
+		margin-top: -10vh;
 	}
 }
 
