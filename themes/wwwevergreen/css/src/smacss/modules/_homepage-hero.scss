@@ -252,7 +252,7 @@
 		width: calc(4 / 7 * 100%);
 	}
 	
-	@include breakpoint($groot){
+	@include breakpoint($drax){
 		width: calc(3 / 7 * 100%);
 	}
 }
@@ -337,6 +337,7 @@
 
 .homepage-hero-slogan-keywords{
 	// box model
+	margin-top: -10vh;
 	width: 39%;
 	// layout
 	float: left;
