@@ -236,7 +236,7 @@
  */
 .homepage-hero-slogan-wrapper{
 	// box model
-	padding-left: 2ch;
+	padding-left: 4ch;
 	width: 75%;
 	// layout
 	position: absolute;
@@ -250,10 +250,6 @@
 	
 	@include breakpoint($gamora){
 		width: calc(4 / 7 * 100%);
-	}
-	
-	@include breakpoint($drax){
-		width: calc(3 / 7 * 100%);
 	}
 	
 	@include breakpoint($groot){
@@ -345,7 +341,7 @@
 	// layout
 	float: left;
 	// animation
-	animation-duration: 3s;
+	animation-duration: 2s;
 	animation-name: spinDown;
 	//animation-timing-function: ease-out;
 	animation-timing-function: cubic-bezier(0.240, 0.820, 0.695, 1.145);  // Custom, with bounce
@@ -362,7 +358,7 @@
 
 @keyframes spinDown{
 	from{
-		margin-top: -200vh;
+		margin-top: -100vh;
 	}
 	
 	to{
@@ -389,7 +385,7 @@
 
 	@include breakpoint($lil-groot){
 		// box model
-		padding-right: 2ch;
+		padding-right: 4ch;
 		padding-left: 0;
 		//layout
 		//align-self: flex-end;
