@@ -3944,7 +3944,7 @@ input:checked + .header-dropdown {
 
 @-webkit-keyframes spinDown {
   from {
-    margin-top: -100vh;
+    margin-top: -75vh;
   }
   to {
     margin-top: -10vh;
@@ -3953,7 +3953,7 @@ input:checked + .header-dropdown {
 
 @keyframes spinDown {
   from {
-    margin-top: -100vh;
+    margin-top: -75vh;
   }
   to {
     margin-top: -10vh;
