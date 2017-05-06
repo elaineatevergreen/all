@@ -7,10 +7,9 @@
  * Table of Contents
  *
  * 1. Default Tertiary Nav
- * 2. Homepage Tertiary Nav
- * 3. CSS Accordion
- * 4. Drupal Nav With JS Accordion
- * 5. Catalog Nav Fixes
+ * 2. CSS Accordion
+ * 3. Drupal Nav With JS Accordion
+ * 4. Catalog Nav Fixes
  */
 
 /**
@@ -82,7 +81,7 @@
 }
 
 #tertiary-nav > ul{
-	margin-right: 1em;
+	//margin-right: 1em;
 
 	@include breakpoint($gamora){
 		//margin-top: calc(30 / 16 * 1rem);
@@ -146,40 +145,8 @@
 	font-weight: normal;
 }
 
-/*@include breakpoint($gamora){
-	.tertiary-nav-h,
-	a.tertiary-nav-h{  // heading for tertiary nav in wider views
-		border-bottom: 1px solid mix(black, $sky-blue, 50%);
-		margin-top: -1px;  // compensate for border
-		display: block;
-		//color: mix(black, $sky-blue, 50%);
-		font-weight: bold;
-	}
-}*/
-
 /**
- * 2. Homepage Tertiary Nav
- */
-/*#tertiary-nav.tertiary-nav-homepage{
-
-	@include breakpoint($gamora){
-		// box model
-		margin-left: calc(-25% + 1em);
-		width: calc(25% + 1.5em);
-		// layout
-		position: absolute;
-		left: 0;
-	}
-
-	@include breakpoint($drax){
-		// box model
-		margin-left: calc(-3ch - ((100% + 6ch) / 6));  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container.
-		width: calc((100% + 6ch) / 6 + 1ch);  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container; + 1ch to make it feel a bit more intentional
-	}
-}*/
-
-/**
- * 3. CSS Accordion
+ * 2. CSS Accordion
  *
  * An accordion that relies on radio buttons and labels for controls
  * instead of JavaScript. This accordion automatically expands and
@@ -307,14 +274,18 @@ ul.accordion-inner{
 }
 
 /**
- * 4. Drupal Navigation With JS Accordion
+ * 3. Drupal Navigation With JS Accordion
  *
  * Drupal does things in its own funny way, and rather than shoehorn my
  * system into it, let’s just play along and use the classes it tends to
  * want to use automatically.
  */
 .field-section-navigation{
+	// box model
 	//border: 1px solid red;
+	margin-left: 0;
+	margin-right: 0;
+	// list
 	list-style-type: none;
 }
 
@@ -329,10 +300,37 @@ ul.accordion-inner{
 	transform: rotate(90deg);
 	transition: transform 0.33s ease;
 }
-	
-.field-links{
-	//border: 1px solid green;
+
+.field-section-navigation .field-group-title{  // heading for tertiary nav in wider views
+	//box model
+	margin-top: 0;  // compensate for border
+	margin-bottom: 0;
+	padding: 0.631100639515315em 0;  // 15/11.884/2
+	//typography
+	@include base-type;
+
+	@include breakpoint($gamora){
+		//box model
+		border-bottom: 1px solid mix($shade, $sky-blue, 50%);
+		margin-bottom: -1px;
+		padding: 0;
+		//layout
+		display: block;
+		//typography
+		font-size: 1.202rem;  // 19.232px
+		line-height: 1.559900166389351;  // 30/19.232
+	}
+}
+
+.field-section-navigation .field-links{
+	// box model
+	//border: 1px solid red;
+	margin-left: 0;
+	margin-right: 0;
+	// layout
 	overflow: hidden;
+	// list
+	list-style-type: none;
 }
 
 .nav-item .field-links{
@@ -349,9 +347,15 @@ ul.accordion-inner{
 	transition: max-height 1s ease;
 }
 
+.nav-item a,
+.nav-item a:visited,
+.nav-item a:hover{
+	font-weight: normal;
+}
+
 
 /**
- * 5. Catalog Nav Fixes
+ * 4. Catalog Nav Fixes
  *
  * The catalogs use a special filter form in the nav, which throws
  * everything off.
