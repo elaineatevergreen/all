@@ -4462,8 +4462,9 @@ ul.accordion-inner {
     padding: 0;
   }
 }
-/* line 389, ../src/smacss/modules/_tertiary-nav.scss */
-.nav-item .field-links:last-child {
+
+/* line 390, ../src/smacss/modules/_tertiary-nav.scss */
+.nav-item:last-child .field-links {
   border-bottom-width: 0;
 }
 
@@ -4498,9 +4499,9 @@ ul.accordion-inner {
 }
 
 /* line 424, ../src/smacss/modules/_tertiary-nav.scss */
-.nav-item a,
-.nav-item a:visited,
-.nav-item a:hover {
+.field-section-navigation a,
+.field-section-navigation a:visited,
+.field-section-navigation a:hover {
   border-bottom: none;
   font-weight: normal;
 }

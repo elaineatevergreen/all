@@ -385,10 +385,10 @@ ul.accordion-inner{
 	@include breakpoint($gamora){
 		padding: 0;
 	}
-	
-	&:last-child{
-		border-bottom-width: 0;
-	}
+}
+
+.nav-item:last-child .field-links{
+	border-bottom-width: 0;
 }
 
 .close .field-links{
@@ -421,9 +421,9 @@ ul.accordion-inner{
 	}
 }
 
-.nav-item a,
-.nav-item a:visited,
-.nav-item a:hover{
+.field-section-navigation a,
+.field-section-navigation a:visited,
+.field-section-navigation a:hover{
 	// box model
 	border-bottom: none;
 	// typography
