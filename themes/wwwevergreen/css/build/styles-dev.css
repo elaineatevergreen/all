@@ -4373,7 +4373,7 @@ ul.accordion-inner {
 
 /* line 405, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
-  max-height: 20em;
+  max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
