@@ -385,6 +385,10 @@ ul.accordion-inner{
 	@include breakpoint($gamora){
 		padding: 0;
 	}
+	
+	&:last-child{
+		border-bottom-width: 0;
+	}
 }
 
 .close .field-links{
@@ -402,7 +406,7 @@ ul.accordion-inner{
 	// box model
 	max-height: 20em;
 	// decoration
-	border-bottom-color: mix($tint, $shade, 60%);
+	border-bottom-color: mix($tint, $shade, 80%);
 	// behavior
 	transition: max-height 1s ease;
 }
@@ -420,6 +424,8 @@ ul.accordion-inner{
 .nav-item a,
 .nav-item a:visited,
 .nav-item a:hover{
+	// box model
+	border-bottom: none;
 	// typography
 	font-weight: normal;
 }
