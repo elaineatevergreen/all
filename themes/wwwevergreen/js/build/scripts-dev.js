@@ -248,7 +248,8 @@ window.onload = function loadAfter() {  // All content, including images, are fu
 	 */
 	var tertiaryNav = document.getElementById('tertiary-nav');
 	/* If we can get class names on the lis, we can avoid this step. */
-	var sectionNavItems = tertiaryNav.getElementsByTagName('li');
+	//var sectionNavItems = tertiaryNav.getElementsByTagName('li');
+	var sectionNavItems = document.querySelectorAll('#tertiary-nav .field-section-navigation > li');
 	//var sectionNavItems = document.querySelectorAll('#section-nav-list > li')
 	function setupAccordion(){
 		for (var i = 0; i < sectionNavItems.length; ++i) {
