@@ -4075,6 +4075,12 @@ function evergreen_content_field_default_field_bases() {
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
+          'field_default_token' => array(
+            'status' => TRUE,
+          ),
           'views-select-list' => array(
             'status' => 0,
           ),
@@ -4085,6 +4091,7 @@ function evergreen_content_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
+          'directory_individual' => 'directory_individual',
           'directory_office' => 'directory_office',
         ),
       ),
