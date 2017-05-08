@@ -344,21 +344,48 @@ ul.accordion-inner{
 
 .field-section-navigation .field-links{
 	// box model
-	//border: 1px solid red;
+	border-bottom: 1px solid $shade;
 	margin-left: 0;
 	margin-right: 0;
 	// layout
 	overflow: hidden;
 	// list
 	list-style-type: none;
+	// decoration
+	background-color: transparentize($tint, 0.75);
+	box-shadow: 0 2px 2px $drop-shadow inset;
+	
+	
+	// box model
+	//height: auto;
+	//max-height: 0;
+	
+	// transition
+	//transition: max-height 0.25s ease 0s;
+
+	@include breakpoint ($gamora){
+		border-bottom-width: 0;
+		//max-height: 600px;
+		// decoration
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	@include breakpoint($drax){
+		//max-height: none;
+	}
 }
 
 .nav-item .field-links{
+	// box model
+	margin: 0;
 	max-height: none;
 }
 
 .close .field-links{
+	// box model
 	max-height: 0;
+	// behavior
 	transition: max-height 0.25s ease;
 	
 	@include breakpoint($gamora){
@@ -367,13 +394,26 @@ ul.accordion-inner{
 }
 
 .open .field-links{
+	// box model
 	max-height: 20em;
+	// behavior
 	transition: max-height 1s ease;
+}
+
+.field-section-navigation .field-links li{
+	// box model
+	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+
+	@include breakpoint($gamora){
+		// box model
+		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
+	}
 }
 
 .nav-item a,
 .nav-item a:visited,
 .nav-item a:hover{
+	// typography
 	font-weight: normal;
 }
 
