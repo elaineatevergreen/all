@@ -4433,36 +4433,59 @@ ul.accordion-inner {
 
 /* line 345, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
+  border-bottom: 1px solid black;
   margin-left: 0;
   margin-right: 0;
   overflow: hidden;
   list-style-type: none;
+  background-color: rgba(242, 242, 242, 0.25);
+  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
+}
+@media screen and (min-width: 43em) {
+  /* line 345, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-links {
+    border-bottom-width: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
-/* line 356, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 379, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item .field-links {
+  margin: 0;
   max-height: none;
 }
 
-/* line 360, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 385, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 360, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 385, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 369, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 396, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 20em;
   transition: max-height 1s ease;
 }
 
-/* line 374, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 403, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation .field-links li {
+  margin: 0.535714285714286em 0 1.071428571428571em;
+}
+@media screen and (min-width: 43em) {
+  /* line 403, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-links li {
+    margin: 0.41666666666667em 0 0.83333333333333em;
+  }
+}
+
+/* line 413, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item a,
 .nav-item a:visited,
 .nav-item a:hover {
@@ -4477,7 +4500,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 389, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 429, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
