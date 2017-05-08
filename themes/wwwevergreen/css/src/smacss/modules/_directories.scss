@@ -10,7 +10,7 @@
  * Photo Directory
  */
 
-.directory > thead{
+.directory table > thead{
 	display: none;
 
 	@include breakpoint($gamora){
@@ -18,7 +18,7 @@
 	}
 }
 
-.directory > tbody > tr{
+.directory table > tbody > tr{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 66%);
 	@include margin-default;
@@ -46,7 +46,7 @@
 	}
 }
 
-.directory > tbody td{
+.directory table > tbody td{
 	// box model
 	border-width: 0;
 	padding: 0;
@@ -60,6 +60,10 @@
 		// layout
 		display: table-cell;
 	}
+}
+
+.directory table > tbody td:last-child{
+	padding-right: 0;
 }
 
 .directory .p-tel::before{
@@ -87,11 +91,14 @@
 
 .directory .u-photo{
 	// box model
+	border: 1px solid mix($shade, $sky-blue, 60%);
 	@include margin-default;
 	margin-left: 1em;
 	max-width: 75px;
 	// layout
 	float: right;
+	// decoration
+	border-radius: 2px;
 
 	@include breakpoint($gamora){
 		// box model

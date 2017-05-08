@@ -22,11 +22,12 @@
 .notice,  // deprecated
 .box,
 p.box,  // WYSIWYG
-#views-exposed-form-catalog-page{  // Catalog nav workaround
+#views-exposed-form-catalog-page,  // Catalog nav workaround
+#views-exposed-form-catalog-grad-programs{  // Catalog nav workaround
 	// box model
 	margin-top: 2.14285714285714em;  // 30/14
 	margin-bottom: 3.21428571428571em;  // 45/14
-	padding: 0 1em;
+	padding: 0 1.5ch;
 	// layout
 	overflow: hidden;
 	// typography
@@ -345,6 +346,7 @@ p.alert{  // WYSIWYG
 	margin: 0.44117647058824em 0 0.88235294117647em;  // 7.5/17 15/17
 	// typography
 	@include base-type-lg;
+	font-family: $text-face-alt;
 	font-style: italic;
 
 	@include breakpoint($drax){

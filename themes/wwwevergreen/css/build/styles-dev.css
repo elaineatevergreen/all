@@ -68,9 +68,19 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * New Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -211,29 +221,36 @@ svg {
 }
 
 /* line 56, ../src/smacss/_base.scss */
+img[height="0"][width="0"] {
+  height: 0;
+  width: 0;
+  display: block;
+}
+
+/* line 64, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 60, ../src/smacss/_base.scss */
+/* line 68, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 65, ../src/smacss/_base.scss */
+/* line 73, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 69, ../src/smacss/_base.scss */
+/* line 77, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 78, ../src/smacss/_base.scss */
+/* line 86, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -382,6 +399,7 @@ figure,
 /* line 104, ../src/smacss/base/_typography.scss */
 h1 {
   margin: 0.96401028277635em 0 0;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.945rem;
   font-weight: normal;
   line-height: 1.44601542416452;
@@ -390,6 +408,7 @@ h1 {
   /* line 104, ../src/smacss/base/_typography.scss */
   h1 {
     margin-top: 0.818419903972065em;
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
@@ -418,16 +437,23 @@ h1 {
   }
 }
 
-/* line 142, ../src/smacss/base/_typography.scss */
+/* line 144, ../src/smacss/base/_typography.scss */
 h2 {
   margin-top: 1.56014353320505em;
   color: #616161;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.202rem;
   font-weight: bold;
   line-height: 1.56014353320505;
 }
+@media screen and (min-width: 22em) {
+  /* line 144, ../src/smacss/base/_typography.scss */
+  h2 {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
-  /* line 142, ../src/smacss/base/_typography.scss */
+  /* line 144, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.03007828594973em;
     font-size: 1.82rem;
@@ -435,7 +461,7 @@ h2 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 142, ../src/smacss/base/_typography.scss */
+  /* line 144, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.44638724607868em;
     font-size: 1.945rem;
@@ -443,16 +469,23 @@ h2 {
   }
 }
 
-/* line 168, ../src/smacss/base/_typography.scss */
+/* line 175, ../src/smacss/base/_typography.scss */
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   font-weight: normal;
 }
+@media screen and (min-width: 22em) {
+  /* line 175, ../src/smacss/base/_typography.scss */
+  h3 {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
-  /* line 168, ../src/smacss/base/_typography.scss */
+  /* line 175, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.10603155876714em;
     font-size: 1.69525rem;
@@ -460,7 +493,7 @@ h3 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 168, ../src/smacss/base/_typography.scss */
+  /* line 175, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.54575432811212em;
     font-size: 1.8195rem;
@@ -468,7 +501,7 @@ h3 {
   }
 }
 
-/* line 193, ../src/smacss/base/_typography.scss */
+/* line 205, ../src/smacss/base/_typography.scss */
 h4 {
   margin-top: 2.14285714285714em;
   font-size: 0.875rem;
@@ -483,7 +516,7 @@ h4 {
   }*/
 }
 @media screen and (min-width: 43em) {
-  /* line 193, ../src/smacss/base/_typography.scss */
+  /* line 205, ../src/smacss/base/_typography.scss */
   h4 {
     margin-top: 1.56014353320505em;
     font-size: 1.202rem;
@@ -491,7 +524,7 @@ h4 {
   }
 }
 
-/* line 218, ../src/smacss/base/_typography.scss */
+/* line 230, ../src/smacss/base/_typography.scss */
 h5 {
   margin-top: 2.14285714285714em;
   color: #616161;
@@ -502,7 +535,7 @@ h5 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 218, ../src/smacss/base/_typography.scss */
+  /* line 230, ../src/smacss/base/_typography.scss */
   h5 {
     margin-top: 1.66666666666667em;
     font-size: 1.125rem;
@@ -510,20 +543,20 @@ h5 {
   }
 }
 
-/* line 237, ../src/smacss/base/_typography.scss */
+/* line 249, ../src/smacss/base/_typography.scss */
 h6 {
   margin-top: 2.69784172661871em;
   margin-bottom: 1.34892086330935em;
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 237, ../src/smacss/base/_typography.scss */
+  /* line 249, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.14285714285714em;
     margin-bottom: 2.14285714285714em;
@@ -533,7 +566,7 @@ h6 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 237, ../src/smacss/base/_typography.scss */
+  /* line 249, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.5em;
     margin-bottom: 1.66666666666667em;
@@ -542,7 +575,7 @@ h6 {
   }
 }
 
-/* line 266, ../src/smacss/base/_typography.scss */
+/* line 278, ../src/smacss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -551,7 +584,7 @@ h5 {
   margin-bottom: 0.46875rem;
 }
 @media screen and (min-width: 125em) {
-  /* line 266, ../src/smacss/base/_typography.scss */
+  /* line 278, ../src/smacss/base/_typography.scss */
   h1,
   h2,
   h3,
@@ -566,63 +599,63 @@ h5 {
  *
  * @section l
  */
-/* line 284, ../src/smacss/base/_typography.scss */
+/* line 296, ../src/smacss/base/_typography.scss */
 ul,
 ol {
   margin-left: 1.07142857142857em;
   padding-left: 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 284, ../src/smacss/base/_typography.scss */
+  /* line 296, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 284, ../src/smacss/base/_typography.scss */
+  /* line 296, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 298, ../src/smacss/base/_typography.scss */
+/* line 310, ../src/smacss/base/_typography.scss */
 ul,
 dl {
   padding: 0;
 }
 
-/* line 303, ../src/smacss/base/_typography.scss */
+/* line 315, ../src/smacss/base/_typography.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
 
-/* line 307, ../src/smacss/base/_typography.scss */
+/* line 319, ../src/smacss/base/_typography.scss */
 dt {
   margin-top: 0.535714285714286em;
   font-weight: bold;
 }
 @media screen and (min-width: 125em) {
-  /* line 307, ../src/smacss/base/_typography.scss */
+  /* line 319, ../src/smacss/base/_typography.scss */
   dt {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 318, ../src/smacss/base/_typography.scss */
+/* line 330, ../src/smacss/base/_typography.scss */
 dd {
   margin-bottom: 1.071428571428571em;
   margin-left: 0;
 }
 @media screen and (min-width: 125em) {
-  /* line 318, ../src/smacss/base/_typography.scss */
+  /* line 330, ../src/smacss/base/_typography.scss */
   dd {
     margin-bottom: 1.04009568880337em;
   }
 }
 
-/* line 327, ../src/smacss/base/_typography.scss */
+/* line 339, ../src/smacss/base/_typography.scss */
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -636,7 +669,7 @@ dd > blockquote:first-child > p:first-child {
  *
  * @section a
  */
-/* line 340, ../src/smacss/base/_typography.scss */
+/* line 352, ../src/smacss/base/_typography.scss */
 a,
 .internal-users a:visited,
 .search-tools a:visited,
@@ -648,13 +681,13 @@ a,
   transition: color 0.2s, border-color 0.2s ease;
 }
 
-/* line 354, ../src/smacss/base/_typography.scss */
+/* line 366, ../src/smacss/base/_typography.scss */
 a:visited {
   color: #600f21;
   border-bottom-color: #ceb9be;
 }
 
-/* line 361, ../src/smacss/base/_typography.scss */
+/* line 373, ../src/smacss/base/_typography.scss */
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
@@ -663,7 +696,7 @@ a:hover,
   border-bottom-color: #0086ee;
 }
 
-/* line 371, ../src/smacss/base/_typography.scss */
+/* line 383, ../src/smacss/base/_typography.scss */
 a:focus,
 a:active {
   background-color: rgba(73, 44, 93, 0.1);
@@ -675,11 +708,11 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 383, ../src/smacss/base/_typography.scss */
+/* line 395, ../src/smacss/base/_typography.scss */
 .site-name a {
   border-bottom-width: 0;
 }
-/* line 386, ../src/smacss/base/_typography.scss */
+/* line 398, ../src/smacss/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #f2f2f2;
   text-shadow: 0 1px 3px #1d1225;
@@ -695,7 +728,7 @@ a:active {
       }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 386, ../src/smacss/base/_typography.scss */
+  /* line 398, ../src/smacss/base/_typography.scss */
   .site-name a, .site-name a:visited {
     color: #46502b;
     font-weight: normal;
@@ -708,27 +741,27 @@ a:active {
  *
  * @section other-type
  */
-/* line 416, ../src/smacss/base/_typography.scss */
+/* line 428, ../src/smacss/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 420, ../src/smacss/base/_typography.scss */
+/* line 432, ../src/smacss/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 424, ../src/smacss/base/_typography.scss */
+/* line 436, ../src/smacss/base/_typography.scss */
 figcaption,
 small,
 .details,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
-  /* line 424, ../src/smacss/base/_typography.scss */
+  /* line 436, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -739,13 +772,13 @@ small,
   }
 }
 
-/* line 436, ../src/smacss/base/_typography.scss */
+/* line 448, ../src/smacss/base/_typography.scss */
 figcaption p {
   margin-top: 0.67446043165468em;
   margin-bottom: 1.34892086330935em;
 }
 
-/* line 443, ../src/smacss/base/_typography.scss */
+/* line 455, ../src/smacss/base/_typography.scss */
 [role="contentinfo"] small {
   color: #c2c2c2;
 }
@@ -754,47 +787,47 @@ figcaption p {
  * Small (inline) text can inherit the line-height of its parent. Switching
  * to inline-block forces small to use its own line-height.
  */
-/* line 452, ../src/smacss/base/_typography.scss */
+/* line 464, ../src/smacss/base/_typography.scss */
 .small {
   display: inline-block;
 }
 
-/* line 456, ../src/smacss/base/_typography.scss */
+/* line 468, ../src/smacss/base/_typography.scss */
 abbr {
   border-bottom: 1px dotted #b6b6b6;
   text-decoration: none;
   cursor: help;
 }
 
-/* line 465, ../src/smacss/base/_typography.scss */
+/* line 477, ../src/smacss/base/_typography.scss */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 469, ../src/smacss/base/_typography.scss */
+/* line 481, ../src/smacss/base/_typography.scss */
 q::before {
   content: open-quote;
 }
 
-/* line 473, ../src/smacss/base/_typography.scss */
+/* line 485, ../src/smacss/base/_typography.scss */
 q::after {
   content: close-quote;
 }
 
-/* line 477, ../src/smacss/base/_typography.scss */
+/* line 489, ../src/smacss/base/_typography.scss */
 code,
 pre {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 482, ../src/smacss/base/_typography.scss */
+/* line 494, ../src/smacss/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 490, ../src/smacss/base/_typography.scss */
+  /* line 502, ../src/smacss/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -802,14 +835,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 498, ../src/smacss/base/_typography.scss */
+  /* line 510, ../src/smacss/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 505, ../src/smacss/base/_typography.scss */
+/* line 517, ../src/smacss/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
@@ -846,9 +879,10 @@ table {
   max-width: 100%;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 
-/* line 30, ../src/smacss/base/_tables.scss */
+/* line 31, ../src/smacss/base/_tables.scss */
 caption {
   margin: 0 0 0.41666666666667em;
   font-size: 1.125rem;
@@ -856,7 +890,7 @@ caption {
   font-style: italic;
 }
 @media screen and (min-width: 43em) {
-  /* line 30, ../src/smacss/base/_tables.scss */
+  /* line 31, ../src/smacss/base/_tables.scss */
   caption {
     margin: 0 0 0.39003588330126em;
     font-size: 1.202rem;
@@ -864,7 +898,7 @@ caption {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 30, ../src/smacss/base/_tables.scss */
+  /* line 31, ../src/smacss/base/_tables.scss */
   caption {
     margin-top: 0.51503914297487em;
     font-size: 1.82rem;
@@ -872,7 +906,7 @@ caption {
   }
 }
 
-/* line 52, ../src/smacss/base/_tables.scss */
+/* line 53, ../src/smacss/base/_tables.scss */
 tr.even,
 tr.odd {
   border-bottom-width: 0;
@@ -880,13 +914,13 @@ tr.odd {
   background-color: transparent;
 }
 
-/* line 60, ../src/smacss/base/_tables.scss */
+/* line 61, ../src/smacss/base/_tables.scss */
 th,
 td {
   text-align: left;
 }
 
-/* line 65, ../src/smacss/base/_tables.scss */
+/* line 66, ../src/smacss/base/_tables.scss */
 th {
   border-bottom-width: 0;
   padding: 0 1.111111111111111em 0 0;
@@ -894,7 +928,7 @@ th {
   vertical-align: bottom;
 }
 
-/* line 74, ../src/smacss/base/_tables.scss */
+/* line 75, ../src/smacss/base/_tables.scss */
 tbody th,
 td {
   border: 0 solid #c2c2c2;
@@ -907,26 +941,26 @@ td {
   vertical-align: top;
 }
 
-/* line 87, ../src/smacss/base/_tables.scss */
+/* line 88, ../src/smacss/base/_tables.scss */
 tbody > tr:first-child > th,
 tbody > tr:first-child > td {
   border-top-color: black;
 }
 
-/* line 92, ../src/smacss/base/_tables.scss */
+/* line 93, ../src/smacss/base/_tables.scss */
 th:last-child,
 td:last-child {
   padding-right: 0;
 }
 
-/* line 97, ../src/smacss/base/_tables.scss */
+/* line 98, ../src/smacss/base/_tables.scss */
 td strong,
 tfoot td {
   color: black;
   font-weight: bold;
 }
 
-/* line 104, ../src/smacss/base/_tables.scss */
+/* line 105, ../src/smacss/base/_tables.scss */
 th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
@@ -934,7 +968,7 @@ td > ol:first-child li:first-child > p:first-child {
   margin-top: 0;
 }
 
-/* line 112, ../src/smacss/base/_tables.scss */
+/* line 113, ../src/smacss/base/_tables.scss */
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
@@ -942,12 +976,12 @@ td > ol:last-child li:last-child > p:last-child {
   margin-bottom: 0;
 }
 
-/* line 119, ../src/smacss/base/_tables.scss */
+/* line 120, ../src/smacss/base/_tables.scss */
 table a {
   border-bottom-width: 0;
 }
 
-/* line 123, ../src/smacss/base/_tables.scss */
+/* line 124, ../src/smacss/base/_tables.scss */
 .tnum {
   text-align: right;
 }
@@ -957,19 +991,19 @@ table a {
  *
  * For tables with the th left of the tds.
  */
-/* line 132, ../src/smacss/base/_tables.scss */
+/* line 133, ../src/smacss/base/_tables.scss */
 .horizontal-table th {
   border-top: 1px solid #c2c2c2;
   padding: 0.37037em 1.1111111111em 1.1111111111em 0;
   vertical-align: top;
 }
 
-/* line 140, ../src/smacss/base/_tables.scss */
+/* line 141, ../src/smacss/base/_tables.scss */
 .horizontal-table tr:first-child th {
   border-top: 1px solid black;
 }
 
-/* line 145, ../src/smacss/base/_tables.scss */
+/* line 146, ../src/smacss/base/_tables.scss */
 .horizontal-table:last-child {
   border-bottom-width: 0;
 }
@@ -980,7 +1014,7 @@ table a {
  * For normal tables that need the left-padding for whatever reason
  * (e.g. background-colors that make the text look funny).
  */
-/* line 156, ../src/smacss/base/_tables.scss */
+/* line 157, ../src/smacss/base/_tables.scss */
 .padded-table th,
 .padded-table td,
 .accordion-table th,
@@ -988,7 +1022,7 @@ table a {
 .striped-table td {
   padding-left: 1.1111111111em;
 }
-/* line 163, ../src/smacss/base/_tables.scss */
+/* line 164, ../src/smacss/base/_tables.scss */
 .padded-table th:last-child,
 .padded-table td:last-child,
 .accordion-table th:last-child,
@@ -997,7 +1031,7 @@ table a {
   padding-right: 1.1111111111em;
 }
 
-/* line 168, ../src/smacss/base/_tables.scss */
+/* line 169, ../src/smacss/base/_tables.scss */
 .striped-table > tbody > tr:nth-child(odd) {
   background-color: #e1dee3;
 }
@@ -1007,22 +1041,22 @@ table a {
  *
  * JavaScript DataTables plugin.
  */
-/* line 178, ../src/smacss/base/_tables.scss */
+/* line 179, ../src/smacss/base/_tables.scss */
 .dataTable th:hover {
   cursor: pointer;
 }
 
-/* line 183, ../src/smacss/base/_tables.scss */
+/* line 184, ../src/smacss/base/_tables.scss */
 .sorting_asc::before {
   content: "↓\00A0";
 }
 
-/* line 187, ../src/smacss/base/_tables.scss */
+/* line 188, ../src/smacss/base/_tables.scss */
 .sorting_desc::before {
   content: "↑\00A0";
 }
 
-/* line 191, ../src/smacss/base/_tables.scss */
+/* line 192, ../src/smacss/base/_tables.scss */
 .dataTables_filter label {
   font-weight: bold;
 }
@@ -1041,18 +1075,38 @@ table a {
  * 2. Views Module Forms
  * 3. Webform Module
  * 4. Search
+ *
+ * A note on forms:
+ * There are several different kinds of forms:
+ * • Default forms
+ * • Drupal Views
+ * • Drupal Webforms
+ *
+ * Each of these forms have their own peculiarities, so you need to check
+ * out a few different forms, in order to make sure improvements you make
+ * to one form don't become bugs in another form. The following list are
+ * forms that tend to be troublesome, but the list is not exhaustive.
+ * Please add to this whenever you run into a cantankerous form problem.
+ * (Ideally, this could be aided by visual regression testing. Can anybody
+ * help with that?)
+ *
+ * Name                 Form type       URL
+ * ------------------------------------------
+ * Catalog filters      Drupal Views    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter    Drupal Views    http://wwwtest.evergreen.edu/activities/groups
+ * Rain opinion survey  Drupal Webform  http://wwwtest.evergreen.edu/marketing/rain-opinion-survey
  */
 /**
  * For more on reseting fieldsets and legends, see https://thatemil.com/blog/2015/01/03/reset-your-fieldset/.
  */
-/* line 17, ../src/smacss/base/_forms.scss */
+/* line 37, ../src/smacss/base/_forms.scss */
 fieldset {
   border-width: 0;
   margin: calc(30 / 16 * 1rem) 0;
   padding: 0;
 }
 
-/* line 23, ../src/smacss/base/_forms.scss */
+/* line 43, ../src/smacss/base/_forms.scss */
 legend {
   margin: 0.535714285714286em 0 1.071428571428571em;
   padding: 0;
@@ -1061,18 +1115,18 @@ legend {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 23, ../src/smacss/base/_forms.scss */
+  /* line 43, ../src/smacss/base/_forms.scss */
   legend {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 38, ../src/smacss/base/_forms.scss */
+/* line 58, ../src/smacss/base/_forms.scss */
 label {
   display: inline;
 }
 
-/* line 42, ../src/smacss/base/_forms.scss */
+/* line 62, ../src/smacss/base/_forms.scss */
 input,
 select,
 textarea {
@@ -1084,14 +1138,14 @@ textarea {
   line-height: 1.42857142857143;
   border-radius: 2px;
 }
-/* line 55, ../src/smacss/base/_forms.scss */
+/* line 75, ../src/smacss/base/_forms.scss */
 input:focus,
 select:focus,
 textarea:focus {
   box-shadow: 0 0 2px 1px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 42, ../src/smacss/base/_forms.scss */
+  /* line 62, ../src/smacss/base/_forms.scss */
   input,
   select,
   textarea {
@@ -1100,33 +1154,33 @@ textarea:focus {
   }
 }
 
-/* line 65, ../src/smacss/base/_forms.scss */
+/* line 85, ../src/smacss/base/_forms.scss */
 input {
   height: 1.875rem;
-  padding: 0 0.5em;
+  padding: 0 1ch;
   font-size: 1em;
 }
 
-/* line 73, ../src/smacss/base/_forms.scss */
+/* line 93, ../src/smacss/base/_forms.scss */
 input[type="text"], .form-type-select {
   width: 100%;
   max-width: calc(45ch + 1em);
 }
 
-/* line 78, ../src/smacss/base/_forms.scss */
+/* line 98, ../src/smacss/base/_forms.scss */
 input[type="email"] {
   width: 100%;
   max-width: calc(30ch + 1em);
 }
 
-/* line 83, ../src/smacss/base/_forms.scss */
+/* line 103, ../src/smacss/base/_forms.scss */
 input[type="password"],
 input[type="tel"] {
   width: 100%;
   max-width: calc(15ch + 1em);
 }
 
-/* line 89, ../src/smacss/base/_forms.scss */
+/* line 109, ../src/smacss/base/_forms.scss */
 select {
   height: calc(30 / 16 * 1rem);
   padding: 0 0.5em;
@@ -1134,13 +1188,13 @@ select {
   box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
   cursor: pointer;
 }
-/* line 99, ../src/smacss/base/_forms.scss */
+/* line 120, ../src/smacss/base/_forms.scss */
 select:hover {
   background-color: #e1dee3;
   border-bottom-style: dashed;
 }
 
-/* line 110, ../src/smacss/base/_forms.scss */
+/* line 127, ../src/smacss/base/_forms.scss */
 textarea {
   padding: calc(7.5 / 16 * 1rem) 0.75em;
   width: 100%;
@@ -1148,13 +1202,13 @@ textarea {
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
-  /* line 110, ../src/smacss/base/_forms.scss */
+  /* line 127, ../src/smacss/base/_forms.scss */
   textarea {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 123, ../src/smacss/base/_forms.scss */
+/* line 140, ../src/smacss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: calc(14 / 16 * 1rem);
@@ -1165,15 +1219,15 @@ input[type="radio"] {
   vertical-align: top;
 }
 @media screen and (min-width: 43em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 140, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(18 / 16 * 1rem);
-    margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+    margin: calc(2.5 / 16 * 1rem) 0.5ch calc(20 / 16 * 1rem) 0;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 123, ../src/smacss/base/_forms.scss */
+  /* line 140, ../src/smacss/base/_forms.scss */
   input[type="checkbox"],
   input[type="radio"] {
     height: calc(19.229 / 16 * 1rem);
@@ -1183,31 +1237,31 @@ input[type="radio"] {
 /**
  * 1. Sidebar Overrides
  */
-/* line 148, ../src/smacss/base/_forms.scss */
+/* line 165, ../src/smacss/base/_forms.scss */
 .sidebar input[type="checkbox"],
 .sidebar input[type="radio"] {
   height: calc(14 / 16 * 1rem);
 }
 @media screen and (min-width: 125em) {
-  /* line 148, ../src/smacss/base/_forms.scss */
+  /* line 165, ../src/smacss/base/_forms.scss */
   .sidebar input[type="checkbox"],
   .sidebar input[type="radio"] {
     height: calc(18 / 16 * 1rem);
   }
 }
 
-/* line 157, ../src/smacss/base/_forms.scss */
+/* line 174, ../src/smacss/base/_forms.scss */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   margin-bottom: 0.9375rem;
-  width: calc(100% - 1em - 0.5ch);
+  width: calc(100% - 1em - 0.5ch - 1px);
   float: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 157, ../src/smacss/base/_forms.scss */
+  /* line 174, ../src/smacss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
-    width: calc(100% - 1.25em);
+    width: calc(100% - 1em - 0.5ch - 1px);
   }
 }
 
@@ -1217,87 +1271,150 @@ input[type="radio"] + label {
 /**
  * 2. Views Module Forms
  *
- * Forms in Drupal’s Views module. It's worth cross-checking changes you
- * make here with a few different form pages, because this stuff gets weird
- * and unpredictable.
+ * Views forms seem typically to be filters on tables.
  *
- * Add to this list as you find more weirdness.
+ * Notable Views forms:
+ * Catalog filters    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter  http://wwwtest.evergreen.edu/activities/groups
  *
- * Left-nav fiters: http://evergreen.edu/catalog/index/ug
- * Main content filters: http://evergreen.edu/activities/groups
+ * Table of Contents:
  *
- * Table of Contents
- *
- * a. Views Exposed Widget
- * b. Secondary Options
+ * a. Form Components
+ * b. Buttons
+ * c. Better Exposed Filters
+ * d. Tertiary Nav Filter Styles
  */
 /**
- * b. Views Exposed Widget
- *
- * These are the bulk of the form widgets in the Views-type forms.
+ * a. Form Components
  */
-/* line 24, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-submit-button,
-.views-exposed-form .views-reset-button {
-  display: block;
-}
-
-/* line 29, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 21, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-exposed-widget {
-  /* box model */
-  margin: 0.535714285714286em 0 1.071428571428571em;
-  padding: 0;
-  /* layout */
-  float: none;
+  margin-bottom: calc(15 / 16 * 1rem);
 }
 
-/* line 37, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 25, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-widgets {
+  margin-bottom: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* line 33, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-widget input,
-.views-exposed-widget select {
+.views-exposed-widget select,
+.views-exposed-widget textarea,
+.views-exposed-widget fieldset {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 41, ../src/smacss/base/forms/_drupal-views.scss */
+.views-widget-filter-combine input {
+  margin-bottom: 0;
+}
+
+/* line 49, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .form-type-select select {
   width: 100%;
 }
 
-/* line 47, ../src/smacss/base/forms/_drupal-views.scss */
-.views-exposed-form .views-exposed-widget .form-submit {
-  margin: 0;
-  	/*margin-top: calc(20 / 16 * 1rem);
-  
-  	@include breakpoint($gamora){
-  		margin-top: calc(22.5 / 16 * 1rem);
-  	}*/
+/* line 53, ../src/smacss/base/forms/_drupal-views.scss */
+div[id$="-range-wrapper"] .slider-filter-processed {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-/*.views-widget-filter-combine input{  // Input combined with a description? See Activites filter page: http://collabtest.evergreen.edu/www/node/3764
-	margin-bottom: 0;
-}*/
-/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 59, ../src/smacss/base/forms/_drupal-views.scss */
+div[class$="-range-min"],
+div[class$="-range-max"] {
+  width: 6ch;
+}
+
+/* line 64, ../src/smacss/base/forms/_drupal-views.scss */
+input[id$="-range-max"] {
+  text-align: right;
+}
+
+/**
+ * b. Buttons
+ */
+/* line 71, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-submit-button,
+.views-exposed-form .views-reset-button {
+  display: inline-block;
+}
+
+/* line 76, ../src/smacss/base/forms/_drupal-views.scss */
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: calc(20 / 16 * 1rem);
+}
+@media screen and (min-width: 43em) {
+  /* line 76, ../src/smacss/base/forms/_drupal-views.scss */
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: calc(22.5 / 16 * 1rem);
+  }
+}
+
+/**
+ * c. Better Exposed Filters
+ *
+ * Better Exposed Filters (BEF) allow us to do some fancier form things,
+ * but they change up some of the code patterns that Drupal Views uses.
+ *
+ * See the Catalog Filter’s “Advanced Opportunities” for an example:
+ * http://wwwtest.evergreen.edu/catalog/index?year=1
+ */
+/* line 93, ../src/smacss/base/forms/_drupal-views.scss */
+.bef-checkboxes .form-item,
+.bef-secondary-options .form-item {
+  margin-bottom: calc(15 / 16 * 1rem);
+}
+
+/* line 98, ../src/smacss/base/forms/_drupal-views.scss */
+.bef-checkboxes .form-type-bef-checkbox {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 104, ../src/smacss/base/forms/_drupal-views.scss */
+.form-type-bef-checkbox input + label {
+  margin-bottom: 0;
+}
+
+/**
+ * d. Tertiary Nav Filter Styles
+ */
+/* line 111, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 60, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 111, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 
-/**
- * b. Secondary Options
- *
- * Better Exposed Filters offeres a place to put “advanced” options. For
- * whatever reason, these options don't follow the same pattern as the rest
- * of the form fields, so they need special rules.
- */
-/* line 75, ../src/smacss/base/forms/_drupal-views.scss */
-.bef-secondary-options .form-select {
-  margin-bottom: calc(15 / 16 * 1rem);
+/* line 119, ../src/smacss/base/forms/_drupal-views.scss */
+.tertiary-nav-wrapper .views-exposed-widget {
+  padding: 0;
+  clear: left;
 }
 
 /**
@@ -1341,7 +1458,7 @@ input[type="radio"] + label {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
   /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
@@ -1388,10 +1505,15 @@ input[type="radio"] + label {
   float: none;
 }
 
+/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio {
+  float: none;
+}
+
 /**
  * Textareas
  */
-/* line 86, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1633,7 +1755,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 119, ../src/smacss/_base.scss */
+/* line 127, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -1981,10 +2103,9 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-left: 1em;
-    width: calc(66.6666666667% - 1em);
+    margin-left: 2ch;
+    width: calc(66.6666666667% + 1ch);
     float: right;
   }
 }
@@ -1992,58 +2113,54 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-right: -2em;
+    margin-right: -2ch;
   }
 }
 @media screen and (min-width: 70em) {
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
-    margin-right: -3em;
-    width: calc(50% + 2.5em);
+    margin-right: -3ch;
+    width: calc(50% + 2ch);
   }
 }
 
 @media screen and (min-width: 22em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-right: -1em;
-    margin-left: 1em;
-    width: calc(50% + 1em);
+    margin-right: -1ch;
+    margin-left: 2ch;
+    width: calc(50% - 0.5ch);
     float: right;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
-    width: calc(66.666666667% - 1em);
+    width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-right: 1em;
-    margin-left: calc(-25% - 2em);
-    width: calc((100% + 4em * 18 / 14) / 4);
+    margin-right: 2ch;
+    margin-left: calc(-1ch - ((100% + 4ch) / 4));
+    width: calc((100% + 4ch) / 4 + 2ch);
     float: left;
-    font-size: 0.875rem;
-    line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
-    margin-left: calc(-25% - 3em);
-    width: calc((100% + 6em * 18 / 14) / 4);
+    margin-left: calc(-1ch - ((100% + 6ch) / 4));
+    width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2238,9 +2355,9 @@ body > div + header,
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
-  margin: -5px 0 0 1em;
+  margin: -5px 0 0 2ch;
   padding: 0;
-  width: calc(100% - 1.5em);
+  width: calc(100% - 3ch);
   background-color: rgba(242, 242, 242, 0.95);
   border-radius: 2px;
 }
@@ -2250,7 +2367,7 @@ body > div + header,
   .primary-content-wrapper {
     margin-right: 0;
     margin-left: 0;
-    width: calc(80% - 1em);
+    width: calc(80% - 2ch);
     overflow: visible;
     border-radius: 0 0 2px 2px;
   }
@@ -2295,9 +2412,9 @@ body > div + header,
 
 /* line 242, ../src/smacss/_layout.scss */
 .sidebar-wrapper {
-  margin-left: 1em;
+  margin-left: 2ch;
   padding: 0;
-  width: calc(100% - 1.5em);
+  width: calc(100% - 3ch);
   overflow: hidden;
   background-color: rgba(242, 242, 242, 0.95);
 }
@@ -2306,7 +2423,7 @@ body > div + header,
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
-    width: calc(80% - 1em);
+    width: calc(80% - 2ch);
     overflow: visible;
   }
 }
@@ -2321,14 +2438,14 @@ body > div + header,
 /* line 270, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
-  margin: 0 0.75em 2.14285714285714em;
+  margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
   /* line 270, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 2ch;
+    margin-left: 2ch;
   }
 }
 @media screen and (min-width: 32em) {
@@ -2349,8 +2466,8 @@ body > div + header,
 @media screen and (min-width: 43em) {
   /* line 288, ../src/smacss/_layout.scss */
   .index-wrapper .main-content {
-    margin-right: 3em;
-    margin-left: 3em;
+    margin-right: 3ch;
+    margin-left: 3ch;
   }
 }
 
@@ -2361,15 +2478,15 @@ body > div + header,
 @media screen and (min-width: 43em) and (min-width: 43em) {
   /* line 296, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
-    margin-right: 2em;
-    margin-left: 2em;
+    margin-right: 2ch;
+    margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
   /* line 296, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
-    margin-right: 3em;
-    margin-left: 3em;
+    margin-right: 3ch;
+    margin-left: 3ch;
   }
 }
 
@@ -2553,7 +2670,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3323,8 +3440,13 @@ input:checked + .header-dropdown {
     border-radius: 2px 2px 0 0;
   }
 }
+
+/* line 655, ../src/smacss/modules/_header.scss */
+.site-name h1 {
+  font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+}
 @media screen and (min-height: 35em) {
-  /* line 654, ../src/smacss/modules/_header.scss */
+  /* line 655, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -3422,7 +3544,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3831,7 +3953,7 @@ input:checked + .header-dropdown {
 /* line 18, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-wrapper {
   width: 100%;
-  max-width: calc(100% - 0.5em);
+  max-width: calc(100% - 1ch);
   min-height: 1px;
 }
 @media screen and (min-width: 22em) {
@@ -3858,12 +3980,12 @@ input:checked + .header-dropdown {
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin: 0 auto;
-  padding-right: 0;
   width: 100%;
   max-width: none;
   z-index: 1;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
   /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
@@ -3885,7 +4007,7 @@ input:checked + .header-dropdown {
     position: relative;
     border-radius: 0;
   }
-  /* line 65, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 66, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -3900,7 +4022,7 @@ input:checked + .header-dropdown {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 75, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 76, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -3908,28 +4030,28 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 82, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 83, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav > ul {
   margin-right: 1em;
 }
 @media screen and (min-width: 43em) {
-  /* line 82, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 83, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
     margin-top: 0;
   }
 }
 
-/* line 91, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 92, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav .accordion {
   border-width: 0;
   background-color: transparent;
 }
-/* line 95, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 96, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav .accordion dd {
   background-color: rgba(242, 242, 242, 0.25);
 }
 
-/* line 100, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 101, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list,
 .tertiary-related-links,
 .tertiary-related-links > li > ul {
@@ -3937,7 +4059,7 @@ input:checked + .header-dropdown {
   list-style-type: none;
 }
 
-/* line 107, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 108, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-h {
   margin-top: 0;
   margin-bottom: 0;
@@ -3946,7 +4068,7 @@ input:checked + .header-dropdown {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 107, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 108, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-h {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -3957,14 +4079,14 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 128, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 129, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list li,
 .tertiary-related-links > li > ul > li,
 #tertiary-nav dd > ul li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 128, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 129, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-list li,
   .tertiary-related-links > li > ul > li,
   #tertiary-nav dd > ul li {
@@ -3972,7 +4094,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 138, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 139, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list a,
 #tertiary-nav dd > ul a,
 .tertiary-related-links a {
@@ -3993,23 +4115,23 @@ input:checked + .header-dropdown {
 /**
  * 2. Homepage Tertiary Nav
  */
-@media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav.tertiary-nav-homepage {
-    margin-left: calc(-25% + 1em);
-    width: calc(25% + 1.5em);
-    position: absolute;
-    left: 0;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav.tertiary-nav-homepage {
-    margin-left: calc(-16.6666666667% + 1em);
-    width: calc(16.6666666667% + 1em);
-  }
-}
+/*#tertiary-nav.tertiary-nav-homepage{
 
+	@include breakpoint($gamora){
+		// box model
+		margin-left: calc(-25% + 1em);
+		width: calc(25% + 1.5em);
+		// layout
+		position: absolute;
+		left: 0;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-left: calc(-3ch - ((100% + 6ch) / 6));  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container.
+		width: calc((100% + 6ch) / 6 + 1ch);  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container; + 1ch to make it feel a bit more intentional
+	}
+}*/
 /**
  * 3. CSS Accordion
  *
@@ -4019,32 +4141,32 @@ input:checked + .header-dropdown {
  *
  * @see http://cssconf.com/talk-seddon.html
  */
-/* line 188, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 189, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"] {
   display: none;
 }
 
-/* line 192, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 193, ../src/smacss/modules/_tertiary-nav.scss */
 .accordion-h label::before {
   display: inline-block;
   color: black;
   content: "▶\00A0";
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 193, ../src/smacss/modules/_tertiary-nav.scss */
   .accordion-h label::before {
     content: "";
   }
 }
 
-/* line 205, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 206, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"] + .accordion-h label::before {
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
-/* line 210, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 211, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked + .accordion-h label::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4054,48 +4176,48 @@ input:checked + .header-dropdown {
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
-/* line 216, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 217, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-h label {
   color: #600f21;
   cursor: pointer;
 }
-/* line 222, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 223, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-h label:hover {
   color: #0086ee;
 }
 @media screen and (min-width: 43em) {
-  /* line 216, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 217, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-h label {
     color: #004377;
     cursor: default;
   }
-  /* line 233, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 234, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-h label:hover {
     color: #004377;
   }
 }
 
-/* line 240, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 241, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle {
   display: inline;
 }
 
-/* line 244, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 245, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle {
   display: none;
 }
 
-/* line 248, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 249, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"] ~ h4 .accordion-dismiss {
   display: none;
 }
 
-/* line 252, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 253, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ h4 .accordion-dismiss {
   display: inline;
 }
 
-/* line 256, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 257, ../src/smacss/modules/_tertiary-nav.scss */
 .accordion-body {
   border-bottom: 1px solid black;
   height: auto;
@@ -4106,7 +4228,7 @@ input:checked + .header-dropdown {
   transition: max-height 0.25s ease 0s;
 }
 @media screen and (min-width: 43em) {
-  /* line 256, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 257, ../src/smacss/modules/_tertiary-nav.scss */
   .accordion-body {
     border-bottom-width: 0;
     max-height: 600px;
@@ -4115,35 +4237,35 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 256, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 257, ../src/smacss/modules/_tertiary-nav.scss */
   .accordion-body {
     max-height: none;
   }
 }
 
-/* line 284, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 285, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav li:last-child .accordion-body {
   border-bottom-width: 0;
 }
 
-/* line 288, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 289, ../src/smacss/modules/_tertiary-nav.scss */
 [name="accordion-group"]:checked ~ .accordion-body {
   max-height: 500px;
   transition-duration: 0.75s;
 }
 @media screen and (min-width: 43em) {
-  /* line 288, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 289, ../src/smacss/modules/_tertiary-nav.scss */
   [name="accordion-group"]:checked ~ .accordion-body {
     padding: 0;
   }
 }
 
-/* line 299, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 300, ../src/smacss/modules/_tertiary-nav.scss */
 ul.accordion-inner {
   padding: 0 2%;
 }
 @media screen and (min-width: 43em) {
-  /* line 299, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 300, ../src/smacss/modules/_tertiary-nav.scss */
   ul.accordion-inner {
     padding: 0;
   }
@@ -4157,8 +4279,9 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 315, ../src/smacss/modules/_tertiary-nav.scss */
-#views-exposed-form-catalog-page {
+/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs {
   margin-top: 0;
 }
 
@@ -4267,17 +4390,17 @@ ul.accordion-inner {
  *
  * Special, non-base element typography.
  */
-/* line 169, ../src/smacss/_modules.scss */
+/* line 166, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 173, ../src/smacss/_modules.scss */
+/* line 170, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 177, ../src/smacss/_modules.scss */
+/* line 174, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4286,7 +4409,7 @@ ul.accordion-inner {
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4295,7 +4418,7 @@ ul.accordion-inner {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 177, ../src/smacss/_modules.scss */
+  /* line 174, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4304,33 +4427,43 @@ ul.accordion-inner {
   }
 }
 
-/* line 202, ../src/smacss/_modules.scss */
+/* line 199, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
 }
 
-/* line 207, ../src/smacss/_modules.scss */
+/* line 204, ../src/smacss/_modules.scss */
+.byline {
+  color: #283b17;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+}
+
+/* line 211, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 211, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 221, ../src/smacss/_modules.scss */
+/* line 225, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4340,19 +4473,24 @@ ul.accordion-inner {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/_modules.scss */
+  /* line 225, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 238, ../src/smacss/_modules.scss */
+/* line 242, ../src/smacss/_modules.scss */
+.p-tel {
+  white-space: nowrap;
+}
+
+/* line 246, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 250, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4361,7 +4499,7 @@ ul.accordion-inner {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 242, ../src/smacss/_modules.scss */
+  /* line 250, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -4796,32 +4934,26 @@ ul.accordion-inner {
   border: 1px solid #c8c1cd;
   border-bottom-width: 0;
   margin-bottom: -1px;
-  padding: 0 1em;
+  padding: 0 1ch;
   display: inline-block;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0.5em;
   z-index: 1;
   background-color: #d9d4dc;
   border-radius: 2px 2px 0 0;
 }
 
-/* line 427, ../src/smacss/modules/_lists.scss */
+/* line 424, ../src/smacss/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #c8c1cd;
-  margin-left: 0;
+  margin: 0;
   padding-left: 0;
   display: block;
-  position: -webkit-sticky;
-  position: sticky;
-  top: calc(0.5em + 0.875rem * 1.60714);
   word-wrap: break-word;
   background-color: #d9d4dc;
   border-radius: 2px;
   list-style-type: none;
 }
 @media screen and (min-width: 32em) {
-  /* line 427, ../src/smacss/modules/_lists.scss */
+  /* line 424, ../src/smacss/modules/_lists.scss */
   .alpha-index {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4831,20 +4963,14 @@ ul.accordion-inner {
             justify-content: space-around;
   }
 }
-@media screen and (min-width: 43em) {
-  /* line 427, ../src/smacss/modules/_lists.scss */
-  .alpha-index {
-    top: calc(0.5em + 1.202rem * 1.46814);
-  }
-}
 
-/* line 456, ../src/smacss/modules/_lists.scss */
+/* line 447, ../src/smacss/modules/_lists.scss */
 .alpha-label + .alpha-index {
   margin-top: -1px;
   border-top-left-radius: 0;
 }
 
-/* line 463, ../src/smacss/modules/_lists.scss */
+/* line 454, ../src/smacss/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -4857,7 +4983,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 478, ../src/smacss/modules/_lists.scss */
+/* line 469, ../src/smacss/modules/_lists.scss */
 .badge-list {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -4873,19 +4999,19 @@ ul.accordion-inner {
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 485, ../src/smacss/modules/_lists.scss */
+/* line 476, ../src/smacss/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 495, ../src/smacss/modules/_lists.scss */
+/* line 486, ../src/smacss/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 499, ../src/smacss/modules/_lists.scss */
+/* line 490, ../src/smacss/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -4896,12 +5022,12 @@ ul.accordion-inner {
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 510, ../src/smacss/modules/_lists.scss */
+/* line 501, ../src/smacss/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 514, ../src/smacss/modules/_lists.scss */
+/* line 505, ../src/smacss/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #d9d4dc;
 }
@@ -4909,7 +5035,7 @@ ul.accordion-inner {
 /**
  * H. Tables
  */
-/* line 262, ../src/smacss/_modules.scss */
+/* line 270, ../src/smacss/_modules.scss */
 .dataTable {
   /*@include breakpoint($starlord){
   	font-family: $text-face;
@@ -4942,6 +5068,7 @@ ul.accordion-inner {
 
 /* line 23, ../src/smacss/modules/_icons.scss */
 .inline-icon {
+  height: 100%;
   max-height: 1.25em;
   display: inline;
   position: relative;
@@ -5308,6 +5435,7 @@ div.ajax-progress {
  *
  * .compound
  *                    +---------------------+
+ *                    |                     |
  * +----------------+ |                     |
  * |                | | .compound-body      |
  * | .compound-     | |                     |
@@ -5315,21 +5443,24 @@ div.ajax-progress {
  * |  child-alt     | |                     |
  * |                | |                     |
  * +----------------+ |                     |
+ *                    |                     |
  *                    +---------------------+
  *
  * OR
  *
  * .compound
  * +-------------+
+ * |             |
  * |             | +--------------------------+
  * | .compound-  | |                          |
  * |  img        | | .compound-body.compound- |
  * |             | |  child-alt               |
  * |             | |                          |
  * |             | +--------------------------+
+ * |             |
  * +-------------+
  */
-/* line 133, ../src/smacss/modules/_compound-segment.scss */
+/* line 137, ../src/smacss/modules/_compound-segment.scss */
 .media-img-alt,
 .media-child-alt,
 .compound-child-alt {
@@ -5365,7 +5496,7 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 166, ../src/smacss/modules/_compound-segment.scss */
+/* line 170, ../src/smacss/modules/_compound-segment.scss */
 .media-column,
 .media-squishy,
 .compound-column,
@@ -5379,7 +5510,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 174, ../src/smacss/modules/_compound-segment.scss */
+  /* line 178, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
     -webkit-align-items: stretch;
@@ -5391,7 +5522,7 @@ div.ajax-progress {
   }
 }
 
-/* line 183, ../src/smacss/modules/_compound-segment.scss */
+/* line 187, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img,
 .media-squishy > .media-img,
 .compound-column > .compound-img,
@@ -5402,7 +5533,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 192, ../src/smacss/modules/_compound-segment.scss */
+  /* line 196, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     margin-bottom: 1.071428571428571em;
@@ -5414,14 +5545,14 @@ div.ajax-progress {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/modules/_compound-segment.scss */
+  /* line 196, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     padding-right: 0.882352941176471em;
   }
 }
 
-/* line 208, ../src/smacss/modules/_compound-segment.scss */
+/* line 212, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5552,10 +5683,11 @@ div.ajax-progress {
 .notice,
 .box,
 p.box,
-#views-exposed-form-catalog-page {
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs {
   margin-top: 2.14285714285714em;
   margin-bottom: 3.21428571428571em;
-  padding: 0 1em;
+  padding: 0 1.5ch;
   overflow: hidden;
   color: #002d4f;
   background-color: rgba(204, 231, 252, 0.95);
@@ -5567,13 +5699,14 @@ p.box,
   .notice,
   .box,
   p.box,
-  #views-exposed-form-catalog-page {
+  #views-exposed-form-catalog-page,
+  #views-exposed-form-catalog-grad-programs {
     margin-top: 2.5em;
     margin-bottom: 3.33333333333333em;
   }
 }
 
-/* line 45, ../src/smacss/modules/_boxes.scss */
+/* line 46, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5581,13 +5714,13 @@ p.box,
   color: #004377;
 }
 
-/* line 52, ../src/smacss/modules/_boxes.scss */
+/* line 53, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 57, ../src/smacss/modules/_boxes.scss */
+/* line 58, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5596,7 +5729,7 @@ p.box,
 }
 
 @media screen and (min-width: 20em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5604,7 +5737,7 @@ p.box,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5614,7 +5747,7 @@ p.box,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 64, ../src/smacss/modules/_boxes.scss */
+  /* line 65, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5627,13 +5760,13 @@ p.box,
  *
  * Stands out a little bit more than a default box.
  */
-/* line 92, ../src/smacss/modules/_boxes.scss */
+/* line 93, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 92, ../src/smacss/modules/_boxes.scss */
+  /* line 93, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5645,7 +5778,7 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 107, ../src/smacss/modules/_boxes.scss */
+/* line 108, ../src/smacss/modules/_boxes.scss */
 .alert,
 p.alert {
   color: #600f21;
@@ -5653,7 +5786,7 @@ p.alert {
   border-radius: 0;
 }
 
-/* line 118, ../src/smacss/modules/_boxes.scss */
+/* line 119, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5668,13 +5801,13 @@ p.alert {
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 137, ../src/smacss/modules/_boxes.scss */
+/* line 138, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 144, ../src/smacss/modules/_boxes.scss */
+/* line 145, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5708,7 +5841,7 @@ p.alert {
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 177, ../src/smacss/modules/_boxes.scss */
+/* line 178, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5727,7 +5860,7 @@ p.alert {
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 177, ../src/smacss/modules/_boxes.scss */
+  /* line 178, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-flex-direction: row;
@@ -5736,7 +5869,7 @@ p.alert {
   }
 }
 
-/* line 204, ../src/smacss/modules/_boxes.scss */
+/* line 205, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -5746,7 +5879,7 @@ p.alert {
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 213, ../src/smacss/modules/_boxes.scss */
+  /* line 214, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -5758,7 +5891,7 @@ p.alert {
   }
 }
 
-/* line 227, ../src/smacss/modules/_boxes.scss */
+/* line 228, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -5766,7 +5899,7 @@ p.alert {
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 234, ../src/smacss/modules/_boxes.scss */
+/* line 235, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -5793,7 +5926,7 @@ p.alert {
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 263, ../src/smacss/modules/_boxes.scss */
+/* line 264, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -5804,7 +5937,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 272, ../src/smacss/modules/_boxes.scss */
+  /* line 273, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -5812,7 +5945,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 280, ../src/smacss/modules/_boxes.scss */
+  /* line 281, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -5820,20 +5953,20 @@ p.alert {
   }
 }
 
-/* line 289, ../src/smacss/modules/_boxes.scss */
+/* line 290, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 289, ../src/smacss/modules/_boxes.scss */
+  /* line 290, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 289, ../src/smacss/modules/_boxes.scss */
+  /* line 290, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -5843,47 +5976,48 @@ p.alert {
 /**
  * 6. Pull Quotes
  */
-/* line 305, ../src/smacss/modules/_boxes.scss */
+/* line 306, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 305, ../src/smacss/modules/_boxes.scss */
+  /* line 306, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 317, ../src/smacss/modules/_boxes.scss */
+/* line 318, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 324, ../src/smacss/modules/_boxes.scss */
+/* line 325, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 331, ../src/smacss/modules/_boxes.scss */
+/* line 332, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 339, ../src/smacss/modules/_boxes.scss */
+/* line 340, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 343, ../src/smacss/modules/_boxes.scss */
+/* line 344, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 343, ../src/smacss/modules/_boxes.scss */
+  /* line 344, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -5891,7 +6025,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 343, ../src/smacss/modules/_boxes.scss */
+  /* line 344, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -5900,7 +6034,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 367, ../src/smacss/modules/_boxes.scss */
+  /* line 369, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -5914,20 +6048,20 @@ p.alert {
  *
  * @section box-full
  */
-/* line 382, ../src/smacss/modules/_boxes.scss */
+/* line 384, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 388, ../src/smacss/modules/_boxes.scss */
+/* line 390, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 393, ../src/smacss/modules/_boxes.scss */
+/* line 395, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
@@ -5941,7 +6075,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 407, ../src/smacss/modules/_boxes.scss */
+/* line 409, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -5959,24 +6093,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 428, ../src/smacss/modules/_boxes.scss */
+  /* line 430, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 435, ../src/smacss/modules/_boxes.scss */
+  /* line 437, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 440, ../src/smacss/modules/_boxes.scss */
+  /* line 442, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 446, ../src/smacss/modules/_boxes.scss */
+/* line 448, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -6009,8 +6143,6 @@ p.alert {
 .image-alt,
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   border: 1px solid #00365f;
   height: auto;
@@ -6023,22 +6155,18 @@ p.alert {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
 }
 
-/* line 44, ../src/smacss/modules/_images.scss */
+/* line 42, ../src/smacss/modules/_images.scss */
 .image-full,
 .image-full img,
-.file-default,
-.file-supplement,
 .field-image img {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.41666666666667em 0 0.83333333333333em;
     margin-right: auto;
@@ -6046,11 +6174,9 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 44, ../src/smacss/modules/_images.scss */
+  /* line 42, ../src/smacss/modules/_images.scss */
   .image-full,
   .image-full img,
-  .file-default,
-  .file-supplement,
   .field-image img {
     margin: 0.52004784440168em 0 1.04009568880337em;
     margin-right: auto;
@@ -6059,35 +6185,35 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
-    margin: 0 0 0.53571428571429em 1em;
-    max-width: calc(66.6666666667% - 0.5em);
+    margin: 0 0 0.53571428571429em 2ch;
+    max-width: calc(66.6666666667% - 1ch);
     clear: right;
     float: right;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
   .image-alt {
     margin-bottom: 0.83333333333333em;
   }
-  /* line 83, ../src/smacss/modules/_images.scss */
+  /* line 79, ../src/smacss/modules/_images.scss */
   .main-content .left, .main-content
   .image, .main-content
   .image img, .main-content
   .image-alt {
-    margin-right: -2em;
+    margin-right: -3ch;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 66, ../src/smacss/modules/_images.scss */
+  /* line 62, ../src/smacss/modules/_images.scss */
   .left,
   .image,
   .image img,
@@ -6097,18 +6223,16 @@ p.alert {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 93, ../src/smacss/modules/_images.scss */
+  /* line 90, ../src/smacss/modules/_images.scss */
   .left,
   .main-content .image,
   .main-content .image img,
   .image-alt {
-    margin-right: -3em;
-    max-width: calc(50% + 2.5em);
+    margin-right: -3ch;
+    max-width: calc(50% + 4ch);
   }
-}
 
-@media screen and (min-width: 70em) {
-  /* line 105, ../src/smacss/modules/_images.scss */
+  /* line 99, ../src/smacss/modules/_images.scss */
   .image-alt {
     margin-right: 0;
     margin-left: -36.699751769518%;
@@ -6117,9 +6241,8 @@ p.alert {
     float: left;
   }
 }
-
 @media screen and (min-width: 43em) {
-  /* line 119, ../src/smacss/modules/_images.scss */
+  /* line 111, ../src/smacss/modules/_images.scss */
   .box .image {
     margin-right: 0;
   }
@@ -6130,7 +6253,7 @@ p.alert {
  *
  * Support: https://juicebox.net/forum/index.php
  */
-/* line 131, ../src/smacss/modules/_images.scss */
+/* line 123, ../src/smacss/modules/_images.scss */
 .primary-content-wrapper .juicebox-parent {
   height: 600px;
 }
@@ -6138,7 +6261,7 @@ p.alert {
 /**
  * 3. Overrides
  */
-/* line 139, ../src/smacss/modules/_images.scss */
+/* line 131, ../src/smacss/modules/_images.scss */
 .media.media-element-container {
   display: block;
 }
@@ -6199,7 +6322,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -6241,18 +6364,23 @@ p.alert {
  * The box on the homepage featuring upcoming events from the calendar.
  */
 /* line 88, ../src/smacss/modules/_calendars.scss */
+.upcoming-events {
+  max-width: calc(100% - 4ch);
+}
+
+/* line 92, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage {
   margin: 0 auto;
 }
 @media screen and (min-width: 32em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin: 0 auto 1rem;
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-top: 1rem;
     margin-left: -24.58203125%;
@@ -6263,7 +6391,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 88, ../src/smacss/modules/_calendars.scss */
+  /* line 92, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage {
     margin-left: -25.520833333333%;
     width: 23.484848484848%;
@@ -6272,75 +6400,75 @@ p.alert {
   }
 }
 
-/* line 116, ../src/smacss/modules/_calendars.scss */
+/* line 120, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media,
 .upcoming-events-homepage .compound {
   border-bottom: 1px solid #b9afbf;
 }
 
-/* line 121, ../src/smacss/modules/_calendars.scss */
+/* line 125, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage .media-body,
 .upcoming-events-homepage .compound-body {
   text-align: center;
 }
 
 @media screen and (min-width: 70em) {
-  /* line 126, ../src/smacss/modules/_calendars.scss */
+  /* line 130, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 133, ../src/smacss/modules/_calendars.scss */
+/* line 137, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
 }
 @media screen and (min-width: 43em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 133, ../src/smacss/modules/_calendars.scss */
+  /* line 137, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 
-/* line 152, ../src/smacss/modules/_calendars.scss */
+/* line 156, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 70em) {
-  /* line 152, ../src/smacss/modules/_calendars.scss */
+  /* line 156, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 161, ../src/smacss/modules/_calendars.scss */
+/* line 165, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-list-wrapper {
   overflow: hidden;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_calendars.scss */
+  /* line 165, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-list-wrapper {
     overflow-x: visible;
   }
 }
 
-/* line 170, ../src/smacss/modules/_calendars.scss */
+/* line 174, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -6362,7 +6490,7 @@ p.alert {
           scroll-snap-type: mandatory;
 }
 @media screen and (min-width: 43em) {
-  /* line 170, ../src/smacss/modules/_calendars.scss */
+  /* line 174, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -6375,7 +6503,7 @@ p.alert {
             scroll-snap-type: none;
   }
 }
-/* line 198, ../src/smacss/modules/_calendars.scss */
+/* line 202, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list::after {
   height: 100%;
   width: 100%;
@@ -6387,13 +6515,13 @@ p.alert {
   content: "";
 }
 @media screen and (min-width: 43em) {
-  /* line 198, ../src/smacss/modules/_calendars.scss */
+  /* line 202, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list::after {
     display: none;
   }
 }
 
-/* line 217, ../src/smacss/modules/_calendars.scss */
+/* line 221, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4,
 .grid.upcoming-events-list > .unit-1-7 {
   width: 66.666666%;
@@ -6405,20 +6533,20 @@ p.alert {
           scroll-snap-coordinate: 0 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 40%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 217, ../src/smacss/modules/_calendars.scss */
+  /* line 221, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4,
   .grid.upcoming-events-list > .unit-1-7 {
     width: 29%;
   }
 }
-/* line 234, ../src/smacss/modules/_calendars.scss */
+/* line 238, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list > .unit-1-4:last-child,
 .grid.upcoming-events-list > .unit-1-7:last-child {
   -webkit-scroll-snap-coordinate: -50% 0;
@@ -6426,7 +6554,7 @@ p.alert {
           scroll-snap-coordinate: -50% 0;
 }
 @media screen and (min-width: 20em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: -150% 0;
@@ -6435,7 +6563,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 234, ../src/smacss/modules/_calendars.scss */
+  /* line 238, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4:last-child,
   .grid.upcoming-events-list > .unit-1-7:last-child {
     -webkit-scroll-snap-coordinate: none;
@@ -6445,7 +6573,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 247, ../src/smacss/modules/_calendars.scss */
+  /* line 251, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-4 {
     width: 25%;
     -webkit-flex-shrink: 1;
@@ -6455,7 +6583,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 257, ../src/smacss/modules/_calendars.scss */
+  /* line 261, ../src/smacss/modules/_calendars.scss */
   .grid.upcoming-events-list > .unit-1-7 {
     width: 14.285714285714%;
     -webkit-flex-shrink: 1;
@@ -6464,23 +6592,24 @@ p.alert {
   }
 }
 
-/* line 267, ../src/smacss/modules/_calendars.scss */
+/* line 271, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body {
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
 /**
  * 3. Schedule of Events
  */
-/* line 275, ../src/smacss/modules/_calendars.scss */
+/* line 280, ../src/smacss/modules/_calendars.scss */
 .schedule {
   border: 1px solid #c8c1cd;
   margin: 0.535714285714286em 0 1.071428571428571em;
   border-radius: 2px;
 }
 
-/* line 283, ../src/smacss/modules/_calendars.scss */
+/* line 288, ../src/smacss/modules/_calendars.scss */
 .schedule .h-event {
   padding: 1em;
   display: -webkit-flex;
@@ -6496,46 +6625,46 @@ p.alert {
   }*/
 }
 
-/* line 298, ../src/smacss/modules/_calendars.scss */
+/* line 303, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required {
   border: 2px solid #64933a;
 }
-/* line 301, ../src/smacss/modules/_calendars.scss */
+/* line 306, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required + .schedule-event-required {
   margin-top: 2px;
 }
-/* line 305, ../src/smacss/modules/_calendars.scss */
+/* line 310, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(odd) {
   background-color: #ebede9;
 }
-/* line 309, ../src/smacss/modules/_calendars.scss */
+/* line 314, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required:nth-of-type(even) {
   background-color: #e4e9e0;
 }
-/* line 313, ../src/smacss/modules/_calendars.scss */
+/* line 318, ../src/smacss/modules/_calendars.scss */
 .schedule-event-required .p-name {
   color: #46502b;
 }
 
-/* line 318, ../src/smacss/modules/_calendars.scss */
+/* line 323, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-morning {
   background-color: #fdf4b6;
 }
 
-/* line 324, ../src/smacss/modules/_calendars.scss */
+/* line 329, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(odd) {
   background-color: #e6edf2;
 }
-/* line 328, ../src/smacss/modules/_calendars.scss */
+/* line 333, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening:nth-of-type(even) {
   background-color: #dae7f2;
 }
-/* line 332, ../src/smacss/modules/_calendars.scss */
+/* line 337, ../src/smacss/modules/_calendars.scss */
 .h-event.schedule-event-evening .p-name {
   color: #00365f;
 }
 
-/* line 337, ../src/smacss/modules/_calendars.scss */
+/* line 342, ../src/smacss/modules/_calendars.scss */
 .schedule-event-evening-start::before {
   border-bottom: 1px solid #0086ee;
   width: 100%;
@@ -6544,7 +6673,7 @@ p.alert {
   content: "Evening Events";
 }
 
-/* line 349, ../src/smacss/modules/_calendars.scss */
+/* line 354, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before,
 .schedule-event-group-required::before {
   border-width: 0 0 1px;
@@ -6554,13 +6683,13 @@ p.alert {
   border-style: solid;
 }
 
-/* line 362, ../src/smacss/modules/_calendars.scss */
+/* line 367, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite::before {
   border-bottom-color: #64933a;
   content: "Geoducks@Nite";
 }
 
-/* line 369, ../src/smacss/modules/_calendars.scss */
+/* line 374, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite {
   background-color: #ebede9;
 }
@@ -6568,17 +6697,17 @@ p.alert {
 /*.schedule-event-group-geoducks-at-nite .h-event:nth-child(even){
 	background-color: mix($tint, $evergreen-neue, 90%);
 }*/
-/* line 378, ../src/smacss/modules/_calendars.scss */
+/* line 383, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-geoducks-at-nite .p-name {
   color: #283b17;
 }
 
-/* line 382, ../src/smacss/modules/_calendars.scss */
+/* line 387, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required::before {
   border-bottom-color: #600f21;
 }
 
-/* line 387, ../src/smacss/modules/_calendars.scss */
+/* line 392, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required {
   background-color: #ebe7e8;
 }
@@ -6586,12 +6715,12 @@ p.alert {
 /*.schedule-event-group-required .h-event:nth-child(even){
 	background-color: mix($tint, $wine, 90%);
 }*/
-/* line 396, ../src/smacss/modules/_calendars.scss */
+/* line 401, ../src/smacss/modules/_calendars.scss */
 .schedule-event-group-required .p-name {
   color: #26060d;
 }
 
-/* line 400, ../src/smacss/modules/_calendars.scss */
+/* line 405, ../src/smacss/modules/_calendars.scss */
 .schedule-event-time {
   border-bottom: 1px solid #9ca18f;
   padding-right: 1em;
@@ -6604,7 +6733,7 @@ p.alert {
  *
  * The section that says, “This is Week X”.
  */
-/* line 415, ../src/smacss/modules/_calendars.scss */
+/* line 420, ../src/smacss/modules/_calendars.scss */
 .bulletin {
   border-bottom: 1px solid #aea3b6;
   background-color: #e1dee3;
@@ -6612,25 +6741,25 @@ p.alert {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 70em) {
-  /* line 415, ../src/smacss/modules/_calendars.scss */
+  /* line 420, ../src/smacss/modules/_calendars.scss */
   .bulletin {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
 }
-/* line 427, ../src/smacss/modules/_calendars.scss */
+/* line 432, ../src/smacss/modules/_calendars.scss */
 .bulletin > .wrapper {
   width: calc(100% - 2em);
 }
 
-/* line 432, ../src/smacss/modules/_calendars.scss */
+/* line 437, ../src/smacss/modules/_calendars.scss */
 .bulletin .grid {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-/* line 436, ../src/smacss/modules/_calendars.scss */
+/* line 441, ../src/smacss/modules/_calendars.scss */
 .bulletin-header,
 .bulletin-body {
   padding-left: 1em;
@@ -6638,30 +6767,30 @@ p.alert {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 442, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 442, ../src/smacss/modules/_calendars.scss */
+  /* line 447, ../src/smacss/modules/_calendars.scss */
   .bulletin-header {
     width: 14.285714285714%;
   }
 }
-/* line 451, ../src/smacss/modules/_calendars.scss */
+/* line 456, ../src/smacss/modules/_calendars.scss */
 .bulletin-header h2 {
   margin: 0.535714285714286em 0 1.071428571428571em;
   text-align: left;
 }
 @media screen and (min-width: 20em) {
-  /* line 451, ../src/smacss/modules/_calendars.scss */
+  /* line 456, ../src/smacss/modules/_calendars.scss */
   .bulletin-header h2 {
     text-align: right;
   }
 }
 
-/* line 464, ../src/smacss/modules/_calendars.scss */
+/* line 469, ../src/smacss/modules/_calendars.scss */
 .chrono-meter {
   width: 100%;
   display: -webkit-flex;
@@ -6672,7 +6801,7 @@ p.alert {
           justify-content: space-between;
 }
 @media screen and (min-width: 20em) {
-  /* line 464, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 1em;
     width: auto;
@@ -6684,7 +6813,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 464, ../src/smacss/modules/_calendars.scss */
+  /* line 469, ../src/smacss/modules/_calendars.scss */
   .chrono-meter {
     margin-right: 0;
     width: 100%;
@@ -6697,7 +6826,7 @@ p.alert {
   }
 }
 
-/* line 491, ../src/smacss/modules/_calendars.scss */
+/* line 496, ../src/smacss/modules/_calendars.scss */
 .chrono-meter > li {
   border: 1px solid #aea3b6;
   height: 7.5px;
@@ -6705,7 +6834,7 @@ p.alert {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 491, ../src/smacss/modules/_calendars.scss */
+  /* line 496, ../src/smacss/modules/_calendars.scss */
   .chrono-meter > li {
     margin-bottom: 2px;
     clear: left;
@@ -6714,31 +6843,31 @@ p.alert {
   }
 }
 
-/* line 510, ../src/smacss/modules/_calendars.scss */
+/* line 515, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-current {
   background-color: #d0cad4;
 }
 
-/* line 515, ../src/smacss/modules/_calendars.scss */
+/* line 520, ../src/smacss/modules/_calendars.scss */
 .chrono-stop-complete {
   background-color: #aea3b6;
 }
 
 @media screen and (min-width: 20em) {
-  /* line 520, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 520, ../src/smacss/modules/_calendars.scss */
+  /* line 525, ../src/smacss/modules/_calendars.scss */
   .bulletin-body {
     width: 85.714285714286%;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 530, ../src/smacss/modules/_calendars.scss */
+  /* line 535, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6747,7 +6876,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 536, ../src/smacss/modules/_calendars.scss */
+  /* line 541, ../src/smacss/modules/_calendars.scss */
   .bulletin-calendar > li {
     padding-left: 1em;
     width: 33.333333333%;
@@ -6774,10 +6903,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7102,7 +7231,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -7288,30 +7417,30 @@ p.alert {
  *
  * A single event’s individual page with all event details and a summary.
  */
-/* line 557, ../src/smacss/modules/_calendars.scss */
+/* line 562, ../src/smacss/modules/_calendars.scss */
 .event-details {
   font-weight: bold;
 }
 
-/* line 561, ../src/smacss/modules/_calendars.scss */
+/* line 566, ../src/smacss/modules/_calendars.scss */
 .event-description {
   margin-top: calc(2.14285714285714em);
   margin-bottom: calc(2.14285714285714em);
 }
 @media screen and (min-width: 43em) {
-  /* line 561, ../src/smacss/modules/_calendars.scss */
+  /* line 566, ../src/smacss/modules/_calendars.scss */
   .event-description {
     margin-top: calc(2.8125);
     margin-bottom: calc(2.8125);
   }
 }
 
-/* line 571, ../src/smacss/modules/_calendars.scss */
+/* line 576, ../src/smacss/modules/_calendars.scss */
 .event-sponsor {
   font-style: italic;
 }
 
-/* line 575, ../src/smacss/modules/_calendars.scss */
+/* line 580, ../src/smacss/modules/_calendars.scss */
 .field-flyer {
   border: 1px solid #a1a1a1;
   padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
@@ -7321,18 +7450,30 @@ p.alert {
 /**
  * O. News
  */
-/* line 304, ../src/smacss/_modules.scss */
+/* line 312, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 314, ../src/smacss/_modules.scss */
+/* line 322, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
-  width: calc(100% - 2em);
+  width: calc(100% - 4ch);
 }
 
-/* line 320, ../src/smacss/_modules.scss */
+/**
+ * Override news title links to make them look like regular, unlinked h4s
+ * again. While I normally don't like to make links not look like links, I
+ * think in this case, it’s warranted because there is a link under every
+ * article. See also: nytimes.com and washingtonpost.com.
+ */
+/* line 334, ../src/smacss/_modules.scss */
+.news-title-link a {
+  border-bottom-width: 0;
+  color: #000;
+}
+
+/* line 341, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7352,7 +7493,7 @@ p.alert {
   border-radius: 2px;
 }
 
-/* line 337, ../src/smacss/_modules.scss */
+/* line 358, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7368,7 +7509,7 @@ p.alert {
 /**
  * P. Profiles
  */
-/* line 346, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7377,13 +7518,13 @@ p.alert {
           shape-outside: circle() border-box;
 }
 
-/* line 353, ../src/smacss/_modules.scss */
+/* line 374, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 353, ../src/smacss/_modules.scss */
+  /* line 374, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7391,7 +7532,7 @@ p.alert {
   }
 }
 
-/* line 363, ../src/smacss/_modules.scss */
+/* line 384, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7411,18 +7552,18 @@ p.alert {
  * Photo Directory
  */
 /* line 13, ../src/smacss/modules/_directories.scss */
-.directory > thead {
+.directory table > thead {
   display: none;
 }
 @media screen and (min-width: 43em) {
   /* line 13, ../src/smacss/modules/_directories.scss */
-  .directory > thead {
+  .directory table > thead {
     display: table-header-group;
   }
 }
 
 /* line 21, ../src/smacss/modules/_directories.scss */
-.directory > tbody > tr {
+.directory table > tbody > tr {
   border: 1px solid #b9afbf;
   margin: 0.535714285714286em 0 1.071428571428571em;
   padding: 0 1em;
@@ -7434,7 +7575,7 @@ p.alert {
 }
 @media screen and (min-width: 43em) {
   /* line 21, ../src/smacss/modules/_directories.scss */
-  .directory > tbody > tr {
+  .directory table > tbody > tr {
     border-width: 0;
     padding: 0;
     display: table-row;
@@ -7445,14 +7586,14 @@ p.alert {
 }
 
 /* line 49, ../src/smacss/modules/_directories.scss */
-.directory > tbody td {
+.directory table > tbody td {
   border-width: 0;
   padding: 0;
   display: block;
 }
 @media screen and (min-width: 43em) {
   /* line 49, ../src/smacss/modules/_directories.scss */
-  .directory > tbody td {
+  .directory table > tbody td {
     border-top-width: 1px;
     padding: 0.37037em 1.11111em 1.11111em 0;
     display: table-cell;
@@ -7460,25 +7601,30 @@ p.alert {
 }
 
 /* line 65, ../src/smacss/modules/_directories.scss */
+.directory table > tbody td:last-child {
+  padding-right: 0;
+}
+
+/* line 69, ../src/smacss/modules/_directories.scss */
 .directory .p-tel::before {
   font-weight: bold;
   content: "Phone: ";
 }
 
-/* line 70, ../src/smacss/modules/_directories.scss */
+/* line 74, ../src/smacss/modules/_directories.scss */
 .directory .u-email::before {
   font-weight: bold;
   content: "Email: ";
 }
 
-/* line 75, ../src/smacss/modules/_directories.scss */
+/* line 79, ../src/smacss/modules/_directories.scss */
 .directory .p-extended-address::before {
   font-weight: bold;
   content: "Location: ";
 }
 
 @media screen and (min-width: 43em) {
-  /* line 80, ../src/smacss/modules/_directories.scss */
+  /* line 84, ../src/smacss/modules/_directories.scss */
   .directory .p-tel::before,
   .directory .u-email::before,
   .directory .p-extended-address::before {
@@ -7486,15 +7632,17 @@ p.alert {
   }
 }
 
-/* line 88, ../src/smacss/modules/_directories.scss */
+/* line 92, ../src/smacss/modules/_directories.scss */
 .directory .u-photo {
+  border: 1px solid #00365f;
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1em;
   max-width: 75px;
   float: right;
+  border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 88, ../src/smacss/modules/_directories.scss */
+  /* line 92, ../src/smacss/modules/_directories.scss */
   .directory .u-photo {
     margin: 0;
     float: none;
@@ -7507,7 +7655,7 @@ p.alert {
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 383, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7515,7 +7663,7 @@ p.alert {
   overflow: hidden;
   position: relative;
 }
-/* line 393, ../src/smacss/_modules.scss */
+/* line 414, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7534,24 +7682,24 @@ p.alert {
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 412, ../src/smacss/_modules.scss */
+/* line 433, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 416, ../src/smacss/_modules.scss */
+/* line 437, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 424, ../src/smacss/_modules.scss */
+/* line 445, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 432, ../src/smacss/_modules.scss */
+/* line 453, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7562,30 +7710,30 @@ p.alert {
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 443, ../src/smacss/_modules.scss */
+/* line 464, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 447, ../src/smacss/_modules.scss */
+/* line 468, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 447, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 460, ../src/smacss/_modules.scss */
+/* line 481, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7597,7 +7745,7 @@ p.alert {
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 472, ../src/smacss/_modules.scss */
+/* line 493, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7605,7 +7753,7 @@ p.alert {
   display: block;
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 502, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
@@ -7667,6 +7815,41 @@ p.alert {
 /* line 59, ../src/smacss/_states.scss */
 .is-hidden {
   display: none !important;
+}
+
+/**
+ * V. Style Fixes
+ *
+ * Fixes are for isolating bugs and workarounds typically caused by
+ * interferring third-party styles, but could include browser hacks. For
+ * example, a Drupal plugin whose styles override one of our modules, or a
+ * WYSIWYG editor that needs special attention paid to the styles therein.
+ *
+ * Table of Contents
+ *
+ * A. Panels
+ */
+/**
+ * A. Panels
+ *
+ * Drupal Panels
+ */
+/* line 20, ../src/smacss/_fixes.scss */
+.unit-1-3.panels-flexible-column {
+  width: calc(33.3333333333% - 1ch);
+}
+
+/* line 24, ../src/smacss/_fixes.scss */
+.unit-2-3.panels-flexible-column {
+  padding-left: 2ch;
+  width: calc(66.6666666667% + 1ch);
+}
+
+/* line 29, ../src/smacss/_fixes.scss */
+.sidebar.panels-flexible-region {
+  margin-right: 0;
+  padding-left: 2ch;
+  width: 100%;
 }
 
 /**

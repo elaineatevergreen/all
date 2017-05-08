@@ -9,6 +9,26 @@
  * 2. Views Module Forms
  * 3. Webform Module
  * 4. Search
+ *
+ * A note on forms:
+ * There are several different kinds of forms:
+ * • Default forms
+ * • Drupal Views
+ * • Drupal Webforms
+ *
+ * Each of these forms have their own peculiarities, so you need to check
+ * out a few different forms, in order to make sure improvements you make
+ * to one form don't become bugs in another form. The following list are
+ * forms that tend to be troublesome, but the list is not exhaustive.
+ * Please add to this whenever you run into a cantankerous form problem.
+ * (Ideally, this could be aided by visual regression testing. Can anybody
+ * help with that?)
+ *
+ * Name                 Form type       URL
+ * ------------------------------------------
+ * Catalog filters      Drupal Views    http://wwwtest.evergreen.edu/catalog/index?year=1
+ * Activities filter    Drupal Views    http://wwwtest.evergreen.edu/activities/groups
+ * Rain opinion survey  Drupal Webform  http://wwwtest.evergreen.edu/marketing/rain-opinion-survey
  */
 
 /**
@@ -47,10 +67,11 @@ textarea{
 	margin-bottom: calc(15 / 16 * 1rem);
 	max-width: 100%;
 	//typography
-	font-family: $text-face;
+	font-family: $text-face-alt;
 	@include base-type;
-	// backgrounds & borders
+	// decoration
 	border-radius: 2px;
+	caret-color: mix($shade, $evergreen-neue, 20%);
 
 	&:focus{
 		// misc
@@ -65,7 +86,7 @@ textarea{
 input{
 	// box model
 	height: 1.875rem;  // Step 3
-	padding: 0 0.5em;
+	padding: 0 1ch;
 	// typography
 	font-size: 1em;
 }
@@ -92,23 +113,16 @@ select{
 	padding: 0 0.5em;
 	// typography
 	text-shadow: 0 1px 0 $highlight;
-	// misc
+	// decoration
 	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
+	// misc
 	cursor: pointer;
 
 	&:hover{
-		// backgrounds & borders
+		// decoration
 		background-color: mix($tint, $blueberry-susan, 90%);
 		border-bottom-style: dashed;
 	}
-}
-
-.form-type-select{
-	@extend input[type="text"]; // Drupal select box wrapper, sets a context for determining max-width of a select box
-}
-
-.tertiary-nav-wrapper .form-type-select select{
-	width: 100%;  // Makes long select boxes not extend past their container
 }
 
 textarea{
@@ -137,7 +151,7 @@ input[type="radio"]{
 
 	@include breakpoint($gamora){
 		height: calc(18 / 16 * 1rem);
-		margin: calc(2.5 / 16 * 1rem) 0.25em calc(20 / 16 * 1rem) 0;
+		margin: calc(2.5 / 16 * 1rem) 0.5ch calc(20 / 16 * 1rem) 0;
 	}
 
 	@include breakpoint($groot){
@@ -162,12 +176,12 @@ input[type="checkbox"] + label,
 input[type="radio"] + label{
 	// box model
 	margin-bottom: (15 / 16 * 1rem);
-	width: calc(100% - 1em - 0.5ch);
+	width: calc(100% - 1em - 0.5ch - 1px);  // -1 extra px to fudge labels into place; I think browsers have somewhat fuzzy widths in form components —jkm
 	// layout
 	float: left;
 
 	@include breakpoint($gamora){
-		width: calc(100% - 1.25em);
+		width: calc(100% - 1em - 0.5ch - 1px);  // -1 extra px to fudge labels into place; I think browsers have somewhat fuzzy widths in form components —jkm
 	}
 }
 

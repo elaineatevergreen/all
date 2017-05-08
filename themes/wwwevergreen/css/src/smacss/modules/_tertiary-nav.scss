@@ -17,7 +17,7 @@
  */
 .tertiary-nav-wrapper{
 	width: 100%;
-	max-width: calc(100% - 0.5em);
+	max-width: calc(100% - 1ch);
 	min-height: 1px;  // gives the box layout even when empty (taking pity on IE 9)
 
 	@include breakpoint($rocket){
@@ -38,13 +38,14 @@
 #views-exposed-form-catalog-grad-programs{  // Drupal; the filter form on the grad program catalog page
 	// box model
 	margin: 0 auto;
-	padding-right: 0;
+	//padding-right: 0;  // Why was this set to 0? Will it cause problems if it's not? Just speaking to myself. -jkm
 	width: 100%;
 	max-width: none;
 	// layout
 	z-index: 1;  // Fixes an issue where the nav goes under the content in #index-wrapper.
 	// typography
 	@include base-type;
+	font-family: $text-face-alt;
 
 	@include breakpoint($starlord){
 		margin: 0 auto calc(15 / 16 * 1rem);
@@ -158,7 +159,7 @@
 /**
  * 2. Homepage Tertiary Nav
  */
-#tertiary-nav.tertiary-nav-homepage{
+/*#tertiary-nav.tertiary-nav-homepage{
 
 	@include breakpoint($gamora){
 		// box model
@@ -171,10 +172,10 @@
 
 	@include breakpoint($drax){
 		// box model
-		margin-left: calc(-16.6666666667% + 1em);
-		width: calc(16.6666666667% + 1em);
+		margin-left: calc(-3ch - ((100% + 6ch) / 6));  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container.
+		width: calc((100% + 6ch) / 6 + 1ch);  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container; + 1ch to make it feel a bit more intentional
 	}
-}
+}*/
 
 /**
  * 3. CSS Accordion
@@ -312,6 +313,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/catalog/index
  */
-#views-exposed-form-catalog-page{
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs{
 	margin-top: 0;
 }

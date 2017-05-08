@@ -85,6 +85,10 @@
  *
  * The box on the homepage featuring upcoming events from the calendar.
  */
+.upcoming-events{
+	max-width: calc(100% - 4ch);
+}
+
 .upcoming-events-homepage{
 	// box model
 	margin: 0 auto;
@@ -266,6 +270,7 @@
 
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body{
+	font-family: $text-face-alt;
 	text-align: center;
 }
 

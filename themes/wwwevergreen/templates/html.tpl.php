@@ -47,7 +47,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
  * @ingroup themeable
  */
 ?><!DOCTYPE html>
-<html dir="<?php print $language->dir; ?>">
+<html dir="<?php print $language->dir; ?>" lang="<?php print $language->language; ?>">
 
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8" />
@@ -78,17 +78,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<!--<link href="<?php print base_path() . path_to_theme() ?>/css/dist/styles.css" media="all" rel="stylesheet" />-->
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-456756-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
-	
 	<!-- Typekit -->
 	<script src="https://use.typekit.net/rtm8ksn.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -107,7 +96,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	  //any site-wide ad tracking scripts go here. this allows them to be turned off for service center, test, or local sites.
 	  if(theme_get_setting('evergreen_ad_tracking')) { ?>
   <!-- reach local tracking script -->
-  <script type="text/javascript">var rl_siteid = "6ab3611f-6d7c-4500-9c31-c90eb2895e4a";</script><script type="text/javascript" src="//cdn.rlets.com/capture_static/mms/mms.js" async="async"></script>
+  <script>var rl_siteid = "6ab3611f-6d7c-4500-9c31-c90eb2895e4a";</script><script type="text/javascript" src="//cdn.rlets.com/capture_static/mms/mms.js" async="async"></script>
   <?php }; ?>
 </body>
 </html>
