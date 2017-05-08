@@ -379,7 +379,12 @@ ul.accordion-inner{
 .nav-item .field-links{
 	// box model
 	margin: 0;
+	padding: 0 1ch;
 	max-height: none;
+	
+	@include breakpoint($gamora){
+		padding: 0;
+	}
 }
 
 .close .field-links{
@@ -396,6 +401,8 @@ ul.accordion-inner{
 .open .field-links{
 	// box model
 	max-height: 20em;
+	// decoration
+	border-bottom-color: mix($tint, $shade, 60%);
 	// behavior
 	transition: max-height 1s ease;
 }
