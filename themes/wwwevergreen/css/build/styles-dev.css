@@ -4342,14 +4342,14 @@ ul.accordion-inner {
 }
 
 /* line 379, ../src/smacss/modules/_tertiary-nav.scss */
-.nav-item .field-links {
+.field-section-navigation .field-links {
   margin: 0;
   padding: 0 1ch;
   max-height: none;
 }
 @media screen and (min-width: 43em) {
   /* line 379, ../src/smacss/modules/_tertiary-nav.scss */
-  .nav-item .field-links {
+  .field-section-navigation .field-links {
     padding: 0;
   }
 }
@@ -4394,6 +4394,7 @@ ul.accordion-inner {
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
   border-bottom: none;
+  display: block;
   font-weight: normal;
 }
 
@@ -4405,7 +4406,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 442, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 444, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
