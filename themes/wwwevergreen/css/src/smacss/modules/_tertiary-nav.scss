@@ -376,7 +376,7 @@ ul.accordion-inner{
 	}
 }
 
-.nav-item .field-links{
+.field-section-navigation .field-links{
 	// box model
 	margin: 0;
 	padding: 0 1ch;
@@ -426,6 +426,8 @@ ul.accordion-inner{
 .field-section-navigation a:hover{
 	// box model
 	border-bottom: none;
+	// layout
+	display: block;
 	// typography
 	font-weight: normal;
 }
