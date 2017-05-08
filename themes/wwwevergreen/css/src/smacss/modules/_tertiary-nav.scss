@@ -289,11 +289,31 @@ ul.accordion-inner{
 	list-style-type: none;
 }
 
+.field-group-title{
+	display: flex;  // Makes it so headings don't wrap underneath triangle bullets
+	
+	@include breakpoint($gamora){
+		display: block;
+	}
+}
+
+.field-group-title:hover{
+	cursor: pointer;
+	
+	@include breakpoint($gamora){
+		cursor: auto;
+	}
+}
+
 .field-group-title::before{
 	margin-right: 0.5ch;
 	display: inline-block;
 	content: "▶";
 	transition: transform 0.33s ease;
+	
+	@include breakpoint($gamora){
+		content: none;
+	}
 }
 
 .open .field-group-title::before{
@@ -340,6 +360,10 @@ ul.accordion-inner{
 .close .field-links{
 	max-height: 0;
 	transition: max-height 0.25s ease;
+	
+	@include breakpoint($gamora){
+		max-height: none;
+	}
 }
 
 .open .field-links{

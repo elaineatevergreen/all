@@ -4362,6 +4362,30 @@ ul.accordion-inner {
 }
 
 /* line 292, ../src/smacss/modules/_tertiary-nav.scss */
+.field-group-title {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 43em) {
+  /* line 292, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title {
+    display: block;
+  }
+}
+
+/* line 300, ../src/smacss/modules/_tertiary-nav.scss */
+.field-group-title:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 43em) {
+  /* line 300, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title:hover {
+    cursor: auto;
+  }
+}
+
+/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
@@ -4370,8 +4394,14 @@ ul.accordion-inner {
   transition: transform 0.33s ease;
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
+@media screen and (min-width: 43em) {
+  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title::before {
+    content: none;
+  }
+}
 
-/* line 299, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 319, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4381,7 +4411,7 @@ ul.accordion-inner {
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 304, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 324, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4390,7 +4420,7 @@ ul.accordion-inner {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 304, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 324, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4401,7 +4431,7 @@ ul.accordion-inner {
   }
 }
 
-/* line 325, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 345, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   margin-left: 0;
   margin-right: 0;
@@ -4409,24 +4439,30 @@ ul.accordion-inner {
   list-style-type: none;
 }
 
-/* line 336, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 356, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item .field-links {
   max-height: none;
 }
 
-/* line 340, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 360, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
+@media screen and (min-width: 43em) {
+  /* line 360, ../src/smacss/modules/_tertiary-nav.scss */
+  .close .field-links {
+    max-height: none;
+  }
+}
 
-/* line 345, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 369, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 20em;
   transition: max-height 1s ease;
 }
 
-/* line 350, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 374, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item a,
 .nav-item a:visited,
 .nav-item a:hover {
@@ -4441,7 +4477,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 365, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 389, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
