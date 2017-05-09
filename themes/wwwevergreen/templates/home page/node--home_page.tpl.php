@@ -40,7 +40,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/about">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
 					</div>
 					<div class="transporter-text">About Evergreen</div>
 				</a>
@@ -48,7 +48,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/studies">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/programs.png"/>
 					</div>
 					<div class="transporter-text">Fields of Study</div>
 				</a>
@@ -56,7 +56,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/admissions/visit">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/visit.png"/>
 					</div>
 					<div class="transporter-text">See Campus</div>
 				</a>
@@ -64,7 +64,7 @@
 			<li class="unit-1-7 icon-scale transporter-call">
 				<a href="/admissions/apply">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply-now.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/apply-now.png"/>
 					</div>
 					<div class="transporter-text">Apply Now</div>
 				</a>
@@ -72,7 +72,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/catalog">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/catalog.png"/>
 					</div>
 					<div class="transporter-text">Catalog</div>
 				</a>
@@ -80,7 +80,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/eveningweekend">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/moon.png"/>
 					</div>
 					<div class="transporter-text">Evening and Weekend</div>
 				</a>
@@ -88,7 +88,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/graduatestudies">
 					<div class="transporter-icon">
-						<img class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/graduation.png"/>
 					</div>
 					<div class="transporter-text">Graduate Degrees</div>
 				</a>
@@ -194,28 +194,28 @@
 								<ul class="element-list grid">
 									<li class="unit-1-2">
 										<figure class="box caption-box">
-											<a class ="profile-img-link" href="/magazine/2016spring-summer/calling-to-conserve">
-												<img alt="Amanda Sargent ’10" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/amanda-sargent.jpg" />
+											<a class ="profile-img-link" href="/magazine/winter-2017/theory-practice">
+												<img alt="Trace McKellips ’17, Jennifer MacDonald, and Kristen Andrews ’08" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/mckellips-macdonald-andrews.jpg" />
 											</a>
 											<figcaption>
 												<p>
-													<a href="/magazine/2016spring-summer/calling-to-conserve">
-														<strong>Amanda Sargent ’10</strong>
-													</a> felt a calling to conserve.
+													<a href="/magazine/winter-2017/theory-practice">
+														<strong>Trace McKellips ’17, Jennifer MacDonald, and Kristen Andrews ’08</strong>
+													</a> pursue their passions in the working world.
 												</p>
 											</figcaption>
 										</figure>
 									</li>
 									<li class="unit-1-2">
 										<figure class="box caption-box">
-											<a class="profile-img-link" href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
-												<img alt="Rhys Roth ’87, MES ’90" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/rhys-roth.jpg" />
+											<a class="profile-img-link" href="/magazine/winter-2017/upwardly-mobile">
+												<img alt="Melanie White ’14" class="image-full profile-img" src="<?php print base_path() . path_to_theme() ?>/images/homepage/profiles/melanie-white-portrait.jpg" />
 											</a>
 											<figcaption>
 												<p>
-													<a href="/magazine/2016spring-summer/positioning-the-pnw-to-lead-in-sustainability">
-														<strong>Rhys Roth ’87, MES ’90</strong>
-													</a> is positioning the Pacific Northwest to lead in sustainability.
+													<a href="/magazine/winter-2017/upwardly-mobile">
+														<strong>Melanie White ’14</strong>
+													</a> empowers the Latino immigrant community through social entrepreneurship.
 												</p>
 											</figcaption>
 										</figure>

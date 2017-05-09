@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Simple Events feature.
+ */
+
+include_once 'simple_events.features.inc';
