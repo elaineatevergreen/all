@@ -104,10 +104,41 @@ jQuery(document).ready(function($){
 });
 
 /**
- * All content, including images, are fully loaded.
+ * jQuery-free!
  */
-// jQuery-free!
-window.onload = function loadAfter() {
+window.onload = function loadAfter() {  // All content, including images, are fully loaded.
+	/**
+	 * Accordion Nav
+	 *
+	 * Pure JS, v2
+	 */
+	var tertiaryNav = document.getElementById('tertiary-nav');
+	/* If we can get class names on the lis, we can avoid this step. */
+	//var sectionNavItems = tertiaryNav.getElementsByTagName('li');
+	var sectionNavItems = document.querySelectorAll('#tertiary-nav .field-section-navigation > li');
+	//var sectionNavItems = document.querySelectorAll('#section-nav-list > li')
+	function setupAccordion(){
+		for (var i = 0; i < sectionNavItems.length; ++i) {
+			sectionNavItems[i].className = "nav-item close";
+		}
+	}
+	setupAccordion();
+	
+	var navItems = tertiaryNav.getElementsByClassName('nav-item');
+	var navHeaders = tertiaryNav.getElementsByClassName('field-group-title');
+	for (i = 0; i < navHeaders.length; i++){
+		navHeaders[i].addEventListener('click', toggleNavItem, false);
+	}
+	function toggleNavItem(){
+		var navItemState = this.parentNode.className;
+		for (i = 0; i < navItems.length; i++){
+			navItems[i].className = "nav-item close";
+		}
+		if (navItemState == "nav-item close"){
+			this.parentNode.className = "nav-item open";
+		}
+	}
+	
 	/**
 	 * New, jQuery-free image rotation (in progress)
 	 */

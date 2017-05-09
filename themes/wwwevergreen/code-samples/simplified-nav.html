@@ -1,55 +1,119 @@
+<meta charset="utf-8"/>
+<style>
+	.region-section-nav{
+		//border: 1px solid black;
+	}
+	
+	.field-section-navigation{
+		//border: 1px solid red;
+		list-style-type: none;
+	}
+	
+	.field-group-title::before{
+		margin-right: 0.5ch;
+		display: inline-block;
+		content: "▶";
+		transition: transform 0.33s ease;
+	}
+	
+	.open .field-group-title::before{
+		transform: rotate(90deg);
+		transition: transform 0.33s ease;
+	}
+	
+	.field-group-title{
+		border-bottom: 1px solid black;
+	}
+	
+	.field-links{
+		//border: 1px solid green;
+		overflow: hidden;
+	}
+	
+	.nav-item .field-links{
+		max-height: none;
+	}
+	
+	.close .field-links{
+		max-height: 0;
+		transition: max-height 0.25s ease;
+	}
+	
+	.open .field-links{
+		max-height: 20em;
+		transition: max-height 1s ease;
+	}
+</style>
+
 <div class="region region-section-nav">
-      
-          <nav id="tertiary-nav" class="box">
+	<nav id="tertiary-nav" class="box">
+		<ul class="field-section-navigation"><!-- Add id #section-nav-list? -->
+			<li>
+				<h4 class="field-group-title">Navigation Group One</h4>
+				<ul class="field-links">
+					<li><!-- Add class .nav-item here and to all similiar list items? -->
+						<a href="/feature-breakup/feature-breakup/content/media-linking">Media Linking</a>
+					</li>
+					<li>
+						<a href="/feature-breakup/feature-breakup/content/embed-entity">Embed Entity</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h4 class="field-group-title">Navigation Group Two</h4>
+				<ul class="field-links">
+					<li>
+						<a href="https://evergreen.edu">Evergreen</a>
+					</li>
+					<li>
+						<a href="http://theinterconnected.net">The Interconnected</a>
+					</li>
+					<li>
+						<a href="http://hamilipsum.net/">HamilIpsum</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h4 class="field-group-title">Navigation Group Three</h4>
+				<ul class="field-links">
+					<li>
+						<a href="https://twitter.com">Twitter</a>
+					</li>
+					<li>
+						<a href="https://google.com">Google</a>
+					</li>
+				</ul>
+			</li>
+		</ul><!-- /.field-section-navigation -->
+	</nav>    
+	<a href="/feature-breakup/taxonomy/term/1/edit?destination=node/2">Edit this site’s info</a>
+</div><!-- /.region region-section-nav -->
 
-<ul class="field-section-navigation">
-
-      <li>
-      
-  <h4 class="field-group-title">
-    Navigation Group One  </h4>
-
-<ul class="field-links">
-
-      <li>
-      <a href="/feature-breakup/feature-breakup/content/media-linking">Media Linking</a>    </li>
-      <li>
-      <a href="/feature-breakup/feature-breakup/content/embed-entity">Embed Entity</a>    </li>
-  
-</ul>
-    </li>
-      <li>
-      
-  <h4 class="field-group-title">
-    Navigation Group Two  </h4>
-
-<ul class="field-links">
-
-      <li>
-      <a href="https://evergreen.edu">Evergreen</a>    </li>
-      <li>
-      <a href="http://theinterconnected.net">The Interconnected</a>    </li>
-      <li>
-      <a href="http://hamilipsum.net/">HamilIpsum</a>    </li>
-  
-</ul>
-    </li>
-      <li>
-      
-  <h4 class="field-group-title">
-    Navigation Group Three  </h4>
-
-<ul class="field-links">
-
-      <li>
-      <a href="https://twitter.com">Twitter</a>    </li>
-      <li>
-      <a href="https://google.com">Google</a>    </li>
-  
-</ul>
-    </li>
-  
-</ul>
-
-</nav>    
-          <a href="/feature-breakup/taxonomy/term/1/edit?destination=node/2">Edit this site's info</a>    </div>
+<script>
+	/* Pure JS, v2 */
+	var tertiaryNav = document.getElementById('tertiary-nav');
+	/* If we can get class names on the lis, we can avoid this step. */
+	var sectionNavItems = tertiaryNav.getElementsByTagName('li');
+	//var sectionNavItems = document.querySelectorAll('#section-nav-list > li')
+	function setupAccordion(){
+		for (var i = 0; i < sectionNavItems.length; ++i) {
+			sectionNavItems[i].className = "nav-item close";
+		}
+	}
+	setupAccordion();
+	
+	var navItems = tertiaryNav.getElementsByClassName('nav-item');
+	var navHeaders = tertiaryNav.getElementsByClassName('field-group-title');
+	for (i = 0; i < navHeaders.length; i++){
+		navHeaders[i].addEventListener('click', toggleNavItem, false);
+	}
+	function toggleNavItem(){
+		var navItemState = this.parentNode.className;
+		for (i = 0; i < navItems.length; i++){
+			navItems[i].className = "nav-item close";
+		}
+		if (navItemState == "nav-item close"){
+			this.parentNode.className = "nav-item open";
+		}
+	}
+</script>
