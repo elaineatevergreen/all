@@ -127,9 +127,9 @@ select{
 
 textarea{
 	// box model
-	padding: calc(7.5 / 16 * 1rem) 0.75em;
+	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
-	max-width: calc(45ch + 1em);
+	max-width: calc(47ch + 2px);
 	min-width: 50%;
 
 	@include breakpoint($gamora){
