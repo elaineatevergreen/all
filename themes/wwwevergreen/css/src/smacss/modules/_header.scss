@@ -387,6 +387,9 @@ input:checked + .header-dropdown{
 	 */
 
 	@include breakpoint($starlord){
+		// layout
+		grid-template-columns: 20% 20% 20% 20% 20%;
+		// typography
 		letter-spacing: normal;
 	}
 
@@ -451,6 +454,15 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($gamora){
 		height: auto;
+	}
+}
+
+@supports (display: grid){
+	.top-nav-list > li{
+		
+		@include breakpoint($starlord){
+			width: auto;
+		}
 	}
 }
 
