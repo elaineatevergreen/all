@@ -377,7 +377,7 @@ input:checked + .header-dropdown{
 		align-items: stretch;
 		display: flex;
 		display: grid;
-		grid-template-columns: auto auto auto auto auto;
+		grid-template-columns: repeat(5, auto);
 		// typography
 		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
@@ -388,7 +388,7 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($starlord){
 		// layout
-		grid-template-columns: 20% 20% 20% 20% 20%;
+		grid-template-columns: repeat(5, 20%);
 		// typography
 		letter-spacing: normal;
 	}

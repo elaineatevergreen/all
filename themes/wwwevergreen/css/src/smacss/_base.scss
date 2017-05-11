@@ -17,17 +17,7 @@ html{
 	box-sizing: border-box;
 }
 
-*{
-	box-sizing: inherit;
-}
-
-/**
- * For the following, I am taking pity on IE8- because I'm using
- * the appropriate double-colon syntax for pseudo-elements. If I
- * condensed this style declaration with the above *, IE8- would
- * choke on the whole thing, breaking the border-box declaration
- * for the universal selector.
- */
+*,
 *::before,
 *::after{
 	box-sizing: inherit;
@@ -43,6 +33,14 @@ body{
 	flex-direction: column;
 	// decoration
 	background-color: $tint;
+}
+
+@supports (display: grid){
+	body{
+		display: grid;
+		//-----------  #skip-link  #sitewide-alert  header  .site-content  footer    column
+		grid-template:  auto        auto            auto     1fr           auto    / auto;
+	}
 }
 
 img,
