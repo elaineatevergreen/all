@@ -253,7 +253,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 @supports (display: grid){
 	.primary-content-wrapper{
 		
-		@include-breakpoint($drax){
+		@include breakpoint($drax){
 			width: auto;
 		}
 	}
@@ -289,7 +289,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 @supports (display: grid){
 	.sidebar-wrapper{
 		
-		@include-breakpoint($drax){
+		@include breakpoint($drax){
 			width: auto;
 		}
 	}
