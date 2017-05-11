@@ -178,24 +178,13 @@ html {
 }
 
 /* line 20, ../src/smacss/_base.scss */
-* {
-  box-sizing: inherit;
-}
-
-/**
- * For the following, I am taking pity on IE8- because I'm using
- * the appropriate double-colon syntax for pseudo-elements. If I
- * condensed this style declaration with the above *, IE8- would
- * choke on the whole thing, breaking the border-box declaration
- * for the universal selector.
- */
-/* line 31, ../src/smacss/_base.scss */
+*,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-/* line 36, ../src/smacss/_base.scss */
+/* line 26, ../src/smacss/_base.scss */
 body {
   margin: 0;
   min-height: 100vh;
@@ -211,7 +200,15 @@ body {
   background-color: #f2f2f2;
 }
 
-/* line 48, ../src/smacss/_base.scss */
+@supports ((display: -ms-grid) or (display: grid)) {
+  /* line 39, ../src/smacss/_base.scss */
+  body {
+    display: -ms-grid;
+    display: grid;
+    grid-template: auto        auto            auto     1fr           auto    / auto;
+  }
+}
+/* line 46, ../src/smacss/_base.scss */
 img,
 svg {
   border-width: 0;
@@ -220,37 +217,37 @@ svg {
   max-width: 100%;
 }
 
-/* line 56, ../src/smacss/_base.scss */
+/* line 54, ../src/smacss/_base.scss */
 img[height="0"][width="0"] {
   height: 0;
   width: 0;
   display: block;
 }
 
-/* line 64, ../src/smacss/_base.scss */
+/* line 62, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 68, ../src/smacss/_base.scss */
+/* line 66, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 73, ../src/smacss/_base.scss */
+/* line 71, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 77, ../src/smacss/_base.scss */
+/* line 75, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 86, ../src/smacss/_base.scss */
+/* line 84, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -1756,7 +1753,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 127, ../src/smacss/_base.scss */
+/* line 125, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -3130,16 +3127,16 @@ input:checked + .header-dropdown {
     display: flex;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto auto auto;
-        grid-template-columns: auto auto auto auto auto;
+    -ms-grid-columns: (auto)[5];
+        grid-template-columns: repeat(5, auto);
     letter-spacing: -0.05ch;
   }
 }
 @media screen and (min-width: 32em) {
   /* line 362, ../src/smacss/modules/_header.scss */
   .top-nav-list {
-    -ms-grid-columns: 20% 20% 20% 20% 20%;
-        grid-template-columns: 20% 20% 20% 20% 20%;
+    -ms-grid-columns: (20%)[5];
+        grid-template-columns: repeat(5, 20%);
     letter-spacing: normal;
   }
 }

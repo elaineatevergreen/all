@@ -27,7 +27,7 @@
 <div class="row">
 	<div class="wrapper">
 		<div class="grid">
-			<div class="standalone-unit unit-1-1">
+			<div class="unit-1-1">
 				<!-- Location Transporter -->
 				<p class="location-transporter">
 					Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Native Pathways Program</a>
