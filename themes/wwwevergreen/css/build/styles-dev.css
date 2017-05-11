@@ -203,12 +203,15 @@ body {
 @supports ((display: -ms-grid) or (display: grid)) {
   /* line 39, ../src/smacss/_base.scss */
   body {
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
     display: -ms-grid;
     display: grid;
     grid-template: auto        auto            auto     1fr           auto    / auto;
   }
 }
-/* line 46, ../src/smacss/_base.scss */
+/* line 48, ../src/smacss/_base.scss */
 img,
 svg {
   border-width: 0;
@@ -217,37 +220,37 @@ svg {
   max-width: 100%;
 }
 
-/* line 54, ../src/smacss/_base.scss */
+/* line 56, ../src/smacss/_base.scss */
 img[height="0"][width="0"] {
   height: 0;
   width: 0;
   display: block;
 }
 
-/* line 62, ../src/smacss/_base.scss */
+/* line 64, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 66, ../src/smacss/_base.scss */
+/* line 68, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 71, ../src/smacss/_base.scss */
+/* line 73, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 75, ../src/smacss/_base.scss */
+/* line 77, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 84, ../src/smacss/_base.scss */
+/* line 86, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -1194,9 +1197,9 @@ select:hover {
 
 /* line 128, ../src/smacss/base/_forms.scss */
 textarea {
-  padding: calc(7.5 / 16 * 1rem) 0.75em;
+  padding: calc(7.5 / 16 * 1rem) 1ch;
   width: 100%;
-  max-width: calc(45ch + 1em);
+  max-width: calc(47ch + 2px);
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
@@ -1753,7 +1756,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 125, ../src/smacss/_base.scss */
+/* line 127, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -2337,19 +2340,30 @@ body > div + header,
 /**
  * D. Content Layout
  */
-/* line 171, ../src/smacss/_layout.scss */
+@supports ((display: -ms-grid) or (display: grid)) {
+  /* line 173, ../src/smacss/_layout.scss */
+  .main-row-grid {
+    margin-left: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 2ch;
+    -ms-grid-columns: 1fr 4fr 2fr;
+        grid-template-columns: 1fr 4fr 2fr;
+  }
+}
+/* line 183, ../src/smacss/_layout.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
 }
 @media screen and (min-height: 35em) {
-  /* line 171, ../src/smacss/_layout.scss */
+  /* line 183, ../src/smacss/_layout.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 181, ../src/smacss/_layout.scss */
+/* line 193, ../src/smacss/_layout.scss */
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
@@ -2360,7 +2374,7 @@ body > div + header,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 181, ../src/smacss/_layout.scss */
+  /* line 193, ../src/smacss/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -2371,7 +2385,7 @@ body > div + header,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 181, ../src/smacss/_layout.scss */
+  /* line 193, ../src/smacss/_layout.scss */
   .index-wrapper,
   .primary-content-wrapper {
     border-top-width: 0;
@@ -2380,19 +2394,19 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 212, ../src/smacss/_layout.scss */
+  /* line 224, ../src/smacss/_layout.scss */
   .index-wrapper {
     position: relative;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 212, ../src/smacss/_layout.scss */
+  /* line 224, ../src/smacss/_layout.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 226, ../src/smacss/_layout.scss */
+/* line 238, ../src/smacss/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
   /*@include breakpoint($gamora){
@@ -2401,14 +2415,22 @@ body > div + header,
   }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 226, ../src/smacss/_layout.scss */
+  /* line 238, ../src/smacss/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 242, ../src/smacss/_layout.scss */
+@supports ((display: -ms-grid) or (display: grid)) {
+  @include-breakpoint ($drax) {
+    /* line 254, ../src/smacss/_layout.scss */
+    .primary-content-wrapper {
+      width: auto;
+    }
+  }
+}
+/* line 263, ../src/smacss/_layout.scss */
 .sidebar-wrapper {
   margin-left: 2ch;
   padding: 0;
@@ -2417,7 +2439,7 @@ body > div + header,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 242, ../src/smacss/_layout.scss */
+  /* line 263, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
@@ -2426,20 +2448,28 @@ body > div + header,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 242, ../src/smacss/_layout.scss */
+  /* line 263, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
     width: 28.571428571429%;
   }
 }
 
-/* line 270, ../src/smacss/_layout.scss */
+@supports ((display: -ms-grid) or (display: grid)) {
+  @include-breakpoint ($drax) {
+    /* line 290, ../src/smacss/_layout.scss */
+    .sidebar-wrapper {
+      width: auto;
+    }
+  }
+}
+/* line 300, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 300, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-right: 2ch;
@@ -2447,14 +2477,14 @@ body > div + header,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 300, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 4.28571428571429em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 300, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 3.3333333333em;
@@ -2462,84 +2492,84 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 288, ../src/smacss/_layout.scss */
+  /* line 318, ../src/smacss/_layout.scss */
   .index-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 296, ../src/smacss/_layout.scss */
+/* line 326, ../src/smacss/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 296, ../src/smacss/_layout.scss */
+  /* line 326, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 2ch;
     margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 296, ../src/smacss/_layout.scss */
+  /* line 326, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 312, ../src/smacss/_layout.scss */
+/* line 342, ../src/smacss/_layout.scss */
 .main-content {
   margin-top: calc(30 / 16 * 1rem);
 }
 @media screen and (min-width: 70em) {
-  /* line 312, ../src/smacss/_layout.scss */
+  /* line 342, ../src/smacss/_layout.scss */
   .main-content {
     margin-top: calc(45 / 16 * 1rem);
   }
 }
 
-/* line 320, ../src/smacss/_layout.scss */
+/* line 350, ../src/smacss/_layout.scss */
 .sidebar {
   margin: 0 0.75em 3.75rem;
 }
 @media screen and (min-width: 22em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 350, ../src/smacss/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 350, ../src/smacss/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 350, ../src/smacss/_layout.scss */
   .sidebar {
     border-left: 1px solid #c2c2c2;
     margin: calc(45 / 16 * 1rem) 1em 0 0;
-    padding-left: 1em;
+    padding-left: 2ch;
     font-size: 0.875rem;
     line-height: 1.42857142857143;
     color: #303030;
   }
-  /* line 342, ../src/smacss/_layout.scss */
+  /* line 372, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 350, ../src/smacss/_layout.scss */
   .sidebar {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 351, ../src/smacss/_layout.scss */
+  /* line 381, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em;
@@ -2568,18 +2598,18 @@ body > div + header,
  * |                              |                     |
  * +------------------------------+---------------------+
  */
-/* line 380, ../src/smacss/_layout.scss */
+/* line 410, ../src/smacss/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 410, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 410, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     padding-right: 1em;
@@ -2589,13 +2619,13 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 398, ../src/smacss/_layout.scss */
+  /* line 428, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 398, ../src/smacss/_layout.scss */
+  /* line 428, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
     float: left;
@@ -2605,14 +2635,14 @@ body > div + header,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 414, ../src/smacss/_layout.scss */
+  /* line 444, ../src/smacss/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #c2c2c2;
     padding-left: 1em;
   }
 }
 
-/* line 423, ../src/smacss/_layout.scss */
+/* line 453, ../src/smacss/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -2624,37 +2654,37 @@ body > div + header,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 434, ../src/smacss/_layout.scss */
+  /* line 464, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 440, ../src/smacss/_layout.scss */
+  /* line 470, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 446, ../src/smacss/_layout.scss */
+  /* line 476, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 456, ../src/smacss/_layout.scss */
+  /* line 486, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 462, ../src/smacss/_layout.scss */
+  /* line 492, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 468, ../src/smacss/_layout.scss */
+  /* line 498, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -3986,7 +4016,7 @@ input:checked + .header-dropdown {
  * Table of Contents
  *
  * 1. Default Tertiary Nav
- * 2. CSS Accordion
+ * 2. CSS Accordion - Deprecated
  * 3. Drupal Nav With JS Accordion
  * 4. Catalog Nav Fixes
  */
@@ -4018,7 +4048,16 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+@supports ((display: -ms-grid) or (display: grid)) {
+  @include-breakpoint ($drax) {
+    /* line 37, ../src/smacss/modules/_tertiary-nav.scss */
+    .tertiary-nav-wrapper {
+      padding-left: 0;
+      width: auto;
+    }
+  }
+}
+/* line 46, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav,
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
@@ -4031,7 +4070,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 46, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4040,17 +4079,17 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 46, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     padding-top: calc(45 / 16 * 1rem);
-    width: calc(100% + 1em);
+    width: calc(100% + 2ch);
     max-width: none;
     position: relative;
     border-radius: 0;
   }
-  /* line 66, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 76, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4058,14 +4097,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 46, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 76, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 86, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4074,75 +4113,74 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 83, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 93, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
     margin-top: 0;
   }
 }
 
-/* line 92, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav .accordion {
-  border-width: 0;
-  background-color: transparent;
-}
-/* line 96, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav .accordion dd {
-  background-color: rgba(242, 242, 242, 0.25);
+/*#tertiary-nav .accordion{
+	border-width: 0;
+	background-color: transparent;
+
+	dd{
+		background-color: transparentize($tint, 0.75);
+	}
 }
 
-/* line 101, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list,
 .tertiary-related-links,
-.tertiary-related-links > li > ul {
-  margin-left: 0;
-  list-style-type: none;
+.tertiary-related-links > li > ul{
+	margin-left: 0;
+	list-style-type: none;
 }
 
-/* line 108, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.631100639515315em 0;
-  font-size: 0.875rem;
-  line-height: 1.42857142857143;
-}
-@media screen and (min-width: 43em) {
-  /* line 108, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h {
-    border-bottom: 1px solid #004377;
-    margin-bottom: -1px;
-    padding: 0;
-    display: block;
-    font-size: 1.202rem;
-    line-height: 1.559900166389351;
-  }
+.tertiary-nav-h{  // heading for tertiary nav in wider views
+	//box model
+	margin-top: 0;  // compensate for border
+	margin-bottom: 0;
+	padding: 0.631100639515315em 0;  // 15/11.884/2
+	//typography
+	@include base-type;
+
+	@include breakpoint($gamora){
+		//box model
+		border-bottom: 1px solid mix($shade, $sky-blue, 50%);
+		margin-bottom: -1px;
+		padding: 0;
+		//layout
+		display: block;
+		//typography
+		font-size: 1.202rem;  // 19.232px
+		line-height: 1.559900166389351;  // 30/19.232
+	}
 }
 
-/* line 129, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list li,
 .tertiary-related-links > li > ul > li,
-#tertiary-nav dd > ul li {
-  margin: 0.535714285714286em 0 1.071428571428571em;
-}
-@media screen and (min-width: 43em) {
-  /* line 129, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-list li,
-  .tertiary-related-links > li > ul > li,
-  #tertiary-nav dd > ul li {
-    margin: 0.41666666666667em 0 0.83333333333333em;
-  }
+#tertiary-nav dd > ul li{  //WYSIWYG
+	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+
+	@include breakpoint($gamora){
+		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
+	}
 }
 
-/* line 139, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list a,
-#tertiary-nav dd > ul a,
-.tertiary-related-links a {
-  border-bottom-width: 0;
-  font-weight: normal;
-}
-
+#tertiary-nav dd > ul a,  // Cascade WYSIWYG
+.tertiary-related-links a{
+	// box model
+	border-bottom-width: 0;
+	// typography
+	font-weight: normal;
+}*/
 /**
- * 2. CSS Accordion
+ * 2. CSS Accordion - Deprecated
+ *
+ * Deprecation Notice:
+ * Drupal didn’t play so nicely with my clever CSS accordion, so we decided
+ * to change it to a JS-based number, which is probably better for
+ * accessibility, anyway.
  *
  * An accordion that relies on radio buttons and labels for controls
  * instead of JavaScript. This accordion automatically expands and
@@ -4150,175 +4188,164 @@ input:checked + .header-dropdown {
  *
  * @see http://cssconf.com/talk-seddon.html
  */
-/* line 157, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] {
-  display: none;
+/*[name="accordion-group"]{
+	display: none;  // Hide all actual checkboxes; they are activated by their labels
 }
 
-/* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-.accordion-h label::before {
-  display: inline-block;
-  color: black;
-  content: "▶\00A0";
-}
-@media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-h label::before {
-    content: "";
-  }
+.accordion-h label::before{
+	// layout
+	display: inline-block;
+	// typgography
+	color: $shade;
+	// miscellaneous
+	content: "▶\00A0";  // Right-pointing triangle followed by a non-breaking space
+
+	@include breakpoint($gamora){
+		content: "";
+	}
 }
 
-/* line 174, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] + .accordion-h label::before {
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+[name="accordion-group"] + .accordion-h label::before{
+	// behavior
+	transition: transform 0.1s linear;
 }
 
-/* line 179, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked + .accordion-h label::before {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+[name="accordion-group"]:checked + .accordion-h label::before{
+	// behavior
+	transform: rotate(90deg);
+	transition: transform 0.1s linear;
 }
 
-/* line 185, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h label {
-  color: #600f21;
-  cursor: pointer;
-}
-/* line 191, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h label:hover {
-  color: #0086ee;
-}
-@media screen and (min-width: 43em) {
-  /* line 185, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h label {
-    color: #004377;
-    cursor: default;
-  }
-  /* line 202, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h label:hover {
-    color: #004377;
-  }
+.tertiary-nav-h label{
+	// typography
+	color: $wine;
+	// misc
+	cursor: pointer;
+
+	&:hover{
+		// typography
+		color: $sky-blue;
+	}
+
+	@include breakpoint($gamora){
+		// typography
+		color: mix($shade, $sky-blue, 50%);
+		// misc
+		cursor: default;
+
+		&:hover{
+			// typography
+			color: mix($shade, $sky-blue, 50%);
+		}
+	}
 }
 
-/* line 209, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle {
-  display: inline;
+[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
+	display: inline;
 }
 
-/* line 213, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle {
-  display: none;
+[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
+	display: none;
 }
 
-/* line 217, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] ~ h4 .accordion-dismiss {
-  display: none;
+[name="accordion-group"] ~ h4 .accordion-dismiss{
+	display: none;
 }
 
-/* line 221, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ h4 .accordion-dismiss {
-  display: inline;
+[name="accordion-group"]:checked ~ h4 .accordion-dismiss{
+	display: inline;
 }
 
-/* line 225, ../src/smacss/modules/_tertiary-nav.scss */
-.accordion-body {
-  border-bottom: 1px solid black;
-  height: auto;
-  max-height: 0;
-  overflow: hidden;
-  background-color: rgba(242, 242, 242, 0.25);
-  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
-  transition: max-height 0.25s ease 0s;
-}
-@media screen and (min-width: 43em) {
-  /* line 225, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-body {
-    border-bottom-width: 0;
-    max-height: 600px;
-    background-color: transparent;
-    box-shadow: none;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 225, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-body {
-    max-height: none;
-  }
+.accordion-body{
+	// box model
+	border-bottom: 1px solid $shade;
+	height: auto;
+	max-height: 0;
+	// layout
+	overflow: hidden;
+	// decoration
+	background-color: transparentize($tint, 0.75);
+	// misc
+	box-shadow: 0 2px 2px $drop-shadow inset;
+	// transition
+	transition: max-height 0.25s ease 0s;
+
+	@include breakpoint ($gamora){
+		border-bottom-width: 0;
+		max-height: 600px;
+		// decoration
+		background-color: transparent;
+		// misc
+		box-shadow: none;
+	}
+
+	@include breakpoint($drax){
+		max-height: none;
+	}
 }
 
-/* line 253, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav li:last-child .accordion-body {
-  border-bottom-width: 0;
+#tertiary-nav li:last-child .accordion-body{
+	border-bottom-width: 0;
 }
 
-/* line 257, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ .accordion-body {
-  max-height: 500px;
-  transition-duration: 0.75s;
-}
-@media screen and (min-width: 43em) {
-  /* line 257, ../src/smacss/modules/_tertiary-nav.scss */
-  [name="accordion-group"]:checked ~ .accordion-body {
-    padding: 0;
-  }
+[name="accordion-group"]:checked ~ .accordion-body{
+	// box model
+	max-height: 500px;
+	// transition
+	transition-duration: 0.75s;
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
 }
 
-/* line 268, ../src/smacss/modules/_tertiary-nav.scss */
-ul.accordion-inner {
-  padding: 0 2%;
-}
-@media screen and (min-width: 43em) {
-  /* line 268, ../src/smacss/modules/_tertiary-nav.scss */
-  ul.accordion-inner {
-    padding: 0;
-  }
-}
+ul.accordion-inner{
+	padding: 0 2%;  // 15/11.884/2
 
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}*/
 /**
  * 3. Drupal Navigation With JS Accordion
  *
  * Drupal does things in its own funny way, and rather than shoehorn my
  * system into it, let’s just play along and use the classes it tends to
- * want to use automatically.
+ * want to use automatically. This accordion expands and disappears at the
+ * $gamora breakpoint.
  */
-/* line 283, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 299, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation {
   margin-left: 0;
   margin-right: 0;
   list-style-type: none;
 }
 
-/* line 292, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 43em) {
-  /* line 292, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title {
     display: block;
   }
 }
 
-/* line 300, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title:hover {
     cursor: auto;
   }
 }
 
-/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 324, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
@@ -4328,13 +4355,13 @@ ul.accordion-inner {
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 324, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title::before {
     content: none;
   }
 }
 
-/* line 319, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 335, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4344,7 +4371,7 @@ ul.accordion-inner {
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 324, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 340, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4353,7 +4380,7 @@ ul.accordion-inner {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 324, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 340, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4364,7 +4391,7 @@ ul.accordion-inner {
   }
 }
 
-/* line 345, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 361, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   border-bottom: 1px solid black;
   margin-left: 0;
@@ -4375,7 +4402,7 @@ ul.accordion-inner {
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
-  /* line 345, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 361, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     border-bottom-width: 0;
     background-color: transparent;
@@ -4383,55 +4410,55 @@ ul.accordion-inner {
   }
 }
 
-/* line 379, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 395, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   margin: 0;
   padding: 0 1ch;
   max-height: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 379, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 395, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     padding: 0;
   }
 }
 
-/* line 390, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 406, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item:last-child .field-links {
   border-bottom-width: 0;
 }
 
-/* line 394, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 410, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 394, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 410, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 405, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 421, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
 
-/* line 414, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 430, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 414, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 430, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 424, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 440, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation a,
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
@@ -4448,7 +4475,7 @@ ul.accordion-inner {
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 444, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 460, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;

@@ -37,8 +37,10 @@ body{
 
 @supports (display: grid){
 	body{
+		// layout
+		align-items: start;
 		display: grid;
-		//-----------  #skip-link  #sitewide-alert  header  .site-content  footer    column
+		// ----------  #skip-link  #sitewide-alert  header  .site-content  footer    column
 		grid-template:  auto        auto            auto     1fr           auto    / auto;
 	}
 }
