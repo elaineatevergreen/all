@@ -33,6 +33,16 @@
 	}
 }
 
+@supports (display: grid){
+	.tertiary-nav-wrapper{
+		
+		@include-breakpoint($drax){
+			padding-left: 0;
+			width: auto;
+		}
+	}
+}
+
 #tertiary-nav,
 #views-exposed-form-catalog-page,  // Drupal; the filter form on the catalog page where #tertiary-nav would normally go... Can or should this just be changed to #tertiary-nav? -jkm
 #views-exposed-form-catalog-grad-programs{  // Drupal; the filter form on the grad program catalog page
@@ -56,7 +66,7 @@
 		// box model
 		//margin-top: calc(30 / 16 * 1rem);
 		padding-top: calc(45 / 16 * 1rem);
-		width: calc(100% + 1em);
+		width: calc(100% + 2ch);
 		max-width: none;
 		// position
 		position: relative;

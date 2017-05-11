@@ -168,6 +168,18 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
  * D. Content Layout
  */
 
+@supports (display: grid){
+
+	.main-row-grid{
+		// box model
+		margin-left: 0;
+		// layout
+		display: grid;
+		grid-column-gap: 2ch;
+		grid-template-columns: 1fr 4fr 2fr;
+	}
+}
+
 .site-content{
 	// box model
 	margin-bottom: 1.875rem;  // 30px
@@ -238,6 +250,15 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 }
 
+@supports (display: grid){
+	.primary-content-wrapper{
+		
+		@include-breakpoint($drax){
+			width: auto;
+		}
+	}
+}
+
 // Wraps the secondary content area.
 .sidebar-wrapper{
 	// box model
@@ -262,6 +283,15 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		// box model
 		margin: 0;
 		width: 28.571428571429%;  // 2/7
+	}
+}
+
+@supports (display: grid){
+	.sidebar-wrapper{
+		
+		@include-breakpoint($drax){
+			width: auto;
+		}
 	}
 }
 
@@ -334,7 +364,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		//box model
 		border-left: 1px solid mix($tint, $shade, 80%);
 		margin: calc(45 / 16 * 1rem) 1em 0 0;
-		padding-left: 1em;
+		padding-left: 2ch;
 		//typography
 		@include base-type;
 		color: mix($tint, $shade, 20%);
