@@ -172,11 +172,16 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 
 	.main-row-grid{
 		// box model
-		margin-left: 0;
+		margin-left: 0;  // Overrides flexbox-based grid
 		// layout
 		display: grid;
 		grid-column-gap: 2ch;
-		grid-template-columns: 1fr 4fr 2fr;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		
+		@include breakpoint($gamora){
+			grid-template-columns: 1fr 4fr 2fr;
+		}
 	}
 }
 
@@ -251,7 +256,10 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 }
 
 @supports (display: grid){
+	max-width: calc(100% - 1ch);
+	
 	.primary-content-wrapper{
+		margin-left: 0;  // Overrides flexbox-based grid
 		
 		@include breakpoint($drax){
 			width: auto;
@@ -287,6 +295,8 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 }
 
 @supports (display: grid){
+	margin-left: 0;
+	max-width: calc(100% - 1ch);
 	.sidebar-wrapper{
 		
 		@include breakpoint($drax){
