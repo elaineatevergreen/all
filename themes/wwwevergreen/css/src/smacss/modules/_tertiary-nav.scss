@@ -37,6 +37,10 @@
 
 	.tertiary-nav-wrapper{
 		padding-left: 0;  // Overrides flexbox-based grid
+		
+		@include breakpoint($gamora){
+			width: auto;
+		}
 
 		@include breakpoint($drax){
 			width: auto;

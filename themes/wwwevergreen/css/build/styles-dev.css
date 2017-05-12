@@ -2504,16 +2504,18 @@ body > div + header,
     /* line 308, ../src/smacss/_layout.scss */
     .sidebar-wrapper {
       width: auto;
+      -ms-grid-column: auto;
+          grid-column-start: auto;
     }
   }
 }
-/* line 330, ../src/smacss/_layout.scss */
+/* line 333, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
-  /* line 330, ../src/smacss/_layout.scss */
+  /* line 333, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-right: 2ch;
@@ -2521,14 +2523,14 @@ body > div + header,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 330, ../src/smacss/_layout.scss */
+  /* line 333, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 4.28571428571429em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 330, ../src/smacss/_layout.scss */
+  /* line 333, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 3.3333333333em;
@@ -2536,63 +2538,63 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 348, ../src/smacss/_layout.scss */
+  /* line 351, ../src/smacss/_layout.scss */
   .index-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 356, ../src/smacss/_layout.scss */
+/* line 359, ../src/smacss/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 356, ../src/smacss/_layout.scss */
+  /* line 359, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 2ch;
     margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 356, ../src/smacss/_layout.scss */
+  /* line 359, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 372, ../src/smacss/_layout.scss */
+/* line 375, ../src/smacss/_layout.scss */
 .main-content {
   margin-top: calc(30 / 16 * 1rem);
 }
 @media screen and (min-width: 70em) {
-  /* line 372, ../src/smacss/_layout.scss */
+  /* line 375, ../src/smacss/_layout.scss */
   .main-content {
     margin-top: calc(45 / 16 * 1rem);
   }
 }
 
-/* line 380, ../src/smacss/_layout.scss */
+/* line 383, ../src/smacss/_layout.scss */
 .sidebar {
   margin: 0 0.75em 3.75rem;
 }
 @media screen and (min-width: 22em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 383, ../src/smacss/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 383, ../src/smacss/_layout.scss */
   .sidebar {
-    margin-right: 5.675675675675676%;
-    margin-left: 5.675675675675676%;
+    margin-right: 2ch;
+    margin-left: 2ch;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 383, ../src/smacss/_layout.scss */
   .sidebar {
     border-left: 1px solid #c2c2c2;
     margin: calc(45 / 16 * 1rem) 1em 0 0;
@@ -2601,19 +2603,19 @@ body > div + header,
     line-height: 1.42857142857143;
     color: #303030;
   }
-  /* line 402, ../src/smacss/_layout.scss */
+  /* line 405, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 383, ../src/smacss/_layout.scss */
   .sidebar {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 411, ../src/smacss/_layout.scss */
+  /* line 414, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em;
@@ -2642,18 +2644,18 @@ body > div + header,
  * |                              |                     |
  * +------------------------------+---------------------+
  */
-/* line 440, ../src/smacss/_layout.scss */
+/* line 443, ../src/smacss/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 440, ../src/smacss/_layout.scss */
+  /* line 443, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 440, ../src/smacss/_layout.scss */
+  /* line 443, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     padding-right: 1em;
@@ -2663,13 +2665,13 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 458, ../src/smacss/_layout.scss */
+  /* line 461, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 458, ../src/smacss/_layout.scss */
+  /* line 461, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
     float: left;
@@ -2679,14 +2681,14 @@ body > div + header,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 474, ../src/smacss/_layout.scss */
+  /* line 477, ../src/smacss/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #c2c2c2;
     padding-left: 1em;
   }
 }
 
-/* line 483, ../src/smacss/_layout.scss */
+/* line 486, ../src/smacss/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -2698,37 +2700,37 @@ body > div + header,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 494, ../src/smacss/_layout.scss */
+  /* line 497, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 500, ../src/smacss/_layout.scss */
+  /* line 503, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 506, ../src/smacss/_layout.scss */
+  /* line 509, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 516, ../src/smacss/_layout.scss */
+  /* line 519, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 522, ../src/smacss/_layout.scss */
+  /* line 525, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 528, ../src/smacss/_layout.scss */
+  /* line 531, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -4097,6 +4099,12 @@ input:checked + .header-dropdown {
   .tertiary-nav-wrapper {
     padding-left: 0;
   }
+  @media screen and (min-width: 43em) {
+    /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
+    .tertiary-nav-wrapper {
+      width: auto;
+    }
+  }
   @media screen and (min-width: 70em) {
     /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
     .tertiary-nav-wrapper {
@@ -4104,7 +4112,7 @@ input:checked + .header-dropdown {
     }
   }
 }
-/* line 47, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 51, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav,
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
@@ -4117,7 +4125,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
-  /* line 47, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4126,7 +4134,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 47, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4136,7 +4144,7 @@ input:checked + .header-dropdown {
     position: relative;
     border-radius: 0;
   }
-  /* line 77, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 81, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4144,14 +4152,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 47, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 87, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 91, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4160,7 +4168,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 94, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 98, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
     margin-top: 0;
   }
@@ -4361,38 +4369,38 @@ ul.accordion-inner{
  * want to use automatically. This accordion expands and disappears at the
  * $gamora breakpoint.
  */
-/* line 300, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 304, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation {
   margin-left: 0;
   margin-right: 0;
   list-style-type: none;
 }
 
-/* line 309, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 313, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 43em) {
-  /* line 309, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 313, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title {
     display: block;
   }
 }
 
-/* line 317, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 321, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 43em) {
-  /* line 317, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 321, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title:hover {
     cursor: auto;
   }
 }
 
-/* line 325, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 329, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
@@ -4402,13 +4410,13 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 325, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 329, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title::before {
     content: none;
   }
 }
 
-/* line 336, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 340, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4418,7 +4426,7 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 341, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 345, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4427,7 +4435,7 @@ ul.accordion-inner{
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 341, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 345, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4438,7 +4446,7 @@ ul.accordion-inner{
   }
 }
 
-/* line 362, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 366, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   border-bottom: 1px solid black;
   margin-left: 0;
@@ -4449,7 +4457,7 @@ ul.accordion-inner{
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
-  /* line 362, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 366, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     border-bottom-width: 0;
     background-color: transparent;
@@ -4457,55 +4465,55 @@ ul.accordion-inner{
   }
 }
 
-/* line 396, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 400, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   margin: 0;
   padding: 0 1ch;
   max-height: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 396, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 400, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     padding: 0;
   }
 }
 
-/* line 407, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 411, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item:last-child .field-links {
   border-bottom-width: 0;
 }
 
-/* line 411, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 415, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 411, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 415, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 422, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 426, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
 
-/* line 431, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 435, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 431, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 435, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 441, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 445, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation a,
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
@@ -4522,7 +4530,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 461, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 465, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;

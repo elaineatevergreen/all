@@ -320,7 +320,10 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		}
 		
 		@include breakpoint($drax){
+			// box model
 			width: auto;
+			// layout
+			grid-column-start: auto;
 		}
 	}
 }
@@ -386,8 +389,8 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 
 	@include breakpoint($gamora){
-		margin-right: 5.675675675675676%;  // These values should match .main-content
-		margin-left: 5.675675675675676%;
+		margin-right: 2ch;  // These values should match .main-content
+		margin-left: 2ch;
 	}
 
 	@include breakpoint($drax){
