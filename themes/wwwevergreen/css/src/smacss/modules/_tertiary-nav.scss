@@ -34,10 +34,11 @@
 }
 
 @supports (display: grid){
+
 	.tertiary-nav-wrapper{
-		
+		padding-left: 0;  // Overrides flexbox-based grid
+
 		@include breakpoint($drax){
-			padding-left: 0;
 			width: auto;
 		}
 	}
