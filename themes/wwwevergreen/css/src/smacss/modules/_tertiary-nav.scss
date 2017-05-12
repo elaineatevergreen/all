@@ -296,7 +296,9 @@ ul.accordion-inner{
 }
 
 .field-group-title{
-	display: flex;  // Makes it so headings don't wrap underneath triangle bullets
+	align-items: start;  // Makes it so that triangle bullets don't stretch the full height and rotate in funny ways when activated
+	display: grid;  // Makes it so headings don't wrap underneath triangle bullets
+	grid-template-columns: auto 1fr;
 	
 	@include breakpoint($gamora){
 		display: block;
