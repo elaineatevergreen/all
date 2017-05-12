@@ -180,6 +180,10 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		justify-items: center;
 		
 		@include breakpoint($gamora){
+			grid-template-columns: 1fr 4fr;
+		}
+		
+		@include breakpoint($drax){
 			grid-template-columns: 1fr 4fr 2fr;
 		}
 	}
@@ -256,10 +260,15 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 }
 
 @supports (display: grid){
-	max-width: calc(100% - 1ch);
 	
 	.primary-content-wrapper{
 		margin-left: 0;  // Overrides flexbox-based grid
+		width: auto;
+		max-width: calc(100% - 1ch);
+		
+		@include breakpoint($gamora){
+			max-width: none;
+		}
 		
 		@include breakpoint($drax){
 			width: auto;
@@ -295,9 +304,20 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 }
 
 @supports (display: grid){
-	margin-left: 0;
-	max-width: calc(100% - 1ch);
+	
 	.sidebar-wrapper{
+		margin-left: 0;
+		width: auto;
+		max-width: calc(100% - 1ch);
+		
+		@include breakpoint($gamora){
+			// box model
+			margin-left: 0;
+			padding-left: 0;
+			width: auto;
+			// layout
+			grid-column-start: 2;
+		}
 		
 		@include breakpoint($drax){
 			width: auto;
