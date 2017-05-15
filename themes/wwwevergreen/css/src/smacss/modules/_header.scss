@@ -406,7 +406,7 @@ input:checked + .header-dropdown{
 	}
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	.top-nav-list::before,
 	.top-nav-list::after{
 		content: none;
@@ -457,7 +457,7 @@ input:checked + .header-dropdown{
 	}
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	.top-nav-list > li{
 		
 		@include breakpoint($starlord){

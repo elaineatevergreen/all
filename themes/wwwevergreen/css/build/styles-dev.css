@@ -3224,7 +3224,7 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 410, ../src/smacss/modules/_header.scss */
   .top-nav-list::before,
   .top-nav-list::after {
@@ -3283,7 +3283,7 @@ input:checked + .header-dropdown {
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   @media screen and (min-width: 32em) {
     /* line 461, ../src/smacss/modules/_header.scss */
     .top-nav-list > li {
