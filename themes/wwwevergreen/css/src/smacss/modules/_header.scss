@@ -376,19 +376,15 @@ input:checked + .header-dropdown{
 		// layout
 		align-items: stretch;
 		display: flex;
-		display: grid;
-		grid-template-columns: repeat(5, auto);
 		// typography
 		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
 
 	/**
-	 * See Typekit override for breakpoint($rocket) below.
+	 * See Typekit override for breakpoint($rocket), below.
 	 */
 
 	@include breakpoint($starlord){
-		// layout
-		grid-template-columns: repeat(5, 20%);
 		// typography
 		letter-spacing: normal;
 	}
@@ -407,6 +403,20 @@ input:checked + .header-dropdown{
 }
 
 @supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+
+	.top-nav-list{
+		@include breakpoint($lil-groot){
+			// layout
+			display: grid;
+			grid-template-columns: repeat(5, auto);
+		}
+
+		@include breakpoint($starlord){
+			// layout
+			grid-template-columns: repeat(5, 20%);
+		}
+	}
+
 	.top-nav-list::before,
 	.top-nav-list::after{
 		content: none;
