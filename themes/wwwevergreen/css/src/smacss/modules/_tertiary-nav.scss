@@ -33,7 +33,7 @@
 	}
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 
 	.tertiary-nav-wrapper{
 		padding-left: 0;  // Overrides flexbox-based grid

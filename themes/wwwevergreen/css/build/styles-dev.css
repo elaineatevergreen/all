@@ -200,7 +200,7 @@ body {
   background-color: #f2f2f2;
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 39, ../src/smacss/_base.scss */
   body {
     -webkit-align-items: start;
@@ -2340,7 +2340,7 @@ body > div + header,
 /**
  * D. Content Layout
  */
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 173, ../src/smacss/_layout.scss */
   .main-row-grid {
     margin-left: 0;
@@ -2438,7 +2438,7 @@ body > div + header,
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 264, ../src/smacss/_layout.scss */
   .primary-content-wrapper {
     margin-left: 0;
@@ -2483,7 +2483,7 @@ body > div + header,
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 308, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin-left: 0;
@@ -4094,7 +4094,7 @@ input:checked + .header-dropdown {
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-wrapper {
     padding-left: 0;
