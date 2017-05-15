@@ -168,7 +168,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
  * D. Content Layout
  */
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 
 	.main-row-grid{
 		// box model
@@ -259,7 +259,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	
 	.primary-content-wrapper{
 		margin-left: 0;  // Overrides flexbox-based grid
@@ -303,7 +303,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	
 	.sidebar-wrapper{
 		margin-left: 0;

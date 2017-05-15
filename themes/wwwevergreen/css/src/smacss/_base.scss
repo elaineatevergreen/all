@@ -35,7 +35,7 @@ body{
 	background-color: $tint;
 }
 
-@supports (display: grid){
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	body{
 		// layout
 		align-items: start;
