@@ -7,7 +7,7 @@
  * Table of Contents
  *
  * 1. Default Tertiary Nav
- * 2. CSS Accordion
+ * 2. CSS Accordion - Deprecated
  * 3. Drupal Nav With JS Accordion
  * 4. Catalog Nav Fixes
  */
@@ -104,7 +104,7 @@
 	}
 }
 
-#tertiary-nav .accordion{
+/*#tertiary-nav .accordion{
 	border-width: 0;
 	background-color: transparent;
 
@@ -158,10 +158,15 @@
 	border-bottom-width: 0;
 	// typography
 	font-weight: normal;
-}
+}*/
 
 /**
- * 2. CSS Accordion
+ * 2. CSS Accordion - Deprecated
+ *
+ * Deprecation Notice:
+ * Drupal didn’t play so nicely with my clever CSS accordion, so we decided
+ * to change it to a JS-based number, which is probably better for
+ * accessibility, anyway.
  *
  * An accordion that relies on radio buttons and labels for controls
  * instead of JavaScript. This accordion automatically expands and
@@ -169,7 +174,7 @@
  *
  * @see http://cssconf.com/talk-seddon.html
  */
-[name="accordion-group"]{
+/*[name="accordion-group"]{
 	display: none;  // Hide all actual checkboxes; they are activated by their labels
 }
 
@@ -286,14 +291,15 @@ ul.accordion-inner{
 	@include breakpoint($gamora){
 		padding: 0;
 	}
-}
+}*/
 
 /**
  * 3. Drupal Navigation With JS Accordion
  *
  * Drupal does things in its own funny way, and rather than shoehorn my
  * system into it, let’s just play along and use the classes it tends to
- * want to use automatically.
+ * want to use automatically. This accordion expands and disappears at the
+ * $gamora breakpoint.
  */
 .field-section-navigation{
 	// box model
