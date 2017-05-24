@@ -31,6 +31,7 @@
     "grunt-sass-lint": "^0.2.0",
     "grunt-svgstore": "1.x",
     "postcss-reporter": "3.0.x"
+    "postcss-easing-gradients": "1.x",
   },
   "_comment": "Run “npm update” in the project directory to get the latest version of dependencies."
 }

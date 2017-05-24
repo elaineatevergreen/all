@@ -120,12 +120,21 @@ module.exports = function(grunt) {
 					),
 					
 					/**
+					 * postcss-easing-gradients
+					 *
+					 * Creates smooth linear-gradients that approximate easing
+					 * functions.
+					 */
+					require('postcss-easing-gradients'),
+					
+					/**
 					 * postcss-reporter
 					 *
-					 * Prints out warning and error messages from other PostCSS plugins.
-					 *
-					 * This plugin should go last to report warnings from all previous
+					 * Prints out warning and error messages from other PostCSS
 					 * plugins.
+					 *
+					 * This plugin should go last to report warnings from all
+					 * previous plugins.
 					 */ 
 					require('postcss-reporter')(
 						{
