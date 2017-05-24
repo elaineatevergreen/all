@@ -3838,7 +3838,6 @@ input:checked + .header-dropdown {
   position: absolute;
   top: 0;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.667), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
-  background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.75) 0%, hsla(0, 0%, 0%, 0.554) 19%, hsla(0, 0%, 0%, 0.406) 34%, hsla(0, 0%, 0%, 0.287) 47%, hsla(0, 0%, 0%, 0.209) 56.5%, hsla(0, 0%, 0%, 0.145) 65%, hsla(0, 0%, 0%, 0.095) 73%, hsla(0, 0%, 0%, 0.056) 80.2%, hsla(0, 0%, 0%, 0.032) 86.1%, hsla(0, 0%, 0%, 0.016) 91%, hsla(0, 0%, 0%, 0.006) 95.2%, hsla(0, 0%, 0%, 0.002) 98.2%, hsla(0, 0%, 0%, 0) 100%);
 }
 @media screen and (min-width: 32em) {
   /* line 237, ../src/smacss/modules/_homepage-hero.scss */
@@ -3926,8 +3925,6 @@ input:checked + .header-dropdown {
   float: left;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-name: spinDown;
-          animation-name: spinDown;
   -webkit-animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
           animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
 }
@@ -3984,7 +3981,6 @@ input:checked + .header-dropdown {
     padding-left: 0;
     right: 0;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
-    background-image: linear-gradient(to left, hsla(0, 0%, 0%, 0.75) 0%, hsla(0, 0%, 0%, 0.554) 19%, hsla(0, 0%, 0%, 0.406) 34%, hsla(0, 0%, 0%, 0.287) 47%, hsla(0, 0%, 0%, 0.209) 56.5%, hsla(0, 0%, 0%, 0.145) 65%, hsla(0, 0%, 0%, 0.095) 73%, hsla(0, 0%, 0%, 0.056) 80.2%, hsla(0, 0%, 0%, 0.032) 86.1%, hsla(0, 0%, 0%, 0.016) 91%, hsla(0, 0%, 0%, 0.006) 95.2%, hsla(0, 0%, 0%, 0.002) 98.2%, hsla(0, 0%, 0%, 0) 100%);
   }
 }
 

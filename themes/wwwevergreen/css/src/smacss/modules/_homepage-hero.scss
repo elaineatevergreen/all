@@ -243,7 +243,7 @@
 	top: 0;
 	// decoration
 	background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.667), hsla(0, 0%, 0%, 0.5) 66.6666666667%, hsla(0, 0%, 0%, 0));
-	background-image: scrim-gradient(to right, hsla(0, 0%, 0%, 0.75), transparent);
+	//background-image: scrim-gradient(to right, hsla(0, 0%, 0%, 0.75), transparent);
 	
 	@include breakpoint($starlord){
 		width: 66.6666666667%;
@@ -344,7 +344,7 @@
 	float: left;
 	// animation
 	animation-duration: 2s;
-	animation-name: spinDown;
+	//animation-name: spinDown;
 	//animation-timing-function: ease-out;
 	animation-timing-function: cubic-bezier(0.240, 0.820, 0.695, 1.145);  // Custom, with bounce
 	
@@ -395,7 +395,7 @@
 		right: 0;
 		// decoration
 		background-image: linear-gradient(to left, hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.5) 66.66667%, transparent);
-		background-image: scrim-gradient(to left, hsla(0, 0%, 0%, 0.75), transparent);
+		//background-image: scrim-gradient(to left, hsla(0, 0%, 0%, 0.75), transparent);
 	}
 
 	@include breakpoint($starlord){
