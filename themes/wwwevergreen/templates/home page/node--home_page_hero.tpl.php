@@ -40,11 +40,11 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 			<h2>News Update</h2>
 			<p>
 				Read a statement from the Board of Trustees:
-				<a href="/news/post/renewing-our-commitment-tolerance-and-respect-evergreen-statement-board-trustees">Renewing Our Commitment to Tolerance and Respect at Evergreen</a>
+				<a href="/news/post/renewing-our-commitment-tolerance-and-respect-evergreen-statement-board-trustees">Renewing Our Commitment to Tolerance and Respect at Evergreen</a>.
 			</p>
 			<p>
 				Find the latest news from the college:
-				<a href="/news/update-safety-equity-and-free-speech-evergreen">Safety, Equity, and Free Speech at Evergreen.</a>
+				<a href="/news/update-safety-equity-and-free-speech-evergreen">Safety, Equity, and Free Speech at Evergreen</a>.
 			</p>
 		</div>
 	</div>
