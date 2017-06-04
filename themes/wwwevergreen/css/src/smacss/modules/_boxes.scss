@@ -13,7 +13,8 @@
  * 5. Action Box
  * 6. Pull Quotes
  * 7. Full Box
- * 8. UI Group
+ * 8. Row Alert
+ * 9. UI Group
  */
 
 /**
@@ -106,7 +107,8 @@ p.box,  // WYSIWYG
  */
 
 .alert,
-p.alert{  // WYSIWYG
+p.alert,  // WYSIWYG
+.alert-alt{  // A more alerting alert
 	// box model
 	//border: 1px solid $wine;  // Conflicts with sitewide alert JS. Might be worth changing how that works.
 	// typography
@@ -126,6 +128,11 @@ p.alert{  // WYSIWYG
 	border-radius: 0;
 	// movement
 	transition: all 0.5s ease-in;
+}
+
+.alert-alt{
+	color: $shade;
+	@include base-type-xl;
 }
 
 /**
@@ -397,7 +404,17 @@ p.alert{  // WYSIWYG
 }
 
 /**
- * 8. UI Group
+ * 8. Row Box
+ *
+ * A box that takes up a full row and sits as its own cake layer. Namely,
+ * there are no margins, so that it sandwiches neatly between other rows.
+ */
+.box.row{
+	margin: 0;
+}
+
+/**
+ * 9. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other

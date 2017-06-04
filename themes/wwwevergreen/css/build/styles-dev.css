@@ -4242,9 +4242,13 @@ ul.accordion-inner{
 
 /* line 298, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
 }
 @media screen and (min-width: 43em) {
   /* line 298, ../src/smacss/modules/_tertiary-nav.scss */
@@ -4253,18 +4257,18 @@ ul.accordion-inner{
   }
 }
 
-/* line 306, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 43em) {
-  /* line 306, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title:hover {
     cursor: auto;
   }
 }
 
-/* line 314, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
@@ -4274,13 +4278,13 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 314, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title::before {
     content: none;
   }
 }
 
-/* line 325, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 327, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4290,7 +4294,7 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 330, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 332, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4299,7 +4303,7 @@ ul.accordion-inner{
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 330, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 332, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4310,7 +4314,7 @@ ul.accordion-inner{
   }
 }
 
-/* line 351, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 353, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   border-bottom: 1px solid black;
   margin-left: 0;
@@ -4321,7 +4325,7 @@ ul.accordion-inner{
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
-  /* line 351, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 353, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     border-bottom-width: 0;
     background-color: transparent;
@@ -4329,55 +4333,55 @@ ul.accordion-inner{
   }
 }
 
-/* line 385, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 387, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   margin: 0;
   padding: 0 1ch;
   max-height: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 385, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 387, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     padding: 0;
   }
 }
 
-/* line 396, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 398, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item:last-child .field-links {
   border-bottom-width: 0;
 }
 
-/* line 400, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 402, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 400, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 402, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 411, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 413, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
 
-/* line 420, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 422, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 420, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 422, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 430, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 432, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation a,
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
@@ -4394,7 +4398,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 450, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 452, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
@@ -5789,12 +5793,13 @@ div.ajax-progress {
  * 5. Action Box
  * 6. Pull Quotes
  * 7. Full Box
- * 8. UI Group
+ * 8. Row Alert
+ * 9. UI Group
  */
 /**
  * 1. Default Box
  */
-/* line 22, ../src/smacss/modules/_boxes.scss */
+/* line 23, ../src/smacss/modules/_boxes.scss */
 .notice,
 .box,
 p.box,
@@ -5810,7 +5815,7 @@ p.box,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 22, ../src/smacss/modules/_boxes.scss */
+  /* line 23, ../src/smacss/modules/_boxes.scss */
   .notice,
   .box,
   p.box,
@@ -5821,7 +5826,7 @@ p.box,
   }
 }
 
-/* line 46, ../src/smacss/modules/_boxes.scss */
+/* line 47, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5829,13 +5834,13 @@ p.box,
   color: #004377;
 }
 
-/* line 53, ../src/smacss/modules/_boxes.scss */
+/* line 54, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 58, ../src/smacss/modules/_boxes.scss */
+/* line 59, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5844,7 +5849,7 @@ p.box,
 }
 
 @media screen and (min-width: 20em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5852,7 +5857,7 @@ p.box,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5862,7 +5867,7 @@ p.box,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5875,13 +5880,13 @@ p.box,
  *
  * Stands out a little bit more than a default box.
  */
-/* line 93, ../src/smacss/modules/_boxes.scss */
+/* line 94, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 93, ../src/smacss/modules/_boxes.scss */
+  /* line 94, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5893,15 +5898,16 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 108, ../src/smacss/modules/_boxes.scss */
+/* line 109, ../src/smacss/modules/_boxes.scss */
 .alert,
-p.alert {
+p.alert,
+.alert-alt {
   color: #600f21;
   background-color: rgba(253, 244, 182, 0.5);
   border-radius: 0;
 }
 
-/* line 119, ../src/smacss/modules/_boxes.scss */
+/* line 121, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5910,19 +5916,26 @@ p.alert {
   transition: all 0.5s ease-in;
 }
 
+/* line 133, ../src/smacss/modules/_boxes.scss */
+.alert-alt {
+  color: black;
+  font-size: 1.202rem;
+  line-height: 1.30011961100421;
+}
+
 /**
  * 4. Captioned Figures
  *
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 138, ../src/smacss/modules/_boxes.scss */
+/* line 145, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 145, ../src/smacss/modules/_boxes.scss */
+/* line 152, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5956,7 +5969,7 @@ p.alert {
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 178, ../src/smacss/modules/_boxes.scss */
+/* line 185, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5975,7 +5988,7 @@ p.alert {
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 178, ../src/smacss/modules/_boxes.scss */
+  /* line 185, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-flex-direction: row;
@@ -5984,7 +5997,7 @@ p.alert {
   }
 }
 
-/* line 205, ../src/smacss/modules/_boxes.scss */
+/* line 212, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -5994,7 +6007,7 @@ p.alert {
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 214, ../src/smacss/modules/_boxes.scss */
+  /* line 221, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -6006,7 +6019,7 @@ p.alert {
   }
 }
 
-/* line 228, ../src/smacss/modules/_boxes.scss */
+/* line 235, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -6014,7 +6027,7 @@ p.alert {
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 235, ../src/smacss/modules/_boxes.scss */
+/* line 242, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -6041,7 +6054,7 @@ p.alert {
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 264, ../src/smacss/modules/_boxes.scss */
+/* line 271, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -6052,7 +6065,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 273, ../src/smacss/modules/_boxes.scss */
+  /* line 280, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6060,7 +6073,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 281, ../src/smacss/modules/_boxes.scss */
+  /* line 288, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6068,20 +6081,20 @@ p.alert {
   }
 }
 
-/* line 290, ../src/smacss/modules/_boxes.scss */
+/* line 297, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 297, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 297, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -6091,39 +6104,39 @@ p.alert {
 /**
  * 6. Pull Quotes
  */
-/* line 306, ../src/smacss/modules/_boxes.scss */
+/* line 313, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 306, ../src/smacss/modules/_boxes.scss */
+  /* line 313, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 318, ../src/smacss/modules/_boxes.scss */
+/* line 325, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 325, ../src/smacss/modules/_boxes.scss */
+/* line 332, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 332, ../src/smacss/modules/_boxes.scss */
+/* line 339, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 340, ../src/smacss/modules/_boxes.scss */
+/* line 347, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 344, ../src/smacss/modules/_boxes.scss */
+/* line 351, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -6132,7 +6145,7 @@ p.alert {
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 351, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -6140,7 +6153,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 351, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -6149,7 +6162,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 369, ../src/smacss/modules/_boxes.scss */
+  /* line 376, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -6163,26 +6176,37 @@ p.alert {
  *
  * @section box-full
  */
-/* line 384, ../src/smacss/modules/_boxes.scss */
+/* line 391, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 390, ../src/smacss/modules/_boxes.scss */
+/* line 397, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 395, ../src/smacss/modules/_boxes.scss */
+/* line 402, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
 
 /**
- * 8. UI Group
+ * 8. Row Box
+ *
+ * A box that takes up a full row and sits as its own cake layer. Namely,
+ * there are no margins, so that it sandwiches neatly between other rows.
+ */
+/* line 412, ../src/smacss/modules/_boxes.scss */
+.box.row {
+  margin: 0;
+}
+
+/**
+ * 9. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other
@@ -6190,7 +6214,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 409, ../src/smacss/modules/_boxes.scss */
+/* line 426, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -6208,24 +6232,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 430, ../src/smacss/modules/_boxes.scss */
+  /* line 447, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 437, ../src/smacss/modules/_boxes.scss */
+  /* line 454, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 442, ../src/smacss/modules/_boxes.scss */
+  /* line 459, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 448, ../src/smacss/modules/_boxes.scss */
+/* line 465, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
