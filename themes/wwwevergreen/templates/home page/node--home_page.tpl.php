@@ -145,13 +145,13 @@
 							<div class="unit-1-1">
 								<p class="intro intro-alt"><?php print render($content['field_intro']); ?> <a href="about/">Learn more.</a></p>
 								<!--<div class="unit-1-1"><a href="/graduation/home"><img alt="See photos and more from graduation day" class="image-full" src="/graduation/images/grad-homepage-banner.jpg" /></a></div>-->
-								<div class="action-box box sensitive-box">
+								<!--<div class="action-box box sensitive-box">
 									<div class="action-item-1-1">
 										<p>
 											<a href="http://www.evergreen.edu/news/update-safety-equity-and-free-speech-evergreen">Update: Safety, Equity, and Free Speech at Evergreen</a>
 										</p>
 									</div>
-								</div>
+								</div>-->
 								<figure class="box pull-box pull-box-alt">
 									<p class="pull-quote">
 										<q>Evergreen had an impact on me that I still feel. The skills I learned at Evergreen in communication, setting goals, leadership and personal ethics are with me every day. Evergreen was the perfect place for me.</q>
