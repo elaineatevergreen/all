@@ -68,9 +68,19 @@
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
  */
 /**
- * New Modular Scale
+ * Deprecated Modular Scale - Do not use!
  *
  * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
  * Ideal text size is 18px.
  * The important number is 345px. This was the size of images in
  * the previous Admissions template, which guided image sizes in
@@ -540,7 +550,7 @@ h6 {
   color: #616161;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: normal;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -748,7 +758,7 @@ small,
 .caption {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
   /* line 436, ../src/smacss/base/_typography.scss */
@@ -1187,9 +1197,9 @@ select:hover {
 
 /* line 128, ../src/smacss/base/_forms.scss */
 textarea {
-  padding: calc(7.5 / 16 * 1rem) 0.75em;
+  padding: calc(7.5 / 16 * 1rem) 1ch;
   width: 100%;
-  max-width: calc(45ch + 1em);
+  max-width: calc(47ch + 2px);
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
@@ -1412,22 +1422,12 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
- * 3. Webform Module
- *
- * Table of Contents
- *
- * a. Webform Forms
- * b. Checkboxes and Radios
- * c. Textareas
- * d. Grid
- * e. Buttons
- *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1435,34 +1435,34 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
-  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1471,15 +1471,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * b. Checkboxes And Radios
+ * Checkboxes And Radios
  */
-/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1488,33 +1488,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * c. Textareas
+ * Textareas
  */
-/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1522,24 +1522,7 @@ input[id$="-range-max"] {
 }
 
 /**
- * d. Grid
- *
- * A form grid that's useful for sliding scales, e.g. tracking a range from
- * unsatisfied to satisfied.
- */
-/* line 111, ../src/smacss/base/forms/_drupal-webform.scss */
-.checkbox.webform-grid-option {
-  text-align: center;
-}
-
-/* line 115, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-grid-option .form-radio,
-.webform-grid-option .form-checkbox {
-  float: none;
-}
-
-/**
- * e. Buttons
+ * Buttons
  */
 /**
  * 4. Search
@@ -2121,7 +2104,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2132,7 +2114,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2141,7 +2122,6 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
-  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2149,7 +2129,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2158,14 +2138,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2174,14 +2154,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 300, ../src/smacss/layout/_grid.scss */
+  /* line 299, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2691,7 +2671,7 @@ body > div + header,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3565,7 +3545,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3587,24 +3567,28 @@ input:checked + .header-dropdown {
  *
  * 1. Default
  * 2. Graduation Day Hero Image
- * 3. Slogan
- * 4. Slogan Modifiers
+ * 3. Copy
+ * 4. Copy Modifiers
  */
-/* line 25, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero {
+/* line 24, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero,
+.homepage-hero-content {
   height: 100%;
   overflow: hidden;
-  position: relative;
-  /*@include breakpoint($drax){
-  	display: table;  // Gives it a block formatting context
-  }*/
 }
+
 @media screen and (min-width: 20em) {
-  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
     position: relative;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero {
+    display: table;
   }
 }
 
@@ -3653,24 +3637,6 @@ input:checked + .header-dropdown {
 }
 
 /* line 89, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-caption {
-  position: relative;
-  z-index: 1;
-}
-@media screen and (min-width: 43em) {
-  /* line 89, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-caption {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-/* line 100, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-caption .caption-box {
-  margin: 0;
-}
-
-/* line 104, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3679,7 +3645,7 @@ input:checked + .header-dropdown {
   font-weight: inherit;
 }
 
-/* line 112, ../src/smacss/modules/_homepage-hero.scss */
+/* line 97, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3687,60 +3653,40 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 123, ../src/smacss/modules/_homepage-hero.scss */
+/* line 108, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
-@media screen and (min-width: 32em) {
-  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    font-size: calc(1rem + 1vh);
-    line-height: 1.5;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    float: right;
-  }
-}
 @media screen and (min-width: 70em) {
-  /* line 112, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 97, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 143, ../src/smacss/modules/_homepage-hero.scss */
+/* line 118, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
-  height: 100%;
   width: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  overflow: hidden;
+  max-width: 82em;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 32em) {
-  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 25em) {
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3748,18 +3694,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 143, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 118, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 174, ../src/smacss/modules/_homepage-hero.scss */
+/* line 145, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 32em) {
-  /* line 174, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 20em) {
+  /* line 145, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3775,191 +3721,118 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 193, ../src/smacss/modules/_homepage-hero.scss */
+/* line 164, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 197, ../src/smacss/modules/_homepage-hero.scss */
+/* line 168, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 201, ../src/smacss/modules/_homepage-hero.scss */
+/* line 172, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 201, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 201, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 172, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 217, ../src/smacss/modules/_homepage-hero.scss */
+/* line 188, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 221, ../src/smacss/modules/_homepage-hero.scss */
+/* line 192, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 221, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
 }
 
 /**
- * 3. Slogan
+ * 3. Copy
  */
-/* line 237, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan-wrapper {
-  padding-left: 4ch;
-  width: 75%;
-  position: absolute;
-  top: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.667), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
+/* line 208, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy {
+  margin: 0 calc(15 / 14 * 1em);
+}
+@media screen and (min-width: 20em) {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc(66.6666666667% - 1em);
+    float: left;
+  }
 }
 @media screen and (min-width: 32em) {
-  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: 66.6666666667%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: calc(4 / 7 * 100%);
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 237, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: calc(3 / 7 * 100%);
-  }
-}
-
-/* line 261, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media screen and (min-width: 32em) {
-  /* line 261, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    margin: 0 1em;
+    width: calc(50% - 1em);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
+@media screen and (min-width: 70em) {
+  /* line 208, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc((3 / 7 * 100%) - 1em);
+  }
+}
 
-/* line 294, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan h1 {
-  margin-right: 1ch;
-  width: 61%;
-  float: left;
+/* line 232, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 294, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 2em;
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
-@media screen and (min-width: 32em) {
-  /* line 294, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 1em;
-    width: 65%;
-  }
-}
 @media screen and (min-width: 43em) {
-  /* line 294, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 1.5em;
-    width: 70%;
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 294, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 3.5em;
-  }
-}
 @media screen and (min-width: 86em) {
-  /* line 294, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
+  /* line 232, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 339, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan-keywords {
-  margin-top: -10vh;
-  width: 39%;
-  float: left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
-          animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
-}
-@media screen and (min-width: 32em) {
-  /* line 339, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-keywords {
-    width: 35%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 339, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-keywords {
-    width: 30%;
-  }
-}
-
-@-webkit-keyframes spinDown {
-  from {
-    margin-top: -75vh;
-  }
-  to {
-    margin-top: -10vh;
-  }
-}
-
-@keyframes spinDown {
-  from {
-    margin-top: -75vh;
-  }
-  to {
-    margin-top: -10vh;
-  }
-}
-/* line 371, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan img {
+/* line 255, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy img {
   width: 100%;
 }
 
@@ -3975,45 +3848,65 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 386, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-copy-alt .homepage-hero-slogan-wrapper {
-    padding-right: 4ch;
-    padding-left: 0;
-    right: 0;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
+  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 270, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
   }
 }
 
-/* I do  not believe this entire section is needed for the latest slogan. */
-/*
-.homepage-hero-img-detailed .homepage-hero-copy{
-	// box model
-	height: 100%;
-	margin: 0;
-	padding: 0 calc(7.5 / 15 * 1em);
-	width: 66.6666666667%;
-	// decoration
-	background-color: transparentize($blueberry-susan, 0.5);
-	border-radius: 2px;
+/* line 285, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-img-detailed .homepage-hero-copy {
+  height: 100%;
+  margin: 0;
+  padding: 0 calc(7.5 / 15 * 1em);
+  width: 66.6666666667%;
+  background-color: rgba(73, 44, 93, 0.5);
+  border-radius: 2px;
+}
+@media screen and (min-width: 22em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 14 * 1em);
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    height: auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 17 * 1em);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 285, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(30 / 19.23333333333 * 1em);
+  }
+}
 
-	@include breakpoint($rocket){
-		padding: 0 calc(15 / 14 * 1em);
-	}
-
-	@include breakpoint($starlord){
-		height: auto;
-		width: 50%;
-	}
-
-	@include breakpoint($gamora){
-		// box model
-		margin: 5em 2ch 0;
-		padding: 0;
-		width: calc(100% - 4ch);
-		// decoration
-		background-color: transparent;
-	}
-}*/
 /* line 129, ../src/smacss/_modules.scss */
 .location-transporter {
   margin: calc(30 / 18 * 1em) 1ch;
@@ -4051,8 +3944,8 @@ input:checked + .header-dropdown {
  * Table of Contents
  *
  * 1. Default Tertiary Nav
- * 2. Homepage Tertiary Nav
- * 3. CSS Accordion
+ * 2. CSS Accordion - Deprecated
+ * 3. Drupal Nav With JS Accordion
  * 4. Catalog Nav Fixes
  */
 /**
@@ -4138,10 +4031,6 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 83, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav > ul {
-  margin-right: 1em;
-}
 @media screen and (min-width: 43em) {
   /* line 83, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
@@ -4149,26 +4038,264 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 92, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav .accordion {
-  border-width: 0;
-  background-color: transparent;
-}
-/* line 96, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav .accordion dd {
-  background-color: rgba(242, 242, 242, 0.25);
+/*#tertiary-nav .accordion{
+	border-width: 0;
+	background-color: transparent;
+
+	dd{
+		background-color: transparentize($tint, 0.75);
+	}
 }
 
-/* line 101, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-list,
 .tertiary-related-links,
-.tertiary-related-links > li > ul {
+.tertiary-related-links > li > ul{
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.tertiary-nav-h{  // heading for tertiary nav in wider views
+	//box model
+	margin-top: 0;  // compensate for border
+	margin-bottom: 0;
+	padding: 0.631100639515315em 0;  // 15/11.884/2
+	//typography
+	@include base-type;
+
+	@include breakpoint($gamora){
+		//box model
+		border-bottom: 1px solid mix($shade, $sky-blue, 50%);
+		margin-bottom: -1px;
+		padding: 0;
+		//layout
+		display: block;
+		//typography
+		font-size: 1.202rem;  // 19.232px
+		line-height: 1.559900166389351;  // 30/19.232
+	}
+}
+
+.tertiary-nav-list li,
+.tertiary-related-links > li > ul > li,
+#tertiary-nav dd > ul li{  //WYSIWYG
+	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
+
+	@include breakpoint($gamora){
+		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
+	}
+}
+
+.tertiary-nav-list a,
+#tertiary-nav dd > ul a,  // Cascade WYSIWYG
+.tertiary-related-links a{
+	// box model
+	border-bottom-width: 0;
+	// typography
+	font-weight: normal;
+}*/
+/**
+ * 2. CSS Accordion - Deprecated
+ *
+ * Deprecation Notice:
+ * Drupal didn’t play so nicely with my clever CSS accordion, so we decided
+ * to change it to a JS-based number, which is probably better for
+ * accessibility, anyway.
+ *
+ * An accordion that relies on radio buttons and labels for controls
+ * instead of JavaScript. This accordion automatically expands and
+ * disappears at the $gamora breakpoint.
+ *
+ * @see http://cssconf.com/talk-seddon.html
+ */
+/*[name="accordion-group"]{
+	display: none;  // Hide all actual checkboxes; they are activated by their labels
+}
+
+.accordion-h label::before{
+	// layout
+	display: inline-block;
+	// typgography
+	color: $shade;
+	// miscellaneous
+	content: "▶\00A0";  // Right-pointing triangle followed by a non-breaking space
+
+	@include breakpoint($gamora){
+		content: "";
+	}
+}
+
+[name="accordion-group"] + .accordion-h label::before{
+	// behavior
+	transition: transform 0.1s linear;
+}
+
+[name="accordion-group"]:checked + .accordion-h label::before{
+	// behavior
+	transform: rotate(90deg);
+	transition: transform 0.1s linear;
+}
+
+.tertiary-nav-h label{
+	// typography
+	color: $wine;
+	// misc
+	cursor: pointer;
+
+	&:hover{
+		// typography
+		color: $sky-blue;
+	}
+
+	@include breakpoint($gamora){
+		// typography
+		color: mix($shade, $sky-blue, 50%);
+		// misc
+		cursor: default;
+
+		&:hover{
+			// typography
+			color: mix($shade, $sky-blue, 50%);
+		}
+	}
+}
+
+[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
+	display: inline;
+}
+
+[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
+	display: none;
+}
+
+[name="accordion-group"] ~ h4 .accordion-dismiss{
+	display: none;
+}
+
+[name="accordion-group"]:checked ~ h4 .accordion-dismiss{
+	display: inline;
+}
+
+.accordion-body{
+	// box model
+	border-bottom: 1px solid $shade;
+	height: auto;
+	max-height: 0;
+	// layout
+	overflow: hidden;
+	// decoration
+	background-color: transparentize($tint, 0.75);
+	// misc
+	box-shadow: 0 2px 2px $drop-shadow inset;
+	// transition
+	transition: max-height 0.25s ease 0s;
+
+	@include breakpoint ($gamora){
+		border-bottom-width: 0;
+		max-height: 600px;
+		// decoration
+		background-color: transparent;
+		// misc
+		box-shadow: none;
+	}
+
+	@include breakpoint($drax){
+		max-height: none;
+	}
+}
+
+#tertiary-nav li:last-child .accordion-body{
+	border-bottom-width: 0;
+}
+
+[name="accordion-group"]:checked ~ .accordion-body{
+	// box model
+	max-height: 500px;
+	// transition
+	transition-duration: 0.75s;
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}
+
+ul.accordion-inner{
+	padding: 0 2%;  // 15/11.884/2
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}*/
+/**
+ * 3. Drupal Navigation With JS Accordion
+ *
+ * Drupal does things in its own funny way, and rather than shoehorn my
+ * system into it, let’s just play along and use the classes it tends to
+ * want to use automatically. This accordion expands and disappears at the
+ * $gamora breakpoint.
+ */
+/* line 289, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation {
   margin-left: 0;
+  margin-right: 0;
   list-style-type: none;
 }
 
-/* line 108, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h {
+/* line 298, ../src/smacss/modules/_tertiary-nav.scss */
+.field-group-title {
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+@media screen and (min-width: 43em) {
+  /* line 298, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title {
+    display: block;
+  }
+}
+
+/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+.field-group-title:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 43em) {
+  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title:hover {
+    cursor: auto;
+  }
+}
+
+/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+.field-group-title::before {
+  margin-right: 0.5ch;
+  display: inline-block;
+  content: "▶";
+  transition: -webkit-transform 0.33s ease;
+  transition: transform 0.33s ease;
+  transition: transform 0.33s ease, -webkit-transform 0.33s ease;
+}
+@media screen and (min-width: 43em) {
+  /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-group-title::before {
+    content: none;
+  }
+}
+
+/* line 327, ../src/smacss/modules/_tertiary-nav.scss */
+.open .field-group-title::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.33s ease;
+  transition: transform 0.33s ease;
+  transition: transform 0.33s ease, -webkit-transform 0.33s ease;
+}
+
+/* line 332, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.631100639515315em 0;
@@ -4176,8 +4303,8 @@ input:checked + .header-dropdown {
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 108, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h {
+  /* line 332, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
     padding: 0;
@@ -4187,207 +4314,91 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 129, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-list li,
-.tertiary-related-links > li > ul > li,
-#tertiary-nav dd > ul li {
-  margin: 0.535714285714286em 0 1.071428571428571em;
-}
-@media screen and (min-width: 43em) {
-  /* line 129, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-list li,
-  .tertiary-related-links > li > ul > li,
-  #tertiary-nav dd > ul li {
-    margin: 0.41666666666667em 0 0.83333333333333em;
-  }
-}
-
-/* line 139, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-list a,
-#tertiary-nav dd > ul a,
-.tertiary-related-links a {
-  border-bottom-width: 0;
-  font-weight: normal;
-}
-
-/*@include breakpoint($gamora){
-	.tertiary-nav-h,
-	a.tertiary-nav-h{  // heading for tertiary nav in wider views
-		border-bottom: 1px solid mix(black, $sky-blue, 50%);
-		margin-top: -1px;  // compensate for border
-		display: block;
-		//color: mix(black, $sky-blue, 50%);
-		font-weight: bold;
-	}
-}*/
-/**
- * 2. Homepage Tertiary Nav
- */
-/*#tertiary-nav.tertiary-nav-homepage{
-
-	@include breakpoint($gamora){
-		// box model
-		margin-left: calc(-25% + 1em);
-		width: calc(25% + 1.5em);
-		// layout
-		position: absolute;
-		left: 0;
-	}
-
-	@include breakpoint($drax){
-		// box model
-		margin-left: calc(-3ch - ((100% + 6ch) / 6));  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container.
-		width: calc((100% + 6ch) / 6 + 1ch);  // 100% + 6ch is the full-width of the container (compensating for margin), so 1/6 of the full container; + 1ch to make it feel a bit more intentional
-	}
-}*/
-/**
- * 3. CSS Accordion
- *
- * An accordion that relies on radio buttons and labels for controls
- * instead of JavaScript. This accordion automatically expands and
- * disappears at the $gamora breakpoint.
- *
- * @see http://cssconf.com/talk-seddon.html
- */
-/* line 189, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] {
-  display: none;
-}
-
-/* line 193, ../src/smacss/modules/_tertiary-nav.scss */
-.accordion-h label::before {
-  display: inline-block;
-  color: black;
-  content: "▶\00A0";
-}
-@media screen and (min-width: 43em) {
-  /* line 193, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-h label::before {
-    content: "";
-  }
-}
-
-/* line 206, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] + .accordion-h label::before {
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
-}
-
-/* line 211, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked + .accordion-h label::before {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
-}
-
-/* line 217, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h label {
-  color: #600f21;
-  cursor: pointer;
-}
-/* line 223, ../src/smacss/modules/_tertiary-nav.scss */
-.tertiary-nav-h label:hover {
-  color: #0086ee;
-}
-@media screen and (min-width: 43em) {
-  /* line 217, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h label {
-    color: #004377;
-    cursor: default;
-  }
-  /* line 234, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-h label:hover {
-    color: #004377;
-  }
-}
-
-/* line 241, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle {
-  display: inline;
-}
-
-/* line 245, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle {
-  display: none;
-}
-
-/* line 249, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"] ~ h4 .accordion-dismiss {
-  display: none;
-}
-
-/* line 253, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ h4 .accordion-dismiss {
-  display: inline;
-}
-
-/* line 257, ../src/smacss/modules/_tertiary-nav.scss */
-.accordion-body {
+/* line 353, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation .field-links {
   border-bottom: 1px solid black;
-  height: auto;
-  max-height: 0;
+  margin-left: 0;
+  margin-right: 0;
   overflow: hidden;
+  list-style-type: none;
   background-color: rgba(242, 242, 242, 0.25);
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
-  transition: max-height 0.25s ease 0s;
 }
 @media screen and (min-width: 43em) {
-  /* line 257, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-body {
+  /* line 353, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-links {
     border-bottom-width: 0;
-    max-height: 600px;
     background-color: transparent;
     box-shadow: none;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 257, ../src/smacss/modules/_tertiary-nav.scss */
-  .accordion-body {
+
+/* line 387, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation .field-links {
+  margin: 0;
+  padding: 0 1ch;
+  max-height: none;
+}
+@media screen and (min-width: 43em) {
+  /* line 387, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-links {
+    padding: 0;
+  }
+}
+
+/* line 398, ../src/smacss/modules/_tertiary-nav.scss */
+.nav-item:last-child .field-links {
+  border-bottom-width: 0;
+}
+
+/* line 402, ../src/smacss/modules/_tertiary-nav.scss */
+.close .field-links {
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+@media screen and (min-width: 43em) {
+  /* line 402, ../src/smacss/modules/_tertiary-nav.scss */
+  .close .field-links {
     max-height: none;
   }
 }
 
-/* line 285, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav li:last-child .accordion-body {
-  border-bottom-width: 0;
+/* line 413, ../src/smacss/modules/_tertiary-nav.scss */
+.open .field-links {
+  max-height: 25em;
+  border-bottom-color: #c2c2c2;
+  transition: max-height 1s ease;
 }
 
-/* line 289, ../src/smacss/modules/_tertiary-nav.scss */
-[name="accordion-group"]:checked ~ .accordion-body {
-  max-height: 500px;
-  transition-duration: 0.75s;
+/* line 422, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation .field-links li {
+  margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 289, ../src/smacss/modules/_tertiary-nav.scss */
-  [name="accordion-group"]:checked ~ .accordion-body {
-    padding: 0;
+  /* line 422, ../src/smacss/modules/_tertiary-nav.scss */
+  .field-section-navigation .field-links li {
+    margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 300, ../src/smacss/modules/_tertiary-nav.scss */
-ul.accordion-inner {
-  padding: 0 2%;
-}
-@media screen and (min-width: 43em) {
-  /* line 300, ../src/smacss/modules/_tertiary-nav.scss */
-  ul.accordion-inner {
-    padding: 0;
-  }
+/* line 432, ../src/smacss/modules/_tertiary-nav.scss */
+.field-section-navigation a,
+.field-section-navigation a:visited,
+.field-section-navigation a:hover {
+  border-bottom: none;
+  display: block;
+  font-weight: normal;
 }
 
 /**
  * 4. Catalog Nav Fixes
  *
- * The catalog uses a special filter form in the nav, which throws
+ * The catalogs use a special filter form in the nav, which throws
  * everything off.
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 452, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
@@ -4546,7 +4557,7 @@ ul.accordion-inner {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: 0.1ch;
   text-transform: uppercase;
 }
@@ -5782,12 +5793,13 @@ div.ajax-progress {
  * 5. Action Box
  * 6. Pull Quotes
  * 7. Full Box
- * 8. UI Group
+ * 8. Row Alert
+ * 9. UI Group
  */
 /**
  * 1. Default Box
  */
-/* line 22, ../src/smacss/modules/_boxes.scss */
+/* line 23, ../src/smacss/modules/_boxes.scss */
 .notice,
 .box,
 p.box,
@@ -5803,7 +5815,7 @@ p.box,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 22, ../src/smacss/modules/_boxes.scss */
+  /* line 23, ../src/smacss/modules/_boxes.scss */
   .notice,
   .box,
   p.box,
@@ -5814,7 +5826,7 @@ p.box,
   }
 }
 
-/* line 46, ../src/smacss/modules/_boxes.scss */
+/* line 47, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5822,13 +5834,13 @@ p.box,
   color: #004377;
 }
 
-/* line 53, ../src/smacss/modules/_boxes.scss */
+/* line 54, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 58, ../src/smacss/modules/_boxes.scss */
+/* line 59, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5837,7 +5849,7 @@ p.box,
 }
 
 @media screen and (min-width: 20em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5845,7 +5857,7 @@ p.box,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5855,7 +5867,7 @@ p.box,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5868,13 +5880,13 @@ p.box,
  *
  * Stands out a little bit more than a default box.
  */
-/* line 93, ../src/smacss/modules/_boxes.scss */
+/* line 94, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 93, ../src/smacss/modules/_boxes.scss */
+  /* line 94, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5886,15 +5898,16 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 108, ../src/smacss/modules/_boxes.scss */
+/* line 109, ../src/smacss/modules/_boxes.scss */
 .alert,
-p.alert {
+p.alert,
+.alert-alt {
   color: #600f21;
   background-color: rgba(253, 244, 182, 0.5);
   border-radius: 0;
 }
 
-/* line 119, ../src/smacss/modules/_boxes.scss */
+/* line 121, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5903,19 +5916,26 @@ p.alert {
   transition: all 0.5s ease-in;
 }
 
+/* line 133, ../src/smacss/modules/_boxes.scss */
+.alert-alt {
+  color: black;
+  font-size: 1.202rem;
+  line-height: 1.30011961100421;
+}
+
 /**
  * 4. Captioned Figures
  *
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 138, ../src/smacss/modules/_boxes.scss */
+/* line 145, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 145, ../src/smacss/modules/_boxes.scss */
+/* line 152, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5949,7 +5969,7 @@ p.alert {
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 178, ../src/smacss/modules/_boxes.scss */
+/* line 185, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5968,7 +5988,7 @@ p.alert {
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 178, ../src/smacss/modules/_boxes.scss */
+  /* line 185, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-flex-direction: row;
@@ -5977,7 +5997,7 @@ p.alert {
   }
 }
 
-/* line 205, ../src/smacss/modules/_boxes.scss */
+/* line 212, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -5987,7 +6007,7 @@ p.alert {
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 214, ../src/smacss/modules/_boxes.scss */
+  /* line 221, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -5999,7 +6019,7 @@ p.alert {
   }
 }
 
-/* line 228, ../src/smacss/modules/_boxes.scss */
+/* line 235, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -6007,7 +6027,7 @@ p.alert {
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 235, ../src/smacss/modules/_boxes.scss */
+/* line 242, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -6034,7 +6054,7 @@ p.alert {
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 264, ../src/smacss/modules/_boxes.scss */
+/* line 271, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -6045,7 +6065,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 273, ../src/smacss/modules/_boxes.scss */
+  /* line 280, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6053,7 +6073,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 281, ../src/smacss/modules/_boxes.scss */
+  /* line 288, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6061,20 +6081,20 @@ p.alert {
   }
 }
 
-/* line 290, ../src/smacss/modules/_boxes.scss */
+/* line 297, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 297, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 297, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -6084,39 +6104,39 @@ p.alert {
 /**
  * 6. Pull Quotes
  */
-/* line 306, ../src/smacss/modules/_boxes.scss */
+/* line 313, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 306, ../src/smacss/modules/_boxes.scss */
+  /* line 313, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 318, ../src/smacss/modules/_boxes.scss */
+/* line 325, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 325, ../src/smacss/modules/_boxes.scss */
+/* line 332, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 332, ../src/smacss/modules/_boxes.scss */
+/* line 339, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 340, ../src/smacss/modules/_boxes.scss */
+/* line 347, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 344, ../src/smacss/modules/_boxes.scss */
+/* line 351, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -6125,7 +6145,7 @@ p.alert {
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 351, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -6133,7 +6153,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 351, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -6142,7 +6162,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 369, ../src/smacss/modules/_boxes.scss */
+  /* line 376, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -6156,26 +6176,37 @@ p.alert {
  *
  * @section box-full
  */
-/* line 384, ../src/smacss/modules/_boxes.scss */
+/* line 391, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 390, ../src/smacss/modules/_boxes.scss */
+/* line 397, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 395, ../src/smacss/modules/_boxes.scss */
+/* line 402, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
 
 /**
- * 8. UI Group
+ * 8. Row Box
+ *
+ * A box that takes up a full row and sits as its own cake layer. Namely,
+ * there are no margins, so that it sandwiches neatly between other rows.
+ */
+/* line 412, ../src/smacss/modules/_boxes.scss */
+.box.row {
+  margin: 0;
+}
+
+/**
+ * 9. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other
@@ -6183,7 +6214,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 409, ../src/smacss/modules/_boxes.scss */
+/* line 426, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -6201,24 +6232,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 430, ../src/smacss/modules/_boxes.scss */
+  /* line 447, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 437, ../src/smacss/modules/_boxes.scss */
+  /* line 454, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 442, ../src/smacss/modules/_boxes.scss */
+  /* line 459, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 448, ../src/smacss/modules/_boxes.scss */
+/* line 465, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -6430,7 +6461,7 @@ p.alert {
   color: #f2f2f2;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -7011,10 +7042,10 @@ p.alert {
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -7339,7 +7370,7 @@ p.alert {
 .calendar-calendar .month-view .calendar-agenda-hour {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
-  line-height: 1.34892086330935;
+  line-height: 1.34831460674157;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -8010,15 +8041,7 @@ p.alert {
  * 
  * modules/_media-segment
  * ----------------------
- * Do not use .media properties; they clash with the Drupal Media module.
- * Instead, use the matching .compound property.
- * .media          Use .compound
- * .media-img      Use .compound-img
- * .media-body     Use .compound-body
- * Et cetera
- *
- * Note the following special consideration:
- * .media-img-alt  Use .compound-child-alt
+ * .media-img-alt  Use .media-child-alt
  *
  * modules/_search
  * ---------------
