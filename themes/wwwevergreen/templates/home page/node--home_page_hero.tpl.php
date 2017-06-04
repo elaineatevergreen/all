@@ -36,6 +36,13 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 
 	?>
 <div class="row">
+	<div class="alert box" style="margin: 0;">
+		<div class="wrapper">
+			<p>
+				<a href="/news/update-safety-equity-and-free-speech-evergreen">Update: Safety, Equity, and Free Speech at Evergreen.</a>
+			</p>
+		</div>
+	</div>
 	<div class="homepage-hero <?php print $classes ?>">  
 		
 		<picture class="homepage-hero-picture">
