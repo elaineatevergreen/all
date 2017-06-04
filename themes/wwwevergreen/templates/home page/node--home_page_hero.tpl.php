@@ -35,9 +35,8 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 
 
 	?>
-<div class="row">
-	<div class="alert box" style="margin: 0;">
-		<div class="wrapper">
+<div class="alert-alt box row">
+	<div class="wrapper">
 			<h2>News Update</h2>
 			<p>
 				Read a statement from the Board of Trustees:
@@ -49,6 +48,9 @@ $xl_hero = file_create_url($field_hero_image[0]['uri']);
 			</p>
 		</div>
 	</div>
+</div>
+
+<div class="row">
 	<div class="homepage-hero <?php print $classes ?>">  
 		<a class="homepage-hero-link" href="/academics">
 			<picture class="homepage-hero-picture">
