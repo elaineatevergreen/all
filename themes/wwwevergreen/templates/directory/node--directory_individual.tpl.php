@@ -58,7 +58,8 @@ theme for individual person pages
 	  //only show contact information for individuals if user is logged in
 	  //and only build the HTML if they even have contact information
 	  
-	  if(user_is_logged_in() and (isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']))) { ?>
+	  if(user_is_logged_in()) {
+		  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']))) { ?>
 
   <div>
     <h2><span>Contact Information</span></h2>
@@ -116,6 +117,13 @@ theme for individual person pages
     </div>
   </div>
   
-  <?php }; //end check for *any* contact information ?>
+  <?php }; //end check for *any* contact information
+	  
+	  //display message for non-authenticated users
+	  } else { ?>
+	  
+	  <p>You must <a href="user/login?destination=node/<?php print $node->nid; ?>">log in</a> to see contact information for this person.</p>
+		  
+	  <?php }; //end check for authentication ?>
   
 </div>
