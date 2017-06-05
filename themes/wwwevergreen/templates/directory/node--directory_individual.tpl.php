@@ -122,7 +122,7 @@ theme for individual person pages
 	  //display message for non-authenticated users
 	  } else { ?>
 	  
-	  <p>You must <a href="user/login?destination=node/<?php print $node->nid; ?>">log in</a> to see contact information for this person.</p>
+	  <p>You must <a href="/user/login?destination=node/<?php print $node->nid; ?>">log in</a> to see contact information for this person.</p>
 		  
 	  <?php }; //end check for authentication ?>
   
