@@ -286,7 +286,7 @@ function wwwevergreen_form_alter(&$form, &$form_state, $form_id) {
 function staticblocks($b) {
 	
 	$imagepath = base_path() . path_to_theme() . '/images/';
-	$siteurl = base_url();
+	//$siteurl = base_url();
 	
 	include_once("pseudoblocks/$b.php");
 	
