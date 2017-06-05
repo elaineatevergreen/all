@@ -7,6 +7,7 @@ theme for individual person pages
 ?>
 
 <!-- need to add back faculty information -->
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
     
     <div class="p-job-title"><?php print render($content['field_job_title']) ?></div>
     <?php if(isset($content['field_department'])) { ?>
@@ -53,7 +54,11 @@ theme for individual person pages
 	<?php }; ?>
     
     
-  <?php if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
+  <?php 
+	  //only show contact information for individuals if user is logged in
+	  //and only build the HTML if they even have contact information
+	  
+	  if(user_is_logged_in() and (isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']))) { ?>
 
   <div>
     <h2><span>Contact Information</span></h2>
@@ -112,3 +117,5 @@ theme for individual person pages
   </div>
   
   <?php }; //end check for *any* contact information ?>
+  
+</div>
