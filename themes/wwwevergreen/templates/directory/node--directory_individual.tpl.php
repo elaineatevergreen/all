@@ -59,7 +59,7 @@ theme for individual person pages
 	  //and only build the HTML if they even have contact information
 	  
 	  if(user_is_logged_in()) {
-		  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']))) { ?>
+		  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
 
   <div>
     <h2><span>Contact Information</span></h2>
