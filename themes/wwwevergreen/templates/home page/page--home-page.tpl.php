@@ -13,9 +13,8 @@ We'll have to do something about that.
 <?php
 $evergreen_blocks = theme_get_setting('evergreen_blocks');
 ?>
-<div class="row box" id="sitewide-alert"><!--This is a placeholder. Keep it empty.--></div>
-<header class="row" role="banner">
-	
+
+<header class="row" role="banner">	
 	<?php 
 			/* one of the locations where we can switch between standard Evergreen site elements
 				and customizations for public service centers.
