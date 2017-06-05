@@ -118,6 +118,10 @@ p.alert,  // WYSIWYG
 	border-radius: 0;
 }
 
+.alert h2{
+	color: $wine;
+}
+
 #sitewide-alert{
 	// box model
 	margin: 0;
@@ -132,7 +136,12 @@ p.alert,  // WYSIWYG
 
 .alert-alt{
 	color: $shade;
-	@include base-type-xl;
+	//@include base-type-xl;
+}
+
+.alert-alt h2{
+	//color: mix($tint, $black, 40%);
+	color: $shade;
 }
 
 /**
