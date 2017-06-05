@@ -1197,9 +1197,9 @@ select:hover {
 
 /* line 128, ../src/smacss/base/_forms.scss */
 textarea {
-  padding: calc(7.5 / 16 * 1rem) 0.75em;
+  padding: calc(7.5 / 16 * 1rem) 1ch;
   width: 100%;
-  max-width: calc(45ch + 1em);
+  max-width: calc(47ch + 2px);
   min-width: 50%;
 }
 @media screen and (min-width: 43em) {
@@ -1422,12 +1422,22 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1435,26 +1445,26 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1462,7 +1472,7 @@ input[id$="-range-max"] {
   line-height: 1.34831460674157;
 }
 @media screen and (min-width: 43em) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1471,15 +1481,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
-/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1488,33 +1498,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * Textareas
+ * c. Textareas
  */
-/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1522,7 +1532,24 @@ input[id$="-range-max"] {
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+/* line 111, ../src/smacss/base/forms/_drupal-webform.scss */
+.checkbox.webform-grid-option {
+  text-align: center;
+}
+
+/* line 115, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox {
+  float: none;
+}
+
+/**
+ * e. Buttons
  */
 /**
  * 4. Search
@@ -2104,6 +2131,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2114,6 +2142,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2122,6 +2151,7 @@ a:link,
   /* line 275, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2129,7 +2159,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2138,14 +2168,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2154,14 +2184,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 299, ../src/smacss/layout/_grid.scss */
+  /* line 300, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -5801,12 +5831,13 @@ div.ajax-progress {
  * 5. Action Box
  * 6. Pull Quotes
  * 7. Full Box
- * 8. UI Group
+ * 8. Row Alert
+ * 9. UI Group
  */
 /**
  * 1. Default Box
  */
-/* line 22, ../src/smacss/modules/_boxes.scss */
+/* line 23, ../src/smacss/modules/_boxes.scss */
 .notice,
 .box,
 p.box,
@@ -5822,7 +5853,7 @@ p.box,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 22, ../src/smacss/modules/_boxes.scss */
+  /* line 23, ../src/smacss/modules/_boxes.scss */
   .notice,
   .box,
   p.box,
@@ -5833,7 +5864,7 @@ p.box,
   }
 }
 
-/* line 46, ../src/smacss/modules/_boxes.scss */
+/* line 47, ../src/smacss/modules/_boxes.scss */
 .notice h2,
 .box h2,
 .notice h4,
@@ -5841,13 +5872,13 @@ p.box,
   color: #004377;
 }
 
-/* line 53, ../src/smacss/modules/_boxes.scss */
+/* line 54, ../src/smacss/modules/_boxes.scss */
 .notice h3,
 .box h3 {
   color: #004377;
 }
 
-/* line 58, ../src/smacss/modules/_boxes.scss */
+/* line 59, ../src/smacss/modules/_boxes.scss */
 .notice h5,
 .box h5,
 .notice h6,
@@ -5856,7 +5887,7 @@ p.box,
 }
 
 @media screen and (min-width: 20em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     border-top-right-radius: 0;
@@ -5864,7 +5895,7 @@ p.box,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.41666666666667em;
@@ -5874,7 +5905,7 @@ p.box,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 65, ../src/smacss/modules/_boxes.scss */
+  /* line 66, ../src/smacss/modules/_boxes.scss */
   .box.supplement,
   .box.supplement-alt-1-2 {
     margin-top: 0.52004784440168em;
@@ -5887,13 +5918,13 @@ p.box,
  *
  * Stands out a little bit more than a default box.
  */
-/* line 93, ../src/smacss/modules/_boxes.scss */
+/* line 94, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 93, ../src/smacss/modules/_boxes.scss */
+  /* line 94, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5905,15 +5936,21 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 108, ../src/smacss/modules/_boxes.scss */
+/* line 109, ../src/smacss/modules/_boxes.scss */
 .alert,
-p.alert {
+p.alert,
+.alert-alt {
   color: #600f21;
   background-color: rgba(253, 244, 182, 0.5);
   border-radius: 0;
 }
 
-/* line 119, ../src/smacss/modules/_boxes.scss */
+/* line 121, ../src/smacss/modules/_boxes.scss */
+.alert h2 {
+  color: #600f21;
+}
+
+/* line 125, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5922,19 +5959,29 @@ p.alert {
   transition: all 0.5s ease-in;
 }
 
+/* line 137, ../src/smacss/modules/_boxes.scss */
+.alert-alt {
+  color: black;
+}
+
+/* line 142, ../src/smacss/modules/_boxes.scss */
+.alert-alt h2 {
+  color: black;
+}
+
 /**
  * 4. Captioned Figures
  *
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 138, ../src/smacss/modules/_boxes.scss */
+/* line 154, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 145, ../src/smacss/modules/_boxes.scss */
+/* line 161, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -5968,7 +6015,7 @@ p.alert {
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 178, ../src/smacss/modules/_boxes.scss */
+/* line 194, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -5987,7 +6034,7 @@ p.alert {
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 178, ../src/smacss/modules/_boxes.scss */
+  /* line 194, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-flex-direction: row;
@@ -5996,7 +6043,7 @@ p.alert {
   }
 }
 
-/* line 205, ../src/smacss/modules/_boxes.scss */
+/* line 221, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -6006,7 +6053,7 @@ p.alert {
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 214, ../src/smacss/modules/_boxes.scss */
+  /* line 230, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -6018,7 +6065,7 @@ p.alert {
   }
 }
 
-/* line 228, ../src/smacss/modules/_boxes.scss */
+/* line 244, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -6026,7 +6073,7 @@ p.alert {
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 235, ../src/smacss/modules/_boxes.scss */
+/* line 251, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -6053,7 +6100,7 @@ p.alert {
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 264, ../src/smacss/modules/_boxes.scss */
+/* line 280, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -6064,7 +6111,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 273, ../src/smacss/modules/_boxes.scss */
+  /* line 289, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6072,7 +6119,7 @@ p.alert {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 281, ../src/smacss/modules/_boxes.scss */
+  /* line 297, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6080,20 +6127,20 @@ p.alert {
   }
 }
 
-/* line 290, ../src/smacss/modules/_boxes.scss */
+/* line 306, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 306, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 290, ../src/smacss/modules/_boxes.scss */
+  /* line 306, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -6103,39 +6150,39 @@ p.alert {
 /**
  * 6. Pull Quotes
  */
-/* line 306, ../src/smacss/modules/_boxes.scss */
+/* line 322, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 306, ../src/smacss/modules/_boxes.scss */
+  /* line 322, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 318, ../src/smacss/modules/_boxes.scss */
+/* line 334, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 325, ../src/smacss/modules/_boxes.scss */
+/* line 341, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 332, ../src/smacss/modules/_boxes.scss */
+/* line 348, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 340, ../src/smacss/modules/_boxes.scss */
+/* line 356, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 344, ../src/smacss/modules/_boxes.scss */
+/* line 360, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -6144,7 +6191,7 @@ p.alert {
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 360, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -6152,7 +6199,7 @@ p.alert {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 344, ../src/smacss/modules/_boxes.scss */
+  /* line 360, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -6161,7 +6208,7 @@ p.alert {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 369, ../src/smacss/modules/_boxes.scss */
+  /* line 385, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -6175,26 +6222,37 @@ p.alert {
  *
  * @section box-full
  */
-/* line 384, ../src/smacss/modules/_boxes.scss */
+/* line 400, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 390, ../src/smacss/modules/_boxes.scss */
+/* line 406, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 395, ../src/smacss/modules/_boxes.scss */
+/* line 411, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
 
 /**
- * 8. UI Group
+ * 8. Row Box
+ *
+ * A box that takes up a full row and sits as its own cake layer. Namely,
+ * there are no margins, so that it sandwiches neatly between other rows.
+ */
+/* line 421, ../src/smacss/modules/_boxes.scss */
+.box.row {
+  margin: 0;
+}
+
+/**
+ * 9. UI Group
  *
  * A different kind of box; a group of elements, typically UI
  * that need visual separation from one another, or from other
@@ -6202,7 +6260,7 @@ p.alert {
  
  * @section ui-group
  */
-/* line 409, ../src/smacss/modules/_boxes.scss */
+/* line 435, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -6220,24 +6278,24 @@ p.alert {
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 430, ../src/smacss/modules/_boxes.scss */
+  /* line 456, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 437, ../src/smacss/modules/_boxes.scss */
+  /* line 463, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 442, ../src/smacss/modules/_boxes.scss */
+  /* line 468, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 448, ../src/smacss/modules/_boxes.scss */
+/* line 474, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -8029,7 +8087,15 @@ p.alert {
  * 
  * modules/_media-segment
  * ----------------------
- * .media-img-alt  Use .media-child-alt
+ * Do not use .media properties; they clash with the Drupal Media module.
+ * Instead, use the matching .compound property.
+ * .media          Use .compound
+ * .media-img      Use .compound-img
+ * .media-body     Use .compound-body
+ * Et cetera
+ *
+ * Note the following special consideration:
+ * .media-img-alt  Use .compound-child-alt
  *
  * modules/_search
  * ---------------
