@@ -83,9 +83,6 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 
 
 <section class="site-content">
-	
-	<!-- this would be the right one per the new CSS, but since I'm not getting the class on the img tag it doesn't work. -->
-	<!-- I think this works now. —jkm -->
 	<div class="main-background2">
 		<?php print render($page['background_image']); ?>
 	</div>
@@ -97,10 +94,11 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		</div>
 	</header>
 
-	<main id="main-row" class="main-row row wrapper" role="main">
-		<div class="grid main-row-grid">
-		
-			<?php /* Do we take out this entire column of the grid on panel pages? */ ?>
+<?php 
+	/* for Panels pages, there are no wrapping grid divs. */ 
+	/* should the tertiary-nav-wrapper also go away? */
+?>
+
 			<div class="tertiary-nav-wrapper unit-1-7">
 				<?php 
 					/* render anything that's in the section navigation. see region--section_nav.tpl.php for that markup. */
@@ -125,10 +123,6 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 	        <?php print render($page['content']); ?>
 	        <?php print $feed_icons; ?>
-	      	
-		
-		</div> <!-- end .main-row-grid -->
-	</main>
 
 </section>
 
