@@ -157,7 +157,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		</div>
 	</header>
 
-	<main id="main-row" class="main-row row wrapper" role="main">
+	<main id="main-row" class="main-row row wrapper">
 		<div class="grid main-row-grid">
 		
 			<div class="tertiary-nav-wrapper unit-1-7">
