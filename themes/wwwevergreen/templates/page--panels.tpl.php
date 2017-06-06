@@ -87,12 +87,15 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		<?php print render($page['background_image']); ?>
 	</div>
 	
-
+<?php 
+	/* only show the header region if this is NOT the front page */
+	if($is_front == FALSE) { ?>
 	<header class="row">
 		<div class="grid grid-alt wrapper">
 			<div class="site-name unit-5-7"><?php print render($page['section_title']); ?></div>
 		</div>
 	</header>
+<?php }; ?>
 
 <?php 
 	/* for Panels pages, there are no wrapping grid divs. */ 
