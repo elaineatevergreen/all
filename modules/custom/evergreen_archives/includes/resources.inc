@@ -66,6 +66,9 @@ class ResourcesMigration extends ArchivesMigration {
 			'default'
 		);
 
+		//Set owner
+		$this->addFieldMapping('uid')->defaultValue('1');
+
 		//Title field mappings
 		 $this->addFieldMapping('title', 'title')
 			 ->defaultValue('No Title Available');
@@ -261,7 +264,7 @@ class ResourcesMigration extends ArchivesMigration {
 				$parent=$component[0];
 
 				if($parent){
-					drush_print_r($parent->title);
+					//drush_print_r($parent->title);
 					if($parent->hasChild==1){
 						$html.=addItem($parent, $level);
 						$html.='<table><thead><tr><th width="145">Dates</th><th>Description</th></tr></thead><tbody>';
@@ -286,7 +289,7 @@ class ResourcesMigration extends ArchivesMigration {
 
 		// $comps is our components for this Resource as an array
 		$comps = explode(',', $row->components);
-		drush_print_r($comps);
+		//drush_print_r($comps);
 
 		$genhtml="<ul>";
 
@@ -295,8 +298,6 @@ class ResourcesMigration extends ArchivesMigration {
 		}
 
 		$genhtml.="</ul>";
-
-		//drush_print_r($genhtml);
 
 		$row->components = $genhtml;
 

@@ -52,6 +52,9 @@ class NamesMigration extends ArchivesMigration {
 			'default'
 		);
 
+		//Set owner
+		$this->addFieldMapping('uid')->defaultValue('1');
+
 		//Title field mappings
 		$this->addFieldMapping('title', 'titleInfo')
 			->defaultValue('No Salutation Available.');

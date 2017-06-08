@@ -53,6 +53,9 @@ class SubjectsMigration extends ArchivesMigration {
 			'default'
 		);
 
+		//Set owner
+		$this->addFieldMapping('uid')->defaultValue('1');
+		
 		//Title field mappings
 		$this->addFieldMapping('title', 'subjectTerm')
 			->defaultValue('No Subject Term Available.');
