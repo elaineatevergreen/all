@@ -29,7 +29,7 @@ function evergreen_archives_views_api($module = NULL, $api = NULL) {
 function evergreen_archives_node_info() {
   $items = array(
     'accession' => array(
-      'name' => t('Accession'),
+      'name' => t('Archives: Accession'),
       'base' => 'node_content',
       'description' => t('Create a new archival accession.'),
       'has_title' => '1',
@@ -37,7 +37,7 @@ function evergreen_archives_node_info() {
       'help' => '',
     ),
     'name' => array(
-      'name' => t('Name'),
+      'name' => t('Archives: Name'),
       'base' => 'node_content',
       'description' => t('Create a new Name reference for a person or organization. '),
       'has_title' => '1',
@@ -45,7 +45,7 @@ function evergreen_archives_node_info() {
       'help' => '',
     ),
     'resource' => array(
-      'name' => t('Resource'),
+      'name' => t('Archives: Resource'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -53,7 +53,7 @@ function evergreen_archives_node_info() {
       'help' => '',
     ),
     'subject' => array(
-      'name' => t('Subject'),
+      'name' => t('Archives: Subject'),
       'base' => 'node_content',
       'description' => t('Add a new subject.'),
       'has_title' => '1',

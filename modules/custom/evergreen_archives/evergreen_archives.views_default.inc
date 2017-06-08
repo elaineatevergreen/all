@@ -232,7 +232,7 @@ function evergreen_archives_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Subjects';
+  $handler->display->display_options['title'] = 'Topics';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -286,7 +286,7 @@ function evergreen_archives_views_default_views() {
   $handler->display->display_options['arguments']['title']['limit'] = '1';
   $handler->display->display_options['arguments']['title']['case'] = 'upper';
   $handler->display->display_options['arguments']['title']['path_case'] = 'lower';
-  $handler->display->display_options['path'] = 'subjects';
+  $handler->display->display_options['path'] = 'topics';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
