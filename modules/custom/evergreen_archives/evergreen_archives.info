@@ -203,7 +203,6 @@ features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][basic_content] = basic_content
 features_exclude[field_base][body] = body
-files[] = evergreen_archives.migrate.inc
 files[] = includes/base.inc
 files[] = includes/names.inc
 files[] = includes/accessions.inc

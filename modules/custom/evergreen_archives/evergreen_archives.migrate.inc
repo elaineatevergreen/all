@@ -3,7 +3,7 @@
  /**
  * Implements hook_migrate_api().
  */
- function archives_migrate_api() {
+ function evergreen_archives_migrate_api() {
  	return array(
  		'api' => 2,
  		'groups' => array(
