@@ -46,7 +46,6 @@ class AccessionsMigration extends ArchivesMigration {
 					'length' => 20,
 					'not null' => TRUE,
 					'alias' => 'a',
-					//'default' => 'None',
 					'description' => t('Accession ID'),
 				)
 			),

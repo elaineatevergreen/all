@@ -41,10 +41,11 @@ class NamesMigration extends ArchivesMigration {
 			$this->machineName,
 			array(
 				'nameId' => array(
-					'type' => 'bigint',
+					'type' => 'int',
+					'size' => 'big',
 					'length' => 20,
 					'not null' => TRUE,
-					'default' => 'None',
+					'alias' => 'n',
 					'description' => t('Name ID'),
 				)
 			),

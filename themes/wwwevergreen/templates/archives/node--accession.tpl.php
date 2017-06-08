@@ -104,7 +104,9 @@
       <p class="intro"><?php print render($content['group_overview_of_the_accession']['field_summary'][0]) ?> </p>
     <?php }; ?>
 
-    <h2>Overview of the Accession</h2>
+    <?php if(isset($content['group_overview_of_the_accession']['#title'])) { ?>
+      <h2><?php print render($content['group_overview_of_the_accession']['#title']) ?></h2>
+    <?php }; ?>
 
     <?php if(isset($content['field_creator']['#title'])) { ?>
       <p><strong><?php print render($content['field_creator']['#title']); ?>: </strong> <?php print render($content['group_overview_of_the_accession']['field_creator'][0]) ?><br/> 

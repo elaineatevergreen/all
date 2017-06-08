@@ -43,10 +43,10 @@ class SubjectsMigration extends ArchivesMigration {
 			array(
 				'subjectId' => array(
 					'type' => 'int',
+					'size' => 'big',
 					'length' => 20,
 					'not null' => TRUE,
 					'alias' => 's',
-					'default' => 'None',
 					'description' => t('Subject ID'),				)
 			),
 			MigrateDestinationNode::getKeySchema(), 
