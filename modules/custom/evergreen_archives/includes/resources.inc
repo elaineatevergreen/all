@@ -97,9 +97,8 @@ class ResourcesMigration extends ArchivesMigration {
 			->sourceMigration(array('ArchivesSubjects'));
 
 		//Detailed Description (ResourcesComponents table) field mappings
-		$this->addFieldMapping('field_detailed_description', 'components')
-				 ->arguments(array('format'=> 'full_html'));
-		// $this->addFieldMapping('field_detailed_description:format', 'full_html');
+		$this->addFieldMapping('field_detailed_description', 'components');
+		$this->addFieldMapping('field_detailed_description:format', 'full_html');
 
 		// Field mappings from notes
 		// NOTE: Default values for various notes are hardcoded using values from the "RepositoryNotesDefaultValues" table
@@ -162,22 +161,29 @@ class ResourcesMigration extends ArchivesMigration {
 		//drush_print_r($row);
 
 		// Construct detailed description
-		if(!function_exists('getAllResourceComponents')){
+		/*if(!function_exists('getAllResourceComponents')){
 			function getAllResourceComponents(){
+				
+				//replace these 3 lines...
 				db_set_active('for_migration');
 				$rcquery = db_query("SELECT * FROM ResourcesComponents");
 				db_set_active('default');
 				$results = $rcquery->fetchAll();
 				return $results;
 			}
-		}
+		}*/
 
 		if(!function_exists('getComponentObject')){
 			function getComponentObject($component){
 				db_set_active('for_migration');
 				$rcquery = db_query("SELECT * FROM ResourcesComponents WHERE resourceComponentId=$component");
+				$rcquery = $rcquery->fetchAll();
 				db_set_active('default');
-				return $rcquery->fetchAll();
+				
+				//$rcquery = Database::getConnection('default', 'for_migration');
+				//$rcquery->db_query("SELECT * FROM ResourcesComponents WHERE resourceComponentId=$component");
+				
+				return $rcquery;
 			}
 		}
 
@@ -185,8 +191,13 @@ class ResourcesMigration extends ArchivesMigration {
 			function getChildren($component){
 				db_set_active('for_migration');
 				$rcquery = db_query("SELECT * FROM ResourcesComponents WHERE parentResourceComponentId=$component");
+				$rcquery = $rcquery->fetchAll();
 				db_set_active('default');
-				return $rcquery->fetchAll();
+				
+				//$rcquery = Database::getConnection('default', 'for_migration');
+				//$rcquery->db_query("SELECT * FROM ResourcesComponents WHERE parentResourceComponentId=$component");
+				
+				return $rcquery;
 			}
 		}
 
@@ -194,8 +205,13 @@ class ResourcesMigration extends ArchivesMigration {
 			function getNote($resCompId){
 				db_set_active('for_migration');
 				$rcquery = db_query("SELECT * FROM ArchDescriptionRepeatingData WHERE resourceComponentId=$resCompId");
+				$rcquery = $rcquery->fetchAll();
 				db_set_active('default');
-				$result = $rcquery->fetchAll();
+				
+				//$rcquery = Database::getConnection('default', 'for_migration');
+				//$rcquery->db_query("SELECT * FROM ArchDescriptionRepeatingData WHERE resourceComponentId=$resCompId");
+				
+				$result = $rcquery;
 				return $result[0]->noteContent;
 			}
 		}
@@ -290,14 +306,17 @@ class ResourcesMigration extends ArchivesMigration {
 		$comps = explode(',', $row->components);
 		//drush_print_r($comps);
 
-		$genhtml="<ul>";
-
-		foreach($comps as $key=>$value){
-			$genhtml .= buildComponents($value, 0);
-		}
-
-		$genhtml.="</ul>";
-
+		
+		if($comps[0] != NULL) {
+			$genhtml="<ul>";
+			foreach($comps as $key=>$value){
+				$genhtml .= buildComponents($value, 0);
+			}
+			$genhtml.="</ul>";
+		} else {
+			$genhtml = '';
+		};
+		
 		$row->components = $genhtml;
 
 
