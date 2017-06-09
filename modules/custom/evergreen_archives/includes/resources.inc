@@ -139,7 +139,6 @@ class ResourcesMigration extends ArchivesMigration {
 		// 32 (Separated Materials) omitted
 
 		$this->addUnmigratedDestinations(array(
-			'uid',
 			'created',
 			'changed',
 			'log',
