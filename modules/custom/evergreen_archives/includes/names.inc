@@ -62,7 +62,7 @@ class NamesMigration extends ArchivesMigration {
 
 		//Other field mappings
 		$this->addFieldMapping('field_name_id');
-		$this->addFieldMapping('field_type', 'nameType');
+		//$this->addFieldMapping('field_type', 'nameType');
 		$this->addFieldMapping('body', 'descriptionNote');
 
 		$this->addFieldMapping('field_name_related_accessions', 'accId')
