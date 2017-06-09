@@ -11,19 +11,22 @@ class AccessionsMigration extends ArchivesMigration {
 
 		$this->description = t('Import Accessions information from the Archives database.');
 
-		//Create the source object
+		// Create the source object
 		$query = Database::getConnection('default', 'for_migration')
 			->select('Accessions', 'a')
 			->fields('a', array('accessionId', 'title', 'dateExpression', 'dateBegin', 'dateEnd', 'extentNumber', 'extentType', 'containerSummary', 'accessionDate', 'accessionNumber1', 'accessionNumber2', 'accessionNumber3', 'accessionNumber4', 'description', 'accessRestrictionsNote', 'useRestrictionsNote'));
 
+		// This adds any related names for the accession
 		$query->leftJoin('ArchDescriptionNames', 'n', 'a.accessionId=n.accessionId');
 		$query->fields('n', array('primaryNameId'));
 		$query->addExpression('GROUP_CONCAT(DISTINCT primaryNameId)', 'name');
 
+		// This adds any related subjects for the accession
 		$query->leftJoin('ArchDescriptionSubjects', 's', 'a.accessionId=s.accessionId');
 		$query->fields('s', array('subjectId'));
 		$query->addExpression('GROUP_CONCAT(DISTINCT subjectId)', 'subject');
 
+		// This adds any related resources for the accession
 		$query->leftJoin('AccessionsResources', 'ar', 'a.accessionId=ar.accessionId');
 		$query->fields('ar', array('resourceId'));
 		$query->addExpression('GROUP_CONCAT(DISTINCT ar.resourceId)', 'resources');
@@ -33,10 +36,10 @@ class AccessionsMigration extends ArchivesMigration {
 
 		$this->source = new MigrateSourceSQL($query);
 
-		//Create the destination object
+		// Create the destination object
 		$this->destination = new MigrateDestinationNode('accession');
 
-		//Create the map object
+		// Create the map object
 		$this->map = new MigrateSQLMap(
 			$this->machineName,
 			array(
@@ -53,25 +56,28 @@ class AccessionsMigration extends ArchivesMigration {
 			'default'
 		);
 
-		//Set owner
+		// Set owner
 		$this->addFieldMapping('uid')->defaultValue('1');		
 
-		//Title field mappings
+		// Title field mappings
 		 $this->addFieldMapping('title', 'title')
 			 ->defaultValue('No Title Available');
 
-		//Other field mappings
+		// Field mappings
 		$this->addFieldMapping('field_accession_id', 'accessionId');
 		//$this->addFieldMapping('field_creator', '???');
-		$this->addFieldMapping('field_dates', 'date');
-		$this->addFieldMapping('field_quantity', 'quantity');
 		$this->addFieldMapping('field_accession_date', 'accessionDate');
-		$this->addFieldMapping('field_collection_number', 'accessionNumber');
 		$this->addFieldMapping('field_summary', 'description');
 		//$this->addFieldMapping('field_collection_location', ???);
 		$this->addFieldMapping('field_access_restrictions', 'accessRestrictionsNote');
 		$this->addFieldMapping('field_use_restrictions', 'useRestrictionsNote');
 
+		// Field mappings that are processed in prepareRow
+		$this->addFieldMapping('field_dates', 'date');
+		$this->addFieldMapping('field_quantity', 'quantity');
+		$this->addFieldMapping('field_collection_number', 'accessionNumber');
+
+		// Field mappings for related Names, Subjects, and Resources
 		$this->addFieldMapping('field_related_names', 'name')
 			->separator(',')
 			->sourceMigration(array('ArchivesNames'));
@@ -106,7 +112,7 @@ class AccessionsMigration extends ArchivesMigration {
 	function prepareRow($row) {
 		//drush_print_r($row);  //prints row to terminal
 
-		//Sets up the date row
+		// Sets up the date row
 		if (empty($row->dateBegin) && empty($row->dateExpression)){
 			$row->null;
 		} else if (empty($row->dateExpression)){
@@ -115,7 +121,7 @@ class AccessionsMigration extends ArchivesMigration {
 			$row->date = $row->dateExpression;
 		}
 
-		//Sets up the quantity row
+		// Sets up the quantity row
 		if (empty($row->extentNumber) && empty($row->containerSummary)) {
 			$row->null;
 		} else if(empty($row->containerSummary)){
@@ -124,6 +130,7 @@ class AccessionsMigration extends ArchivesMigration {
 			$row->quantity = $row->extentNumber . " " . $row->extentType . ". " . $row->containerSummary . ".";
 		}
 
+		// Sets up the accessionNumber row
 		if(empty($row->accessionNumber4)){
 			$row->accessionNumber = $row->accessionNumber1 . "." . $row->accessionNumber2 . "." . $row->accessionNumber3;
 		}else{
@@ -131,7 +138,7 @@ class AccessionsMigration extends ArchivesMigration {
 		}
 	}
 
-	//Creates a stub so that we can avoid the chicken-and-egg dilemma when importing related nodes
+	// Creates a stub so that we can avoid the chicken-and-egg dilemma when importing related nodes
 	protected function createStub(Migration $migration, array $source_id){
 		$node = new stdClass();
 		$node->title = t('Stub for accession @id', array('@id' => $source_id[0]));
