@@ -16,10 +16,11 @@ class NamesMigration extends ArchivesMigration {
 			->select('Names', 'n')
 			->fields('n', array('nameId', 'sortName', 'salutation', 'nameType', 'descriptionNote', 'personalDates'));
 
+		// Adds information for related accessions and resources
 		$query->leftJoin('ArchDescriptionNames', 'a', 'n.nameId=a.primaryNameId');
 		$query->fields('a', array('archDescriptionNamesId', 'nameLinkFunction', 'primaryNameId', 'accessionId', 'resourceId'));
 
-		//Concatenate information for each name id
+		// Concatenate information about related accessions and resources
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.archDescriptionNamesId)', 'archDescId');
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.nameLinkFunction)', 'function');
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.accessionId)', 'accId');
@@ -53,18 +54,19 @@ class NamesMigration extends ArchivesMigration {
 			'default'
 		);
 
-		//Set owner
+		// Set owner
 		$this->addFieldMapping('uid')->defaultValue('1');
 
-		//Title field mappings
+		// Title field mappings (some processing done in prepareRow)
 		$this->addFieldMapping('title', 'titleInfo')
 			->defaultValue('No Salutation Available.');
 
-		//Other field mappings
+		// Other field mappings
 		$this->addFieldMapping('field_name_id');
-		//$this->addFieldMapping('field_type', 'nameType');
+		// $this->addFieldMapping('field_type', 'nameType');
 		$this->addFieldMapping('body', 'descriptionNote');
 
+		// Field mappings for related Accessions and Resources
 		$this->addFieldMapping('field_name_related_accessions', 'accId')
 			->separator(',')
 			->sourceMigration(array('ArchivesAccessions'));

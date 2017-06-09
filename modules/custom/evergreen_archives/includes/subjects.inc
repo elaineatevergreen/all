@@ -11,33 +11,37 @@ class SubjectsMigration extends ArchivesMigration {
 
 		$this->description = t('Import subjects information from the Archives database.');
 
-		//Create the source object
+		// Create the source object
 		$query = Database::getConnection('default', 'for_migration')
 			->select('Subjects', 's');
 
+		// Adds information about related accessions and resources
 		$query->leftJoin('ArchDescriptionSubjects', 'a', 'a.subjectId=s.subjectId');
 
+		// Gets fields related to subject itself (from Subjects table)
 	    $query->fields('s', array('subjectId', 'subjectTerm', 'subjectTermType', 'subjectSource', 'subjectScopeNote'));
+
+	    // Gets fields for related objects (from ArchDescriptionSubjects table)
 		$query->fields('a', array('archDescriptionSubjectsId', 'accessionId', 'resourceId', 'digitalObjectId', 'resourceComponentId', 'subjectId'));
 
-		//Concatenates all of the ids that are connected to each subject id into a list 
+		// Concatenates all of the ids for related objects that are connected to each subject id into a list 
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.accessionId)', 'accId');
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.resourceId)', 'resId');
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.digitalObjectId)', 'digObjId');
 		$query->addExpression('GROUP_CONCAT(DISTINCT a.resourceComponentId)', 'resCompId');
 
-		//Orders the list by subject ID
+		// Orders the list by subject ID
 		$query->orderBy('s.subjectId');
 
-		//Gives a single comma-separated list of related terms
+		// Gives a single comma-separated list of related terms
 		$query->groupBy('s.subjectId');
 
 		$this->source = new MigrateSourceSQL($query);
 
-		//Create the destination object
+		// Create the destination object
 		$this->destination = new MigrateDestinationNode('subject');
 
-		//Create the map object
+		// Create the map object
 		$this->map = new MigrateSQLMap(
 			$this->machineName,
 			array(
@@ -53,19 +57,20 @@ class SubjectsMigration extends ArchivesMigration {
 			'default'
 		);
 
-		//Set owner
+		// Set owner
 		$this->addFieldMapping('uid')->defaultValue('1');
 		
-		//Title field mappings
+		// Title field mappings
 		$this->addFieldMapping('title', 'subjectTerm')
 			->defaultValue('No Subject Term Available.');
 
-		//Other field mappings
+		// Other field mappings
 		$this->addFieldMapping('field_subject_id', 'subjectId');
 		$this->addFieldMapping('field_term_type', 'subjectTermType');
 		$this->addFieldMapping('field_source', 'subjectSource');
 		$this->addFieldMapping('field_scope_note', 'subjectScopeNote');
 
+		// Field mappings for related Accessions and Resources
 		$this->addFieldMapping('field_related_accessions', 'accId')
 			->separator(',')
 			->sourceMigration(array('ArchivesAccessions'));
