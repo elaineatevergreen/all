@@ -11,22 +11,22 @@ class ResourcesMigration extends ArchivesMigration {
 
 		$this->description = t('Import Resources information from the Archives database.');
 
-		//Create the source 
+		// Create the source 
 		$query = Database::getConnection('default', 'for_migration')
 			->select('Resources', 'r')
 			->fields('r', array('resourceId', 'title', 'resourceLevel', 'displayCreator', 'dateBegin', 'dateEnd', 'dateExpression', 'extentNumber', 'containerSummary', 'extentType', 'languageOfFindingAid', 'resourceIdentifier1', 'resourceIdentifier2', 'resourceIdentifier3', 'sponsorNote'));
 
-		//Additional data from the ArchDescriptionRepeatingData table
+		// Additional data from the ArchDescriptionRepeatingData table (for Notes)
 		$query->leftJoin('ArchDescriptionRepeatingData', 'adr', 'r.resourceId=adr.resourceId');
 		$query->fields('adr', array('title', 'sequenceNumber', 'notesEtcTypeId', 'noteContent'));
 		$query->addExpression("GROUP_CONCAT(DISTINCT CONCAT_WS(':::', adr.notesEtcTypeId, adr.noteContent) SEPARATOR '###')", "notes");
 
-		//Additional data from the ResourcesComponents table
+		// Additional data from the ResourcesComponents table (for Detailed Description)
 		$query->leftJoin('ResourcesComponents', 'rc', 'r.resourceId=rc.resourceId');
 		$query->fields('rc', array('resourceComponentId', 'title', 'dateBegin', 'dateEnd', 'sequenceNumber'));
 		$query->addExpression("GROUP_CONCAT(DISTINCT rc.resourceComponentId)", "components");       
 
-		//Related materials
+		// Get information for related materials (Names, Subjects, Accessions)
 		$query->leftJoin('ArchDescriptionNames', 'n', 'r.resourceId=n.resourceId');
 		$query->fields('n', array('primaryNameId'));
 		$query->addExpression('GROUP_CONCAT(DISTINCT primaryNameId)', 'name');
@@ -66,14 +66,14 @@ class ResourcesMigration extends ArchivesMigration {
 			'default'
 		);
 
-		//Set owner
+		// Set owner
 		$this->addFieldMapping('uid')->defaultValue('1');
 
-		//Title field mappings
+		// Title field mappings
 		 $this->addFieldMapping('title', 'title')
 			 ->defaultValue('No Title Available');
 
-		//Field mappings
+		// Field mappings
 		$this->addFieldMapping('field_resource_id', 'resourceId');
 		$this->addFieldMapping('field_resource_level', 'resourceLevel');
 		$this->addFieldMapping('field_resource_creator', 'displayCreator');
@@ -83,7 +83,7 @@ class ResourcesMigration extends ArchivesMigration {
 		$this->addFieldMapping('field_languages', 'languageOfFindingAid');
 		$this->addFieldMapping('field_sponsor', 'sponsorNote');
 
-		//Related materials field mappings
+		// Related materials field mappings
 		$this->addFieldMapping('field_res_related_accessions', 'accession')
 			->separator(',')
 			->sourceMigration(array('ArchivesAccessions'));
@@ -173,6 +173,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}*/
 
+		// Returns the object for a given component ID number
 		if(!function_exists('getComponentObject')){
 			function getComponentObject($component){
 				db_set_active('for_migration');
@@ -187,6 +188,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}
 
+		// Returns all the children for a given component ID number
 		if(!function_exists('getChildren')){
 			function getChildren($component){
 				db_set_active('for_migration');
@@ -201,6 +203,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}
 
+		// Returns the note (if one exists) for a given component ID number
 		if(!function_exists('getNote')){
 			function getNote($resCompId){
 				db_set_active('for_migration');
@@ -216,6 +219,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}
 
+		// Adds a date, doing some formatting
 		if(!function_exists('addDate')){
 			function addDate($parent){
 				if($parent->dateExpression){
@@ -231,6 +235,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}
 
+		// Adds a top level component (a component whose parent is the resource itself)
 		if(!function_exists('addTopLevelItem')){
 			function addTopLevelItem($parent){
 				$item.="<h3>".$parent->title;
@@ -248,6 +253,7 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 		}
 
+		// Adds a component to the html (checks to see what level the component is first)
 		if(!function_exists('addItem')){
 			function addItem($parent, $level){
 				if($level==0){
@@ -273,6 +279,7 @@ class ResourcesMigration extends ArchivesMigration {
 
 		$html = "";
 
+		// Recursively builds the html for the Detailed Description section
 		if(!function_exists('buildComponents')){
 			function buildComponents($value, $level){
 				$component = getComponentObject($value);
@@ -306,7 +313,7 @@ class ResourcesMigration extends ArchivesMigration {
 		$comps = explode(',', $row->components);
 		//drush_print_r($comps);
 
-		
+		// Checks to see if there are components, if there are, add them to the html. 
 		if($comps[0] != NULL) {
 			$genhtml="<ul>";
 			foreach($comps as $key=>$value){
@@ -314,9 +321,11 @@ class ResourcesMigration extends ArchivesMigration {
 			}
 			$genhtml.="</ul>";
 		} else {
+			// Should this be null?
 			$genhtml = '';
 		};
 		
+		// This sets components (Detailed Description section) to the generated html. 
 		$row->components = $genhtml;
 
 
