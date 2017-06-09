@@ -75,7 +75,6 @@ class NamesMigration extends ArchivesMigration {
 
 
 		$this->addUnmigratedDestinations(array(
-			'uid',
 			'created',
 			'changed',
 			'log',

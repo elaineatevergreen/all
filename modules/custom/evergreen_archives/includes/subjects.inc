@@ -75,7 +75,6 @@ class SubjectsMigration extends ArchivesMigration {
 			->sourceMigration(array('ArchivesResources'));
 
 		$this->addUnmigratedDestinations(array(
-			'uid',
 			'created',
 			'changed',
 			'log',
