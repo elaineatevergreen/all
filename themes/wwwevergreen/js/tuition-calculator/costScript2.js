@@ -126,7 +126,6 @@ function clickFunction() {
     if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
         CSV = document.getElementById('selCSV');
         CSV = CSV.options[CSV.selectedIndex].value;
-        console(CSV);
         //gets file name from selected csv 
         $.ajax({
           type: 'GET',
