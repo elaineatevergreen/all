@@ -1,0 +1,61 @@
+<!doctype html>
+
+<head>
+
+   <!-- player skin -->
+   <link rel="stylesheet" href="skin/skin.css">
+   <title>test remote video</title>
+
+   <!-- site specific styling -->
+   <style>
+   body { font: 12px "Myriad Pro", "Lucida Grande", sans-serif; text-align: center; padding-top: 5%; }
+   .flowplayer { width: 70%; }
+   </style>
+
+   <!-- for video tag based installs flowplayer depends on jQuery 1.7.2+ -->
+   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+   <script src="flowplayer.min.js"></script>
+         <!-- The hlsjs plugin for playback of HLS without Flash in modern browsers -->
+   <!--<script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>-->
+   <script src="hls.js"></script>
+
+</head>
+
+<body>
+
+   <!--
+      Please replace data-key value with your key that can be generated from
+
+      https://flowplayer.org/account/
+
+      Sample keys:
+
+      localhost  $512206430871778
+      127.0.0.1  $230995013922566
+      moot.it    $377415222747626
+   -->
+   <h1>Our livestream</h1>
+   <div class="flowplayer" data-key="$701442642277451" data-live="true">
+      <video>
+         <source type="application/x-mpegurl" src="http://192.211.16.26:80/hls/master.m3u8"> 
+         <source type="video/flash"  src="rtmp://192.211.16.26:1935/play/live+enc2">
+      </video>
+   </div>
+   
+   <!--
+	   <source type="video/flash"  src="rtmp://192.211.16.26:1935/play/live+enc2">
+	   
+	   
+	   <h1>Their livestream</h1>
+   
+<div data-live="true" data-ratio="0.5625" class="flowplayer">
+
+   <video data-title="Live stream">
+<source type="application/x-mpegurl"
+        src="http://wms.shared.streamshow.it/carinatv/carinatv/playlist.m3u8">
+   </video>
+
+</div>-->
+
+</body>
