@@ -126,6 +126,8 @@ function clickFunction() {
     if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
         CSV = document.getElementById('selCSV');
         CSV = CSV.options[CSV.selectedIndex].value;
+        CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
+        //console.log(CSV);
         //gets file name from selected csv 
         $.ajax({
           type: 'GET',
@@ -133,7 +135,7 @@ function clickFunction() {
           // The name of the CSV currently being used.
           dataType: 'text',
           error: function () {
-            document.getElementById('tuitionTable').innerHTML = '<p>Please make sure all fields are selected.</p>';
+            document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
           },
           success: function (data) {
             processData(data);
