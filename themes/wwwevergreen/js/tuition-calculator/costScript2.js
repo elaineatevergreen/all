@@ -133,7 +133,7 @@ function clickFunction() {
           // The name of the CSV currently being used.
           dataType: 'text',
           error: function () {
-            document.getElementById('tuitionTable').innerHTML = '<p>Please make sure all fields are selected.</p>';
+            document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
           },
           success: function (data) {
             processData(data);
