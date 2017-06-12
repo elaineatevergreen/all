@@ -127,7 +127,7 @@ function clickFunction() {
         CSV = document.getElementById('selCSV');
         CSV = CSV.options[CSV.selectedIndex].value;
         CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
-        console.log(CSV);
+        //console.log(CSV);
         //gets file name from selected csv 
         $.ajax({
           type: 'GET',
