@@ -86,10 +86,9 @@ figure,
 }
 
 /**
- * Removing hyphen rules for now.
- * English doesn't have long enough words to warrant this,
- * and we’re not justifying text,
- * but consider it for narrow columns.
+ * Removing hyphen rules for now. English doesn't have long enough words to
+ * warrant this, and we’re not justifying text, but consider it for
+ * narrower columns.
  */
 /*p{
 	hyphens: auto;
@@ -217,14 +216,6 @@ h4{
 		font-size: 1.202rem;  // 19.229px  Step 2
 		line-height: 1.56014353320505;  // 30/19.229
 	}
-
-	/*@include breakpoint($groot){
-	// box model
-	margin-top: 1.5451174289246em;  // 45/29.124
-	// typography
-	font-size: 1.82rem;  // 29.124px  Step 3
-	line-height: 1.03007828594973; // 30/29.124
-	}*/
 }
 
 h5{
@@ -520,6 +511,6 @@ hr{
 	height: 5px;
 	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
 	width: 100%;
-	// backgrounds & borders
+	// decoration
 	background-color: $evergreen-neue;
 }
