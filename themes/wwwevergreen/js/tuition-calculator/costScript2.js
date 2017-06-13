@@ -138,7 +138,7 @@ function clickFunction() {
             document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
           },
           success: function (data) {
-            processData(data);
+            $(document).ajaxComplete(processData(data));
           }
         });
     }
