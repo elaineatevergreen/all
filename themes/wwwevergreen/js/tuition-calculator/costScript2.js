@@ -64,7 +64,7 @@ function createTable(costRate, cred) {
   var tCredits              = fullData[cred][9];
   var tSummerCredits        = fullData[cred+summerOffset][9];
   var tTuition              = fullData[cred][costRate + 5];
-  var tSummerTuition        = fullData[cred+summerOffset][9];
+  var tSummerTuition        = fullData[cred+summerOffset][costRate+5];
   var tHealth               = gradBool ? fullData[cred+gradOffset][10] : fullData[cred][10];//terniery operator if gradbool then a else b
   var tSummerHealth         = fullData[cred+summerOffset][10];
   var tTransit              = fullData[cred][11];
