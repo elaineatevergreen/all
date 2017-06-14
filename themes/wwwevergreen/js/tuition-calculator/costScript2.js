@@ -109,10 +109,9 @@ function clickFunction() {
 	  			processData(data);
       		}
     	});
-    }
-  }
-  var year = document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].text;
-  searchData(year);
+		var year = document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].text;
+		searchData(year);
+	});
 };
 /* -- Format data --*/
 function processData(info) {
