@@ -34,10 +34,11 @@
 	$xl_hero = file_create_url($field_hero_image[0]['uri']);
 	
 	$field_home_page_version = field_get_items('node', $node, 'field_home_page_version');
-	$field_home_page_version = $field_home_page_version[0]['safe_value'];
+	$field_home_page_version = $field_home_page_version[0]['value'];
+	//dsm($field_home_page_version);
 	
 	switch($field_home_page_version) {
-		case 'Graduation':
+		case 'graduation':
 			$destination = "/graduation";
 			$content_class = "homepage-hero-content-grad";
 			$hero_alt = "'Grats Greener grads. Watch live.";
@@ -46,7 +47,7 @@
 			$slogan_alt = "'Grats Greener grads.";
 			$call_to_action = "Watch the event";
 			break;
-		case 'Orientation Week':
+		case 'orientation':
 			$destination = "/orientation";
 			$content_class = "homepage-hero-content";
 			$hero_alt = "O HAI IT'S ORIENTATION";
