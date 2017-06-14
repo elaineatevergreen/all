@@ -49,7 +49,7 @@
 			break;
 		case 'orientation':
 			$destination = "/orientation";
-			$content_class = "homepage-hero-content";
+			$content_class = "";
 			$hero_alt = "O HAI IT'S ORIENTATION";
 			$slogan_svg_wide = "go-beyond/slogan-wide";
 			$slogan_svg_mobile = "go-beyond/slogan-mobile";
@@ -59,7 +59,7 @@
 		//this covers both "Normal" and for older hero images, any blank value
 		default:
 			$destination = "/academics";
-			$content_class = "homepage-hero-content";
+			$content_class = "";
 			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
 			$slogan_svg_wide = "go-beyond/slogan-wide";
 			$slogan_svg_mobile = "go-beyond/slogan-mobile";
@@ -83,11 +83,15 @@
 		
 		<div class="wrapper">
 			<a href="<?php print $destination ?>">
-				<div class="<?php print $content_class ?>">
-					<!-- this needs if/then for graduation -->
+				<div class="homepage-hero-content <?php print $content_class ?>">
+					<?php 
+						/* the caption shouldn't appear on the graduation page */
+						if($field_home_page_version != 'graduation') { 
+						?>
 					<div class="box caption-box">
 						<p class="caption">Photo: <?php print render($title) ?></p>
 					</div>
+					<?php }; //end check for graduation ?>
 					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
