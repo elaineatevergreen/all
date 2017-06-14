@@ -91,11 +91,13 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
 function clickFunction() {
 	jQuery(document).ready(function ($) {
 		var CSV;
+		var stringOfCSV;
 		if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
 			CSV = document.getElementById('selCSV');
 			CSV = CSV.options[CSV.selectedIndex].value;
 			//comment out the following line if developing locally
 			CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV,
+			
 			console.log(CSV);
 			$.ajax({
 				type: 'GET',
@@ -106,9 +108,10 @@ function clickFunction() {
 					document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
       			},
 	  			success: function (data) {
-	  				processData(data);
+	  				stringOfCSV = data;
       			}
     		}); //end ajax
+    		processData(stringOfCSV);
     	} //end check for existence of CSV
 		var year = document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].text;
 		searchData(year);
