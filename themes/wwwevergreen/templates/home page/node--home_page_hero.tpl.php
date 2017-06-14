@@ -37,15 +37,6 @@
 	$field_home_page_version = $field_home_page_version[0]['safe_value'];
 	
 	switch($field_home_page_version) {
-		case 'Normal':
-			$destination = "/academics";
-			$content_class = "homepage-hero-content";
-			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
-			$slogan_svg_wide = "go-beyond/slogan-wide";
-			$slogan_svg_mobile = "go-beyond/slogan-mobile";
-			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
-			$call_to_action = "Watch the event";
-			break;
 		case 'Graduation':
 			$destination = "/graduation";
 			$content_class = "homepage-hero-content-grad";
@@ -63,6 +54,16 @@
 			$slogan_svg_mobile = "go-beyond/slogan-mobile";
 			$slogan_alt = "YUP, O WEEK ALREADY";
 			$call_to_action = "See the Schedule";
+			break;
+		//this covers both "Normal" and for older hero images, any blank value
+		default:
+			$destination = "/academics";
+			$content_class = "homepage-hero-content";
+			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
+			$slogan_svg_wide = "go-beyond/slogan-wide";
+			$slogan_svg_mobile = "go-beyond/slogan-mobile";
+			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
+			$call_to_action = "Watch the event";
 			break;
 	};
 
