@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
   '</p></form><button  class="prime" onclick="clickFunction()">Calculate</button><div id="tuitionTable"></div>';
   /* -- Preload csv files -- */
   //prepares each CSV file for use.
-  for(i in yearLinks){
+  /*for(i in yearLinks){
     //gets file name from selected csv 
     $.ajax({
       type: 'GET',
@@ -83,7 +83,7 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
       success: function (data) {
         //processData(data);
       }
-    });
+    });*/
   }
   
 });
