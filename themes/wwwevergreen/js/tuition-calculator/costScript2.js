@@ -89,25 +89,27 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
 });
 /* -- csv read in to fields array. -- */
 function clickFunction() {
- var CSV;
-  if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
-    CSV = document.getElementById('selCSV');
-    CSV = CSV.options[CSV.selectedIndex].value;
-    //comment out the following line if developing locally
-    CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV,
-    console.log(CSV);
-    $.ajax({
-      type: 'GET',
-      url: CSV,
-      // The name of the CSV currently being used.
-      dataType: 'text',
-      error: function () {
-        document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
-      },
-      success: function (data) {
-        processData(data);
-      }
-    });
+	jQuery(document).ready(function ($) {
+		var CSV;
+		if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
+		CSV = document.getElementById('selCSV');
+		CSV = CSV.options[CSV.selectedIndex].value;
+		//comment out the following line if developing locally
+		CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV,
+		console.log(CSV);
+		$.ajax({
+			type: 'GET',
+			url: CSV,
+			// The name of the CSV currently being used.
+			dataType: 'text',
+			error: function () {
+				document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
+      		},
+	  		success: function (data) {
+	  			processData(data);
+      		}
+    	});
+    }
   }
   var year = document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].text;
   searchData(year);
