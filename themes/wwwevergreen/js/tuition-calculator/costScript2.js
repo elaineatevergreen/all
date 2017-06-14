@@ -7,9 +7,9 @@ To add this to a page, create a div with the id="Tuition-Box".
 	- Put in some default text for non-JS visitors and for editing in Drupal WYSIWYG.
 To add this to a new DRUPAL node, you also need to update the related Context.
 
-Updating a year? Go to lines 50-51 to edit.
-Developing locally? Comment out line 88.
-Adding a fee? Go to line 182 to add math and lines 25-43 to add HTML.
+Updating a year? Go to lines 58-59 to edit.
+Developing locally? Check out lines 75 and 97
+Adding a fee? Go to line 181 to add math and line 31 to add HTML.
 */
 
 //initialize global variable for imported CSV
@@ -72,7 +72,9 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
     //gets file name from selected csv 
     $.ajax({
       type: 'GET',
-      url: yearLinks[i],
+      url: "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + yearLinks[i],
+      //uncomment the following line if developing locally.
+	  //url: yearLinks[i],
       // The name of the CSV currently being used.
       dataType: 'text',
       error: function () {
@@ -91,8 +93,8 @@ function clickFunction() {
   if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
     CSV = document.getElementById('selCSV');
     CSV = CSV.options[CSV.selectedIndex].value;
-    //comment out the following line if developing locally.
-    CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
+    //comment out the following line if developing locally
+    CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV,
     console.log(CSV);
     $.ajax({
       type: 'GET',
