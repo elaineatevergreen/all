@@ -55,8 +55,8 @@ function createTable(tuitionType, summerBool, Credits, summerCredits, Tuition, s
 
   /* --  HTML on page load -- */
 jQuery(document).ready(function ($) {//Following string contains all of the html displayed on the page before the user does anything.
-  var years = ["2015-16","2016-17","2017-18"];
-  var yearLinks = ["1516.csv","1617.csv","1718.csv"];
+  var years = ["2016-17","2017-18"];
+  var yearLinks = ["1617.csv","1718.csv"];
 
   document.getElementById('Tuition-Box').innerHTML = '<h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    '+
   '<select id="selCSV"><option value="-1" selected="selected">Please Select Option</option>'+
