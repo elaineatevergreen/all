@@ -128,7 +128,7 @@ table a{
 /**
  * 2. Horizontal Tables
  *
- * For tables with the th left of the tds.
+ * For tables with the th left of the tds (i.e. scope="row").
  */
 .horizontal-table th{
 	// box model

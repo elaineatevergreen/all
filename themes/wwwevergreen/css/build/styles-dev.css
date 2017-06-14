@@ -15,19 +15,32 @@
  *      | | | ' \/ -_)  | _|\ V // -_)| '_/ _` | '_/ -_) -_) ' \)) \__ \  _/ _` |  _/ -_)   | (__/ _ \ || / -_)/ _` |/ -_)  
  *      |_| |_||_\___|  |___|\_/ \___||_| \__, |_| \___\___|_||_|  |___/\__\__,_|\__\___|    \___\___/_||_\___|\__, |\___|  
  *                                        |___/                                                                |___/        
- *                .-'''-.                                                             .-'''-.                             
- *               '   _    \                                                          '   _    \             _______       
- *             /   /` '.   \           /|              __.....__                   /   /` '.   \    _..._   \  ___ `'.    
- *      .--./).   |     \  '           ||          .-''         '. .-.          .-.   |     \  '  .'     '.  ' |--.\  \   
- *     /.''\ \|   '      |  '          ||         /     .-''"'-.  `.\ \        / /|   '      |  '.   .-.   . | |    \  '  
- *    | |  | |\    \     / /           ||  __    /     /________\  ` \ \      / / \    \     / / |  '   '  | | |     |  ' 
- *     \`-' /  `.   ` ..' /            ||/'__ '. |                  | \ \    / /   `.   ` ..' /  |  |   |  | | |     |  | 
- *     /("'`      '-...-'`             |:/`  '. '\    .-------------'  \ \  / /       '-...-'`   |  |   |  | | |     ' .' 
- *     \ '---.                         ||     | | \    '-.____...---.   \ `  /                   |  |   |  | | |___.' /'  
- *      /'""'.\                        ||\    / '  `.             .'     \  /                    |  |   |  |/_______.'/   
- *     ||     ||                       |/\'..' /     `''-...... -'       / /                     |  |   |  |\_______|/    
- *     \'. __//                        '  `'-'`                      |`-' /                      |  |   |  |              
- *      `'---'                                                        '..'                       '--'   '--'              
+ *
+ ***************************************************************************************************************************
+ *
+ *      _______ ___  ___   _______   _______  _______   __    _______ _____  ___   ______   _______  
+ *     /"     "|"  \/"  | |   __ "\ /"     "|/"      \ |" \  /"     "(\"   \|"  \ /" _  "\ /"     "| 
+ *    (: ______)\   \  /  (. |__) :(: ______|:        |||  |(: ______|.\   \    (: ( \___(: ______) 
+ *     \/    |   \  \/   |:  ____/ \/    | |_____/   )|:  | \/    | |: \.   \  |\/ \     \/    |   
+ *     // ___)_  /\.  \   (|  /     // ___)_ //      / |.  | // ___)_|.  \    \. |//  \ _  // ___)_  
+ *    (:      "|/  \   \ /|__/ \   (:      "|:  __   \ /\  |(:      "|    \    \ (:   _) \(:      "| 
+ *     \_______|___/\___(_______)   \_______|__|  \___(__\_|_\_______)\___|\____\)\_______)\_______) 
+ *
+ *     ___      ___    ______    _______   _______           __ ___________                          
+ *    |"  \    /"  |  /    " \  /"      \ /"     "|         /""("     _   ")                         
+ *     \   \  //   | // ____  \|:        (: ______)        /    )__/  \__/                          
+ *     /\  \/.    |/  /    ) :|_____/   )\/    |         /' /\  \ \_ /                             
+ *    |: \.        (: (____/ // //      / // ___)_       //  __'  \|.  |                             
+ *    |.  \    /:  |\        / |:  __   \(:      "|     /   /  \  \:  |                             
+ *    |___|\__/|___| \"_____/  |__|  \___)\_______)    (___/    \___\__|                             
+                                                                                               
+ *      _______ ___      ___ _______  _______   _______   _______   _______  _______ _____  ___      
+ *     /"     "|"  \    /"  /"     "|/"      \ /" _   "| /"      \ /"     "|/"     "(\"   \|"  \     
+ *    (: ______)\   \  //  (: ______|:        (: ( \___)|:        (: ______(: ______|.\   \    |    
+ *     \/    |   \  \/. ./ \/    | |_____/   )\/ \     |_____/   )\/    |  \/    | |: \.   \  |    
+ *     // ___)_   \.    //  // ___)_ //      / //  \ ___ //      / // ___)_ // ___)_|.  \    \. |    
+ *    (:      "|   \   /  (:      "|:  __   \(:   _(  _|:  __   \(:      "(:      "|    \    \ |    
+ *     \_______)    \__/    \_______|__|  \___)\_______)|__|  \___)\_______)\_______)\___|\____\)    
  */
 /*!*
  * View the source and fork these styles on Gitlab:
@@ -182,20 +195,13 @@ html {
   box-sizing: inherit;
 }
 
-/**
- * For the following, I am taking pity on IE8- because I'm using
- * the appropriate double-colon syntax for pseudo-elements. If I
- * condensed this style declaration with the above *, IE8- would
- * choke on the whole thing, breaking the border-box declaration
- * for the universal selector.
- */
-/* line 31, ../src/smacss/_base.scss */
+/* line 24, ../src/smacss/_base.scss */
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-/* line 36, ../src/smacss/_base.scss */
+/* line 29, ../src/smacss/_base.scss */
 body {
   margin: 0;
   min-height: 100vh;
@@ -211,7 +217,7 @@ body {
   background-color: #f2f2f2;
 }
 
-/* line 48, ../src/smacss/_base.scss */
+/* line 41, ../src/smacss/_base.scss */
 img,
 svg {
   border-width: 0;
@@ -220,37 +226,37 @@ svg {
   max-width: 100%;
 }
 
-/* line 56, ../src/smacss/_base.scss */
+/* line 49, ../src/smacss/_base.scss */
 img[height="0"][width="0"] {
   height: 0;
   width: 0;
   display: block;
 }
 
-/* line 64, ../src/smacss/_base.scss */
+/* line 57, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 68, ../src/smacss/_base.scss */
+/* line 61, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 73, ../src/smacss/_base.scss */
+/* line 66, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 77, ../src/smacss/_base.scss */
+/* line 70, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 86, ../src/smacss/_base.scss */
+/* line 78, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -382,10 +388,9 @@ figure,
 }
 
 /**
- * Removing hyphen rules for now.
- * English doesn't have long enough words to warrant this,
- * and we’re not justifying text,
- * but consider it for narrow columns.
+ * Removing hyphen rules for now. English doesn't have long enough words to
+ * warrant this, and we’re not justifying text, but consider it for
+ * narrower columns.
  */
 /*p{
 	hyphens: auto;
@@ -396,7 +401,7 @@ figure,
  *
  * @section h
  */
-/* line 104, ../src/smacss/base/_typography.scss */
+/* line 103, ../src/smacss/base/_typography.scss */
 h1 {
   margin: 0.96401028277635em 0 0;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
@@ -405,7 +410,7 @@ h1 {
   line-height: 1.44601542416452;
 }
 @media screen and (min-width: 32em) {
-  /* line 104, ../src/smacss/base/_typography.scss */
+  /* line 103, ../src/smacss/base/_typography.scss */
   h1 {
     margin-top: 0.818419903972065em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -414,7 +419,7 @@ h1 {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 104, ../src/smacss/base/_typography.scss */
+  /* line 103, ../src/smacss/base/_typography.scss */
   h1 {
     margin-top: 0.63663179339176em;
     font-size: 2.945rem;
@@ -422,14 +427,14 @@ h1 {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 104, ../src/smacss/base/_typography.scss */
+  /* line 103, ../src/smacss/base/_typography.scss */
   h1 {
     color: #515151;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 104, ../src/smacss/base/_typography.scss */
+  /* line 103, ../src/smacss/base/_typography.scss */
   h1 {
     margin-top: 1.19191879059973em;
     font-size: 3.146rem;
@@ -437,7 +442,7 @@ h1 {
   }
 }
 
-/* line 144, ../src/smacss/base/_typography.scss */
+/* line 143, ../src/smacss/base/_typography.scss */
 h2 {
   margin-top: 1.56014353320505em;
   color: #616161;
@@ -447,13 +452,13 @@ h2 {
   line-height: 1.56014353320505;
 }
 @media screen and (min-width: 22em) {
-  /* line 144, ../src/smacss/base/_typography.scss */
+  /* line 143, ../src/smacss/base/_typography.scss */
   h2 {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 144, ../src/smacss/base/_typography.scss */
+  /* line 143, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.03007828594973em;
     font-size: 1.82rem;
@@ -461,7 +466,7 @@ h2 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 144, ../src/smacss/base/_typography.scss */
+  /* line 143, ../src/smacss/base/_typography.scss */
   h2 {
     margin-top: 1.44638724607868em;
     font-size: 1.945rem;
@@ -469,7 +474,7 @@ h2 {
   }
 }
 
-/* line 175, ../src/smacss/base/_typography.scss */
+/* line 174, ../src/smacss/base/_typography.scss */
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
@@ -479,13 +484,13 @@ h3 {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 175, ../src/smacss/base/_typography.scss */
+  /* line 174, ../src/smacss/base/_typography.scss */
   h3 {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 175, ../src/smacss/base/_typography.scss */
+  /* line 174, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.10603155876714em;
     font-size: 1.69525rem;
@@ -493,7 +498,7 @@ h3 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 175, ../src/smacss/base/_typography.scss */
+  /* line 174, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.54575432811212em;
     font-size: 1.8195rem;
@@ -501,22 +506,15 @@ h3 {
   }
 }
 
-/* line 205, ../src/smacss/base/_typography.scss */
+/* line 204, ../src/smacss/base/_typography.scss */
 h4 {
   margin-top: 2.14285714285714em;
   font-size: 0.875rem;
   font-weight: bold;
   line-height: 1.60714285714286;
-  /*@include breakpoint($groot){
-  // box model
-  margin-top: 1.5451174289246em;  // 45/29.124
-  // typography
-  font-size: 1.82rem;  // 29.124px  Step 3
-  line-height: 1.03007828594973; // 30/29.124
-  }*/
 }
 @media screen and (min-width: 43em) {
-  /* line 205, ../src/smacss/base/_typography.scss */
+  /* line 204, ../src/smacss/base/_typography.scss */
   h4 {
     margin-top: 1.56014353320505em;
     font-size: 1.202rem;
@@ -524,7 +522,7 @@ h4 {
   }
 }
 
-/* line 230, ../src/smacss/base/_typography.scss */
+/* line 221, ../src/smacss/base/_typography.scss */
 h5 {
   margin-top: 2.14285714285714em;
   color: #616161;
@@ -535,7 +533,7 @@ h5 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 230, ../src/smacss/base/_typography.scss */
+  /* line 221, ../src/smacss/base/_typography.scss */
   h5 {
     margin-top: 1.66666666666667em;
     font-size: 1.125rem;
@@ -543,7 +541,7 @@ h5 {
   }
 }
 
-/* line 249, ../src/smacss/base/_typography.scss */
+/* line 240, ../src/smacss/base/_typography.scss */
 h6 {
   margin-top: 2.69784172661871em;
   margin-bottom: 1.34892086330935em;
@@ -556,7 +554,7 @@ h6 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 249, ../src/smacss/base/_typography.scss */
+  /* line 240, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.14285714285714em;
     margin-bottom: 2.14285714285714em;
@@ -566,7 +564,7 @@ h6 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 249, ../src/smacss/base/_typography.scss */
+  /* line 240, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.5em;
     margin-bottom: 1.66666666666667em;
@@ -575,7 +573,7 @@ h6 {
   }
 }
 
-/* line 278, ../src/smacss/base/_typography.scss */
+/* line 269, ../src/smacss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -584,7 +582,7 @@ h5 {
   margin-bottom: 0.46875rem;
 }
 @media screen and (min-width: 125em) {
-  /* line 278, ../src/smacss/base/_typography.scss */
+  /* line 269, ../src/smacss/base/_typography.scss */
   h1,
   h2,
   h3,
@@ -599,63 +597,63 @@ h5 {
  *
  * @section l
  */
-/* line 296, ../src/smacss/base/_typography.scss */
+/* line 287, ../src/smacss/base/_typography.scss */
 ul,
 ol {
   margin-left: 1.07142857142857em;
   padding-left: 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 296, ../src/smacss/base/_typography.scss */
+  /* line 287, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 296, ../src/smacss/base/_typography.scss */
+  /* line 287, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 310, ../src/smacss/base/_typography.scss */
+/* line 301, ../src/smacss/base/_typography.scss */
 ul,
 dl {
   padding: 0;
 }
 
-/* line 315, ../src/smacss/base/_typography.scss */
+/* line 306, ../src/smacss/base/_typography.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
 
-/* line 319, ../src/smacss/base/_typography.scss */
+/* line 310, ../src/smacss/base/_typography.scss */
 dt {
   margin-top: 0.535714285714286em;
   font-weight: bold;
 }
 @media screen and (min-width: 125em) {
-  /* line 319, ../src/smacss/base/_typography.scss */
+  /* line 310, ../src/smacss/base/_typography.scss */
   dt {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 330, ../src/smacss/base/_typography.scss */
+/* line 321, ../src/smacss/base/_typography.scss */
 dd {
   margin-bottom: 1.071428571428571em;
   margin-left: 0;
 }
 @media screen and (min-width: 125em) {
-  /* line 330, ../src/smacss/base/_typography.scss */
+  /* line 321, ../src/smacss/base/_typography.scss */
   dd {
     margin-bottom: 1.04009568880337em;
   }
 }
 
-/* line 339, ../src/smacss/base/_typography.scss */
+/* line 330, ../src/smacss/base/_typography.scss */
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -669,7 +667,7 @@ dd > blockquote:first-child > p:first-child {
  *
  * @section a
  */
-/* line 352, ../src/smacss/base/_typography.scss */
+/* line 343, ../src/smacss/base/_typography.scss */
 a,
 .internal-users a:visited,
 .search-tools a:visited,
@@ -681,13 +679,13 @@ a,
   transition: color 0.2s, border-color 0.2s ease;
 }
 
-/* line 366, ../src/smacss/base/_typography.scss */
+/* line 357, ../src/smacss/base/_typography.scss */
 a:visited {
   color: #600f21;
   border-bottom-color: #ceb9be;
 }
 
-/* line 373, ../src/smacss/base/_typography.scss */
+/* line 364, ../src/smacss/base/_typography.scss */
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
@@ -696,7 +694,7 @@ a:hover,
   border-bottom-color: #0086ee;
 }
 
-/* line 383, ../src/smacss/base/_typography.scss */
+/* line 374, ../src/smacss/base/_typography.scss */
 a:focus,
 a:active {
   background-color: rgba(73, 44, 93, 0.1);
@@ -708,11 +706,11 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 395, ../src/smacss/base/_typography.scss */
+/* line 386, ../src/smacss/base/_typography.scss */
 .site-name a {
   border-bottom-width: 0;
 }
-/* line 398, ../src/smacss/base/_typography.scss */
+/* line 389, ../src/smacss/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #f2f2f2;
   text-shadow: 0 1px 3px #1d1225;
@@ -728,7 +726,7 @@ a:active {
       }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 398, ../src/smacss/base/_typography.scss */
+  /* line 389, ../src/smacss/base/_typography.scss */
   .site-name a, .site-name a:visited {
     color: #46502b;
     font-weight: normal;
@@ -741,17 +739,17 @@ a:active {
  *
  * @section other-type
  */
-/* line 428, ../src/smacss/base/_typography.scss */
+/* line 419, ../src/smacss/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 432, ../src/smacss/base/_typography.scss */
+/* line 423, ../src/smacss/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 436, ../src/smacss/base/_typography.scss */
+/* line 427, ../src/smacss/base/_typography.scss */
 figcaption,
 small,
 .details,
@@ -761,7 +759,7 @@ small,
   line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
-  /* line 436, ../src/smacss/base/_typography.scss */
+  /* line 427, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -772,13 +770,13 @@ small,
   }
 }
 
-/* line 448, ../src/smacss/base/_typography.scss */
+/* line 439, ../src/smacss/base/_typography.scss */
 figcaption p {
   margin-top: 0.67446043165468em;
   margin-bottom: 1.34892086330935em;
 }
 
-/* line 455, ../src/smacss/base/_typography.scss */
+/* line 446, ../src/smacss/base/_typography.scss */
 [role="contentinfo"] small {
   color: #c2c2c2;
 }
@@ -787,47 +785,47 @@ figcaption p {
  * Small (inline) text can inherit the line-height of its parent. Switching
  * to inline-block forces small to use its own line-height.
  */
-/* line 464, ../src/smacss/base/_typography.scss */
+/* line 455, ../src/smacss/base/_typography.scss */
 .small {
   display: inline-block;
 }
 
-/* line 468, ../src/smacss/base/_typography.scss */
+/* line 459, ../src/smacss/base/_typography.scss */
 abbr {
   border-bottom: 1px dotted #b6b6b6;
   text-decoration: none;
   cursor: help;
 }
 
-/* line 477, ../src/smacss/base/_typography.scss */
+/* line 468, ../src/smacss/base/_typography.scss */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 481, ../src/smacss/base/_typography.scss */
+/* line 472, ../src/smacss/base/_typography.scss */
 q::before {
   content: open-quote;
 }
 
-/* line 485, ../src/smacss/base/_typography.scss */
+/* line 476, ../src/smacss/base/_typography.scss */
 q::after {
   content: close-quote;
 }
 
-/* line 489, ../src/smacss/base/_typography.scss */
+/* line 480, ../src/smacss/base/_typography.scss */
 code,
 pre {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 494, ../src/smacss/base/_typography.scss */
+/* line 485, ../src/smacss/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 502, ../src/smacss/base/_typography.scss */
+  /* line 493, ../src/smacss/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -835,14 +833,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 510, ../src/smacss/base/_typography.scss */
+  /* line 501, ../src/smacss/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 517, ../src/smacss/base/_typography.scss */
+/* line 508, ../src/smacss/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
@@ -989,7 +987,7 @@ table a {
 /**
  * 2. Horizontal Tables
  *
- * For tables with the th left of the tds.
+ * For tables with the th left of the tds (i.e. scope="row").
  */
 /* line 133, ../src/smacss/base/_tables.scss */
 .horizontal-table th {
@@ -1756,7 +1754,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 127, ../src/smacss/_base.scss */
+/* line 119, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -2218,7 +2216,6 @@ a:link,
  */
 /* line 74, ../src/smacss/_layout.scss */
 [role="banner"],
-body > div + header,
 .header-nav-wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2233,7 +2230,6 @@ body > div + header,
 @media screen and (min-width: 43em) {
   /* line 74, ../src/smacss/_layout.scss */
   [role="banner"],
-  body > div + header,
   .header-nav-wrapper {
     -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
@@ -2383,35 +2379,31 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 212, ../src/smacss/_layout.scss */
+  /* line 211, ../src/smacss/_layout.scss */
   .index-wrapper {
     position: relative;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 212, ../src/smacss/_layout.scss */
+  /* line 211, ../src/smacss/_layout.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 226, ../src/smacss/_layout.scss */
+/* line 223, ../src/smacss/_layout.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
-  /*@include breakpoint($gamora){
-  	// box model
-  	padding-left: 1em;
-  }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 226, ../src/smacss/_layout.scss */
+  /* line 223, ../src/smacss/_layout.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 242, ../src/smacss/_layout.scss */
+/* line 234, ../src/smacss/_layout.scss */
 .sidebar-wrapper {
   margin-left: 2ch;
   padding: 0;
@@ -2420,7 +2412,7 @@ body > div + header,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 242, ../src/smacss/_layout.scss */
+  /* line 234, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     padding-left: 1em;
@@ -2429,20 +2421,20 @@ body > div + header,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 242, ../src/smacss/_layout.scss */
+  /* line 234, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
     width: 28.571428571429%;
   }
 }
 
-/* line 270, ../src/smacss/_layout.scss */
+/* line 262, ../src/smacss/_layout.scss */
 .main-content,
 .sidebar {
   margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 262, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-right: 2ch;
@@ -2450,14 +2442,14 @@ body > div + header,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 262, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 4.28571428571429em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 270, ../src/smacss/_layout.scss */
+  /* line 262, ../src/smacss/_layout.scss */
   .main-content,
   .sidebar {
     margin-bottom: 3.3333333333em;
@@ -2465,63 +2457,63 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 288, ../src/smacss/_layout.scss */
+  /* line 280, ../src/smacss/_layout.scss */
   .index-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 296, ../src/smacss/_layout.scss */
+/* line 288, ../src/smacss/_layout.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 296, ../src/smacss/_layout.scss */
+  /* line 288, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 2ch;
     margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 296, ../src/smacss/_layout.scss */
+  /* line 288, ../src/smacss/_layout.scss */
   .primary-content-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 312, ../src/smacss/_layout.scss */
+/* line 304, ../src/smacss/_layout.scss */
 .main-content {
   margin-top: calc(30 / 16 * 1rem);
 }
 @media screen and (min-width: 70em) {
-  /* line 312, ../src/smacss/_layout.scss */
+  /* line 304, ../src/smacss/_layout.scss */
   .main-content {
     margin-top: calc(45 / 16 * 1rem);
   }
 }
 
-/* line 320, ../src/smacss/_layout.scss */
+/* line 312, ../src/smacss/_layout.scss */
 .sidebar {
   margin: 0 0.75em 3.75rem;
 }
 @media screen and (min-width: 22em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 312, ../src/smacss/_layout.scss */
   .sidebar {
     margin-right: 2em;
     margin-left: 2em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 312, ../src/smacss/_layout.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 312, ../src/smacss/_layout.scss */
   .sidebar {
     border-left: 1px solid #c2c2c2;
     margin: calc(45 / 16 * 1rem) 1em 0 0;
@@ -2530,19 +2522,19 @@ body > div + header,
     line-height: 1.42857142857143;
     color: #303030;
   }
-  /* line 342, ../src/smacss/_layout.scss */
+  /* line 334, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 320, ../src/smacss/_layout.scss */
+  /* line 312, ../src/smacss/_layout.scss */
   .sidebar {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 351, ../src/smacss/_layout.scss */
+  /* line 343, ../src/smacss/_layout.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em;
@@ -2571,18 +2563,18 @@ body > div + header,
  * |                              |                     |
  * +------------------------------+---------------------+
  */
-/* line 380, ../src/smacss/_layout.scss */
+/* line 372, ../src/smacss/_layout.scss */
 #faux-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 43em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 372, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 380, ../src/smacss/_layout.scss */
+  /* line 372, ../src/smacss/_layout.scss */
   #faux-content-wrapper {
     border-bottom-width: 0;
     padding-right: 1em;
@@ -2592,13 +2584,13 @@ body > div + header,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 398, ../src/smacss/_layout.scss */
+  /* line 390, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 398, ../src/smacss/_layout.scss */
+  /* line 390, ../src/smacss/_layout.scss */
   #faux-sidebar-wrapper {
     width: 33.3333333333%;
     float: left;
@@ -2608,14 +2600,14 @@ body > div + header,
 }
 
 @media screen and (min-width: 70em) {
-  /* line 414, ../src/smacss/_layout.scss */
+  /* line 406, ../src/smacss/_layout.scss */
   .faux-sidebar {
     border-left: 1px solid #c2c2c2;
     padding-left: 1em;
   }
 }
 
-/* line 423, ../src/smacss/_layout.scss */
+/* line 415, ../src/smacss/_layout.scss */
 .spotlight {
   text-align: center;
 }
@@ -2627,37 +2619,37 @@ body > div + header,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 434, ../src/smacss/_layout.scss */
+  /* line 426, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 440, ../src/smacss/_layout.scss */
+  /* line 432, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 446, ../src/smacss/_layout.scss */
+  /* line 438, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 456, ../src/smacss/_layout.scss */
+  /* line 444, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 462, ../src/smacss/_layout.scss */
+  /* line 450, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 468, ../src/smacss/_layout.scss */
+  /* line 456, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -5153,14 +5145,12 @@ ul.accordion-inner{
 
 /**
  * H. Tables
+ *
+ * There are currently no table modules. I am leaving this here, because it
+ * seems likely that there might be in the future, and I don’t want to have
+ * to re-order the table of contents in such an event. Feel free to add the
+ * first one!
  */
-/* line 270, ../src/smacss/_modules.scss */
-.dataTable {
-  /*@include breakpoint($starlord){
-  	font-family: $text-face;
-  }*/
-}
-
 /**
  * I. Icons
  */
@@ -6231,7 +6221,7 @@ p.alert,
   background-color: #d9d4dc;
   border-radius: 2px;
   /*&:hover{
-  	// backgrounds & borders
+  	// decoration
   	background-color: mix(white, $blueberry-susan, 90%);
   	border-color: mix(white, $blueberry-susan, 80%);
   	// transitions
@@ -7598,12 +7588,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 312, ../src/smacss/_modules.scss */
+/* line 310, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 322, ../src/smacss/_modules.scss */
+/* line 315, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 4ch);
@@ -7615,13 +7605,13 @@ p.alert,
  * think in this case, it’s warranted because there is a link under every
  * article. See also: nytimes.com and washingtonpost.com.
  */
-/* line 334, ../src/smacss/_modules.scss */
+/* line 327, ../src/smacss/_modules.scss */
 .news-title-link a {
   border-bottom-width: 0;
   color: #000;
 }
 
-/* line 341, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7641,7 +7631,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 358, ../src/smacss/_modules.scss */
+/* line 351, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7657,7 +7647,7 @@ p.alert,
 /**
  * P. Profiles
  */
-/* line 367, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7666,13 +7656,13 @@ p.alert,
           shape-outside: circle() border-box;
 }
 
-/* line 374, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 374, ../src/smacss/_modules.scss */
+  /* line 367, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7680,7 +7670,7 @@ p.alert,
   }
 }
 
-/* line 384, ../src/smacss/_modules.scss */
+/* line 377, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7803,7 +7793,7 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 404, ../src/smacss/_modules.scss */
+/* line 397, ../src/smacss/_modules.scss */
 .lazy-load {
   border-bottom-width: 0;
   max-width: 100%;
@@ -7811,7 +7801,7 @@ p.alert,
   overflow: hidden;
   position: relative;
 }
-/* line 414, ../src/smacss/_modules.scss */
+/* line 407, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7830,24 +7820,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 433, ../src/smacss/_modules.scss */
+/* line 426, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 437, ../src/smacss/_modules.scss */
+/* line 430, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 445, ../src/smacss/_modules.scss */
+/* line 438, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 453, ../src/smacss/_modules.scss */
+/* line 446, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7858,30 +7848,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 464, ../src/smacss/_modules.scss */
+/* line 457, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 468, ../src/smacss/_modules.scss */
+/* line 461, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 468, ../src/smacss/_modules.scss */
+  /* line 461, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 468, ../src/smacss/_modules.scss */
+  /* line 461, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 481, ../src/smacss/_modules.scss */
+/* line 474, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7893,7 +7883,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 493, ../src/smacss/_modules.scss */
+/* line 486, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7901,7 +7891,7 @@ p.alert,
   display: block;
 }
 
-/* line 502, ../src/smacss/_modules.scss */
+/* line 495, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }

@@ -266,14 +266,12 @@
 
 /**
  * H. Tables
+ *
+ * There are currently no table modules. I am leaving this here, because it
+ * seems likely that there might be in the future, and I don’t want to have
+ * to re-order the table of contents in such an event. Feel free to add the
+ * first one!
  */
-.dataTable{
-	//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", "Avenir", Helvetica, Arial, sans-serif;
-
-	/*@include breakpoint($starlord){
-		font-family: $text-face;
-	}*/
-}
 
 /**
  * I. Icons
@@ -310,13 +308,8 @@
  * O. News
  */
 .news{
-	// box model
-	//border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-	//border-bottom: 1px solid #d1cad6;
 	// layout
 	overflow: hidden;
-	// backgrounds & borders
-	//background-color: mix($tint, $blueberry-susan, 90%);
 }
 
 .news-wrapper{
@@ -424,7 +417,7 @@
 		top: 0;
 		// typography
 		text-align: center;
-		// backgrounds & borders
+		// decoration
 		background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 		// misc
 		content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
