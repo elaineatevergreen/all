@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
        console.log(yearLinks[i] + " failed to load.");
       },
       success: function (data) {
-        processData(data);
+        //processData(data);
       }
     });
   }
@@ -97,7 +97,6 @@ function clickFunction() {
 			CSV = CSV.options[CSV.selectedIndex].value;
 			//comment out the following line if developing locally
 			CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV,
-			
 			console.log(CSV);
 			$.ajax({
 				type: 'GET',
