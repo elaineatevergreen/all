@@ -107,10 +107,10 @@ function clickFunction() {
 					document.getElementById('tuitionTable').innerHTML = '<p>The tuition and fee listing could not be loaded.</p>';
       			},
 	  			success: function (data) {
-	  				stringOfCSV = data;
+	  				processData(data);
       			}
     		}); //end ajax
-    		processData(stringOfCSV);
+    		
     	} //end check for existence of CSV
 		var year = document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].text;
 		searchData(year);
