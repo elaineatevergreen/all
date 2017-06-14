@@ -32,6 +32,39 @@
 	
 	$field_hero_image = field_get_items('node', $node, 'field_hero_image');	
 	$xl_hero = file_create_url($field_hero_image[0]['uri']);
+	
+	$field_home_page_version = field_get_items('node', $node, 'field_home_page_version');
+	$field_home_page_version = $field_home_page_version[0]['safe_value'];
+	
+	switch($field_home_page_version) {
+		case 'Normal':
+			$destination = "/academics";
+			$content_class = "homepage-hero-content";
+			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
+			$slogan_svg_wide = "go-beyond/slogan-wide";
+			$slogan_svg_mobile = "go-beyond/slogan-mobile";
+			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
+			$call_to_action = "Watch the event";
+			break;
+		case 'Graduation':
+			$destination = "/graduation";
+			$content_class = "homepage-hero-content-grad";
+			$hero_alt = "'Grats Greener grads. Watch live.";
+			$slogan_svg_wide = "grats-greener-grads/grats-long";
+			$slogan_svg_mobile = "grats-greener-grads/grats-stacked";
+			$slogan_alt = "'Grats Greener grads.";
+			$call_to_action = "Watch the event";
+			break;
+		case 'Orientation Week':
+			$destination = "/orientation";
+			$content_class = "homepage-hero-content";
+			$hero_alt = "O HAI IT'S ORIENTATION";
+			$slogan_svg_wide = "go-beyond/slogan-wide";
+			$slogan_svg_mobile = "go-beyond/slogan-mobile";
+			$slogan_alt = "YUP, O WEEK ALREADY";
+			$call_to_action = "See the Schedule";
+			break;
+	};
 
 ?>
 
@@ -43,24 +76,25 @@
 			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
 			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
 			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more." srcset="<?php echo $xl_hero; ?>" />
+			<img alt="<?php print $hero_alt ?>" srcset="<?php echo $xl_hero; ?>" />
 		</picture>
 		
 		<div class="wrapper">
-			<a href="/academics">
-				<div class="homepage-hero-content">
+			<a href="<?php print $destination ?>">
+				<div class="<?php print $content_class ?>">
+					<!-- this needs if/then for graduation -->
 					<div class="box caption-box">
 						<p class="caption">Photo: <?php print render($title) ?></p>
 					</div>
 					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
-								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-wide.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-mobile.svg"/>
-								<img alt="Go beyond majors, classes, &amp; grades and experience your education the way you imagine" src="<?php print base_path() . path_to_theme() ?>/images/homepage/go-beyond/slogan-mobile.svg"/>
+								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
+								<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 							</picture>
 						</h1>
-						<p class="call-to-action">See for yourself →</p>
+						<p class="call-to-action"><?php print $call_to_action ?> →</p>
 					</div>
 				</div>
 			</a>
