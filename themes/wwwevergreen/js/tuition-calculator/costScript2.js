@@ -156,7 +156,7 @@ function clickFunction() {
     setTimeout(function () {
       //This timeout makes sure that the document can be loaded in time
       callBack();
-    }, 50);
+    }, 5);
     //50 ms to wait before performing contained operations
     function callBack() {
       var credits = document.getElementById('creditCount');
