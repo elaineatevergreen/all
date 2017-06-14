@@ -93,6 +93,7 @@ function clickFunction() {
     CSV = CSV.options[CSV.selectedIndex].value;
     //comment out the following line if developing locally.
     CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
+    console.log(CSV);
     $.ajax({
       type: 'GET',
       url: CSV,
