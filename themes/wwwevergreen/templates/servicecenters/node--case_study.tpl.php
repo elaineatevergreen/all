@@ -95,7 +95,7 @@
 	    
 	    function commaList($field) {
 		  foreach($field as $f)  {
-			  dsm($f);
+			  //dsm($f);
 			  $url = "path";
 			  //$url = $f['#uri']['path'];
 			  $label = "word";
