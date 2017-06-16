@@ -95,8 +95,8 @@
 	    
 	    function commaList($field) {
 		  foreach($field as $f)  {
-			  $url = $f['#uri'];
-			  $label = $f['#label'];
+			  $url = $f["#uri"];
+			  $label = $f["#label"];
 			  //$comma .= "<a href='$url'>$label</a>, ");
 		  };
 		  $comma = 'testing?';
