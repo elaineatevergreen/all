@@ -91,20 +91,23 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-	    dsm($content);
+	    dsm($content['field_disciplines']);
 	?>
 	<p>Authors: <?php print render($content['field_author']) ?></p>
 	<p>Disciplines: <?php print render($content['field_disciplines']) ?></p>
 	<p>Themes: <?php print render($content['field_themes']) ?></p>
+	<p>Tribes: <?php print render($content['field_tribes']) ?></p>
 	<?php
 	    
 	    
       // We hide the comments and links now so that we can render them later.
+      // along with the fields that we just showed above. I don't think I actually need to do that tho.
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_author']);
       hide($content['field_disciplines']);
       hide($content['field_themes']);
+      hide($content['field_tribes']);
       print render($content);
     ?>
     
