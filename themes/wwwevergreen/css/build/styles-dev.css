@@ -4713,8 +4713,15 @@ ul.accordion-inner{
   }
 }
 
-/* line 95, ../src/smacss/modules/_lists.scss */
-.pager {
+/**
+ * Pager is used by Drupal pagination navigation, and Google search engine
+ * result pages.
+ *
+ * (E.g. «First ‹Previous 1 2 3 Next› Last»)
+ */
+/* line 101, ../src/smacss/modules/_lists.scss */
+.pager,
+.item-list .pager {
   margin-left: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4728,12 +4735,18 @@ ul.accordion-inner{
   font-variant-numeric: lining-nums;
 }
 @media screen and (min-width: 32em) {
-  /* line 95, ../src/smacss/modules/_lists.scss */
-  .pager {
+  /* line 101, ../src/smacss/modules/_lists.scss */
+  .pager,
+  .item-list .pager {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+/* line 117, ../src/smacss/modules/_lists.scss */
+.item-list .pager li {
+  padding: 0 0.5ch;
 }
 
 /**
@@ -4741,7 +4754,7 @@ ul.accordion-inner{
  *
  * @subsubsection mod-typography-l-accordion
  */
-/* line 115, ../src/smacss/modules/_lists.scss */
+/* line 126, ../src/smacss/modules/_lists.scss */
 .accordion,
 .accordion-table {
   border: 1px solid #c8c1cd;
@@ -4750,22 +4763,22 @@ ul.accordion-inner{
   border-radius: 2px;
 }
 
-/* line 126, ../src/smacss/modules/_lists.scss */
+/* line 137, ../src/smacss/modules/_lists.scss */
 .accordion dt a,
 .accordion dd {
   padding: 0.631100639515315em 2%;
 }
 
-/* line 131, ../src/smacss/modules/_lists.scss */
+/* line 142, ../src/smacss/modules/_lists.scss */
 .accordion dt {
   border-top: 1px solid #25162f;
   margin-top: 0;
 }
-/* line 135, ../src/smacss/modules/_lists.scss */
+/* line 146, ../src/smacss/modules/_lists.scss */
 .accordion dt:first-child {
   border-top-width: 0;
 }
-/* line 139, ../src/smacss/modules/_lists.scss */
+/* line 150, ../src/smacss/modules/_lists.scss */
 .accordion dt:hover {
   background-color: #e1dee3;
   border-color: #d0cad4;
@@ -4773,33 +4786,33 @@ ul.accordion-inner{
   transition: background-color 0.2s ease-out;
 }
 
-/* line 149, ../src/smacss/modules/_lists.scss */
+/* line 160, ../src/smacss/modules/_lists.scss */
 .accordion dt a {
   border-bottom-width: 0;
   width: 100%;
   display: block;
 }
 
-/* line 157, ../src/smacss/modules/_lists.scss */
+/* line 168, ../src/smacss/modules/_lists.scss */
 .accordion dt a:before {
   margin-right: 2%;
   display: inline-block;
   content: "▶";
 }
 
-/* line 165, ../src/smacss/modules/_lists.scss */
+/* line 176, ../src/smacss/modules/_lists.scss */
 .accordion dd {
   margin-bottom: 0;
   background-color: #f2f2f2;
   box-shadow: inset 0 2px 2px #919191;
 }
 
-/* line 174, ../src/smacss/modules/_lists.scss */
+/* line 185, ../src/smacss/modules/_lists.scss */
 .accordion-table .group {
   color: #492c5d;
   font-weight: bold;
 }
-/* line 178, ../src/smacss/modules/_lists.scss */
+/* line 189, ../src/smacss/modules/_lists.scss */
 .accordion-table .group:hover {
   color: #0086ee;
   cursor: pointer;
@@ -4813,7 +4826,7 @@ ul.accordion-inner{
  * @see http://evergreen.edu/studies
  */
 @media screen and (min-width: 20em) {
-  /* line 194, ../src/smacss/modules/_lists.scss */
+  /* line 205, ../src/smacss/modules/_lists.scss */
   .flexible {
     margin-left: 0;
     -webkit-column-count: 2;
@@ -4826,7 +4839,7 @@ ul.accordion-inner{
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 194, ../src/smacss/modules/_lists.scss */
+  /* line 205, ../src/smacss/modules/_lists.scss */
   .flexible {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -4835,7 +4848,7 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 20em) {
-  /* line 210, ../src/smacss/modules/_lists.scss */
+  /* line 221, ../src/smacss/modules/_lists.scss */
   .flexible > li {
     margin: 0 2% 0.46875rem;
     overflow: hidden;
@@ -4843,7 +4856,7 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 32em) {
-  /* line 222, ../src/smacss/modules/_lists.scss */
+  /* line 233, ../src/smacss/modules/_lists.scss */
   .unit-2-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4852,7 +4865,7 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 70em) {
-  /* line 228, ../src/smacss/modules/_lists.scss */
+  /* line 239, ../src/smacss/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4860,7 +4873,7 @@ ul.accordion-inner{
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 228, ../src/smacss/modules/_lists.scss */
+  /* line 239, ../src/smacss/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -4873,26 +4886,26 @@ ul.accordion-inner{
  *
  * A list of steps to follow.
  */
-/* line 243, ../src/smacss/modules/_lists.scss */
+/* line 254, ../src/smacss/modules/_lists.scss */
 .step-list {
   margin-left: 0;
   counter-reset: li;
   list-style-type: none;
 }
 
-/* line 251, ../src/smacss/modules/_lists.scss */
+/* line 262, ../src/smacss/modules/_lists.scss */
 .step-list > li {
   border-bottom: 1px solid #c8c1cd;
   padding-left: 3em;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 251, ../src/smacss/modules/_lists.scss */
+  /* line 262, ../src/smacss/modules/_lists.scss */
   .step-list > li {
     padding-left: 4em;
   }
 }
-/* line 262, ../src/smacss/modules/_lists.scss */
+/* line 273, ../src/smacss/modules/_lists.scss */
 .step-list > li::before {
   width: 0.75em;
   position: absolute;
@@ -4907,25 +4920,25 @@ ul.accordion-inner{
   content: counter(li) ".";
 }
 @media screen and (min-width: 32em) {
-  /* line 262, ../src/smacss/modules/_lists.scss */
+  /* line 273, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     font-size: 2.291rem;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 262, ../src/smacss/modules/_lists.scss */
+  /* line 273, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     width: 1em;
     font-size: 2.782rem;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 262, ../src/smacss/modules/_lists.scss */
+  /* line 273, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     font-size: 3.146rem;
   }
 }
-/* line 296, ../src/smacss/modules/_lists.scss */
+/* line 307, ../src/smacss/modules/_lists.scss */
 .step-list > li p,
 .step-list > li li {
   font-size: 0.875rem;
@@ -4933,7 +4946,7 @@ ul.accordion-inner{
   font-weight: normal;
 }
 @media screen and (min-width: 43em) {
-  /* line 296, ../src/smacss/modules/_lists.scss */
+  /* line 307, ../src/smacss/modules/_lists.scss */
   .step-list > li p,
   .step-list > li li {
     font-size: 1.125rem;
@@ -4946,7 +4959,7 @@ ul.accordion-inner{
  *
  * Links with icons attached to them, e.g. PDFs or social media chicklets.
  */
-/* line 313, ../src/smacss/modules/_lists.scss */
+/* line 324, ../src/smacss/modules/_lists.scss */
 .link-icon::before,
 .link-icon-alt::before {
   height: 1rem;
@@ -4961,47 +4974,47 @@ ul.accordion-inner{
   content: "";
 }
 
-/* line 332, ../src/smacss/modules/_lists.scss */
+/* line 343, ../src/smacss/modules/_lists.scss */
 .link-icon::after {
   margin-left: 0.5em;
 }
 
-/* line 336, ../src/smacss/modules/_lists.scss */
+/* line 347, ../src/smacss/modules/_lists.scss */
 .link-icon-alt::before {
   margin-right: 0.5em;
 }
 
-/* line 340, ../src/smacss/modules/_lists.scss */
+/* line 351, ../src/smacss/modules/_lists.scss */
 .icon-blog::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/blog32x32.png");
   content: "Blog";
 }
 
-/* line 347, ../src/smacss/modules/_lists.scss */
+/* line 358, ../src/smacss/modules/_lists.scss */
 .icon-facebook::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook32x32.png");
   content: "Facebook";
 }
 
-/* line 354, ../src/smacss/modules/_lists.scss */
+/* line 365, ../src/smacss/modules/_lists.scss */
 .icon-instagram::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/instagram32x32.png");
   content: "Instagram";
 }
 
-/* line 361, ../src/smacss/modules/_lists.scss */
+/* line 372, ../src/smacss/modules/_lists.scss */
 .icon-pinterest::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/pinterest32x32.png");
   content: "Pinterest";
 }
 
-/* line 368, ../src/smacss/modules/_lists.scss */
+/* line 379, ../src/smacss/modules/_lists.scss */
 .icon-twitter::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter32x32.png");
   content: "Twitter";
 }
 
-/* line 375, ../src/smacss/modules/_lists.scss */
+/* line 386, ../src/smacss/modules/_lists.scss */
 .icon-youtube::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/youtube32x32.png");
   content: "YouTube";
@@ -5012,23 +5025,23 @@ ul.accordion-inner{
  *
  * Tag cloud sizing.
  */
-/* line 387, ../src/smacss/modules/_lists.scss */
+/* line 398, ../src/smacss/modules/_lists.scss */
 .few {
   font-size: 0.695rem;
   line-height: 1.34831460674157;
 }
-/* line 391, ../src/smacss/modules/_lists.scss */
+/* line 402, ../src/smacss/modules/_lists.scss */
 .few a {
   font-weight: normal;
 }
 
-/* line 396, ../src/smacss/modules/_lists.scss */
+/* line 407, ../src/smacss/modules/_lists.scss */
 .many {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 125em) {
-  /* line 396, ../src/smacss/modules/_lists.scss */
+  /* line 407, ../src/smacss/modules/_lists.scss */
   .many {
     font-size: 1.202rem;
     line-height: 1.30011961100421;
@@ -5040,7 +5053,7 @@ ul.accordion-inner{
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
-/* line 409, ../src/smacss/modules/_lists.scss */
+/* line 420, ../src/smacss/modules/_lists.scss */
 .alpha-label {
   border: 1px solid #c8c1cd;
   border-bottom-width: 0;
@@ -5052,7 +5065,7 @@ ul.accordion-inner{
   border-radius: 2px 2px 0 0;
 }
 
-/* line 424, ../src/smacss/modules/_lists.scss */
+/* line 435, ../src/smacss/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #c8c1cd;
   margin: 0;
@@ -5064,7 +5077,7 @@ ul.accordion-inner{
   list-style-type: none;
 }
 @media screen and (min-width: 32em) {
-  /* line 424, ../src/smacss/modules/_lists.scss */
+  /* line 435, ../src/smacss/modules/_lists.scss */
   .alpha-index {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5075,13 +5088,13 @@ ul.accordion-inner{
   }
 }
 
-/* line 447, ../src/smacss/modules/_lists.scss */
+/* line 458, ../src/smacss/modules/_lists.scss */
 .alpha-label + .alpha-index {
   margin-top: -1px;
   border-top-left-radius: 0;
 }
 
-/* line 454, ../src/smacss/modules/_lists.scss */
+/* line 465, ../src/smacss/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -5094,7 +5107,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 469, ../src/smacss/modules/_lists.scss */
+/* line 480, ../src/smacss/modules/_lists.scss */
 .badge-list {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -5110,19 +5123,19 @@ ul.accordion-inner{
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 476, ../src/smacss/modules/_lists.scss */
+/* line 487, ../src/smacss/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 486, ../src/smacss/modules/_lists.scss */
+/* line 497, ../src/smacss/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 490, ../src/smacss/modules/_lists.scss */
+/* line 501, ../src/smacss/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -5133,12 +5146,12 @@ ul.accordion-inner{
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 501, ../src/smacss/modules/_lists.scss */
+/* line 512, ../src/smacss/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 505, ../src/smacss/modules/_lists.scss */
+/* line 516, ../src/smacss/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #d9d4dc;
 }
