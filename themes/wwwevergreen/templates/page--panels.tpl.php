@@ -111,7 +111,6 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					print render($page['filters']); 
 				?>
 			</div>
-		<h1>WHAT'S UP, Y'ALL?</h1>	
 		<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
 			<?php print $messages; ?>
 	        <?php if ($page['highlighted']): ?>
