@@ -91,7 +91,7 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-	    dpm($content);
+	    dsm($content);
 	    
 	    
       // We hide the comments and links now so that we can render them later.
