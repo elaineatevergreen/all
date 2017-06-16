@@ -93,7 +93,7 @@
     <?php
 	    //dsm($content['field_disciplines']);
 	    
-	    function commaList($field) {
+	    /*function commaList($field) {
 		  foreach($field as $f)  {
 			  dsm($f);
 			  $url = "path";
@@ -105,11 +105,11 @@
 		  //$comma = 'testing?';
 		  $comma = substr($comma, -2);
 		  return $comma;
-	    };
+	    };*/
 	    
 	?>
 	<p>Authors: <?php print render($content['field_author']) ?></p>
-	<p>Disciplines: <?php print commaList($content['field_disciplines']) ?></p>
+	<p>Disciplines: <?php print render($content['field_themes']) ?></p>
 	<p>Themes: <?php print render($content['field_themes']) ?></p>
 	<p>Tribes: <?php print render($content['field_tribes']) ?></p>
 	<?php
