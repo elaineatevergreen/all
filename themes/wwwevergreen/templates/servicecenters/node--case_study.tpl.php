@@ -92,9 +92,20 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php
 	    dsm($content['field_disciplines']);
+	    
+	    function commaList($field) {
+		  foreach($field as $f)  {
+			  $url = $f['#uri'];
+			  $label = $f['#label'];
+			  $comma .= "<a href='$url'>$label</a>, ");
+		  };
+		  $comma = substr($comma, -2);
+		  return $comma;
+	    };
+	    
 	?>
 	<p>Authors: <?php print render($content['field_author']) ?></p>
-	<p>Disciplines: <?php print render($content['field_disciplines']) ?></p>
+	<p>Disciplines: <?php print commaList($content['field_disciplines']) ?></p>
 	<p>Themes: <?php print render($content['field_themes']) ?></p>
 	<p>Tribes: <?php print render($content['field_tribes']) ?></p>
 	<?php
