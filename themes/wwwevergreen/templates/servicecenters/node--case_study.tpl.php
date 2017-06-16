@@ -90,11 +90,11 @@
 
 
   <div class="content"<?php print $content_attributes; ?>>
-	<p>Authors: <?php print render($content['field_author']) ?></p>
-	<p>Disciplines: <?php print render($content['field_disciplines']) ?></p>
-	<p>Themes: <?php print render($content['field_themes']) ?></p>
+	<p><b>Authors</b>: <?php print render($content['field_author']) ?></p>
+	<p><b>Disciplines</b>: <?php print render($content['field_disciplines']) ?></p>
+	<p><b>Themes</b>: <?php print render($content['field_themes']) ?></p>
 	<?php if(isset($content['field_tribes'])) { ?>
-		<p>Tribes: <?php print render($content['field_tribes']) ?></p>
+		<p><b>Tribes</b>: <?php print render($content['field_tribes']) ?></p>
 	<?php }; ?>
 	
 	<?php
