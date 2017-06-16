@@ -92,7 +92,14 @@
 	}
 }
 
-.pager{  // Drupal pagination navigation, (e.g. «First ‹Previous 1 2 3 Next› Last»)
+/**
+ * Pager is used by Drupal pagination navigation, and Google search engine
+ * result pages.
+ *
+ * (E.g. «First ‹Previous 1 2 3 Next› Last»)
+ */
+.pager,
+.item-list .pager{  // Drupal (see Faculty Directory, for example)
 	// box model
 	margin-left: 0;
 	// layout
@@ -105,6 +112,10 @@
 	@include breakpoint($starlord){
 		justify-content: center;
 	}
+}
+
+.item-list .pager li{  // Drupal (see Faculty Directory, for example)
+	padding: 0 0.5ch;
 }
 
 /**
