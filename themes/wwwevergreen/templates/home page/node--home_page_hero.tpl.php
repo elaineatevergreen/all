@@ -64,7 +64,7 @@
 			$slogan_svg_wide = "go-beyond/slogan-wide";
 			$slogan_svg_mobile = "go-beyond/slogan-mobile";
 			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
-			$call_to_action = "Watch the event";
+			$call_to_action = "See for yourself";
 			break;
 	};
 
