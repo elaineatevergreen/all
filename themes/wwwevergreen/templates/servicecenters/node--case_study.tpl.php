@@ -93,13 +93,18 @@
     <?php
 	    dsm($content);
 	?>
-	<p>Author: <?php print render($content['field_author']) ?></p>
+	<p>Authors: <?php print render($content['field_author']) ?></p>
+	<p>Disciplines: <?php print render($content['field_disciplines']) ?></p>
+	<p>Themes: <?php print render($content['field_themes']) ?></p>
 	<?php
 	    
 	    
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+      hide($content['field_author']);
+      hide($content['field_disciplines']);
+      hide($content['field_themes']);
       print render($content);
     ?>
     
