@@ -92,6 +92,9 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php
 	    dsm($content);
+	?>
+	<p>Author: <?php print render($content['field_author']) ?></p>
+	<?php
 	    
 	    
       // We hide the comments and links now so that we can render them later.
@@ -100,7 +103,7 @@
       print render($content);
     ?>
     
-    <p>Author: <?php /*print render($content['field_author'])*/ ?></p>
+    
     
     
     
