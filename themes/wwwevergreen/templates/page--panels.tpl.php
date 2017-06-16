@@ -11,58 +11,59 @@
 			
 	* Canvas > Canvas settings
 	* Column > Column settings
+	
+	
  */
 ?>
 
 <?php
-	$evergreen_blocks = theme_get_setting('evergreen_blocks');
+$evergreen_blocks = theme_get_setting('evergreen_blocks');
 ?>
 
-<!-- I believe we're no longer using this #sitewide-alert. -->
 <div class="row box" id="sitewide-alert"><!--This is a placeholder. Keep it empty.--></div>
-<header class="row" role="banner">
+	<header class="row" role="banner">
 		
-	<?php 
-		/* one of the locations where we can switch between standard Evergreen site elements
-			and customizations for public service centers.
-			*/
 		
-		//main site
-		if($evergreen_blocks == 1):
-			staticblocks('page-header');
-		
-		// markup & regions for service center sites
-		else:
-	?>
-		<div class="header-dropdowns">
-			<div class="header-dropdown">
-				<?php print render($page['header_dropdowns']);  ?>
-			</div>
-		</div>
-				
-		<div class="page-header">
-			<div class="logo">
-				<?php
-					if ($logo): 
-				?>
-		      <a href="<?php print $front_page; ?>" rel="home" id="logo">
-						<img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
-		      </a>
-				<?php else:
-	      	//what should happen if the logo doesn't exist?
-				?>
-					<a href="<?php print $front_page; ?>" rel="home" id="logo">
-						<?php print $site_name; ?>
-					</a>
-	      <?php
-	      	endif; //end check for logo
-		    ?>
-			</div>
-		</div>
+<?php 
+			/* one of the locations where we can switch between standard Evergreen site elements
+				and customizations for public service centers.
+				*/
 			
-	<?php
-		endif; //end check for public service center
-	?>
+			//main site
+			if($evergreen_blocks == 1):
+				staticblocks('page-header');
+			
+			// markup & regions for service center sites
+			else:
+		?>
+			<div class="header-dropdowns">
+				<div class="header-dropdown">
+					<?php print render($page['header_dropdowns']);  ?>
+				</div>
+			</div>
+			
+			<div class="page-header">
+				<div class="logo">
+					<?php
+					 if ($logo): 
+					 ?>
+		      <a href="<?php print $front_page; ?>" rel="home" id="logo">
+		        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
+		      </a>
+		      	<?php else:
+			      	//what should happen if the logo doesn't exist?
+			      	?>
+			      	<a href="<?php print $front_page; ?>" rel="home" id="logo"><?php print $site_name; ?></a>
+		      <?php
+			      	endif; //end check for logo
+			    ?>
+				</div>
+			</div>
+		
+		<?php
+			
+			endif; //end check for public service center
+		?>
 
 	<nav class="top-nav" role="navigation">
 		<?php 
@@ -82,47 +83,25 @@
 
 
 <section class="site-content">
-	
-	<!-- this would be the right one per the new CSS, but since I'm not getting the class on the img tag it doesn't work. -->
-	<!-- I think this works now. —jkm -->
 	<div class="main-background2">
 		<?php print render($page['background_image']); ?>
 	</div>
 	
+<?php 
+	/* only show the header region if this is NOT the front page */
+	if($is_front == FALSE) { ?>
 	<header class="row">
 		<div class="grid grid-alt wrapper">
 			<div class="site-name unit-5-7"><?php print render($page['section_title']); ?></div>
 		</div>
 	</header>
+<?php }; ?>
 
-	<main id="main-row" class="main-row row wrapper" role="main">
-		<div class="grid main-row-grid">
-			
-			<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
-			<?php print $messages; ?>
-			<?php if ($page['highlighted']): ?>
-				<div id="highlighted">
-					<?php print render($page['highlighted']); ?>
-				</div>
-			<?php endif; ?>
-			<?php print render($title_prefix); ?>
-			<?php if ($title and $title!='Home'): ?>
-				<h1 class="title" id="page-title"><?php print $title; ?></h1>
-			<?php endif; ?>
-			<?php print render($title_suffix); ?>
-			<?php if ($tabs): ?>
-				<div class="tabs">
-					<?php print render($tabs); ?>
-				</div>
-			<?php endif; ?>
-			<?php print render($page['help']); ?>
-			<?php if ($action_links): ?>
-				<ul class="action-links">
-					<?php print render($action_links); ?>
-				</ul>
-			<?php endif; ?>
-		
-			<?php /* Do we take out this entire column of the grid on panel pages? */ ?>
+<?php 
+	/* for Panels pages, there are no wrapping grid divs. */ 
+	/* should the tertiary-nav-wrapper also go away? */
+?>
+
 			<div class="tertiary-nav-wrapper unit-1-7">
 				<?php 
 					/* render anything that's in the section navigation. see region--section_nav.tpl.php for that markup. */
@@ -132,11 +111,21 @@
 					print render($page['filters']); 
 				?>
 			</div>
-			<?php print render($page['content']); ?>
-			<?php print $feed_icons; ?>
-
-		</div> <!-- end .main-row-grid -->
-	</main>
+		<h1>WHAT'S UP, Y'ALL?</h1>	
+		<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
+			<?php print $messages; ?>
+	        <?php if ($page['highlighted']): ?>
+	        	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
+	        <?php endif; ?>
+	        <a id="main-content"></a>
+	        <?php print render($title_prefix); ?>
+	        <?php if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+	        <?php print render($title_suffix); ?>
+	        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+	        <?php print render($page['help']); ?>
+	        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+	        <?php print render($page['content']); ?>
+	        <?php print $feed_icons; ?>
 
 </section>
 
