@@ -94,13 +94,13 @@
 	    dsm($content['field_disciplines']);
 	    
 	    function commaList($field) {
-		  foreach($field as $f)  {
+		  /*foreach($field as $f)  {
 			  $url = $f['#uri'];
 			  $label = $f['#label'];
 			  $comma .= "<a href='$url'>$label</a>, ");
 		  };
 		  $comma = substr($comma, -2);
-		  return $comma;
+		  return $comma;*/
 	    };
 	    
 	?>
