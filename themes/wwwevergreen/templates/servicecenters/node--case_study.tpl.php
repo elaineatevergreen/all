@@ -91,13 +91,14 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-	    dsm($content['field_disciplines']);
+	    //dsm($content['field_disciplines']);
 	    
 	    function commaList($field) {
 		  foreach($field as $f)  {
-			  //dsm($f);
-			  $url = $f["#uri"]["path"];
-			  $label = $f["#label"];
+			  dsm($f);
+			  $url = $f['#uri']['path'];
+			  $label = "word";
+			  //$label = $f['#label'];
 			  $comma .= "<a href='$url'>$label</a>, ");
 		  };
 		  $comma = 'testing?';
