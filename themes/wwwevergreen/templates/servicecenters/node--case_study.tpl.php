@@ -95,10 +95,10 @@
 	    
 	    function commaList($field) {
 		  foreach($field as $f)  {
-			  dsm($f);
-			  //$url = $f["#uri"];
-			  //$label = $f["#label"];
-			  //$comma .= "<a href='$url'>$label</a>, ");
+			  //dsm($f);
+			  $url = $f["#uri"]["path"];
+			  $label = $f["#label"];
+			  $comma .= "<a href='$url'>$label</a>, ");
 		  };
 		  $comma = 'testing?';
 		  //$comma = substr($comma, -2);
