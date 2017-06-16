@@ -95,11 +95,11 @@
 	    
 	    function commaList($field) {
 		  foreach($field as $f)  {
-			  //dsm($f);
-			  //$url = "path";
-			  $url = $f['#uri']['path'];
-			  //$label = "word";
-			  $label = $f['#label'];
+			  dsm($f);
+			  $url = "path";
+			  //$url = $f['#uri']['path'];
+			  $label = "word";
+			  //$label = $f['#label'];
 			  $comma .= "<a href='$url'>$label</a>, ";
 		  };
 		  //$comma = 'testing?';
