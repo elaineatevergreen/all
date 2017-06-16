@@ -91,15 +91,16 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
+	    dpm($content);
+	    
+	    
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       print render($content);
-      
-      dsm($content);
     ?>
     
-    <p>Author: <?php print render($content['field_author']) ?></p>
+    <p>Author: <?php /*print render($content['field_author'])*/ ?></p>
     
     
     
