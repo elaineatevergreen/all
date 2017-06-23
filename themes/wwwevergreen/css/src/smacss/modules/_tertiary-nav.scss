@@ -452,11 +452,13 @@ ul.accordion-inner{
 .field-section-navigation a:visited,
 .field-section-navigation a:hover{
 	// box model
-	border-bottom: none;
+	//border-bottom: none;
 	// layout
 	display: block;
 	// typography
 	font-weight: normal;
+	// decoration
+	text-decoration: none;
 }
 
 
