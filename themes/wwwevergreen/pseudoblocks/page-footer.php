@@ -56,9 +56,7 @@
 						<div class="adr">
 							<div class="street-address">2700 Evergreen Parkway&nbsp;NW</div>
 							<div class="location">
-								<span class="locality">Olympia</span>,
-								<span class="region">Washington</span>
-								<span class="postal-code">98505</span>
+								<span class="locality">Olympia</span>, <span class="region">Washington</span> <span class="postal-code">98505</span>
 							</div>
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
