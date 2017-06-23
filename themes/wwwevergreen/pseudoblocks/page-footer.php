@@ -72,8 +72,7 @@
 					<ul class="element-list text-list-alt">
 						<li class="do-not-print">
 							<p>
-								<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a>
-								<small>(Includes alerts about delays and closures.)</small>
+								<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
 							</p>
 						</li>
 						<li class="do-not-print">
