@@ -388,7 +388,10 @@ a:active{
  * @section a-site-name
  */
 .site-name a{
+	// box model
 	//border-bottom-width: 0;
+	// decoration
+	text-decoration: none;
 
 	&,
 	&:visited{
