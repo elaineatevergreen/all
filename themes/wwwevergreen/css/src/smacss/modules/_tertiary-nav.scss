@@ -387,12 +387,13 @@ ul.accordion-inner{
 	//transition: max-height 0.25s ease 0s;
 
 	@include breakpoint ($gamora){
-		//border-bottom-width: 0;
+		// box model
+		border-bottom-width: 0;
 		//max-height: 600px;
 		// decoration
 		background-color: transparent;
 		box-shadow: none;
-		text-decoration: none;
+		//text-decoration: none;
 	}
 
 	@include breakpoint($drax){

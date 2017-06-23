@@ -104,9 +104,13 @@
 .homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
 .homepage-hero a:visited,
 .homepage-hero a:hover{
-	border-width: 0;
+	// box model
+	//border-width: 0;
+	// typography
 	color: inherit;
 	font-weight: inherit;
+	// decoration
+	text-decoration: none;
 }
 
 .homepage-hero .call-to-action{
