@@ -127,12 +127,12 @@
 @import "modules/homepage-hero";
 
 .location-transporter{
-  margin: calc(30 / 18 * 1em) 1ch;
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 1.38888888888889;
-  text-align: center;
-  
+	margin: calc(30 / 18 * 1em) 1ch;
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 1.38888888888889;
+	text-align: center;
+
 	@include breakpoint($starlord){
 		// box model
 		margin: calc(30 / 19.229 * 1em) 1ch;
@@ -326,9 +326,11 @@
  */
 .news-title-link a{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	// typography
 	color: $black;
+	// decoration
+	text-decoration: none;
 }
 
 .news-story{
@@ -396,7 +398,7 @@
  */
 .lazy-load{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	max-width: 100%;
 	// layout
 	display: block;
