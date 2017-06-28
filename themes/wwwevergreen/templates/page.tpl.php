@@ -186,7 +186,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	        	<?php 
 		        	print render($title_prefix); 
 		        	
-			        if ($title and $title!='Home'): 
+			        if ($title and substr($title,-4)!='Home'): 
 				?>
 						<h1 class="title" id="page-title"><?php print $title; ?></h1>
 				<?php 
