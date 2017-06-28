@@ -21,13 +21,6 @@ html{
 	box-sizing: inherit;
 }
 
-/**
- * For the following, I am taking pity on IE8- because I'm using
- * the appropriate double-colon syntax for pseudo-elements. If I
- * condensed this style declaration with the above *, IE8- would
- * choke on the whole thing, breaking the border-box declaration
- * for the universal selector.
- */
 *::before,
 *::after{
 	box-sizing: inherit;
@@ -74,10 +67,17 @@ iframe{
 	width: 100%;
 }
 
+.iframe-ratio-9-6{  // 9:6 ratio
+	// box model
+	height: 0;
+	padding-bottom: 66.6666666667%;
+	// position
+	position: relative;
+}
+
 .iframe-ratio-16-9{  // 16:9 ratio
 	// box model
 	height: 0;
-	//padding-top: 25px;
 	padding-bottom: 56.25%;
 	// position
 	position: relative;

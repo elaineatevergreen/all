@@ -86,10 +86,9 @@ figure,
 }
 
 /**
- * Removing hyphen rules for now.
- * English doesn't have long enough words to warrant this,
- * and we’re not justifying text,
- * but consider it for narrow columns.
+ * Removing hyphen rules for now. English doesn't have long enough words to
+ * warrant this, and we’re not justifying text, but consider it for
+ * narrower columns.
  */
 /*p{
 	hyphens: auto;
@@ -150,7 +149,7 @@ h2{
 	font-size: 1.202rem;  // 19.229px  Step 2
 	font-weight: bold;
 	line-height: 1.56014353320505;  // 30/19.229
-	
+
 	@include breakpoint($rocket){
 		font-family: $display-face;
 	}
@@ -180,7 +179,7 @@ h3{
 	font-family: $display-face-alt;
 	@include base-type-lg;
 	font-weight: normal;
-	
+
 	@include breakpoint($rocket){
 		font-family: $display-face;
 	}
@@ -217,14 +216,6 @@ h4{
 		font-size: 1.202rem;  // 19.229px  Step 2
 		line-height: 1.56014353320505;  // 30/19.229
 	}
-
-	/*@include breakpoint($groot){
-	// box model
-	margin-top: 1.5451174289246em;  // 45/29.124
-	// typography
-	font-size: 1.82rem;  // 29.124px  Step 3
-	line-height: 1.03007828594973; // 30/29.124
-	}*/
 }
 
 h5{
@@ -354,11 +345,13 @@ a,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
 	//box model
-	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+	//border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
 	//typography
 	color: $blueberry-susan;
 	font-weight: bold;
-	text-decoration: none;
+	// decoration
+	text-decoration: underline mix($tint, $blueberry-susan, 75%);
+	text-decoration-skip: ink;
 	// movement
 	transition: color 0.2s, border-color 0.2s ease;
 }
@@ -367,7 +360,8 @@ a:visited{
 	// typography
 	color: $wine;
 	// decoration
-	border-bottom-color: mix($tint, $wine, 75%);
+	//border-bottom-color: mix($tint, $wine, 75%);
+	text-decoration-color: mix($tint, $wine, 75%);
 }
 
 a:hover,
@@ -377,7 +371,8 @@ a:hover,
 	// typography
 	color: $sky-blue;
 	// decoration
-	border-bottom-color: $sky-blue;
+	//border-bottom-color: $sky-blue;
+	text-decoration-color: $sky-blue;
 }
 
 a:focus,
@@ -393,7 +388,10 @@ a:active{
  * @section a-site-name
  */
 .site-name a{
-	border-bottom-width: 0;
+	// box model
+	//border-bottom-width: 0;
+	// decoration
+	text-decoration: none;
 
 	&,
 	&:visited{
@@ -520,6 +518,6 @@ hr{
 	height: 5px;
 	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
 	width: 100%;
-	// backgrounds & borders
+	// decoration
 	background-color: $evergreen-neue;
 }

@@ -166,7 +166,7 @@ input:checked + .header-dropdown{
 	a,
 	a:visited,
 	a:hover{
-		border-bottom-width: 0;
+		//border-bottom-width: 0;
 	}
 
 	img{
@@ -223,7 +223,7 @@ input:checked + .header-dropdown{
 
 .search-toggle,
 .student-toggle{
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 }
 
 .search-toggle:hover,
@@ -439,11 +439,13 @@ input:checked + .header-dropdown{
 .top-nav-list a,  // Drupal
 .secondary-nav-link{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
+	// decoration
+	text-decoration: none;
 
 	&:hover{
 		// typography
@@ -574,7 +576,7 @@ input:checked + .header-dropdown{
 	&,
 	&:visited{
 		// box model
-		border-bottom: 0;
+		//border-bottom: 0;
 		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		height: 100%;
 		width: 100%;
@@ -583,6 +585,8 @@ input:checked + .header-dropdown{
 		// typography
 		color: $tint;
 		font-weight: normal;
+		// decoration
+		text-decoration: none;
 
 		@include breakpoint($lil-groot){
 			align-items: center;

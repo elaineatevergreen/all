@@ -67,6 +67,7 @@
 	@include small-type;
 }
 
+/* The thumbnail that appears to the right of the excerpt. */
 .gss-thumbnail-image{
 	// box model
 	border: 1px solid mix($shade, $sky-blue, 60%);
@@ -74,12 +75,17 @@
 	max-height: 7em;
 	// layout
 	float: right;
-	// backgrounds & borders
+	// decoration
 	border-radius: 2px;
 }
 
+/* The URL that appear underneath the search excerpt. */
+.gss-search-url{
+	@include small-type;
+}
+
 div.item-list ul.pager{  // Override of gss.css
-	// The margin values at all breakpoints should match the vertical margins of the normal uls.
+	// The bottom margin values at all breakpoints should match the vertical margins of the normal uls.
 	@include margin-default;
 	margin-top: calc(45 / 14 * 1em);
 
@@ -95,7 +101,7 @@ div.item-list ul.pager{  // Override of gss.css
 
 div.item-list ul.pager li{  // Override of gss.css
 	// box model
-	padding: 0;
+	padding: 0 0.5ch;
 	// layout
 	flex-basis: 3ch;
 	
@@ -124,7 +130,7 @@ div.item-list ul.pager li.pager-next{  // Override of gss.css
 	// box model
 	border-width: 0;
 	padding: 0;
-	// backgrounds & borders
+	// decoration
 	background-color: transparent;
 }
 
@@ -152,7 +158,7 @@ div.item-list ul.pager li.pager-next{  // Override of gss.css
 .gsc-clear-button{
 	// box model
 	padding: 0;
-	// backgrounds and borders
+	// decoration
 	box-shadow: none;
 }
 
@@ -181,7 +187,7 @@ div.item-list ul.pager li.pager-next{  // Override of gss.css
 	width: auto;
 	// layout
 	display: block;
-	// backgrounds and borders
+	// decoration
 	box-shadow: none;
 }
 
@@ -219,7 +225,7 @@ div.gsc-selected-option-container{
 .gsc-results .gsc-webResult.gsc-result.gsc-promotion:hover{
 	// box model
 	border-width: 0;
-	// backgrounds & borders
+	// decoration
 	background-color: transparent;
 }
 
