@@ -250,13 +250,20 @@ iframe {
 }
 
 /* line 70, ../src/smacss/_base.scss */
+.iframe-ratio-9-6 {
+  height: 0;
+  padding-bottom: 66.6666666667%;
+  position: relative;
+}
+
+/* line 78, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 78, ../src/smacss/_base.scss */
+/* line 86, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -1754,7 +1761,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 119, ../src/smacss/_base.scss */
+/* line 127, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -5511,7 +5518,7 @@ div.ajax-progress {
  *
  * Put .compound-img on the right. Extends .compound
  *
- * .compound
+ * .compound.compound-alt
  * +---------------------+ +------------+
  * |                     | |            |
  * | .compound-body      | | .compound- |
