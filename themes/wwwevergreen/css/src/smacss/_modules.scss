@@ -127,7 +127,9 @@
 @import "modules/homepage-hero";
 
 .location-transporter{
+	// box model
 	margin: calc(30 / 18 * 1em) 1ch;
+	// typography
 	font-size: 1.125rem;
 	font-weight: bold;
 	line-height: 1.38888888888889;
