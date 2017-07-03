@@ -13,6 +13,7 @@
  * 2. Alternate
  * 3. Vertically-Centered
  * 4. Column And Squishy
+ * 5. SVG Images
  */
 /**
  * 1. Default
@@ -214,4 +215,17 @@
 .compound-column > .compound-img img,
 .compound-sqishy > .compound-img img{
 	margin: 0 auto;
+}
+
+/**
+ * 5. SVG Images
+ *
+ * SVGs are tricky because they don’t come with intrinsic dimensions and
+ * therefore lack flexibility.
+ *
+ * These styles make sure they size up to the maximum available width of
+ * the .compound-img container.
+ */
+.compound-img-full{
+	flex-basis: 100%;
 }
