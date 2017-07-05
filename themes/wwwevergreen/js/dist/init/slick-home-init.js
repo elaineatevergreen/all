@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+	console.log("slick-home-init.js loaded.");
 	$('#upcoming-events-list').slick({
 		accessibility: true,
 		arrows: true,
