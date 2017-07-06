@@ -148,12 +148,7 @@
 	// box model
 	height: 100%;
 	width: 100%;
-	//max-width: 77em;  // Should match the max-width of .wrapper
-	// layout
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	overflow: hidden;
+	max-width: 77em;
 	// decoration
 	background-color: $blueberry-susan;
 

@@ -39,21 +39,27 @@
 /**
  * B. Page-level Layout
  */
-.wrapper{
+.wrapper,
+.wrapper-full{
 	// box model
 	margin: 0 auto;
 	width: 100%;
 	// layout
 	display: block;
 
-	&.grid,
-	&.grid-alt{
-		display: flex;
-	}
-
 	@include breakpoint($drax){
 		max-width: 77em;
 	}
+}
+
+/**
+ * A standard wrapper for rows that take up the full 7-column grid. This
+ * wrapper will leave auto-margins around the edges of the container when
+ * the site is viewed at narrow screen sizes.
+ */
+
+.wrapper-full{  // Keeps a bit of space for vertical auto-margins.
+	width: calc(100% - 4em);
 }
 
 .wrapper:before,  // nega-clearfix! Clearfix that wraps the element around TOP margins.
@@ -65,6 +71,11 @@
 	display: table;
 	// miscellaneous
 	content: "";
+}
+
+.wrapper.grid,
+.wrapper.grid-alt{
+	display: flex;
 }
 
 /**
