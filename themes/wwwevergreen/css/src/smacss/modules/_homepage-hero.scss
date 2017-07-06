@@ -43,7 +43,7 @@
 	}*/
 }
 
-.homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
+.homepage-hero-picture img{  // .homepage-hero-picture is the fallback image
 	display: block;
 
 	@include breakpoint($starlord){
