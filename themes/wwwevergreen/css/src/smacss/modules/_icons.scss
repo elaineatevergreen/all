@@ -106,9 +106,10 @@
 	&,
 	&:visited{
 		// box model
-		border-bottom-width: 0;
 		// typography
 		color: $evergreen-neue;
+		// decoration
+		text-decoration: none;
 	}
 
 	&:hover{
@@ -148,7 +149,6 @@
 	color: $tint;
 	text-align: center;
 	// decoration
-	//background-color: $evergreen-neue;
 	border-radius: 50%;
 	// behavior
 	transition: all 0.2s;

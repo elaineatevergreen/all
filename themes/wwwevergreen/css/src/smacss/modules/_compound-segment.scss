@@ -13,6 +13,7 @@
  * 2. Alternate
  * 3. Vertically-Centered
  * 4. Column And Squishy
+ * 5. SVG Images
  */
 /**
  * 1. Default
@@ -37,7 +38,7 @@
 .compound-img,
 .compound-img:link{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	margin-bottom: 1.071428571428571em;  // 15px
 	padding-right: 1.071428571428571em;  // 15px
 	max-width: 31.3333333333%;
@@ -78,7 +79,7 @@
  *
  * Put .compound-img on the right. Extends .compound
  *
- * .compound
+ * .compound.compound-alt
  * +---------------------+ +------------+
  * |                     | |            |
  * | .compound-body      | | .compound- |
@@ -214,4 +215,17 @@
 .compound-column > .compound-img img,
 .compound-sqishy > .compound-img img{
 	margin: 0 auto;
+}
+
+/**
+ * 5. SVG Images
+ *
+ * SVGs are tricky because they don’t come with intrinsic dimensions and
+ * therefore lack flexibility.
+ *
+ * These styles make sure they size up to the maximum available width of
+ * the .compound-img container.
+ */
+.compound-img-full{
+	flex-basis: 100%;
 }

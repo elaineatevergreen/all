@@ -159,10 +159,12 @@
 
 .accordion dt a{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	width: 100%;
 	// layout
 	display: block;
+	// decoration
+	text-decoration: none;
 }
 
 .accordion dt a:before{
@@ -420,7 +422,7 @@
 .alpha-label{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	margin-bottom: -1px;
 	padding: 0 1ch;
 	// layout
@@ -430,6 +432,7 @@
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
+	text-decoration: none;
 }
 
 .alpha-index{
