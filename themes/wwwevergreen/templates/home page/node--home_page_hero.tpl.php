@@ -32,47 +32,78 @@
 	
 	$field_hero_image = field_get_items('node', $node, 'field_hero_image');	
 	$xl_hero = file_create_url($field_hero_image[0]['uri']);
+	
+	$field_home_page_version = field_get_items('node', $node, 'field_home_page_version');
+	$field_home_page_version = $field_home_page_version[0]['value'];
+	//dsm($field_home_page_version);
+	
+	switch($field_home_page_version) {
+		case 'graduation':
+			$destination = "/graduation";
+			$content_class = "homepage-hero-content-grad";
+			$hero_alt = "'Grats Greener grads. Watch live.";
+			$slogan_svg_wide = "grats-greener-grads/grats-long";
+			$slogan_svg_mobile = "grats-greener-grads/grats-stacked";
+			$slogan_alt = "'Grats Greener grads.";
+			$call_to_action = "Watch the event";
+			break;
+		case 'orientation':
+			$destination = "/orientation";
+			$content_class = "";
+			$hero_alt = "O HAI IT'S ORIENTATION";
+			$slogan_svg_wide = "go-beyond/slogan-wide";
+			$slogan_svg_mobile = "go-beyond/slogan-mobile";
+			$slogan_alt = "YUP, O WEEK ALREADY";
+			$call_to_action = "See the Schedule";
+			break;
+		//this covers both "Normal" and for older hero images, any blank value
+		default:
+			$destination = "/academics";
+			$content_class = "";
+			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
+			$slogan_svg_wide = "go-beyond/slogan-wide";
+			$slogan_svg_mobile = "go-beyond/slogan-mobile";
+			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
+			$call_to_action = "See for yourself";
+			break;
+	};
 
 ?>
 
 <div class="row">
 	<div class="homepage-hero <?php print $classes ?>">  
-		<a class="homepage-hero-link" href="/academics">
-			<picture class="homepage-hero-picture">
-	  		<source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
-				<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
-				<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
-				<source srcset="<?php echo $small_hero; ?>"/>
-				<img alt="Experience more." srcset="<?php echo $xl_hero; ?>" />
-			</picture>
-			
-			<div class="homepage-hero-caption">
-				<div class="box caption-box">
-					<p class="caption">Photo: <?php print render($title) ?></p>
-				</div>
-			</div>
-			
-			<!--<div class="wrapper">-->
-				<div class="homepage-hero-slogan-wrapper">
-				<!--<div class="homepage-hero-content">-->
-					<div class="homepage-hero-slogan">
+		
+		<picture class="homepage-hero-picture">
+  		    <source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
+			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
+			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
+			<source srcset="<?php echo $small_hero; ?>"/>
+			<img alt="<?php print $hero_alt ?>" src="<?php echo $xl_hero; ?>" />
+		</picture>
+		
+		<div class="wrapper">
+			<a href="<?php print $destination ?>">
+				<div class="homepage-hero-content <?php print $content_class ?>">
+					<?php 
+						/* the caption shouldn't appear on the graduation page */
+						if($field_home_page_version != 'graduation') { 
+						?>
+					<div class="box caption-box">
+						<p class="caption">Photo: <?php print render($title) ?></p>
+					</div>
+					<?php }; //end check for graduation ?>
+					<div class="homepage-hero-copy">
 						<h1>
 							<picture>
-								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-lg.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
-								<img alt="Experience more." src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-main-sm.svg"/>
+								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
+								<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 							</picture>
 						</h1>
-						<div class="homepage-hero-slogan-keywords">
-							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/><br/>
-							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/><br/>
-							<img alt="" src="<?php print base_path() . path_to_theme() ?>/images/homepage/experience-more/experience-more-keywords.svg"/>
-						</div>
-						<!--<p class="call-to-action">Learn how →</p>-->
+						<p class="call-to-action"><?php print $call_to_action ?> →</p>
 					</div>
-				<!--</div>-->
-				
-			</div>
-		</a>
+				</div>
+			</a>
+		</div>
 	</div>
 </div>
