@@ -4411,6 +4411,7 @@ ul.accordion-inner{
   color: #f2f2f2;
   font-size: 0.875rem;
   line-height: 1.42857142857143;
+  text-align: center;
   background-color: black;
 }
 @media screen and (min-width: 70em) {
@@ -4418,6 +4419,7 @@ ul.accordion-inner{
   .page-footer {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
+    text-align: left;
   }
 }
 @media screen and (min-width: 125em) {
@@ -4428,7 +4430,12 @@ ul.accordion-inner{
   }
 }
 
-/* line 28, ../src/smacss/modules/_footer.scss */
+/* line 30, ../src/smacss/modules/_footer.scss */
+.page-footer-unit-central {
+  text-align: center;
+}
+
+/* line 34, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4436,44 +4443,56 @@ ul.accordion-inner{
   content: "";
 }
 
-/* line 37, ../src/smacss/modules/_footer.scss */
+/* line 43, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
   color: #64933a;
-  -webkit-text-decoration-color: #3c5823;
-          text-decoration-color: #3c5823;
+  border-color: #3c5823;
 }
 
-/* line 46, ../src/smacss/modules/_footer.scss */
+/* line 52, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   border-color: #0086ee;
 }
 
-/* line 53, ../src/smacss/modules/_footer.scss */
-.footer-map {
-  display: block;
-  text-align: center;
+/* line 59, ../src/smacss/modules/_footer.scss */
+.page-footer-unit .lineup {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 70em) {
+  /* line 59, ../src/smacss/modules/_footer.scss */
+  .page-footer-unit .lineup {
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
-/* line 60, ../src/smacss/modules/_footer.scss */
+/*.footer-map{
+	// layout
+	display: block;
+	// typography
+	text-align: center;
+}*/
+/* line 74, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
 
-/* line 64, ../src/smacss/modules/_footer.scss */
-.footer-map a {
-  border-width: 0;
-}
-
-/* line 68, ../src/smacss/modules/_footer.scss */
+/*.footer-map a{
+	border-width: 0;
+}*/
+/* line 82, ../src/smacss/modules/_footer.scss */
 .motto-footer p {
   color: #242424;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 68, ../src/smacss/modules/_footer.scss */
+  /* line 82, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4483,14 +4502,14 @@ ul.accordion-inner{
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 68, ../src/smacss/modules/_footer.scss */
+  /* line 82, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 
-/* line 87, ../src/smacss/modules/_footer.scss */
+/* line 101, ../src/smacss/modules/_footer.scss */
 .motto-footer i {
   font-style: normal;
   font-weight: bold;
@@ -4501,17 +4520,17 @@ ul.accordion-inner{
  *
  * Special, non-base element typography.
  */
-/* line 166, ../src/smacss/_modules.scss */
+/* line 168, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 170, ../src/smacss/_modules.scss */
+/* line 172, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 174, ../src/smacss/_modules.scss */
+/* line 176, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4520,7 +4539,7 @@ ul.accordion-inner{
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 43em) {
-  /* line 174, ../src/smacss/_modules.scss */
+  /* line 176, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4529,7 +4548,7 @@ ul.accordion-inner{
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 174, ../src/smacss/_modules.scss */
+  /* line 176, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4538,13 +4557,13 @@ ul.accordion-inner{
   }
 }
 
-/* line 199, ../src/smacss/_modules.scss */
+/* line 201, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
 }
 
-/* line 204, ../src/smacss/_modules.scss */
+/* line 206, ../src/smacss/_modules.scss */
 .byline {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -4554,27 +4573,27 @@ ul.accordion-inner{
   text-transform: uppercase;
 }
 
-/* line 211, ../src/smacss/_modules.scss */
+/* line 213, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.30011961100421;
 }
 @media screen and (min-width: 70em) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 213, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 213, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 225, ../src/smacss/_modules.scss */
+/* line 227, ../src/smacss/_modules.scss */
 .key-number {
   margin: 0.818419903972065em 0 0;
   display: block;
@@ -4584,24 +4603,24 @@ ul.accordion-inner{
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 225, ../src/smacss/_modules.scss */
+  /* line 227, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 242, ../src/smacss/_modules.scss */
+/* line 244, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 246, ../src/smacss/_modules.scss */
+/* line 248, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 250, ../src/smacss/_modules.scss */
+/* line 252, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4610,7 +4629,7 @@ ul.accordion-inner{
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 250, ../src/smacss/_modules.scss */
+  /* line 252, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -5290,36 +5309,37 @@ ul.accordion-inner{
 /* line 106, ../src/smacss/modules/_icons.scss */
 .transporter a, .transporter a:visited {
   color: #64933a;
+  text-decoration: none;
 }
-/* line 114, ../src/smacss/modules/_icons.scss */
+/* line 115, ../src/smacss/modules/_icons.scss */
 .transporter a:hover {
   color: #0086ee;
 }
-/* line 117, ../src/smacss/modules/_icons.scss */
+/* line 118, ../src/smacss/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   box-shadow: 0 0 0.2em rgba(253, 244, 182, 0.5) inset;
 }
 
-/* line 125, ../src/smacss/modules/_icons.scss */
+/* line 126, ../src/smacss/modules/_icons.scss */
 .transporter-call a {
   margin: 0 auto;
   width: 33.3333333333%;
 }
 @media screen and (min-width: 43em) {
-  /* line 125, ../src/smacss/modules/_icons.scss */
+  /* line 126, ../src/smacss/modules/_icons.scss */
   .transporter-call a {
     width: 100%;
   }
 }
 
-/* line 134, ../src/smacss/modules/_icons.scss */
+/* line 135, ../src/smacss/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
 
-/* line 138, ../src/smacss/modules/_icons.scss */
+/* line 139, ../src/smacss/modules/_icons.scss */
 .transporter-icon {
   max-width: 100%;
   display: inline-block;
@@ -5332,20 +5352,20 @@ ul.accordion-inner{
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
-  /* line 138, ../src/smacss/modules/_icons.scss */
+  /* line 139, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     margin: 0 auto;
     max-width: 80%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 138, ../src/smacss/modules/_icons.scss */
+  /* line 139, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     max-width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 138, ../src/smacss/modules/_icons.scss */
+  /* line 139, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     max-width: 90%;
   }
@@ -7599,12 +7619,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 310, ../src/smacss/_modules.scss */
+/* line 312, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 315, ../src/smacss/_modules.scss */
+/* line 317, ../src/smacss/_modules.scss */
 .news-wrapper {
   margin: 0 auto;
   width: calc(100% - 4ch);
@@ -7616,13 +7636,13 @@ p.alert,
  * think in this case, it’s warranted because there is a link under every
  * article. See also: nytimes.com and washingtonpost.com.
  */
-/* line 327, ../src/smacss/_modules.scss */
+/* line 329, ../src/smacss/_modules.scss */
 .news-title-link a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 336, ../src/smacss/_modules.scss */
+/* line 338, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7642,7 +7662,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 353, ../src/smacss/_modules.scss */
+/* line 355, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7658,7 +7678,7 @@ p.alert,
 /**
  * P. Profiles
  */
-/* line 362, ../src/smacss/_modules.scss */
+/* line 364, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7667,13 +7687,13 @@ p.alert,
           shape-outside: circle() border-box;
 }
 
-/* line 369, ../src/smacss/_modules.scss */
+/* line 371, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 369, ../src/smacss/_modules.scss */
+  /* line 371, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7681,7 +7701,7 @@ p.alert,
   }
 }
 
-/* line 379, ../src/smacss/_modules.scss */
+/* line 381, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7804,14 +7824,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 399, ../src/smacss/_modules.scss */
+/* line 401, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 409, ../src/smacss/_modules.scss */
+/* line 411, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7830,24 +7850,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 428, ../src/smacss/_modules.scss */
+/* line 430, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 432, ../src/smacss/_modules.scss */
+/* line 434, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 440, ../src/smacss/_modules.scss */
+/* line 442, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 448, ../src/smacss/_modules.scss */
+/* line 450, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7858,30 +7878,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 459, ../src/smacss/_modules.scss */
+/* line 461, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 463, ../src/smacss/_modules.scss */
+/* line 465, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 463, ../src/smacss/_modules.scss */
+  /* line 465, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 463, ../src/smacss/_modules.scss */
+  /* line 465, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 476, ../src/smacss/_modules.scss */
+/* line 478, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7893,7 +7913,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 488, ../src/smacss/_modules.scss */
+/* line 490, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7901,7 +7921,7 @@ p.alert,
   display: block;
 }
 
-/* line 497, ../src/smacss/_modules.scss */
+/* line 499, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }

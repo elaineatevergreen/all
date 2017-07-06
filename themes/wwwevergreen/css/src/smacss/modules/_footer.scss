@@ -13,16 +13,22 @@
 	// typography
 	color: $tint;
 	@include base-type;
+	text-align: center;
 	// decoration
 	background-color: $shade;
 
 	@include breakpoint($drax){
 		@include base-type-lg;
+		text-align: left;
 	}
 
 	@include breakpoint($groot){
 		@include base-type-xl;
 	}
+}
+
+.page-footer-unit-central{
+	text-align: center;  // Keep it centered, even at large sizes
 }
 
 .page-footer:after,
@@ -40,7 +46,7 @@
 	// typography
 	color: $evergreen-neue;
 	// decoration
-	text-decoration-color: mix($shade, $evergreen-neue, 40%);
+	border-color: mix($shade, $evergreen-neue, 40%);
 }
 
 .page-footer a:hover{
@@ -50,20 +56,28 @@
 	border-color: $sky-blue;
 }
 
-.footer-map{
+.page-footer-unit .lineup{
+	justify-content: center;
+	
+	@include breakpoint($drax){
+		justify-content: flex-start;
+	}
+}
+
+/*.footer-map{
 	// layout
 	display: block;
 	// typography
 	text-align: center;
-}
+}*/
 
 .footer-map img{
 	max-height: calc(150 / 16 * 1rem);
 }
 
-.footer-map a{
+/*.footer-map a{
 	border-width: 0;
-}
+}*/
 
 .motto-footer p{
 	color: mix($tint, $shade, 15%);
