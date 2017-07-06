@@ -7,7 +7,6 @@ stylesheets[all][] = css/dist/styles.css
 ;scripts[] = js/dist/scripts.min.js
 ;Scripts & stylesheets added by Naomi for home page and slick slider
 scripts[] = js/external/matchMedia.min.js
-scripts[] = js/external/picturefill2.min.js
 stylesheets[all][] = css/dist/custom-css/slick.css
 scripts[] = js/external/slick.min.js
 scripts[] = js/dist/init/slick-home-init.js
