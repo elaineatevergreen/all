@@ -41,7 +41,10 @@ function wwwevergreen_preprocess_page(&$variables) {
   // allows for special template pages for panel pages.
   if (module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
         $variables['theme_hook_suggestions'][] = 'page__panels';
-        $variables['theme_hook_suggestions'][] = 'page__'  . $panel_page['name']; //this line doesn't seem to work?
+        /*if($panel_page['name'] == 'page-home') {
+	        $variables['theme_hook_suggestions'][] = 'page__panels__nativecases';
+        };*/
+        $variables['theme_hook_suggestions'][] = 'page__panels__'  . $panel_page['name']; //this line doesn't seem to work?
   };
   // only do this for page-type nodes and only if Path module exists
   if (module_exists('path') && isset($variables['node']) && $variables['node']->type == 'basic_page') {
