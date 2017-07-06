@@ -29,7 +29,7 @@
 
 <!--Upcoming Events-->
 <section class="row upcoming-events">
-	<div class="upcoming-events-homepage2 wrapper">
+	<div class="upcoming-events-homepage2 wrapper-full">
 		<h2>Don’t Miss These</h2>
 		<div class="grid">
 			<div class="unit-1-1">
