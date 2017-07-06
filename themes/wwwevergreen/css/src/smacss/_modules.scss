@@ -314,12 +314,6 @@
 	overflow: hidden;
 }
 
-.news-wrapper{
-	// box model
-	margin: 0 auto;
-	width: calc(100% - 4ch);
-}
-
 /**
  * Override news title links to make them look like regular, unlinked h4s
  * again. While I normally don't like to make links not look like links, I
