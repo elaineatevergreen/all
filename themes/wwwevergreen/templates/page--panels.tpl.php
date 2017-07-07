@@ -17,26 +17,24 @@
 ?>
 
 <?php
-$evergreen_blocks = theme_get_setting('evergreen_blocks');
+	$evergreen_blocks = theme_get_setting('evergreen_blocks');
 ?>
 
-<div class="row box" id="sitewide-alert"><!--This is a placeholder. Keep it empty.--></div>
-	<header class="row" role="banner">
+<header class="row" role="banner">
 		
+	<?php 
+		/**
+		 * one of the locations where we can switch between standard Evergreen site elements
+		 * and customizations for public service centers.
+		 */
 		
-<?php 
-	/**
-	 * one of the locations where we can switch between standard Evergreen site elements
-	 * and customizations for public service centers.
-	 */
-	
-	// main site
-	if($evergreen_blocks == 1):
-		staticblocks('page-header');
-			
-	// markup & regions for service center sites
-	else:
-?>
+		// main site
+		if($evergreen_blocks == 1):
+			staticblocks('page-header');
+				
+		// markup & regions for service center sites
+		else:
+	?>
 	<div class="header-dropdowns">
 		<div class="header-dropdown">
 			<?php print render($page['header_dropdowns']);  ?>
@@ -106,8 +104,8 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		</header>
 	<?php }; ?>
 	
-	<a id="main-content"></a>
-	<main id="main-row" class="main-row row wrapper">
+	<div id="main-content"></div>
+	<main id="main-row" class="main-row row">
 		<?php
 			/* for Panels pages, there are no wrapping grid divs. */ 
 			/* should the tertiary-nav-wrapper also go away? */
