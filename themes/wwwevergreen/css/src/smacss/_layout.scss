@@ -255,7 +255,6 @@
 	@include breakpoint($gamora){
 		// box model
 		margin-left: 20%;
-		padding-left: 1em;
 		width: calc(80% - 2ch);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
@@ -264,6 +263,7 @@
 	@include breakpoint($drax){
 		// box model
 		margin: 0;
+		padding-left: 2ch;
 		width: 28.571428571429%;  // 2/7
 	}
 }

@@ -2460,7 +2460,6 @@ a:link,
   /* line 245, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin-left: 20%;
-    padding-left: 1em;
     width: calc(80% - 2ch);
     overflow: visible;
   }
@@ -2469,6 +2468,7 @@ a:link,
   /* line 245, ../src/smacss/_layout.scss */
   .sidebar-wrapper {
     margin: 0;
+    padding-left: 2ch;
     width: 28.571428571429%;
   }
 }

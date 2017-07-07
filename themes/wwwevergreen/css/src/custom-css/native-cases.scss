@@ -6,3 +6,9 @@
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+.panels-grid .primary-content-wrapper,
+.panels-grid .sidebar-wrapper{
+	margin-left: 0;
+	width: auto;
+}
