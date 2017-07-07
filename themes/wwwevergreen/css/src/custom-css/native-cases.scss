@@ -1,0 +1,8 @@
+.panels-grid-inside{  // Drupal Panels
+	// box model
+	margin-left: -2ch;  // Compensates for the extra gutter on the last grid unit
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

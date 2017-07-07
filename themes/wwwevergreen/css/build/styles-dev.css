@@ -8026,7 +8026,7 @@ p.alert,
 
 /* line 24, ../src/smacss/_fixes.scss */
 .unit-2-3.panels-flexible-column {
-  padding-left: 2ch;
+  /*padding-left: 2ch;*/
   width: calc(66.6666666667% + 1ch);
 }
 
@@ -8035,6 +8035,16 @@ p.alert,
   margin-right: 0;
   padding-left: 2ch;
   width: 100%;
+}
+
+/* line 35, ../src/smacss/_fixes.scss */
+.panels-flexible-region-panels-grid-center {
+  width: auto;
+}
+
+/* line 39, ../src/smacss/_fixes.scss */
+.panels-grid .panels-flexible-column-inside {
+  padding-left: 0;
 }
 
 /**
