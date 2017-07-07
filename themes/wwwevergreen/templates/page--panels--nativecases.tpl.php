@@ -109,44 +109,45 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					print render($page['filters']); 
 				?>
 			</div>
-			<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
-			<!-- What is highlighted? -jkm -->
-			<?php if ($page['highlighted']): ?>
-				<div id="highlighted">
-					<?php print render($page['highlighted']); ?>
-				</div>
-			<?php endif; ?>
-			<div id="main-content"></div>
-			<?php print render($title_prefix); ?>
-			<?php if ($title and $title!='Home'): ?>
-				<h1 class="title" id="page-title">
-					<?php print $title; ?>
-				</h1>
-			<?php endif; ?>
-			<?php print render($title_suffix); ?>
-			<!-- No tabs on panels pages.
-			<?php if ($tabs): ?>
-				<div class="tabs">
-					<?php print render($tabs); ?>
-				</div>
-			<?php endif; ?>-->
-			
-			<!-- What is help? —jkm -->
-			<?php print render($page['help']); ?>
-			
-			<!-- What are action-links? —jkm -->
-			<?php if ($action_links): ?>
-				<ul class="action-links">
-					<?php print render($action_links); ?>
-				</ul>
-			<?php endif; ?>
-			
-			<!-- Begin render page content -->
-			<?php print render($page['content']); ?>
-			<!-- End render page content -->
-			
-			<!-- What feed icons? —jkm -->
-			<?php print $feed_icons; ?>
+			<div class="unit-6-7">
+				<!-- What is highlighted? -jkm -->
+				<?php if ($page['highlighted']): ?>
+					<div id="highlighted">
+						<?php print render($page['highlighted']); ?>
+					</div>
+				<?php endif; ?>
+				<div id="main-content"></div>
+				<?php print render($title_prefix); ?>
+				<?php if ($title and $title!='Home'): ?>
+					<h1 class="title" id="page-title">
+						<?php print $title; ?>
+					</h1>
+				<?php endif; ?>
+				<?php print render($title_suffix); ?>
+				<!-- No tabs on panels pages.
+				<?php if ($tabs): ?>
+					<div class="tabs">
+						<?php print render($tabs); ?>
+					</div>
+				<?php endif; ?>-->
+				
+				<!-- What is help? —jkm -->
+				<?php print render($page['help']); ?>
+				
+				<!-- What are action-links? —jkm -->
+				<?php if ($action_links): ?>
+					<ul class="action-links">
+						<?php print render($action_links); ?>
+					</ul>
+				<?php endif; ?>
+				
+				<!-- Begin render page content -->
+				<?php print render($page['content']); ?>
+				<!-- End render page content -->
+				
+				<!-- What feed icons? —jkm -->
+				<?php print $feed_icons; ?>
+			</div>
 		</div><!-- /.grid -->
 	</main>
 </section>
