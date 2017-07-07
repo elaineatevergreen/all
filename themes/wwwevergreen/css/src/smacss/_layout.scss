@@ -321,11 +321,11 @@
 }
 
 .sidebar{
-	margin: 0 0.75em 3.75rem;  // 60/16
+	margin: 0 1.25ch 3.75rem;  // 60/16
 
 	@include breakpoint($rocket){
-		margin-right: 2em;
-		margin-left: 2em;
+		margin-right: 2ch;
+		margin-left: 2ch;
 	}
 
 	@include breakpoint($gamora){
