@@ -27,9 +27,12 @@
 }
 
 .sidebar.panels-flexible-region{
-	margin-right: 0;
-	padding-left: 2ch;
-	width: 100%;  // Overrides panels percentage fudge
+	
+	@include breakpoint($gamora){
+		margin-right: 0;
+		padding-left: 2ch;
+		width: auto;  // Overrides panels percentage declaration
+	}
 }
 
 .panels-flexible-region-panels-grid-center{ // Native Cases primary-content area
