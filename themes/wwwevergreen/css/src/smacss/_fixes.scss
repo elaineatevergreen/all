@@ -27,11 +27,11 @@
 }
 
 .sidebar.panels-flexible-region{
+	width: auto;  // Overrides panels percentage declaration
 	
 	@include breakpoint($gamora){
 		margin-right: 0;
 		padding-left: 2ch;
-		width: auto;  // Overrides panels percentage declaration
 	}
 }
 
@@ -40,5 +40,5 @@
 }
 
 .panels-grid .panels-flexible-column-inside{  // Native Cases secondary-content area
-	padding-left: 0;
+	padding: 0;
 }
