@@ -1,3 +1,10 @@
+.panels-content-wrapper{
+	
+	@include breakpoint($gamora){
+		width: calc((4 / 5 * 100%) - 2ch);
+	}
+}
+
 .panels-grid-inside{  // Drupal Panels
 	// box model
 	margin-left: -2ch;  // Compensates for the extra gutter on the last grid unit
@@ -9,6 +16,22 @@
 
 .panels-grid .primary-content-wrapper,
 .panels-grid .sidebar-wrapper{
-	margin-left: 0;
-	width: auto;
+	
+	@include breakpoint($gamora){
+		margin-left: 0;
+		width: calc(100% - 2ch);
+	}
+}
+
+.panels-grid .primary-content-wrapper{
+	
+}
+
+.panels-grid .sidebar{
+	width: auto;  // Overrides panels percentage declaration
+	
+	@include breakpoint($gamora){
+		margin-right: 0;
+		padding-left: 2ch;
+	}
 }

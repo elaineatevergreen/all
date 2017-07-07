@@ -109,7 +109,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					print render($page['filters']); 
 				?>
 			</div>
-			<div class="unit-6-7">
+			<div class="panels-content-wrapper unit-6-7">
 				<!-- What is highlighted? -jkm -->
 				<?php if ($page['highlighted']): ?>
 					<div id="highlighted">

@@ -26,15 +26,6 @@
 	width: calc(66.6666666667% + 1ch);
 }
 
-.sidebar.panels-flexible-region{
-	width: auto;  // Overrides panels percentage declaration
-	
-	@include breakpoint($gamora){
-		margin-right: 0;
-		padding-left: 2ch;
-	}
-}
-
 .panels-flexible-region-panels-grid-center{ // Native Cases primary-content area
 	width: auto;
 }
