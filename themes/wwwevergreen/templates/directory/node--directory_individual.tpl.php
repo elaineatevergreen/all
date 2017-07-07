@@ -48,7 +48,7 @@ theme for individual person pages
 	    <h2>Related Subject Areas</h2>
 	    
 	    <?php 
-		    print render($content['field_related_subjects_directory']) 
+		    print render($content['field_related_subjects_directory']); 
 		}; ?>
 	    
 	    
