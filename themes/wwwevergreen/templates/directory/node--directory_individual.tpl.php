@@ -55,17 +55,21 @@ theme for individual person pages
 	    
 	<?php }; ?>
     
-    
-  <?php 	  
+<div>    
+<?php 	  
 	  //only show contact information for individuals if user is logged in
 	  //or if this person is a faculty member who has chosen to make their contact info public
-	  //and only build the HTML if they even have contact information
 	  
-	  if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
-		  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
-
-  <div>
+	  //but do all this stuff only if there's any contact info to speak of
+	  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
     <h2><span>Contact Information</span></h2>
+	  
+<?php
+		//now check to see if we should show the stuff
+		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
+?>
+
+  
     <?php 
 	    if(isset($content['field_website'])) {
 		?>
@@ -120,13 +124,16 @@ theme for individual person pages
     </div>
   </div>
   
-  <?php }; //end check for *any* contact information
+  <?php 
 	  
 	  //display message for non-authenticated users
 	  } else { ?>
 	  
 	  <p>You must <a href="/user/login?destination=node/<?php print $node->nid; ?>">log in</a> to see contact information for this person.</p>
 		  
-	  <?php }; //end check for authentication ?>
+	  <?php 
+		}; //end check for authentication
+	}; //end check for *any* contact information 
+?>
   
 </div>
