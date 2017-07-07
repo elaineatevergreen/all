@@ -89,31 +89,31 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		<?php print render($page['background_image']); ?>
 	</div>
 	
-<?php 
-	/* only show the header region if this is NOT the front page */
-	if($is_front == FALSE) { ?>
-	<header class="row">
-		<div class="grid grid-alt wrapper">
-			<div class="site-name unit-5-7"><?php print render($page['section_title']); ?></div>
-		</div>
-	</header>
-<?php }; ?>
-
-<?php 
-	/* for Panels pages, there are no wrapping grid divs. */ 
-	/* should the tertiary-nav-wrapper also go away? */
-?>
-
-			<div class="tertiary-nav-wrapper unit-1-7">
-				<?php 
-					/* render anything that's in the section navigation. see region--section_nav.tpl.php for that markup. */
-					print render($page['section_nav']); 
-					
-					/* then any 1st column content outside of the nav. usually search filters? */
-					print render($page['filters']); 
-				?>
+	<?php 
+		/* only show the header region if this is NOT the front page */
+		if($is_front == FALSE) { ?>
+		<header class="row">
+			<div class="grid grid-alt wrapper">
+				<div class="site-name unit-5-7"><?php print render($page['section_title']); ?></div>
 			</div>
-		<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
+		</header>
+	<?php }; ?>
+
+	<?php 
+		/* for Panels pages, there are no wrapping grid divs. */ 
+		/* should the tertiary-nav-wrapper also go away? */
+	?>
+
+	<!--<div class="tertiary-nav-wrapper unit-1-7">
+		<?php 
+			/* render anything that's in the section navigation. see region--section_nav.tpl.php for that markup. */
+			print render($page['section_nav']); 
+			
+			/* then any 1st column content outside of the nav. usually search filters? */
+			print render($page['filters']); 
+		?>
+	</div>-->
+	<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
 			<?php print $messages; ?>
 	        <?php if ($page['highlighted']): ?>
 	        	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
