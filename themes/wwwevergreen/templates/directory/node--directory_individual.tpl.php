@@ -21,44 +21,48 @@ theme for individual person pages
 		    
 	    }; ?>
     
-    <?php if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { ?>
+<?php 
+	
+	//extra detail for faculty member pages
+	if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { 
+	    //we'll want this later
+	    $is_faculty = TRUE;
 	    
-	    <?php print render($content['body']) ?>
-	    
-	    <?php 
-		    if(isset($content['field_background'])) {
-			    print "<p>" . render($content['field_background']) . "</p>";
-		    };
-		    
-		    if(isset($content['field_expertise'])) {
-			    print "<p>" . render($content['field_expertise']) . "</p>";
-		    };
-		    
-		    if(isset($content['field_interests'])) {
-			    print "<p>" . render($content['field_interests']) . "</p>";
-		    };
-		    
-		    
-		?>
+	    //now show all the stuff that really only applies to faculty
+	    print render($content['body'])
+	    if(isset($content['field_background'])) {
+		    print "<p>" . render($content['field_background']) . "</p>";
+		};
+		if(isset($content['field_expertise'])) {
+			print "<p>" . render($content['field_expertise']) . "</p>";
+		};
+		if(isset($content['field_interests'])) {
+			print "<p>" . render($content['field_interests']) . "</p>";
+		};
+   
+?>
 
 	    
 	    
 	    <?php if (isset($content['field_related_subjects_directory'])) { ?>
 	    <h2>Related Subject Areas</h2>
 	    
-	    <?php print render($content['field_related_subjects_directory']) ?>
-	    <?php }; ?>
+	    <?php 
+		    print render($content['field_related_subjects_directory']) 
+		}; ?>
 	    
 	    
 	    
 	<?php }; ?>
     
     
-  <?php 
+  <?php 	  
 	  //only show contact information for individuals if user is logged in
+	  //or if this person is a faculty member who has chosen to make their contact info public
 	  //and only build the HTML if they even have contact information
 	  
-	  if(user_is_logged_in() and (isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']))) { ?>
+	  if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
+		  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
 
   <div>
     <h2><span>Contact Information</span></h2>
@@ -116,6 +120,13 @@ theme for individual person pages
     </div>
   </div>
   
-  <?php }; //end check for *any* contact information ?>
+  <?php }; //end check for *any* contact information
+	  
+	  //display message for non-authenticated users
+	  } else { ?>
+	  
+	  <p>You must <a href="/user/login?destination=node/<?php print $node->nid; ?>">log in</a> to see contact information for this person.</p>
+		  
+	  <?php }; //end check for authentication ?>
   
 </div>
