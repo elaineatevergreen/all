@@ -29,7 +29,7 @@ theme for individual person pages
 	    $is_faculty = TRUE;
 	    
 	    //now show all the stuff that really only applies to faculty
-	    print render($content['body'])
+	    print render($content['body']);
 	    if(isset($content['field_background'])) {
 		    print "<p>" . render($content['field_background']) . "</p>";
 		};
