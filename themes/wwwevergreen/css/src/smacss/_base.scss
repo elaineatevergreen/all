@@ -46,14 +46,6 @@ svg{
 	max-width: 100%;
 }
 
-img[height="0"][width="0"]{  // For the poorly implemented trkn.us pixels
-	// box model
-	height: 0;
-	width: 0;
-	// layout
-	display: block;
-}
-
 audio{
 	max-width: 100%;
 }
