@@ -8054,23 +8054,11 @@ p.alert,
 }
 
 /* line 29, ../src/smacss/_fixes.scss */
-.sidebar.panels-flexible-region {
-  width: auto;
-}
-@media screen and (min-width: 43em) {
-  /* line 29, ../src/smacss/_fixes.scss */
-  .sidebar.panels-flexible-region {
-    margin-right: 0;
-    padding-left: 2ch;
-  }
-}
-
-/* line 38, ../src/smacss/_fixes.scss */
 .panels-flexible-region-panels-grid-center {
   width: auto;
 }
 
-/* line 42, ../src/smacss/_fixes.scss */
+/* line 33, ../src/smacss/_fixes.scss */
 .panels-grid .panels-flexible-column-inside {
   padding: 0;
 }
