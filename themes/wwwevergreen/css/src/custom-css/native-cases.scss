@@ -49,7 +49,10 @@
 }
 
 .panels-grid .sidebar-wrapper{
-	width: calc(2 / 6 * 100%);
+	
+	@include breakpoint($drax){
+		width: calc(2 / 6 * 100%);
+	}
 }
 
 .panels-grid .sidebar{
