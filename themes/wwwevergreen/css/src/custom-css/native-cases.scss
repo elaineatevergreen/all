@@ -19,6 +19,10 @@
 	@include breakpoint($gamora){
 		width: calc((4 / 5 * 100%) - 2ch);
 	}
+	
+	@include breakpoint($drax){
+		width: calc(6 / 7 * 100%);
+	}
 }
 
 .panels-grid-inside{  // Drupal Panels
@@ -58,7 +62,7 @@
 .panels-grid .sidebar{
 	width: auto;  // Overrides panels percentage declaration
 	
-	@include breakpoint($gamora){
+	@include breakpoint($drax){
 		margin-right: 0;
 		padding-left: 2ch;
 	}
