@@ -22,12 +22,14 @@
 }
 
 .unit-2-3.panels-flexible-column{
-	padding-left: 2ch;
+	/*padding-left: 2ch;*/
 	width: calc(66.6666666667% + 1ch);
 }
 
-.sidebar.panels-flexible-region{
-	margin-right: 0;
-	padding-left: 2ch;
-	width: 100%;  // Overrides panels percentage fudge
+.panels-flexible-region-panels-grid-center{ // Native Cases primary-content area
+	width: auto;
+}
+
+.panels-grid .panels-flexible-column-inside{  // Native Cases secondary-content area
+	padding: 0;
 }

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/**
+ * Native Cases Styles
+ *
+ * The Native Cases service center uses a template similar to Evergreen’s
+ * default template, but it is built with the Panels plugin, which requires
+ * a few different overrides. Namely, The grid is broken down into 1-column
+ * for the nav and 6-columns for the rest of the content. That 6-column
+ * grid is then broken out into the primary (4/6) and secondary (2/6)
+ * content areas.
+ *
+ * These styles were originally developed by Justin McDowell.
+ */
+
+@import "../tools";
+
+.panels-content-wrapper{
+	
+	@include breakpoint($gamora){
+		width: calc((4 / 5 * 100%) - 2ch);
+	}
+	
+	@include breakpoint($drax){
+		width: calc(6 / 7 * 100%);
+	}
+}
+
+.panels-grid-inside{  // Drupal Panels
+	// box model
+	margin-left: -2ch;  // Compensates for the extra gutter on the last grid unit
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.panels-grid .primary-content-wrapper,
+.panels-grid .sidebar-wrapper{
+	
+	
+	@include breakpoint($gamora){
+		margin-left: 0;
+		width: calc(100% - 2ch);
+	}
+}
+
+.panels-grid .primary-content-wrapper{
+	margin-top: 0;
+	
+	@include breakpoint($drax){
+		width: calc(4 / 6 * 100%);
+	}
+}
+
+.panels-grid .sidebar-wrapper{
+	
+	@include breakpoint($drax){
+		width: calc(2 / 6 * 100%);
+	}
+}
+
+.panels-grid .sidebar{
+	width: auto;  // Overrides panels percentage declaration
+	
+	@include breakpoint($drax){
+		margin-right: 0;
+		padding-left: 2ch;
+	}
+}
