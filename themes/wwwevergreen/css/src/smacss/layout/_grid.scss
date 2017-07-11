@@ -192,7 +192,7 @@
 	padding-left: 0;
 	width: 100%;
 
-	@include breakpoint($gamora){
+	@include breakpoint($drax){
 		// box model
 		width: calc(4 / 6 * 100%);
 	}
@@ -266,9 +266,13 @@
 .unit-6-7{
 	// box model
 	width: 100%;
-
+	
 	@include breakpoint($gamora){
-		width: 85.714285714286%;  // 6/7
+		width: calc(4 / 5 * 100%);
+	}
+
+	@include breakpoint($drax){
+		width: calc(6 / 7 * 100%);
 	}
 }
 

@@ -255,7 +255,6 @@
 	@include breakpoint($gamora){
 		// box model
 		margin-left: 20%;
-		padding-left: 1em;
 		width: calc(80% - 2ch);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
@@ -264,6 +263,7 @@
 	@include breakpoint($drax){
 		// box model
 		margin: 0;
+		padding-left: 2ch;
 		width: 28.571428571429%;  // 2/7
 	}
 }
@@ -321,11 +321,11 @@
 }
 
 .sidebar{
-	margin: 0 0.75em 3.75rem;  // 60/16
+	margin: 0 1.25ch 3.75rem;  // 60/16
 
 	@include breakpoint($rocket){
-		margin-right: 2em;
-		margin-left: 2em;
+		margin-right: 2ch;
+		margin-left: 2ch;
 	}
 
 	@include breakpoint($gamora){
