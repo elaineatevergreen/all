@@ -227,43 +227,36 @@ svg {
 }
 
 /* line 49, ../src/smacss/_base.scss */
-img[height="0"][width="0"] {
-  height: 0;
-  width: 0;
-  display: block;
-}
-
-/* line 57, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 61, ../src/smacss/_base.scss */
+/* line 53, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 66, ../src/smacss/_base.scss */
+/* line 58, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 70, ../src/smacss/_base.scss */
+/* line 62, ../src/smacss/_base.scss */
 .iframe-ratio-9-6 {
   height: 0;
   padding-bottom: 66.6666666667%;
   position: relative;
 }
 
-/* line 78, ../src/smacss/_base.scss */
+/* line 70, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 86, ../src/smacss/_base.scss */
+/* line 78, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -1764,7 +1757,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 127, ../src/smacss/_base.scss */
+/* line 119, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -7670,19 +7663,7 @@ p.alert,
   overflow: hidden;
 }
 
-/**
- * Override news title links to make them look like regular, unlinked h4s
- * again. While I normally don't like to make links not look like links, I
- * think in this case, it’s warranted because there is a link under every
- * article. See also: nytimes.com and washingtonpost.com.
- */
-/* line 323, ../src/smacss/_modules.scss */
-.news-title-link a {
-  color: #000;
-  text-decoration: none;
-}
-
-/* line 332, ../src/smacss/_modules.scss */
+/* line 317, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7702,7 +7683,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 349, ../src/smacss/_modules.scss */
+/* line 334, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7718,7 +7699,7 @@ p.alert,
 /**
  * P. Profiles
  */
-/* line 358, ../src/smacss/_modules.scss */
+/* line 343, ../src/smacss/_modules.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7727,13 +7708,13 @@ p.alert,
           shape-outside: circle() border-box;
 }
 
-/* line 365, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 365, ../src/smacss/_modules.scss */
+  /* line 350, ../src/smacss/_modules.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7741,7 +7722,7 @@ p.alert,
   }
 }
 
-/* line 375, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
@@ -7864,14 +7845,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 395, ../src/smacss/_modules.scss */
+/* line 380, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 405, ../src/smacss/_modules.scss */
+/* line 390, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7890,24 +7871,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 424, ../src/smacss/_modules.scss */
+/* line 409, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 428, ../src/smacss/_modules.scss */
+/* line 413, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 436, ../src/smacss/_modules.scss */
+/* line 421, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 444, ../src/smacss/_modules.scss */
+/* line 429, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7918,30 +7899,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 455, ../src/smacss/_modules.scss */
+/* line 440, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 459, ../src/smacss/_modules.scss */
+/* line 444, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 459, ../src/smacss/_modules.scss */
+  /* line 444, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 459, ../src/smacss/_modules.scss */
+  /* line 444, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 472, ../src/smacss/_modules.scss */
+/* line 457, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7953,7 +7934,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 484, ../src/smacss/_modules.scss */
+/* line 469, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -7961,7 +7942,7 @@ p.alert,
   display: block;
 }
 
-/* line 493, ../src/smacss/_modules.scss */
+/* line 478, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
@@ -8054,23 +8035,11 @@ p.alert,
 }
 
 /* line 29, ../src/smacss/_fixes.scss */
-.sidebar.panels-flexible-region {
-  width: auto;
-}
-@media screen and (min-width: 43em) {
-  /* line 29, ../src/smacss/_fixes.scss */
-  .sidebar.panels-flexible-region {
-    margin-right: 0;
-    padding-left: 2ch;
-  }
-}
-
-/* line 38, ../src/smacss/_fixes.scss */
 .panels-flexible-region-panels-grid-center {
   width: auto;
 }
 
-/* line 42, ../src/smacss/_fixes.scss */
+/* line 33, ../src/smacss/_fixes.scss */
 .panels-grid .panels-flexible-column-inside {
   padding: 0;
 }
