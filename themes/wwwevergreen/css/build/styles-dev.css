@@ -5368,8 +5368,8 @@ ul.accordion-inner{
 }
 
 /* line 139, ../src/smacss/modules/_icons.scss */
-.transporter-icon {
-  max-width: 100%;
+.transporter-icon,
+.compound-img-icon {
   display: inline-block;
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
@@ -5381,42 +5381,48 @@ ul.accordion-inner{
 }
 @media screen and (min-width: 22em) {
   /* line 139, ../src/smacss/modules/_icons.scss */
-  .transporter-icon {
+  .transporter-icon,
+  .compound-img-icon {
     margin: 0 auto;
     max-width: 80%;
   }
 }
 @media screen and (min-width: 32em) {
   /* line 139, ../src/smacss/modules/_icons.scss */
-  .transporter-icon {
+  .transporter-icon,
+  .compound-img-icon {
     max-width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
   /* line 139, ../src/smacss/modules/_icons.scss */
-  .transporter-icon {
+  .transporter-icon,
+  .compound-img-icon {
     max-width: 90%;
   }
 }
 
-/* line 170, ../src/smacss/modules/_icons.scss */
-.transporter-icon img {
+/* line 166, ../src/smacss/modules/_icons.scss */
+.transporter-icon img,
+.compound-img-icon img {
+  width: 10ch;
+  max-width: 100%;
   display: block;
   transition: -webkit-transform 0.1s ease;
   transition: transform 0.1s ease;
   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
-/* line 180, ../src/smacss/modules/_icons.scss */
+/* line 177, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon {
   background-color: #64933a;
 }
-/* line 183, ../src/smacss/modules/_icons.scss */
+/* line 180, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon:hover {
   background-color: #0086ee;
 }
 
-/* line 188, ../src/smacss/modules/_icons.scss */
+/* line 185, ../src/smacss/modules/_icons.scss */
 .transporter-call .icon {
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
@@ -5435,13 +5441,13 @@ ul.accordion-inner{
  *
  * See: https://www.drupal.org/project/ajax_loader
  */
-/* line 204, ../src/smacss/modules/_icons.scss */
+/* line 201, ../src/smacss/modules/_icons.scss */
 div.ajax-progress {
   height: 100%;
   width: 100%;
-  left: 0;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 9998;
   background: rgba(0, 0, 0, 0.8);
 }
@@ -5459,21 +5465,21 @@ div.ajax-progress {
             transform: rotate(360deg);
   }
 }
-/* line 223, ../src/smacss/modules/_icons.scss */
+/* line 220, ../src/smacss/modules/_icons.scss */
 .ajax-progress .throbber {
   height: 32px;
-  margin-left: -16px;
   margin-top: -16px;
+  margin-left: -16px;
   padding: 10px;
   width: 32px;
-  left: 50%;
   position: fixed;
   top: 50%;
+  left: 50%;
   z-index: 9999;
   background: transparent url("/sites/all/themes/wwwevergreen/images/icons/spinner.svg") no-repeat scroll 50% 50%;
-  border-radius: 0px;
-  -webkit-animation: spinner .6s linear infinite;
-          animation: spinner .6s linear infinite;
+  border-radius: 0;
+  -webkit-animation: spinner 0.6s linear infinite;
+          animation: spinner 0.6s linear infinite;
 }
 
 /**
