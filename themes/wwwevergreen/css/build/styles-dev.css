@@ -5403,9 +5403,8 @@ ul.accordion-inner{
 }
 
 /* line 166, ../src/smacss/modules/_icons.scss */
-.transporter-icon img,
-.compound-img-icon img {
-  width: 10ch;
+.transporter-icon img {
+  width: 12ch;
   max-width: 100%;
   display: block;
   transition: -webkit-transform 0.1s ease;
@@ -5413,16 +5412,29 @@ ul.accordion-inner{
   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
-/* line 177, ../src/smacss/modules/_icons.scss */
+/* line 176, ../src/smacss/modules/_icons.scss */
+.compound-img-icon img {
+  width: 10ch;
+  max-width: 100%;
+  display: block;
+}
+@media screen and (min-width: 43em) {
+  /* line 176, ../src/smacss/modules/_icons.scss */
+  .compound-img-icon img {
+    width: 12ch;
+  }
+}
+
+/* line 188, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon {
   background-color: #64933a;
 }
-/* line 180, ../src/smacss/modules/_icons.scss */
+/* line 191, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon:hover {
   background-color: #0086ee;
 }
 
-/* line 185, ../src/smacss/modules/_icons.scss */
+/* line 196, ../src/smacss/modules/_icons.scss */
 .transporter-call .icon {
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
@@ -5441,7 +5453,7 @@ ul.accordion-inner{
  *
  * See: https://www.drupal.org/project/ajax_loader
  */
-/* line 201, ../src/smacss/modules/_icons.scss */
+/* line 212, ../src/smacss/modules/_icons.scss */
 div.ajax-progress {
   height: 100%;
   width: 100%;
@@ -5465,7 +5477,7 @@ div.ajax-progress {
             transform: rotate(360deg);
   }
 }
-/* line 220, ../src/smacss/modules/_icons.scss */
+/* line 231, ../src/smacss/modules/_icons.scss */
 .ajax-progress .throbber {
   height: 32px;
   margin-top: -16px;
