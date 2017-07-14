@@ -78,7 +78,7 @@
 			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
 			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
 			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="<?php print $hero_alt ?>" srcset="<?php echo $xl_hero; ?>" />
+			<img alt="<?php print $hero_alt ?>" src="<?php echo $xl_hero; ?>" />
 		</picture>
 		
 		<div class="wrapper">
