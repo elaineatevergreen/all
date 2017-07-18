@@ -224,6 +224,30 @@
 	}
 }
 
+.fast-fact,
+.fast-fact-alt{
+	// box model
+	border: 0.25ch solid $evergreen-neue;
+	// typography
+	font-family: $text-face-alt;
+}
+
+.fast-fact{
+
+	@include breakpoint($gamora){
+		border-width: 0 0.5ch 0 0;
+		padding-right: 2ch;
+	}
+}
+
+.fast-fact-alt{
+
+	@include breakpoint($gamora){
+		// box model
+		border-width: 0 0 0 0.5ch;
+	}
+}
+
 .key-number{  // e.g. http://www.evergreen.edu/about/facts
 	// box model
 	margin: 0.818419903972065em 0 0;

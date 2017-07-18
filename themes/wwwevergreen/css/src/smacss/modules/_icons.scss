@@ -136,8 +136,7 @@
 	transform: scale(1);
 }
 
-.transporter-icon,
-.compound-img-icon{
+.transporter-icon{
 	// layout
 	display: inline-block;
 	transform: scale(0.8);
@@ -165,7 +164,7 @@
 
 .transporter-icon img{
 	// box model
-	width: 12ch;  // Arbitrary number
+	width: 10ch;  // Arbitrary number
 	max-width: 100%;
 	// layout
 	display: block;
@@ -180,9 +179,9 @@
 	// layout
 	display: block;
 
-	@include breakpoint($gamora){
+	/*@include breakpoint($gamora){
 		width: 12ch;  // Matches .transporter-icon img
-	}
+	}*/
 }
 
 .transporter-call .transporter-icon{
