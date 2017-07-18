@@ -46,8 +46,10 @@
 	justify-content: flex-start;
 }
 
-.placeholder{
+.unit-placeholder{
+	background-clip: content-box;
 	background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+	background-position-x: 1ch;
 }
 
 .unit-1-1,
