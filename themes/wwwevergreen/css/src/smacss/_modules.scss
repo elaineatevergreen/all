@@ -228,6 +228,10 @@
 .fast-fact-alt{
 	// box model
 	border: 0.25ch solid $evergreen-neue;
+	height: 100%;
+	padding: 0 1ch;
+	// layout
+	overflow: hidden;
 	// typography
 	font-family: $text-face-alt;
 }
@@ -245,12 +249,13 @@
 	@include breakpoint($gamora){
 		// box model
 		border-width: 0 0 0 0.5ch;
+		padding-left: 2ch;
 	}
 }
 
 .key-number{  // e.g. http://www.evergreen.edu/about/facts
 	// box model
-	margin: 0.818419903972065em 0 0;
+	//margin: 0.818419903972065em 0 0;
 	// layout
 	display: block;
 	// typography
