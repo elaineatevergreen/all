@@ -216,6 +216,21 @@
 	}
 }
 
+/**
+ * Stays wider for longer.
+ */
+.unit-1-7-alt{
+	width: 100%;
+	
+	@include breakpoint($rocket){
+		width: 50%;
+	}
+	
+	@include breakpoint($gamora){
+		width: calc(1 / 7 * 100%);
+	}
+}
+
 .unit-2-7{
 	// box model
 	width: 100%;
