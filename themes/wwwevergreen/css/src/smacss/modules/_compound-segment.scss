@@ -198,15 +198,11 @@
 .compound-squishy > .compound-img{
 
 	@include breakpoint($starlord){
-		margin-bottom: 1.071428571428571em;  // 15px
-		padding-right: 1.071428571428571em;  // 15px
+		margin-bottom: calc(30 / 16 * 1rem);  // 15px
+		padding-right: calc(15 / 16 * 1rem);  // 15px
 		max-width: 31.3333333333%;
 		// layout
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
-	}
-
-	@include breakpoint($gamora){
-		padding-right: 0.882352941176471em;  // 15px
 	}
 }
 

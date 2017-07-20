@@ -369,31 +369,7 @@
 /**
  * P. Profiles
  */
-.profile .portrait-1-1{  // portrait with 1:1 ratio.
-	border-radius: 50%;
-	// shape
-	shape-margin: 1em;
-	shape-outside: circle() border-box;
-}
-
-.profession{
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-
-	@include breakpoint($starlord){
-		@include base-type;
-		font-weight: bold;
-	}
-}
-
-.mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
-.mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
-	// box model
-	border: 1px solid mix($shade, $sky-blue, 60%);
-	height: 3rem;
-	// decoration
-	border-radius: 50%;
-}
+@import "modules/profiles";
 
 /**
  * Q. Directories

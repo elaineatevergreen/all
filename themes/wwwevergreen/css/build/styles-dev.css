@@ -474,7 +474,7 @@ h2 {
   }
 }
 
-/* line 174, ../src/smacss/base/_typography.scss */
+/* line 173, ../src/smacss/base/_typography.scss */
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
@@ -484,13 +484,13 @@ h3 {
   font-weight: normal;
 }
 @media screen and (min-width: 22em) {
-  /* line 174, ../src/smacss/base/_typography.scss */
+  /* line 173, ../src/smacss/base/_typography.scss */
   h3 {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 174, ../src/smacss/base/_typography.scss */
+  /* line 173, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.10603155876714em;
     font-size: 1.69525rem;
@@ -498,7 +498,7 @@ h3 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 174, ../src/smacss/base/_typography.scss */
+  /* line 173, ../src/smacss/base/_typography.scss */
   h3 {
     margin-top: 1.54575432811212em;
     font-size: 1.8195rem;
@@ -506,7 +506,7 @@ h3 {
   }
 }
 
-/* line 204, ../src/smacss/base/_typography.scss */
+/* line 201, ../src/smacss/base/_typography.scss */
 h4 {
   margin-top: 2.14285714285714em;
   font-size: 0.875rem;
@@ -514,7 +514,7 @@ h4 {
   line-height: 1.60714285714286;
 }
 @media screen and (min-width: 43em) {
-  /* line 204, ../src/smacss/base/_typography.scss */
+  /* line 201, ../src/smacss/base/_typography.scss */
   h4 {
     margin-top: 1.56014353320505em;
     font-size: 1.202rem;
@@ -522,7 +522,7 @@ h4 {
   }
 }
 
-/* line 221, ../src/smacss/base/_typography.scss */
+/* line 218, ../src/smacss/base/_typography.scss */
 h5 {
   margin-top: 2.14285714285714em;
   color: #616161;
@@ -533,7 +533,7 @@ h5 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 221, ../src/smacss/base/_typography.scss */
+  /* line 218, ../src/smacss/base/_typography.scss */
   h5 {
     margin-top: 1.66666666666667em;
     font-size: 1.125rem;
@@ -541,7 +541,7 @@ h5 {
   }
 }
 
-/* line 240, ../src/smacss/base/_typography.scss */
+/* line 237, ../src/smacss/base/_typography.scss */
 h6 {
   margin-top: 2.69784172661871em;
   margin-bottom: 1.34892086330935em;
@@ -554,7 +554,7 @@ h6 {
   text-transform: uppercase;
 }
 @media screen and (min-width: 43em) {
-  /* line 240, ../src/smacss/base/_typography.scss */
+  /* line 237, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.14285714285714em;
     margin-bottom: 2.14285714285714em;
@@ -564,7 +564,7 @@ h6 {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 240, ../src/smacss/base/_typography.scss */
+  /* line 237, ../src/smacss/base/_typography.scss */
   h6 {
     margin-top: 2.5em;
     margin-bottom: 1.66666666666667em;
@@ -573,7 +573,7 @@ h6 {
   }
 }
 
-/* line 269, ../src/smacss/base/_typography.scss */
+/* line 266, ../src/smacss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -582,7 +582,7 @@ h5 {
   margin-bottom: 0.46875rem;
 }
 @media screen and (min-width: 125em) {
-  /* line 269, ../src/smacss/base/_typography.scss */
+  /* line 266, ../src/smacss/base/_typography.scss */
   h1,
   h2,
   h3,
@@ -597,63 +597,63 @@ h5 {
  *
  * @section l
  */
-/* line 287, ../src/smacss/base/_typography.scss */
+/* line 284, ../src/smacss/base/_typography.scss */
 ul,
 ol {
   margin-left: 1.07142857142857em;
   padding-left: 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 287, ../src/smacss/base/_typography.scss */
+  /* line 284, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 287, ../src/smacss/base/_typography.scss */
+  /* line 284, ../src/smacss/base/_typography.scss */
   ul,
   ol {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 301, ../src/smacss/base/_typography.scss */
+/* line 298, ../src/smacss/base/_typography.scss */
 ul,
 dl {
   padding: 0;
 }
 
-/* line 306, ../src/smacss/base/_typography.scss */
+/* line 303, ../src/smacss/base/_typography.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
 
-/* line 310, ../src/smacss/base/_typography.scss */
+/* line 307, ../src/smacss/base/_typography.scss */
 dt {
   margin-top: 0.535714285714286em;
   font-weight: bold;
 }
 @media screen and (min-width: 125em) {
-  /* line 310, ../src/smacss/base/_typography.scss */
+  /* line 307, ../src/smacss/base/_typography.scss */
   dt {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 321, ../src/smacss/base/_typography.scss */
+/* line 318, ../src/smacss/base/_typography.scss */
 dd {
   margin-bottom: 1.071428571428571em;
   margin-left: 0;
 }
 @media screen and (min-width: 125em) {
-  /* line 321, ../src/smacss/base/_typography.scss */
+  /* line 318, ../src/smacss/base/_typography.scss */
   dd {
     margin-bottom: 1.04009568880337em;
   }
 }
 
-/* line 330, ../src/smacss/base/_typography.scss */
+/* line 327, ../src/smacss/base/_typography.scss */
 dd > p:first-child,
 dd > ul:first-child,
 dd > ol:first-child,
@@ -667,7 +667,7 @@ dd > blockquote:first-child > p:first-child {
  *
  * @section a
  */
-/* line 343, ../src/smacss/base/_typography.scss */
+/* line 340, ../src/smacss/base/_typography.scss */
 a,
 .internal-users a:visited,
 .search-tools a:visited,
@@ -680,14 +680,14 @@ a,
   transition: color 0.2s, border-color 0.2s ease;
 }
 
-/* line 359, ../src/smacss/base/_typography.scss */
+/* line 356, ../src/smacss/base/_typography.scss */
 a:visited {
   color: #600f21;
   -webkit-text-decoration-color: #ceb9be;
           text-decoration-color: #ceb9be;
 }
 
-/* line 367, ../src/smacss/base/_typography.scss */
+/* line 364, ../src/smacss/base/_typography.scss */
 a:hover,
 .internal-users a:hover,
 .search-tools a:hover,
@@ -697,7 +697,7 @@ a:hover,
           text-decoration-color: #0086ee;
 }
 
-/* line 378, ../src/smacss/base/_typography.scss */
+/* line 375, ../src/smacss/base/_typography.scss */
 a:focus,
 a:active {
   background-color: rgba(73, 44, 93, 0.1);
@@ -709,11 +709,11 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 390, ../src/smacss/base/_typography.scss */
+/* line 387, ../src/smacss/base/_typography.scss */
 .site-name a {
   text-decoration: none;
 }
-/* line 396, ../src/smacss/base/_typography.scss */
+/* line 393, ../src/smacss/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #f2f2f2;
   text-shadow: 0 1px 3px #1d1225;
@@ -729,7 +729,7 @@ a:active {
       }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 396, ../src/smacss/base/_typography.scss */
+  /* line 393, ../src/smacss/base/_typography.scss */
   .site-name a, .site-name a:visited {
     color: #46502b;
     font-weight: normal;
@@ -742,17 +742,17 @@ a:active {
  *
  * @section other-type
  */
-/* line 426, ../src/smacss/base/_typography.scss */
+/* line 423, ../src/smacss/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 430, ../src/smacss/base/_typography.scss */
+/* line 427, ../src/smacss/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 434, ../src/smacss/base/_typography.scss */
+/* line 431, ../src/smacss/base/_typography.scss */
 figcaption,
 small,
 .details,
@@ -762,7 +762,7 @@ small,
   line-height: 1.34831460674157;
 }
 @media screen and (min-width: 125em) {
-  /* line 434, ../src/smacss/base/_typography.scss */
+  /* line 431, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -773,13 +773,13 @@ small,
   }
 }
 
-/* line 446, ../src/smacss/base/_typography.scss */
+/* line 443, ../src/smacss/base/_typography.scss */
 figcaption p {
   margin-top: 0.67446043165468em;
   margin-bottom: 1.34892086330935em;
 }
 
-/* line 453, ../src/smacss/base/_typography.scss */
+/* line 450, ../src/smacss/base/_typography.scss */
 [role="contentinfo"] small {
   color: #c2c2c2;
 }
@@ -788,47 +788,47 @@ figcaption p {
  * Small (inline) text can inherit the line-height of its parent. Switching
  * to inline-block forces small to use its own line-height.
  */
-/* line 462, ../src/smacss/base/_typography.scss */
+/* line 459, ../src/smacss/base/_typography.scss */
 .small {
   display: inline-block;
 }
 
-/* line 466, ../src/smacss/base/_typography.scss */
+/* line 463, ../src/smacss/base/_typography.scss */
 abbr {
   border-bottom: 1px dotted #b6b6b6;
   text-decoration: none;
   cursor: help;
 }
 
-/* line 475, ../src/smacss/base/_typography.scss */
+/* line 472, ../src/smacss/base/_typography.scss */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 479, ../src/smacss/base/_typography.scss */
+/* line 476, ../src/smacss/base/_typography.scss */
 q::before {
   content: open-quote;
 }
 
-/* line 483, ../src/smacss/base/_typography.scss */
+/* line 480, ../src/smacss/base/_typography.scss */
 q::after {
   content: close-quote;
 }
 
-/* line 487, ../src/smacss/base/_typography.scss */
+/* line 484, ../src/smacss/base/_typography.scss */
 code,
 pre {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 492, ../src/smacss/base/_typography.scss */
+/* line 489, ../src/smacss/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 500, ../src/smacss/base/_typography.scss */
+  /* line 497, ../src/smacss/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -836,14 +836,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 508, ../src/smacss/base/_typography.scss */
+  /* line 505, ../src/smacss/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 515, ../src/smacss/base/_typography.scss */
+/* line 512, ../src/smacss/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
@@ -5769,23 +5769,16 @@ div.ajax-progress {
   /* line 197, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
-    margin-bottom: 1.071428571428571em;
-    padding-right: 1.071428571428571em;
+    margin-bottom: calc(30 / 16 * 1rem);
+    padding-right: calc(15 / 16 * 1rem);
     max-width: 31.3333333333%;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
   }
 }
-@media screen and (min-width: 43em) {
-  /* line 197, ../src/smacss/modules/_compound-segment.scss */
-  .media-squishy > .media-img,
-  .compound-squishy > .compound-img {
-    padding-right: 0.882352941176471em;
-  }
-}
 
-/* line 213, ../src/smacss/modules/_compound-segment.scss */
+/* line 209, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5802,7 +5795,7 @@ div.ajax-progress {
  * These styles make sure they size up to the maximum available width of
  * the .compound-img container.
  */
-/* line 229, ../src/smacss/modules/_compound-segment.scss */
+/* line 225, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-full {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
@@ -7763,7 +7756,124 @@ p.alert,
 /**
  * P. Profiles
  */
-/* line 372, ../src/smacss/_modules.scss */
+/**
+ * P. Profiles
+ *
+ * Profiles with photos, names, bios, etc.
+ *
+ * Table of Contents
+ *
+ * 1. Generic Profiles
+ * 2. Faces of Evergreen
+ */
+/**
+ * Sass Constants
+ *
+ * @section sass-constants
+ */
+/**
+ * Colors
+ */
+/**
+ * Breakpoints
+ *
+ * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Deprecated Modular Scale - Do not use!
+ *
+ * The typographic scale we are using for measurements.
+ * Ideal text size is 17px
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * @see http://www.modularscale.com/?17,345&px&1.618&web&text
+ */
+/**
+ * New Modular Scale
+ *
+ * Ideal text size is 18px.
+ * The important number is 345px. This was the size of images in
+ * the previous Admissions template, which guided image sizes in
+ * the new template.
+ *
+ * See: http://www.modularscale.com/?18,345&px&1.618&web&text
+ */
+/**
+ * Step #    Pixels     Ems    Rems
+ *     17   845.475  46.971  52.842
+ *     16   558.21   31.012  34.888
+ *     15   522.543  29.03   32.659
+ *     14   345      19.167  21.563
+ *     13   322.956  17.942  20.185
+ *     12   213.226  11.846  13.327
+ *     11   199.602  11.089  12.475
+ *     10   131.784   7.321   8.237
+ *      9   123.363   6.854   7.71
+ *      8    81.449   4.525   5.091
+ *      7    76.244   4.236   4.765
+ *      6    50.339   2.797   3.146
+ *      5    47.123   2.618   2.945
+ *      4    31.112   1.728   1.945
+ *      3    29.124   1.618   1.82
+ *      2    19.229   1.068   1.202
+ *      1    18       1       1.125
+ *      0.5  14.000   0.778   0.875  Fudged for better readability, especially on mobile.
+ *     -1    11.120   0.618   0.695
+ *     -2     6.876   0.382   0.43
+ *     -3     4.249   0.236   0.266
+ *     -4     2.626   0.146   0.164
+ *     -5     1.623   0.09    0.101
+ */
+/**
+ * Sass Mixins
+ *
+ * @section sass-mixins
+ */
+/**
+ * Margins
+ */
+/**
+ * Font Sizes
+ */
+/**
+ * Backgrounds
+ */
+/**
+ * Replaces PNG background-image with multiple repeating
+ * gradients instead. Unfortunately, Chrome totally craps out
+ * in the rendering department, so this will have to wait for
+ * another day.
+ */
+/*@mixin background-default{
+	background-image:
+		 diagonal lines
+		repeating-linear-gradient(
+			-45deg,
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 2px,
+			hsla(0, 0%, 0%, 0) 3px
+		),
+		 1px dots
+		radial-gradient(
+			hsla(0, 0%, 0%, .1),
+			hsla(0, 0%, 0%, .1) 1px,
+			hsla(0, 0%, 0%, 0) 1px,
+			hsla(0, 0%, 0%, 0) 2px
+		);
+	
+	background-size:
+		 diagonal lines
+		100% 100%,
+		 1px dots
+		10px 10px;
+}*/
+/**
+ * 1. Generic Profiles
+ */
+/* line 18, ../src/smacss/modules/_profiles.scss */
 .profile .portrait-1-1 {
   border-radius: 50%;
   -webkit-shape-margin: 1em;
@@ -7772,13 +7882,13 @@ p.alert,
           shape-outside: circle() border-box;
 }
 
-/* line 379, ../src/smacss/_modules.scss */
+/* line 25, ../src/smacss/modules/_profiles.scss */
 .profession {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 @media screen and (min-width: 32em) {
-  /* line 379, ../src/smacss/_modules.scss */
+  /* line 25, ../src/smacss/modules/_profiles.scss */
   .profession {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -7786,12 +7896,30 @@ p.alert,
   }
 }
 
-/* line 389, ../src/smacss/_modules.scss */
+/* line 35, ../src/smacss/modules/_profiles.scss */
 .mini-bio-photo,
 .mini-profile-photo {
   border: 1px solid #00365f;
   height: 3rem;
   border-radius: 50%;
+}
+
+/**
+ * 2. Faces of Evergreen
+ */
+/* line 47, ../src/smacss/modules/_profiles.scss */
+.faces-grad-year {
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  font-size: 0.695rem;
+  line-height: 1.34831460674157;
+}
+
+/* line 52, ../src/smacss/modules/_profiles.scss */
+.field-subjects-studied {
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-size: 1.69525rem;
+  line-height: 1.10603155876714;
 }
 
 /**
@@ -7909,14 +8037,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 409, ../src/smacss/_modules.scss */
+/* line 385, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 419, ../src/smacss/_modules.scss */
+/* line 395, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7935,24 +8063,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 438, ../src/smacss/_modules.scss */
+/* line 414, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 442, ../src/smacss/_modules.scss */
+/* line 418, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 450, ../src/smacss/_modules.scss */
+/* line 426, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 458, ../src/smacss/_modules.scss */
+/* line 434, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7963,30 +8091,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 469, ../src/smacss/_modules.scss */
+/* line 445, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 473, ../src/smacss/_modules.scss */
+/* line 449, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 473, ../src/smacss/_modules.scss */
+  /* line 449, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 473, ../src/smacss/_modules.scss */
+  /* line 449, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 486, ../src/smacss/_modules.scss */
+/* line 462, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -7998,7 +8126,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 498, ../src/smacss/_modules.scss */
+/* line 474, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -8006,7 +8134,7 @@ p.alert,
   display: block;
 }
 
-/* line 507, ../src/smacss/_modules.scss */
+/* line 483, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
