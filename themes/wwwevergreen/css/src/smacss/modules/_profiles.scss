@@ -44,12 +44,18 @@
 /**
  * 2. Faces of Evergreen
  */
+.faces-header{
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 60%);
+}
+
 .faces-grad-year{
-	font-family: $small-face;
 	@include small-type;
+	letter-spacing: 0.2ch;
+	text-transform: uppercase;
 }
 
 .field-subjects-studied{
+	color: mix($tint, $black, 40%);
 	font-family: $text-face-alt;
 	@include base-type-xl-alt;
 }
