@@ -148,7 +148,7 @@
 
 .unit-1-5{
 	width: 100%;
-	
+
 	@include breakpoint($starlord){
 		width: 66.6666666667%;
 	}
@@ -228,11 +228,11 @@
  */
 .unit-1-7-alt{
 	width: 100%;
-	
+
 	@include breakpoint($rocket){
 		width: 50%;
 	}
-	
+
 	@include breakpoint($gamora){
 		width: calc(1 / 7 * 100%);
 	}
@@ -288,7 +288,7 @@
 .unit-6-7{
 	// box model
 	width: 100%;
-	
+
 	@include breakpoint($gamora){
 		width: calc(4 / 5 * 100%);
 	}
@@ -300,7 +300,7 @@
 
 .standalone-unit{
 	padding: 0 1ch;
-	
+
 	@include breakpoint($rocket){
 		padding: 0 2ch;
 	}
