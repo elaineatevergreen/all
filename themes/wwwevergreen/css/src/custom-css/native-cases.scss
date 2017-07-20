@@ -15,11 +15,11 @@
 @import "../tools";
 
 .panels-content-wrapper{
-	
+
 	@include breakpoint($gamora){
 		width: calc((4 / 5 * 100%) - 2ch);
 	}
-	
+
 	@include breakpoint($drax){
 		width: calc(6 / 7 * 100%);
 	}
@@ -36,8 +36,7 @@
 
 .panels-grid .primary-content-wrapper,
 .panels-grid .sidebar-wrapper{
-	
-	
+
 	@include breakpoint($gamora){
 		margin-left: 0;
 		width: calc(100% - 2ch);
@@ -46,14 +45,14 @@
 
 .panels-grid .primary-content-wrapper{
 	margin-top: 0;
-	
+
 	@include breakpoint($drax){
 		width: calc(4 / 6 * 100%);
 	}
 }
 
 .panels-grid .sidebar-wrapper{
-	
+
 	@include breakpoint($drax){
 		width: calc(2 / 6 * 100%);
 	}
@@ -61,7 +60,7 @@
 
 .panels-grid .sidebar{
 	width: auto;  // Overrides panels percentage declaration
-	
+
 	@include breakpoint($drax){
 		margin-right: 0;
 		padding-left: 2ch;
