@@ -212,14 +212,23 @@
 }
 
 /**
- * Specialized Templates
+ * 2. Specialized Templates
  */
 .homepage-template-main-row{
 	width: 77em;
-	max-width: calc(100% - 1ch);
+	max-width: calc(100% - 3ch);
 }
 
 .homepage-template-main-row .main-content{
 	margin-right: 0;
 	margin-left: 0;
+}
+
+/**
+ * 3. Panel Themes
+ */
+.theme--pattern{
+	background-attachment: fixed;
+	background-clip: content-box;
+	background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
 }
