@@ -553,6 +553,12 @@ h6 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 237, ../src/smacss/base/_typography.scss */
+  h6 {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 @media screen and (min-width: 43em) {
   /* line 237, ../src/smacss/base/_typography.scss */
   h6 {
@@ -760,6 +766,15 @@ small,
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
   line-height: 1.34831460674157;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 431, ../src/smacss/base/_typography.scss */
+  figcaption,
+  small,
+  .details,
+  .caption {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
 }
 @media screen and (min-width: 125em) {
   /* line 431, ../src/smacss/base/_typography.scss */
@@ -1461,6 +1476,12 @@ input[id$="-range-max"] {
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
   line-height: 1.34831460674157;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  .webform-client-form .description {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
 }
 @media screen and (min-width: 43em) {
   /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
@@ -4628,6 +4649,12 @@ ul.accordion-inner{
   letter-spacing: 0.1ch;
   text-transform: uppercase;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 206, ../src/smacss/_modules.scss */
+  .byline {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 
 /* line 213, ../src/smacss/_modules.scss */
 .big-fact {
@@ -6598,6 +6625,12 @@ p.alert,
   text-transform: uppercase;
   background-color: #600f21;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 36, ../src/smacss/modules/_calendars.scss */
+  .calendar-month {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 
 @media screen {
   /* line 52, ../src/smacss/modules/_calendars.scss */
@@ -7500,6 +7533,15 @@ p.alert,
   letter-spacing: -0.03em;
   text-align: left;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 306, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  .calendar-calendar .week-view .calendar,
+  .calendar-calendar .week-view .calendar-agenda-hour,
+  .calendar-calendar .month-view .calendar,
+  .calendar-calendar .month-view .calendar-agenda-hour {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 
 /* line 315, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view .full .calendar-agenda-hour {
@@ -7908,15 +7950,28 @@ p.alert,
  * 2. Faces of Evergreen
  */
 /* line 47, ../src/smacss/modules/_profiles.scss */
+.faces-header {
+  border-bottom: 1px solid #aea3b6;
+}
+
+/* line 51, ../src/smacss/modules/_profiles.scss */
 .faces-grad-year {
-  font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 0.695rem;
   line-height: 1.34831460674157;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  /* line 51, ../src/smacss/modules/_profiles.scss */
+  .faces-grad-year {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
 }
 
-/* line 52, ../src/smacss/modules/_profiles.scss */
+/* line 57, ../src/smacss/modules/_profiles.scss */
 .field-subjects-studied {
+  color: #616161;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.69525rem;
   line-height: 1.10603155876714;
