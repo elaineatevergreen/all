@@ -39,21 +39,27 @@
 /**
  * B. Page-level Layout
  */
-.wrapper{
+.wrapper,
+.wrapper-full{
 	// box model
 	margin: 0 auto;
 	width: 100%;
 	// layout
 	display: block;
 
-	&.grid,
-	&.grid-alt{
-		display: flex;
-	}
-
 	@include breakpoint($drax){
 		max-width: 77em;
 	}
+}
+
+/**
+ * A standard wrapper for rows that take up the full 7-column grid. This
+ * wrapper will leave auto-margins around the edges of the container when
+ * the site is viewed at narrow screen sizes.
+ */
+
+.wrapper-full{  // Keeps a bit of space for vertical auto-margins.
+	width: calc(100% - 4em);
 }
 
 .wrapper:before,  // nega-clearfix! Clearfix that wraps the element around TOP margins.
@@ -67,12 +73,17 @@
 	content: "";
 }
 
+.wrapper.grid,
+.wrapper.grid-alt{
+	display: flex;
+}
+
 /**
  * C. Header Layout
  */
 
 [role="banner"],
-body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete after next whole-site publish.
+//body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete after next whole-site publish.
 .header-nav-wrapper{
 	// layout
 	display: flex;
@@ -105,7 +116,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		// box model
 		border-top: 4px solid $evergreen-old-style;
 		margin-top: -4px;  // Compensates for 4px top border and maintains 15px vertical cadence.
-		// backgrounds and borders
+		// decoration
 		border-radius: 2px;
 	}
 }
@@ -183,7 +194,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	// box model
 	border-top: 5px solid $evergreen-old-style;
 	margin: -5px 0 0 2ch;  // Compensate for 5px border
-	//margin-left: 1em;
 	padding: 0;
 	width: calc(100% - 3ch);
 	// decoration
@@ -197,7 +207,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 		width: calc(80% - 2ch);  // 4/5 - 2ch; 1ch margin on either side
 		// layout
 		overflow: visible;
-		// borders and backgrounds
+		// decoration
 		border-radius: 0 0 2px 2px;
 	}
 
@@ -216,9 +226,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 
 	@include breakpoint($drax){
-		//margin-left: 18.292682926829%;  // magic number? Should this be something more like calc(14.285714285714% + 1em)?  // 1/7
-		//width: 81.714285714285714%;  // 6/7
-		width: 85.714285714286%;
+		width: 85.714285714286%;  // 6/7
 	}
 }
 
@@ -226,11 +234,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 .primary-content-wrapper{
 	// box model
 	border-bottom: 2px dashed $evergreen-neue;
-
-	/*@include breakpoint($gamora){
-		// box model
-		padding-left: 1em;
-	}*/
 
 	@include breakpoint($drax){
 		border-bottom: 0;
@@ -252,7 +255,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	@include breakpoint($gamora){
 		// box model
 		margin-left: 20%;
-		padding-left: 1em;
 		width: calc(80% - 2ch);  // 4/5; this should match .primary-content-wrapper.
 		// layout
 		overflow: visible;
@@ -261,6 +263,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	@include breakpoint($drax){
 		// box model
 		margin: 0;
+		padding-left: 2ch;
 		width: 28.571428571429%;  // 2/7
 	}
 }
@@ -285,7 +288,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 }
 
-.index-wrapper .main-content{  // specified in .index-wrapper to not affect .primary-content-wrapper
+.index-wrapper .main-content{  // Specified in .index-wrapper to not affect .primary-content-wrapper
 
 	@include breakpoint($gamora){
 		margin-right: 3ch;
@@ -293,7 +296,7 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 	}
 }
 
-.primary-content-wrapper .main-content{  // specified in .primary-content-wrapper to not affect .index-wrapper
+.primary-content-wrapper .main-content{  // Specified in .primary-content-wrapper to not affect .index-wrapper
 	max-width: 45em;
 
 	@include breakpoint($gamora){
@@ -318,11 +321,11 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 }
 
 .sidebar{
-	margin: 0 0.75em 3.75rem;  // 60/16
+	margin: 0 1.25ch 3.75rem;  // 60/16
 
 	@include breakpoint($rocket){
-		margin-right: 2em;
-		margin-left: 2em;
+		margin-right: 2ch;
+		margin-left: 2ch;
 	}
 
 	@include breakpoint($gamora){
@@ -445,10 +448,6 @@ body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete 
 @media screen and (max-width: 32em){
 	.gt32{
 		display: none;
-	}
-
-	.ins32{  // deprecated //Insert inline elements at this break point
-		//display: none;
 	}
 }
 

@@ -179,7 +179,6 @@ rules:
         - letter-spacing
         - line-height
         - text-align
-        - text-decoration
         - text-indent
         - text-rendering
         - text-shadow
@@ -215,6 +214,9 @@ rules:
         - fill
         - outline
         - outline-width
+        - text-decoration
+        - text-decoration-color
+        - text-decoration-skip
         # behavior
         - animation
         - touch-action
