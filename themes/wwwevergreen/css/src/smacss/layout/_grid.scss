@@ -6,8 +6,7 @@
  * Table of Contents
  *
  * 1. Flexbox-based Grid Layout
- * 2. Float-based Grid Layout
- * 3. Supplemental Content
+ * 2. Supplemental Content
  */
 
 .row{
@@ -66,14 +65,10 @@
 .unit-6-7{
 	// box model
 	padding-left: 2ch;
-	// layout
-	float: left;  // IE 9
 }
 
 .unit-1-1{
 	width: 100%;
-	// layout
-	clear: left;  // IE 9
 }
 
 .unit-1-2{
@@ -83,10 +78,6 @@
 	@media (min-width: 32em){
 		// box model
 		width: 50%;
-
-		&:nth-child(odd){  // IE 9
-			clear: left;
-		}
 	}
 }
 
@@ -106,24 +97,11 @@
 	@include breakpoint($gamora){
 		// box model
 		width: 50%;
-
-		&:nth-child(odd){
-			// layout
-			clear: left;  // IE 9
-		}
 	}
 
 	@include breakpoint($drax){
 		// box model
 		width: 33.3333333333%;
-
-		&:nth-child(odd){  // IE 9
-			clear: none;
-		}
-
-		&:nth-child(3n+1){  // IE 9
-			clear: left;
-		}
 	}
 }
 
