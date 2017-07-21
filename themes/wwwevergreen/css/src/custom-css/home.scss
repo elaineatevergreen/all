@@ -36,17 +36,28 @@
  */
 .hype-grid{
 	display: grid;
-	grid-column-template: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	
 	
 	@include breakpoint($gamora){
-		grid-column-template: repeat(7, 1fr);
-		grid-gap: 2ch;
+		grid-template-column: repeat(7, 1fr);
+		grid-gap: 1em 2ch;
+	}
+}
+
+@supports(display: grid){
+	.hype-grid > *{
+		padding-left: 0;
+		width: auto;
 	}
 }
 
 .hype-segment{
 	grid-column-end: span 3;
+}
+
+.hype-segment--magazine{
+	grid-column-end: span 6;
 }
 
 /**
