@@ -6,8 +6,9 @@
  *
  * Table of Contents
  * 1. Unpublished Content
- * 2. SVG Transporter
- * 3. Slick Slider
+ * 2. Marketing Grid
+ * 3. SVG Transporter
+ * 4. Slick Slider
  */
 @import "../tools";
 
@@ -31,7 +32,25 @@
 }
 
 /**
- * 2. SVG Transporter
+ * 2. Hype Grid
+ */
+.hype-grid{
+	display: grid;
+	grid-column-template: repeat(2, 1fr);
+	
+	
+	@include breakpoint($gamora){
+		grid-column-template: repeat(7, 1fr);
+		grid-gap: 2ch;
+	}
+}
+
+.hype-segment{
+	grid-column-end: span 3;
+}
+
+/**
+ * 3. SVG Transporter
  *
  * We’d like to have SVG icons that can be themed with CSS, but browsers
  * make this very challenging.
@@ -42,7 +61,7 @@
 //@import "home/svg-transporter";
 
 /**
- * 3. Slick Slider
+ * 4. Slick Slider
  *
  * Slick Slider is used on the homepage for Upcoming Events Calendar at
  * smaller screen sizes.
