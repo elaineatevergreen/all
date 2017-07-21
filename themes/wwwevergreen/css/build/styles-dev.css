@@ -1438,22 +1438,12 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
- * 3. Webform Module
- *
- * Table of Contents
- *
- * a. Webform Forms
- * b. Checkboxes and Radios
- * c. Textareas
- * d. Grid
- * e. Buttons
- *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1461,26 +1451,26 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1488,13 +1478,13 @@ input[id$="-range-max"] {
   line-height: 1.34831460674157;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1503,15 +1493,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * b. Checkboxes And Radios
+ * Checkboxes And Radios
  */
-/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1520,33 +1510,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * c. Textareas
+ * Textareas
  */
-/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1554,24 +1544,7 @@ input[id$="-range-max"] {
 }
 
 /**
- * d. Grid
- *
- * A form grid that's useful for sliding scales, e.g. tracking a range from
- * unsatisfied to satisfied.
- */
-/* line 111, ../src/smacss/base/forms/_drupal-webform.scss */
-.checkbox.webform-grid-option {
-  text-align: center;
-}
-
-/* line 115, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-grid-option .form-radio,
-.webform-grid-option .form-checkbox {
-  float: none;
-}
-
-/**
- * e. Buttons
+ * Buttons
  */
 /**
  * 4. Search
@@ -2680,6 +2653,7 @@ a:link,
   background-attachment: fixed;
   background-clip: content-box;
   background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+  background-size: 10vmax;
 }
 
 /**
@@ -2733,7 +2707,7 @@ a:link,
  * 
  * A. Header
  * B. Background Image
- * C. Homepage
+ * C. Homepage Hero Image
  * D. Tertiary Nav
  * E. Page Footer
  * F. Special Typography
@@ -3595,7 +3569,7 @@ input:checked + .header-dropdown {
 }
 
 /**
- * C. Homepage
+ * C. Homepage Hero Image
  */
 /**
  * C. Homepage Hero Image
@@ -3617,24 +3591,28 @@ input:checked + .header-dropdown {
  *
  * 1. Default
  * 2. Graduation Day Hero Image
- * 3. Slogan
- * 4. Slogan Modifiers
+ * 3. Copy
+ * 4. Copy Modifiers
  */
-/* line 25, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero {
+/* line 24, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero,
+.homepage-hero-content {
   height: 100%;
   overflow: hidden;
-  position: relative;
-  /*@include breakpoint($drax){
-  	display: table;  // Gives it a block formatting context
-  }*/
 }
+
 @media screen and (min-width: 20em) {
-  /* line 25, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero {
     width: 100%;
     overflow: hidden;
     position: relative;
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 30, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero {
+    display: table;
   }
 }
 
@@ -3683,24 +3661,6 @@ input:checked + .header-dropdown {
 }
 
 /* line 89, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-caption {
-  position: relative;
-  z-index: 1;
-}
-@media screen and (min-width: 43em) {
-  /* line 89, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-caption {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-/* line 100, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-caption .caption-box {
-  margin: 0;
-}
-
-/* line 104, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero a,
 .homepage-hero a:visited,
 .homepage-hero a:hover {
@@ -3709,7 +3669,7 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 
-/* line 116, ../src/smacss/modules/_homepage-hero.scss */
+/* line 101, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action {
   padding: 0 2%;
   display: inline-block;
@@ -3717,51 +3677,40 @@ input:checked + .header-dropdown {
   text-shadow: none;
   background-color: #64933a;
 }
-/* line 127, ../src/smacss/modules/_homepage-hero.scss */
+/* line 112, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero .call-to-action:hover {
   background-color: #0086ee;
 }
-@media screen and (min-width: 32em) {
-  /* line 116, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    font-size: calc(1rem + 1vh);
-    line-height: 1.5;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 116, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero .call-to-action {
-    float: right;
-  }
-}
 @media screen and (min-width: 70em) {
-  /* line 116, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 101, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero .call-to-action {
     font-size: 1.82rem;
     line-height: 1.5451174289246;
   }
 }
 
-/* line 147, ../src/smacss/modules/_homepage-hero.scss */
+/* line 122, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content {
-  height: 100%;
   width: 100%;
   max-width: 77em;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 147, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 122, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     bottom: 0;
     background-color: transparent;
   }
 }
-@media screen and (min-width: 32em) {
-  /* line 147, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 25em) {
+  /* line 122, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -3769,18 +3718,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 147, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 122, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content {
     height: 100%;
   }
 }
 
-/* line 173, ../src/smacss/modules/_homepage-hero.scss */
+/* line 149, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content .box {
   margin: 0;
 }
-@media screen and (min-width: 32em) {
-  /* line 173, ../src/smacss/modules/_homepage-hero.scss */
+@media screen and (min-width: 20em) {
+  /* line 149, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content .box {
     position: absolute;
     bottom: 0;
@@ -3796,191 +3745,118 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 168, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-/* line 196, ../src/smacss/modules/_homepage-hero.scss */
+/* line 172, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 200, ../src/smacss/modules/_homepage-hero.scss */
+/* line 176, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 200, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 176, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 200, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 176, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 216, ../src/smacss/modules/_homepage-hero.scss */
+/* line 192, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 220, ../src/smacss/modules/_homepage-hero.scss */
+/* line 196, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero-copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 220, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 196, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 220, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 196, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero-copy img {
     margin-bottom: -2.5em;
   }
 }
 
 /**
- * 3. Slogan
+ * 3. Copy
  */
-/* line 236, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan-wrapper {
-  padding-left: 4ch;
-  width: 75%;
-  position: absolute;
-  top: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.667), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
+/* line 212, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy {
+  margin: 0 calc(15 / 14 * 1em);
+}
+@media screen and (min-width: 20em) {
+  /* line 212, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc(66.6666666667% - 1em);
+    float: left;
+  }
 }
 @media screen and (min-width: 32em) {
-  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: 66.6666666667%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: calc(4 / 7 * 100%);
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-wrapper {
-    width: calc(3 / 7 * 100%);
-  }
-}
-
-/* line 260, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media screen and (min-width: 32em) {
-  /* line 260, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan {
+  /* line 212, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    margin: 0 1em;
+    width: calc(50% - 1em);
     color: #f2f2f2;
     text-shadow: 0 1px 2px #0f0913;
   }
 }
+@media screen and (min-width: 70em) {
+  /* line 212, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy {
+    width: calc((3 / 7 * 100%) - 1em);
+  }
+}
 
-/* line 293, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan h1 {
-  margin-right: 1ch;
-  width: 61%;
-  float: left;
+/* line 236, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy h1 {
   font-size: 1.202rem;
   line-height: 1.169925124792013;
 }
 @media screen and (min-width: 20em) {
-  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 2em;
+  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
-@media screen and (min-width: 32em) {
-  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 1em;
-    width: 65%;
-  }
-}
 @media screen and (min-width: 43em) {
-  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 1.5em;
-    width: 70%;
+  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
-@media screen and (min-width: 70em) {
-  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
-    margin-top: 3.5em;
-  }
-}
 @media screen and (min-width: 86em) {
-  /* line 293, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan h1 {
+  /* line 236, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 338, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan-keywords {
-  margin-top: -10vh;
-  width: 39%;
-  float: left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
-          animation-timing-function: cubic-bezier(0.24, 0.82, 0.695, 1.145);
-}
-@media screen and (min-width: 32em) {
-  /* line 338, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-keywords {
-    width: 35%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 338, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-slogan-keywords {
-    width: 30%;
-  }
-}
-
-@-webkit-keyframes spinDown {
-  from {
-    margin-top: -75vh;
-  }
-  to {
-    margin-top: -10vh;
-  }
-}
-
-@keyframes spinDown {
-  from {
-    margin-top: -75vh;
-  }
-  to {
-    margin-top: -10vh;
-  }
-}
-/* line 370, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-slogan img {
+/* line 259, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-copy img {
   width: 100%;
 }
 
@@ -3996,45 +3872,65 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 385, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-copy-alt .homepage-hero-slogan-wrapper {
-    padding-right: 4ch;
-    padding-left: 0;
-    right: 0;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 66.66667%, transparent);
+  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-copy-alt .homepage-hero-copy {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    float: right;
   }
 }
 
-/* I do  not believe this entire section is needed for the latest slogan. */
-/*
-.homepage-hero-img-detailed .homepage-hero-copy{
-	// box model
-	height: 100%;
-	margin: 0;
-	padding: 0 calc(7.5 / 15 * 1em);
-	width: 66.6666666667%;
-	// decoration
-	background-color: transparentize($blueberry-susan, 0.5);
-	border-radius: 2px;
+/* line 289, ../src/smacss/modules/_homepage-hero.scss */
+.homepage-hero-img-detailed .homepage-hero-copy {
+  height: 100%;
+  margin: 0;
+  padding: 0 calc(7.5 / 15 * 1em);
+  width: 66.6666666667%;
+  background-color: rgba(73, 44, 93, 0.5);
+  border-radius: 2px;
+}
+@media screen and (min-width: 22em) {
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 14 * 1em);
+  }
+}
+@media screen and (min-width: 32em) {
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    height: auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 43em) {
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(15 / 17 * 1em);
+  }
+}
+@media screen and (min-width: 70em) {
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    width: calc(3 / 7 * 100%);
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  .homepage-hero-img-detailed .homepage-hero-copy {
+    padding: 0 calc(30 / 19.23333333333 * 1em);
+  }
+}
 
-	@include breakpoint($rocket){
-		padding: 0 calc(15 / 14 * 1em);
-	}
-
-	@include breakpoint($starlord){
-		height: auto;
-		width: 50%;
-	}
-
-	@include breakpoint($gamora){
-		// box model
-		margin: 5em 2ch 0;
-		padding: 0;
-		width: calc(100% - 4ch);
-		// decoration
-		background-color: transparent;
-	}
-}*/
 /* line 129, ../src/smacss/_modules.scss */
 .location-transporter {
   margin: calc(30 / 18 * 1em) 1ch;
@@ -4104,25 +4000,7 @@ input:checked + .header-dropdown {
   }
 }
 
-@supports (grid-template: none) {
-  /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
-  .tertiary-nav-wrapper {
-    padding-left: 0;
-  }
-  @media screen and (min-width: 43em) {
-    /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
-    .tertiary-nav-wrapper {
-      width: auto;
-    }
-  }
-  @media screen and (min-width: 70em) {
-    /* line 38, ../src/smacss/modules/_tertiary-nav.scss */
-    .tertiary-nav-wrapper {
-      width: auto;
-    }
-  }
-}
-/* line 51, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 36, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav,
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
@@ -4135,7 +4013,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
-  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4144,17 +4022,17 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     padding-top: calc(45 / 16 * 1rem);
-    width: calc(100% + 2ch);
+    width: calc(100% + 1em);
     max-width: none;
     position: relative;
     border-radius: 0;
   }
-  /* line 81, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 66, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4162,14 +4040,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 51, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 91, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 76, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4178,7 +4056,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 98, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 83, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
     margin-top: 0;
   }
@@ -4379,14 +4257,14 @@ ul.accordion-inner{
  * want to use automatically. This accordion expands and disappears at the
  * $gamora breakpoint.
  */
-/* line 304, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 289, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation {
   margin-left: 0;
   margin-right: 0;
   list-style-type: none;
 }
 
-/* line 313, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 298, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title {
   -webkit-align-items: start;
       -ms-flex-align: start;
@@ -4397,24 +4275,24 @@ ul.accordion-inner{
       grid-template-columns: auto 1fr;
 }
 @media screen and (min-width: 43em) {
-  /* line 313, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 298, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title {
     display: block;
   }
 }
 
-/* line 323, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 43em) {
-  /* line 323, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title:hover {
     cursor: auto;
   }
 }
 
-/* line 331, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
@@ -4424,13 +4302,13 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 331, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title::before {
     content: none;
   }
 }
 
-/* line 342, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 327, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4440,7 +4318,7 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 347, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 332, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4449,7 +4327,7 @@ ul.accordion-inner{
   line-height: 1.42857142857143;
 }
 @media screen and (min-width: 43em) {
-  /* line 347, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 332, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4460,7 +4338,7 @@ ul.accordion-inner{
   }
 }
 
-/* line 368, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 353, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   border-bottom: 1px solid black;
   margin-left: 0;
@@ -4471,7 +4349,7 @@ ul.accordion-inner{
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
-  /* line 368, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 353, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     border-bottom-width: 0;
     background-color: transparent;
@@ -4479,56 +4357,56 @@ ul.accordion-inner{
   }
 }
 
-/* line 404, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 389, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   margin: 0;
   padding: 0 1ch;
   max-height: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 404, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 389, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     padding: 0;
   }
 }
 
-/* line 415, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 400, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item:last-child .field-links {
   border-bottom-width: 0;
   text-decoration: none;
 }
 
-/* line 422, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 407, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 422, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 407, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 433, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 418, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
 
-/* line 442, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 427, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 442, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 427, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 452, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 437, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation a,
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
@@ -4545,7 +4423,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 474, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 459, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
@@ -7280,10 +7158,10 @@ p.alert,
  *  c.    Calendar List View
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
- *  d.    Calendar Week and Month View
- *  e.    Single Day
- *  f.    Multi-day
- *  g.    Events By Category
+ *  d. Calendar Week and Month View
+ *  e. Single Day
+ *  f. Multi-day
+ *  g. Events By Category
  */
 /**
  * a. Base Calendar Styles
@@ -8420,15 +8298,7 @@ p.alert,
  * 
  * modules/_media-segment
  * ----------------------
- * Do not use .media properties; they clash with the Drupal Media module.
- * Instead, use the matching .compound property.
- * .media          Use .compound
- * .media-img      Use .compound-img
- * .media-body     Use .compound-body
- * Et cetera
- *
- * Note the following special consideration:
- * .media-img-alt  Use .compound-child-alt
+ * .media-img-alt  Use .media-child-alt
  *
  * modules/_search
  * ---------------
