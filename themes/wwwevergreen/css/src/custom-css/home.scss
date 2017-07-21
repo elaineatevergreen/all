@@ -36,16 +36,23 @@
  */
 .hype-grid{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
+	
+	@include breakpoint($lil-groot){
+		grid-template-columns: repeat(2, 1fr);
+	}
 	
 	
 	@include breakpoint($gamora){
-		grid-template-column: repeat(7, 1fr);
+		grid-template-columns: repeat(7, 1fr);
 		grid-gap: 1em 2ch;
 	}
 }
 
 @supports(display: grid){
+	.grid.hype-grid{
+		margin-left: auto;
+	}
 	.hype-grid > *{
 		padding-left: 0;
 		width: auto;
@@ -53,11 +60,28 @@
 }
 
 .hype-segment{
-	grid-column-end: span 3;
+	
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+	
+	@include breakpoint($gamora){
+		grid-column-end: span 3;
+	}
 }
 
-.hype-segment--magazine{
-	grid-column-end: span 6;
+.hype-grid--magazine{
+	display: grid;
+	grid-template-columns: 1fr;
+	
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+	
+	@include breakpoint($gamora){
+		grid-column-end: span 6;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /**
