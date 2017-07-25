@@ -46,6 +46,12 @@
 	justify-content: flex-start;
 }
 
+.unit-placeholder{
+	background-clip: content-box;
+	background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+	background-position-x: 1ch;
+}
+
 .unit-1-1,
 .unit-1-2,
 .unit-1-3,
@@ -55,7 +61,10 @@
 .unit-1-5,
 .unit-1-6,
 .unit-1-6-alt,
+.unit-2-6,
+.unit-4-6,
 .unit-1-7,
+.unit-1-7-alt,
 .unit-2-7,
 .unit-3-7,
 .unit-4-7,
@@ -139,7 +148,7 @@
 
 .unit-1-5{
 	width: 100%;
-	
+
 	@include breakpoint($starlord){
 		width: 66.6666666667%;
 	}
@@ -184,6 +193,18 @@
 	}
 }
 
+.unit-4-6{
+	// box model
+	padding-right: 1em;
+	padding-left: 0;
+	width: 100%;
+
+	@include breakpoint($drax){
+		// box model
+		width: calc(4 / 6 * 100%);
+	}
+}
+
 .unit-1-7{
 	// box model
 	width: 100%;
@@ -199,6 +220,21 @@
 	@include breakpoint($gamora){
 		// box model
 		width: 14.285714285714%;  // 1/7
+	}
+}
+
+/**
+ * Stays wider for longer.
+ */
+.unit-1-7-alt{
+	width: 100%;
+
+	@include breakpoint($rocket){
+		width: 50%;
+	}
+
+	@include breakpoint($gamora){
+		width: calc(1 / 7 * 100%);
 	}
 }
 
@@ -254,13 +290,17 @@
 	width: 100%;
 
 	@include breakpoint($gamora){
-		width: 85.714285714286%;  // 6/7
+		width: calc(4 / 5 * 100%);
+	}
+
+	@include breakpoint($drax){
+		width: calc(6 / 7 * 100%);
 	}
 }
 
 .standalone-unit{
 	padding: 0 1ch;
-	
+
 	@include breakpoint($rocket){
 		padding: 0 2ch;
 	}

@@ -166,8 +166,7 @@ h2{
 		// box model
 		margin-top: 1.44638724607868em;  // 45/31.112
 		// typography
-		font-size: 1.945rem;  // 31.112px  Step 4
-		line-height: 0.96425816405246;  // 30/31.112
+		@include base-type-xxl;
 	}
 }
 
@@ -188,16 +187,14 @@ h3{
 		// box model
 		margin-top: 1.10603155876714em;  // 30/27.124
 		// typography
-		font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
-		line-height: 1.10603155876714;  // 30/27.124
+		@include base-type-xl-alt;
 	}
 
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.54575432811212em;  // 45/29.112
 		// typography
-		font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
-		line-height: 1.03050288540808;  // 30/29.112
+		@include base-type-xxl-alt;
 	}
 }
 

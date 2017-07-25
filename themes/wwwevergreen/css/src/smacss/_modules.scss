@@ -224,9 +224,38 @@
 	}
 }
 
+.fast-fact,
+.fast-fact-alt{
+	// box model
+	border: 0.25ch solid $evergreen-neue;
+	height: 100%;
+	padding: 0 1ch;
+	// layout
+	overflow: hidden;
+	// typography
+	font-family: $text-face-alt;
+}
+
+.fast-fact{
+
+	@include breakpoint($gamora){
+		border-width: 0 0.5ch 0 0;
+		padding-right: 2ch;
+	}
+}
+
+.fast-fact-alt{
+
+	@include breakpoint($gamora){
+		// box model
+		border-width: 0 0 0 0.5ch;
+		padding-left: 2ch;
+	}
+}
+
 .key-number{  // e.g. http://www.evergreen.edu/about/facts
 	// box model
-	margin: 0.818419903972065em 0 0;
+	//margin: 0.818419903972065em 0 0;
 	// layout
 	display: block;
 	// typography
@@ -314,21 +343,6 @@
 	overflow: hidden;
 }
 
-/**
- * Override news title links to make them look like regular, unlinked h4s
- * again. While I normally don't like to make links not look like links, I
- * think in this case, it’s warranted because there is a link under every
- * article. See also: nytimes.com and washingtonpost.com.
- */
-.news-title-link a{
-	// box model
-	//border-bottom-width: 0;
-	// typography
-	color: $black;
-	// decoration
-	text-decoration: none;
-}
-
 .news-story{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 80%);
@@ -355,31 +369,7 @@
 /**
  * P. Profiles
  */
-.profile .portrait-1-1{  // portrait with 1:1 ratio.
-	border-radius: 50%;
-	// shape
-	shape-margin: 1em;
-	shape-outside: circle() border-box;
-}
-
-.profession{
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-
-	@include breakpoint($starlord){
-		@include base-type;
-		font-weight: bold;
-	}
-}
-
-.mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
-.mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
-	// box model
-	border: 1px solid mix($shade, $sky-blue, 60%);
-	height: 3rem;
-	// decoration
-	border-radius: 50%;
-}
+@import "modules/profiles";
 
 /**
  * Q. Directories
