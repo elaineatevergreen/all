@@ -133,7 +133,7 @@ $groot:     (min: 125em);
  */
 @mixin base-type{
 	font-size: 0.875rem;  // 14px  Step 0.5
-	line-height: 1.42857142857143;  //20/14
+	line-height: 1.33928571428571;  //18.75/14
 }
 
 @mixin base-type-lg{
@@ -143,7 +143,7 @@ $groot:     (min: 125em);
 
 @mixin base-type-xl{
 	font-size: 1.202rem;  // 19.229px  Step 2
-	line-height: 1.30011961100421;  // 25/19.229
+	line-height: 1.36512559155442;  // 26.25/19.229
 }
 
 @mixin base-type-xl-alt{
@@ -153,12 +153,12 @@ $groot:     (min: 125em);
 
 @mixin base-type-xxl{
 	font-size: 1.945rem;  // 31.112px  Step 4
-	line-height: 0.96425816405246;  // 30/31.112
+	line-height: 1.20532270506557;  // 37.5/31.112
 }
 
 @mixin base-type-xxl-alt{
 	font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
-	line-height: 1.03050288540808;  // 30/29.112
+	line-height: 1.2881286067601;  // 37.5/29.112
 }
 
 @mixin small-type{
