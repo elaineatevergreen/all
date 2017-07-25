@@ -333,7 +333,7 @@ button {
 body,
 .base {
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
 }
 @media screen and (min-width: 43em) {
   /* line 57, ../src/smacss/base/_typography.scss */
@@ -348,7 +348,7 @@ body,
   body,
   .base {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -407,7 +407,7 @@ h1 {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.945rem;
   font-weight: normal;
-  line-height: 1.44601542416452;
+  line-height: 1.16514528156338;
 }
 @media screen and (min-width: 32em) {
   /* line 103, ../src/smacss/base/_typography.scss */
@@ -423,7 +423,7 @@ h1 {
   h1 {
     margin-top: 0.63663179339176em;
     font-size: 2.945rem;
-    line-height: 0.95494769008764;
+    line-height: 1.11410563843558;
   }
 }
 @media screen and (min-width: 70em) {
@@ -462,7 +462,7 @@ h2 {
   h2 {
     margin-top: 1.03007828594973em;
     font-size: 1.82rem;
-    line-height: 1.03007828594973;
+    line-height: 1.15883807169345;
   }
 }
 @media screen and (min-width: 125em) {
@@ -470,7 +470,7 @@ h2 {
   h2 {
     margin-top: 1.44638724607868em;
     font-size: 1.945rem;
-    line-height: 0.96425816405246;
+    line-height: 1.20532270506557;
   }
 }
 
@@ -502,7 +502,7 @@ h3 {
   h3 {
     margin-top: 1.54575432811212em;
     font-size: 1.8195rem;
-    line-height: 1.03050288540808;
+    line-height: 1.2881286067601;
   }
 }
 
@@ -566,7 +566,7 @@ h6 {
     margin-bottom: 2.14285714285714em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 125em) {
@@ -784,7 +784,7 @@ small,
   .caption {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 
@@ -894,7 +894,7 @@ table {
   width: 100%;
   max-width: 100%;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 
@@ -910,7 +910,7 @@ caption {
   caption {
     margin: 0 0 0.39003588330126em;
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 125em) {
@@ -1151,7 +1151,7 @@ textarea {
   max-width: 100%;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
   border-radius: 2px;
   caret-color: #50762e;
 }
@@ -1424,7 +1424,7 @@ input[id$="-range-max"] {
   /* line 111, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 
@@ -1489,7 +1489,7 @@ input[id$="-range-max"] {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 
@@ -2372,7 +2372,7 @@ a:link,
   /* line 129, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 43em) {
@@ -2390,7 +2390,7 @@ a:link,
   /* line 153, ../src/smacss/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
     line-height: 1.07142857142857;
   }
 }
@@ -2408,7 +2408,7 @@ a:link,
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 125em) {
@@ -2606,7 +2606,7 @@ a:link,
     margin: calc(45 / 16 * 1rem) 1em 0 0;
     padding-left: 1em;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
     color: #303030;
   }
   /* line 345, ../src/smacss/_layout.scss */
@@ -2682,7 +2682,7 @@ a:link,
     width: 33.3333333333%;
     float: left;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 
@@ -3063,7 +3063,7 @@ input:checked + .header-dropdown {
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -3397,7 +3397,7 @@ input:checked + .header-dropdown {
   /* line 543, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
     line-height: 3.21428571428571;
   }
 }
@@ -3987,7 +3987,7 @@ input:checked + .header-dropdown {
   .location-transporter {
     margin: calc(30 / 19.229 * 1em) 1ch;
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 125em) {
@@ -4052,7 +4052,7 @@ input:checked + .header-dropdown {
   max-width: none;
   z-index: 1;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
@@ -4367,7 +4367,7 @@ ul.accordion-inner{
   margin-bottom: 0;
   padding: 0.631100639515315em 0;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
 }
 @media screen and (min-width: 43em) {
   /* line 332, ../src/smacss/modules/_tertiary-nav.scss */
@@ -4487,7 +4487,7 @@ ul.accordion-inner{
   clear: left;
   color: #f2f2f2;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
   text-align: center;
   background-color: black;
 }
@@ -4503,7 +4503,7 @@ ul.accordion-inner{
   /* line 7, ../src/smacss/modules/_footer.scss */
   .page-footer {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -4613,7 +4613,7 @@ ul.accordion-inner{
   margin: 1.17010764990379em 0;
   color: #50762e;
   font-size: 1.202rem;
-  line-height: 1.30011961100421;
+  line-height: 1.36512559155442;
 }
 @media screen and (min-width: 43em) {
   /* line 176, ../src/smacss/_modules.scss */
@@ -4655,28 +4655,35 @@ ul.accordion-inner{
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
+@media screen and (min-width: 125em) {
+  /* line 206, ../src/smacss/_modules.scss */
+  .byline {
+    font-size: 0.875rem;
+    line-height: 1.33928571428571;
+  }
+}
 
-/* line 213, ../src/smacss/_modules.scss */
+/* line 217, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
-  line-height: 1.30011961100421;
+  line-height: 1.36512559155442;
 }
 @media screen and (min-width: 70em) {
-  /* line 213, ../src/smacss/_modules.scss */
+  /* line 217, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 213, ../src/smacss/_modules.scss */
+  /* line 217, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 227, ../src/smacss/_modules.scss */
+/* line 231, ../src/smacss/_modules.scss */
 .fast-fact,
 .fast-fact-alt {
   border: 0.25ch solid #64933a;
@@ -4687,7 +4694,7 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 43em) {
-  /* line 239, ../src/smacss/_modules.scss */
+  /* line 243, ../src/smacss/_modules.scss */
   .fast-fact {
     border-width: 0 0.5ch 0 0;
     padding-right: 2ch;
@@ -4695,14 +4702,14 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 43em) {
-  /* line 247, ../src/smacss/_modules.scss */
+  /* line 251, ../src/smacss/_modules.scss */
   .fast-fact-alt {
     border-width: 0 0 0 0.5ch;
     padding-left: 2ch;
   }
 }
 
-/* line 256, ../src/smacss/_modules.scss */
+/* line 260, ../src/smacss/_modules.scss */
 .key-number {
   display: block;
   color: #64933a;
@@ -4711,24 +4718,24 @@ ul.accordion-inner{
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 256, ../src/smacss/_modules.scss */
+  /* line 260, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 273, ../src/smacss/_modules.scss */
+/* line 277, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 277, ../src/smacss/_modules.scss */
+/* line 281, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 281, ../src/smacss/_modules.scss */
+/* line 285, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4737,7 +4744,7 @@ ul.accordion-inner{
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 281, ../src/smacss/_modules.scss */
+  /* line 285, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -5069,7 +5076,7 @@ ul.accordion-inner{
 .step-list > li p,
 .step-list > li li {
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
   font-weight: normal;
 }
 @media screen and (min-width: 43em) {
@@ -5171,7 +5178,7 @@ ul.accordion-inner{
   /* line 409, ../src/smacss/modules/_lists.scss */
   .many {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -6248,7 +6255,7 @@ p.alert,
   /* line 306, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 43em) {
@@ -6323,7 +6330,7 @@ p.alert,
   /* line 385, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -6684,7 +6691,7 @@ p.alert,
     margin-left: -24.58203125%;
     width: 21.58203125%;
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
     position: absolute;
   }
 }
@@ -6725,7 +6732,7 @@ p.alert,
   /* line 134, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 70em) {
@@ -6739,7 +6746,7 @@ p.alert,
   /* line 134, ../src/smacss/modules/_calendars.scss */
   .upcoming-events-homepage2 {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -7036,7 +7043,7 @@ p.alert,
   border-bottom: 1px solid #aea3b6;
   background-color: #e1dee3;
   font-size: 0.875rem;
-  line-height: 1.42857142857143;
+  line-height: 1.33928571428571;
 }
 @media screen and (min-width: 70em) {
   /* line 417, ../src/smacss/modules/_calendars.scss */
@@ -7417,7 +7424,7 @@ p.alert,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
     font-size: 1.202rem;
-    line-height: 1.30011961100421;
+    line-height: 1.36512559155442;
   }
 }
 
@@ -7757,12 +7764,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 341, ../src/smacss/_modules.scss */
+/* line 345, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 346, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7782,7 +7789,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 363, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7933,7 +7940,7 @@ p.alert,
   /* line 25, ../src/smacss/modules/_profiles.scss */
   .profession {
     font-size: 0.875rem;
-    line-height: 1.42857142857143;
+    line-height: 1.33928571428571;
     font-weight: bold;
   }
 }
@@ -8092,14 +8099,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 385, ../src/smacss/_modules.scss */
+/* line 389, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 395, ../src/smacss/_modules.scss */
+/* line 399, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8118,24 +8125,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 414, ../src/smacss/_modules.scss */
+/* line 418, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 418, ../src/smacss/_modules.scss */
+/* line 422, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 426, ../src/smacss/_modules.scss */
+/* line 430, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 434, ../src/smacss/_modules.scss */
+/* line 438, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8146,30 +8153,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 445, ../src/smacss/_modules.scss */
+/* line 449, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 449, ../src/smacss/_modules.scss */
+/* line 453, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 449, ../src/smacss/_modules.scss */
+  /* line 453, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 449, ../src/smacss/_modules.scss */
+  /* line 453, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 462, ../src/smacss/_modules.scss */
+/* line 466, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -8181,7 +8188,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 474, ../src/smacss/_modules.scss */
+/* line 478, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -8189,7 +8196,7 @@ p.alert,
   display: block;
 }
 
-/* line 483, ../src/smacss/_modules.scss */
+/* line 487, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
