@@ -6,14 +6,14 @@
  *
  * Table of Contents
  *
- * 1. Generic Profiles
+ * 1. General Profiles
  * 2. Faces of Evergreen
  */
 
 @import "../../tools";
 
 /**
- * 1. Generic Profiles
+ * 1. General Profiles
  */
 .profile .portrait-1-1{  // portrait with 1:1 ratio.
 	border-radius: 50%;
@@ -55,7 +55,18 @@
 }
 
 .field-subjects-studied{
+	// box model
+	margin: 0 0 calc(3.75 / 16 * 1rem);
+	// typography
 	color: mix($tint, $black, 40%);
 	font-family: $text-face-alt;
-	@include base-type-xl-alt;
+	@include base-type-lg;
+	
+	@include breakpoint($gamora){
+		@include base-type-xxl-alt;
+	}
+	
+	@include breakpoint($groot){
+		@include base-type-xxxl-alt;
+	}
 }
