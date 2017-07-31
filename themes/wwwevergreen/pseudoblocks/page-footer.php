@@ -81,9 +81,8 @@
 							</p>
 						</li>
 						<li>
-							<p class="copyright">
-								©
-								<?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College
+							<p class="copyright small">
+								<small>© <?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College</small>
 							</p>
 						</li>
 					</ul><!-- /.element-list.text-list-alt -->
