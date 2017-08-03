@@ -1,7 +1,8 @@
-name = Evergreen_Archives
+name = Evergreen Archives
 description = Provides content types, theming, and migration capabilities for the Evergreen Archives site.
 core = 7.x
 package = Features
+version = 7.x-0.1
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
