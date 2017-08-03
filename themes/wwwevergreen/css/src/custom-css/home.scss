@@ -71,6 +71,17 @@
 	}
 }
 
+.hype-segment-alt{
+	
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+	
+	@include breakpoint($gamora){
+		grid-column-end: span 6;
+	}
+}
+
 .hype-segment--magazine{
 	
 	@include breakpoint($lil-groot){
