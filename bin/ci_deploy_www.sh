@@ -18,6 +18,7 @@ deploy_d7_library libraries/juicebox $WWW_CODE
 deploy_d7_library libraries/flowplayer5 $WWW_CODE
 # Feature modules
 deploy_d7_theme themes/wwwevergreen $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_archives $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
