@@ -35,17 +35,20 @@
  * 2. Hype Grid
  */
 .hype-grid{
-	display: grid;
-	grid-template-columns: 1fr;
 	
-	@include breakpoint($lil-groot){
-		grid-template-columns: repeat(2, 1fr);
-	}
+	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+		display: grid;
+		grid-template-columns: 1fr;
 	
-	
-	@include breakpoint($gamora){
-		grid-template-columns: repeat(7, 1fr);
-		grid-gap: 1em 2ch;
+		@include breakpoint($lil-groot){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		
+		@include breakpoint($gamora){
+			grid-template-columns: repeat(7, 1fr);
+			grid-gap: 1em 2ch;
+		}
 	}
 }
 
@@ -94,13 +97,16 @@
 }
 
 .hype-grid--magazine{
-	display: grid;
-	grid-gap: 1em 2ch;
-	grid-template-columns: 1fr;
 	
-	@include breakpoint($gamora){
-		grid-column-end: span 6;
-		grid-template-columns: repeat(2, 1fr);
+	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+		display: grid;
+		grid-gap: 1em 2ch;
+		grid-template-columns: 1fr;
+		
+		@include breakpoint($gamora){
+			grid-column-end: span 6;
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
 
