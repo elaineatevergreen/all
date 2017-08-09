@@ -1884,7 +1884,7 @@ a:link,
 .unit-1-1 {
   width: 100%;
 }
-@supports ((display: -ms-grid) or (display: grid)) {
+@supports (grid-template: none) {
   /* line 70, ../src/smacss/layout/_grid.scss */
   .unit-1-1 {
     padding-left: 0;
