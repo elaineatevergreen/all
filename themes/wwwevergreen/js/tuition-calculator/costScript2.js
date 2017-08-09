@@ -7,10 +7,10 @@ Format function             line 25
 Array read in values        line 64
 Table HTML                  line 82
 Onload user inteface HTML   line 111
-Current CSV's to use        line 113
-Data Processing             line 143
+Current CSV's to use        line 117
+Data Processing             line 149
 Delay time                  line 157
-Graduate credit max         line 173
+Graduate credit max         line 177
 
 
 
@@ -75,6 +75,8 @@ function createTable(costRate, cred) {
   var tSummerCabFee         = fullData[cred+summerOffset][13];
   var tWashPirg             = fullData[cred][14];
   var tSummerWashPirg       = fullData[cred+summerOffset][14];
+  var tGSU                  = fullData[cred][15];
+  var tSummerGSU            = fullData[cred+summerOffset][15];
   var tTotal                = fullData[cred][costRate];
   var tSummerTotal          = fullData[cred+summerOffset][costRate];
 
@@ -98,6 +100,8 @@ function createTable(costRate, cred) {
   if (summerBool) {    myTable += '<td>'                + format(tSummerCabFee, '$') + '</td></tr>';  }         else {    myTable += '</tr>';  }
   myTable += '<tr><th>WashPIRG (optional)</th><td>'     + format(tWashPirg, '$') + '</td><td>' + format(3 *     tWashPirg, '$') + '</td>';  
   if (summerBool) {    myTable += '<td>'                + format(tSummerWashPirg, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  }
+  myTable += '<tr><th>GSU (optional)</th><td>'          + format(tGSU, '$') + '</td><td>' + format(3 *          tGSU, '$') + '</td>';  
+  if (summerBool) {    myTable += '<td>'                + format(tSummerGSU, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  } 
   myTable += '<tfoot><tr><th>Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';  
   if (summerBool) {    myTable += '<td>'                + format(tSummerTotal, '$') + '</td></tr></tfoot>';  }  else {    myTable += '</tr></tfoot>';  }
   myTable += '</table>';
@@ -110,7 +114,7 @@ function createTable(costRate, cred) {
 jQuery(document).ready(function ($) {//Following string contains all of the html displayed on the page before the user does anything.
   document.getElementById('Tuition-Box').innerHTML = '<h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    '+
   '<select id="selCSV"><option value="-1" selected="selected">Please Select Option</option>'+
-  '<option value="1617.csv">2016-17</option><option value="1718.csv">2017-18</option></select>'+
+  '<option value="1617.csv">2016-17</option><option value="1718AdjustedGradHealthFee.csv">2017-18</option></select>'+
   '</p><p><label for="creditCount">Number of credits:</label> <select id="creditCount" id="changed">'+
   '<option value="-1">Please Choose Credits</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>   </p>'+
   '<p><label for="resident">Resident or Non-resident:</label> <select id="resident"><option value="-1" selected="selected">Please Select Option</option><option value="0">Resident</option><option value="1">Non-resident</option></select>   </p>'+

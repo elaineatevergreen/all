@@ -10,133 +10,6 @@
 function learning_community_directory_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'access administration pages'.
-  $permissions['access administration pages'] = array(
-    'name' => 'access administration pages',
-    'roles' => array(
-      'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'access all views'.
-  $permissions['access all views'] = array(
-    'name' => 'access all views',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'views',
-  );
-
-  // Exported permission: 'access all webform results'.
-  $permissions['access all webform results'] = array(
-    'name' => 'access all webform results',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'access content'.
-  $permissions['access content'] = array(
-    'name' => 'access content',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'access content overview'.
-  $permissions['access content overview'] = array(
-    'name' => 'access content overview',
-    'roles' => array(
-      'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'access own webform results'.
-  $permissions['access own webform results'] = array(
-    'name' => 'access own webform results',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'access own webform submissions'.
-  $permissions['access own webform submissions'] = array(
-    'name' => 'access own webform submissions',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'access rules debug'.
-  $permissions['access rules debug'] = array(
-    'name' => 'access rules debug',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'rules',
-  );
-
-  // Exported permission: 'access site in maintenance mode'.
-  $permissions['access site in maintenance mode'] = array(
-    'name' => 'access site in maintenance mode',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'access site reports'.
-  $permissions['access site reports'] = array(
-    'name' => 'access site reports',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'access site-wide contact form'.
-  $permissions['access site-wide contact form'] = array(
-    'name' => 'access site-wide contact form',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'contact',
-  );
-
-  // Exported permission: 'access statistics'.
-  $permissions['access statistics'] = array(
-    'name' => 'access statistics',
-    'roles' => array(
-      'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'statistics',
-  );
-
-  // Exported permission: 'access toolbar'.
-  $permissions['access toolbar'] = array(
-    'name' => 'access toolbar',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'toolbar',
-  );
-
-  // Exported permission: 'access user contact forms'.
-  $permissions['access user contact forms'] = array(
-    'name' => 'access user contact forms',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'contact',
-  );
-
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
@@ -157,130 +30,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: 'administer actions'.
-  $permissions['administer actions'] = array(
-    'name' => 'administer actions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'administer blocks'.
-  $permissions['administer blocks'] = array(
-    'name' => 'administer blocks',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'block',
-  );
-
-  // Exported permission: 'administer contact forms'.
-  $permissions['administer contact forms'] = array(
-    'name' => 'administer contact forms',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'contact',
-  );
-
-  // Exported permission: 'administer content types'.
-  $permissions['administer content types'] = array(
-    'name' => 'administer content types',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'administer features'.
-  $permissions['administer features'] = array(
-    'name' => 'administer features',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'features',
-  );
-
-  // Exported permission: 'administer feeds'.
-  $permissions['administer feeds'] = array(
-    'name' => 'administer feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: 'administer feeds_tamper'.
-  $permissions['administer feeds_tamper'] = array(
-    'name' => 'administer feeds_tamper',
-    'roles' => array(),
-    'module' => 'feeds_tamper',
-  );
-
-  // Exported permission: 'administer fieldgroups'.
-  $permissions['administer fieldgroups'] = array(
-    'name' => 'administer fieldgroups',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'field_group',
-  );
-
-  // Exported permission: 'administer filters'.
-  $permissions['administer filters'] = array(
-    'name' => 'administer filters',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'filter',
-  );
-
-  // Exported permission: 'administer linkit'.
-  $permissions['administer linkit'] = array(
-    'name' => 'administer linkit',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'linkit',
-  );
-
-  // Exported permission: 'administer menu'.
-  $permissions['administer menu'] = array(
-    'name' => 'administer menu',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'menu',
-  );
-
-  // Exported permission: 'administer modules'.
-  $permissions['administer modules'] = array(
-    'name' => 'administer modules',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'administer nodes'.
-  $permissions['administer nodes'] = array(
-    'name' => 'administer nodes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'administer pathauto'.
-  $permissions['administer pathauto'] = array(
-    'name' => 'administer pathauto',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'pathauto',
-  );
-
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
@@ -288,87 +37,6 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'administer rules'.
-  $permissions['administer rules'] = array(
-    'name' => 'administer rules',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'rules',
-  );
-
-  // Exported permission: 'administer search'.
-  $permissions['administer search'] = array(
-    'name' => 'administer search',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'search',
-  );
-
-  // Exported permission: 'administer shortcuts'.
-  $permissions['administer shortcuts'] = array(
-    'name' => 'administer shortcuts',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'shortcut',
-  );
-
-  // Exported permission: 'administer site configuration'.
-  $permissions['administer site configuration'] = array(
-    'name' => 'administer site configuration',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'administer software updates'.
-  $permissions['administer software updates'] = array(
-    'name' => 'administer software updates',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'administer statistics'.
-  $permissions['administer statistics'] = array(
-    'name' => 'administer statistics',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'statistics',
-  );
-
-  // Exported permission: 'administer taxonomy'.
-  $permissions['administer taxonomy'] = array(
-    'name' => 'administer taxonomy',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'administer themes'.
-  $permissions['administer themes'] = array(
-    'name' => 'administer themes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'administer url aliases'.
-  $permissions['administer url aliases'] = array(
-    'name' => 'administer url aliases',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'path',
   );
 
   // Exported permission: 'administer users'.
@@ -379,15 +47,6 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'administer views'.
-  $permissions['administer views'] = array(
-    'name' => 'administer views',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'views',
   );
 
   // Exported permission: 'administer workbench'.
@@ -406,33 +65,6 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
-  );
-
-  // Exported permission: 'block IP addresses'.
-  $permissions['block IP addresses'] = array(
-    'name' => 'block IP addresses',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'bypass node access'.
-  $permissions['bypass node access'] = array(
-    'name' => 'bypass node access',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'bypass rules access'.
-  $permissions['bypass rules access'] = array(
-    'name' => 'bypass rules access',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'rules',
   );
 
   // Exported permission: 'bypass user restriction rules'.
@@ -472,29 +104,11 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'clear institutions feeds'.
-  $permissions['clear institutions feeds'] = array(
-    'name' => 'clear institutions feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'clear programs feeds'.
   $permissions['clear programs feeds'] = array(
     'name' => 'clear programs feeds',
     'roles' => array(),
     'module' => 'feeds',
-  );
-
-  // Exported permission: 'create basic_page content'.
-  $permissions['create basic_page content'] = array(
-    'name' => 'create basic_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'create institution content'.
@@ -515,47 +129,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create url aliases'.
-  $permissions['create url aliases'] = array(
-    'name' => 'create url aliases',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'path',
-  );
-
-  // Exported permission: 'create webform content'.
-  $permissions['create webform content'] = array(
-    'name' => 'create webform content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'customize shortcut links'.
-  $permissions['customize shortcut links'] = array(
-    'name' => 'customize shortcut links',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'shortcut',
-  );
-
-  // Exported permission: 'delete all webform submissions'.
-  $permissions['delete all webform submissions'] = array(
-    'name' => 'delete all webform submissions',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'delete any basic_page content'.
-  $permissions['delete any basic_page content'] = array(
-    'name' => 'delete any basic_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any institution content'.
   $permissions['delete any institution content'] = array(
     'name' => 'delete any institution content',
@@ -571,22 +144,6 @@ function learning_community_directory_user_default_permissions() {
     'name' => 'delete any learning_community_program content',
     'roles' => array(
       'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any webform content'.
-  $permissions['delete any webform content'] = array(
-    'name' => 'delete any webform content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own basic_page content'.
-  $permissions['delete own basic_page content'] = array(
-    'name' => 'delete own basic_page content',
-    'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -612,45 +169,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete own webform content'.
-  $permissions['delete own webform content'] = array(
-    'name' => 'delete own webform content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own webform submissions'.
-  $permissions['delete own webform submissions'] = array(
-    'name' => 'delete own webform submissions',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'delete revisions'.
-  $permissions['delete revisions'] = array(
-    'name' => 'delete revisions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit all webform submissions'.
-  $permissions['edit all webform submissions'] = array(
-    'name' => 'edit all webform submissions',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'edit any basic_page content'.
-  $permissions['edit any basic_page content'] = array(
-    'name' => 'edit any basic_page content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any institution content'.
   $permissions['edit any institution content'] = array(
     'name' => 'edit any institution content',
@@ -666,22 +184,6 @@ function learning_community_directory_user_default_permissions() {
     'name' => 'edit any learning_community_program content',
     'roles' => array(
       'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any webform content'.
-  $permissions['edit any webform content'] = array(
-    'name' => 'edit any webform content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own basic_page content'.
-  $permissions['edit own basic_page content'] = array(
-    'name' => 'edit own basic_page content',
-    'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -709,20 +211,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit own webform content'.
-  $permissions['edit own webform content'] = array(
-    'name' => 'edit own webform content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own webform submissions'.
-  $permissions['edit own webform submissions'] = array(
-    'name' => 'edit own webform submissions',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
   // Exported permission: 'edit user restriction rules'.
   $permissions['edit user restriction rules'] = array(
     'name' => 'edit user restriction rules',
@@ -732,45 +220,11 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'user_restrictions',
   );
 
-  // Exported permission: 'edit webform components'.
-  $permissions['edit webform components'] = array(
-    'name' => 'edit webform components',
-    'roles' => array(),
-    'module' => 'webform',
-  );
-
-  // Exported permission: 'generate features'.
-  $permissions['generate features'] = array(
-    'name' => 'generate features',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'features',
-  );
-
-  // Exported permission: 'import institutions feeds'.
-  $permissions['import institutions feeds'] = array(
-    'name' => 'import institutions feeds',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: 'import programs feeds'.
   $permissions['import programs feeds'] = array(
     'name' => 'import programs feeds',
     'roles' => array(),
     'module' => 'feeds',
-  );
-
-  // Exported permission: 'manage features'.
-  $permissions['manage features'] = array(
-    'name' => 'manage features',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'features',
   );
 
   // Exported permission: 'moderate content from draft to needs_review'.
@@ -802,43 +256,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: 'notify of path changes'.
-  $permissions['notify of path changes'] = array(
-    'name' => 'notify of path changes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'pathauto',
-  );
-
-  // Exported permission: 'rename features'.
-  $permissions['rename features'] = array(
-    'name' => 'rename features',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'features',
-  );
-
-  // Exported permission: 'revert revisions'.
-  $permissions['revert revisions'] = array(
-    'name' => 'revert revisions',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'search content'.
-  $permissions['search content'] = array(
-    'name' => 'search content',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'search',
-  );
-
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
@@ -846,15 +263,6 @@ function learning_community_directory_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: 'switch shortcut sets'.
-  $permissions['switch shortcut sets'] = array(
-    'name' => 'switch shortcut sets',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'shortcut',
   );
 
   // Exported permission: 'tamper institutions'.
@@ -885,24 +293,6 @@ function learning_community_directory_user_default_permissions() {
     'name' => 'unlock programs feeds',
     'roles' => array(),
     'module' => 'feeds',
-  );
-
-  // Exported permission: 'use advanced search'.
-  $permissions['use advanced search'] = array(
-    'name' => 'use advanced search',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'search',
-  );
-
-  // Exported permission: 'use ctools import'.
-  $permissions['use ctools import'] = array(
-    'name' => 'use ctools import',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'ctools',
   );
 
   // Exported permission: 'use workbench_moderation my drafts tab'.
@@ -957,36 +347,6 @@ function learning_community_directory_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: 'view own unpublished content'.
-  $permissions['view own unpublished content'] = array(
-    'name' => 'view own unpublished content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'view post access counter'.
-  $permissions['view post access counter'] = array(
-    'name' => 'view post access counter',
-    'roles' => array(
-      'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'statistics',
-  );
-
-  // Exported permission: 'view revisions'.
-  $permissions['view revisions'] = array(
-    'name' => 'view revisions',
-    'roles' => array(
-      'LC staff' => 'LC staff',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'view similar titles suggestion'.
   $permissions['view similar titles suggestion'] = array(
     'name' => 'view similar titles suggestion',
@@ -995,15 +355,6 @@ function learning_community_directory_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'suggest_similar_titles',
-  );
-
-  // Exported permission: 'view the administration theme'.
-  $permissions['view the administration theme'] = array(
-    'name' => 'view the administration theme',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'system',
   );
 
   return $permissions;
