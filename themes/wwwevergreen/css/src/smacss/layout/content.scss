@@ -1,0 +1,235 @@
+/**
+ * D. Content Layout
+ *
+ * Layout boxes for the main content areas.
+ *
+ * Table of Contents
+ *
+ * 1. Default Pages
+ * 2. Specialized Templates
+ */
+
+.site-content{
+	// box model
+	margin-bottom: 1.875rem;  // 30px
+	width: 100%;
+
+	@media screen and (min-height: 35em){
+		margin-bottom: 3.75rem;  // 60px
+	}
+}
+
+[role="main"],  // deprecated, main element comes with role="main" by default
+.main-row{
+	// box model
+	width: 77em;  // Same as wrapper; if they don't match, update this value
+	max-width: calc(100% - 1ch);
+	// position
+	position: relative;  // Necessary to keep the left-nav contained on the homepage.
+
+	@include breakpoint($drax){
+		// box model
+		border-top: 4px solid $evergreen-old-style;
+		margin-top: -4px;  // Compensates for 4px top border and maintains 15px vertical cadence.
+		// decoration
+		border-radius: 2px;
+	}
+}
+
+.index-wrapper,
+.primary-content-wrapper{
+	// box model
+	border-top: 5px solid $evergreen-old-style;
+	margin: -5px 0 0 2ch;  // Compensate for 5px border
+	padding: 0;
+	width: calc(100% - 3ch);
+	// decoration
+	background-color: transparentize($tint, 0.05);
+	border-radius: 2px;
+
+	@include breakpoint($gamora){
+		// box model
+		margin-right: 0;
+		margin-left: 0;
+		width: calc(80% - 2ch);  // 4/5 - 2ch; 1ch margin on either side
+		// layout
+		overflow: visible;
+		// decoration
+		border-radius: 0 0 2px 2px;
+	}
+
+	@include breakpoint($drax){
+		border-top-width: 0;
+		margin-top: 0;
+	}
+}
+
+// Wraps all the content on index pages and pages without a
+// secondary content area.
+.index-wrapper{
+
+	@include breakpoint($gamora){
+		position: relative;  // Creates a positioning context for the left nav.
+	}
+
+	@include breakpoint($drax){
+		width: 85.714285714286%;  // 6/7
+	}
+}
+
+// Wraps all the content on most pages on the site.
+.primary-content-wrapper{
+	// box model
+	border-bottom: 2px dashed $evergreen-neue;
+
+	@include breakpoint($drax){
+		border-bottom: 0;
+		width: 57.142857142857%;  // 4/7
+	}
+}
+
+// Wraps the secondary content area.
+.sidebar-wrapper{
+	// box model
+	margin-left: 2ch;
+	padding: 0;
+	width: calc(100% - 3ch);  // 0.5ch margin on either side
+	// layout
+	overflow: hidden;
+	// decoration
+	background-color: transparentize($tint, 0.05);
+
+	@include breakpoint($gamora){
+		// box model
+		margin-left: 20%;
+		width: calc(80% - 2ch);  // 4/5; this should match .primary-content-wrapper.
+		// layout
+		overflow: visible;
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin: 0;
+		padding-left: 2ch;
+		width: 28.571428571429%;  // 2/7
+	}
+}
+
+// .main-content and .sidebar are the two primary regions of
+// content on the page.
+.main-content,
+.sidebar{
+	margin: 0 1.25ch 2.14285714285714em;  // 30/14
+
+	@include breakpoint($rocket){
+		margin-right: 2ch;
+		margin-left: 2ch;
+	}
+
+	@include breakpoint($starlord){
+		margin-bottom: 4.28571428571429em;  // 60/14
+	}
+
+	@include breakpoint($gamora){
+		margin-bottom: 3.3333333333em;  // 60/18
+	}
+}
+
+.index-wrapper .main-content{  // Specified in .index-wrapper to not affect .primary-content-wrapper
+
+	@include breakpoint($gamora){
+		margin-right: 3ch;
+		margin-left: 3ch;
+	}
+}
+
+.primary-content-wrapper .main-content{  // Specified in .primary-content-wrapper to not affect .index-wrapper
+	max-width: 45em;
+
+	@include breakpoint($gamora){
+		@include breakpoint($gamora){
+			margin-right: 2ch;
+			margin-left: 2ch;
+		}
+
+		@include breakpoint($drax){
+			margin-right: 3ch;
+			margin-left: 3ch;
+		}
+	}
+}
+
+.main-content{
+	margin-top: calc(30 / 16 * 1rem);
+
+	@include breakpoint($drax){
+		margin-top: calc(45 / 16 * 1rem);
+	}
+}
+
+.sidebar{
+	margin: 0 1.25ch 3.75rem;  // 60/16
+
+	@include breakpoint($rocket){
+		margin-right: 2ch;
+		margin-left: 2ch;
+	}
+
+	@include breakpoint($gamora){
+		margin-right: 5.675675675675676%;  // These values should match .main-content
+		margin-left: 5.675675675675676%;
+	}
+
+	@include breakpoint($drax){
+		//box model
+		border-left: 1px solid mix($tint, $shade, 80%);
+		margin: calc(45 / 16 * 1rem) 1em 0 0;
+		padding-left: 1em;
+		//typography
+		@include base-type;
+		color: mix($tint, $shade, 20%);
+	}
+
+	@include breakpoint($groot){
+		@include base-type-lg;
+	}
+}
+
+.sidebar p,
+.sidebar .base{
+	
+	@include breakpoint($drax){
+		margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/3/14  15/14  So, 22.5 + 7.5 + 15 = 45
+	}
+	
+	@include breakpoint($groot){
+		margin: 0.441176470588235em 0 0.882352941176471em;  // 22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
+	}
+}
+
+.spotlight{
+	text-align: center;
+}
+
+/**
+ * 2. Specialized Templates
+ */
+.homepage-template-main-row{
+	width: 77em;
+	max-width: calc(100% - 3ch);
+}
+
+.homepage-template-main-row .main-content{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/**
+ * 3. Panel Themes
+ */
+.theme--pattern{
+	background-attachment: fixed;
+	background-clip: content-box;
+	background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+	background-size: 10vmax;
+}
