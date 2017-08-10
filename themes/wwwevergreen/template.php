@@ -290,7 +290,6 @@ function staticblocks($b) {
 	
 	$imagepath = base_path() . path_to_theme() . '/images/';
 	//$siteurl = base_url();
-	var $siteurl;
 	
 	include_once("pseudoblocks/$b.php");
 	
