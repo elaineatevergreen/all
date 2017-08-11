@@ -16,6 +16,7 @@
 	text-align: center;
 	// decoration
 	background-color: $shade;
+	box-shadow: 0 0 3px $drop-shadow;
 
 	@include breakpoint($drax){
 		@include base-type-lg;

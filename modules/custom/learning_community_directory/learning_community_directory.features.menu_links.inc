@@ -98,40 +98,6 @@ function learning_community_directory_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: menu-directory-navigation_institution-listing:directory/institutions.
-  $menu_links['menu-directory-navigation_institution-listing:directory/institutions'] = array(
-    'menu_name' => 'menu-directory-navigation',
-    'link_path' => 'directory/institutions',
-    'router_path' => 'directory/institutions',
-    'link_title' => 'Institution Listing',
-    'options' => array(
-      'identifier' => 'menu-directory-navigation_institution-listing:directory/institutions',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
-  // Exported menu link: menu-directory-navigation_program-search:directory/programs.
-  $menu_links['menu-directory-navigation_program-search:directory/programs'] = array(
-    'menu_name' => 'menu-directory-navigation',
-    'link_path' => 'directory/programs',
-    'router_path' => 'directory/programs',
-    'link_title' => 'Program Search',
-    'options' => array(
-      'identifier' => 'menu-directory-navigation_program-search:directory/programs',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -139,8 +105,6 @@ function learning_community_directory_menu_default_menu_links() {
   t('Directory');
   t('Home');
   t('Institutes');
-  t('Institution Listing');
-  t('Program Search');
   t('Resources');
 
   return $menu_links;
