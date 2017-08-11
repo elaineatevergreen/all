@@ -208,6 +208,10 @@
 	@include small-type;
 	letter-spacing: 0.1ch;
 	text-transform: uppercase;
+	
+	@include breakpoint($groot){
+		@include base-type;
+	}
 }
 
 .big-fact{

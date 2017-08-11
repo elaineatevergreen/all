@@ -9,11 +9,11 @@
 						<li>
 							<p>Stay connected:</p>
 							<ul class="element-list lineup">
-								<!--<li>
+								<li>
 									<a href="http://facebook.com/TheEvergreenStateCollege" title="Facebook">
 										<img alt="Facebook" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/facebook.svg"/>
 									</a>
-								</li>-->
+								</li>
 								<li>
 									<a href="http://twitter.com/EvergreenStCol" title="Twitter">
 										<img alt="Twitter" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/twitter.svg"/>
@@ -81,9 +81,8 @@
 							</p>
 						</li>
 						<li>
-							<p class="copyright">
-								©
-								<?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College
+							<p class="copyright small">
+								<small>© <?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College</small>
 							</p>
 						</li>
 					</ul><!-- /.element-list.text-list-alt -->
