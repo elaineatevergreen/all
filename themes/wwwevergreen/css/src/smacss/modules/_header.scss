@@ -170,7 +170,10 @@ input:checked + .header-dropdown{
 	}
 
 	img{
+		// box model
 		max-height: 4em;
+		// layout
+		display: block;
 
 		@include breakpoint($groot){
 			max-height: none;  // max-height doesn't center correctly in Blink.
