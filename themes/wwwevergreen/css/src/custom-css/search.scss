@@ -32,12 +32,12 @@
 	// The margin values at all breakpoints should match the margins of the normal h3s.
 	margin-top: calc(30 / 18 * 1em);
 	margin-bottom: calc(7.5 / 16 * 1rem);
-	
+
 	@include breakpoint($gamora){
 		// box model
 		margin-top: calc(30 / 27.124 * 1em);
 	}
-	
+
 	@include breakpoint($groot){
 		// box model
 		margin-top: calc(45 / 29.112 * 1em);
@@ -104,11 +104,11 @@ div.item-list ul.pager li{  // Override of gss.css
 	padding: 0 0.5ch;
 	// layout
 	flex-basis: 3ch;
-	
+
 	@include breakpoint($starlord){
 		flex-basis: 2ch;
 	}
-	
+
 	@include breakpoint($gamora){
 		flex-basis: 1ch;
 	}

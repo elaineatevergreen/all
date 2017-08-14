@@ -288,9 +288,8 @@ ul.accordion-inner{
  */
 .field-section-navigation{
 	// box model
-	//border: 1px solid red;
-	margin-left: 0;
 	margin-right: 0;
+	margin-left: 0;
 	// list
 	list-style-type: none;
 }
@@ -299,7 +298,7 @@ ul.accordion-inner{
 	align-items: start;  // Makes it so that triangle bullets don't stretch the full height and rotate in funny ways when activated
 	display: grid;  // Makes it so headings don't wrap underneath triangle bullets
 	grid-template-columns: auto 1fr;
-	
+
 	@include breakpoint($gamora){
 		display: block;
 	}
@@ -307,25 +306,31 @@ ul.accordion-inner{
 
 .field-group-title:hover{
 	cursor: pointer;
-	
+
 	@include breakpoint($gamora){
 		cursor: auto;
 	}
 }
 
 .field-group-title::before{
+	// box model
 	margin-right: 0.5ch;
+	// layout
 	display: inline-block;
-	content: "▶";
+	// behavior
 	transition: transform 0.33s ease;
-	
+	// miscellaneous
+	content: "▶";
+
 	@include breakpoint($gamora){
 		content: none;
 	}
 }
 
 .open .field-group-title::before{
+	// layout
 	transform: rotate(90deg);
+	// behavior
 	transition: transform 0.33s ease;
 }
 
