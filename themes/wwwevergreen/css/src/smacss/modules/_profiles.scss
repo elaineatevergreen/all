@@ -61,11 +61,11 @@
 	color: mix($tint, $black, 40%);
 	font-family: $text-face-alt;
 	@include base-type-lg;
-	
+
 	@include breakpoint($gamora){
 		@include base-type-xxl-alt;
 	}
-	
+
 	@include breakpoint($groot){
 		@include base-type-xxxl-alt;
 	}

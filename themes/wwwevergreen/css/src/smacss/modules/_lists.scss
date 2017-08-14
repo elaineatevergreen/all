@@ -108,7 +108,7 @@
 	justify-content: flex-start;
 	// typography
 	font-variant-numeric: lining-nums;
-	
+
 	@include breakpoint($starlord){
 		justify-content: center;
 	}
@@ -442,14 +442,13 @@
 	padding-left: 0;
 	// layout
 	display: block;
-	// position
 	// typography
 	word-wrap: break-word;
+	// lists
+	list-style-type: none;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
-	// lists
-	list-style-type: none;
 
 	@media screen and (min-width: 32em){
 		// layout
