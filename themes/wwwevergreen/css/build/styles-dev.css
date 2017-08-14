@@ -1541,6 +1541,7 @@ input[id$="-range-max"] {
   width: 100%;
   max-width: calc(45ch + 1em);
   min-width: 50%;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -1796,8 +1797,7 @@ a:link,
  * B. Page-level Layout
  * C. Header Layout
  * D. Content Layout
- * E. Faux Wrappers
- * F. Hidden Elements
+ * E. Hidden Elements
  */
 /**
  * A. Grid
@@ -1814,10 +1814,9 @@ a:link,
  * Table of Contents
  *
  * 1. Flexbox-based Grid Layout
- * 2. Float-based Grid Layout
- * 3. Supplemental Content
+ * 2. Supplemental Content
  */
-/* line 13, ../src/smacss/layout/_grid.scss */
+/* line 12, ../src/smacss/layout/_grid.scss */
 .row {
   width: 100%;
   clear: both;
@@ -1833,7 +1832,7 @@ a:link,
  * the float-based grid are being updated over time. All grid units
  * should eventually be flexbox-based for modern browsers.
  */
-/* line 30, ../src/smacss/layout/_grid.scss */
+/* line 29, ../src/smacss/layout/_grid.scss */
 .grid,
 .grid.element-list {
   margin-left: -2ch;
@@ -1847,27 +1846,20 @@ a:link,
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 39, ../src/smacss/layout/_grid.scss */
+/* line 38, ../src/smacss/layout/_grid.scss */
 .grid.zebra-striped,
 .grid.element-list.zebra-striped {
   margin-right: 0;
 }
 
-/* line 45, ../src/smacss/layout/_grid.scss */
+/* line 44, ../src/smacss/layout/_grid.scss */
 .grid-alt {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-/* line 49, ../src/smacss/layout/_grid.scss */
-.unit-placeholder {
-  background-clip: content-box;
-  background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
-  background-position-x: 1ch;
-}
-
-/* line 55, ../src/smacss/layout/_grid.scss */
+/* line 48, ../src/smacss/layout/_grid.scss */
 .unit-1-1,
 .unit-1-2,
 .unit-1-3,
@@ -1887,180 +1879,170 @@ a:link,
 .unit-5-7,
 .unit-6-7 {
   padding-left: 2ch;
-  float: left;
 }
 
-/* line 79, ../src/smacss/layout/_grid.scss */
+/* line 70, ../src/smacss/layout/_grid.scss */
 .unit-1-1 {
   width: 100%;
-  clear: left;
+}
+@supports (grid-template: none) {
+  /* line 70, ../src/smacss/layout/_grid.scss */
+  .unit-1-1 {
+    padding-left: 0;
+    width: auto;
+    grid-column: 1 / -1;
+  }
 }
 
-/* line 85, ../src/smacss/layout/_grid.scss */
+/* line 82, ../src/smacss/layout/_grid.scss */
 .unit-1-2 {
   width: 100%;
 }
 @media (min-width: 32em) {
-  /* line 85, ../src/smacss/layout/_grid.scss */
+  /* line 82, ../src/smacss/layout/_grid.scss */
   .unit-1-2 {
     width: 50%;
   }
-  /* line 93, ../src/smacss/layout/_grid.scss */
-  .unit-1-2:nth-child(odd) {
-    clear: left;
-  }
 }
 
-/* line 99, ../src/smacss/layout/_grid.scss */
+/* line 92, ../src/smacss/layout/_grid.scss */
 .unit-1-3 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 99, ../src/smacss/layout/_grid.scss */
+  /* line 92, ../src/smacss/layout/_grid.scss */
   .unit-1-3 {
     width: 33.3333333333%;
   }
 }
 
-/* line 108, ../src/smacss/layout/_grid.scss */
+/* line 101, ../src/smacss/layout/_grid.scss */
 .unit-1-3-alt {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 108, ../src/smacss/layout/_grid.scss */
+  /* line 101, ../src/smacss/layout/_grid.scss */
   .unit-1-3-alt {
     width: 50%;
   }
-  /* line 116, ../src/smacss/layout/_grid.scss */
-  .unit-1-3-alt:nth-child(odd) {
-    clear: left;
-  }
 }
 @media screen and (min-width: 70em) {
-  /* line 108, ../src/smacss/layout/_grid.scss */
+  /* line 101, ../src/smacss/layout/_grid.scss */
   .unit-1-3-alt {
     width: 33.3333333333%;
   }
-  /* line 126, ../src/smacss/layout/_grid.scss */
-  .unit-1-3-alt:nth-child(odd) {
-    clear: none;
-  }
-  /* line 130, ../src/smacss/layout/_grid.scss */
-  .unit-1-3-alt:nth-child(3n+1) {
-    clear: left;
-  }
 }
 
-/* line 136, ../src/smacss/layout/_grid.scss */
+/* line 116, ../src/smacss/layout/_grid.scss */
 .unit-2-3 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 136, ../src/smacss/layout/_grid.scss */
+  /* line 116, ../src/smacss/layout/_grid.scss */
   .unit-2-3 {
     width: 66.6666666667%;
   }
 }
 
-/* line 145, ../src/smacss/layout/_grid.scss */
+/* line 125, ../src/smacss/layout/_grid.scss */
 .unit-1-4 {
   width: 100%;
 }
 
-/* line 149, ../src/smacss/layout/_grid.scss */
+/* line 129, ../src/smacss/layout/_grid.scss */
 .unit-1-5 {
   width: 100%;
 }
 @media screen and (min-width: 32em) {
-  /* line 149, ../src/smacss/layout/_grid.scss */
+  /* line 129, ../src/smacss/layout/_grid.scss */
   .unit-1-5 {
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 149, ../src/smacss/layout/_grid.scss */
+  /* line 129, ../src/smacss/layout/_grid.scss */
   .unit-1-5 {
     width: 20%;
   }
 }
 
-/* line 161, ../src/smacss/layout/_grid.scss */
+/* line 141, ../src/smacss/layout/_grid.scss */
 .unit-1-6 {
   width: 100%;
 }
 @media screen and (min-width: 20em) {
-  /* line 161, ../src/smacss/layout/_grid.scss */
+  /* line 141, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 50%;
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 161, ../src/smacss/layout/_grid.scss */
+  /* line 141, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/layout/_grid.scss */
+  /* line 141, ../src/smacss/layout/_grid.scss */
   .unit-1-6 {
     width: 16.666666666667%;
   }
 }
 
-/* line 178, ../src/smacss/layout/_grid.scss */
+/* line 158, ../src/smacss/layout/_grid.scss */
 .unit-1-6-alt {
   width: 50%;
 }
 @media screen and (min-width: 20em) {
-  /* line 178, ../src/smacss/layout/_grid.scss */
+  /* line 158, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 178, ../src/smacss/layout/_grid.scss */
+  /* line 158, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 25%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 178, ../src/smacss/layout/_grid.scss */
+  /* line 158, ../src/smacss/layout/_grid.scss */
   .unit-1-6-alt {
     width: 16.666666666667%;
   }
 }
 
-/* line 196, ../src/smacss/layout/_grid.scss */
+/* line 176, ../src/smacss/layout/_grid.scss */
 .unit-4-6 {
   padding-right: 1em;
   padding-left: 0;
   width: 100%;
 }
 @media screen and (min-width: 70em) {
-  /* line 196, ../src/smacss/layout/_grid.scss */
+  /* line 176, ../src/smacss/layout/_grid.scss */
   .unit-4-6 {
     width: calc(4 / 6 * 100%);
   }
 }
 
-/* line 208, ../src/smacss/layout/_grid.scss */
+/* line 188, ../src/smacss/layout/_grid.scss */
 .unit-1-7 {
   width: 100%;
 }
 @media screen and (min-width: 20em) {
-  /* line 208, ../src/smacss/layout/_grid.scss */
+  /* line 188, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 50%;
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 208, ../src/smacss/layout/_grid.scss */
+  /* line 188, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 33.3333333333%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 208, ../src/smacss/layout/_grid.scss */
+  /* line 188, ../src/smacss/layout/_grid.scss */
   .unit-1-7 {
     width: 14.285714285714%;
   }
@@ -2069,110 +2051,110 @@ a:link,
 /**
  * Stays wider for longer.
  */
-/* line 229, ../src/smacss/layout/_grid.scss */
+/* line 209, ../src/smacss/layout/_grid.scss */
 .unit-1-7-alt {
   width: 100%;
 }
 @media screen and (min-width: 22em) {
-  /* line 229, ../src/smacss/layout/_grid.scss */
+  /* line 209, ../src/smacss/layout/_grid.scss */
   .unit-1-7-alt {
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 229, ../src/smacss/layout/_grid.scss */
+  /* line 209, ../src/smacss/layout/_grid.scss */
   .unit-1-7-alt {
     width: calc(1 / 7 * 100%);
   }
 }
 
-/* line 241, ../src/smacss/layout/_grid.scss */
+/* line 221, ../src/smacss/layout/_grid.scss */
 .unit-2-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 241, ../src/smacss/layout/_grid.scss */
+  /* line 221, ../src/smacss/layout/_grid.scss */
   .unit-2-7 {
     width: 28.571428571429%;
   }
 }
 
-/* line 251, ../src/smacss/layout/_grid.scss */
+/* line 231, ../src/smacss/layout/_grid.scss */
 .unit-3-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 251, ../src/smacss/layout/_grid.scss */
+  /* line 231, ../src/smacss/layout/_grid.scss */
   .unit-3-7 {
     width: 42.857142857143%;
   }
 }
 
-/* line 261, ../src/smacss/layout/_grid.scss */
+/* line 241, ../src/smacss/layout/_grid.scss */
 .unit-4-7 {
   padding-right: 1em;
   padding-left: 0;
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 261, ../src/smacss/layout/_grid.scss */
+  /* line 241, ../src/smacss/layout/_grid.scss */
   .unit-4-7 {
     width: 80%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 261, ../src/smacss/layout/_grid.scss */
+  /* line 241, ../src/smacss/layout/_grid.scss */
   .unit-4-7 {
     width: 57.142857142857%;
   }
 }
 
-/* line 278, ../src/smacss/layout/_grid.scss */
+/* line 258, ../src/smacss/layout/_grid.scss */
 .unit-5-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 278, ../src/smacss/layout/_grid.scss */
+  /* line 258, ../src/smacss/layout/_grid.scss */
   .unit-5-7 {
     width: 71.428571428571%;
   }
 }
 
-/* line 288, ../src/smacss/layout/_grid.scss */
+/* line 268, ../src/smacss/layout/_grid.scss */
 .unit-6-7 {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 288, ../src/smacss/layout/_grid.scss */
+  /* line 268, ../src/smacss/layout/_grid.scss */
   .unit-6-7 {
     width: calc(4 / 5 * 100%);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 288, ../src/smacss/layout/_grid.scss */
+  /* line 268, ../src/smacss/layout/_grid.scss */
   .unit-6-7 {
     width: calc(6 / 7 * 100%);
   }
 }
 
-/* line 301, ../src/smacss/layout/_grid.scss */
+/* line 281, ../src/smacss/layout/_grid.scss */
 .standalone-unit {
   padding: 0 1ch;
 }
 @media screen and (min-width: 22em) {
-  /* line 301, ../src/smacss/layout/_grid.scss */
+  /* line 281, ../src/smacss/layout/_grid.scss */
   .standalone-unit {
     padding: 0 2ch;
   }
 }
 
 /**
- * 3. Supplemental Content
+ * 2. Supplemental Content
  *
  * section @supplement
  */
 @media screen and (min-width: 32em) {
-  /* line 315, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -2182,7 +2164,7 @@ a:link,
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 315, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -2190,7 +2172,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 315, ../src/smacss/layout/_grid.scss */
+  /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
   .supplement-1-2 {
@@ -2200,7 +2182,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 339, ../src/smacss/layout/_grid.scss */
+  /* line 319, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2209,14 +2191,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 339, ../src/smacss/layout/_grid.scss */
+  /* line 319, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 339, ../src/smacss/layout/_grid.scss */
+  /* line 319, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2225,14 +2207,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 339, ../src/smacss/layout/_grid.scss */
+  /* line 319, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 339, ../src/smacss/layout/_grid.scss */
+  /* line 319, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2246,7 +2228,7 @@ a:link,
  * of designed elements, i.e. not a bulleted text list. It is meant
  * to apply to uls and ols.
  */
-/* line 31, ../src/smacss/_layout.scss */
+/* line 30, ../src/smacss/_layout.scss */
 .element-list {
   margin-left: 0;
   padding-left: 0;
@@ -2256,7 +2238,7 @@ a:link,
 /**
  * B. Page-level Layout
  */
-/* line 42, ../src/smacss/_layout.scss */
+/* line 41, ../src/smacss/_layout.scss */
 .wrapper,
 .wrapper-full {
   margin: 0 auto;
@@ -2264,7 +2246,7 @@ a:link,
   display: block;
 }
 @media screen and (min-width: 70em) {
-  /* line 42, ../src/smacss/_layout.scss */
+  /* line 41, ../src/smacss/_layout.scss */
   .wrapper,
   .wrapper-full {
     max-width: 77em;
@@ -2276,12 +2258,12 @@ a:link,
  * wrapper will leave auto-margins around the edges of the container when
  * the site is viewed at narrow screen sizes.
  */
-/* line 61, ../src/smacss/_layout.scss */
+/* line 60, ../src/smacss/_layout.scss */
 .wrapper-full {
   width: calc(100% - 4em);
 }
 
-/* line 65, ../src/smacss/_layout.scss */
+/* line 64, ../src/smacss/_layout.scss */
 .wrapper:before,
 .wrapper:after {
   width: 0;
@@ -2290,7 +2272,7 @@ a:link,
   content: "";
 }
 
-/* line 76, ../src/smacss/_layout.scss */
+/* line 75, ../src/smacss/_layout.scss */
 .wrapper.grid,
 .wrapper.grid-alt {
   display: -webkit-flex;
@@ -2301,7 +2283,7 @@ a:link,
 /**
  * C. Header Layout
  */
-/* line 85, ../src/smacss/_layout.scss */
+/* line 84, ../src/smacss/_layout.scss */
 [role="banner"],
 .header-nav-wrapper {
   display: -webkit-flex;
@@ -2315,7 +2297,7 @@ a:link,
   box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 85, ../src/smacss/_layout.scss */
+  /* line 84, ../src/smacss/_layout.scss */
   [role="banner"],
   .header-nav-wrapper {
     -webkit-flex-direction: row-reverse;
@@ -2324,59 +2306,43 @@ a:link,
   }
 }
 
-/* line 102, ../src/smacss/_layout.scss */
+/* line 101, ../src/smacss/_layout.scss */
 .page-header {
   transition: all 0.1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
-  /* line 102, ../src/smacss/_layout.scss */
+  /* line 101, ../src/smacss/_layout.scss */
   .page-header {
     background-color: transparent;
   }
 }
 
-/* line 110, ../src/smacss/_layout.scss */
-[role="main"],
-.main-row {
-  position: relative;
-}
-@media screen and (min-width: 70em) {
-  /* line 110, ../src/smacss/_layout.scss */
-  [role="main"],
-  .main-row {
-    border-top: 4px solid #46502b;
-    margin-top: -4px;
-    border-radius: 2px;
-  }
-}
-
-/* line 124, ../src/smacss/_layout.scss */
-.top-nav,
-.main-row {
+/* line 109, ../src/smacss/_layout.scss */
+.top-nav {
   width: 100%;
 }
 
-/* line 129, ../src/smacss/_layout.scss */
+/* line 113, ../src/smacss/_layout.scss */
 .top-nav {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 129, ../src/smacss/_layout.scss */
+  /* line 113, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.695rem;
     line-height: calc(15 / 11.125);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 129, ../src/smacss/_layout.scss */
+  /* line 113, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 129, ../src/smacss/_layout.scss */
+  /* line 113, ../src/smacss/_layout.scss */
   .top-nav {
     margin-left: 0;
     width: 100%;
@@ -2387,7 +2353,7 @@ a:link,
  * Typekit overrides
  */
 @media screen and (min-width: 20em) {
-  /* line 153, ../src/smacss/_layout.scss */
+  /* line 137, ../src/smacss/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -2396,7 +2362,7 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 161, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.125rem;
@@ -2404,7 +2370,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 161, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.202rem;
@@ -2412,7 +2378,7 @@ a:link,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 161, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.719rem;
@@ -2423,19 +2389,46 @@ a:link,
 /**
  * D. Content Layout
  */
-/* line 182, ../src/smacss/_layout.scss */
+/**
+ * D. Content Layout
+ *
+ * Layout boxes for the main content areas.
+ *
+ * Table of Contents
+ *
+ * 1. Default Pages
+ * 2. Specialized Templates
+ */
+/* line 12, ../src/smacss/layout/_content.scss */
 .site-content {
   margin-bottom: 1.875rem;
   width: 100%;
 }
 @media screen and (min-height: 35em) {
-  /* line 182, ../src/smacss/_layout.scss */
+  /* line 12, ../src/smacss/layout/_content.scss */
   .site-content {
     margin-bottom: 3.75rem;
   }
 }
 
-/* line 192, ../src/smacss/_layout.scss */
+/* line 22, ../src/smacss/layout/_content.scss */
+[role="main"],
+.main-row {
+  width: 77em;
+  max-width: calc(100% - 1ch);
+  position: relative;
+}
+@media screen and (min-width: 70em) {
+  /* line 22, ../src/smacss/layout/_content.scss */
+  [role="main"],
+  .main-row {
+    border-top: 4px solid #46502b;
+    margin-top: -4px;
+    border-radius: 2px;
+  }
+}
+
+/* line 39, ../src/smacss/layout/_content.scss */
 .index-wrapper,
 .primary-content-wrapper {
   border-top: 5px solid #46502b;
@@ -2446,7 +2439,7 @@ a:link,
   border-radius: 2px;
 }
 @media screen and (min-width: 43em) {
-  /* line 192, ../src/smacss/_layout.scss */
+  /* line 39, ../src/smacss/layout/_content.scss */
   .index-wrapper,
   .primary-content-wrapper {
     margin-right: 0;
@@ -2457,7 +2450,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, ../src/smacss/_layout.scss */
+  /* line 39, ../src/smacss/layout/_content.scss */
   .index-wrapper,
   .primary-content-wrapper {
     border-top-width: 0;
@@ -2466,31 +2459,31 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 222, ../src/smacss/_layout.scss */
+  /* line 68, ../src/smacss/layout/_content.scss */
   .index-wrapper {
     position: relative;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 222, ../src/smacss/_layout.scss */
+  /* line 68, ../src/smacss/layout/_content.scss */
   .index-wrapper {
     width: 85.714285714286%;
   }
 }
 
-/* line 234, ../src/smacss/_layout.scss */
+/* line 80, ../src/smacss/layout/_content.scss */
 .primary-content-wrapper {
   border-bottom: 2px dashed #64933a;
 }
 @media screen and (min-width: 70em) {
-  /* line 234, ../src/smacss/_layout.scss */
+  /* line 80, ../src/smacss/layout/_content.scss */
   .primary-content-wrapper {
     border-bottom: 0;
     width: 57.142857142857%;
   }
 }
 
-/* line 245, ../src/smacss/_layout.scss */
+/* line 91, ../src/smacss/layout/_content.scss */
 .sidebar-wrapper {
   margin-left: 2ch;
   padding: 0;
@@ -2499,7 +2492,7 @@ a:link,
   background-color: rgba(242, 242, 242, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 245, ../src/smacss/_layout.scss */
+  /* line 91, ../src/smacss/layout/_content.scss */
   .sidebar-wrapper {
     margin-left: 20%;
     width: calc(80% - 2ch);
@@ -2507,7 +2500,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 245, ../src/smacss/_layout.scss */
+  /* line 91, ../src/smacss/layout/_content.scss */
   .sidebar-wrapper {
     margin: 0;
     padding-left: 2ch;
@@ -2515,13 +2508,13 @@ a:link,
   }
 }
 
-/* line 273, ../src/smacss/_layout.scss */
+/* line 119, ../src/smacss/layout/_content.scss */
 .main-content,
 .sidebar {
   margin: 0 1.25ch 2.14285714285714em;
 }
 @media screen and (min-width: 22em) {
-  /* line 273, ../src/smacss/_layout.scss */
+  /* line 119, ../src/smacss/layout/_content.scss */
   .main-content,
   .sidebar {
     margin-right: 2ch;
@@ -2529,14 +2522,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 273, ../src/smacss/_layout.scss */
+  /* line 119, ../src/smacss/layout/_content.scss */
   .main-content,
   .sidebar {
     margin-bottom: 4.28571428571429em;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 273, ../src/smacss/_layout.scss */
+  /* line 119, ../src/smacss/layout/_content.scss */
   .main-content,
   .sidebar {
     margin-bottom: 3.3333333333em;
@@ -2544,63 +2537,63 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 291, ../src/smacss/_layout.scss */
+  /* line 137, ../src/smacss/layout/_content.scss */
   .index-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 299, ../src/smacss/_layout.scss */
+/* line 145, ../src/smacss/layout/_content.scss */
 .primary-content-wrapper .main-content {
   max-width: 45em;
 }
 @media screen and (min-width: 43em) and (min-width: 43em) {
-  /* line 299, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/layout/_content.scss */
   .primary-content-wrapper .main-content {
     margin-right: 2ch;
     margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) and (min-width: 70em) {
-  /* line 299, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/layout/_content.scss */
   .primary-content-wrapper .main-content {
     margin-right: 3ch;
     margin-left: 3ch;
   }
 }
 
-/* line 315, ../src/smacss/_layout.scss */
+/* line 161, ../src/smacss/layout/_content.scss */
 .main-content {
   margin-top: calc(30 / 16 * 1rem);
 }
 @media screen and (min-width: 70em) {
-  /* line 315, ../src/smacss/_layout.scss */
+  /* line 161, ../src/smacss/layout/_content.scss */
   .main-content {
     margin-top: calc(45 / 16 * 1rem);
   }
 }
 
-/* line 323, ../src/smacss/_layout.scss */
+/* line 169, ../src/smacss/layout/_content.scss */
 .sidebar {
   margin: 0 1.25ch 3.75rem;
 }
 @media screen and (min-width: 22em) {
-  /* line 323, ../src/smacss/_layout.scss */
+  /* line 169, ../src/smacss/layout/_content.scss */
   .sidebar {
     margin-right: 2ch;
     margin-left: 2ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 323, ../src/smacss/_layout.scss */
+  /* line 169, ../src/smacss/layout/_content.scss */
   .sidebar {
     margin-right: 5.675675675675676%;
     margin-left: 5.675675675675676%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 323, ../src/smacss/_layout.scss */
+  /* line 169, ../src/smacss/layout/_content.scss */
   .sidebar {
     border-left: 1px solid #c2c2c2;
     margin: calc(45 / 16 * 1rem) 1em 0 0;
@@ -2609,134 +2602,105 @@ a:link,
     line-height: 1.33928571428571;
     color: #303030;
   }
-  /* line 345, ../src/smacss/_layout.scss */
+}
+@media screen and (min-width: 125em) {
+  /* line 169, ../src/smacss/layout/_content.scss */
+  .sidebar {
+    font-size: 1.125rem;
+    line-height: 1.38888888888889;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  /* line 197, ../src/smacss/layout/_content.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.535714285714286em 0 1.071428571428571em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 323, ../src/smacss/_layout.scss */
-  .sidebar {
-    font-size: 1.125rem;
-    line-height: 1.38888888888889;
-  }
-  /* line 354, ../src/smacss/_layout.scss */
+  /* line 197, ../src/smacss/layout/_content.scss */
   .sidebar p,
   .sidebar .base {
     margin: 0.441176470588235em 0 0.882352941176471em;
   }
 }
 
-/**
- * E. Faux Wrappers
- *
- * For main-content and sidebar inside an index-wrapper, e.g., used
- * in the catalog. Use sparingly!
- *
- * #faux-content-wrapper          #faux-sidebar-wrapper
- * +------------------------------+---------------------+
- * |                              | .faux-sidebar       |
- * | Lorem ipsum ipsum dolor sit  | +-------------------+
- * | amet olim ut gravis si vero. | | Pagus quidem      |
- * | Facilisis tation qui nostrud | | loquor duis       |
- * | minim te importunus.         | | tation feugait    |
- * |                              | | paulatim paratus  |
- * | Sino nonummy modo lucidus    | | nobis genitus.    |
- * | molior usitas secundum jugis | | Loquor bis loquor |
- * | at multo. Molior quia nobis  | | iriure a ex.      |
- * | duis camur vel virtus. Autem | | Pneum saluto at.  |
- * | consequat similis autem.     | +-------------------+
- * |                              |                     |
- * +------------------------------+---------------------+
- */
-/* line 383, ../src/smacss/_layout.scss */
-#faux-content-wrapper {
-  border-bottom: 2px dashed #64933a;
-}
-@media screen and (min-width: 43em) {
-  /* line 383, ../src/smacss/_layout.scss */
-  #faux-content-wrapper {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 383, ../src/smacss/_layout.scss */
-  #faux-content-wrapper {
-    border-bottom-width: 0;
-    padding-right: 1em;
-    width: 66.6666666667%;
-    float: left;
-  }
+/* line 209, ../src/smacss/layout/_content.scss */
+.content-panel {
+  margin: calc(45 / 16 * 1rem) 0;
 }
 
-@media screen and (min-width: 43em) {
-  /* line 401, ../src/smacss/_layout.scss */
-  #faux-sidebar-wrapper {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 401, ../src/smacss/_layout.scss */
-  #faux-sidebar-wrapper {
-    width: 33.3333333333%;
-    float: left;
-    font-size: 0.875rem;
-    line-height: 1.33928571428571;
-  }
-}
-
-@media screen and (min-width: 70em) {
-  /* line 417, ../src/smacss/_layout.scss */
-  .faux-sidebar {
-    border-left: 1px solid #c2c2c2;
-    padding-left: 1em;
-  }
-}
-
-/* line 426, ../src/smacss/_layout.scss */
+/* line 213, ../src/smacss/layout/_content.scss */
 .spotlight {
   text-align: center;
 }
 
 /**
- * F. Hidden Elements
+ * 2. Specialized Templates
+ */
+/* line 220, ../src/smacss/layout/_content.scss */
+.homepage-template-main-row {
+  width: 77em;
+  max-width: calc(100% - 3ch);
+}
+
+/* line 225, ../src/smacss/layout/_content.scss */
+.homepage-template-main-row .main-content {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/**
+ * 3. Panel Themes
+ */
+/* line 233, ../src/smacss/layout/_content.scss */
+.theme--pattern {
+  background-attachment: fixed;
+  background-clip: content-box;
+  background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+  background-size: 10vw;
+  background-size: 10vmax;
+}
+
+/**
+ * E. Hidden Elements
  *
  * For displaying less essential elements only when screen size
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 437, ../src/smacss/_layout.scss */
+  /* line 174, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 443, ../src/smacss/_layout.scss */
+  /* line 180, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 449, ../src/smacss/_layout.scss */
+  /* line 186, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 455, ../src/smacss/_layout.scss */
+  /* line 192, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 461, ../src/smacss/_layout.scss */
+  /* line 198, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 467, ../src/smacss/_layout.scss */
+  /* line 204, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2948,6 +2912,7 @@ input:checked + .header-dropdown {
 /* line 172, ../src/smacss/modules/_header.scss */
 .logo img {
   max-height: 4em;
+  display: block;
 }
 @media screen and (min-width: 125em) {
   /* line 172, ../src/smacss/modules/_header.scss */
@@ -2962,7 +2927,7 @@ input:checked + .header-dropdown {
  *
  * @section mod-header-search
  */
-/* line 187, ../src/smacss/modules/_header.scss */
+/* line 190, ../src/smacss/modules/_header.scss */
 [for="q"] {
   height: 0;
   width: 0;
@@ -2971,12 +2936,12 @@ input:checked + .header-dropdown {
   position: absolute;
 }
 
-/* line 195, ../src/smacss/modules/_header.scss */
+/* line 198, ../src/smacss/modules/_header.scss */
 .off-canvas {
   margin-right: 2%;
 }
 
-/* line 199, ../src/smacss/modules/_header.scss */
+/* line 202, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   padding: 0 0.618em;
@@ -2986,31 +2951,31 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 199, ../src/smacss/modules/_header.scss */
+  /* line 202, ../src/smacss/modules/_header.scss */
   .search-toggle,
   .student-toggle {
     display: none;
   }
 }
 
-/* line 215, ../src/smacss/modules/_header.scss */
+/* line 218, ../src/smacss/modules/_header.scss */
 .search-toggle {
   border-radius: 0 0 4.5px;
 }
 
-/* line 219, ../src/smacss/modules/_header.scss */
+/* line 222, ../src/smacss/modules/_header.scss */
 .student-toggle {
   border-right: 1px solid #303030;
   border-radius: 0 0 0 4.5px;
 }
 
-/* line 229, ../src/smacss/modules/_header.scss */
+/* line 232, ../src/smacss/modules/_header.scss */
 .search-toggle:hover,
 .student-toggle:hover {
   cursor: pointer;
 }
 
-/* line 237, ../src/smacss/modules/_header.scss */
+/* line 240, ../src/smacss/modules/_header.scss */
 .search-toggle > img,
 .student-toggle > img {
   margin: 0.46875rem auto;
@@ -3018,40 +2983,40 @@ input:checked + .header-dropdown {
   display: block;
 }
 
-/* line 244, ../src/smacss/modules/_header.scss */
+/* line 247, ../src/smacss/modules/_header.scss */
 .student-toggle > img {
   padding-top: 1px;
 }
 
-/* line 248, ../src/smacss/modules/_header.scss */
+/* line 251, ../src/smacss/modules/_header.scss */
 #top-search-query,
 #q,
 .top-search button {
   margin-bottom: 0;
 }
 
-/* line 254, ../src/smacss/modules/_header.scss */
+/* line 257, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* line 258, ../src/smacss/modules/_header.scss */
+/* line 261, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-moz-placeholder {
   color: transparent;
 }
 
-/* line 262, ../src/smacss/modules/_header.scss */
+/* line 265, ../src/smacss/modules/_header.scss */
 [placeholder]:focus:-ms-placeholder {
   color: transparent;
 }
 
-/* line 266, ../src/smacss/modules/_header.scss */
+/* line 269, ../src/smacss/modules/_header.scss */
 .internal-users,
 .search-tools {
   margin-bottom: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 266, ../src/smacss/modules/_header.scss */
+  /* line 269, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.125rem;
@@ -3059,7 +3024,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 266, ../src/smacss/modules/_header.scss */
+  /* line 269, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
@@ -3067,65 +3032,65 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 279, ../src/smacss/modules/_header.scss */
+/* line 282, ../src/smacss/modules/_header.scss */
 .search-tools {
   margin-left: 0;
   padding-left: 0;
   white-space: nowrap;
 }
 
-/* line 287, ../src/smacss/modules/_header.scss */
+/* line 290, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
-/* line 290, ../src/smacss/modules/_header.scss */
+/* line 293, ../src/smacss/modules/_header.scss */
 .search-tools li::after {
   content: " | ";
 }
-/* line 294, ../src/smacss/modules/_header.scss */
+/* line 297, ../src/smacss/modules/_header.scss */
 .search-tools li:last-child::after {
   content: "";
 }
 @media screen and (min-width: 125em) {
-  /* line 287, ../src/smacss/modules/_header.scss */
+  /* line 290, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 301, ../src/smacss/modules/_header.scss */
+  /* line 304, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
-  /* line 305, ../src/smacss/modules/_header.scss */
+  /* line 308, ../src/smacss/modules/_header.scss */
   .search-tools li:not(:first-child) {
     margin-left: 19px;
   }
 }
 
-/* line 311, ../src/smacss/modules/_header.scss */
+/* line 314, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 311, ../src/smacss/modules/_header.scss */
+  /* line 314, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 311, ../src/smacss/modules/_header.scss */
+  /* line 314, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 323, ../src/smacss/modules/_header.scss */
+/* line 326, ../src/smacss/modules/_header.scss */
 .internal-users-alt img {
   margin-right: 5px;
   width: 14px;
   display: inline-block;
 }
 
-/* line 331, ../src/smacss/modules/_header.scss */
+/* line 334, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3133,7 +3098,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 338, ../src/smacss/modules/_header.scss */
+/* line 341, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3149,7 +3114,7 @@ input:checked + .header-dropdown {
  *
  * The green nav at the top of every page.
  */
-/* line 353, ../src/smacss/modules/_header.scss */
+/* line 356, ../src/smacss/modules/_header.scss */
 .top-nav-list {
   margin: 0 auto;
   margin-top: 0;
@@ -3163,7 +3128,7 @@ input:checked + .header-dropdown {
    */
 }
 @media screen and (min-width: 20em) {
-  /* line 353, ../src/smacss/modules/_header.scss */
+  /* line 356, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3175,12 +3140,12 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 353, ../src/smacss/modules/_header.scss */
+  /* line 356, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     letter-spacing: normal;
   }
 }
-/* line 382, ../src/smacss/modules/_header.scss */
+/* line 385, ../src/smacss/modules/_header.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3192,18 +3157,18 @@ input:checked + .header-dropdown {
  * Typekit Override
  */
 @media screen and (min-width: 22em) {
-  /* line 397, ../src/smacss/modules/_header.scss */
+  /* line 400, ../src/smacss/modules/_header.scss */
   .wf-active .top-nav-list {
     letter-spacing: 0.075ch;
   }
 }
 
-/* line 405, ../src/smacss/modules/_header.scss */
+/* line 408, ../src/smacss/modules/_header.scss */
 .top-nav-list > li {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 405, ../src/smacss/modules/_header.scss */
+  /* line 408, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-align-items: stretch;
@@ -3217,13 +3182,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 417, ../src/smacss/modules/_header.scss */
+  /* line 420, ../src/smacss/modules/_header.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 405, ../src/smacss/modules/_header.scss */
+  /* line 408, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-flex-grow: 1;
@@ -3234,13 +3199,13 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 405, ../src/smacss/modules/_header.scss */
+  /* line 408, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     height: auto;
   }
 }
 
-/* line 438, ../src/smacss/modules/_header.scss */
+/* line 441, ../src/smacss/modules/_header.scss */
 .top-nav-link,
 .top-nav-list a,
 .secondary-nav-link {
@@ -3249,7 +3214,7 @@ input:checked + .header-dropdown {
   display: block;
   text-decoration: none;
 }
-/* line 450, ../src/smacss/modules/_header.scss */
+/* line 453, ../src/smacss/modules/_header.scss */
 .top-nav-link:hover,
 .top-nav-list a:hover,
 .secondary-nav-link:hover {
@@ -3258,14 +3223,14 @@ input:checked + .header-dropdown {
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
   transition: all 0.1s ease-out;
 }
-/* line 461, ../src/smacss/modules/_header.scss */
+/* line 464, ../src/smacss/modules/_header.scss */
 .top-nav-link:focus,
 .top-nav-list a:focus,
 .secondary-nav-link:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 438, ../src/smacss/modules/_header.scss */
+  /* line 441, ../src/smacss/modules/_header.scss */
   .top-nav-link,
   .top-nav-list a,
   .secondary-nav-link {
@@ -3283,7 +3248,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 438, ../src/smacss/modules/_header.scss */
+  /* line 441, ../src/smacss/modules/_header.scss */
   .top-nav-link,
   .top-nav-list a,
   .secondary-nav-link {
@@ -3292,7 +3257,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 438, ../src/smacss/modules/_header.scss */
+  /* line 441, ../src/smacss/modules/_header.scss */
   .top-nav-link,
   .top-nav-list a,
   .secondary-nav-link {
@@ -3301,7 +3266,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 488, ../src/smacss/modules/_header.scss */
+/* line 491, ../src/smacss/modules/_header.scss */
 .top-nav-link,
 .top-nav-link:visited,
 .top-nav-list a,
@@ -3310,7 +3275,7 @@ input:checked + .header-dropdown {
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 488, ../src/smacss/modules/_header.scss */
+  /* line 491, ../src/smacss/modules/_header.scss */
   .top-nav-link,
   .top-nav-link:visited,
   .top-nav-list a,
@@ -3319,7 +3284,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 488, ../src/smacss/modules/_header.scss */
+  /* line 491, ../src/smacss/modules/_header.scss */
   .top-nav-link,
   .top-nav-link:visited,
   .top-nav-list a,
@@ -3333,17 +3298,17 @@ input:checked + .header-dropdown {
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 510, ../src/smacss/modules/_header.scss */
+/* line 513, ../src/smacss/modules/_header.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
   padding: 0;
   text-align: center;
-  background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   list-style-type: none;
+  background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 510, ../src/smacss/modules/_header.scss */
+  /* line 513, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3355,7 +3320,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 510, ../src/smacss/modules/_header.scss */
+  /* line 513, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -3364,20 +3329,20 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 510, ../src/smacss/modules/_header.scss */
+  /* line 513, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 543, ../src/smacss/modules/_header.scss */
+/* line 546, ../src/smacss/modules/_header.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 543, ../src/smacss/modules/_header.scss */
+  /* line 546, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
     -webkit-flex-basis: 25%;
@@ -3386,7 +3351,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 543, ../src/smacss/modules/_header.scss */
+  /* line 546, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
@@ -3394,7 +3359,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 543, ../src/smacss/modules/_header.scss */
+  /* line 546, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3402,7 +3367,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 543, ../src/smacss/modules/_header.scss */
+  /* line 546, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3414,8 +3379,8 @@ input:checked + .header-dropdown {
 .secondary-nav-link, .secondary-nav-link:visited,
 .secondary-nav-list a,
 .secondary-nav-list a:visited {
-  padding: calc(7.5 / 16 * 1rem) 0.5ch;
   height: 100%;
+  padding: calc(7.5 / 16 * 1rem) 0.5ch;
   width: 100%;
   color: #f2f2f2;
   font-weight: normal;
@@ -4011,39 +3976,38 @@ input:checked + .header-dropdown {
  * Table of Contents
  *
  * 1. Default Tertiary Nav
- * 2. CSS Accordion - Deprecated
- * 3. Drupal Nav With JS Accordion
- * 4. Catalog Nav Fixes
+ * 2. Drupal Nav With JS Accordion
+ * 3. Catalog Nav Fixes
  */
 /**
  * 1. Default Tertiary Nav
  */
-/* line 18, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 17, ../src/smacss/modules/_tertiary-nav.scss */
 .tertiary-nav-wrapper {
   width: 100%;
   max-width: calc(100% - 1ch);
   min-height: 1px;
 }
 @media screen and (min-width: 22em) {
-  /* line 18, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 17, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-wrapper {
     max-width: 345px;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 18, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 17, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-wrapper {
     width: 20%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 18, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 17, ../src/smacss/modules/_tertiary-nav.scss */
   .tertiary-nav-wrapper {
     width: 14.285714285714%;
   }
 }
 
-/* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 35, ../src/smacss/modules/_tertiary-nav.scss */
 #tertiary-nav,
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
@@ -4056,7 +4020,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4065,7 +4029,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
@@ -4075,7 +4039,7 @@ input:checked + .header-dropdown {
     position: relative;
     border-radius: 0;
   }
-  /* line 66, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 65, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4083,14 +4047,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 36, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav,
   #views-exposed-form-catalog-page,
   #views-exposed-form-catalog-grad-programs {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
-  /* line 76, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 75, ../src/smacss/modules/_tertiary-nav.scss */
   .index-wrapper #tertiary-nav, .index-wrapper
   #views-exposed-form-catalog-page, .index-wrapper
   #views-exposed-form-catalog-grad-programs {
@@ -4099,215 +4063,28 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 83, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 82, ../src/smacss/modules/_tertiary-nav.scss */
   #tertiary-nav > ul {
     margin-top: 0;
   }
 }
 
-/*#tertiary-nav .accordion{
-	border-width: 0;
-	background-color: transparent;
-
-	dd{
-		background-color: transparentize($tint, 0.75);
-	}
-}
-
-.tertiary-nav-list,
-.tertiary-related-links,
-.tertiary-related-links > li > ul{
-	margin-left: 0;
-	list-style-type: none;
-}
-
-.tertiary-nav-h{  // heading for tertiary nav in wider views
-	//box model
-	margin-top: 0;  // compensate for border
-	margin-bottom: 0;
-	padding: 0.631100639515315em 0;  // 15/11.884/2
-	//typography
-	@include base-type;
-
-	@include breakpoint($gamora){
-		//box model
-		border-bottom: 1px solid mix($shade, $sky-blue, 50%);
-		margin-bottom: -1px;
-		padding: 0;
-		//layout
-		display: block;
-		//typography
-		font-size: 1.202rem;  // 19.232px
-		line-height: 1.559900166389351;  // 30/19.232
-	}
-}
-
-.tertiary-nav-list li,
-.tertiary-related-links > li > ul > li,
-#tertiary-nav dd > ul li{  //WYSIWYG
-	margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/14/3  15/14  So, 22.5 + 7.5 + 15 = 45
-
-	@include breakpoint($gamora){
-		margin: 0.41666666666667em 0 0.83333333333333em; // 22.5/18/3 15/18
-	}
-}
-
-.tertiary-nav-list a,
-#tertiary-nav dd > ul a,  // Cascade WYSIWYG
-.tertiary-related-links a{
-	// box model
-	border-bottom-width: 0;
-	// typography
-	font-weight: normal;
-}*/
 /**
- * 2. CSS Accordion - Deprecated
- *
- * Deprecation Notice:
- * Drupal didn’t play so nicely with my clever CSS accordion, so we decided
- * to change it to a JS-based number, which is probably better for
- * accessibility, anyway.
- *
- * An accordion that relies on radio buttons and labels for controls
- * instead of JavaScript. This accordion automatically expands and
- * disappears at the $gamora breakpoint.
- *
- * @see http://cssconf.com/talk-seddon.html
- */
-/*[name="accordion-group"]{
-	display: none;  // Hide all actual checkboxes; they are activated by their labels
-}
-
-.accordion-h label::before{
-	// layout
-	display: inline-block;
-	// typgography
-	color: $shade;
-	// miscellaneous
-	content: "▶\00A0";  // Right-pointing triangle followed by a non-breaking space
-
-	@include breakpoint($gamora){
-		content: "";
-	}
-}
-
-[name="accordion-group"] + .accordion-h label::before{
-	// behavior
-	transition: transform 0.1s linear;
-}
-
-[name="accordion-group"]:checked + .accordion-h label::before{
-	// behavior
-	transform: rotate(90deg);
-	transition: transform 0.1s linear;
-}
-
-.tertiary-nav-h label{
-	// typography
-	color: $wine;
-	// misc
-	cursor: pointer;
-
-	&:hover{
-		// typography
-		color: $sky-blue;
-	}
-
-	@include breakpoint($gamora){
-		// typography
-		color: mix($shade, $sky-blue, 50%);
-		// misc
-		cursor: default;
-
-		&:hover{
-			// typography
-			color: mix($shade, $sky-blue, 50%);
-		}
-	}
-}
-
-[name="accordion-group"] ~ .tertiary-nav-h .accordion-toggle{
-	display: inline;
-}
-
-[name="accordion-group"]:checked ~ .tertiary-nav-h .accordion-toggle{
-	display: none;
-}
-
-[name="accordion-group"] ~ h4 .accordion-dismiss{
-	display: none;
-}
-
-[name="accordion-group"]:checked ~ h4 .accordion-dismiss{
-	display: inline;
-}
-
-.accordion-body{
-	// box model
-	border-bottom: 1px solid $shade;
-	height: auto;
-	max-height: 0;
-	// layout
-	overflow: hidden;
-	// decoration
-	background-color: transparentize($tint, 0.75);
-	// misc
-	box-shadow: 0 2px 2px $drop-shadow inset;
-	// transition
-	transition: max-height 0.25s ease 0s;
-
-	@include breakpoint ($gamora){
-		border-bottom-width: 0;
-		max-height: 600px;
-		// decoration
-		background-color: transparent;
-		// misc
-		box-shadow: none;
-	}
-
-	@include breakpoint($drax){
-		max-height: none;
-	}
-}
-
-#tertiary-nav li:last-child .accordion-body{
-	border-bottom-width: 0;
-}
-
-[name="accordion-group"]:checked ~ .accordion-body{
-	// box model
-	max-height: 500px;
-	// transition
-	transition-duration: 0.75s;
-
-	@include breakpoint($gamora){
-		padding: 0;
-	}
-}
-
-ul.accordion-inner{
-	padding: 0 2%;  // 15/11.884/2
-
-	@include breakpoint($gamora){
-		padding: 0;
-	}
-}*/
-/**
- * 3. Drupal Navigation With JS Accordion
+ * 2. Drupal Navigation With JS Accordion
  *
  * Drupal does things in its own funny way, and rather than shoehorn my
  * system into it, let’s just play along and use the classes it tends to
  * want to use automatically. This accordion expands and disappears at the
  * $gamora breakpoint.
  */
-/* line 289, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 99, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation {
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
   list-style-type: none;
 }
 
-/* line 298, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 107, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title {
   -webkit-align-items: start;
       -ms-flex-align: start;
@@ -4318,40 +4095,40 @@ ul.accordion-inner{
       grid-template-columns: auto 1fr;
 }
 @media screen and (min-width: 43em) {
-  /* line 298, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 107, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title {
     display: block;
   }
 }
 
-/* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 117, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title:hover {
   cursor: pointer;
 }
 @media screen and (min-width: 43em) {
-  /* line 308, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 117, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title:hover {
     cursor: auto;
   }
 }
 
-/* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 125, ../src/smacss/modules/_tertiary-nav.scss */
 .field-group-title::before {
   margin-right: 0.5ch;
   display: inline-block;
-  content: "▶";
   transition: -webkit-transform 0.33s ease;
   transition: transform 0.33s ease;
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
+  content: "▶";
 }
 @media screen and (min-width: 43em) {
-  /* line 316, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 125, ../src/smacss/modules/_tertiary-nav.scss */
   .field-group-title::before {
     content: none;
   }
 }
 
-/* line 327, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 140, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-group-title::before {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -4361,7 +4138,7 @@ ul.accordion-inner{
   transition: transform 0.33s ease, -webkit-transform 0.33s ease;
 }
 
-/* line 332, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 147, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-group-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -4370,7 +4147,7 @@ ul.accordion-inner{
   line-height: 1.33928571428571;
 }
 @media screen and (min-width: 43em) {
-  /* line 332, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 147, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-group-title {
     border-bottom: 1px solid #004377;
     margin-bottom: -1px;
@@ -4381,75 +4158,64 @@ ul.accordion-inner{
   }
 }
 
-/* line 353, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 168, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links {
   border-bottom: 1px solid black;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
+  padding: 0 1ch;
+  max-height: none;
   overflow: hidden;
   list-style-type: none;
   background-color: rgba(242, 242, 242, 0.25);
   box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
-  /* line 353, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 168, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links {
     border-bottom-width: 0;
+    padding: 0;
     background-color: transparent;
     box-shadow: none;
   }
 }
 
-/* line 389, ../src/smacss/modules/_tertiary-nav.scss */
-.field-section-navigation .field-links {
-  margin: 0;
-  padding: 0 1ch;
-  max-height: none;
-}
-@media screen and (min-width: 43em) {
-  /* line 389, ../src/smacss/modules/_tertiary-nav.scss */
-  .field-section-navigation .field-links {
-    padding: 0;
-  }
-}
-
-/* line 400, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 192, ../src/smacss/modules/_tertiary-nav.scss */
 .nav-item:last-child .field-links {
   border-bottom-width: 0;
   text-decoration: none;
 }
 
-/* line 407, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 199, ../src/smacss/modules/_tertiary-nav.scss */
 .close .field-links {
   max-height: 0;
   transition: max-height 0.25s ease;
 }
 @media screen and (min-width: 43em) {
-  /* line 407, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 199, ../src/smacss/modules/_tertiary-nav.scss */
   .close .field-links {
     max-height: none;
   }
 }
 
-/* line 418, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 210, ../src/smacss/modules/_tertiary-nav.scss */
 .open .field-links {
   max-height: 25em;
   border-bottom-color: #c2c2c2;
   transition: max-height 1s ease;
 }
 
-/* line 427, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 219, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation .field-links li {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 427, ../src/smacss/modules/_tertiary-nav.scss */
+  /* line 219, ../src/smacss/modules/_tertiary-nav.scss */
   .field-section-navigation .field-links li {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 437, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 229, ../src/smacss/modules/_tertiary-nav.scss */
 .field-section-navigation a,
 .field-section-navigation a:visited,
 .field-section-navigation a:hover {
@@ -4459,14 +4225,14 @@ ul.accordion-inner{
 }
 
 /**
- * 4. Catalog Nav Fixes
+ * 3. Catalog Nav Fixes
  *
  * The catalogs use a special filter form in the nav, which throws
  * everything off.
  *
  * @see http://evergreen.edu/catalog/index
  */
-/* line 459, ../src/smacss/modules/_tertiary-nav.scss */
+/* line 251, ../src/smacss/modules/_tertiary-nav.scss */
 #views-exposed-form-catalog-page,
 #views-exposed-form-catalog-grad-programs {
   margin-top: 0;
@@ -4490,6 +4256,7 @@ ul.accordion-inner{
   line-height: 1.33928571428571;
   text-align: center;
   background-color: black;
+  box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 70em) {
   /* line 7, ../src/smacss/modules/_footer.scss */
@@ -4507,12 +4274,12 @@ ul.accordion-inner{
   }
 }
 
-/* line 30, ../src/smacss/modules/_footer.scss */
+/* line 31, ../src/smacss/modules/_footer.scss */
 .page-footer-unit-central {
   text-align: center;
 }
 
-/* line 34, ../src/smacss/modules/_footer.scss */
+/* line 35, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4520,7 +4287,7 @@ ul.accordion-inner{
   content: "";
 }
 
-/* line 43, ../src/smacss/modules/_footer.scss */
+/* line 44, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
@@ -4528,20 +4295,20 @@ ul.accordion-inner{
   border-color: #3c5823;
 }
 
-/* line 52, ../src/smacss/modules/_footer.scss */
+/* line 53, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   border-color: #0086ee;
 }
 
-/* line 59, ../src/smacss/modules/_footer.scss */
+/* line 60, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 59, ../src/smacss/modules/_footer.scss */
+  /* line 60, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -4555,7 +4322,7 @@ ul.accordion-inner{
 	// typography
 	text-align: center;
 }*/
-/* line 74, ../src/smacss/modules/_footer.scss */
+/* line 75, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4563,13 +4330,13 @@ ul.accordion-inner{
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 82, ../src/smacss/modules/_footer.scss */
+/* line 83, ../src/smacss/modules/_footer.scss */
 .motto-footer p {
   color: #242424;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 82, ../src/smacss/modules/_footer.scss */
+  /* line 83, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4579,14 +4346,14 @@ ul.accordion-inner{
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 82, ../src/smacss/modules/_footer.scss */
+  /* line 83, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 
-/* line 101, ../src/smacss/modules/_footer.scss */
+/* line 102, ../src/smacss/modules/_footer.scss */
 .motto-footer i {
   font-style: normal;
   font-weight: bold;
@@ -4638,9 +4405,10 @@ ul.accordion-inner{
 .intro-alt {
   color: #303030;
   font-weight: bold;
+  text-shadow: 2px 2px 1px #f2f2f2;
 }
 
-/* line 206, ../src/smacss/_modules.scss */
+/* line 207, ../src/smacss/_modules.scss */
 .byline {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -4650,40 +4418,40 @@ ul.accordion-inner{
   text-transform: uppercase;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 206, ../src/smacss/_modules.scss */
+  /* line 207, ../src/smacss/_modules.scss */
   .byline {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 206, ../src/smacss/_modules.scss */
+  /* line 207, ../src/smacss/_modules.scss */
   .byline {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 
-/* line 217, ../src/smacss/_modules.scss */
+/* line 218, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.36512559155442;
 }
 @media screen and (min-width: 70em) {
-  /* line 217, ../src/smacss/_modules.scss */
+  /* line 218, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 217, ../src/smacss/_modules.scss */
+  /* line 218, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 231, ../src/smacss/_modules.scss */
+/* line 232, ../src/smacss/_modules.scss */
 .fast-fact,
 .fast-fact-alt {
   border: 0.25ch solid #64933a;
@@ -4692,9 +4460,16 @@ ul.accordion-inner{
   overflow: hidden;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
+@media screen and (min-width: 43em) {
+  /* line 232, ../src/smacss/_modules.scss */
+  .fast-fact,
+  .fast-fact-alt {
+    padding: 0;
+  }
+}
 
 @media screen and (min-width: 43em) {
-  /* line 243, ../src/smacss/_modules.scss */
+  /* line 248, ../src/smacss/_modules.scss */
   .fast-fact {
     border-width: 0 0.5ch 0 0;
     padding-right: 2ch;
@@ -4702,14 +4477,14 @@ ul.accordion-inner{
 }
 
 @media screen and (min-width: 43em) {
-  /* line 251, ../src/smacss/_modules.scss */
+  /* line 256, ../src/smacss/_modules.scss */
   .fast-fact-alt {
     border-width: 0 0 0 0.5ch;
     padding-left: 2ch;
   }
 }
 
-/* line 260, ../src/smacss/_modules.scss */
+/* line 265, ../src/smacss/_modules.scss */
 .key-number {
   display: block;
   color: #64933a;
@@ -4718,24 +4493,24 @@ ul.accordion-inner{
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 260, ../src/smacss/_modules.scss */
+  /* line 265, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 277, ../src/smacss/_modules.scss */
+/* line 282, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 281, ../src/smacss/_modules.scss */
+/* line 286, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 285, ../src/smacss/_modules.scss */
+/* line 290, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4744,7 +4519,7 @@ ul.accordion-inner{
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 285, ../src/smacss/_modules.scss */
+  /* line 290, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -5206,9 +4981,9 @@ ul.accordion-inner{
   padding-left: 0;
   display: block;
   word-wrap: break-word;
+  list-style-type: none;
   background-color: #d9d4dc;
   border-radius: 2px;
-  list-style-type: none;
 }
 @media screen and (min-width: 32em) {
   /* line 438, ../src/smacss/modules/_lists.scss */
@@ -5222,13 +4997,13 @@ ul.accordion-inner{
   }
 }
 
-/* line 461, ../src/smacss/modules/_lists.scss */
+/* line 460, ../src/smacss/modules/_lists.scss */
 .alpha-label + .alpha-index {
   margin-top: -1px;
   border-top-left-radius: 0;
 }
 
-/* line 468, ../src/smacss/modules/_lists.scss */
+/* line 467, ../src/smacss/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -5241,7 +5016,7 @@ ul.accordion-inner{
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 483, ../src/smacss/modules/_lists.scss */
+/* line 482, ../src/smacss/modules/_lists.scss */
 .badge-list {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -5257,19 +5032,19 @@ ul.accordion-inner{
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 490, ../src/smacss/modules/_lists.scss */
+/* line 489, ../src/smacss/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 500, ../src/smacss/modules/_lists.scss */
+/* line 499, ../src/smacss/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 504, ../src/smacss/modules/_lists.scss */
+/* line 503, ../src/smacss/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -5280,12 +5055,12 @@ ul.accordion-inner{
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 515, ../src/smacss/modules/_lists.scss */
+/* line 514, ../src/smacss/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 519, ../src/smacss/modules/_lists.scss */
+/* line 518, ../src/smacss/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #d9d4dc;
 }
@@ -7764,12 +7539,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 345, ../src/smacss/_modules.scss */
+/* line 350, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 350, ../src/smacss/_modules.scss */
+/* line 355, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7789,7 +7564,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 367, ../src/smacss/_modules.scss */
+/* line 372, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8114,14 +7889,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 389, ../src/smacss/_modules.scss */
+/* line 394, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 399, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8140,24 +7915,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 418, ../src/smacss/_modules.scss */
+/* line 423, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 422, ../src/smacss/_modules.scss */
+/* line 427, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 430, ../src/smacss/_modules.scss */
+/* line 435, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 438, ../src/smacss/_modules.scss */
+/* line 443, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8168,30 +7943,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 449, ../src/smacss/_modules.scss */
+/* line 454, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 453, ../src/smacss/_modules.scss */
+/* line 458, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 453, ../src/smacss/_modules.scss */
+  /* line 458, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 453, ../src/smacss/_modules.scss */
+  /* line 458, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 466, ../src/smacss/_modules.scss */
+/* line 471, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -8203,7 +7978,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 478, ../src/smacss/_modules.scss */
+/* line 483, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -8211,7 +7986,7 @@ p.alert,
   display: block;
 }
 
-/* line 487, ../src/smacss/_modules.scss */
+/* line 492, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
