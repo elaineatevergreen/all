@@ -125,7 +125,7 @@
 }
 
 .upcoming-events-homepage li{
-	
+
 	@include breakpoint($drax){
 		@include margin-default-lg;
 	}

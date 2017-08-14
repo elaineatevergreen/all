@@ -170,7 +170,7 @@ $groot:     (min: 125em);
 	font-family: $small-face;
 	font-size: 0.695rem;  // 11.12px  Step -1
 	line-height: 1.34831460674157;  // 15/11.125
-	
+
 	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi){  // Safari 12, W3C, IE 11
 		font-family: $small-face-alt;
 	}

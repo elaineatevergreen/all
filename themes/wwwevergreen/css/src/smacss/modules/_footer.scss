@@ -59,7 +59,7 @@
 
 .page-footer-unit .lineup{
 	justify-content: center;
-	
+
 	@include breakpoint($drax){
 		justify-content: flex-start;
 	}
@@ -83,7 +83,7 @@
 .motto-footer p{
 	color: mix($tint, $shade, 15%);
 	text-align: center;
-	
+
 	@include breakpoint($lil-groot){
 		// layout
 		margin: calc(30 / 16 * 1rem) 0;
@@ -92,7 +92,7 @@
 		letter-spacing: 0.3333333333ch;
 		text-transform: uppercase;
 	}
-	
+
 	@include breakpoint($starlord){
 		font-size: 1.82rem;  // Step 3
 		line-height: 1.03007828594973;  // 30 / 29.124

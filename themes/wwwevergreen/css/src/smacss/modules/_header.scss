@@ -395,7 +395,7 @@ input:checked + .header-dropdown{
  * Typekit Override
  */
 .wf-active .top-nav-list{
-	
+
 	@include breakpoint($rocket){
 		// typography
 		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
@@ -514,10 +514,10 @@ input:checked + .header-dropdown{
 	padding: 0;
 	// typography
 	text-align: center;
-	// decoration
-	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	// list
 	list-style-type: none;
+	// decoration
+	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 
 	@include breakpoint($lil-groot){
 		// layout
@@ -552,9 +552,6 @@ input:checked + .header-dropdown{
 		flex-basis: 25%;
 	}
 
-	@include breakpoint($rocket){
-	}
-	
 	@include breakpoint($starlord){
 		flex-basis: auto;
 	}
@@ -577,8 +574,8 @@ input:checked + .header-dropdown{
 	&:visited{
 		// box model
 		//border-bottom: 0;
-		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		height: 100%;
+		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		width: 100%;
 		// layout
 		//display: block;
@@ -603,7 +600,7 @@ input:checked + .header-dropdown{
 		@include breakpoint($starlord){
 			padding: 0 1ch;
 		}
-		
+
 		@include breakpoint($gamora){
 			// box model
 			padding: 0 2ch;

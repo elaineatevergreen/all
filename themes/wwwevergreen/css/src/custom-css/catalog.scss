@@ -174,6 +174,8 @@
 }*/
 
 .program-title{
+	//@include base-type-lg;
+
 	@media screen and (min-width: 55em){
 		@include base-type-lg;
 	}
@@ -279,7 +281,7 @@
 
 .sticky-header{
 	opacity: 0;  // Don't show at non-tabular sizes
-	
+
 	@include breakpoint($gamora){
 		opacity: 1;  // Show when the layout becomes a table again
 	}
@@ -287,7 +289,7 @@
 
 .view-catalog .views-table{  // The main catalog table
 	display: block;
-	
+
 	@include breakpoint($gamora){
 		display: table;
 	}
@@ -295,7 +297,7 @@
 
 .view-catalog caption{
 	display: block;
-	
+
 	@include breakpoint($gamora){
 		display: table-caption;
 	}
@@ -303,23 +305,7 @@
 
 .view-catalog tbody{
 	display: block;
-	
-	@include breakpoint($gamora){
-		display: table-row-group;
-	}
-}
 
-.view-catalog tr{
-	display: block;
-	
-	@include breakpoint($gamora){
-		display: table-row;
-	}
-}
-
-.view-catalog thead{
-	display: none;
-	
 	@include breakpoint($gamora){
 		display: table-row-group;
 	}
@@ -334,11 +320,19 @@
 	// layout
 	display: flex;
 	flex-wrap: wrap;
-	
+
 	@include breakpoint($gamora){
 		// box model
-		border-top: none;
+		border-top-width: 0;
 		display: table-row;
+	}
+}
+
+.view-catalog thead{
+	display: none;
+
+	@include breakpoint($gamora){
+		display: table-row-group;
 	}
 }
 
@@ -348,7 +342,7 @@
 	padding: 0;
 	// layout
 	display: inline-block;
-	
+
 	@include breakpoint($gamora){
 		// box model
 		border-top-width: 1px;
@@ -411,7 +405,7 @@
 
 .catalog-time-offered p::after{
 	content: "\00A0";
-	
+
 	@include breakpoint($gamora){
 		content: "";
 	}
@@ -419,24 +413,24 @@
 
 .catalog-offering p::after{
 	content: "\00A0";
-	
+
 	@include breakpoint($gamora){
 		content: "";
 	}
 }
 
 .catalog-class-standing p{
-	
+
 	&::before{
 		content: "for" "\00A0";
 	}
-	
+
 	&::after{
 		content: ",\00A0";
 	}
-	
+
 	@include breakpoint($gamora){
-		
+
 		&::before,
 		&::after{
 			content: "";
@@ -446,7 +440,7 @@
 
 .catalog-credits p::after{
 	content: "\00A0" "credits";  // \00A0 is a non-breaking space (&nbsp;)
-	
+
 	@include breakpoint($gamora){
 		content: "";
 	}
@@ -454,10 +448,6 @@
 
 .catalog-quarters-offered{
 	flex-basis: 100%;
-}
-
-.program-title{
-	@include base-type-lg;
 }
 
 .cancelled{
@@ -508,12 +498,12 @@
 
 .qi-fall{
 	/* decoration */
-	background-color: #C09A00;
-	border-color: #C09A00;
+	background-color: #c09a00;
+	border-color: #c09a00;
 }
 
 .cancelled .qi-fall{
-	background-color: #E5D8A3;
+	background-color: #e5d8a3;
 }
 
 .qi-winter{
@@ -618,16 +608,16 @@
 
 .qi-future.qi-signature{
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/texture-2.png"),
-	                  url("/sites/all/themes/wwwevergreen/images/icons/signature-icon.png");
+	/*             */ url("/sites/all/themes/wwwevergreen/images/icons/signature-icon.png");
 	background-size: 100%,
-	                 1.5em;
+	/*            */ 1.5em;
 }
 
 .qi-signature.qi-cont-start{
 	background-position-x: 0,
-	                       0.85ch;
+	/*                  */ 0.85ch;
 	background-repeat: repeat,
-	                   no-repeat;
+	/*              */ no-repeat;
 }
 
 .qi-na,
@@ -673,12 +663,12 @@
 	display: inline-block;
 	// decoration
 	background-color: $tint;
-	
+
 	@include breakpoint($gamora){
 		margin-bottom: (15 / 18 * 1em);
 		padding: calc(7.5 / 18 * 1em) 1ch calc(15 / 18 * 1em);
 	}
-	
+
 	&:last-child{
 		margin-right: 0;
 	}
@@ -704,7 +694,7 @@
 	 * These styles should closely fit with the rest of the OS-level form
 	 * fields, for example inputs and selects.
 	 */
-	
+
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 60%);
 	height: auto;
@@ -715,7 +705,7 @@
 	background-color: $tint;
 	border-radius: 2px;
 	box-shadow: 0 0.1em 0.1em $drop-shadow inset;
-	
+
 	&:hover{
 		background-color: mix($tint, $blueberry-susan, 90%);
 	}
@@ -729,7 +719,7 @@
 	line-height: 1.33928571428571;  // (15 + 3.75)/14, slightly compressed compared to $base-type so that multi-line legends are clickable in between lines
 	// decoration
 	background-color: $tint;
-	background-image: linear-gradient(white 75%, $tint);
+	background-image: linear-gradient($tint 75%, $tint);
 	border-color: mix($tint, $blueberry-susan, 60%);
 	border-bottom-color: $tint;  // Hides bottom border to avoid jumping on hover
 	border-radius: 2px 2px 0 0;
@@ -741,7 +731,7 @@
 	background-color: mix($tint, $blueberry-susan, 90%);
 	background-image: none;
 	border-bottom-color: mix($tint, $blueberry-susan, 90%);
-	
+
 	&:hover{
 		border-bottom: 1px dashed mix($tint, $blueberry-susan, 60%);
 	}
@@ -750,7 +740,7 @@
 #views-exposed-form-catalog-page fieldset .fieldset-title{
 	// box model
 	border-bottom: 0;
-	
+
 	&:focus,
 	&:active{
 		//decoration
