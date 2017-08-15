@@ -201,6 +201,7 @@
 .intro-alt{
 	color: mix($tint, $shade, 20%);
 	font-weight: bold;
+	text-shadow: 2px 2px 1px $tint;
 }
 
 .byline{

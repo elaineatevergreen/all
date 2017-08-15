@@ -64,8 +64,7 @@
 	}
 }
 
-// Wraps all the content on index pages and pages without a
-// secondary content area.
+// Wraps all the content on index pages and pages without a secondary content area.
 .index-wrapper{
 
 	@include breakpoint($gamora){
@@ -205,6 +204,10 @@
 	@include breakpoint($groot){
 		margin: 0.441176470588235em 0 0.882352941176471em;  // 22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
 	}
+}
+
+.content-panel{
+	margin: calc(45 / 16 * 1rem) 0;
 }
 
 .spotlight{
