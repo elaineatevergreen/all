@@ -125,7 +125,7 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.46875rem 0.5em 0;  // 7.5px 7px 7px
+	margin: 0.46875rem 1ch;  // 7.5px
 	width: calc(100% - 1em);
 
 	@include breakpoint($lil-groot){
@@ -170,7 +170,10 @@ input:checked + .header-dropdown{
 	}
 
 	img{
+		// box model
 		max-height: 4em;
+		// layout
+		display: block;
 
 		@include breakpoint($groot){
 			max-height: none;  // max-height doesn't center correctly in Blink.

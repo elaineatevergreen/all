@@ -1,5 +1,5 @@
 /**
- * A. Grid
+ * Grid
  *
  * Unit layout and sizing for the grid system.
  *
@@ -9,7 +9,7 @@
  * 2. Supplemental Content
  */
 
-.row{
+.row{  // A full-width row that stretches from edge to edge.
 	// box model
 	width: 100%;
 	// layout
@@ -70,13 +70,13 @@
 .unit-1-1{
 	width: 100%;
 	
-	@supports(display: grid){
+	/*@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 		// box model
 		padding-left: 0;
 		width: auto;
 		// layout
 		grid-column: 1 / -1;
-	}
+	}*/
 }
 
 .unit-1-2{

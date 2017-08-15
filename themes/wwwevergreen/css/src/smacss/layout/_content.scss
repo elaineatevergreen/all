@@ -64,8 +64,7 @@
 	}
 }
 
-// Wraps all the content on index pages and pages without a
-// secondary content area.
+// Wraps all the content on index pages and pages without a secondary content area.
 .index-wrapper{
 
 	@include breakpoint($gamora){
@@ -207,6 +206,10 @@
 	}
 }
 
+.content-panel{
+	margin: calc(45 / 16 * 1rem) 0;
+}
+
 .spotlight{
 	text-align: center;
 }
@@ -231,5 +234,6 @@
 	background-attachment: fixed;
 	background-clip: content-box;
 	background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
+	background-size: 10vw;  // Edge
 	background-size: 10vmax;
 }

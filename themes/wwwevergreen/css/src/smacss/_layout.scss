@@ -39,7 +39,8 @@
  * B. Page-level Layout
  */
 .wrapper,
-.wrapper-full{
+.wrapper-full, // deprecated, use .wrapper-restrained instead
+.wrapper-restrained{
 	// box model
 	margin: 0 auto;
 	width: 100%;
@@ -52,13 +53,14 @@
 }
 
 /**
- * A standard wrapper for rows that take up the full 7-column grid. This
- * wrapper will leave auto-margins around the edges of the container when
- * the site is viewed at narrow screen sizes.
+ * This wrapper will restrain the container, leaving min-margins around the
+ * edges, when the site is viewed at narrow screen sizes.
+ *
+ * See .upcoming-events-homepage for an example.
  */
-
-.wrapper-full{  // Keeps a bit of space for vertical auto-margins.
-	width: calc(100% - 4em);
+.wrapper-full,  // deprecated, use .wrapper-restrained instead
+.wrapper-restrained{  // Keeps a bit of space for vertical auto-margins.
+	width: calc(100% - 3ch);
 }
 
 .wrapper:before,  // nega-clearfix! Clearfix that wraps the element around TOP margins.
@@ -82,7 +84,6 @@
  */
 
 [role="banner"],
-//body > div + header,  // This is hacky. Use .header-nav-wrapper instead. Delete after next whole-site publish.
 .header-nav-wrapper{
 	// layout
 	display: flex;
