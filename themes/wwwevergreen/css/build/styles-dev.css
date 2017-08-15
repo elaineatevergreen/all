@@ -1806,7 +1806,7 @@ a:link,
  * @section l-grid
  */
 /**
- * A. Grid
+ * Grid
  *
  * Unit layout and sizing for the grid system.
  *
@@ -1883,14 +1883,13 @@ a:link,
 /* line 70, ../src/smacss/layout/_grid.scss */
 .unit-1-1 {
   width: 100%;
-}
-@supports (grid-template: none) {
-  /* line 70, ../src/smacss/layout/_grid.scss */
-  .unit-1-1 {
-    padding-left: 0;
-    width: auto;
-    grid-column: 1 / -1;
-  }
+  /*@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+  	// box model
+  	padding-left: 0;
+  	width: auto;
+  	// layout
+  	grid-column: 1 / -1;
+  }*/
 }
 
 /* line 82, ../src/smacss/layout/_grid.scss */
@@ -2239,7 +2238,8 @@ a:link,
  */
 /* line 41, ../src/smacss/_layout.scss */
 .wrapper,
-.wrapper-full {
+.wrapper-full,
+.wrapper-restrained {
   margin: 0 auto;
   width: 100%;
   display: block;
@@ -2247,22 +2247,25 @@ a:link,
 @media screen and (min-width: 70em) {
   /* line 41, ../src/smacss/_layout.scss */
   .wrapper,
-  .wrapper-full {
+  .wrapper-full,
+  .wrapper-restrained {
     max-width: 77em;
   }
 }
 
 /**
- * A standard wrapper for rows that take up the full 7-column grid. This
- * wrapper will leave auto-margins around the edges of the container when
- * the site is viewed at narrow screen sizes.
+ * This wrapper will restrain the container, leaving min-margins around the
+ * edges, when the site is viewed at narrow screen sizes.
+ *
+ * See .upcoming-events-homepage for an example.
  */
-/* line 60, ../src/smacss/_layout.scss */
-.wrapper-full {
-  width: calc(100% - 4em);
+/* line 61, ../src/smacss/_layout.scss */
+.wrapper-full,
+.wrapper-restrained {
+  width: calc(100% - 3ch);
 }
 
-/* line 64, ../src/smacss/_layout.scss */
+/* line 66, ../src/smacss/_layout.scss */
 .wrapper:before,
 .wrapper:after {
   width: 0;
@@ -2271,7 +2274,7 @@ a:link,
   content: "";
 }
 
-/* line 75, ../src/smacss/_layout.scss */
+/* line 77, ../src/smacss/_layout.scss */
 .wrapper.grid,
 .wrapper.grid-alt {
   display: -webkit-flex;
@@ -2282,7 +2285,7 @@ a:link,
 /**
  * C. Header Layout
  */
-/* line 84, ../src/smacss/_layout.scss */
+/* line 86, ../src/smacss/_layout.scss */
 [role="banner"],
 .header-nav-wrapper {
   display: -webkit-flex;
@@ -2296,7 +2299,7 @@ a:link,
   box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 84, ../src/smacss/_layout.scss */
+  /* line 86, ../src/smacss/_layout.scss */
   [role="banner"],
   .header-nav-wrapper {
     -webkit-flex-direction: row-reverse;
@@ -2305,43 +2308,43 @@ a:link,
   }
 }
 
-/* line 101, ../src/smacss/_layout.scss */
+/* line 102, ../src/smacss/_layout.scss */
 .page-header {
   transition: all 0.1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
-  /* line 101, ../src/smacss/_layout.scss */
+  /* line 102, ../src/smacss/_layout.scss */
   .page-header {
     background-color: transparent;
   }
 }
 
-/* line 109, ../src/smacss/_layout.scss */
+/* line 110, ../src/smacss/_layout.scss */
 .top-nav {
   width: 100%;
 }
 
-/* line 113, ../src/smacss/_layout.scss */
+/* line 114, ../src/smacss/_layout.scss */
 .top-nav {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.695rem;
     line-height: calc(15 / 11.125);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     margin-left: 0;
     width: 100%;
@@ -2352,7 +2355,7 @@ a:link,
  * Typekit overrides
  */
 @media screen and (min-width: 20em) {
-  /* line 137, ../src/smacss/_layout.scss */
+  /* line 138, ../src/smacss/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.42857142857143;
@@ -2361,7 +2364,7 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.125rem;
@@ -2369,7 +2372,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.202rem;
@@ -2377,7 +2380,7 @@ a:link,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.719rem;
@@ -2669,37 +2672,37 @@ a:link,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 174, ../src/smacss/_layout.scss */
+  /* line 175, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 180, ../src/smacss/_layout.scss */
+  /* line 181, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 186, ../src/smacss/_layout.scss */
+  /* line 187, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 192, ../src/smacss/_layout.scss */
+  /* line 193, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 198, ../src/smacss/_layout.scss */
+  /* line 199, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 204, ../src/smacss/_layout.scss */
+  /* line 205, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2881,7 +2884,7 @@ input:checked + .header-dropdown {
  */
 /* line 127, ../src/smacss/modules/_header.scss */
 .logo {
-  margin: 0.46875rem 0.5em 0;
+  margin: 0.46875rem 1ch 0.46875rem 0;
   width: calc(100% - 1em);
 }
 @media screen and (min-width: 20em) {
@@ -6638,57 +6641,50 @@ p.alert,
  *
  * The box on the homepage featuring upcoming events from the calendar.
  */
-/* line 89, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage {
-  margin: 0 auto;
-}
-@media screen and (min-width: 32em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin: 0 auto 1rem;
-    max-width: 66.6666666666%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin-top: 1rem;
-    margin-left: -24.58203125%;
-    width: 21.58203125%;
-    font-size: 0.875rem;
-    line-height: 1.42857142857143;
-    position: absolute;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin-left: -25.520833333333%;
-    width: 23.484848484848%;
-    font-size: 1.125rem;
-    line-height: 1.38888888888889;
-  }
+/*.upcoming-events-homepage{
+	// box model
+	margin: 0 auto;
+
+	@include breakpoint($starlord){
+		margin: 0 auto 1rem;
+		max-width: 66.6666666666%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1rem;
+		margin-left: -24.58203125%;  // 442/2048 + 3%
+		width: 21.58203125%;  // 442/2048
+		// typography
+		@include base-type;
+		// position
+		position: absolute;  // Removes nav from the document flow
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-left: -25.520833333333%;
+		width: 23.484848484848%;
+		@include base-type-lg;
+	}
 }
 
-/* line 117, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage .media,
-.upcoming-events-homepage .compound {
-  border-bottom: 1px solid #b9afbf;
+//.upcoming-events-homepage .media,
+.upcoming-events-homepage .compound{
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
 }
 
-/* line 122, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage .media-body,
-.upcoming-events-homepage .compound-body {
-  text-align: center;
+//.upcoming-events-homepage .media-body,
+.upcoming-events-homepage .compound-body{
+	text-align: center;
 }
 
-@media screen and (min-width: 70em) {
-  /* line 127, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage li {
-    margin: 0.41666666666667em 0 0.83333333333333em;
-  }
-}
-
+.upcoming-events-homepage li{
+	
+	@include breakpoint($drax){
+		@include margin-default-lg;
+	}
+}*/
 /* line 134, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;

@@ -86,7 +86,7 @@
  * The box on the homepage featuring upcoming events from the calendar.
  */
 
-.upcoming-events-homepage{
+/*.upcoming-events-homepage{
 	// box model
 	margin: 0 auto;
 
@@ -114,12 +114,12 @@
 	}
 }
 
-.upcoming-events-homepage .media,
+//.upcoming-events-homepage .media,
 .upcoming-events-homepage .compound{
 	border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
 }
 
-.upcoming-events-homepage .media-body,
+//.upcoming-events-homepage .media-body,
 .upcoming-events-homepage .compound-body{
 	text-align: center;
 }
@@ -129,7 +129,7 @@
 	@include breakpoint($drax){
 		@include margin-default-lg;
 	}
-}
+}*/
 
 .upcoming-events-homepage2{
 	margin: 0 auto;
