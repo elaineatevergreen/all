@@ -28,7 +28,7 @@
 	overflow: hidden;
 	// typography
 	text-align: center;
-	// backgrounds and borders
+	// decoration
 	background-color: $tint;
 	border-radius: 2px;
 }
@@ -85,53 +85,7 @@
  *
  * The box on the homepage featuring upcoming events from the calendar.
  */
-
-/*.upcoming-events-homepage{
-	// box model
-	margin: 0 auto;
-
-	@include breakpoint($starlord){
-		margin: 0 auto 1rem;
-		max-width: 66.6666666666%;
-	}
-
-	@include breakpoint($gamora){
-		// box model
-		margin-top: 1rem;
-		margin-left: -24.58203125%;  // 442/2048 + 3%
-		width: 21.58203125%;  // 442/2048
-		// typography
-		@include base-type;
-		// position
-		position: absolute;  // Removes nav from the document flow
-	}
-
-	@include breakpoint($drax){
-		// box model
-		margin-left: -25.520833333333%;
-		width: 23.484848484848%;
-		@include base-type-lg;
-	}
-}
-
-//.upcoming-events-homepage .media,
-.upcoming-events-homepage .compound{
-	border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
-}
-
-//.upcoming-events-homepage .media-body,
-.upcoming-events-homepage .compound-body{
-	text-align: center;
-}
-
-.upcoming-events-homepage li{
-
-	@include breakpoint($drax){
-		@include margin-default-lg;
-	}
-}*/
-
-.upcoming-events-homepage2{
+.upcoming-events-homepage{
 	margin: 0 auto;
 
 	@include breakpoint($gamora){
@@ -150,7 +104,7 @@
 	}
 }
 
-.upcoming-events-homepage2 li{
+.upcoming-events-homepage li{
 	@include margin-default;
 
 	@include breakpoint($drax){
@@ -278,7 +232,7 @@
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	@include margin-default;
-	// backgrounds and borders
+	// decoration
 	border-radius: 2px;
 }
 
@@ -289,7 +243,7 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	// backgrounds & borders
+	// decoration
 	border-radius: 2px;
 
 	/*&:nth-child(even){
@@ -417,7 +371,7 @@
 .bulletin{
 	// box model
 	border-bottom: 1px solid mix($tint, $blueberry-susan, 60%);
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);
 	// typography
 	@include base-type;
@@ -504,18 +458,18 @@
 		// layout
 		clear: left;
 		float: left;
-		// backgrounds & borders
+		// decoration
 		border-radius: 2px;
 	}
 }
 
 .chrono-stop-current{
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);
 }
 
 .chrono-stop-complete{
-	// backgrounds & borders
+	// decoration
 	background-color: mix($tint, $blueberry-susan, 60%);
 }
 
@@ -578,6 +532,6 @@
 	// box model
 	border: 1px solid mix($tint, $shade, 66.6666666667%);
 	padding: calc(7.5 / 16 * 1rem) 1em calc(15 / 16 * 1rem);
-	// backgrounds and borders
+	// decoration
 	border-radius: 2px;
 }
