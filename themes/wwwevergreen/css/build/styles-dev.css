@@ -1438,12 +1438,22 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1451,26 +1461,26 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1478,13 +1488,13 @@ input[id$="-range-max"] {
   line-height: 1.34831460674157;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1493,15 +1503,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
-/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1510,33 +1520,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * Textareas
+ * c. Textareas
  */
-/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1545,7 +1555,24 @@ input[id$="-range-max"] {
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+/* line 114, ../src/smacss/base/forms/_drupal-webform.scss */
+.checkbox.webform-grid-option {
+  text-align: center;
+}
+
+/* line 118, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox {
+  float: none;
+}
+
+/**
+ * e. Buttons
  */
 /**
  * 4. Search
@@ -1807,7 +1834,7 @@ a:link,
  * @section l-grid
  */
 /**
- * A. Grid
+ * Grid
  *
  * Unit layout and sizing for the grid system.
  *
@@ -1884,14 +1911,13 @@ a:link,
 /* line 70, ../src/smacss/layout/_grid.scss */
 .unit-1-1 {
   width: 100%;
-}
-@supports (grid-template: none) {
-  /* line 70, ../src/smacss/layout/_grid.scss */
-  .unit-1-1 {
-    padding-left: 0;
-    width: auto;
-    grid-column: 1 / -1;
-  }
+  /*@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+  	// box model
+  	padding-left: 0;
+  	width: auto;
+  	// layout
+  	grid-column: 1 / -1;
+  }*/
 }
 
 /* line 82, ../src/smacss/layout/_grid.scss */
@@ -2157,6 +2183,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2167,6 +2194,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2175,6 +2203,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2182,7 +2211,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2191,14 +2220,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2207,14 +2236,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2240,7 +2269,8 @@ a:link,
  */
 /* line 41, ../src/smacss/_layout.scss */
 .wrapper,
-.wrapper-full {
+.wrapper-full,
+.wrapper-restrained {
   margin: 0 auto;
   width: 100%;
   display: block;
@@ -2248,22 +2278,25 @@ a:link,
 @media screen and (min-width: 70em) {
   /* line 41, ../src/smacss/_layout.scss */
   .wrapper,
-  .wrapper-full {
+  .wrapper-full,
+  .wrapper-restrained {
     max-width: 77em;
   }
 }
 
 /**
- * A standard wrapper for rows that take up the full 7-column grid. This
- * wrapper will leave auto-margins around the edges of the container when
- * the site is viewed at narrow screen sizes.
+ * This wrapper will restrain the container, leaving min-margins around the
+ * edges, when the site is viewed at narrow screen sizes.
+ *
+ * See .upcoming-events-homepage for an example.
  */
-/* line 60, ../src/smacss/_layout.scss */
-.wrapper-full {
-  width: calc(100% - 4em);
+/* line 61, ../src/smacss/_layout.scss */
+.wrapper-full,
+.wrapper-restrained {
+  width: calc(100% - 3ch);
 }
 
-/* line 64, ../src/smacss/_layout.scss */
+/* line 66, ../src/smacss/_layout.scss */
 .wrapper:before,
 .wrapper:after {
   width: 0;
@@ -2272,7 +2305,7 @@ a:link,
   content: "";
 }
 
-/* line 75, ../src/smacss/_layout.scss */
+/* line 77, ../src/smacss/_layout.scss */
 .wrapper.grid,
 .wrapper.grid-alt {
   display: -webkit-flex;
@@ -2283,7 +2316,7 @@ a:link,
 /**
  * C. Header Layout
  */
-/* line 84, ../src/smacss/_layout.scss */
+/* line 86, ../src/smacss/_layout.scss */
 [role="banner"],
 .header-nav-wrapper {
   display: -webkit-flex;
@@ -2297,7 +2330,7 @@ a:link,
   box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
-  /* line 84, ../src/smacss/_layout.scss */
+  /* line 86, ../src/smacss/_layout.scss */
   [role="banner"],
   .header-nav-wrapper {
     -webkit-flex-direction: row-reverse;
@@ -2306,43 +2339,43 @@ a:link,
   }
 }
 
-/* line 101, ../src/smacss/_layout.scss */
+/* line 102, ../src/smacss/_layout.scss */
 .page-header {
   transition: all 0.1s ease-in-out;
 }
 @media screen and (min-width: 43em) {
-  /* line 101, ../src/smacss/_layout.scss */
+  /* line 102, ../src/smacss/_layout.scss */
   .page-header {
     background-color: transparent;
   }
 }
 
-/* line 109, ../src/smacss/_layout.scss */
+/* line 110, ../src/smacss/_layout.scss */
 .top-nav {
   width: 100%;
 }
 
-/* line 113, ../src/smacss/_layout.scss */
+/* line 114, ../src/smacss/_layout.scss */
 .top-nav {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.695rem;
     line-height: calc(15 / 11.125);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 113, ../src/smacss/_layout.scss */
+  /* line 114, ../src/smacss/_layout.scss */
   .top-nav {
     margin-left: 0;
     width: 100%;
@@ -2353,7 +2386,7 @@ a:link,
  * Typekit overrides
  */
 @media screen and (min-width: 20em) {
-  /* line 137, ../src/smacss/_layout.scss */
+  /* line 138, ../src/smacss/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -2362,7 +2395,7 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.125rem;
@@ -2370,7 +2403,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.202rem;
@@ -2378,7 +2411,7 @@ a:link,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 145, ../src/smacss/_layout.scss */
+  /* line 146, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.719rem;
@@ -2670,37 +2703,37 @@ a:link,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 174, ../src/smacss/_layout.scss */
+  /* line 175, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 180, ../src/smacss/_layout.scss */
+  /* line 181, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 186, ../src/smacss/_layout.scss */
+  /* line 187, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 192, ../src/smacss/_layout.scss */
+  /* line 193, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 198, ../src/smacss/_layout.scss */
+  /* line 199, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 204, ../src/smacss/_layout.scss */
+  /* line 205, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2882,7 +2915,7 @@ input:checked + .header-dropdown {
  */
 /* line 127, ../src/smacss/modules/_header.scss */
 .logo {
-  margin: 0.46875rem 0.5em 0;
+  margin: 0.46875rem 1ch 0.46875rem 0;
   width: calc(100% - 1em);
 }
 @media screen and (min-width: 20em) {
@@ -6448,57 +6481,50 @@ p.alert,
  *
  * The box on the homepage featuring upcoming events from the calendar.
  */
-/* line 89, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage {
-  margin: 0 auto;
-}
-@media screen and (min-width: 32em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin: 0 auto 1rem;
-    max-width: 66.6666666666%;
-  }
-}
-@media screen and (min-width: 43em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin-top: 1rem;
-    margin-left: -24.58203125%;
-    width: 21.58203125%;
-    font-size: 0.875rem;
-    line-height: 1.33928571428571;
-    position: absolute;
-  }
-}
-@media screen and (min-width: 70em) {
-  /* line 89, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage {
-    margin-left: -25.520833333333%;
-    width: 23.484848484848%;
-    font-size: 1.125rem;
-    line-height: 1.38888888888889;
-  }
+/*.upcoming-events-homepage{
+	// box model
+	margin: 0 auto;
+
+	@include breakpoint($starlord){
+		margin: 0 auto 1rem;
+		max-width: 66.6666666666%;
+	}
+
+	@include breakpoint($gamora){
+		// box model
+		margin-top: 1rem;
+		margin-left: -24.58203125%;  // 442/2048 + 3%
+		width: 21.58203125%;  // 442/2048
+		// typography
+		@include base-type;
+		// position
+		position: absolute;  // Removes nav from the document flow
+	}
+
+	@include breakpoint($drax){
+		// box model
+		margin-left: -25.520833333333%;
+		width: 23.484848484848%;
+		@include base-type-lg;
+	}
 }
 
-/* line 117, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage .media,
-.upcoming-events-homepage .compound {
-  border-bottom: 1px solid #b9afbf;
+//.upcoming-events-homepage .media,
+.upcoming-events-homepage .compound{
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 66%);
 }
 
-/* line 122, ../src/smacss/modules/_calendars.scss */
-.upcoming-events-homepage .media-body,
-.upcoming-events-homepage .compound-body {
-  text-align: center;
+//.upcoming-events-homepage .media-body,
+.upcoming-events-homepage .compound-body{
+	text-align: center;
 }
 
-@media screen and (min-width: 70em) {
-  /* line 127, ../src/smacss/modules/_calendars.scss */
-  .upcoming-events-homepage li {
-    margin: 0.41666666666667em 0 0.83333333333333em;
-  }
-}
+.upcoming-events-homepage li{
 
+	@include breakpoint($drax){
+		@include margin-default-lg;
+	}
+}*/
 /* line 134, ../src/smacss/modules/_calendars.scss */
 .upcoming-events-homepage2 {
   margin: 0 auto;
@@ -8138,7 +8164,15 @@ p.alert,
  * 
  * modules/_media-segment
  * ----------------------
- * .media-img-alt  Use .media-child-alt
+ * Do not use .media properties; they clash with the Drupal Media module.
+ * Instead, use the matching .compound property.
+ * .media          Use .compound
+ * .media-img      Use .compound-img
+ * .media-body     Use .compound-body
+ * Et cetera
+ *
+ * Note the following special consideration:
+ * .media-img-alt  Use .compound-child-alt
  *
  * modules/_search
  * ---------------
