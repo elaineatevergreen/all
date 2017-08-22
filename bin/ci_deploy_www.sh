@@ -22,6 +22,7 @@ deploy_d7_custom_module modules/custom/evergreen_archives $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_promoted_result $WWW_CODE
 deploy_d7_custom_module modules/custom/basic_content $WWW_CODE
 deploy_d7_custom_module modules/custom/learning_community_directory $WWW_CODE
 deploy_d7_custom_module modules/custom/native_cases $WWW_CODE
