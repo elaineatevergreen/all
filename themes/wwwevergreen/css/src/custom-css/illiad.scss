@@ -1,0 +1,38 @@
+/**
+ * ILLiad Overrides
+ *
+ * ILLiad is the Library’s intra-library loan application put out by Atlas
+ * Systems, Inc. The site is a hacked-together template that tries to mesh
+ * their existing ILL workflow with our template. The results are not
+ * pretty. These styles attempt to address the more ergegious issues with
+ * layout. Some brave soul may want to attempt aesthetics.
+ */
+
+// Required asterisks
+form.f-wrap-request label .field .req{
+	// box model
+	height: auto;
+	width: auto;
+	// layout
+	top: auto;
+	// typography
+	font-size: inherit;
+}
+
+// Form labels (the actual labels)
+form.f-wrap-request label b{
+	// box model
+	width: auto;
+	// layout
+	display: inline;
+	float: none;
+}
+
+// Help text; overrides .box.note styles from styles.css
+form.f-wrap-request label .field .note{
+	padding-left: 0;
+}
+
+form.f-wrap-request label textarea{
+	min-width: 0;
+}

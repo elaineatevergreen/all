@@ -2,8 +2,14 @@
 	<div>
 		<input id="internal-users-flag" name="header-toggle" type="checkbox"/>
 		<ul class="element-list header-dropdown internal-users">
-			<li><a href="https://my.evergreen.edu"><img alt="User" height="10" src="<?php echo($imagepath) ?>user-32.png" width="10"/> my.evergreen.edu</a></li>
-			<li><a href="/webmail">Webmail</a></li>
+			<li>
+				<a href="https://my.evergreen.edu">
+					<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu
+				</a>
+			</li>
+			<li>
+				<a href="/webmail"><img alt="Email" src="<?php echo($imagepath) ?>/icons/header/webmail.svg"/> Webmail</a>
+			</li>
 		</ul>
 	</div>
 	<div class="top-search">
@@ -16,11 +22,21 @@
 					<img alt="Search" src="<?php echo($imagepath) ?>search-32.png"/>
 				</button> 
 				<ul class="element-list search-tools">
-					<li class="internal-users-alt"><a href="https://my.evergreen.edu">
-						<img alt="Profile" height="10" src="<?php echo($imagepath) ?>user-32.png" width="10"/> my.evergreen.edu</a>
+					<li class="internal-users-alt">
+						<a href="https://my.evergreen.edu">
+							<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu
+						</a>
 					</li>
-					<li class="internal-users-alt"><a href="/webmail">Webmail</a></li>
-					<li><a href="/directory">Directories</a></li>
+					<li class="internal-users-alt">
+						<a href="/webmail">
+							<img alt="Email" src="<?php echo($imagepath) ?>/icons/header/webmail.svg"/> Webmail
+						</a>
+					</li>
+					<li>
+						<a href="/directory">
+							<img alt="Address Book" src="<?php echo($imagepath) ?>/icons/header/address-book.svg"/> Directories
+						</a>
+					</li>
 				</ul>
 			</form>
 		</div>
@@ -38,10 +54,10 @@
 	</div>
 	<div class="off-canvas">
 		<label class="search-toggle" for="search-flag">
-			<img alt="Search" src="<?php echo($imagepath) ?>search-w32.png"/>
+			<img alt="Search" src="<?php echo($imagepath) ?>/icons/header/search-alt.svg"/>
 		</label>
 		<label class="student-toggle" for="internal-users-flag">
-			<img alt="Profile" src="<?php echo($imagepath) ?>user-w32.png"/>
+			<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user-alt.svg"/>
 		</label>
 	</div>
 </div>
