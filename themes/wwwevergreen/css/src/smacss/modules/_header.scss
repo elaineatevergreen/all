@@ -125,30 +125,22 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.46875rem 1ch;  // 7.5px
+	margin: 0.46875rem 1ch 0;  // 7.5px 7px 7px
 	width: calc(100% - 1em);
 
 	@include breakpoint($lil-groot){
 		// box model
-		width: 58%;
+		width: calc(60% - 1ch);
 		// layout
 		float: left;
 	}
 
-	@include breakpoint($starlord){
-		//width: 58%;
-	}
-
 	@include breakpoint($gamora){
 		// box model
-		//width: 48%;
-		width: auto;
+		//width: auto;
+		width: 100%;
 		// layout
 		float: none;
-	}
-
-	@include breakpoint($drax){
-		//width: 36%;
 	}
 
 	@include breakpoint($groot){
@@ -156,29 +148,35 @@ input:checked + .header-dropdown{
 		margin-right: auto;
 		margin-bottom: 1em;
 		margin-left: auto;
-		//width: 20%;
 		// layout
 		float: none;
 		// typography
 		text-align: center;
 	}
+}
 
-	a,
-	a:visited,
-	a:hover{
-		//border-bottom-width: 0;
-	}
-
-	img{
-		// box model
-		max-height: 4em;
-		// layout
-		display: block;
-
-		@include breakpoint($groot){
-			max-height: none;  // max-height doesn't center correctly in Blink.
-			max-width: 20em;
+/*@supports (display: flex){
+	.logo{
+		
+		@include breakpoint($gamora){
+			width: 100%;
 		}
+	}
+}*/
+
+.logo a,
+.logo a:visited,
+.logo a:hover{
+	border-bottom-width: 0;
+}
+
+.logo img{
+	max-height: 4em;
+
+	@include breakpoint($groot){
+		margin: 0 auto;
+		max-height: none;  // max-height doesn't center correctly in Blink.
+		max-width: 20em;
 	}
 }
 
