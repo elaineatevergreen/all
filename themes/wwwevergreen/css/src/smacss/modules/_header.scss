@@ -301,10 +301,11 @@ input:checked + .header-dropdown{
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
 
 	@include breakpoint($drax){
-		// layout
-		flex-direction: column;
-		// typography
 		font-family: $display-face;
+	}
+	
+	@include breakpoint($groot){
+		flex-direction: column;
 	}
 }
 
