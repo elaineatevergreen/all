@@ -286,7 +286,12 @@ input:checked + .header-dropdown{
 	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
 	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
 	// typography
+	font-family: $display-face-alt;
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
+	
+	@include breakpoint($drax){
+		font-family: $display-face;
+	}
 }
 
 .search-tools li{
