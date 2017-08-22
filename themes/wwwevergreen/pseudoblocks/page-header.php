@@ -54,10 +54,10 @@
 	</div>
 	<div class="off-canvas">
 		<label class="search-toggle" for="search-flag">
-			<img alt="Search" src="<?php echo($imagepath) ?>search-w32.png"/>
+			<img alt="Search" src="<?php echo($imagepath) ?>/icons/header/search-alt.svg"/>
 		</label>
 		<label class="student-toggle" for="internal-users-flag">
-			<img alt="Profile" src="<?php echo($imagepath) ?>user-w32.png"/>
+			<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user-alt.svg"/>
 		</label>
 	</div>
 </div>
