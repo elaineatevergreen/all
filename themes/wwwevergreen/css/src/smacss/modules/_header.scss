@@ -23,7 +23,7 @@
 
 	@include breakpoint($gamora){
 		// box model
-		width: 49%;
+		width: calc(50% - 1ch);
 		// layout
 		float: right;
 	}
@@ -113,7 +113,11 @@ input:checked + .header-dropdown{
 	width: 100%;
 
 	@include breakpoint($gamora){
-		width: 51%;
+		// box model
+		width: calc(50% + 1ch);
+		// layout
+		display: flex;
+		align-items: center;
 	}
 
 	@include breakpoint($drax){
@@ -224,7 +228,7 @@ input:checked + .header-dropdown{
 
 .search-toggle,
 .student-toggle{
-	//border-bottom-width: 0;
+	border-bottom-width: 0;
 }
 
 .search-toggle:hover,
@@ -380,6 +384,7 @@ input:checked + .header-dropdown{
 		letter-spacing: normal;
 	}
 
+	/* Necessary except for float-based fallback layouts. */
 	&::before,
 	&::after{
 		// box model
@@ -389,6 +394,27 @@ input:checked + .header-dropdown{
 		display: table;
 		// miscellaneous
 		content: "";
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+
+	.top-nav-list{
+		@include breakpoint($lil-groot){
+			// layout
+			display: grid;
+			grid-template-columns: repeat(5, auto);
+		}
+
+		@include breakpoint($starlord){
+			// layout
+			grid-template-columns: repeat(5, 20%);
+		}
+	}
+
+	.top-nav-list::before,
+	.top-nav-list::after{
+		content: none;
 	}
 }
 
@@ -436,11 +462,20 @@ input:checked + .header-dropdown{
 	}
 }
 
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+	.top-nav-list > li{
+		
+		@include breakpoint($starlord){
+			width: auto;
+		}
+	}
+}
+
 .top-nav-link,  // Deprecated in Drupal
 .top-nav-list a,  // Drupal
 .secondary-nav-link{
 	// box model
-	//border-bottom-width: 0;
+	border-bottom-width: 0;
 	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
