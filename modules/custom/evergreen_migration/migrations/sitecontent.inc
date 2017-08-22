@@ -29,11 +29,12 @@ class SiteContentMigration extends XMLMigration {
     );
     	
     	//find the correct location and get the XML
-    	//$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_content') . '/migrations/';
-        //$xml_location = $folder . 'all-content-simple-combined.xml';
+    	//use the local location post-migration so that there isn't a timeout.
+    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_migration') . '/migrations/';
+        $xml_location = $folder . 'combined.xml';
         //note that if this is being run directly on sobek, then sobek needs real DNS
         //OR we go back to the previously commented method
-        $xml_location = 'http://www.evergreen.edu/_inc/inventory/combined.xml';
+        //$xml_location = 'http://www.evergreen.edu/_inc/inventory/combined.xml';
         
         // This is the xpath identifying the items to be migrated, relative to the
     // document.
@@ -184,9 +185,9 @@ class NewsMigration extends XMLMigration {
     	//find the correct folder and get the XML
     	//I would like to figure out how to combine old and new content in a single XML file
     	//or how to iterate over two XML files?	
-    	//$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_content') . '/migrations/';
-        //$xml_location = $folder . 'all-content-simple-combined.xml';
-        $xml_location = 'http://www.evergreen.edu/news/inventory.xml';
+    	$folder = DRUPAL_ROOT . '/' .  drupal_get_path('module', 'evergreen_migration') . '/migrations/';
+        $xml_location = $folder . 'news.xml';
+        //$xml_location = 'http://www.evergreen.edu/news/inventory.xml';
         
         // This is the xpath identifying the items to be migrated, relative to the
     // document.

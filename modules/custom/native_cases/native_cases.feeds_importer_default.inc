@@ -16,7 +16,7 @@ function native_cases_feeds_importer_default() {
   $feeds_importer->id = 'case_study';
   $feeds_importer->config = array(
     'name' => 'Case Study',
-    'description' => '',
+    'description' => 'Imports all the case studies from the Cascade Server CMS',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -37,6 +37,7 @@ function native_cases_feeds_importer_default() {
           'xpathparser:0' => 'title',
           'xpathparser:2' => 'system-data-structure/item/author',
           'xpathparser:3' => 'system-data-structure/item/abstract',
+          'xpathparser:12' => 'system-data-structure/item/abstract',
           'xpathparser:4' => 'system-data-structure/item/disciplines/value',
           'xpathparser:5' => 'system-data-structure/item/themes/value',
           'xpathparser:6' => 'system-data-structure/item/tribes/value',
@@ -51,6 +52,7 @@ function native_cases_feeds_importer_default() {
           'xpathparser:0' => 0,
           'xpathparser:2' => 0,
           'xpathparser:3' => 0,
+          'xpathparser:12' => 0,
           'xpathparser:4' => 0,
           'xpathparser:5' => 0,
           'xpathparser:6' => 0,
@@ -62,6 +64,8 @@ function native_cases_feeds_importer_default() {
         'context' => '/system-index-block/system-page',
         'exp' => array(
           'errors' => 1,
+          'tidy' => 0,
+          'tidy_encoding' => 'UTF8',
           'debug' => array(
             'context' => 0,
             'xpathparser:7' => 0,
@@ -69,6 +73,7 @@ function native_cases_feeds_importer_default() {
             'xpathparser:0' => 0,
             'xpathparser:2' => 0,
             'xpathparser:3' => 0,
+            'xpathparser:12' => 0,
             'xpathparser:4' => 0,
             'xpathparser:5' => 0,
             'xpathparser:6' => 0,
@@ -78,7 +83,7 @@ function native_cases_feeds_importer_default() {
             'xpathparser:11' => 0,
           ),
         ),
-        'allow_override' => 1,
+        'allow_override' => 0,
       ),
     ),
     'processor' => array(
@@ -113,8 +118,8 @@ function native_cases_feeds_importer_default() {
             'language' => 'und',
           ),
           4 => array(
-            'source' => 'xpathparser:3',
-            'target' => 'body',
+            'source' => 'xpathparser:12',
+            'target' => 'field_abstract',
             'unique' => FALSE,
             'language' => 'und',
           ),
@@ -158,6 +163,7 @@ function native_cases_feeds_importer_default() {
             'source' => 'xpathparser:11',
             'target' => 'created',
             'unique' => FALSE,
+            'language' => 'und',
           ),
         ),
         'insert_new' => '1',
