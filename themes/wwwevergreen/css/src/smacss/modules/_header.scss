@@ -79,13 +79,17 @@ input:checked + .header-dropdown{
 
 .internal-users img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 10px;  // magic-number; visually fits with text height
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+	
+	@include breakpoint($gamora){
+		width: 1ch;
+	}
 }
 
 #search-flag + .header-dropdown{
+
 	@include breakpoint($gamora){
 		max-height: none;
 		overflow: visible;
@@ -321,12 +325,11 @@ input:checked + .header-dropdown{
 
 .search-tools img{
 	// box model
-	//margin-right: 5px;  // magic-number
 	width: 1.5ch;
 	// layout
 	display: inline-block;
 	
-	@include breakpoint($drax){
+	@include breakpoint($gamora){
 		width: 1ch;
 	}
 }
