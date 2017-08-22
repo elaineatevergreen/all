@@ -49,6 +49,7 @@ rules:
     - 2
     -
       exclude:
+       - background-size
        - display
   no-empty-rulesets: 2
   no-invalid-hex: 2
@@ -197,6 +198,7 @@ rules:
         - list-style-type
         # decoration
         - background
+        - background-attachment
         - background-clip
         - background-color
         - background-image

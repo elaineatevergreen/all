@@ -8,13 +8,17 @@ module.exports = function(grunt) {
 		 * Concatenate files.
 		 */
 		concat: {
-			options: {
-				separator: ';',
-			},
 			scripts: {
+				options: {
+					separator: ';',
+				},
 				src: ['js/src/events.js', 'js/src/scripts.js'],
 				dest: 'js/build/scripts-dev.js',
 			},
+			illiad: {
+				src: ['css/dist/styles.css', 'css/dist/custom-css/illiad.css'],
+				dest: 'css/dist/custom-css/illiad-concat.css',
+			}
 		},
 		
 		/**

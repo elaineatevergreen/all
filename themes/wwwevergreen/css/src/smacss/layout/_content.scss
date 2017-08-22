@@ -196,11 +196,11 @@
 
 .sidebar p,
 .sidebar .base{
-	
+
 	@include breakpoint($drax){
 		margin: 0.535714285714286em 0 1.071428571428571em;  // 22.5/3/14  15/14  So, 22.5 + 7.5 + 15 = 45
 	}
-	
+
 	@include breakpoint($groot){
 		margin: 0.441176470588235em 0 0.882352941176471em;  // 22.5/3/17  15/17  So, 22.5 + 7.5 + 15 = 45
 	}

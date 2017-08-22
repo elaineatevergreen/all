@@ -239,7 +239,7 @@
 	overflow: hidden;
 	// typography
 	font-family: $text-face-alt;
-	
+
 	@include breakpoint($gamora){
 		padding: 0;
 	}
