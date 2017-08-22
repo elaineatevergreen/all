@@ -281,8 +281,8 @@ input:checked + .header-dropdown{
 
 .search-tools{
 	// box model
-	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
-	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	//margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	//padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
 	// typography
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
 }
@@ -304,10 +304,6 @@ input:checked + .header-dropdown{
 		&:after{
 			content: "";
 		}
-
-		&:not(:first-child){
-			margin-left: 19px;  // magic-number; should fit with .internal-users img
-		}
 	}
 }
 
@@ -323,12 +319,16 @@ input:checked + .header-dropdown{
 	}
 }
 
-.internal-users-alt img{
+.search-tools img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 14px;  // magic-number; visually fits with text height
+	//margin-right: 5px;  // magic-number
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+	
+	@include breakpoint($drax){
+		width: 1ch;
+	}
 }
 
 .menu-button,
