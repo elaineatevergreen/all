@@ -17,7 +17,7 @@
 				</button> 
 				<ul class="element-list search-tools">
 					<li class="internal-users-alt"><a href="https://my.evergreen.edu">
-						<img alt="Profile" height="10" src="<?php echo($imagepath) ?>user-32.png" width="10"/> my.evergreen.edu</a>
+						<img alt="Profile" src="<?php echo($imagepath) ?>user-32.png"/> my.evergreen.edu</a>
 					</li>
 					<li class="internal-users-alt"><a href="<?php echo($siteurl) ?>/webmail">Webmail</a></li>
 					<li><a href="<?php echo($siteurl) ?>/directory">Directories</a></li>
