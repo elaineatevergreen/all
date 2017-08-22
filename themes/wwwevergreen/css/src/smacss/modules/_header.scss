@@ -198,7 +198,11 @@ input:checked + .header-dropdown{
 }
 
 .off-canvas{
-	margin-right: 2%;
+	margin-right: 1ch;
+
+	@include breakpoint($gamora){
+		margin-right: 0;
+	}
 }
 
 .search-toggle,   // button to reveal search
@@ -250,7 +254,7 @@ input:checked + .header-dropdown{
 	padding-top: 1px;  // Compensate for matching search icon height
 }
 
-#top-search-query,  // deprecated, use #q
+//#top-search-query,  // deprecated, use #q
 #q,
 .top-search button{
 	margin-bottom: 0;
@@ -477,15 +481,15 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.secondary-nav-link{
+.top-nav-list a,
+.secondary-nav-list a{
 	// box model
-	border-bottom-width: 0;
 	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
+	// typography
+	text-decoration: none;
 
 	&:hover{
 		// typography
@@ -525,10 +529,8 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-link:visited,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.top-nav-list a:visited{  // Drupal
+.top-nav-list a,
+.top-nav-list a:visited{
 	// typography
 	color: $tint;
 	font-weight: 600;
@@ -607,8 +609,7 @@ input:checked + .header-dropdown{
 	}
 }
 
-.secondary-nav-link,  // Deprecated in Drupal
-.secondary-nav-list a{  // Drupal
+.secondary-nav-list a{
 
 	&,
 	&:visited{
