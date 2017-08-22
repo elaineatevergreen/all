@@ -286,23 +286,20 @@ input:checked + .header-dropdown{
 }
 
 .search-tools{
-	// box model
-	//margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
-	//padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	// typography
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
+	
+	@breakpoint($groot){
+		flex-direction: column;
+	}
 }
 
 .search-tools li{
 	display: inline;
-
-	&::after{
-		content: " | ";
-	}
-
-	&:last-child::after{
-		content: "";
-	}
 
 	@include breakpoint($groot){
 		display: block;
