@@ -69,7 +69,7 @@
 
 .unit-1-1{
 	width: 100%;
-	
+
 	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 		// box model
 		/*padding-left: 0;

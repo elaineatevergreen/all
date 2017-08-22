@@ -116,8 +116,8 @@ input:checked + .header-dropdown{
 		// box model
 		width: calc(50% + 1ch);
 		// layout
-		display: flex;
 		align-items: center;
+		display: flex;
 	}
 
 	@include breakpoint($drax){
@@ -288,7 +288,7 @@ input:checked + .header-dropdown{
 	// typography
 	font-family: $display-face-alt;
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
-	
+
 	@include breakpoint($drax){
 		font-family: $display-face;
 	}
@@ -428,7 +428,7 @@ input:checked + .header-dropdown{
  * Typekit Override
  */
 .wf-active .top-nav-list{
-	
+
 	@include breakpoint($rocket){
 		// typography
 		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
@@ -470,7 +470,7 @@ input:checked + .header-dropdown{
 
 @supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 	.top-nav-list > li{
-		
+
 		@include breakpoint($starlord){
 			width: auto;
 		}
@@ -554,10 +554,10 @@ input:checked + .header-dropdown{
 	padding: 0;
 	// typography
 	text-align: center;
-	// decoration
-	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	// list
 	list-style-type: none;
+	// decoration
+	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 
 	@include breakpoint($lil-groot){
 		// layout
@@ -592,9 +592,6 @@ input:checked + .header-dropdown{
 		flex-basis: 25%;
 	}
 
-	@include breakpoint($rocket){
-	}
-	
 	@include breakpoint($starlord){
 		flex-basis: auto;
 	}
@@ -617,8 +614,8 @@ input:checked + .header-dropdown{
 	&:visited{
 		// box model
 		border-bottom: 0;
-		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		height: 100%;
+		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		width: 100%;
 		// layout
 		//display: block;
@@ -641,7 +638,7 @@ input:checked + .header-dropdown{
 		@include breakpoint($starlord){
 			padding: 0 1ch;
 		}
-		
+
 		@include breakpoint($gamora){
 			// box model
 			padding: 0 2ch;
