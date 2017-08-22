@@ -83,7 +83,7 @@ input:checked + .header-dropdown{
 	// layout
 	display: inline-block;
 	
-	@include breakpoint($gamora){
+	@include breakpoint($starlord){
 		width: 1ch;
 	}
 }
@@ -329,7 +329,7 @@ input:checked + .header-dropdown{
 	// layout
 	display: inline-block;
 	
-	@include breakpoint($gamora){
+	@include breakpoint($starlord){
 		width: 1ch;
 	}
 }
