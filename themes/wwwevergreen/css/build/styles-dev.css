@@ -3105,69 +3105,73 @@ input:checked + .header-dropdown {
 
 /* line 294, ../src/smacss/modules/_header.scss */
 .search-tools {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }
 @media screen and (min-width: 70em) {
   /* line 294, ../src/smacss/modules/_header.scss */
   .search-tools {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 
-/* line 307, ../src/smacss/modules/_header.scss */
+/* line 311, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
-/* line 310, ../src/smacss/modules/_header.scss */
-.search-tools li::after {
-  content: " | ";
-}
-/* line 314, ../src/smacss/modules/_header.scss */
-.search-tools li:last-child::after {
-  content: "";
-}
 @media screen and (min-width: 125em) {
-  /* line 307, ../src/smacss/modules/_header.scss */
+  /* line 311, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 321, ../src/smacss/modules/_header.scss */
+  /* line 317, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
 }
 
-/* line 327, ../src/smacss/modules/_header.scss */
+/* line 323, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 327, ../src/smacss/modules/_header.scss */
+  /* line 323, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 327, ../src/smacss/modules/_header.scss */
+  /* line 323, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 339, ../src/smacss/modules/_header.scss */
+/* line 335, ../src/smacss/modules/_header.scss */
 .search-tools img {
   width: 1.5ch;
   display: inline-block;
 }
 @media screen and (min-width: 43em) {
-  /* line 339, ../src/smacss/modules/_header.scss */
+  /* line 335, ../src/smacss/modules/_header.scss */
   .search-tools img {
     width: 1ch;
   }
 }
 
-/* line 350, ../src/smacss/modules/_header.scss */
+/* line 346, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3175,7 +3179,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 357, ../src/smacss/modules/_header.scss */
+/* line 353, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3191,7 +3195,7 @@ input:checked + .header-dropdown {
  *
  * The green nav at the top of every page.
  */
-/* line 372, ../src/smacss/modules/_header.scss */
+/* line 368, ../src/smacss/modules/_header.scss */
 .top-nav-list {
   margin: 0 auto;
   margin-top: 0;
@@ -3206,7 +3210,7 @@ input:checked + .header-dropdown {
   /* Necessary except for float-based fallback layouts. */
 }
 @media screen and (min-width: 20em) {
-  /* line 372, ../src/smacss/modules/_header.scss */
+  /* line 368, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3218,12 +3222,12 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 372, ../src/smacss/modules/_header.scss */
+  /* line 368, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     letter-spacing: normal;
   }
 }
-/* line 403, ../src/smacss/modules/_header.scss */
+/* line 399, ../src/smacss/modules/_header.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3233,7 +3237,7 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 20em) {
-    /* line 417, ../src/smacss/modules/_header.scss */
+    /* line 413, ../src/smacss/modules/_header.scss */
     .top-nav-list {
       display: -ms-grid;
       display: grid;
@@ -3242,14 +3246,14 @@ input:checked + .header-dropdown {
     }
   }
   @media screen and (min-width: 32em) {
-    /* line 417, ../src/smacss/modules/_header.scss */
+    /* line 413, ../src/smacss/modules/_header.scss */
     .top-nav-list {
       -ms-grid-columns: (20%)[5];
           grid-template-columns: repeat(5, 20%);
     }
   }
 
-  /* line 430, ../src/smacss/modules/_header.scss */
+  /* line 426, ../src/smacss/modules/_header.scss */
   .top-nav-list::before,
   .top-nav-list::after {
     content: none;
@@ -3259,18 +3263,18 @@ input:checked + .header-dropdown {
  * Typekit Override
  */
 @media screen and (min-width: 22em) {
-  /* line 439, ../src/smacss/modules/_header.scss */
+  /* line 435, ../src/smacss/modules/_header.scss */
   .wf-active .top-nav-list {
     letter-spacing: 0.075ch;
   }
 }
 
-/* line 447, ../src/smacss/modules/_header.scss */
+/* line 443, ../src/smacss/modules/_header.scss */
 .top-nav-list > li {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 447, ../src/smacss/modules/_header.scss */
+  /* line 443, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-align-items: stretch;
@@ -3284,13 +3288,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 459, ../src/smacss/modules/_header.scss */
+  /* line 455, ../src/smacss/modules/_header.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 447, ../src/smacss/modules/_header.scss */
+  /* line 443, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-flex-grow: 1;
@@ -3301,7 +3305,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 447, ../src/smacss/modules/_header.scss */
+  /* line 443, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     height: auto;
   }
@@ -3309,13 +3313,13 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 32em) {
-    /* line 481, ../src/smacss/modules/_header.scss */
+    /* line 477, ../src/smacss/modules/_header.scss */
     .top-nav-list > li {
       width: auto;
     }
   }
 }
-/* line 489, ../src/smacss/modules/_header.scss */
+/* line 485, ../src/smacss/modules/_header.scss */
 .top-nav-list a,
 .secondary-nav-list a {
   padding: calc(7.5 / 16 * 1rem) 1ch;
@@ -3323,7 +3327,7 @@ input:checked + .header-dropdown {
   display: block;
   text-decoration: none;
 }
-/* line 499, ../src/smacss/modules/_header.scss */
+/* line 495, ../src/smacss/modules/_header.scss */
 .top-nav-list a:hover,
 .secondary-nav-list a:hover {
   color: #f2f2f2;
@@ -3331,13 +3335,13 @@ input:checked + .header-dropdown {
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
   transition: all 0.1s ease-out;
 }
-/* line 510, ../src/smacss/modules/_header.scss */
+/* line 506, ../src/smacss/modules/_header.scss */
 .top-nav-list a:focus,
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 489, ../src/smacss/modules/_header.scss */
+  /* line 485, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding: calc(7.5 / 16 * 1rem) 0.5ch;
@@ -3354,7 +3358,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 489, ../src/smacss/modules/_header.scss */
+  /* line 485, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding-right: 0.6666666667ch;
@@ -3362,7 +3366,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 489, ../src/smacss/modules/_header.scss */
+  /* line 485, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     font-size: inherit;
@@ -3370,21 +3374,21 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 537, ../src/smacss/modules/_header.scss */
+/* line 533, ../src/smacss/modules/_header.scss */
 .top-nav-list a,
 .top-nav-list a:visited {
   color: #f2f2f2;
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 537, ../src/smacss/modules/_header.scss */
+  /* line 533, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     text-shadow: none;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 537, ../src/smacss/modules/_header.scss */
+  /* line 533, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     font-weight: bold;
@@ -3396,7 +3400,7 @@ input:checked + .header-dropdown {
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 557, ../src/smacss/modules/_header.scss */
+/* line 553, ../src/smacss/modules/_header.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -3406,7 +3410,7 @@ input:checked + .header-dropdown {
   background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 557, ../src/smacss/modules/_header.scss */
+  /* line 553, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3418,7 +3422,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 557, ../src/smacss/modules/_header.scss */
+  /* line 553, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -3427,20 +3431,20 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 557, ../src/smacss/modules/_header.scss */
+  /* line 553, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 590, ../src/smacss/modules/_header.scss */
+/* line 586, ../src/smacss/modules/_header.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 590, ../src/smacss/modules/_header.scss */
+  /* line 586, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
     -webkit-flex-basis: 25%;
@@ -3449,7 +3453,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 590, ../src/smacss/modules/_header.scss */
+  /* line 586, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
@@ -3457,7 +3461,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 590, ../src/smacss/modules/_header.scss */
+  /* line 586, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3465,7 +3469,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 590, ../src/smacss/modules/_header.scss */
+  /* line 586, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3473,7 +3477,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 619, ../src/smacss/modules/_header.scss */
+/* line 615, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a, .secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
@@ -3483,7 +3487,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 619, ../src/smacss/modules/_header.scss */
+  /* line 615, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -3497,7 +3501,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 619, ../src/smacss/modules/_header.scss */
+  /* line 615, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -webkit-flex-basis: auto;
@@ -3506,33 +3510,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 619, ../src/smacss/modules/_header.scss */
+  /* line 615, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 619, ../src/smacss/modules/_header.scss */
+  /* line 615, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 619, ../src/smacss/modules/_header.scss */
+  /* line 615, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 661, ../src/smacss/modules/_header.scss */
+/* line 657, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all 0.1s ease-out;
 }
-/* line 671, ../src/smacss/modules/_header.scss */
+/* line 667, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
@@ -3543,12 +3547,12 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 683, ../src/smacss/modules/_header.scss */
+/* line 679, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 683, ../src/smacss/modules/_header.scss */
+  /* line 679, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3558,12 +3562,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 700, ../src/smacss/modules/_header.scss */
+/* line 696, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 700, ../src/smacss/modules/_header.scss */
+  /* line 696, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
