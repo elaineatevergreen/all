@@ -481,11 +481,12 @@ input:checked + .header-dropdown{
 .top-nav-list a,  // Drupal
 .secondary-nav-link{
 	// box model
-	border-bottom-width: 0;
 	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
+	// typography
+	text-decoration: none;
 
 	&:hover{
 		// typography
