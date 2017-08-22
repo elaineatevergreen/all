@@ -65,8 +65,14 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 	// layout
 	overflow: hidden;
+	// typography
+	font-family: $display-face-alt;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);
+
+	@include breakpoint($drax){
+		font-family: $display-face;
+	}
 }
 
 .internal-users > li{
@@ -83,7 +89,7 @@ input:checked + .header-dropdown{
 	// layout
 	display: inline-block;
 	
-	@include breakpoint($starlord){
+	@include breakpoint($gamora){
 		width: 1ch;
 	}
 }
@@ -250,15 +256,11 @@ input:checked + .header-dropdown{
 .search-toggle > img,
 .student-toggle > img{
 	margin: 0.46875rem auto;  // 7.5px
-	width: 17px;
+	width: 18px;
 	display: block;
 }
 
-.student-toggle > img{
-	padding-top: 1px;  // Compensate for matching search icon height
-}
-
-//#top-search-query,  // deprecated, use #q
+#top-search-query,  // deprecated, use #q
 #q,
 .top-search button{
 	margin-bottom: 0;
@@ -290,28 +292,24 @@ input:checked + .header-dropdown{
 }
 
 .search-tools{
-	// box model
-	//margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
-	//padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	// typography
 	font-family: $display-face-alt;
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
 
 	@include breakpoint($drax){
+		// layout
+		flex-direction: column;
+		// typography
 		font-family: $display-face;
 	}
 }
 
 .search-tools li{
 	display: inline;
-
-	&::after{
-		content: " | ";
-	}
-
-	&:last-child::after{
-		content: "";
-	}
 
 	@include breakpoint($groot){
 		display: block;
@@ -340,7 +338,7 @@ input:checked + .header-dropdown{
 	// layout
 	display: inline-block;
 	
-	@include breakpoint($starlord){
+	@include breakpoint($gamora){
 		width: 1ch;
 	}
 }
