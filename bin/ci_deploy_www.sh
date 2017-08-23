@@ -26,6 +26,7 @@ deploy_d7_custom_module modules/custom/basic_content $WWW_CODE
 deploy_d7_custom_module modules/custom/learning_community_directory $WWW_CODE
 deploy_d7_custom_module modules/custom/native_cases $WWW_CODE
 deploy_d7_custom_module modules/custom/simple_events $WWW_CODE
+deploy_d7_custom_module modules/custom/search_api_solr_booster $WWW_CODE
 rsync .htaccess $WWW_CODE/
 
 # Perform Production updates.
