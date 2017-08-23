@@ -1,0 +1,56 @@
+From 5e55f72ecf88b9d2e16fac8c71b9ded94be76b78 Mon Sep 17 00:00:00 2001
+From: Paul Maddern <pobster@25159.no-reply.drupal.org>
+Date: Mon, 14 Aug 2017 21:55:46 +0100
+Subject: [PATCH] Issue #2902156 by pobster: Removed module restriction on
+ content-types.
+
+---
+ search_api_solr_booster.module | 32 +++++++++++++++-----------------
+ 1 file changed, 15 insertions(+), 17 deletions(-)
+
+diff --git a/search_api_solr_booster.module b/search_api_solr_booster.module
+index f3c0348..42e4841 100644
+--- a/search_api_solr_booster.module
++++ b/search_api_solr_booster.module
+@@ -67,23 +67,21 @@ function search_api_solr_booster_admin_form($form, &$form_state) {
+   $active = array(0 => t('Closed'), 1 => t('Active'));
+ 
+   foreach ($node_types as $node_type) {
+-    if ($node_type->module == 'node') {
+-      $form['search_api_solr_booster'][$node_type->type]['type'] = array(
+-        '#title' => 'type',
+-        '#type' => 'select',
+-        '#options' => $options,
+-        '#title_display' => 'invisible',
+-        '#extra_data' => array('field_name' => $node_type->type),
+-        '#default_value' => isset($values[$node_type->type]['type']) ? $values[$node_type->type]['type'] : 0,
+-      );
+-      $form['search_api_solr_booster'][$node_type->type]['dynamic'] = array(
+-        '#title' => 'dynamic',
+-        '#type' => 'radios',
+-        '#options' => array(1 => t('Enabled'), 0 => t('Disabled')),
+-        '#title_display' => 'invisible',
+-        '#default_value' => isset($values[$node_type->type]['dynamic']) ? $values[$node_type->type]['dynamic'] : 0,
+-      );
+-    }
++    $form['search_api_solr_booster'][$node_type->type]['type'] = array(
++      '#title' => 'type',
++      '#type' => 'select',
++      '#options' => $options,
++      '#title_display' => 'invisible',
++      '#extra_data' => array('field_name' => $node_type->type),
++      '#default_value' => isset($values[$node_type->type]['type']) ? $values[$node_type->type]['type'] : 0,
++    );
++    $form['search_api_solr_booster'][$node_type->type]['dynamic'] = array(
++      '#title' => 'dynamic',
++      '#type' => 'radios',
++      '#options' => array(1 => t('Enabled'), 0 => t('Disabled')),
++      '#title_display' => 'invisible',
++      '#default_value' => isset($values[$node_type->type]['dynamic']) ? $values[$node_type->type]['dynamic'] : 0,
++    );
+   }
+ 
+   return system_settings_form($form);
+-- 
+2.11.0 (Apple Git-81)
+

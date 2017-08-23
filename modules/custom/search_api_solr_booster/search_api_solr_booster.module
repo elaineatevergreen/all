@@ -1,0 +1,314 @@
+<?php
+
+/**
+ * @file
+ * Allows users to boost nodes when indexed by Search API Solr.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function search_api_solr_booster_menu() {
+  $items['admin/config/search/solr_booster'] = array(
+    'title' => 'Content boost',
+    'description' => 'Configuration for solr booster',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('search_api_solr_booster_admin_form'),
+    'access arguments' => array('administer search_api_solr_booster'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function search_api_solr_booster_permission() {
+  return array(
+    'administer search_api_solr_booster' => array(
+      'title' => t('Administer search_api_solr_booster'),
+      'description' => t('Administer search_api_solr_booster'),
+    ),
+    'edit search_api_solr_booster_dynamic' => array(
+      'title' => t('Edit dynamic boost field'),
+      'description' => t('Edit keywords and their boost value for enabled node types.'),
+    ),
+  );
+}
+
+/**
+ * Configuration form.
+ */
+function search_api_solr_booster_admin_form($form, &$form_state) {
+  $values = variable_get('search_api_solr_booster');
+
+  $node_types = node_type_get_types();
+
+  $form['search_api_solr_booster'] = array(
+    '#prefix' => '<div id="search_api_solr_booster">',
+    '#suffix' => '</div>',
+    '#tree' => TRUE,
+    '#title' => 'The boost values for each content type',
+    '#theme' => 'search_api_solr_booster_config_table'
+  );
+
+  $options = array(
+    0 => t('Normal influence'),
+    1 => '1',
+    2 => '2',
+    3 => '3',
+    5 => '5',
+    8 => '8',
+    13 => '13',
+    21 => '21',
+  );
+
+  $active = array(0 => t('Closed'), 1 => t('Active'));
+
+  foreach ($node_types as $node_type) {
+    $form['search_api_solr_booster'][$node_type->type]['type'] = array(
+      '#title' => 'type',
+      '#type' => 'select',
+      '#options' => $options,
+      '#title_display' => 'invisible',
+      '#extra_data' => array('field_name' => $node_type->type),
+      '#default_value' => isset($values[$node_type->type]['type']) ? $values[$node_type->type]['type'] : 0,
+    );
+    $form['search_api_solr_booster'][$node_type->type]['dynamic'] = array(
+      '#title' => 'dynamic',
+      '#type' => 'radios',
+      '#options' => array(1 => t('Enabled'), 0 => t('Disabled')),
+      '#title_display' => 'invisible',
+      '#default_value' => isset($values[$node_type->type]['dynamic']) ? $values[$node_type->type]['dynamic'] : 0,
+    );
+  }
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function search_api_solr_booster_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if (user_access('edit search_api_solr_booster_dynamic')) {
+
+    $config = variable_get('search_api_solr_booster', FALSE);
+    if (!$config
+        || empty($config[$form['#node']->type]['dynamic']) 
+        || $config[$form['#node']->type]['dynamic'] !== '1') {
+      return;
+    }
+
+    // Define field set in additional settings group.
+    $form['search_api_solr_booster'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Solr search boost'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#weight' => 10,
+      '#group' => 'additional_settings',
+    );
+
+    $nid = isset($form['#node']->nid) ? $form['#node']->nid : NULL;
+    $vid = isset($form['#node']->vid) ? $form['#node']->vid : NULL;
+    $data = search_api_solr_booster_get_data($nid, $vid);
+
+    // Add option fields.
+    $form['search_api_solr_booster']['boost_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Keywords'),
+      '#default_value' => isset($data['text']) ? $data['text'] : '',
+    );
+
+    $options = array(
+      0 => t('No influence'),
+      1 => '1',
+      2 => '2',
+      3 => '3',
+      5 => '5',
+      8 => '8',
+      13 => '13',
+      21 => '21',
+    );
+
+    $form['search_api_solr_booster']['boost_factor'] = array(
+      '#title' => t('Boost factor'),
+      '#type' => 'select',
+      '#options' => $options,
+      '#default_value' => isset($data['factor']) ? $data['factor'] : 0,
+    );
+
+    // Set default value from automatically saved config variable.
+    array_unshift($form['#submit'], 'search_api_solr_booster_form_node_type_form_submit');
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function search_api_solr_booster_node_insert($node) {
+  search_api_solr_booster_set_data($node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function search_api_solr_booster_node_update($node) {
+  search_api_solr_booster_set_data($node);
+}
+
+/**
+ * Utility function that returns database stored values for a node.
+ *
+ * @param int $nid
+ *   The node id.
+ * @param int $vid
+ *   The node vid.
+ *
+ * @return mixed
+ *   The query result for the nid.
+ */
+function search_api_solr_booster_get_data($nid, $vid = FALSE) {
+  if (empty($nid)) {
+    return;
+  }
+
+  // If vid is empty, load published revision.
+  if (empty($vid)) {
+    $node = node_load($nid);
+    $vid = $node->vid;
+  }
+
+  if (empty($node_boost)) {
+    $data = db_select('search_api_solr_booster', 's')
+      ->fields('s')
+      ->condition('s.nid', $nid)
+      ->condition('s.vid', $vid)
+      ->execute()
+      ->fetchAssoc();
+  }
+  return $data;
+}
+
+/**
+ * Set dynamic node boost data.
+ */
+function search_api_solr_booster_set_data($node) {
+  if (!empty($node->boost_text)) {
+    $text = $node->boost_text;
+    $factor = $node->boost_factor;
+    if (empty($text) && empty($factor)) {
+      search_api_solr_booster_delete_data($node);
+    }
+    else {
+      db_merge('search_api_solr_booster')
+        ->key(array('nid' => $node->nid, 'vid' => $node->vid))
+        ->fields(array(
+          'text' => $text,
+          'factor' => $factor,
+        ))
+        ->execute();
+    }
+  }
+}
+
+/**
+ * Delete dynamic node boost data.
+ */
+function search_api_solr_booster_delete_data($node) {
+  db_delete('search_api_solr_booster')
+    ->condition('nid', $node->nid)
+    ->condition('vid', $node->vid)
+    ->execute();
+}
+
+/**
+ * Custom additional submit handler for node_type_form().
+ */
+function search_api_solr_booster_form_node_type_form_submit(array $form, array &$form_state) {
+  if (!empty($form_state['complete form']['search_api_solr_booster'])) {
+    $form['#node']->text = $form_state['complete form']['search_api_solr_booster']['boost_text']['#value'];
+    $form['#node']->boost = $form_state['complete form']['search_api_solr_booster']['boost_factor']['#value'];
+  }
+}
+
+/**
+ * Implements hook_search_api_solr_documents_alter().
+ */
+function search_api_solr_booster_search_api_solr_documents_alter(array &$documents, SearchApiIndex $index, array $items) {
+  if ($index->item_type == 'node') {
+    foreach ($documents as $document) {
+      $item_id = $document->getField('item_id');
+      $data = search_api_solr_booster_get_data($item_id['value']);
+      if (!empty($data) && !empty($data['text']) && !empty($data['factor'])) {
+        $document->setField('tm_dynamic_boost_text', $data['text']);
+        $document->setFieldBoost('tm_dynamic_boost_text', $data['factor']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ */
+function search_api_solr_booster_search_api_solr_query_alter(array &$call_args, SearchApiQueryInterface $query) {
+  $node_types = node_type_get_types();
+  $config = variable_get('search_api_solr_booster', FALSE);
+  if ($config) {
+    $dynamic = FALSE;
+    foreach ($node_types as $node_type) {
+      $type = $node_type->type;
+
+      if (empty($config[$type])) {
+        continue;
+      }
+
+      if ($config[$type]['dynamic'] == '1') {
+        $dynamic = TRUE;
+      }
+
+      if ($config[$type]['type'] == '0' || !is_numeric($config[$type]['type'])) {
+        continue;
+      }
+      $call_args['params']['bq'][] = 'ss_type:' . $type . '^' . ($config[$type]['type']);
+    }
+
+    // If at least 1 content type has dynamic boose field enabled add it to the query.
+    if ($dynamic) {
+      $call_args['params']['qf'][] = 'tm_dynamic_boost_text^1';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function search_api_solr_booster_theme() {
+  return array(
+    'search_api_solr_booster_config_table' => array(
+      'render element' => 'element'
+    )
+  );
+}
+
+/**
+ * Custom config table theme callback.
+ */
+function theme_search_api_solr_booster_config_table($vars) {
+  $element = $vars['element'];
+  $rows = array();
+  foreach (element_children($element) as $key) {
+    $rows[] = array(
+      array('data' => $element[$key]['type']['#extra_data']['field_name']),
+      array('data' => render($element[$key]['type'])),
+      array('data' => render($element[$key]['dynamic'])),
+    );
+  }
+  $header = array(
+    t('Content type'),
+    t('Content type boost'),
+    t('Dynamic field boost'),
+  );
+  return theme('table', array('header' => $header, 'rows' => $rows));
+}
