@@ -45,9 +45,9 @@
 		flex-direction: row;
 	}
 
-	@include breakpoint($rocket){
-		//padding: 0 2ch;  // We may not want to sacrifice this much room when we're squeezing in seven columns.
-	}
+	/*@include breakpoint($rocket){
+		padding: 0 2ch;  // We may not want to sacrifice this much room when we're squeezing in seven columns.
+	}*/
 }
 
 .transporter > li{
