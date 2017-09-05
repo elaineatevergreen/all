@@ -134,13 +134,13 @@
 	scroll-snap-points-x: repeat(0%);
 	scroll-snap-type: mandatory;
 
-	@include breakpoint($lil-groot){
-		//scroll-snap-points-x: repeat(60%);
+	/*@include breakpoint($lil-groot){
+		scroll-snap-points-x: repeat(60%);
 	}
 
 	@include breakpoint($starlord){
-		//scroll-snap-points-x: repeat(71%);
-	}
+		scroll-snap-points-x: repeat(71%);
+	}*/
 
 	@include breakpoint($gamora){
 		// layout
