@@ -23,7 +23,7 @@
 
 	@include breakpoint($gamora){
 		// box model
-		width: 49%;
+		width: calc(50% - 1ch);
 		// layout
 		float: right;
 	}
@@ -65,8 +65,14 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 	// layout
 	overflow: hidden;
+	// typography
+	font-family: $display-face-alt;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);
+
+	@include breakpoint($drax){
+		font-family: $display-face;
+	}
 }
 
 .internal-users > li{
@@ -79,13 +85,17 @@ input:checked + .header-dropdown{
 
 .internal-users img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 10px;  // magic-number; visually fits with text height
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+
+	@include breakpoint($gamora){
+		width: 1ch;
+	}
 }
 
 #search-flag + .header-dropdown{
+
 	@include breakpoint($gamora){
 		max-height: none;
 		overflow: visible;
@@ -113,7 +123,11 @@ input:checked + .header-dropdown{
 	width: 100%;
 
 	@include breakpoint($gamora){
-		width: 51%;
+		// box model
+		width: calc(50% + 1ch);
+		// layout
+		align-items: center;
+		display: flex;
 	}
 
 	@include breakpoint($drax){
@@ -130,25 +144,17 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($lil-groot){
 		// box model
-		width: 58%;
+		width: calc(60% - 1ch);
 		// layout
 		float: left;
 	}
 
-	@include breakpoint($starlord){
-		//width: 58%;
-	}
-
 	@include breakpoint($gamora){
 		// box model
-		//width: 48%;
-		width: auto;
+		//width: auto;
+		width: 100%;
 		// layout
 		float: none;
-	}
-
-	@include breakpoint($drax){
-		//width: 36%;
 	}
 
 	@include breakpoint($groot){
@@ -156,29 +162,35 @@ input:checked + .header-dropdown{
 		margin-right: auto;
 		margin-bottom: 1em;
 		margin-left: auto;
-		//width: 20%;
 		// layout
 		float: none;
 		// typography
 		text-align: center;
 	}
+}
 
-	a,
-	a:visited,
-	a:hover{
-		//border-bottom-width: 0;
-	}
-
-	img{
-		// box model
-		max-height: 4em;
-		// layout
-		display: block;
-
-		@include breakpoint($groot){
-			max-height: none;  // max-height doesn't center correctly in Blink.
-			max-width: 20em;
+/*@supports (display: flex){
+	.logo{
+		
+		@include breakpoint($gamora){
+			width: 100%;
 		}
+	}
+}*/
+
+.logo a,
+.logo a:visited,
+.logo a:hover{
+	border-bottom-width: 0;
+}
+
+.logo img{
+	max-height: 4em;
+
+	@include breakpoint($groot){
+		margin: 0 auto;
+		max-height: none;  // max-height doesn't center correctly in Blink.
+		max-width: 20em;
 	}
 }
 
@@ -196,7 +208,11 @@ input:checked + .header-dropdown{
 }
 
 .off-canvas{
-	margin-right: 2%;
+	margin-right: 1ch;
+
+	@include breakpoint($gamora){
+		margin-right: 0;
+	}
 }
 
 .search-toggle,   // button to reveal search
@@ -226,7 +242,7 @@ input:checked + .header-dropdown{
 
 .search-toggle,
 .student-toggle{
-	//border-bottom-width: 0;
+	border-bottom-width: 0;
 }
 
 .search-toggle:hover,
@@ -240,12 +256,8 @@ input:checked + .header-dropdown{
 .search-toggle > img,
 .student-toggle > img{
 	margin: 0.46875rem auto;  // 7.5px
-	width: 17px;
+	width: 18px;
 	display: block;
-}
-
-.student-toggle > img{
-	padding-top: 1px;  // Compensate for matching search icon height
 }
 
 #top-search-query,  // deprecated, use #q
@@ -280,33 +292,31 @@ input:checked + .header-dropdown{
 }
 
 .search-tools{
-	// box model
-	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
-	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	// typography
+	font-family: $display-face-alt;
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
+
+	@include breakpoint($drax){
+		font-family: $display-face;
+	}
+
+	@include breakpoint($groot){
+		flex-direction: column;
+	}
 }
 
 .search-tools li{
 	display: inline;
-
-	&::after{
-		content: " | ";
-	}
-
-	&:last-child::after{
-		content: "";
-	}
 
 	@include breakpoint($groot){
 		display: block;
 
 		&:after{
 			content: "";
-		}
-
-		&:not(:first-child){
-			margin-left: 19px;  // magic-number; should fit with .internal-users img
 		}
 	}
 }
@@ -323,12 +333,15 @@ input:checked + .header-dropdown{
 	}
 }
 
-.internal-users-alt img{
+.search-tools img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 14px;  // magic-number; visually fits with text height
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+
+	@include breakpoint($gamora){
+		width: 1ch;
+	}
 }
 
 .menu-button,
@@ -359,7 +372,7 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 	width: 100%;
 	min-height: 45px;
-	// positioning
+	// layout
 	position: relative;
 	// tyopography
 	text-align: center;
@@ -375,13 +388,15 @@ input:checked + .header-dropdown{
 	}
 
 	/**
-	 * See Typekit override for breakpoint($rocket) below.
+	 * See Typekit override for breakpoint($rocket), below.
 	 */
 
 	@include breakpoint($starlord){
+		// typography
 		letter-spacing: normal;
 	}
 
+	/* Necessary except for float-based fallback layouts. */
 	&::before,
 	&::after{
 		// box model
@@ -391,6 +406,27 @@ input:checked + .header-dropdown{
 		display: table;
 		// miscellaneous
 		content: "";
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+
+	.top-nav-list{
+		@include breakpoint($lil-groot){
+			// layout
+			display: grid;
+			grid-template-columns: repeat(5, auto);
+		}
+
+		@include breakpoint($starlord){
+			// layout
+			grid-template-columns: repeat(5, 20%);
+		}
+	}
+
+	.top-nav-list::before,
+	.top-nav-list::after{
+		content: none;
 	}
 }
 
@@ -438,16 +474,23 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.secondary-nav-link{
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+	.top-nav-list > li{
+
+		@include breakpoint($starlord){
+			width: auto;
+		}
+	}
+}
+
+.top-nav-list a,
+.secondary-nav-list a{
 	// box model
-	//border-bottom-width: 0;
 	padding: calc(7.5 / 16 * 1rem) 1ch;
 	width: 100%;
 	// layout
 	display: block;
-	// decoration
+	// typography
 	text-decoration: none;
 
 	&:hover{
@@ -478,8 +521,8 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($rocket){
 		// box model
-		padding-right: 0.6666666667em;
-		padding-left: 0.6666666667em;
+		padding-right: 0.6666666667ch;
+		padding-left: 0.6666666667ch;
 	}
 
 	@include breakpoint($drax){
@@ -488,10 +531,8 @@ input:checked + .header-dropdown{
 	}
 }
 
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-link:visited,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.top-nav-list a:visited{  // Drupal
+.top-nav-list a,
+.top-nav-list a:visited{
 	// typography
 	color: $tint;
 	font-weight: 600;
@@ -570,13 +611,12 @@ input:checked + .header-dropdown{
 	}
 }
 
-.secondary-nav-link,  // Deprecated in Drupal
-.secondary-nav-list a{  // Drupal
+.secondary-nav-list a{
 
 	&,
 	&:visited{
 		// box model
-		//border-bottom: 0;
+		border-bottom: 0;
 		height: 100%;
 		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		width: 100%;
@@ -585,8 +625,6 @@ input:checked + .header-dropdown{
 		// typography
 		color: $tint;
 		font-weight: normal;
-		// decoration
-		text-decoration: none;
 
 		@include breakpoint($lil-groot){
 			align-items: center;

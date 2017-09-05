@@ -1438,12 +1438,22 @@ input[id$="-range-max"] {
  * 3. Webform Module
  */
 /**
+ * 3. Webform Module
+ *
+ * Table of Contents
+ *
+ * a. Webform Forms
+ * b. Checkboxes and Radios
+ * c. Textareas
+ * d. Grid
+ * e. Buttons
+ *
  * NOTE:
  *
  * Webform .form-items wrap around each label + input pair, so put margins
  * on .form-items and remove them from form fields.
  */
-/* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .form-item,
 .webform-client-form .form-actions {
   margin: 0.535714285714286em 0 1.071428571428571em;
@@ -1451,26 +1461,26 @@ input[id$="-range-max"] {
   clear: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 8, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 18, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .form-item,
   .webform-client-form .form-actions {
     margin: 0.41666666666667em 0 0.83333333333333em;
   }
 }
 
-/* line 21, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input[type="text"], .webform-client-form .form-type-select,
 .webform-client-form select {
   margin: 0;
 }
 
-/* line 26, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 36, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form label {
   margin: 0;
   font-weight: normal;
 }
 
-/* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form .description {
   margin: 0 0 calc(22.5 / 11.12 * 1em);
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1478,13 +1488,13 @@ input[id$="-range-max"] {
   line-height: 1.34831460674157;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 33, ../src/smacss/base/forms/_drupal-webform.scss */
+  /* line 43, ../src/smacss/base/forms/_drupal-webform.scss */
   .webform-client-form .description {
     margin: 0.535714285714286em 0 1.071428571428571em;
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -1493,15 +1503,15 @@ input[id$="-range-max"] {
   }
 }
 
-/* line 48, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 58, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-client-form input.year {
   width: calc(4.1ch + 1em);
 }
 
 /**
- * Checkboxes And Radios
+ * b. Checkboxes And Radios
  */
-/* line 55, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-webform.scss */
 .form-type-checkbox,
 .form-radios .form-type-radio {
   margin: 0;
@@ -1510,33 +1520,33 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 63, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 73, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input[type="radio"],
 .webform-container-inline input[type="checkbox"] {
   margin-right: 0;
   float: none;
 }
 
-/* line 71, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 81, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline label {
   margin-right: 0;
 }
 
-/* line 75, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 85, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-container-inline input + label {
   margin-right: 1ch;
   float: none;
 }
 
-/* line 82, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 92, ../src/smacss/base/forms/_drupal-webform.scss */
 .webform-grid-option .form-radio {
   float: none;
 }
 
 /**
- * Textareas
+ * c. Textareas
  */
-/* line 89, ../src/smacss/base/forms/_drupal-webform.scss */
+/* line 99, ../src/smacss/base/forms/_drupal-webform.scss */
 .resizable-textarea .grippie {
   width: 100%;
   max-width: calc(45ch + 1em);
@@ -1545,7 +1555,24 @@ input[id$="-range-max"] {
 }
 
 /**
- * Buttons
+ * d. Grid
+ *
+ * A form grid that's useful for sliding scales, e.g. tracking a range from
+ * unsatisfied to satisfied.
+ */
+/* line 114, ../src/smacss/base/forms/_drupal-webform.scss */
+.checkbox.webform-grid-option {
+  text-align: center;
+}
+
+/* line 118, ../src/smacss/base/forms/_drupal-webform.scss */
+.webform-grid-option .form-radio,
+.webform-grid-option .form-checkbox {
+  float: none;
+}
+
+/**
+ * e. Buttons
  */
 /**
  * 4. Search
@@ -1884,13 +1911,14 @@ a:link,
 /* line 70, ../src/smacss/layout/_grid.scss */
 .unit-1-1 {
   width: 100%;
-  /*@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
-  	// box model
-  	padding-left: 0;
-  	width: auto;
-  	// layout
-  	grid-column: 1 / -1;
-  }*/
+}
+@supports (grid-template: none) {
+  /* line 70, ../src/smacss/layout/_grid.scss */
+  .unit-1-1 {
+    /*padding-left: 0;
+    width: auto;*/
+    grid-column: 1 / -1;
+  }
 }
 
 /* line 82, ../src/smacss/layout/_grid.scss */
@@ -2156,6 +2184,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-left: 2ch;
     width: calc(66.6666666667% + 1ch);
@@ -2166,6 +2195,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -2ch;
   }
@@ -2174,6 +2204,7 @@ a:link,
   /* line 295, ../src/smacss/layout/_grid.scss */
   .right,
   .supplement,
+  .media-supplement,
   .supplement-1-2 {
     margin-right: -3ch;
     width: calc(50% + 2ch);
@@ -2181,7 +2212,7 @@ a:link,
 }
 
 @media screen and (min-width: 22em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: -1ch;
     margin-left: 2ch;
@@ -2190,14 +2221,14 @@ a:link,
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 0;
     width: calc(66.666666667% - 1ch);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-right: 2ch;
     margin-left: calc(-1ch - ((100% + 4ch) / 4));
@@ -2206,14 +2237,14 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-1ch - ((100% + 6ch) / 4));
     width: calc((100% + 6ch) / 4 + 2ch);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 319, ../src/smacss/layout/_grid.scss */
+  /* line 320, ../src/smacss/layout/_grid.scss */
   .supplement-alt-1-2 {
     margin-left: calc(-50% - 2em);
     width: 50%;
@@ -2323,29 +2354,25 @@ a:link,
 /* line 110, ../src/smacss/_layout.scss */
 .top-nav {
   width: 100%;
-}
-
-/* line 114, ../src/smacss/_layout.scss */
-.top-nav {
   clear: both;
   position: relative;
 }
 @media screen and (min-width: 20em) {
-  /* line 114, ../src/smacss/_layout.scss */
+  /* line 110, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.695rem;
     line-height: calc(15 / 11.125);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 114, ../src/smacss/_layout.scss */
+  /* line 110, ../src/smacss/_layout.scss */
   .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 114, ../src/smacss/_layout.scss */
+  /* line 110, ../src/smacss/_layout.scss */
   .top-nav {
     margin-left: 0;
     width: 100%;
@@ -2356,7 +2383,7 @@ a:link,
  * Typekit overrides
  */
 @media screen and (min-width: 20em) {
-  /* line 138, ../src/smacss/_layout.scss */
+  /* line 137, ../src/smacss/_layout.scss */
   .wf-active .top-nav {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -2365,7 +2392,7 @@ a:link,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 146, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.125rem;
@@ -2373,7 +2400,7 @@ a:link,
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 146, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.202rem;
@@ -2381,7 +2408,7 @@ a:link,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 146, ../src/smacss/_layout.scss */
+  /* line 145, ../src/smacss/_layout.scss */
   .top-nav,
   .wf-active .top-nav {
     font-size: 1.719rem;
@@ -2673,37 +2700,37 @@ a:link,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 175, ../src/smacss/_layout.scss */
+  /* line 174, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 181, ../src/smacss/_layout.scss */
+  /* line 180, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 187, ../src/smacss/_layout.scss */
+  /* line 186, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 193, ../src/smacss/_layout.scss */
+  /* line 192, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 199, ../src/smacss/_layout.scss */
+  /* line 198, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 205, ../src/smacss/_layout.scss */
+  /* line 204, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2774,7 +2801,7 @@ a:link,
 @media screen and (min-width: 43em) {
   /* line 21, ../src/smacss/modules/_header.scss */
   .header-dropdowns {
-    width: 49%;
+    width: calc(50% - 1ch);
     float: right;
   }
 }
@@ -2820,32 +2847,44 @@ input:checked + .header-dropdown {
 .internal-users {
   margin-top: 0;
   overflow: hidden;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   background-color: #d0cad4;
 }
+@media screen and (min-width: 70em) {
+  /* line 63, ../src/smacss/modules/_header.scss */
+  .internal-users {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
 
-/* line 72, ../src/smacss/modules/_header.scss */
+/* line 78, ../src/smacss/modules/_header.scss */
 .internal-users > li {
   padding: 0.9375rem 1em;
   width: 50%;
   float: left;
 }
 
-/* line 80, ../src/smacss/modules/_header.scss */
+/* line 86, ../src/smacss/modules/_header.scss */
 .internal-users img {
-  margin-right: 5px;
-  width: 10px;
+  width: 1.5ch;
   display: inline-block;
+}
+@media screen and (min-width: 43em) {
+  /* line 86, ../src/smacss/modules/_header.scss */
+  .internal-users img {
+    width: 1ch;
+  }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 88, ../src/smacss/modules/_header.scss */
+  /* line 97, ../src/smacss/modules/_header.scss */
   #search-flag + .header-dropdown {
     max-height: none;
     overflow: visible;
   }
 }
 
-/* line 95, ../src/smacss/modules/_header.scss */
+/* line 105, ../src/smacss/modules/_header.scss */
 .header-dropdown .search,
 .header-dropdown #search-block-form {
   margin: 0;
@@ -2854,7 +2893,7 @@ input:checked + .header-dropdown {
   background-color: #d6dfcd;
 }
 @media screen and (min-width: 43em) {
-  /* line 95, ../src/smacss/modules/_header.scss */
+  /* line 105, ../src/smacss/modules/_header.scss */
   .header-dropdown .search,
   .header-dropdown #search-block-form {
     padding: 0.9375rem 1em 0.9375rem 0;
@@ -2863,18 +2902,24 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 112, ../src/smacss/modules/_header.scss */
+/* line 122, ../src/smacss/modules/_header.scss */
 .page-header {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 112, ../src/smacss/modules/_header.scss */
+  /* line 122, ../src/smacss/modules/_header.scss */
   .page-header {
-    width: 51%;
+    width: calc(50% + 1ch);
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 112, ../src/smacss/modules/_header.scss */
+  /* line 122, ../src/smacss/modules/_header.scss */
   .page-header {
     width: 60%;
   }
@@ -2883,27 +2928,27 @@ input:checked + .header-dropdown {
 /**
  * 2. Logo
  */
-/* line 127, ../src/smacss/modules/_header.scss */
+/* line 141, ../src/smacss/modules/_header.scss */
 .logo {
   margin: 0.46875rem 1ch;
   width: calc(100% - 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 127, ../src/smacss/modules/_header.scss */
+  /* line 141, ../src/smacss/modules/_header.scss */
   .logo {
-    width: 58%;
+    width: calc(60% - 1ch);
     float: left;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 127, ../src/smacss/modules/_header.scss */
+  /* line 141, ../src/smacss/modules/_header.scss */
   .logo {
-    width: auto;
+    width: 100%;
     float: none;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 127, ../src/smacss/modules/_header.scss */
+  /* line 141, ../src/smacss/modules/_header.scss */
   .logo {
     margin-right: auto;
     margin-bottom: 1em;
@@ -2912,14 +2957,30 @@ input:checked + .header-dropdown {
     text-align: center;
   }
 }
-/* line 172, ../src/smacss/modules/_header.scss */
+
+/*@supports (display: flex){
+	.logo{
+		
+		@include breakpoint($gamora){
+			width: 100%;
+		}
+	}
+}*/
+/* line 181, ../src/smacss/modules/_header.scss */
+.logo a,
+.logo a:visited,
+.logo a:hover {
+  border-bottom-width: 0;
+}
+
+/* line 187, ../src/smacss/modules/_header.scss */
 .logo img {
   max-height: 4em;
-  display: block;
 }
 @media screen and (min-width: 125em) {
-  /* line 172, ../src/smacss/modules/_header.scss */
+  /* line 187, ../src/smacss/modules/_header.scss */
   .logo img {
+    margin: 0 auto;
     max-height: none;
     max-width: 20em;
   }
@@ -2930,7 +2991,7 @@ input:checked + .header-dropdown {
  *
  * @section mod-header-search
  */
-/* line 190, ../src/smacss/modules/_header.scss */
+/* line 202, ../src/smacss/modules/_header.scss */
 [for="q"] {
   height: 0;
   width: 0;
@@ -2939,12 +3000,18 @@ input:checked + .header-dropdown {
   position: absolute;
 }
 
-/* line 198, ../src/smacss/modules/_header.scss */
+/* line 210, ../src/smacss/modules/_header.scss */
 .off-canvas {
-  margin-right: 2%;
+  margin-right: 1ch;
+}
+@media screen and (min-width: 43em) {
+  /* line 210, ../src/smacss/modules/_header.scss */
+  .off-canvas {
+    margin-right: 0;
+  }
 }
 
-/* line 202, ../src/smacss/modules/_header.scss */
+/* line 218, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   padding: 0 0.618em;
@@ -2954,72 +3021,73 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 202, ../src/smacss/modules/_header.scss */
+  /* line 218, ../src/smacss/modules/_header.scss */
   .search-toggle,
   .student-toggle {
     display: none;
   }
 }
 
-/* line 218, ../src/smacss/modules/_header.scss */
+/* line 234, ../src/smacss/modules/_header.scss */
 .search-toggle {
   border-radius: 0 0 4.5px;
 }
 
-/* line 222, ../src/smacss/modules/_header.scss */
+/* line 238, ../src/smacss/modules/_header.scss */
 .student-toggle {
   border-right: 1px solid #303030;
   border-radius: 0 0 0 4.5px;
 }
 
-/* line 232, ../src/smacss/modules/_header.scss */
+/* line 243, ../src/smacss/modules/_header.scss */
+.search-toggle,
+.student-toggle {
+  border-bottom-width: 0;
+}
+
+/* line 248, ../src/smacss/modules/_header.scss */
 .search-toggle:hover,
 .student-toggle:hover {
   cursor: pointer;
 }
 
-/* line 240, ../src/smacss/modules/_header.scss */
+/* line 256, ../src/smacss/modules/_header.scss */
 .search-toggle > img,
 .student-toggle > img {
   margin: 0.46875rem auto;
-  width: 17px;
+  width: 18px;
   display: block;
 }
 
-/* line 247, ../src/smacss/modules/_header.scss */
-.student-toggle > img {
-  padding-top: 1px;
-}
-
-/* line 251, ../src/smacss/modules/_header.scss */
+/* line 263, ../src/smacss/modules/_header.scss */
 #top-search-query,
 #q,
 .top-search button {
   margin-bottom: 0;
 }
 
-/* line 257, ../src/smacss/modules/_header.scss */
+/* line 269, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* line 261, ../src/smacss/modules/_header.scss */
+/* line 273, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-moz-placeholder {
   color: transparent;
 }
 
-/* line 265, ../src/smacss/modules/_header.scss */
+/* line 277, ../src/smacss/modules/_header.scss */
 [placeholder]:focus:-ms-placeholder {
   color: transparent;
 }
 
-/* line 269, ../src/smacss/modules/_header.scss */
+/* line 281, ../src/smacss/modules/_header.scss */
 .internal-users,
 .search-tools {
   margin-bottom: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 269, ../src/smacss/modules/_header.scss */
+  /* line 281, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.125rem;
@@ -3027,7 +3095,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 269, ../src/smacss/modules/_header.scss */
+  /* line 281, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
@@ -3035,65 +3103,80 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 282, ../src/smacss/modules/_header.scss */
+/* line 294, ../src/smacss/modules/_header.scss */
 .search-tools {
-  margin-left: 0;
-  padding-left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }
+@media screen and (min-width: 70em) {
+  /* line 294, ../src/smacss/modules/_header.scss */
+  .search-tools {
+    font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+  }
+}
+@media screen and (min-width: 125em) {
+  /* line 294, ../src/smacss/modules/_header.scss */
+  .search-tools {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
-/* line 290, ../src/smacss/modules/_header.scss */
+/* line 312, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
-/* line 293, ../src/smacss/modules/_header.scss */
-.search-tools li::after {
-  content: " | ";
-}
-/* line 297, ../src/smacss/modules/_header.scss */
-.search-tools li:last-child::after {
-  content: "";
-}
 @media screen and (min-width: 125em) {
-  /* line 290, ../src/smacss/modules/_header.scss */
+  /* line 312, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 304, ../src/smacss/modules/_header.scss */
+  /* line 318, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
-  /* line 308, ../src/smacss/modules/_header.scss */
-  .search-tools li:not(:first-child) {
-    margin-left: 19px;
-  }
 }
 
-/* line 314, ../src/smacss/modules/_header.scss */
+/* line 324, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 314, ../src/smacss/modules/_header.scss */
+  /* line 324, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 314, ../src/smacss/modules/_header.scss */
+  /* line 324, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 326, ../src/smacss/modules/_header.scss */
-.internal-users-alt img {
-  margin-right: 5px;
-  width: 14px;
+/* line 336, ../src/smacss/modules/_header.scss */
+.search-tools img {
+  width: 1.5ch;
   display: inline-block;
 }
+@media screen and (min-width: 43em) {
+  /* line 336, ../src/smacss/modules/_header.scss */
+  .search-tools img {
+    width: 1ch;
+  }
+}
 
-/* line 334, ../src/smacss/modules/_header.scss */
+/* line 347, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3101,7 +3184,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 341, ../src/smacss/modules/_header.scss */
+/* line 354, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3117,7 +3200,7 @@ input:checked + .header-dropdown {
  *
  * The green nav at the top of every page.
  */
-/* line 356, ../src/smacss/modules/_header.scss */
+/* line 369, ../src/smacss/modules/_header.scss */
 .top-nav-list {
   margin: 0 auto;
   margin-top: 0;
@@ -3127,11 +3210,12 @@ input:checked + .header-dropdown {
   text-align: center;
   list-style-type: none;
   /**
-   * See Typekit override for breakpoint($rocket) below.
+   * See Typekit override for breakpoint($rocket), below.
    */
+  /* Necessary except for float-based fallback layouts. */
 }
 @media screen and (min-width: 20em) {
-  /* line 356, ../src/smacss/modules/_header.scss */
+  /* line 369, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3143,12 +3227,12 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 356, ../src/smacss/modules/_header.scss */
+  /* line 369, ../src/smacss/modules/_header.scss */
   .top-nav-list {
     letter-spacing: normal;
   }
 }
-/* line 385, ../src/smacss/modules/_header.scss */
+/* line 400, ../src/smacss/modules/_header.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3156,22 +3240,46 @@ input:checked + .header-dropdown {
   content: "";
 }
 
+@supports (grid-template: none) {
+  @media screen and (min-width: 20em) {
+    /* line 414, ../src/smacss/modules/_header.scss */
+    .top-nav-list {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (auto)[5];
+          grid-template-columns: repeat(5, auto);
+    }
+  }
+  @media screen and (min-width: 32em) {
+    /* line 414, ../src/smacss/modules/_header.scss */
+    .top-nav-list {
+      -ms-grid-columns: (20%)[5];
+          grid-template-columns: repeat(5, 20%);
+    }
+  }
+
+  /* line 427, ../src/smacss/modules/_header.scss */
+  .top-nav-list::before,
+  .top-nav-list::after {
+    content: none;
+  }
+}
 /**
  * Typekit Override
  */
 @media screen and (min-width: 22em) {
-  /* line 400, ../src/smacss/modules/_header.scss */
+  /* line 436, ../src/smacss/modules/_header.scss */
   .wf-active .top-nav-list {
     letter-spacing: 0.075ch;
   }
 }
 
-/* line 408, ../src/smacss/modules/_header.scss */
+/* line 444, ../src/smacss/modules/_header.scss */
 .top-nav-list > li {
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 408, ../src/smacss/modules/_header.scss */
+  /* line 444, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-align-items: stretch;
@@ -3185,13 +3293,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 420, ../src/smacss/modules/_header.scss */
+  /* line 456, ../src/smacss/modules/_header.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 408, ../src/smacss/modules/_header.scss */
+  /* line 444, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-flex-grow: 1;
@@ -3202,41 +3310,45 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 408, ../src/smacss/modules/_header.scss */
+  /* line 444, ../src/smacss/modules/_header.scss */
   .top-nav-list > li {
     height: auto;
   }
 }
 
-/* line 441, ../src/smacss/modules/_header.scss */
-.top-nav-link,
+@supports (grid-template: none) {
+  @media screen and (min-width: 32em) {
+    /* line 478, ../src/smacss/modules/_header.scss */
+    .top-nav-list > li {
+      width: auto;
+    }
+  }
+}
+/* line 486, ../src/smacss/modules/_header.scss */
 .top-nav-list a,
-.secondary-nav-link {
+.secondary-nav-list a {
   padding: calc(7.5 / 16 * 1rem) 1ch;
   width: 100%;
   display: block;
   text-decoration: none;
 }
-/* line 453, ../src/smacss/modules/_header.scss */
-.top-nav-link:hover,
+/* line 496, ../src/smacss/modules/_header.scss */
 .top-nav-list a:hover,
-.secondary-nav-link:hover {
+.secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
   transition: all 0.1s ease-out;
 }
-/* line 464, ../src/smacss/modules/_header.scss */
-.top-nav-link:focus,
+/* line 507, ../src/smacss/modules/_header.scss */
 .top-nav-list a:focus,
-.secondary-nav-link:focus {
+.secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 441, ../src/smacss/modules/_header.scss */
-  .top-nav-link,
+  /* line 486, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
-  .secondary-nav-link {
+  .secondary-nav-list a {
     padding: calc(7.5 / 16 * 1rem) 0.5ch;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -3251,45 +3363,37 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 441, ../src/smacss/modules/_header.scss */
-  .top-nav-link,
+  /* line 486, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
-  .secondary-nav-link {
-    padding-right: 0.6666666667em;
-    padding-left: 0.6666666667em;
+  .secondary-nav-list a {
+    padding-right: 0.6666666667ch;
+    padding-left: 0.6666666667ch;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 441, ../src/smacss/modules/_header.scss */
-  .top-nav-link,
+  /* line 486, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
-  .secondary-nav-link {
+  .secondary-nav-list a {
     font-size: inherit;
     line-height: inherit;
   }
 }
 
-/* line 491, ../src/smacss/modules/_header.scss */
-.top-nav-link,
-.top-nav-link:visited,
+/* line 534, ../src/smacss/modules/_header.scss */
 .top-nav-list a,
 .top-nav-list a:visited {
   color: #f2f2f2;
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 491, ../src/smacss/modules/_header.scss */
-  .top-nav-link,
-  .top-nav-link:visited,
+  /* line 534, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     text-shadow: none;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 491, ../src/smacss/modules/_header.scss */
-  .top-nav-link,
-  .top-nav-link:visited,
+  /* line 534, ../src/smacss/modules/_header.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     font-weight: bold;
@@ -3301,7 +3405,7 @@ input:checked + .header-dropdown {
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 513, ../src/smacss/modules/_header.scss */
+/* line 554, ../src/smacss/modules/_header.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -3311,7 +3415,7 @@ input:checked + .header-dropdown {
   background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 513, ../src/smacss/modules/_header.scss */
+  /* line 554, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
@@ -3323,7 +3427,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 513, ../src/smacss/modules/_header.scss */
+  /* line 554, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -3332,20 +3436,20 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 513, ../src/smacss/modules/_header.scss */
+  /* line 554, ../src/smacss/modules/_header.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 546, ../src/smacss/modules/_header.scss */
+/* line 587, ../src/smacss/modules/_header.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 546, ../src/smacss/modules/_header.scss */
+  /* line 587, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
     -webkit-flex-basis: 25%;
@@ -3354,7 +3458,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 546, ../src/smacss/modules/_header.scss */
+  /* line 587, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
@@ -3362,7 +3466,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 546, ../src/smacss/modules/_header.scss */
+  /* line 587, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3370,7 +3474,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 546, ../src/smacss/modules/_header.scss */
+  /* line 587, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3378,22 +3482,18 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 576, ../src/smacss/modules/_header.scss */
-.secondary-nav-link, .secondary-nav-link:visited,
-.secondary-nav-list a,
-.secondary-nav-list a:visited {
+/* line 616, ../src/smacss/modules/_header.scss */
+.secondary-nav-list a, .secondary-nav-list a:visited {
+  border-bottom: 0;
   height: 100%;
   padding: calc(7.5 / 16 * 1rem) 0.5ch;
   width: 100%;
   color: #f2f2f2;
   font-weight: normal;
-  text-decoration: none;
 }
 @media screen and (min-width: 20em) {
-  /* line 576, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited,
-  .secondary-nav-list a,
-  .secondary-nav-list a:visited {
+  /* line 616, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3406,10 +3506,8 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 576, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited,
-  .secondary-nav-list a,
-  .secondary-nav-list a:visited {
+  /* line 616, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
@@ -3417,41 +3515,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 576, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited,
-  .secondary-nav-list a,
-  .secondary-nav-list a:visited {
+  /* line 616, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 576, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited,
-  .secondary-nav-list a,
-  .secondary-nav-list a:visited {
+  /* line 616, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 576, ../src/smacss/modules/_header.scss */
-  .secondary-nav-link, .secondary-nav-link:visited,
-  .secondary-nav-list a,
-  .secondary-nav-list a:visited {
+  /* line 616, ../src/smacss/modules/_header.scss */
+  .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 620, ../src/smacss/modules/_header.scss */
-.secondary-nav-link:hover,
+/* line 658, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all 0.1s ease-out;
 }
-/* line 630, ../src/smacss/modules/_header.scss */
-.secondary-nav-link:focus,
+/* line 668, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
@@ -3462,12 +3552,12 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 642, ../src/smacss/modules/_header.scss */
+/* line 680, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 642, ../src/smacss/modules/_header.scss */
+  /* line 680, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3477,12 +3567,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 659, ../src/smacss/modules/_header.scss */
+/* line 697, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 659, ../src/smacss/modules/_header.scss */
+  /* line 697, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -5120,6 +5210,9 @@ input:checked + .header-dropdown {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*@include breakpoint($rocket){
+  	padding: 0 2ch;  // We may not want to sacrifice this much room when we're squeezing in seven columns.
+  }*/
 }
 @media screen and (min-width: 20em) {
   /* line 38, ../src/smacss/modules/_icons.scss */
@@ -5940,7 +6033,7 @@ p.alert,
   }
 }
 
-/* line 221, ../src/smacss/modules/_boxes.scss */
+/* line 217, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -5950,7 +6043,7 @@ p.alert,
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 230, ../src/smacss/modules/_boxes.scss */
+  /* line 226, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -5962,7 +6055,7 @@ p.alert,
   }
 }
 
-/* line 244, ../src/smacss/modules/_boxes.scss */
+/* line 240, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -webkit-flex-basis: calc(50% - 1ch);
@@ -5970,7 +6063,7 @@ p.alert,
           flex-basis: calc(50% - 1ch);
 }
 
-/* line 251, ../src/smacss/modules/_boxes.scss */
+/* line 247, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -5997,7 +6090,7 @@ p.alert,
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 280, ../src/smacss/modules/_boxes.scss */
+/* line 276, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -6008,7 +6101,7 @@ p.alert,
 }
 
 @media screen and (min-width: 32em) {
-  /* line 289, ../src/smacss/modules/_boxes.scss */
+  /* line 285, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6016,7 +6109,7 @@ p.alert,
 }
 
 @media screen and (min-width: 32em) {
-  /* line 297, ../src/smacss/modules/_boxes.scss */
+  /* line 293, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6024,20 +6117,20 @@ p.alert,
   }
 }
 
-/* line 306, ../src/smacss/modules/_boxes.scss */
+/* line 302, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 306, ../src/smacss/modules/_boxes.scss */
+  /* line 302, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 306, ../src/smacss/modules/_boxes.scss */
+  /* line 302, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -6047,39 +6140,39 @@ p.alert,
 /**
  * 6. Pull Quotes
  */
-/* line 322, ../src/smacss/modules/_boxes.scss */
+/* line 318, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 322, ../src/smacss/modules/_boxes.scss */
+  /* line 318, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 334, ../src/smacss/modules/_boxes.scss */
+/* line 330, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 341, ../src/smacss/modules/_boxes.scss */
+/* line 337, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 348, ../src/smacss/modules/_boxes.scss */
+/* line 344, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 356, ../src/smacss/modules/_boxes.scss */
+/* line 352, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 360, ../src/smacss/modules/_boxes.scss */
+/* line 356, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -6088,7 +6181,7 @@ p.alert,
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 360, ../src/smacss/modules/_boxes.scss */
+  /* line 356, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -6096,7 +6189,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 360, ../src/smacss/modules/_boxes.scss */
+  /* line 356, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -6105,7 +6198,7 @@ p.alert,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 385, ../src/smacss/modules/_boxes.scss */
+  /* line 381, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.36512559155442;
@@ -6119,20 +6212,20 @@ p.alert,
  *
  * @section box-full
  */
-/* line 400, ../src/smacss/modules/_boxes.scss */
+/* line 396, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 406, ../src/smacss/modules/_boxes.scss */
+/* line 402, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 411, ../src/smacss/modules/_boxes.scss */
+/* line 407, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
@@ -6143,7 +6236,7 @@ p.alert,
  * A box that takes up a full row and sits as its own cake layer. Namely,
  * there are no margins, so that it sandwiches neatly between other rows.
  */
-/* line 421, ../src/smacss/modules/_boxes.scss */
+/* line 417, ../src/smacss/modules/_boxes.scss */
 .box.row {
   margin: 0;
 }
@@ -6157,7 +6250,7 @@ p.alert,
  
  * @section ui-group
  */
-/* line 435, ../src/smacss/modules/_boxes.scss */
+/* line 431, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -6175,24 +6268,24 @@ p.alert,
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 456, ../src/smacss/modules/_boxes.scss */
+  /* line 452, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 463, ../src/smacss/modules/_boxes.scss */
+  /* line 459, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 468, ../src/smacss/modules/_boxes.scss */
+  /* line 464, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 474, ../src/smacss/modules/_boxes.scss */
+/* line 470, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }
@@ -6520,6 +6613,13 @@ p.alert,
   -webkit-scroll-snap-type: mandatory;
       -ms-scroll-snap-type: mandatory;
           scroll-snap-type: mandatory;
+  	/*@include breakpoint($lil-groot){
+  		scroll-snap-points-x: repeat(60%);
+  	}
+  
+  	@include breakpoint($starlord){
+  		scroll-snap-points-x: repeat(71%);
+  	}*/
 }
 @media screen and (min-width: 43em) {
   /* line 125, ../src/smacss/modules/_calendars.scss */
@@ -6936,72 +7036,71 @@ p.alert,
  *  c.i.  Calendar List View Time Column
  *  c.ii. Calendar List View Items Column
  *  d. Calendar Week and Month View
- *  e. Single Day
- *  f. Multi-day
- *  g. Events By Category
+ *  e. Multi-day
+ *  f. Events By Category
  */
 /**
  * a. Base Calendar Styles
  */
-/* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 22, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-item {
   padding: 0.535714285714286em 1em 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 22, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-item {
     padding: 0.441176470588235em 1em 0.882352941176471em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 23, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 22, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-item {
     padding: 0.51996672212978em 1em 1.03993344425957em;
   }
 }
 
-/* line 36, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 35, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar {
   background-clip: transparent;
 }
 
-/* line 40, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 39, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar table,
 .calendar-calendar .month-view table {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 
-/* line 45, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 44, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar th {
   text-align: inherit;
 }
 
-/* line 49, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 48, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar tr {
   background-color: transparent;
 }
 
-/* line 53, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 52, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td {
   width: auto;
 }
 
-/* line 57, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 56, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.empty {
   color: inherit;
 }
 
-/* line 61, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 60, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td a:hover {
   text-decoration: none;
 }
 
-/* line 65, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 64, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar div.calendar {
   font-size: inherit;
 }
 
-/* line 70, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 69, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-items div.calendar {
   border-right-width: 0;
   padding: 0;
@@ -7009,12 +7108,12 @@ p.alert,
   background-color: transparent;
 }
 
-/* line 79, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 78, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td .inner div.calendar .contents {
   padding: 0.25rem 0.25em 0.625rem;
 }
 
-/* line 83, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 82, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day div.monthview,
 .calendar-calendar .week-view .full td.single-day div.weekview,
 .calendar-calendar .day-view .full td.single-day div.dayview {
@@ -7024,23 +7123,23 @@ p.alert,
 /**
  * b. Calendar Heading
  */
-/* line 97, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 91, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-nav {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 102, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 96, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .item-list ul {
   margin: inherit;
 }
 
-/* line 106, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 100, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .item-list ul li {
   margin-left: 0;
 }
 
-/* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-heading h3,
 .date-nav div.date-heading h3,
 .date-nav-wrapper .date-heading h3 {
@@ -7050,7 +7149,7 @@ p.alert,
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-heading h3,
   .date-nav div.date-heading h3,
   .date-nav-wrapper .date-heading h3 {
@@ -7060,7 +7159,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 111, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-heading h3,
   .date-nav div.date-heading h3,
   .date-nav-wrapper .date-heading h3 {
@@ -7071,44 +7170,44 @@ p.alert,
   }
 }
 
-/* line 138, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 132, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev,
 .view .date-nav-wrapper .date-next {
   position: static;
   font-size: inherit;
 }
 @media screen and (min-width: 32em) {
-  /* line 138, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 132, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-prev,
   .view .date-nav-wrapper .date-next {
     position: absolute;
   }
 }
 
-/* line 150, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 144, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev {
   float: left;
   right: auto;
   left: 0;
 }
 
-/* line 157, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 151, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-next {
   float: right;
 }
 
-/* line 161, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 155, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a,
 .view .date-nav-wrapper .date-next a {
   margin: 0 0.25em;
   color: #492c5d;
 }
-/* line 168, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 162, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a:visited,
 .view .date-nav-wrapper .date-next a:visited {
   color: #600f21;
 }
-/* line 172, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 166, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a:hover,
 .view .date-nav-wrapper .date-next a:hover {
   color: #0086ee;
@@ -7117,27 +7216,27 @@ p.alert,
 /**
  * c. Calendar List View
  */
-/* line 181, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 175, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view td,
 .calendar-calendar .day-view td.calendar-agenda-items {
   border-width: 0;
   color: inherit;
 }
 
-/* line 189, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 183, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td .inner div,
 .calendar-calendar td .inner div a {
   background-color: transparent;
 }
 
-/* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view div.calendar,
 .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
 .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
   text-align: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .day-view div.calendar,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
@@ -7146,7 +7245,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 194, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .day-view div.calendar,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
@@ -7155,7 +7254,7 @@ p.alert,
   }
 }
 
-/* line 208, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 202, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-hour,
 .calendar-calendar .day-view .full .calendar-agenda-hour,
 .calendar-calendar td.calendar-agenda-items .calendar.dayview {
@@ -7165,12 +7264,12 @@ p.alert,
   padding: 0;
 }
 
-/* line 218, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 212, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .calendar-agenda-items {
   padding-left: 1em;
 }
 
-/* line 222, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 216, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full .inner .monthview,
 .calendar-calendar .week-view .full .inner .weekview,
 .calendar-calendar .day-view .full .inner .dayview {
@@ -7178,7 +7277,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 231, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 225, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day div.monthview,
 .calendar-calendar .week-view .full td.multi-day div.weekview,
 .calendar-calendar .day-view .full td.multi-day div.dayview,
@@ -7204,23 +7303,23 @@ p.alert,
 /**
  * c.i. Calendar List View Time Column
  */
-/* line 255, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 249, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-agenda-hour {
   white-space: nowrap;
 }
 
-/* line 259, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 253, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .all-day .calendar-agenda-hour {
   white-space: normal;
 }
 
-/* line 263, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 257, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full .calendar-agenda-hour {
   padding-top: 0.535714285714286em;
   padding-bottom: 1.071428571428571em;
 }
 
-/* line 268, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 262, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-hour .calendar-hour,
 .calendar-calendar td.calendar-agenda-hour .calendar-ampm {
   display: inline-block;
@@ -7228,7 +7327,7 @@ p.alert,
   font-weight: inherit;
 }
 
-/* line 280, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 274, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-hour::after {
   content: "\a0";
 }
@@ -7236,13 +7335,13 @@ p.alert,
 /**
  * c.ii. Calendar List View Items Column
  */
-/* line 289, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 283, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div,
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   margin: 0;
 }
 
-/* line 294, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 288, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   padding: 0;
 }
@@ -7250,13 +7349,13 @@ p.alert,
 /**
  * d. Calendar Week and Month View
  */
-/* line 301, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 295, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .week-view .full,
 .month-view .full {
   background-color: #f2f2f2;
 }
 
-/* line 306, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 300, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view .calendar,
 .calendar-calendar .week-view .calendar-agenda-hour,
 .calendar-calendar .month-view .calendar,
@@ -7268,7 +7367,7 @@ p.alert,
   text-align: left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 306, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 300, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .week-view .calendar,
   .calendar-calendar .week-view .calendar-agenda-hour,
   .calendar-calendar .month-view .calendar,
@@ -7277,13 +7376,13 @@ p.alert,
   }
 }
 
-/* line 315, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 309, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view .full .calendar-agenda-hour {
   padding: 0 0.25em;
   width: auto;
 }
 
-/* line 320, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 314, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view td,
 .calendar-calendar .week-view .full td.multi-day,
 .calendar-calendar .week-view td.calendar-agenda-items {
@@ -7293,26 +7392,26 @@ p.alert,
   color: inherit;
 }
 
-/* line 331, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 325, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td {
   padding: 0;
   min-width: 8ch;
 }
 
-/* line 336, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 330, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar-empty,
 .calendar-calendar .month-view .full td.single-day.empty,
 .calendar-calendar .month-view .full td.date-box.empty {
   background: transparent none;
 }
 
-/* line 342, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 336, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td .inner div.day,
 .calendar-calendar .month-view .full td .inner div.day a {
   width: auto;
 }
 
-/* line 347, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 341, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.today,
 .calendar-calendar .month-view .full tr td.single-day.today,
 .calendar-calendar .month-view .full tr.odd td.today,
@@ -7323,12 +7422,12 @@ p.alert,
   border-color: #46502b;
 }
 
-/* line 358, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 352, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.multi-day.ends-today {
   border-color: #46502b;
 }
 
-/* line 363, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 357, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr.date-box,
 .calendar-calendar .month-view .full tr.date-box td,
 .calendar-calendar .month-view .full tr.multi-day,
@@ -7337,7 +7436,7 @@ p.alert,
   max-height: none;
 }
 
-/* line 371, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 365, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
@@ -7356,18 +7455,15 @@ p.alert,
 }
 
 /**
- * e. Single-day
+ * e. Multi-day
  */
-/**
- * f. Multi-day
- */
-/* line 397, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 382, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   background-color: #e1dee3;
 }
 
-/* line 403, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 388, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
   height: inherit;
@@ -7375,7 +7471,7 @@ p.alert,
   padding: 0;
 }
 
-/* line 410, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 395, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
   border-top: 1px solid #d0cad4;
@@ -7392,7 +7488,7 @@ p.alert,
   background-color: #e1dee3;
 }
 
-/* line 427, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 412, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
   border-top: 1px solid #d0cad4;
@@ -7405,26 +7501,26 @@ p.alert,
 }
 
 /**
- * g. Events by Category
+ * f. Events by Category
  */
-/* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view-calendar .views-field-title {
   margin-top: 0.535714285714286em;
 }
 @media screen and (min-width: 43em) {
-  /* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.41666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 444, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .date-display-range,
 .view-calendar .date-display-range,
 .date-display-single {
@@ -7432,7 +7528,7 @@ p.alert,
   display: inline;
 }
 @media screen and (min-width: 43em) {
-  /* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -7440,7 +7536,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 456, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -7448,7 +7544,7 @@ p.alert,
   }
 }
 
-/* line 473, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 458, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .views-exposed-form label {
   font-weight: inherit;
 }
@@ -8090,7 +8186,15 @@ p.alert,
  * 
  * modules/_media-segment
  * ----------------------
- * .media-img-alt  Use .media-child-alt
+ * Do not use .media properties; they clash with the Drupal Media module.
+ * Instead, use the matching .compound property.
+ * .media          Use .compound
+ * .media-img      Use .compound-img
+ * .media-body     Use .compound-body
+ * Et cetera
+ *
+ * Note the following special consideration:
+ * .media-img-alt  Use .compound-child-alt
  *
  * modules/_search
  * ---------------

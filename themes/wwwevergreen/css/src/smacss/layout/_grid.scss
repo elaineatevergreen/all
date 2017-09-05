@@ -69,14 +69,14 @@
 
 .unit-1-1{
 	width: 100%;
-	
-	/*@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+
+	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
 		// box model
-		padding-left: 0;
-		width: auto;
+		/*padding-left: 0;
+		width: auto;*/
 		// layout
 		grid-column: 1 / -1;
-	}*/
+	}
 }
 
 .unit-1-2{
