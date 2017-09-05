@@ -88,7 +88,7 @@ input:checked + .header-dropdown{
 	width: 1.5ch;
 	// layout
 	display: inline-block;
-	
+
 	@include breakpoint($gamora){
 		width: 1ch;
 	}
@@ -303,7 +303,7 @@ input:checked + .header-dropdown{
 	@include breakpoint($drax){
 		font-family: $display-face;
 	}
-	
+
 	@include breakpoint($groot){
 		flex-direction: column;
 	}
@@ -338,7 +338,7 @@ input:checked + .header-dropdown{
 	width: 1.5ch;
 	// layout
 	display: inline-block;
-	
+
 	@include breakpoint($gamora){
 		width: 1ch;
 	}
