@@ -24,18 +24,18 @@
 				<ul class="element-list search-tools">
 					<li class="internal-users-alt">
 						<a href="https://my.evergreen.edu">
-							<?php echo file_get_contents($imagepath"/icons/header/user.svg"); ?> my.evergreen.edu
+							<?php echo file_get_contents($imagepath"icons/header/user.svg"); ?> my.evergreen.edu
 							<!--<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu-->
 						</a>
 					</li>
 					<li class="internal-users-alt">
 						<a href="/webmail">
-							<img alt="Email" src="<?php echo($imagepath) ?>/icons/header/webmail.svg"/> Webmail
+							<img alt="Email" src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail
 						</a>
 					</li>
 					<li>
 						<a href="/directory">
-							<img alt="Address Book" src="<?php echo($imagepath) ?>/icons/header/address-book.svg"/> Directories
+							<img alt="Address Book" src="<?php echo($imagepath) ?>icons/header/address-book.svg"/> Directories
 						</a>
 					</li>
 				</ul>
