@@ -4,11 +4,11 @@
 		<ul class="element-list header-dropdown internal-users">
 			<li>
 				<a href="https://my.evergreen.edu">
-					<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu
+					<img alt="Profile" src="<?php echo($imagepath) ?>icons/header/user.svg"/> my.evergreen.edu
 				</a>
 			</li>
 			<li>
-				<a href="/webmail"><img alt="Email" src="<?php echo($imagepath) ?>/icons/header/webmail.svg"/> Webmail</a>
+				<a href="/webmail"><img alt="Email" src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail</a>
 			</li>
 		</ul>
 	</div>
