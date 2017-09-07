@@ -24,8 +24,7 @@
 				<ul class="element-list search-tools">
 					<li class="internal-users-alt">
 						<a href="https://my.evergreen.edu">
-							<?php echo file_get_contents(echo($imagepath)"/icons/header/user.svg"); ?> my.evergreen.edu
-							<!--<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu-->
+							<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu
 						</a>
 					</li>
 					<li class="internal-users-alt">
