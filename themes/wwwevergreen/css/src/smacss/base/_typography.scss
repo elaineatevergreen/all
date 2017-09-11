@@ -57,6 +57,7 @@ button{
 body,
 .base{
 	@include base-type;  // Step 0.5
+	font-size-adjust: 0.4825;  // Set fallback fonts to match x-height of Proxima Nova
 
 	@include breakpoint($gamora){
 		@include base-type-lg;  // Step 1
