@@ -24,7 +24,7 @@
 				<ul class="element-list search-tools">
 					<li class="internal-users-alt">
 						<a href="https://my.evergreen.edu">
-							<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user.svg"/> my.evergreen.edu
+							<img alt="Profile" src="<?php echo($imagepath) ?>icons/header/user.svg"/> my.evergreen.edu
 						</a>
 					</li>
 					<li class="internal-users-alt">
@@ -54,10 +54,10 @@
 	</div>
 	<div class="off-canvas">
 		<label class="search-toggle" for="search-flag">
-			<img alt="Search" src="<?php echo($imagepath) ?>/icons/header/search-alt.svg"/>
+			<img alt="Search" src="<?php echo($imagepath) ?>icons/header/search-alt.svg"/>
 		</label>
 		<label class="student-toggle" for="internal-users-flag">
-			<img alt="Profile" src="<?php echo($imagepath) ?>/icons/header/user-alt.svg"/>
+			<img alt="Profile" src="<?php echo($imagepath) ?>icons/header/user-alt.svg"/>
 		</label>
 	</div>
 </div>
