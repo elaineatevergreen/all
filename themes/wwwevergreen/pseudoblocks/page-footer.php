@@ -1,7 +1,7 @@
 				<div class="do-not-print page-footer-unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
-							<a href="http://evergreen.edu/employment">Jobs at Evergreen</a>
+							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
 						</li>
 						<li>
 							<a href="http://evergreen.edu/tour">Tours and Maps</a>
@@ -10,27 +10,27 @@
 							<p>Stay connected:</p>
 							<ul class="element-list lineup">
 								<li>
-									<a href="http://facebook.com/TheEvergreenStateCollege" title="Facebook">
+									<a href="https://facebook.com/TheEvergreenStateCollege" title="Facebook">
 										<img alt="Facebook" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/facebook.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://twitter.com/EvergreenStCol" title="Twitter">
+									<a href="https://twitter.com/EvergreenStCol" title="Twitter">
 										<img alt="Twitter" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/twitter.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://youtube.com/user/evergreen" title="YouTube">
+									<a href="https://youtube.com/user/evergreen" title="YouTube">
 										<img alt="YouTube" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/youtube.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://instagram.com/TheEvergreenStateCollege" title="Instagram">
+									<a href="https://instagram.com/TheEvergreenStateCollege" title="Instagram">
 										<img alt="Instagram" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/instagram.png"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://www.linkedin.com/edu/school?id=19655" title="LinkedIn">
+									<a href="https://www.linkedin.com/edu/school?id=19655" title="LinkedIn">
 										<img alt="LinkedIn" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/linkedin.svg"/>
 									</a>
 								</li>
