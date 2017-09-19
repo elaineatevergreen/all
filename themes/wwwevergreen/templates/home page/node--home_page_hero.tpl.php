@@ -52,7 +52,7 @@
 			$content_class = "";
 			$hero_alt = "Welcome Greeners! It’s O-Week. Learn how to succeed at Evergreen and have some fun along the way.";
 			$slogan_svg_wide = "orientation/slogan-wide";
-			$slogan_svg_mobile = "orientation/slogan-mobile";
+			$slogan_svg_mobile = "orientation/slogan-wide";
 			$slogan_alt = "Welcome Greeners! It’s O-Week. Learn how to succeed at Evergreen and have some fun along the way.";
 			$call_to_action = "See the Schedule";
 			break;
