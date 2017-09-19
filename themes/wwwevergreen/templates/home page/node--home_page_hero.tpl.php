@@ -50,10 +50,10 @@
 		case 'orientation':
 			$destination = "/orientation";
 			$content_class = "";
-			$hero_alt = "O HAI IT'S ORIENTATION";
-			$slogan_svg_wide = "go-beyond/slogan-wide";
-			$slogan_svg_mobile = "go-beyond/slogan-mobile";
-			$slogan_alt = "YUP, O WEEK ALREADY";
+			$hero_alt = "Welcome Greeners! It’s O-Week. Learn how to succeed at Evergreen and have some fun along the way.";
+			$slogan_svg_wide = "orientation/slogan-wide";
+			$slogan_svg_mobile = "orientation/slogan-mobile";
+			$slogan_alt = "Welcome Greeners! It’s O-Week. Learn how to succeed at Evergreen and have some fun along the way.";
 			$call_to_action = "See the Schedule";
 			break;
 		//this covers both "Normal" and for older hero images, any blank value
