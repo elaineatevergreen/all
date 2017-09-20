@@ -61,14 +61,13 @@ theme for individual person pages
 	  //or if this person is a faculty member who has chosen to make their contact info public
 	  
 	  //but do all this stuff only if there's any contact info to speak of
-	  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])) { ?>
+	  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop'])  or isset($content['group_contact']['field_location_off_campus'])) { ?>
     <h2><span>Contact Information</span></h2>
 	  
 <?php
 		//now check to see if we should show the stuff
 		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
 ?>
-
   
     <?php 
 	    if(isset($content['field_website'])) {
@@ -122,6 +121,14 @@ theme for individual person pages
       </div>
       <?php }; ?>
     </div>
+    
+    <div>
+	    <?php 
+		    if isset($content['group_contact']['field_location_off_campus']) { 
+			    print render($content['group_contact']['field_location_off_campus']) 
+		 	}; 
+		?>
+    
   </div>
   
   <?php 
