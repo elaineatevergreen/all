@@ -68,10 +68,6 @@ theme for individual person pages
 		//now check to see if we should show the stuff
 		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
 ?>
-
-	<?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
-		<div><?php print render($content['group_contact']['field_location_off_campus']); ?></div>
-		<?php	}; 	?>
   
     <?php 
 	    if(isset($content['field_website'])) {
@@ -101,6 +97,11 @@ theme for individual person pages
 	        ?><br><i>Alt:</i> <?php print render($content['group_contact']['field_alternate_phone']) ?><?php
         }; ?>
     </div>
+    
+    <?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
+		<div><?php print render($content['group_contact']['field_location_off_campus']); ?></div>
+	<?php	}; 	?>
+    
     <div class="extended-address">
 	    <?php if (isset($content['group_contact']['field_building_alt'])) { ?>
       <div>
