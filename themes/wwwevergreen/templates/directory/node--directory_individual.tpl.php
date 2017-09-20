@@ -72,7 +72,7 @@ theme for individual person pages
 <?php if isset($content['group_contact']['field_location_off_campus']) { ?>
 		    <div>
 			    
-			    <?php print render($content['group_contact']['field_location_off_campus']); ?>
+			    off campus location.
 		    </div>
 		<?php	}; 	?>
 
