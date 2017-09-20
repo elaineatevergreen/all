@@ -69,13 +69,9 @@ theme for individual person pages
 		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
 ?>
 
-<?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
-		    <div>
-			    
-			    off campus location.
-		    </div>
+	<?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
+		<div><?php print render($content['group_contact']['field_location_off_campus']); ?></div>
 		<?php	}; 	?>
-
   
     <?php 
 	    if(isset($content['field_website'])) {
