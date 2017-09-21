@@ -4,8 +4,6 @@
 theme for individual person pages
 
  */
- 
-dpm($content['group_contact']['field_location_off_campus']);
 ?>
 
 <!-- need to add back faculty information -->
@@ -100,7 +98,11 @@ dpm($content['group_contact']['field_location_off_campus']);
         }; ?>
     </div>
     
-    <?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
+    <?php
+	    dpm($content['group_contact']['field_location_off_campus']);
+	    
+	    
+	     if(isset($content['group_contact']['field_location_off_campus'])) { ?>
 		<div><?php print render($content['group_contact']['field_location_off_campus']); ?></div>
 	<?php	}; 	?>
     
