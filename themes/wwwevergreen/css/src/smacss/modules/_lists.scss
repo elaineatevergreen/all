@@ -197,6 +197,14 @@
 }
 
 /**
+ * Graphical accordions use graphics as titles instead of text, and the
+ * dropdown arrows get in the way of making that look nice.
+ */
+.accordion-graphical dt a:before{
+	content: "";
+}
+
+/**
  * 4. Flexible Lists
  *
  * Responsive lists that break across columns.
