@@ -4,7 +4,7 @@
 theme for individual person pages
 
  */
- dpm($content);
+ dpm($variables);
 ?>
 
 <!-- need to add back faculty information -->
