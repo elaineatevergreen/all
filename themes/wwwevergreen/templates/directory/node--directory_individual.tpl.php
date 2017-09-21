@@ -4,7 +4,7 @@
 theme for individual person pages
 
  */
-dpm($variables['content']['group_contact']['field_location_off_campus']);
+//dpm($variables['content']['group_contact']['field_location_off_campus']);
 ?>
 
 <!-- need to add back faculty information -->
