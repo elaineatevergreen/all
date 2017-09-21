@@ -99,7 +99,9 @@ dpm($variables);
         }; ?>
     </div>
     
-    <?php if(isset($content['group_contact']['field_location_off_campus'])) { ?>
+    <?php 
+	    //because everyone has their country set via feeds, we actually need to check for the existence of state ("administrative area" in Address Field parlance)
+	    if(isset($content['group_contact']['field_location_off_campus'][0]['administrative_area'])) { ?>
 		<div><?php print render($content['group_contact']['field_location_off_campus']); ?></div>
 	<?php	}; 	?>
     
