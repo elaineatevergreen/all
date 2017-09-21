@@ -5,7 +5,7 @@ theme for individual person pages
 
  */
  
- dsm($content['group_contact']['field_location_off_campus']);
+
 ?>
 
 <!-- need to add back faculty information -->
