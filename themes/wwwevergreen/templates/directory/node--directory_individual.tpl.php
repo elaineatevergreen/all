@@ -99,7 +99,7 @@ theme for individual person pages
     </div>
     
     <?php
-	    dpm($content['group_contact']['field_location_off_campus']);
+	    dsm($content['group_contact']['field_location_off_campus']);
 	    
 	    
 	     if(isset($content['group_contact']['field_location_off_campus'])) { ?>
