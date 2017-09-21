@@ -4822,6 +4822,15 @@ input:checked + .header-dropdown {
 }
 
 /**
+ * Graphical accordions use graphics as titles instead of text, and the
+ * dropdown arrows get in the way of making that look nice.
+ */
+/* line 203, ../src/smacss/modules/_lists.scss */
+.accordion-graphical dt a:before {
+  content: "";
+}
+
+/**
  * 4. Flexible Lists
  *
  * Responsive lists that break across columns.
@@ -4829,7 +4838,7 @@ input:checked + .header-dropdown {
  * @see http://evergreen.edu/studies
  */
 @media screen and (min-width: 20em) {
-  /* line 207, ../src/smacss/modules/_lists.scss */
+  /* line 215, ../src/smacss/modules/_lists.scss */
   .flexible {
     margin-left: 0;
     -webkit-column-count: 2;
@@ -4842,7 +4851,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 207, ../src/smacss/modules/_lists.scss */
+  /* line 215, ../src/smacss/modules/_lists.scss */
   .flexible {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -4851,7 +4860,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 20em) {
-  /* line 223, ../src/smacss/modules/_lists.scss */
+  /* line 231, ../src/smacss/modules/_lists.scss */
   .flexible > li {
     margin: 0 2% 0.46875rem;
     overflow: hidden;
@@ -4859,7 +4868,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 235, ../src/smacss/modules/_lists.scss */
+  /* line 243, ../src/smacss/modules/_lists.scss */
   .unit-2-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4868,7 +4877,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 70em) {
-  /* line 241, ../src/smacss/modules/_lists.scss */
+  /* line 249, ../src/smacss/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -4876,7 +4885,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 241, ../src/smacss/modules/_lists.scss */
+  /* line 249, ../src/smacss/modules/_lists.scss */
   .unit-3-7 .flexible {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -4889,26 +4898,26 @@ input:checked + .header-dropdown {
  *
  * A list of steps to follow.
  */
-/* line 256, ../src/smacss/modules/_lists.scss */
+/* line 264, ../src/smacss/modules/_lists.scss */
 .step-list {
   margin-left: 0;
   counter-reset: li;
   list-style-type: none;
 }
 
-/* line 264, ../src/smacss/modules/_lists.scss */
+/* line 272, ../src/smacss/modules/_lists.scss */
 .step-list > li {
   border-bottom: 1px solid #c8c1cd;
   padding-left: 3em;
   position: relative;
 }
 @media screen and (min-width: 43em) {
-  /* line 264, ../src/smacss/modules/_lists.scss */
+  /* line 272, ../src/smacss/modules/_lists.scss */
   .step-list > li {
     padding-left: 4em;
   }
 }
-/* line 275, ../src/smacss/modules/_lists.scss */
+/* line 283, ../src/smacss/modules/_lists.scss */
 .step-list > li::before {
   width: 0.75em;
   position: absolute;
@@ -4923,25 +4932,25 @@ input:checked + .header-dropdown {
   content: counter(li) ".";
 }
 @media screen and (min-width: 32em) {
-  /* line 275, ../src/smacss/modules/_lists.scss */
+  /* line 283, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     font-size: 2.291rem;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 275, ../src/smacss/modules/_lists.scss */
+  /* line 283, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     width: 1em;
     font-size: 2.782rem;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 275, ../src/smacss/modules/_lists.scss */
+  /* line 283, ../src/smacss/modules/_lists.scss */
   .step-list > li::before {
     font-size: 3.146rem;
   }
 }
-/* line 309, ../src/smacss/modules/_lists.scss */
+/* line 317, ../src/smacss/modules/_lists.scss */
 .step-list > li p,
 .step-list > li li {
   font-size: 0.875rem;
@@ -4949,7 +4958,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 43em) {
-  /* line 309, ../src/smacss/modules/_lists.scss */
+  /* line 317, ../src/smacss/modules/_lists.scss */
   .step-list > li p,
   .step-list > li li {
     font-size: 1.125rem;
@@ -4962,7 +4971,7 @@ input:checked + .header-dropdown {
  *
  * Links with icons attached to them, e.g. PDFs or social media chicklets.
  */
-/* line 326, ../src/smacss/modules/_lists.scss */
+/* line 334, ../src/smacss/modules/_lists.scss */
 .link-icon::before,
 .link-icon-alt::before {
   height: 1rem;
@@ -4977,47 +4986,47 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-/* line 345, ../src/smacss/modules/_lists.scss */
+/* line 353, ../src/smacss/modules/_lists.scss */
 .link-icon::after {
   margin-left: 0.5em;
 }
 
-/* line 349, ../src/smacss/modules/_lists.scss */
+/* line 357, ../src/smacss/modules/_lists.scss */
 .link-icon-alt::before {
   margin-right: 0.5em;
 }
 
-/* line 353, ../src/smacss/modules/_lists.scss */
+/* line 361, ../src/smacss/modules/_lists.scss */
 .icon-blog::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/blog32x32.png");
   content: "Blog";
 }
 
-/* line 360, ../src/smacss/modules/_lists.scss */
+/* line 368, ../src/smacss/modules/_lists.scss */
 .icon-facebook::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook32x32.png");
   content: "Facebook";
 }
 
-/* line 367, ../src/smacss/modules/_lists.scss */
+/* line 375, ../src/smacss/modules/_lists.scss */
 .icon-instagram::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/instagram32x32.png");
   content: "Instagram";
 }
 
-/* line 374, ../src/smacss/modules/_lists.scss */
+/* line 382, ../src/smacss/modules/_lists.scss */
 .icon-pinterest::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/pinterest32x32.png");
   content: "Pinterest";
 }
 
-/* line 381, ../src/smacss/modules/_lists.scss */
+/* line 389, ../src/smacss/modules/_lists.scss */
 .icon-twitter::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter32x32.png");
   content: "Twitter";
 }
 
-/* line 388, ../src/smacss/modules/_lists.scss */
+/* line 396, ../src/smacss/modules/_lists.scss */
 .icon-youtube::before {
   background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/youtube32x32.png");
   content: "YouTube";
@@ -5028,23 +5037,23 @@ input:checked + .header-dropdown {
  *
  * Tag cloud sizing.
  */
-/* line 400, ../src/smacss/modules/_lists.scss */
+/* line 408, ../src/smacss/modules/_lists.scss */
 .few {
   font-size: 0.695rem;
   line-height: 1.34831460674157;
 }
-/* line 404, ../src/smacss/modules/_lists.scss */
+/* line 412, ../src/smacss/modules/_lists.scss */
 .few a {
   font-weight: normal;
 }
 
-/* line 409, ../src/smacss/modules/_lists.scss */
+/* line 417, ../src/smacss/modules/_lists.scss */
 .many {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 125em) {
-  /* line 409, ../src/smacss/modules/_lists.scss */
+  /* line 417, ../src/smacss/modules/_lists.scss */
   .many {
     font-size: 1.202rem;
     line-height: 1.36512559155442;
@@ -5056,7 +5065,7 @@ input:checked + .header-dropdown {
  *
  * An index of the letters of the alphabet, for skipping around the page.
  */
-/* line 422, ../src/smacss/modules/_lists.scss */
+/* line 430, ../src/smacss/modules/_lists.scss */
 .alpha-label {
   border: 1px solid #c8c1cd;
   margin-bottom: -1px;
@@ -5068,7 +5077,7 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 
-/* line 438, ../src/smacss/modules/_lists.scss */
+/* line 446, ../src/smacss/modules/_lists.scss */
 .alpha-index {
   border: 1px solid #c8c1cd;
   margin: 0;
@@ -5080,7 +5089,7 @@ input:checked + .header-dropdown {
   border-radius: 2px;
 }
 @media screen and (min-width: 32em) {
-  /* line 438, ../src/smacss/modules/_lists.scss */
+  /* line 446, ../src/smacss/modules/_lists.scss */
   .alpha-index {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5091,13 +5100,13 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 460, ../src/smacss/modules/_lists.scss */
+/* line 468, ../src/smacss/modules/_lists.scss */
 .alpha-label + .alpha-index {
   margin-top: -1px;
   border-top-left-radius: 0;
 }
 
-/* line 467, ../src/smacss/modules/_lists.scss */
+/* line 475, ../src/smacss/modules/_lists.scss */
 .alpha-index > li {
   padding: 0 2px;
   display: inline;
@@ -5110,7 +5119,7 @@ input:checked + .header-dropdown {
  *
  * @see http://evergreen.edu/admissions
  */
-/* line 482, ../src/smacss/modules/_lists.scss */
+/* line 490, ../src/smacss/modules/_lists.scss */
 .badge-list {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -5126,19 +5135,19 @@ input:checked + .header-dropdown {
           justify-content: space-around;
   overflow: hidden;
 }
-/* line 489, ../src/smacss/modules/_lists.scss */
+/* line 497, ../src/smacss/modules/_lists.scss */
 .badge-list > li {
   margin: 0 1em;
   float: left;
   text-align: center;
 }
 
-/* line 499, ../src/smacss/modules/_lists.scss */
+/* line 507, ../src/smacss/modules/_lists.scss */
 .badge {
   max-height: 90px;
 }
 
-/* line 503, ../src/smacss/modules/_lists.scss */
+/* line 511, ../src/smacss/modules/_lists.scss */
 .badge-alt {
   max-width: 115px;
 }
@@ -5149,12 +5158,12 @@ input:checked + .header-dropdown {
  * A parent container, whose direct children are zebra-striped.
  * Strictly speaking, this doesn't have to be a list element.
  */
-/* line 514, ../src/smacss/modules/_lists.scss */
+/* line 522, ../src/smacss/modules/_lists.scss */
 .zebra-striped > * {
   padding-right: 1em;
   padding-left: 1em;
 }
-/* line 518, ../src/smacss/modules/_lists.scss */
+/* line 526, ../src/smacss/modules/_lists.scss */
 .zebra-striped > *:nth-child(odd) {
   background-color: #d9d4dc;
 }
