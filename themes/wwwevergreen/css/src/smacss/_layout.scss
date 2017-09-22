@@ -115,9 +115,9 @@
 	position: relative;
 
 	@include breakpoint($lil-groot){
-		// Font metrics for non-condensed fallback
-		font-size: 0.695rem;  // Step -1
-		line-height: calc(15 / 11.125);  // 15/11.125
+		font-family: $text-face-extra-condensed;
+		@include base-type;
+		line-height: 1.07142857142857;  // 15/14 - Edge doesn't support unitless calc() line-heights
 	}
 
 	@include breakpoint($starlord){
@@ -125,27 +125,10 @@
 	}
 
 	@include breakpoint($gamora){
+		// box model
 		margin-left: 0;
 		width: 100%;
-	}
-}
-
-/**
- * Typekit overrides
- */
-
-.wf-active .top-nav{
-
-	@include breakpoint($lil-groot){
-		@include base-type;
-		line-height: 1.07142857142857;  // 15/14 - Edge doesn't support unitless calc() line-heights
-	}
-}
-
-.top-nav,
-.wf-active .top-nav{  // Typekit loaded
-
-	@include breakpoint($gamora){
+		// typography
 		@include base-type-lg;
 	}
 

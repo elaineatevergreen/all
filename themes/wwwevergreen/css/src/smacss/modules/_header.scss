@@ -387,16 +387,17 @@ input:checked + .header-dropdown{
 		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
 
-	/**
-	 * See Typekit override for breakpoint($rocket), below.
-	 */
+	@include breakpoint($rocket){
+		// typography
+		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
+	}
 
 	@include breakpoint($starlord){
 		// typography
 		letter-spacing: normal;
 	}
 
-	/* Necessary except for float-based fallback layouts. */
+	/* Necessary for float-based fallback layouts. */
 	&::before,
 	&::after{
 		// box model
@@ -427,17 +428,6 @@ input:checked + .header-dropdown{
 	.top-nav-list::before,
 	.top-nav-list::after{
 		content: none;
-	}
-}
-
-/**
- * Typekit Override
- */
-.wf-active .top-nav-list{
-
-	@include breakpoint($rocket){
-		// typography
-		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
 	}
 }
 
@@ -567,6 +557,7 @@ input:checked + .header-dropdown{
 		// layout
 		align-items: stretch;
 		display: flex;
+		justify-content: space-around;
 		// typography
 		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
@@ -592,8 +583,6 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($lil-groot){
 		margin: 0;
-		// layout
-		flex-basis: 25%;
 	}
 
 	@include breakpoint($starlord){
