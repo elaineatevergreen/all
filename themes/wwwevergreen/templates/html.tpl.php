@@ -62,7 +62,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<meta content="width=device-width, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
-	<!-- All other Apple touch icons have been deprecated and should be deleted soon. -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
 	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9 -->
 	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
@@ -75,7 +74,6 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox 41+ -->
 	
-	<!--<link href="<?php print base_path() . path_to_theme() ?>/css/dist/styles.css" media="all" rel="stylesheet" />-->
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
 	<!-- Typekit -->
@@ -93,7 +91,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	  print $scripts;  // Include scripts from the theme .info file.
   ?>
   <?php 
-	  //any site-wide ad tracking scripts go here. this allows them to be turned off for service center, test, or local sites.
+	  // Any site-wide ad tracking scripts go here. This allows them to be turned off for service center, test, or local sites.
 	  if(theme_get_setting('evergreen_ad_tracking')) { ?>
   <!-- reach local tracking script -->
   <script>var rl_siteid = "6ab3611f-6d7c-4500-9c31-c90eb2895e4a";</script><script type="text/javascript" src="//cdn.rlets.com/capture_static/mms/mms.js" async="async"></script>
