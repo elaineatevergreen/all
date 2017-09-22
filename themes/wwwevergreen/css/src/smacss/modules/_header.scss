@@ -557,6 +557,7 @@ input:checked + .header-dropdown{
 		// layout
 		align-items: stretch;
 		display: flex;
+		justify-content: space-around;
 		// typography
 		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
 	}
@@ -582,8 +583,6 @@ input:checked + .header-dropdown{
 
 	@include breakpoint($lil-groot){
 		margin: 0;
-		// layout
-		flex-basis: 25%;
 	}
 
 	@include breakpoint($starlord){
