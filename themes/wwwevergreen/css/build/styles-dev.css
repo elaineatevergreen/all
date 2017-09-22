@@ -405,7 +405,7 @@ figure,
 /* line 104, ../src/smacss/base/_typography.scss */
 h1 {
   margin: 0.96401028277635em 0 0;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.945rem;
   font-weight: normal;
   line-height: 1.16514528156338;
@@ -449,7 +449,7 @@ h2 {
   color: #616161;
   font-size: 1.202rem;
   line-height: 1.36512559155442;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 @media screen and (min-width: 22em) {
@@ -479,7 +479,7 @@ h2 {
 h3 {
   margin-top: 1.66666666666667em;
   color: #303030;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   font-weight: normal;
@@ -896,7 +896,7 @@ table {
   max-width: 100%;
   font-size: 0.875rem;
   line-height: 1.33928571428571;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 
 /* line 31, ../src/smacss/base/_tables.scss */
@@ -1150,7 +1150,7 @@ textarea {
   border: 1px solid #aea3b6;
   margin-bottom: calc(15 / 16 * 1rem);
   max-width: 100%;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.33928571428571;
   border-radius: 2px;
@@ -1552,7 +1552,7 @@ input[id$="-range-max"] {
   width: 100%;
   max-width: calc(45ch + 1em);
   min-width: 50%;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -2361,6 +2361,7 @@ a:link,
 @media screen and (min-width: 20em) {
   /* line 110, ../src/smacss/_layout.scss */
   .top-nav {
+    font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
     line-height: 1.33928571428571;
     line-height: 1.07142857142857;
@@ -2681,37 +2682,37 @@ a:link,
  * permits. Use sparingly!
  */
 @media screen and (max-width: 20em) {
-  /* line 156, ../src/smacss/_layout.scss */
+  /* line 157, ../src/smacss/_layout.scss */
   .gt20 {
     display: none;
   }
 }
 @media screen and (max-width: 22em) {
-  /* line 162, ../src/smacss/_layout.scss */
+  /* line 163, ../src/smacss/_layout.scss */
   .gt22 {
     display: none;
   }
 }
 @media screen and (max-width: 32em) {
-  /* line 168, ../src/smacss/_layout.scss */
+  /* line 169, ../src/smacss/_layout.scss */
   .gt32 {
     display: none;
   }
 }
 @media screen and (max-width: 43em) {
-  /* line 174, ../src/smacss/_layout.scss */
+  /* line 175, ../src/smacss/_layout.scss */
   .gt43 {
     display: none;
   }
 }
 @media screen and (max-width: 70em) {
-  /* line 180, ../src/smacss/_layout.scss */
+  /* line 181, ../src/smacss/_layout.scss */
   .gt70 {
     display: none;
   }
 }
 @media screen and (max-width: 88em) {
-  /* line 186, ../src/smacss/_layout.scss */
+  /* line 187, ../src/smacss/_layout.scss */
   .gt88 {
     display: none;
   }
@@ -2828,7 +2829,7 @@ input:checked + .header-dropdown {
 .internal-users {
   margin-top: 0;
   overflow: hidden;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   background-color: #d0cad4;
 }
 @media screen and (min-width: 70em) {
@@ -3095,7 +3096,7 @@ input:checked + .header-dropdown {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }
 @media screen and (min-width: 70em) {
@@ -3397,6 +3398,9 @@ input:checked + .header-dropdown {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     letter-spacing: -0.05ch;
   }
 }
@@ -3417,22 +3421,19 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 577, ../src/smacss/modules/_header.scss */
+/* line 578, ../src/smacss/modules/_header.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 577, ../src/smacss/modules/_header.scss */
+  /* line 578, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     margin: 0;
-    -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-            flex-basis: 25%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 577, ../src/smacss/modules/_header.scss */
+  /* line 578, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
@@ -3440,7 +3441,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 577, ../src/smacss/modules/_header.scss */
+  /* line 578, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3448,7 +3449,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 577, ../src/smacss/modules/_header.scss */
+  /* line 578, ../src/smacss/modules/_header.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3456,7 +3457,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 606, ../src/smacss/modules/_header.scss */
+/* line 605, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a, .secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
@@ -3466,7 +3467,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 606, ../src/smacss/modules/_header.scss */
+  /* line 605, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -3480,7 +3481,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 606, ../src/smacss/modules/_header.scss */
+  /* line 605, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -webkit-flex-basis: auto;
@@ -3489,33 +3490,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 606, ../src/smacss/modules/_header.scss */
+  /* line 605, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 606, ../src/smacss/modules/_header.scss */
+  /* line 605, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 606, ../src/smacss/modules/_header.scss */
+  /* line 605, ../src/smacss/modules/_header.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 648, ../src/smacss/modules/_header.scss */
+/* line 647, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
   box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
   transition: all 0.1s ease-out;
 }
-/* line 658, ../src/smacss/modules/_header.scss */
+/* line 657, ../src/smacss/modules/_header.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
@@ -3526,12 +3527,12 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 670, ../src/smacss/modules/_header.scss */
+/* line 669, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 670, ../src/smacss/modules/_header.scss */
+  /* line 669, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3541,12 +3542,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 687, ../src/smacss/modules/_header.scss */
+/* line 686, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 687, ../src/smacss/modules/_header.scss */
+  /* line 686, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -4084,7 +4085,7 @@ input:checked + .header-dropdown {
   z-index: 1;
   font-size: 0.875rem;
   line-height: 1.33928571428571;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 32em) {
   /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
@@ -4525,7 +4526,7 @@ input:checked + .header-dropdown {
   height: 100%;
   padding: 0 1ch;
   overflow: hidden;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 43em) {
   /* line 232, ../src/smacss/_modules.scss */
@@ -6160,7 +6161,7 @@ p.alert,
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
@@ -6710,7 +6711,7 @@ p.alert,
 /* line 222, ../src/smacss/modules/_calendars.scss */
 .grid.upcoming-events-list .media-body,
 .grid.upcoming-events-list .compound-body {
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -7786,7 +7787,7 @@ p.alert,
 .field-subjects-studied {
   margin: 0 0 calc(3.75 / 16 * 1rem);
   color: #616161;
-  font-family: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
