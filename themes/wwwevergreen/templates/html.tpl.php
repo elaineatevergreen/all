@@ -77,8 +77,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
 	<!-- Typekit -->
-	<script src="https://use.typekit.net/rtm8ksn.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link rel="stylesheet" href="https://use.typekit.net/kfy7nbq.css">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
