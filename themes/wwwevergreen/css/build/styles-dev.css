@@ -4360,7 +4360,8 @@ input:checked + .header-dropdown {
 .page-footer a:link,
 .page-footer a:visited {
   color: #64933a;
-  border-color: #3c5823;
+  -webkit-text-decoration-color: #3c5823;
+          text-decoration-color: #3c5823;
 }
 
 /* line 53, ../src/smacss/modules/_footer.scss */
@@ -4592,6 +4593,9 @@ input:checked + .header-dropdown {
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
   .main-content .content > dl:last-child > dd:last-child::after {
+    width: 16.414px;
+    display: inline-block;
+    vertical-align: middle;
     content: " " url("/sites/all/themes/wwwevergreen/images/endnote.svg");
   }
 }
@@ -7571,12 +7575,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 350, ../src/smacss/_modules.scss */
+/* line 357, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 355, ../src/smacss/_modules.scss */
+/* line 362, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7596,7 +7600,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 372, ../src/smacss/_modules.scss */
+/* line 379, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7921,14 +7925,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 394, ../src/smacss/_modules.scss */
+/* line 401, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 404, ../src/smacss/_modules.scss */
+/* line 411, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -7947,24 +7951,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 423, ../src/smacss/_modules.scss */
+/* line 430, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 427, ../src/smacss/_modules.scss */
+/* line 434, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 435, ../src/smacss/_modules.scss */
+/* line 442, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 443, ../src/smacss/_modules.scss */
+/* line 450, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -7975,30 +7979,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 454, ../src/smacss/_modules.scss */
+/* line 461, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 458, ../src/smacss/_modules.scss */
+/* line 465, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 458, ../src/smacss/_modules.scss */
+  /* line 465, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 458, ../src/smacss/_modules.scss */
+  /* line 465, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 471, ../src/smacss/_modules.scss */
+/* line 478, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
@@ -8010,7 +8014,7 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 483, ../src/smacss/_modules.scss */
+/* line 490, ../src/smacss/_modules.scss */
 #tinymce {
   margin: 0 auto;
   padding: 0 2em;
@@ -8018,7 +8022,7 @@ p.alert,
   display: block;
 }
 
-/* line 492, ../src/smacss/_modules.scss */
+/* line 499, ../src/smacss/_modules.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
 }
