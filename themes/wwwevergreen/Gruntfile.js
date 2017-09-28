@@ -97,6 +97,12 @@ module.exports = function(grunt) {
 			}
 	  },
 		
+		imageoptim: {
+			optimizeDefaultSrc: {
+				src: ['../../../evergreen-edu/imageoptim/src'],
+			},
+		},
+		
 		/**
 		 * Give hints on fixing bugs in JavaScript.
 		 */
@@ -335,6 +341,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-perfbudget');
