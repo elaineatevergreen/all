@@ -4360,7 +4360,8 @@ input:checked + .header-dropdown {
 .page-footer a:link,
 .page-footer a:visited {
   color: #64933a;
-  border-color: #3c5823;
+  -webkit-text-decoration-color: #3c5823;
+          text-decoration-color: #3c5823;
 }
 
 /* line 53, ../src/smacss/modules/_footer.scss */
@@ -4585,15 +4586,9 @@ input:checked + .header-dropdown {
 .main-content .content > dl:last-child > dd:last-child::after {
   white-space: nowrap;
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 290, ../src/smacss/_modules.scss */
-  .main-content .content > p:last-child::after,
-  .main-content .content > ul:last-child > li:last-child::after,
-  .main-content .content > ol:last-child > li:last-child::after,
-  .main-content .content > dl:last-child > dd:last-child::after {
-    content: " " url("/sites/all/themes/wwwevergreen/images/endnote.svg");
-  }
+  /*@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 150dpi){
+  	content: "\00A0" url("/sites/all/themes/wwwevergreen/images/endnote.svg");
+  }*/
 }
 
 /**
