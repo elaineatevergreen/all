@@ -5449,9 +5449,10 @@ div.ajax-progress {
  *
  * 1. Default
  * 2. Alternate
- * 3. Vertically-Centered
- * 4. Column And Squishy
- * 5. SVG Images
+ * 3. Spacing
+ * 4. Vertically-Centered
+ * 5. Column And Squishy
+ * 6. SVG Images
  */
 /**
  * 1. Default
@@ -5466,7 +5467,7 @@ div.ajax-progress {
  *                |                     |
  *                +---------------------+
  */
-/* line 31, ../src/smacss/modules/_compound-segment.scss */
+/* line 32, ../src/smacss/modules/_compound-segment.scss */
 .media,
 .compound {
   display: -webkit-flex;
@@ -5474,20 +5475,20 @@ div.ajax-progress {
   display: flex;
 }
 
-/* line 36, ../src/smacss/modules/_compound-segment.scss */
+/* line 37, ../src/smacss/modules/_compound-segment.scss */
 .media-img,
 .media-img:link,
 .compound-img,
 .compound-img:link {
-  margin-bottom: 1.071428571428571em;
-  padding-right: 1.071428571428571em;
-  max-width: 31.3333333333%;
+  margin-bottom: calc(15 / 16 * 1rem);
+  padding-right: 2ch;
+  max-width: 33.3333333333%;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
 @media screen and (min-width: 43em) {
-  /* line 36, ../src/smacss/modules/_compound-segment.scss */
+  /* line 37, ../src/smacss/modules/_compound-segment.scss */
   .media-img,
   .media-img:link,
   .compound-img,
@@ -5550,11 +5551,31 @@ div.ajax-progress {
 .media-alt .media-img,
 .compound-alt .compound-img {
   padding-right: 0;
-  padding-left: 1.071428571428571em;
+  padding-left: 2ch;
 }
 
 /**
- * 3. Vertically-Centered
+ * 3. Spacing
+ *
+ * Separate compounds with extra spacing. Extends .compound
+ */
+/* line 109, ../src/smacss/modules/_compound-segment.scss */
+.compound-space-l {
+  margin: calc(30 / 16 * 1rem);
+}
+
+/* line 113, ../src/smacss/modules/_compound-segment.scss */
+.compound-space-l .compound-img {
+  padding-right: 4ch;
+}
+
+/* line 117, ../src/smacss/modules/_compound-segment.scss */
+.compound-space-l.compound-alt .compound-img {
+  padding-left: 4ch;
+}
+
+/**
+ * 4. Vertically-Centered
  * 
  * Vertically center .compound-child-alt with the rest of the compound.
  * Extends .compound-img or .compound-body.
@@ -5586,7 +5607,7 @@ div.ajax-progress {
  * |             |
  * +-------------+
  */
-/* line 138, ../src/smacss/modules/_compound-segment.scss */
+/* line 155, ../src/smacss/modules/_compound-segment.scss */
 .media-img-alt,
 .media-child-alt,
 .compound-child-alt {
@@ -5597,7 +5618,7 @@ div.ajax-progress {
 }
 
 /**
- * 4. Column And Squishy
+ * 5. Column And Squishy
  *
  * .compound-column puts .compound-img on the top. Extends .compound.
  *
@@ -5622,7 +5643,7 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 171, ../src/smacss/modules/_compound-segment.scss */
+/* line 188, ../src/smacss/modules/_compound-segment.scss */
 .media-column,
 .media-squishy,
 .compound-column,
@@ -5636,7 +5657,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 179, ../src/smacss/modules/_compound-segment.scss */
+  /* line 196, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
     -webkit-align-items: stretch;
@@ -5648,7 +5669,7 @@ div.ajax-progress {
   }
 }
 
-/* line 188, ../src/smacss/modules/_compound-segment.scss */
+/* line 205, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img,
 .media-squishy > .media-img,
 .compound-column > .compound-img,
@@ -5659,19 +5680,19 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 197, ../src/smacss/modules/_compound-segment.scss */
+  /* line 214, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     margin-bottom: calc(30 / 16 * 1rem);
-    padding-right: calc(15 / 16 * 1rem);
-    max-width: 31.3333333333%;
+    padding-right: 2ch;
+    max-width: 33.3333333333%;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
   }
 }
 
-/* line 209, ../src/smacss/modules/_compound-segment.scss */
+/* line 226, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5680,7 +5701,7 @@ div.ajax-progress {
 }
 
 /**
- * 5. SVG Images
+ * 6. SVG Images
  *
  * SVGs are tricky because they don’t come with intrinsic dimensions and
  * therefore lack flexibility.
@@ -5688,7 +5709,7 @@ div.ajax-progress {
  * These styles make sure they size up to the maximum available width of
  * the .compound-img container.
  */
-/* line 225, ../src/smacss/modules/_compound-segment.scss */
+/* line 242, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-full {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
