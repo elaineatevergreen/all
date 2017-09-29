@@ -38,10 +38,9 @@
 .compound-img,
 .compound-img:link{
 	// box model
-	//border-bottom-width: 0;
-	margin-bottom: 1.071428571428571em;  // 15px
-	padding-right: 1.071428571428571em;  // 15px
-	max-width: 31.3333333333%;
+	margin-bottom: calc(15 / 16 * 1rem);
+	padding-right: 2ch;
+	max-width: 33.3333333333%;
 	// layout
 	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
 
@@ -98,7 +97,7 @@
 .media-alt .media-img,  // deprecated
 .compound-alt .compound-img{
 	padding-right: 0;
-	padding-left: 1.071428571428571em;
+	padding-left: 2ch;
 }
 
 /**
@@ -198,9 +197,9 @@
 .compound-squishy > .compound-img{
 
 	@include breakpoint($starlord){
-		margin-bottom: calc(30 / 16 * 1rem);  // 15px
-		padding-right: calc(15 / 16 * 1rem);  // 15px
-		max-width: 31.3333333333%;
+		margin-bottom: calc(30 / 16 * 1rem);
+		padding-right: 2ch;
+		max-width: 33.3333333333%;
 		// layout
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
 	}
