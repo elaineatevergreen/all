@@ -11,9 +11,10 @@
  *
  * 1. Default
  * 2. Alternate
- * 3. Vertically-Centered
- * 4. Column And Squishy
- * 5. SVG Images
+ * 3. Spacing
+ * 4. Vertically-Centered
+ * 5. Column And Squishy
+ * 6. SVG Images
  */
 /**
  * 1. Default
@@ -101,7 +102,24 @@
 }
 
 /**
- * 3. Vertically-Centered
+ * 3. Spacing
+ *
+ * Separate compounds with extra spacing. Extends .compound
+ */
+.compound-space-l{
+	margin: calc(30 / 16 * 1rem);
+}
+
+.compound-space-l .compound-img{
+	padding-right: 4ch;
+}
+
+.compound-space-l.compound-alt .compound-img{
+	padding-left: 4ch;
+}
+
+/**
+ * 4. Vertically-Centered
  * 
  * Vertically center .compound-child-alt with the rest of the compound.
  * Extends .compound-img or .compound-body.
@@ -141,7 +159,7 @@
 }
 
 /**
- * 4. Column And Squishy
+ * 5. Column And Squishy
  *
  * .compound-column puts .compound-img on the top. Extends .compound.
  *
@@ -213,7 +231,7 @@
 }
 
 /**
- * 5. SVG Images
+ * 6. SVG Images
  *
  * SVGs are tricky because they don’t come with intrinsic dimensions and
  * therefore lack flexibility.
