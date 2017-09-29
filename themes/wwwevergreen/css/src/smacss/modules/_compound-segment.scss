@@ -107,7 +107,7 @@
  * Separate compounds with extra spacing. Extends .compound
  */
 .compound-space-l{
-	margin: calc(30 / 16 * 1rem);
+	margin: calc(30 / 16 * 1rem) auto;
 }
 
 .compound-space-l .compound-img{
@@ -115,6 +115,7 @@
 }
 
 .compound-space-l.compound-alt .compound-img{
+	padding-right: 0;
 	padding-left: 4ch;
 }
 
@@ -240,5 +241,8 @@
  * the .compound-img container.
  */
 .compound-img-full{
+	// box model
+	width: 100%;  // for .compound-column with SVG inside (see /about --> 1,000 for example)
+	// layout
 	flex-basis: 100%;
 }
