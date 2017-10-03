@@ -12,7 +12,6 @@ function evergreen_content_default_rules_configuration() {
   $items['rules_generate_section_home_page'] = entity_import('rules_config', '{ "rules_generate_section_home_page" : {
       "LABEL" : "Generate Section Home Page",
       "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "Site Creation" ],
       "REQUIRES" : [ "rules", "taxonomy" ],
@@ -89,9 +88,9 @@ function evergreen_content_default_rules_configuration() {
       ],
       "DO" : [
         { "mail_to_users_of_role" : {
-            "roles" : { "value" : { "4" : "4", "6" : "6" } },
+            "roles" : { "value" : { "6" : "6", "4" : "4", "12" : "12", "3" : "3" } },
             "subject" : "Campus Calendar: new event submitted ",
-            "message" : "An event has been submitted by [site:current-user]. \\r\\n\\r\\n[node:title]\\r\\n[node:field-event-date:value]\\r\\nCategory(ies): [node:field_category]\\r\\nFormat: [node:field_format]\\r\\n\\r\\nGo to http:\\/\\/collab.evergreen.edu\\/calendar\\/admin\\/workbench\\/needs-review to review all new events."
+            "message" : "An event has been submitted by [site:current-user]. \\r\\n\\r\\n[node:title]\\r\\n[node:field-event-date:value]\\r\\nCategory(ies): [node:field_category]\\r\\nFormat: [node:field_format]\\r\\n\\r\\nGo to http:\\/\\/www.evergreen.edu\\/admin\\/workbench\\/needs-review to review all new events."
           }
         },
         { "drupal_message" : { "message" : "Thank you for submitting your event: [node:title]. A moderator will review your information and publish it to the calendar." } }

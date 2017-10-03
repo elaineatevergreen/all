@@ -508,6 +508,61 @@ function evergreen_content_feeds_tamper_default() {
   $export['catalog_multi_upload-xpathparser_60-find_replace'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_62-default_value';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:62';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => '1',
+    'only_if_empty' => 1,
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Default publish state (for old feed)';
+  $export['catalog_multi_upload-xpathparser_62-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_62-find_replace';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:62';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'Unpublished',
+    'replace' => '0',
+    'case_sensitive' => 1,
+    'word_boundaries' => 1,
+    'whole' => 1,
+    'regex' => TRUE,
+    'regex_find' => '/^Unpublished$/u',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Unpublished = 0';
+  $export['catalog_multi_upload-xpathparser_62-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'catalog_multi_upload-xpathparser_62-find_replace2';
+  $feeds_tamper->importer = 'catalog_multi_upload';
+  $feeds_tamper->source = 'xpathparser:62';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'Published',
+    'replace' => '1',
+    'case_sensitive' => 1,
+    'word_boundaries' => 1,
+    'whole' => 1,
+    'regex' => TRUE,
+    'regex_find' => '/^Published$/u',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Published = 1';
+  $export['catalog_multi_upload-xpathparser_62-find_replace2'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'faculty_directory-blank_source_1-default_value';
@@ -853,6 +908,21 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'people_directory-blank_source_1-default_value';
+  $feeds_tamper->importer = 'people_directory';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'US',
+    'only_if_empty' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set value or default value';
+  $export['people_directory-blank_source_1-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'people_directory-xpathparser_10-convert_case';
   $feeds_tamper->importer = 'people_directory';
   $feeds_tamper->source = 'xpathparser:10';
@@ -867,6 +937,26 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'people_directory-xpathparser_12-find_replace';
+  $feeds_tamper->importer = 'people_directory';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '110 Fifth Avenue SE, Suite 214 PO Box 40999',
+    'replace' => '',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Remove WSIPP';
+  $export['people_directory-xpathparser_12-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'people_directory-xpathparser_12-find_replace_regex';
   $feeds_tamper->importer = 'people_directory';
   $feeds_tamper->source = 'xpathparser:12';
@@ -877,7 +967,7 @@ function evergreen_content_feeds_tamper_default() {
     'limit' => '',
     'real_limit' => -1,
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'REGEX to remove Room';
   $export['people_directory-xpathparser_12-find_replace_regex'] = $feeds_tamper;
 
@@ -918,6 +1008,26 @@ function evergreen_content_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'people_directory-xpathparser_9-find_replace';
+  $feeds_tamper->importer = 'people_directory';
+  $feeds_tamper->source = 'xpathparser:9';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => '110 Fifth Avenue SE, Suite 214 PO Box 40999',
+    'replace' => '',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Remove WSIPP';
+  $export['people_directory-xpathparser_9-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'people_directory-xpathparser_9-find_replace_regex';
   $feeds_tamper->importer = 'people_directory';
   $feeds_tamper->source = 'xpathparser:9';
@@ -928,7 +1038,7 @@ function evergreen_content_feeds_tamper_default() {
     'limit' => '',
     'real_limit' => -1,
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'REGEX to remove Building';
   $export['people_directory-xpathparser_9-find_replace_regex'] = $feeds_tamper;
 
