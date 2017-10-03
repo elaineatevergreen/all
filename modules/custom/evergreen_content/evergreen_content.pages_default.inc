@@ -95,6 +95,8 @@ function evergreen_content_default_page_manager_handlers() {
     'admin_title' => 'Placeholder Workbench Help',
     'title' => 'CMS Help',
     'body' => '<p>See the Canvas course "<a href="https://canvas.evergreen.edu/courses/1257">Website Editor Training</a>" for tutorials and other materials.</p>
+
+<p>If you need help with something in particular, please <a href="https://forms.evergreen.edu/web-assistance-request">request assistance via our form</a>.</p>
 ',
     'format' => 'basic_tags',
     'substitute' => TRUE,
@@ -112,11 +114,46 @@ function evergreen_content_default_page_manager_handlers() {
   $display->content['new-01128484-59de-48ad-a5da-74b04005f5cb'] = $pane;
   $display->panels['left_above'][1] = 'new-01128484-59de-48ad-a5da-74b04005f5cb';
   $pane = new stdClass();
+  $pane->pid = 'new-a0dc2b0d-465f-4306-9423-59611ea3f2e9';
+  $pane->panel = 'left_above';
+  $pane->type = 'views';
+  $pane->subtype = 'blog';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '5',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '125',
+    'url' => '',
+    'display' => 'headlines',
+    'override_title' => 1,
+    'override_title_text' => 'Web Team News',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'a0dc2b0d-465f-4306-9423-59611ea3f2e9';
+  $display->content['new-a0dc2b0d-465f-4306-9423-59611ea3f2e9'] = $pane;
+  $display->panels['left_above'][2] = 'new-a0dc2b0d-465f-4306-9423-59611ea3f2e9';
+  $pane = new stdClass();
   $pane->pid = 'new-d056af79-4c98-493e-a2d2-5e3cc9acd522';
   $pane->panel = 'left_above';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
@@ -132,11 +169,11 @@ function evergreen_content_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = 'd056af79-4c98-493e-a2d2-5e3cc9acd522';
   $display->content['new-d056af79-4c98-493e-a2d2-5e3cc9acd522'] = $pane;
-  $display->panels['left_above'][2] = 'new-d056af79-4c98-493e-a2d2-5e3cc9acd522';
+  $display->panels['left_above'][3] = 'new-d056af79-4c98-493e-a2d2-5e3cc9acd522';
   $pane = new stdClass();
   $pane->pid = 'new-535f198c-afc8-4c97-a6ff-db27d544eb29';
   $pane->panel = 'left_above';
@@ -166,11 +203,11 @@ function evergreen_content_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = '';
   $pane->uuid = '535f198c-afc8-4c97-a6ff-db27d544eb29';
   $display->content['new-535f198c-afc8-4c97-a6ff-db27d544eb29'] = $pane;
-  $display->panels['left_above'][3] = 'new-535f198c-afc8-4c97-a6ff-db27d544eb29';
+  $display->panels['left_above'][4] = 'new-535f198c-afc8-4c97-a6ff-db27d544eb29';
   $pane = new stdClass();
   $pane->pid = 'new-042db4d8-e5f2-44c4-9495-ff0b6814d9c6';
   $pane->panel = 'middle';
@@ -327,8 +364,8 @@ function evergreen_content_default_page_manager_pages() {
         'settings' => array(
           'rids' => array(
             0 => 7,
-            1 => 10,
-            2 => 4,
+            1 => 12,
+            2 => 3,
           ),
         ),
         'context' => 'logged-in-user',
@@ -506,6 +543,8 @@ function evergreen_content_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
