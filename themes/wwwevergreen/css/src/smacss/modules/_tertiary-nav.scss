@@ -32,21 +32,6 @@
 	}
 }
 
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
-
-	.tertiary-nav-wrapper{
-		padding-left: 0;  // Overrides flexbox-based grid
-		
-		@include breakpoint($gamora){
-			width: auto;
-		}
-
-		@include breakpoint($drax){
-			width: auto;
-		}
-	}
-}
-
 #tertiary-nav,
 #views-exposed-form-catalog-page,  // Drupal; the filter form on the catalog page where #tertiary-nav would normally go... Can or should this just be changed to #tertiary-nav? -jkm
 #views-exposed-form-catalog-grad-programs{  // Drupal; the filter form on the grad program catalog page
@@ -70,7 +55,7 @@
 		// box model
 		//margin-top: calc(30 / 16 * 1rem);
 		padding-top: calc(45 / 16 * 1rem);
-		width: calc(100% + 2ch);
+		width: calc(100% + 1em);
 		max-width: none;
 		// position
 		position: relative;

@@ -57,8 +57,9 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   </title>
   <?php print $styles; ?>
   
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" /><!-- Do not allow (In)Compatibility Mode -->
-	<meta content="width=device-width, maximum-scale=1.0, minimum-scale=1.0" name="viewport" /><!-- Responsive design mode -->
+  <!-- stuff from existing page -->
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" /><!-- Do not allow (In)Compatibility Mode -->
+	<meta content="width=device-width, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->

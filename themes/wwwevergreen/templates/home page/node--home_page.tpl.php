@@ -27,7 +27,7 @@
 <div class="row">
 	<div class="wrapper">
 		<div class="grid">
-			<div class="unit-1-1">
+			<div class="standalone-unit unit-1-1">
 				<!-- Location Transporter -->
 				<p class="location-transporter">
 					Olympia / <a href="/tacoma">Tacoma Program</a> / <a href="/tribal">Native Pathways Program</a>
@@ -40,7 +40,7 @@
 			<li class="unit-1-7 icon-scale">
 				<a href="/about">
 					<div class="transporter-icon">
-						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.svg"/>
+						<img alt="" class="icon" src="<?php print base_path() . path_to_theme() ?>/images/icons/green/info.png"/>
 					</div>
 					<div class="transporter-text">About Evergreen</div>
 				</a>

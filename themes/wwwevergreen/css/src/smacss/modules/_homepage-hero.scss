@@ -18,29 +18,29 @@
  *
  * 1. Default
  * 2. Graduation Day Hero Image
- * 3. Slogan
- * 4. Slogan Modifiers
+ * 3. Copy
+ * 4. Copy Modifiers
  */
+.homepage-hero,
+.homepage-hero-content{
+	height: 100%;
+	overflow: hidden;
+}
 
 .homepage-hero{
-	// box model
-	height: 100%;
-	// layout
-	overflow: hidden;
-	// layout
-	position: relative;
 
 	@include breakpoint($lil-groot){
 		// box model
 		width: 100%;
 		// layout
 		overflow: hidden;
+		// positioning
 		position: relative;  // Creates a stage for absolute positioning of child elements
 	}
 
-	/*@include breakpoint($drax){
+	@include breakpoint($drax){
 		display: table;  // Gives it a block formatting context
-	}*/
+	}
 }
 
 .homepage-hero-picture img{  // .homepage-hero-picture is the fallback image
@@ -86,21 +86,6 @@
 	}
 }
 
-.homepage-hero-caption{
-	// layout
-	position: relative;
-	z-index: 1;
-	
-	@include breakpoint($gamora){
-		position: absolute;
-		bottom: 0;
-	}
-}
-
-.homepage-hero-caption .caption-box{
-	margin: 0;
-}
-
 .homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
 .homepage-hero a:visited,
 .homepage-hero a:hover{
@@ -127,16 +112,6 @@
 	&:hover{
 		background-color: $sky-blue;
 	}
-	
-	@include breakpoint($starlord){
-		font-size: calc(1rem + 1vh);
-		line-height: 1.5;
-	}
-
-	@include breakpoint($gamora){
-		// layout
-		float: right;
-	}
 
 	@include breakpoint($drax){
 		font-size: 1.82rem;  // Step 3
@@ -146,7 +121,6 @@
 
 .homepage-hero-content{  // Holds the .caption-box and .homepage-hero-copy
 	// box model
-	height: 100%;
 	width: 100%;
 	max-width: 77em;
 	// decoration
@@ -154,14 +128,16 @@
 
 	@include breakpoint($lil-groot){
 		// layout
-		flex-direction: column-reverse;
+		display: flex;  // W3C
+		flex-direction: column;
+		// positioning
 		position: absolute;
 		bottom: 0;
 		// decoration
 		background-color: transparent;
 	}
 
-	@include breakpoint($starlord){
+	@media screen and (min-width: 25em){
 		justify-content: center;
 	}
 
@@ -173,7 +149,7 @@
 .homepage-hero-content .box{
 	margin: 0;
 
-	@include breakpoint($starlord){
+	@include breakpoint($lil-groot){
 		position: absolute;
 		bottom: 0;
 	}
@@ -231,101 +207,46 @@
 }
 
 /**
- * 3. Slogan
+ * 3. Copy
  */
-.homepage-hero-slogan-wrapper{
-	// box model
-	padding-left: 4ch;
-	width: 75%;
-	// layout
-	position: absolute;
-	top: 0;
-	// decoration
-	background-image: linear-gradient(to right, hsla(0, 0%, 0%, 0.667), hsla(0, 0%, 0%, 0.5) 66.6666666667%, hsla(0, 0%, 0%, 0));
-	//background-image: scrim-gradient(to right, hsla(0, 0%, 0%, 0.75), transparent);
-	
-	@include breakpoint($starlord){
-		width: 66.6666666667%;
-	}
-	
-	@include breakpoint($gamora){
-		width: calc(4 / 7 * 100%);
-	}
-	
-	@include breakpoint($drax){
-		width: calc(3 / 7 * 100%);
-	}
-}
+.homepage-hero-copy{
+	margin: 0 calc(15 / 14 * 1em);
 
-.homepage-hero-slogan{
-	// layout
-	display: flex;
-	
 	@include breakpoint($lil-groot){
 		// box model
-		//width: calc(66.6666666667% - 2ch);
+		width: calc(66.6666666667% - 1em);
 		// layout
-		//float: left;
+		float: left;
 	}
 
 	@include breakpoint($starlord){
 		// box model
-		//margin: 0 2ch;
-		//width: calc(50% - 2ch);
+		margin: 0 1em;
+		width: calc(50% - 1em);
 		color: $tint;
 		// typography
 		text-shadow: 0 1px 2px mix($shade, $blueberry-susan, 80%);
 	}
 
-	//@include breakpoint($drax){
-	@include breakpoint($gamora){
-		//margin: 33% auto 0;
-		//width: calc((3 / 7 * 100%) - 1em);  //3/7
-		//width: 90vw;
-		//max-width: calc(100% - 4ch);
-	}
-	
 	@include breakpoint($drax){
-		//width: 70vw;
+		width: calc((3 / 7 * 100%) - 1em);  //3/7
 	}
 }
 
-.homepage-hero-slogan h1{
-	// box model
-	margin-right: 1ch;
-	width: 61%;
-	// layout
-	float: left;
-	// typography
+.homepage-hero-copy h1{
 	font-size: 1.202rem;
 	line-height: 1.169925124792013;  //22.5/19.232
 
 	@include breakpoint($lil-groot){
-		// box model
-		margin-top: 2em;
 		//typography
 		color: $tint;
 		text-shadow: 0 2px 1px mix($shade, $blueberry-susan, 80%);
 	}
-	
-	@include breakpoint($starlord){
-		// box model
-		margin-top: 1em;
-		width: 65%;
-	}
 
 	@include breakpoint($gamora){
-		// box model
-		margin-top: 1.5em;
-		width: 70%;
 		//typography
 		font-size: 1.416rem;
 		line-height: 1.324152542372881;  //30/22.656
-	}
-	
-	@include breakpoint($drax){
-		// box model
-		margin-top: 3.5em;
 	}
 
 	@media screen and (min-width: 86em){  // Odd-sized media query, for better text appearance.
@@ -335,39 +256,7 @@
 	}
 }
 
-.homepage-hero-slogan-keywords{
-	// box model
-	margin-top: -10vh;
-	width: 39%;
-	// layout
-	float: left;
-	// animation
-	animation-duration: 2s;
-	//animation-name: spinDown;
-	//animation-timing-function: ease-out;
-	animation-timing-function: cubic-bezier(0.240, 0.820, 0.695, 1.145);  // Custom, with bounce
-	
-	
-	@include breakpoint($starlord){
-		width: 35%;
-	}
-	
-	@include breakpoint($gamora){
-		width: 30%;
-	}
-}
-
-@keyframes spinDown{
-	from{
-		margin-top: -75vh;
-	}
-	
-	to{
-		margin-top: -10vh;
-	}
-}
-
-.homepage-hero-slogan img{
+.homepage-hero-copy img{
 	width: 100%;  // IE 11
 }
 
@@ -382,31 +271,21 @@
  * - .homepage-hero-img-detailed  Adds a violet background to make the text
  *                                more readable on detailed images.
  */
-.homepage-hero-copy-alt .homepage-hero-slogan-wrapper{
+.homepage-hero-copy-alt .homepage-hero-copy{
 
 	@include breakpoint($lil-groot){
-		// box model
-		padding-right: 4ch;
-		padding-left: 0;
 		//layout
-		//align-self: flex-end;
-		//float: right;
-		right: 0;
-		// decoration
-		background-image: linear-gradient(to left, hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.5) 66.66667%, transparent);
-		//background-image: scrim-gradient(to left, hsla(0, 0%, 0%, 0.75), transparent);
+		align-self: flex-end;
+		float: right;
 	}
 
 	@include breakpoint($starlord){
 		//layout
-		//align-self: flex-end;  //W3C
-		//float: right;  //IE9
+		align-self: flex-end;  //W3C
+		float: right;  //IE9
 	}
 }
 
-
-/* I do  not believe this entire section is needed for the latest slogan. */
-/*
 .homepage-hero-img-detailed .homepage-hero-copy{
 	// box model
 	height: 100%;
@@ -427,11 +306,14 @@
 	}
 
 	@include breakpoint($gamora){
-		// box model
-		margin: 5em 2ch 0;
-		padding: 0;
-		width: calc(100% - 4ch);
-		// decoration
-		background-color: transparent;
+		padding: 0 calc(15 / 17 * 1em);
 	}
-}*/
+
+	@include breakpoint($drax){
+		width: calc(3 / 7 * 100%);
+	}
+
+	@include breakpoint($groot){
+		padding: 0 calc(30 / 19.23333333333 * 1em);
+	}
+}

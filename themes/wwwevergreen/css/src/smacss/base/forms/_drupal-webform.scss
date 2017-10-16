@@ -97,9 +97,12 @@
  * c. Textareas
  */
 .resizable-textarea .grippie{  // This should match the dimensions of the textarea; if it doesn't, update these styles
+	// box model
 	width: 100%;
 	max-width: calc(45ch + 1em);
 	min-width: 50%;
+	// typography
+	font-family: $text-face-alt;  // Makes it so that the width is calculated off the same font-family as the textarea
 }
 
 /**
