@@ -128,6 +128,7 @@ input.prime:focus,
 input.prime:active,
 .box .prime:active{
 	// typography
+	color: $tint;
 	text-shadow: 0 1px 0 $drop-shadow;
 	// decoration
 	background-color: mix($shade, $evergreen-neue, 40%);  // IE 9
