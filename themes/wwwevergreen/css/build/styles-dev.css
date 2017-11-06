@@ -1670,7 +1670,7 @@ input[type="submit"],
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: normal;
-  text-shadow: 0 -1px 0 rgba(253, 244, 182, 0.5);
+  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #e1dee3;
   background-image: -webkit-linear-gradient(#ebe0ad, #d0cad4);
   background-image: linear-gradient(#ebe0ad, #d0cad4);
@@ -1711,7 +1711,6 @@ input[type="button"]:focus,
 input[type="submit"]:focus,
 .box .button:focus {
   color: #2c1a38;
-  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
   background-color: #e1dee3;
   background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
   background-image: linear-gradient(#f4eab2, #c8c1cd);
@@ -1719,13 +1718,13 @@ input[type="submit"]:focus,
   outline-width: 0;
 }
 
-/* line 69, ../src/smacss/base/_buttons.scss */
+/* line 68, ../src/smacss/base/_buttons.scss */
 button:active,
 .button:active,
 input[type="button"]:active,
 input[type="submit"]:active,
 .box .button:active {
-  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #8d7b99;
   background-image: -webkit-linear-gradient(#d0cad4, #e1dee3);
   background-image: linear-gradient(#d0cad4, #e1dee3);
@@ -1739,7 +1738,7 @@ input[type="submit"]:active,
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 91, ../src/smacss/base/_buttons.scss */
+/* line 89, ../src/smacss/base/_buttons.scss */
 .prime,
 .prime:visited,
 input.prime,
@@ -1754,7 +1753,7 @@ input.prime,
   border-color: #46502b;
 }
 
-/* line 105, ../src/smacss/base/_buttons.scss */
+/* line 103, ../src/smacss/base/_buttons.scss */
 .prime:hover,
 input.prime:hover,
 .webform-client-form .button-primary:hover,
@@ -1766,7 +1765,7 @@ input.prime:hover,
   background-image: linear-gradient(#dee19d, #b9cca8);
 }
 
-/* line 116, ../src/smacss/base/_buttons.scss */
+/* line 114, ../src/smacss/base/_buttons.scss */
 .prime:focus,
 input.prime:focus,
 .webform-client-form .button-primary:focus,
@@ -1778,13 +1777,13 @@ input.prime:focus,
   background-image: linear-gradient(#dee19d, #b9cca8);
 }
 
-/* line 127, ../src/smacss/base/_buttons.scss */
+/* line 125, ../src/smacss/base/_buttons.scss */
 .prime:active,
 input.prime:active,
 .webform-client-form .button-primary:active,
 .box .prime:active {
   color: #f2f2f2;
-  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #3c5823;
   background-image: -webkit-linear-gradient(#3c5823, #50762e);
   background-image: linear-gradient(#3c5823, #50762e);
@@ -1798,7 +1797,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 146, ../src/smacss/base/_buttons.scss */
+/* line 145, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1814,7 +1813,7 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 164, ../src/smacss/base/_buttons.scss */
+/* line 163, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
