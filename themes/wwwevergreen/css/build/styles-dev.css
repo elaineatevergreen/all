@@ -1784,6 +1784,7 @@ input.prime:focus,
 input.prime:active,
 .webform-client-form .button-primary:active,
 .box .prime:active {
+  color: #f2f2f2;
   text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
   background-color: #3c5823;
   background-image: -webkit-linear-gradient(#3c5823, #50762e);
@@ -1798,7 +1799,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 146, ../src/smacss/base/_buttons.scss */
+/* line 147, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1814,7 +1815,7 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 164, ../src/smacss/base/_buttons.scss */
+/* line 165, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
