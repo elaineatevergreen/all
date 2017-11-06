@@ -57,7 +57,7 @@ input[type="submit"]:focus{
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(mix($morning-light, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
-	border-color: mix($blueberry-susan);
+	border-color: $blueberry-susan;
 	outline-width: 0;
 }
 

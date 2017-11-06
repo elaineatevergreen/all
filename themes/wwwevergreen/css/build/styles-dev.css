@@ -1669,9 +1669,9 @@ input[type="submit"] {
   font-size: 1em;
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
-  background-color: #d0cad4;
-  background-image: -webkit-linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
-  background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
+  background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(#ebe0ad, #d0cad4);
+  background-image: linear-gradient(#ebe0ad, #d0cad4);
   border-radius: 0.2em;
   text-decoration: none;
   box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
@@ -1694,8 +1694,8 @@ input[type="button"]:hover,
 input[type="submit"]:hover {
   color: #2c1a38;
   background-color: #e1dee3;
-  background-image: -webkit-linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
-  background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
+  background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
+  background-image: linear-gradient(#f4eab2, #c8c1cd);
   border-color: #8d7b99;
 }
 
@@ -1704,18 +1704,24 @@ button:focus,
 .button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
-  border-color: #919191;
+  color: #2c1a38;
+  background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
+  background-image: linear-gradient(#f4eab2, #c8c1cd);
+  border-color: #492c5d;
   outline-width: 0;
 }
 
-/* line 59, ../src/smacss/base/_buttons.scss */
+/* line 64, ../src/smacss/base/_buttons.scss */
 button:active,
 .button:active,
 input[type="button"]:active,
 input[type="submit"]:active {
+  color: #f2f2f2;
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #8d7b99;
-  background-image: -webkit-linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
-  background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
+  background-image: -webkit-linear-gradient(#8d7b99, #b5a492);
+  background-image: linear-gradient(#8d7b99, #b5a492);
   box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
 
@@ -1726,7 +1732,7 @@ input[type="submit"]:active {
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 77, ../src/smacss/base/_buttons.scss */
+/* line 85, ../src/smacss/base/_buttons.scss */
 .prime,
 .prime:visited,
 input.prime,
@@ -1739,7 +1745,7 @@ input.prime,
   border-color: #46502b;
 }
 
-/* line 89, ../src/smacss/base/_buttons.scss */
+/* line 97, ../src/smacss/base/_buttons.scss */
 .prime:hover,
 input.prime:hover,
 .webform-client-form .button-primary:hover {
@@ -1751,14 +1757,14 @@ input.prime:hover,
   border-bottom-color: #46502b;
 }
 
-/* line 100, ../src/smacss/base/_buttons.scss */
+/* line 108, ../src/smacss/base/_buttons.scss */
 .prime:focus,
 input.prime:focus,
 .webform-client-form .button-primary:focus {
   border-color: #919191;
 }
 
-/* line 105, ../src/smacss/base/_buttons.scss */
+/* line 113, ../src/smacss/base/_buttons.scss */
 .prime:active,
 input.prime:active,
 .webform-client-form .button-primary:active {
@@ -1775,7 +1781,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 121, ../src/smacss/base/_buttons.scss */
+/* line 129, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1791,7 +1797,7 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 139, ../src/smacss/base/_buttons.scss */
+/* line 147, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
@@ -4364,7 +4370,8 @@ input:checked + .header-dropdown {
 /* line 53, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
-  border-color: #0086ee;
+  -webkit-text-decoration-color: #0086ee;
+          text-decoration-color: #0086ee;
 }
 
 /* line 60, ../src/smacss/modules/_footer.scss */
@@ -5910,7 +5917,7 @@ p.box,
 }
 
 /* line 90, ../src/smacss/modules/_boxes.scss */
-.box a:hover:not(.action-box) {
+.box:not(.action-box) a:hover {
   color: #00508f;
   background-color: #dae7f2;
 }
