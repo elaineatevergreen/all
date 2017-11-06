@@ -1725,11 +1725,10 @@ button:active,
 input[type="button"]:active,
 input[type="submit"]:active,
 .box .button:active {
-  color: #f2f2f2;
-  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
   background-color: #8d7b99;
-  background-image: -webkit-linear-gradient(#8d7b99, #b5a492);
-  background-image: linear-gradient(#8d7b99, #b5a492);
+  background-image: -webkit-linear-gradient(#d0cad4, #e1dee3);
+  background-image: linear-gradient(#d0cad4, #e1dee3);
   box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
 
@@ -1784,6 +1783,7 @@ input.prime:focus,
 input.prime:active,
 .webform-client-form .button-primary:active,
 .box .prime:active {
+  color: #f2f2f2;
   text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
   background-color: #3c5823;
   background-image: -webkit-linear-gradient(#3c5823, #50762e);
