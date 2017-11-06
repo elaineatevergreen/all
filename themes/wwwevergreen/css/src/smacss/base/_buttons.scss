@@ -28,6 +28,7 @@ input[type="submit"]{
 	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
 	background-image: linear-gradient(mix($highlight, $blueberry-susan, 85%), mix($tint, $blueberry-susan, 65%));
 	border-radius: 0.2em;
+	text-decoration: none;
 	// miscelaneous
 	box-shadow: 0 0.2em 0.2em $drop-shadow;
 
@@ -80,19 +81,19 @@ input.prime{
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
 	// decoration
-	background-color: $evergreen-neue;  // IE 9
-	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 40%), $evergreen-neue);
+	background-color: mix($shade, $evergreen-neue, 40%);  // IE 9
+	background-image: linear-gradient(mix($shade, $evergreen-neue, 20%), mix($shade, $evergreen-neue, 40%);
 	border-color: $evergreen-old-style;
 }
 
 .prime:hover,
 input.prime:hover{
 	// typography
-	color: $evergreen-old-style;
+	color: mix($shade, $evergreen-old-style, 20%);
 	text-shadow: 0 1px 0 $highlight;
 	// decoration
-	background-color: mix($tint, $evergreen-neue, 20%);  // IE 9
-	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 60%), mix($tint, $evergreen-neue, 20%));
+	background-color: mix($tint, $evergreen-neue, 80%);  // IE 9
+	background-image: linear-gradient(mix($morning-light, $evergreen-neue, 80%), mix($tint, $evergreen-neue, 60%));
 	border-bottom-color: $evergreen-old-style;
 }
 
