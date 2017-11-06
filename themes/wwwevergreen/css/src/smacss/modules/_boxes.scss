@@ -87,7 +87,7 @@ p.box,  // WYSIWYG
 }
 
 // Increase the contrast of hovered links in blue boxes
-.box a:hover:not(.action-box){
+.box:not(.action-box) a:hover{
 	// typography
 	color: mix($shade, $sky-blue, 40%);
 	// decoration
