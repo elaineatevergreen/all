@@ -1658,7 +1658,9 @@ button,
 .button,
 .button:visited,
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+.box .button,
+.box .button:visited {
   border: 1px solid #8d7b99;
   height: auto;
   margin-bottom: 1.262201279030629em;
@@ -1668,10 +1670,10 @@ input[type="submit"] {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: normal;
-  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
-  background-color: #d0cad4;
-  background-image: -webkit-linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
-  background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
+  text-shadow: 0 -1px 0 rgba(253, 244, 182, 0.5);
+  background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(#ebe0ad, #d0cad4);
+  background-image: linear-gradient(#ebe0ad, #d0cad4);
   border-radius: 0.2em;
   text-decoration: none;
   box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
@@ -1682,40 +1684,52 @@ input[type="submit"] {
   .button,
   .button:visited,
   input[type="button"],
-  input[type="submit"] {
+  input[type="submit"],
+  .box .button,
+  .box .button:visited {
     margin-bottom: 0.83333333333333em;
   }
 }
 
-/* line 40, ../src/smacss/base/_buttons.scss */
+/* line 42, ../src/smacss/base/_buttons.scss */
 button:hover,
 .button:hover,
 input[type="button"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.box .button:hover {
   color: #2c1a38;
   background-color: #e1dee3;
-  background-image: -webkit-linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
-  background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
+  background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
+  background-image: linear-gradient(#f4eab2, #c8c1cd);
   border-color: #8d7b99;
 }
 
-/* line 51, ../src/smacss/base/_buttons.scss */
+/* line 54, ../src/smacss/base/_buttons.scss */
 button:focus,
 .button:focus,
 input[type="button"]:focus,
-input[type="submit"]:focus {
-  border-color: #919191;
+input[type="submit"]:focus,
+.box .button:focus {
+  color: #2c1a38;
+  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
+  background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
+  background-image: linear-gradient(#f4eab2, #c8c1cd);
+  border-color: #492c5d;
   outline-width: 0;
 }
 
-/* line 59, ../src/smacss/base/_buttons.scss */
+/* line 69, ../src/smacss/base/_buttons.scss */
 button:active,
 .button:active,
 input[type="button"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active,
+.box .button:active {
+  color: #f2f2f2;
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #8d7b99;
-  background-image: -webkit-linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
-  background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
+  background-image: -webkit-linear-gradient(#8d7b99, #b5a492);
+  background-image: linear-gradient(#8d7b99, #b5a492);
   box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
 
@@ -1726,11 +1740,13 @@ input[type="submit"]:active {
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 77, ../src/smacss/base/_buttons.scss */
+/* line 91, ../src/smacss/base/_buttons.scss */
 .prime,
 .prime:visited,
 input.prime,
-.webform-client-form .button-primary {
+.webform-client-form .button-primary,
+.box .prime,
+.box .prime:visited {
   color: #f2f2f2;
   text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #3c5823;
@@ -1739,32 +1755,40 @@ input.prime,
   border-color: #46502b;
 }
 
-/* line 89, ../src/smacss/base/_buttons.scss */
+/* line 105, ../src/smacss/base/_buttons.scss */
 .prime:hover,
 input.prime:hover,
-.webform-client-form .button-primary:hover {
+.webform-client-form .button-primary:hover,
+.box .prime:hover {
   color: #384022;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #d6dfcd;
   background-image: -webkit-linear-gradient(#dee19d, #b9cca8);
   background-image: linear-gradient(#dee19d, #b9cca8);
-  border-bottom-color: #46502b;
 }
 
-/* line 100, ../src/smacss/base/_buttons.scss */
+/* line 116, ../src/smacss/base/_buttons.scss */
 .prime:focus,
 input.prime:focus,
-.webform-client-form .button-primary:focus {
-  border-color: #919191;
+.webform-client-form .button-primary:focus,
+.box .prime:focus {
+  color: #384022;
+  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
+  background-color: #d6dfcd;
+  background-image: -webkit-linear-gradient(#dee19d, #b9cca8);
+  background-image: linear-gradient(#dee19d, #b9cca8);
 }
 
-/* line 105, ../src/smacss/base/_buttons.scss */
+/* line 127, ../src/smacss/base/_buttons.scss */
 .prime:active,
 input.prime:active,
-.webform-client-form .button-primary:active {
-  background-color: #9db984;
-  background-image: -webkit-linear-gradient(#64933a, #83a653);
-  background-image: linear-gradient(#64933a, #83a653);
+.webform-client-form .button-primary:active,
+.box .prime:active {
+  color: #f2f2f2;
+  text-shadow: 0 1px 0 rgba(29, 18, 37, 0.25);
+  background-color: #3c5823;
+  background-image: -webkit-linear-gradient(#3c5823, #50762e);
+  background-image: linear-gradient(#3c5823, #50762e);
 }
 
 /**
@@ -1775,7 +1799,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 121, ../src/smacss/base/_buttons.scss */
+/* line 147, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1791,7 +1815,7 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 139, ../src/smacss/base/_buttons.scss */
+/* line 165, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
@@ -4364,7 +4388,8 @@ input:checked + .header-dropdown {
 /* line 53, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
-  border-color: #0086ee;
+  -webkit-text-decoration-color: #0086ee;
+          text-decoration-color: #0086ee;
 }
 
 /* line 60, ../src/smacss/modules/_footer.scss */
@@ -5910,7 +5935,7 @@ p.box,
 }
 
 /* line 90, ../src/smacss/modules/_boxes.scss */
-.box a:hover:not(.action-box) {
+.box:not(.action-box) a:not(.button):hover {
   color: #00508f;
   background-color: #dae7f2;
 }
