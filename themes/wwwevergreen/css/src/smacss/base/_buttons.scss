@@ -25,7 +25,7 @@ input[type="submit"],
 	font-family: $display-face;
 	font-size: 1em;
 	font-weight: normal;
-	text-shadow: 0 1px 0 $highlight;
+	text-shadow: 0 -1px 0 $highlight;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(mix($morning-light, $blueberry-susan, 90%), mix($tint, $blueberry-susan, 80%));
@@ -58,6 +58,7 @@ input[type="submit"]:focus,
 .box .button:focus{
 	// typography
 	color: mix($shade, $blueberry-susan, 40%);
+	text-shadow: 0 1px 0 $drop-shadow;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(mix($morning-light, $blueberry-susan, 95%), mix($tint, $blueberry-susan, 75%));
