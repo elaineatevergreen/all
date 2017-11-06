@@ -57,6 +57,15 @@
 	border-color: $sky-blue;
 }
 
+.page-footer a:focus{
+	// decoration
+	background-color: transparentize($tint, .9);
+	outline-color: $tint;
+	outline-offset: 1px;
+	outline-style: dotted;
+	outline-width: 1px;
+}
+
 .page-footer-unit .lineup{
 	justify-content: center;
 

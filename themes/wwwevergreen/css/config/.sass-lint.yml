@@ -223,6 +223,9 @@ rules:
         - counter-increment
         - fill
         - outline
+        - outline-color
+        - outline-offset
+        - outline-style
         - outline-width
         - text-decoration
         - text-decoration-color

@@ -4367,13 +4367,22 @@ input:checked + .header-dropdown {
 }
 
 /* line 60, ../src/smacss/modules/_footer.scss */
+.page-footer a:focus {
+  background-color: rgba(242, 242, 242, 0.1);
+  outline-color: #f2f2f2;
+  outline-offset: 1px;
+  outline-style: dotted;
+  outline-width: 1px;
+}
+
+/* line 69, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 60, ../src/smacss/modules/_footer.scss */
+  /* line 69, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4387,7 +4396,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 75, ../src/smacss/modules/_footer.scss */
+/* line 84, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4395,13 +4404,13 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 83, ../src/smacss/modules/_footer.scss */
+/* line 92, ../src/smacss/modules/_footer.scss */
 .motto-footer p {
   color: #242424;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 83, ../src/smacss/modules/_footer.scss */
+  /* line 92, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4411,14 +4420,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 83, ../src/smacss/modules/_footer.scss */
+  /* line 92, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 
-/* line 102, ../src/smacss/modules/_footer.scss */
+/* line 111, ../src/smacss/modules/_footer.scss */
 .motto-footer i {
   font-style: normal;
   font-weight: bold;
