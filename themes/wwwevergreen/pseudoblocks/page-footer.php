@@ -80,6 +80,11 @@
 								<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
 							</p>
 						</li>
+						<li class="do-not-print">
+							<p>
+								<a href="https://www.evergreen.edu/about/accessibility">Report Accessibility Issues</a>
+							</p>
+						</li>
 						<li>
 							<p class="copyright small">
 								<small>© <?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College</small>
