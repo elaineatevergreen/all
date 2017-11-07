@@ -110,7 +110,7 @@
 		</div>
 		
 		<div class="catalog-entry-header-item">
-			<?php //print credits amount standin ?>
+			<?php // Credits amount standin ?>
 			<div class="compound">
 				<div class="compound-img">
 				</div>
@@ -118,18 +118,22 @@
 					<?php if(isset($content['field_credits'][0])) {
 							// check to see if credit data value is 0, and if set, display v credits
 					    if(render($content['field_credits'][0]) == '0'){
-								print("Variable Credit. See below for more info");
+								print(
+									"Variable credit.
+									<p class='small'><small>See below for more info.</small></p>"
+								);
 								// if it's 1 credit, say "credit" and not "credits"
 							}elseif(render($content['field_credits'][0]) !== '1'){
 								print_r( render($content['field_credits'][0]));
-								print " Credit. See below for more info";
-								//printing plural credits
-							}else {
+								print "Credit per quarter";
+							
+							}else {  // printing plural credits
 								print_r( render($content['field_credits'][0]));
-								print " Credits. See below for more info";
+								print "Credits per quarter";
 							}
 					  }else{  // If the value isn't set, print no credit Available
-						    print "No Credit Available. See below for more info";
+						    print "No credit available.
+						    <p class='small'><small>See below for more info</small></p>";
 					}?>
 				</div>
 			</div>
