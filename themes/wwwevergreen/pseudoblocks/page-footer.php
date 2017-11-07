@@ -4,7 +4,7 @@
 							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
 						</li>
 						<li>
-							<a href="http://evergreen.edu/tour">Tours and Maps</a>
+							<a href="https://evergreen.edu/tour">Tours and Maps</a>
 						</li>
 						<li>
 							<p>Stay connected:</p>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="page-footer-unit page-footer-unit-central unit-1-5">
 					<p class="footer-map">
-						<a href="http://evergreen.edu/tour">
+						<a href="https://evergreen.edu/tour">
 							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
 						</a><!--<br/>
 						<small>
@@ -61,7 +61,7 @@
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
 						<div>
-							<a href="http://evergreen.edu/directory">Phone &amp; Email Directories</a>
+							<a href="https://evergreen.edu/directory">Phone &amp; Email Directories</a>
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
@@ -72,12 +72,12 @@
 					<ul class="element-list text-list-alt">
 						<li class="do-not-print">
 							<p>
-								<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
+								<a href="https://evergreen.edu/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
 							</p>
 						</li>
 						<li class="do-not-print">
 							<p>
-								<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
+								<a href="https://evergreen.edu/about/privacy">Privacy Policy</a>
 							</p>
 						</li>
 						<li class="do-not-print">
