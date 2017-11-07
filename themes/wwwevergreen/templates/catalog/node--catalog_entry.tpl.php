@@ -282,126 +282,156 @@
 				<p><b><?php print ("Upper Division Science Credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
 	    <?php }; ?>
 
-			<?php
-			/**
-			 * Registration
-			 */
-			?>
-			<h2>Register for this Offering</h2>
-			<?php // Variable credit
-			// field_variable_credit_options (field_upper_division_boolean seems to be 1 on classes without upper credit too?)
-			?>
-			<?php if(isset($content['field_variable_credit_options'][0])) { ?>
-				<h3>Variable Credit Options</h3>
-				<?php print_r(render($content['field_variable_credit_options'][0])); ?>
-			<?php }; ?>
-			<h3>How to Register</h3>
-			<ol>
-				<li>
-					<p>Copy the course reference number (CRN) for your class standing and desired number of credits.</p>
-				</li>
-				<li>
-					<p>Use your CRN at <a href="https://my.evergreen.edu">my.evergreen.edu</a> during your registration window. Check the academic calendar for <a href="/calendar/academic">upcoming registration deadlines</a>.</p>
-				</li>
-			</ol>
-			<p>Learn more about <a href="/registration/how-to">how to register</a>, including information about registering as a non-admitted (special) student.</p>
-			
-			<?php
-			/**
-			 * Course Reference Numbers
-			 */
-			?>
-			<?php // Course Reference Numbers Standin
-			// sidebar stuff here ?>
-			<h3>Course Reference Numbers</h3>
-			<!-- variable for dropping the H4 signature required to a nice italics version with a colon if needed-->
-			<?php $sig_required_h4 = "<h4>Signature Required</h4>"?>
-			<?php $sig_required_h4_italics = "<p><i>Signature Required:</i>"?>
-
-			 <!-- fall Registration -->
-			 <?php if(isset($content['field_fall_registration'])) { ?>
-			   <h4>Fall Quarter</h4>
-			   <br>
-			     <?php $fallref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_fall_registration'][0])));
-			      // find out if our post actually has <p> tags in it at all
-			      if ((strpos($fallref, "<p>")) !== false) {
-			             // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-			             $fallref = substr_replace($fallref, "", (intval(strpos($fallref, "<p>"))), 3);
-			           } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-			             // that we added an opening one when we put our italics at the front of the paragraph
-			             $fallref = $fallref . "</p>";
-			           };
-
-			       if (strpos($fallref , $sig_required_h4) !== false) {
-			           $fallref = str_replace($sig_required_h4,$sig_required_h4_italics,$fallref);
-			       };
-			       //finally print our result
-			       print($fallref)?>
-			 <?php }; ?>
-			 <!-- winter REGISTRATION -->
-			 <?php if(isset($content['field_winter_registration'])) { ?>
-			   <h4>Winter Quarter</h4>
-			   <br>
-			     <?php $winterref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_winter_registration'][0])));
-			      // find out if our post actually has <p> tags in it at all
-			      if ((strpos($winterref, "<p>")) !== false) {
-			             // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-			             $winterref = substr_replace($winterref, "", (intval(strpos($winterref, "<p>"))), 3);
-			           } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-			             // that we added an opening one when we put our italics at the front of the paragraph
-			             $winterref = $winterref . "</p>";
-			           };
-
-			       if (strpos($winterref , $sig_required_h4) !== false) {
-			           $winterref = str_replace($sig_required_h4,$sig_required_h4_italics,$winterref);
-			       };
-			       //finally print our result
-			       print($winterref)?>
-			 <?php }; ?>
-    <!-- SPRING REGISTRATION -->
-	  <?php if(isset($content['field_spring_registration'])) { ?>
-		  <h4>Spring Quarter</h4>
-			<br>
-			 	<?php $springref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_spring_registration'][0])));
-				 // find out if our post actually has <p> tags in it at all
-				 if ((strpos($springref, "<p>")) !== false) {
-					 			// if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
+			<section class="catalog-entry-registration">
+				<?php
+				/**
+				 * Registration
+				 */
+				?>
+				<h2>Register for this offering</h2>
+				<?php // Variable credit
+				// field_variable_credit_options (field_upper_division_boolean seems to be 1 on classes without upper credit too?)
+				?>
+				<?php if(isset($content['field_variable_credit_options'][0])) { ?>
+					<h3>Variable Credit Options</h3>
+					<?php print_r(render($content['field_variable_credit_options'][0])); ?>
+				<?php }; ?>
+				<h3>How to Register</h3>
+				<ol>
+					<li>
+						<p>Copy the course reference number (CRN) for your class standing and desired number of credits.</p>
+					</li>
+					<li>
+						<p>Use your CRN at <a href="https://my.evergreen.edu">my.evergreen.edu</a> during your registration window. Check the academic calendar for <a href="/calendar/academic">upcoming registration deadlines</a>.</p>
+					</li>
+				</ol>
+				<p>Learn more about <a href="/registration/how-to">how to register</a>, including information about registering as a non-admitted (special) student.</p>
+				
+				<?php
+				/**
+				 * Course Reference Numbers
+				 */
+				?>
+				<?php // Course Reference Numbers Standin
+				// sidebar stuff here ?>
+				<h3>Course Reference Numbers</h3>
+				<!-- variable for dropping the H4 signature required to a nice italics version with a colon if needed-->
+				<?php $sig_required_h4 = "<h4>Signature Required</h4>"?>
+				<?php $sig_required_h4_italics = "<p><i>Signature Required:</i>"?>
+	
+				<!-- Fall Registration -->
+				<?php if(isset($content['field_fall_registration'])) { ?>
+					<div class="compound">
+						<div class="compound-img">
+						</div>
+						<div class="compound-body">
+							<h4>Fall quarter</h4>
+							<?php
+								$fallref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_fall_registration'][0])));
+								// find out if our post actually has <p> tags in it at all
+								if ((strpos($fallref, "<p>")) !== false) {
+									// if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
+									$fallref = substr_replace($fallref, "", (intval(strpos($fallref, "<p>"))), 3);
+								} else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
+									// that we added an opening one when we put our italics at the front of the paragraph
+									$fallref = $fallref . "</p>";
+								};
+								if (strpos($fallref , $sig_required_h4) !== false) {
+									$fallref = str_replace($sig_required_h4,$sig_required_h4_italics,$fallref);
+								};
+								// finally, print our result
+								print($fallref)
+							?>
+						</div>
+					</div>
+				<?php }; ?>
+				 
+				<!-- Winter Registration -->
+				<?php if(isset($content['field_winter_registration'])) { ?>
+					<div class="compound">
+						<div class="compound-img">
+						</div>
+						<div class="compound-body">
+							<h4>Winter quarter</h4>
+							<?php
+								$winterref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_winter_registration'][0])));
+								// find out if our post actually has <p> tags in it at all
+								if ((strpos($winterref, "<p>")) !== false) {
+									// if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
+									$winterref = substr_replace($winterref, "", (intval(strpos($winterref, "<p>"))), 3);
+								} else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
+									// that we added an opening one when we put our italics at the front of the paragraph
+									$winterref = $winterref . "</p>";
+								};
+								if (strpos($winterref , $sig_required_h4) !== false) {
+									$winterref = str_replace($sig_required_h4,$sig_required_h4_italics,$winterref);
+								};
+								//finally print our result
+								print($winterref)?>
+						</div>
+					</div>
+				<?php }; ?>
+	
+				<!-- Spring Registration -->
+				<?php if(isset($content['field_spring_registration'])) { ?>
+					<div class="compound">
+						<div class="compound-img">
+						</div>
+						<div class="compound-body">
+							<h4>Spring quarter</h4>
+							<?php $springref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_spring_registration'][0])));
+							// find out if our post actually has <p> tags in it at all
+							if ((strpos($springref, "<p>")) !== false) {
+								// if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
 								$springref = substr_replace($springref, "", (intval(strpos($springref, "<p>"))), 3);
 							} else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
 								// that we added an opening one when we put our italics at the front of the paragraph
 								$springref = $springref . "</p>";
 							};
-
-					if (strpos($springref , $sig_required_h4) !== false) {
-							$springref = str_replace($sig_required_h4,$sig_required_h4_italics,$springref);
-					};
-					//finally print our result
-				  print($springref)?>
-	  <?php }; ?>
-		<!-- summer REGISTRATION -->
-		<?php if(isset($content['field_summer_registration'])) { ?>
-		  <h4>Summer Quarter</h4>
-		  <br>
-		    <?php $summerref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_summer_registration'][0])));
-		     // find out if our post actually has <p> tags in it at all
-		     if ((strpos($summerref, "<p>")) !== false) {
-		            // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-		            $summerref = substr_replace($summerref, "", (intval(strpos($summerref, "<p>"))), 3);
-		          } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-		            // that we added an opening one when we put our italics at the front of the paragraph
-		            $summerref = $summerref . "</p>";
-		          };
-
-		      if (strpos($summerref , $sig_required_h4) !== false) {
-		          $summerref = str_replace($sig_required_h4,$sig_required_h4_italics,$summerref);
-		      };
-		      //finally print our result
-		      print($summerref)?>
-		<?php }; ?>
-	 </div> <!--End program-description div class-->
-	 <?php // revisions, do we want these in the new design? ?>
-	 <?php print render($content['field_revisions']); ?>
-  </div>
-  <?php // do we even need this? ?>
-  <?php // print render($content['comments']); ?>
+							if (strpos($springref , $sig_required_h4) !== false) {
+									$springref = str_replace($sig_required_h4,$sig_required_h4_italics,$springref);
+							};
+							//finally print our result
+						  print($springref)?>
+						</div>
+					</div>
+				<?php }; ?>
+	
+				<!-- Summer Registration -->
+				<?php if(isset($content['field_summer_registration'])) { ?>
+					<div class="compound">
+						<div class="compound-img">
+						</div>
+						<div class="compound-body">
+							<h4>Summer quarter</h4>
+							<?php $summerref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_summer_registration'][0])));
+							// find out if our post actually has <p> tags in it at all
+							if ((strpos($summerref, "<p>")) !== false) {
+								// if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
+								$summerref = substr_replace($summerref, "", (intval(strpos($summerref, "<p>"))), 3);
+							} else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
+								// that we added an opening one when we put our italics at the front of the paragraph
+								$summerref = $summerref . "</p>";
+							};
+							if (strpos($summerref , $sig_required_h4) !== false) {
+								$summerref = str_replace($sig_required_h4,$sig_required_h4_italics,$summerref);
+							};
+							//finally print our result
+							print($summerref)?>
+						</div>
+					</div>
+				<?php }; ?>
+			</section><!-- /.catalog-entry-registration -->
+		</div> <!-- /.program-description -->
+		
+		<?php
+		/**
+		 * Revisions
+		 */
+		?>
+		<?php // revisions, do we want these in the new design? ?>
+		<?php print render($content['field_revisions']); ?>
+	</div> <!-- /.content -->
+	<?php // do we even need this? ?>
+	<?php // print render($content['comments']); ?>
 </div>
