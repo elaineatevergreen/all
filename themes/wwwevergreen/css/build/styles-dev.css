@@ -1658,7 +1658,9 @@ button,
 .button,
 .button:visited,
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+.box .button,
+.box .button:visited {
   border: 1px solid #8d7b99;
   height: auto;
   margin-bottom: 1.262201279030629em;
@@ -1666,13 +1668,14 @@ input[type="submit"] {
   display: inline-block;
   color: #303030;
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.068277777777778em;
   font-weight: normal;
   text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
   background-color: #d0cad4;
-  background-image: -webkit-linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
-  background-image: linear-gradient(rgba(191, 175, 151, 0.575), #b7adbe);
+  background-image: -webkit-linear-gradient(#ebe0ad, #e1dee3 40%, #d0cad4 80%);
+  background-image: linear-gradient(#ebe0ad, #e1dee3 40%, #d0cad4 80%);
   border-radius: 0.2em;
+  text-decoration: none;
   box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
 }
 @media screen and (min-width: 43em) {
@@ -1681,40 +1684,50 @@ input[type="submit"] {
   .button,
   .button:visited,
   input[type="button"],
-  input[type="submit"] {
+  input[type="submit"],
+  .box .button,
+  .box .button:visited {
     margin-bottom: 0.83333333333333em;
   }
 }
 
-/* line 39, ../src/smacss/base/_buttons.scss */
+/* line 45, ../src/smacss/base/_buttons.scss */
 button:hover,
 .button:hover,
 input[type="button"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.box .button:hover {
   color: #2c1a38;
   background-color: #e1dee3;
-  background-image: -webkit-linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
-  background-image: linear-gradient(rgba(228, 217, 170, 0.525), #c8c1cd);
+  background-image: -webkit-linear-gradient(#f4eab2, #e1dee3 40%, #d9d4dc 80%);
+  background-image: linear-gradient(#f4eab2, #e1dee3 40%, #d9d4dc 80%);
   border-color: #8d7b99;
 }
 
-/* line 50, ../src/smacss/base/_buttons.scss */
+/* line 60, ../src/smacss/base/_buttons.scss */
 button:focus,
 .button:focus,
 input[type="button"]:focus,
-input[type="submit"]:focus {
-  border-color: #919191;
+input[type="submit"]:focus,
+.box .button:focus {
+  color: #2c1a38;
+  background-color: #e1dee3;
+  background-image: -webkit-linear-gradient(#f4eab2, #c8c1cd);
+  background-image: linear-gradient(#f4eab2, #c8c1cd);
+  border-color: #492c5d;
   outline-width: 0;
 }
 
-/* line 58, ../src/smacss/base/_buttons.scss */
+/* line 74, ../src/smacss/base/_buttons.scss */
 button:active,
 .button:active,
 input[type="button"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active,
+.box .button:active {
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #8d7b99;
-  background-image: -webkit-linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
-  background-image: linear-gradient(#8d7b99, rgba(133, 111, 123, 0.7));
+  background-image: -webkit-linear-gradient(#d0cad4, #e1dee3);
+  background-image: linear-gradient(#d0cad4, #e1dee3);
   box-shadow: inset 0 0.1em 0.2em rgba(29, 18, 37, 0.25);
 }
 
@@ -1725,45 +1738,53 @@ input[type="submit"]:active {
  * action that a user will expect to take. E.g., Submit would be
  * the .prime button while Cancel would be the default button.
  */
-/* line 76, ../src/smacss/base/_buttons.scss */
+/* line 95, ../src/smacss/base/_buttons.scss */
 .prime,
 .prime:visited,
 input.prime,
-.webform-client-form .button-primary {
+.webform-client-form .button-primary,
+.box .prime,
+.box .prime:visited {
   color: #f2f2f2;
   text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
-  background-color: #64933a;
-  background-image: -webkit-linear-gradient(#a1ba6c, #64933a);
-  background-image: linear-gradient(#a1ba6c, #64933a);
+  background-color: #50762e;
+  background-image: -webkit-linear-gradient(#64933a, #50762e 80%);
+  background-image: linear-gradient(#64933a, #50762e 80%);
   border-color: #46502b;
 }
 
-/* line 88, ../src/smacss/base/_buttons.scss */
+/* line 109, ../src/smacss/base/_buttons.scss */
 .prime:hover,
 input.prime:hover,
-.webform-client-form .button-primary:hover {
-  color: #46502b;
-  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
-  background-color: #80a65f;
-  background-image: -webkit-linear-gradient(#c0cd84, #80a65f);
-  background-image: linear-gradient(#c0cd84, #80a65f);
-  border-bottom-color: #46502b;
+.webform-client-form .button-primary:hover,
+.box .prime:hover {
+  color: #f2f2f2;
+  background-color: #64933a;
+  background-image: -webkit-linear-gradient(#83a653 0, #64933a 20%, #50762e 80%);
+  background-image: linear-gradient(#83a653 0, #64933a 20%, #50762e 80%);
 }
 
-/* line 99, ../src/smacss/base/_buttons.scss */
+/* line 120, ../src/smacss/base/_buttons.scss */
 .prime:focus,
 input.prime:focus,
-.webform-client-form .button-primary:focus {
-  border-color: #919191;
+.webform-client-form .button-primary:focus,
+.box .prime:focus {
+  color: #f2f2f2;
+  background-color: #64933a;
+  background-image: -webkit-linear-gradient(#a1ba6c 0, #64933a 20%, #50762e 80%);
+  background-image: linear-gradient(#a1ba6c 0, #64933a 20%, #50762e 80%);
 }
 
-/* line 104, ../src/smacss/base/_buttons.scss */
+/* line 131, ../src/smacss/base/_buttons.scss */
 .prime:active,
 input.prime:active,
-.webform-client-form .button-primary:active {
-  background-color: #9db984;
-  background-image: -webkit-linear-gradient(#64933a, #83a653);
-  background-image: linear-gradient(#64933a, #83a653);
+.webform-client-form .button-primary:active,
+.box .prime:active {
+  color: #f2f2f2;
+  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  background-color: #3c5823;
+  background-image: -webkit-linear-gradient(#3c5823, #50762e);
+  background-image: linear-gradient(#3c5823, #50762e);
 }
 
 /**
@@ -1774,7 +1795,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 120, ../src/smacss/base/_buttons.scss */
+/* line 151, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1790,7 +1811,7 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 138, ../src/smacss/base/_buttons.scss */
+/* line 169, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
@@ -4363,17 +4384,27 @@ input:checked + .header-dropdown {
 /* line 53, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
-  border-color: #0086ee;
+  -webkit-text-decoration-color: #0086ee;
+          text-decoration-color: #0086ee;
 }
 
 /* line 60, ../src/smacss/modules/_footer.scss */
+.page-footer a:focus {
+  background-color: rgba(242, 242, 242, 0.1);
+  outline-color: #f2f2f2;
+  outline-offset: 1px;
+  outline-style: dotted;
+  outline-width: 1px;
+}
+
+/* line 69, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 60, ../src/smacss/modules/_footer.scss */
+  /* line 69, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4387,7 +4418,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 75, ../src/smacss/modules/_footer.scss */
+/* line 84, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4395,13 +4426,13 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 83, ../src/smacss/modules/_footer.scss */
+/* line 92, ../src/smacss/modules/_footer.scss */
 .motto-footer p {
   color: #242424;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 83, ../src/smacss/modules/_footer.scss */
+  /* line 92, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4411,14 +4442,14 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 83, ../src/smacss/modules/_footer.scss */
+  /* line 92, ../src/smacss/modules/_footer.scss */
   .motto-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 
-/* line 102, ../src/smacss/modules/_footer.scss */
+/* line 111, ../src/smacss/modules/_footer.scss */
 .motto-footer i {
   font-style: normal;
   font-weight: bold;
@@ -5899,18 +5930,24 @@ p.box,
   }
 }
 
+/* line 90, ../src/smacss/modules/_boxes.scss */
+.box:not(.action-box) a:not(.button):hover {
+  color: #00508f;
+  background-color: #dae7f2;
+}
+
 /**
  * 2. Note
  *
  * Stands out a little bit more than a default box.
  */
-/* line 94, ../src/smacss/modules/_boxes.scss */
+/* line 102, ../src/smacss/modules/_boxes.scss */
 .notice,
 .note {
   border-left: 5px solid #91c7f0;
 }
 @media screen and (min-width: 22em) {
-  /* line 94, ../src/smacss/modules/_boxes.scss */
+  /* line 102, ../src/smacss/modules/_boxes.scss */
   .notice,
   .note {
     padding-left: calc(1em - 5px);
@@ -5922,7 +5959,7 @@ p.box,
  *
  * Stands out a lot more than a default box.
  */
-/* line 109, ../src/smacss/modules/_boxes.scss */
+/* line 117, ../src/smacss/modules/_boxes.scss */
 .alert,
 p.alert,
 .alert-alt {
@@ -5931,12 +5968,12 @@ p.alert,
   border-radius: 0;
 }
 
-/* line 121, ../src/smacss/modules/_boxes.scss */
+/* line 129, ../src/smacss/modules/_boxes.scss */
 .alert h2 {
   color: #600f21;
 }
 
-/* line 125, ../src/smacss/modules/_boxes.scss */
+/* line 133, ../src/smacss/modules/_boxes.scss */
 #sitewide-alert {
   margin: 0;
   width: 100%;
@@ -5946,12 +5983,12 @@ p.alert,
   transition: all 0.5s ease-in;
 }
 
-/* line 137, ../src/smacss/modules/_boxes.scss */
+/* line 145, ../src/smacss/modules/_boxes.scss */
 .alert-alt {
   color: black;
 }
 
-/* line 142, ../src/smacss/modules/_boxes.scss */
+/* line 150, ../src/smacss/modules/_boxes.scss */
 .alert-alt h2 {
   color: black;
 }
@@ -5962,13 +5999,13 @@ p.alert,
  * Lends a bit more readability to boxes while still standing out
  * against the content a little bit more.
  */
-/* line 154, ../src/smacss/modules/_boxes.scss */
+/* line 162, ../src/smacss/modules/_boxes.scss */
 .caption-box {
   text-shadow: 0 1px 0 rgba(242, 242, 242, 0.5);
   background-color: rgba(242, 242, 242, 0.95);
 }
 
-/* line 161, ../src/smacss/modules/_boxes.scss */
+/* line 169, ../src/smacss/modules/_boxes.scss */
 .caption-box img {
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
@@ -6002,7 +6039,7 @@ p.alert,
  *   +-------------------------------------------+
  * Seen on Admitted Students page: http://www.evergreen.edu/admitted/
  */
-/* line 194, ../src/smacss/modules/_boxes.scss */
+/* line 202, ../src/smacss/modules/_boxes.scss */
 .action-box {
   border: 1px solid #d0cad4;
   margin-right: auto;
@@ -6022,7 +6059,7 @@ p.alert,
   background: #f2f2f2 none;
 }
 @media screen and (min-width: 32em) {
-  /* line 194, ../src/smacss/modules/_boxes.scss */
+  /* line 202, ../src/smacss/modules/_boxes.scss */
   .action-box {
     width: 75%;
     -webkit-box-orient: horizontal;
@@ -6032,7 +6069,7 @@ p.alert,
   }
 }
 
-/* line 217, ../src/smacss/modules/_boxes.scss */
+/* line 225, ../src/smacss/modules/_boxes.scss */
 .action-item-1-1 {
   margin: 0 auto;
 }
@@ -6042,7 +6079,7 @@ p.alert,
 	float: left;
 }*/
 @media screen and (min-width: 32em) {
-  /* line 226, ../src/smacss/modules/_boxes.scss */
+  /* line 234, ../src/smacss/modules/_boxes.scss */
   .action-item-1-2 {
     border-width: 0 1px 0 0;
     padding-right: 1ch;
@@ -6053,14 +6090,14 @@ p.alert,
   }
 }
 
-/* line 240, ../src/smacss/modules/_boxes.scss */
+/* line 248, ../src/smacss/modules/_boxes.scss */
 .action-item-2-2 {
   margin-left: 1ch;
   -ms-flex-preferred-size: calc(50% - 1ch);
       flex-basis: calc(50% - 1ch);
 }
 
-/* line 247, ../src/smacss/modules/_boxes.scss */
+/* line 255, ../src/smacss/modules/_boxes.scss */
 .action-box-full {
   width: 100%;
 }
@@ -6087,7 +6124,7 @@ p.alert,
  *   +---------------------+---------------------+---------------------+
  * Seen on Catalog homepage: http://www.evergreen.edu/catalog/
  */
-/* line 276, ../src/smacss/modules/_boxes.scss */
+/* line 284, ../src/smacss/modules/_boxes.scss */
 .action-box-full .action-item-1-3,
 .action-box-full .action-item-2-3,
 .action-box-full .action-item-3-3 {
@@ -6097,7 +6134,7 @@ p.alert,
 }
 
 @media screen and (min-width: 32em) {
-  /* line 285, ../src/smacss/modules/_boxes.scss */
+  /* line 293, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-1-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6105,7 +6142,7 @@ p.alert,
 }
 
 @media screen and (min-width: 32em) {
-  /* line 293, ../src/smacss/modules/_boxes.scss */
+  /* line 301, ../src/smacss/modules/_boxes.scss */
   .action-box-full .action-item-2-3 {
     border-right-width: 1px;
     padding-right: 1ch;
@@ -6113,20 +6150,20 @@ p.alert,
   }
 }
 
-/* line 302, ../src/smacss/modules/_boxes.scss */
+/* line 310, ../src/smacss/modules/_boxes.scss */
 .action-call {
   font-size: 1.125rem;
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 32em) {
-  /* line 302, ../src/smacss/modules/_boxes.scss */
+  /* line 310, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: 1.202rem;
     line-height: 1.36512559155442;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 302, ../src/smacss/modules/_boxes.scss */
+  /* line 310, ../src/smacss/modules/_boxes.scss */
   .action-call {
     font-size: calc(29.124 / 16 * 1rem);
     line-height: 1.28759785743717;
@@ -6136,39 +6173,39 @@ p.alert,
 /**
  * 6. Pull Quotes
  */
-/* line 318, ../src/smacss/modules/_boxes.scss */
+/* line 326, ../src/smacss/modules/_boxes.scss */
 .pull-box {
   color: #f2f2f2;
   background-color: rgba(100, 147, 58, 0.95);
 }
 @media screen and (min-width: 43em) {
-  /* line 318, ../src/smacss/modules/_boxes.scss */
+  /* line 326, ../src/smacss/modules/_boxes.scss */
   .pull-box {
     margin-bottom: 1.071428571428571em;
   }
 }
-/* line 330, ../src/smacss/modules/_boxes.scss */
+/* line 338, ../src/smacss/modules/_boxes.scss */
 .pull-box a {
   border-bottom: 2px solid #b9afbf;
   color: #c8c1cd;
 }
-/* line 337, ../src/smacss/modules/_boxes.scss */
+/* line 345, ../src/smacss/modules/_boxes.scss */
 .pull-box a:visited {
   color: #ceb9be;
   border-bottom-color: #c0a5ab;
 }
-/* line 344, ../src/smacss/modules/_boxes.scss */
+/* line 352, ../src/smacss/modules/_boxes.scss */
 .pull-box a:hover {
   color: #a0cdf1;
   border-bottom-color: #a0cdf1;
 }
 
-/* line 352, ../src/smacss/modules/_boxes.scss */
+/* line 360, ../src/smacss/modules/_boxes.scss */
 .pull-box-alt {
   background-color: #0086ee;
 }
 
-/* line 356, ../src/smacss/modules/_boxes.scss */
+/* line 364, ../src/smacss/modules/_boxes.scss */
 .pull-quote {
   margin: 0.44117647058824em 0 0.88235294117647em;
   font-size: 1.125rem;
@@ -6177,7 +6214,7 @@ p.alert,
   font-style: italic;
 }
 @media screen and (min-width: 70em) {
-  /* line 356, ../src/smacss/modules/_boxes.scss */
+  /* line 364, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.36358347876672em 0 0.72716695753345em;
     font-size: 1.719rem;
@@ -6185,7 +6222,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 356, ../src/smacss/modules/_boxes.scss */
+  /* line 364, ../src/smacss/modules/_boxes.scss */
   .pull-quote {
     margin: 0.48200514138817em 0 0.96401028277635em;
     font-size: 1.945rem;
@@ -6194,7 +6231,7 @@ p.alert,
 }
 
 @media screen and (min-width: 43em) {
-  /* line 381, ../src/smacss/modules/_boxes.scss */
+  /* line 389, ../src/smacss/modules/_boxes.scss */
   .supplement-alt-1-2 .pull-quote {
     font-size: 1.202rem;
     line-height: 1.36512559155442;
@@ -6208,20 +6245,20 @@ p.alert,
  *
  * @section box-full
  */
-/* line 396, ../src/smacss/modules/_boxes.scss */
+/* line 404, ../src/smacss/modules/_boxes.scss */
 .full-box {
   border: 1px solid #0086ee;
   padding: 0;
   background: #0086ee url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 
-/* line 402, ../src/smacss/modules/_boxes.scss */
+/* line 410, ../src/smacss/modules/_boxes.scss */
 .full-box h2,
 .full-box h3 {
   color: #f2f2f2;
 }
 
-/* line 407, ../src/smacss/modules/_boxes.scss */
+/* line 415, ../src/smacss/modules/_boxes.scss */
 .full-box > .box {
   background-color: #f2f2f2;
 }
@@ -6232,7 +6269,7 @@ p.alert,
  * A box that takes up a full row and sits as its own cake layer. Namely,
  * there are no margins, so that it sandwiches neatly between other rows.
  */
-/* line 417, ../src/smacss/modules/_boxes.scss */
+/* line 425, ../src/smacss/modules/_boxes.scss */
 .box.row {
   margin: 0;
 }
@@ -6246,7 +6283,7 @@ p.alert,
  
  * @section ui-group
  */
-/* line 431, ../src/smacss/modules/_boxes.scss */
+/* line 439, ../src/smacss/modules/_boxes.scss */
 .ui-group {
   border: 1px solid #c8c1cd;
   margin-bottom: 0.46875rem;
@@ -6264,24 +6301,24 @@ p.alert,
   }*/
 }
 @media screen and (min-width: 32em) {
-  /* line 452, ../src/smacss/modules/_boxes.scss */
+  /* line 460, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-2 {
     margin: 0.234375rem;
     width: calc(50% - 0.46875rem);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 459, ../src/smacss/modules/_boxes.scss */
+  /* line 467, ../src/smacss/modules/_boxes.scss */
   .ui-group.unit-1-3 {
     margin: 0.234375rem;
     width: calc(33.3333333333% - 0.46875rem);
   }
-  /* line 464, ../src/smacss/modules/_boxes.scss */
+  /* line 472, ../src/smacss/modules/_boxes.scss */
   .ui-group .media {
     width: 100%;
   }
 }
-/* line 470, ../src/smacss/modules/_boxes.scss */
+/* line 478, ../src/smacss/modules/_boxes.scss */
 .ui-group > :last-child {
   margin-bottom: 0.9375rem;
 }

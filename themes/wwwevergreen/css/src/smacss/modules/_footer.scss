@@ -54,7 +54,16 @@
 	// typography
 	color: $sky-blue;
 	// decoration
-	border-color: $sky-blue;
+	text-decoration-color: $sky-blue;
+}
+
+.page-footer a:focus{
+	// decoration
+	background-color: transparentize($tint, .9);
+	outline-color: $tint;
+	outline-offset: 1px;
+	outline-style: dotted;
+	outline-width: 1px;
 }
 
 .page-footer-unit .lineup{
