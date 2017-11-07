@@ -1,4 +1,13 @@
 <?php
+//this might work around a bug in Feeds?
+function wwwevergreen_cron() {
+  $name = 'people_directory';
+  $source = feeds_source($name);
+  $source->import();
+}
+
+
+
 	
 // allow per-node-type and panel page template files
 // rewrite directory pages titles
