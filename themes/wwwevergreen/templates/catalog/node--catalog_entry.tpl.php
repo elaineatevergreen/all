@@ -43,74 +43,116 @@
 	};?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-<?php print $user_picture; ?>
+	<?php print $user_picture; ?>
+	
+	
+	
+	
+	
+	<?php // TESTING HEADER ZONE ?>
+	<header class="catalog-entry-header">
+		<?php //print "Month/Year standin"; ?>
+		<div class="catalog-entry-header-item">
+			<div class="compound">
+				<div class="compound-img">
+				</div>
+				<div class="compound-body">
+					<?php print render($quarters_intro) ?>
+				</div>
+			</div>
+		</div>
 
+		<div class="catalog-entry-header-item">
+			<?php // print "campus location standin" ?>
+			<div class="compound">
+				<div class="compound-img">
+				</div>
+				<div class="compound-body">
+					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
+				</div>
+			</div>
 
+		<div class="catalog-entry-header-item">
+			<?php //print time offered standin ?>
+			<div class="compound">
+				<div class="compound-img">
+				</div>
+				<div class="compound-body">
+					<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
+						<?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+					<?php }; ?>
+				</div>
+			</div>
+		</div>
 
-
-
-<?php // TESTING HEADER ZONE ?>
-
-<?php //print "Month/Year standin"; ?>
-	<?php print render($quarters_intro) ?><br/>
-<?php // print "campus location standin" ?>
-	<?php print render($content['group_details']['group_location_schedule']['field_location']); ?><br/>
-<?php //print time offered standin ?>
-	<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-		<?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
-	<?php }; ?><br/>
-
-<?php //field class standing standin ?>
-	<?php // Printing Youngest class standing, putting the dash and oldest class standing if applicable ?>
-	  <?php if(isset($content['field_class_standing'][0])) { ?>
-      <?php print_r(render($content['field_class_standing'][0]));
-		  	if(isset($content['field_class_standing'][3])) {
-		 			print("- ");
-					print_r( render($content['field_class_standing'][3]));
-				}elseif(isset($content['field_class_standing'][2])) {
-	    		print("- ");
-					print_r( render($content['field_class_standing'][2]));
-			  }elseif(isset($content['field_class_standing'][1])) {
-					print("- ");
-				print_r( render($content['field_class_standing'][1]));
-		}else{ };
-} // end field class standing ?>
-<br>
-
-<?php //print "credits amount standin" ?>
-<?php if(isset($content['field_credits'][0])) {
-					// check to see if credit data value is 0, and if set, display v credits
-	        if(render($content['field_credits'][0]) == '0'){
-						print("Variable Credit. See below for more info");
-						// if it's 1 credit, say "credit" and not "credits"
-					}elseif(render($content['field_credits'][0]) !== '1'){
-						print_r( render($content['field_credits'][0]));
-						print " Credit. See below for more info";
-						//printing plural credits
-					}else {
-						print_r( render($content['field_credits'][0]));
-						print " Credits. See below for more info";
-					}// if the value isn't set, print no credit Available
-		  }else{
-	  	    print "No Credit Available. See below for more info";
-	     }?>
-<br>
-<br>
-
-<?php // Save class standin ?>
-<?php //shamelessly copied div action box from currently evergreen.edu ?>
-<div class="box action-box">
-  <div class="action-item-1-2">
-<p><?php print render($content['links']); ?></p>
-<?php print("Compare offerings and share your lists with others.");?>
-  </div>
-  <div class="action-item-2-2">
-		<?php// Make sure this link is actually correct.... ?>
-    <p><a href="/catalog/index?flagged=1">See all saved items</a></p>
-  </div>
-</div>
-
-<?php    // END HEADER TESTING ZONE ?>
+		<div class="catalog-entry-header-item">
+			<?php //field class standing standin ?>
+			<div class="compound">
+				<div class="compound-img">
+				</div>
+				<div class="compound-body">
+					<?php // Printing Youngest class standing, putting the dash and oldest class standing if applicable ?>
+					<?php if(isset($content['field_class_standing'][0])) { ?>
+					  <?php print_r(render($content['field_class_standing'][0]));
+					  	if(isset($content['field_class_standing'][3])) {
+					 			print("- ");
+								print_r( render($content['field_class_standing'][3]));
+							}elseif(isset($content['field_class_standing'][2])) {
+					  		print("- ");
+								print_r( render($content['field_class_standing'][2]));
+						  }elseif(isset($content['field_class_standing'][1])) {
+								print("- ");
+								print_r( render($content['field_class_standing'][1]));
+					}else{ }; } ?>
+				</div>
+			</div>
+		</div>
+		
+		<div class="catalog-entry-header-item">
+			<?php //print credits amount standin ?>
+			<div class="compound">
+				<div class="compound-img">
+				</div>
+				<div class="compound-body">
+					<?php if(isset($content['field_credits'][0])) {
+							// check to see if credit data value is 0, and if set, display v credits
+					    if(render($content['field_credits'][0]) == '0'){
+								print("Variable Credit. See below for more info");
+								// if it's 1 credit, say "credit" and not "credits"
+							}elseif(render($content['field_credits'][0]) !== '1'){
+								print_r( render($content['field_credits'][0]));
+								print " Credit. See below for more info";
+								//printing plural credits
+							}else {
+								print_r( render($content['field_credits'][0]));
+								print " Credits. See below for more info";
+							}
+					  }else{  // If the value isn't set, print no credit Available
+						    print "No Credit Available. See below for more info";
+					}?>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<?php
+	/**
+	 * Call to Action
+	 */
+	?>
+	<?php // Save class standin ?>
+	<div class="box action-box">
+	  <div class="action-item-1-2">
+			<p><?php print render($content['links']); ?></p>
+			<?php print("<p class='small'><small>Compare offerings and share your lists with others.</small></p>");?>
+	  </div>
+	  <div class="action-item-2-2">
+			<?php // Make sure this link is actually correct… ?>
+	    <p><a href="/catalog/index?flagged=1">See all saved items</a></p>
+	  </div>
+	</div>
+	
+	<?php // END TESTING HEADER ZONE ?>
 
 
 
@@ -132,14 +174,14 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-	  hide($content['field_academic_year']);
-	  hide($content['field_quarters_offered']);
-	  hide($content['field_faculty']);
-	  hide($content['field_revisions']);
-	  hide($content['group_details']['group_location_schedule']);
-	  hide($content['group_details']['group_more']);
+		hide($content['comments']);
+		hide($content['links']);
+		hide($content['field_academic_year']);
+		hide($content['field_quarters_offered']);
+		hide($content['field_faculty']);
+		hide($content['field_revisions']);
+		hide($content['group_details']['group_location_schedule']);
+		hide($content['group_details']['group_more']);
 
 
 	$updatestatus = '';
