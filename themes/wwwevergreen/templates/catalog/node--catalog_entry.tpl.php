@@ -51,7 +51,7 @@
 	
 	<?php // TESTING HEADER ZONE ?>
 	<header class="catalog-entry-header">
-		<?php //print "Month/Year standin"; ?>
+		<?php // Month/Year standin ?>
 		<div class="catalog-entry-header-item">
 			<div class="compound">
 				<div class="compound-img">
@@ -63,7 +63,7 @@
 		</div>
 
 		<div class="catalog-entry-header-item">
-			<?php // print "campus location standin" ?>
+			<?php // Campus location standin ?>
 			<div class="compound">
 				<div class="compound-img">
 				</div>
@@ -71,9 +71,10 @@
 					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
 				</div>
 			</div>
+		</div>
 
 		<div class="catalog-entry-header-item">
-			<?php //print time offered standin ?>
+			<?php // Time offered standin ?>
 			<div class="compound">
 				<div class="compound-img">
 				</div>
@@ -86,12 +87,12 @@
 		</div>
 
 		<div class="catalog-entry-header-item">
-			<?php //field class standing standin ?>
+			<?php // Class standing standin ?>
 			<div class="compound">
 				<div class="compound-img">
 				</div>
 				<div class="compound-body">
-					<?php // Printing Youngest class standing, putting the dash and oldest class standing if applicable ?>
+					<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable ?>
 					<?php if(isset($content['field_class_standing'][0])) { ?>
 					  <?php print_r(render($content['field_class_standing'][0]));
 					  	if(isset($content['field_class_standing'][3])) {
