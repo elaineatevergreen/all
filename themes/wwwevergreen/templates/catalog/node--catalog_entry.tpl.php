@@ -115,12 +115,13 @@
 				<div class="compound-img">
 				</div>
 				<div class="compound-body">
+					<!-- [bug] It looks like this always prints out “No credit available.” —jkm -->
 					<?php if(isset($content['field_credits'][0])) {
 							// check to see if credit data value is 0, and if set, display v credits
 					    if(render($content['field_credits'][0]) == '0'){
 								print(
 									"Variable credit.
-									<p class='small'><small>See below for more info.</small></p>"
+									<br/><small class='small'>See below for more info.</small>"
 								);
 								// if it's 1 credit, say "credit" and not "credits"
 							}elseif(render($content['field_credits'][0]) !== '1'){
@@ -133,7 +134,7 @@
 							}
 					  }else{  // If the value isn't set, print no credit Available
 						    print "No credit available.
-						    <p class='small'><small>See below for more info</small></p>";
+						    <br/><small class='small'>See below for more info</small>";
 					}?>
 				</div>
 			</div>
@@ -149,7 +150,7 @@
 	<div class="box action-box">
 	  <div class="action-item-1-2">
 			<p><?php print render($content['links']); ?></p>
-			<?php print("<p class='small'><small>Compare offerings and share your lists with others.</small></p>");?>
+			<?php print("<p><small class='small'>Compare offerings and share your lists with others.</small></p>");?>
 	  </div>
 	  <div class="action-item-2-2">
 			<?php // Make sure this link is actually correct… ?>
@@ -163,7 +164,13 @@
 
 
 
-
+	<?php
+	/**
+	 * What is This?
+	 *
+	 * Someone describe to me what I’m seeing here. —jkm
+	 */
+	?>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
@@ -204,9 +211,6 @@
 		</div>
 		<?php }; ?>
 
-		<?php // COMMENTING OUT THE OLD QUARTERS GREEN TITLE ?>
-		 <!-- <p class="intro"><?php //print($quarters_intro); ?></p> -->
-
 
 		<?php
 		/**
@@ -243,6 +247,7 @@
 			<?php // Fields of study standin
 			// field_fields_of_study (NEED TO TEST WITH ONE THAT ACTUALLY HAS THIS FIELD) ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
+	     	<!-- [bug] It looks like this is only printing out one field of study. -->
 				<p><b><?php print ("Fields of Study:")?></b> <?php print_r(render($content['group_details']['field_fields_of_study'][0])); ?></p>
 	    <?php }; ?>
 	    
