@@ -1,0 +1,26 @@
+/**
+ * III. Drupal Catalog Listing
+ *
+ * Styles specific to the Drupal catalog listing pages with details
+ * about each available offering.
+ *
+ * Table of Contents
+ *
+ * A. Catalog Entry Header
+ */
+
+/**
+ * A. Catalog Entry Header
+ *
+ * A component that minimally displays critical information for students
+ * to quickly find the right offering for him or her.
+ */
+.catalog-entry-header{
+	// layout
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	// typography
+	font-family: $text-face-alt;
+	@include base-type;
+}

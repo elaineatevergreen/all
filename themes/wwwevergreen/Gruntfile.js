@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
 
+	/**
+	 * Evergreen Website Gruntfile
+	 *
+	 * For telling the computer what to do to streamline redundant tasks
+	 * when preparing files for Evergreen’s primary website.
+	 *
+	 * For more information on what this does and how to set it up, see
+	 * smb://hurricane/communications/webteam/documentation/Grunt.docx
+	 */
+	
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
