@@ -101,13 +101,13 @@
 					<?php if(isset($content['field_class_standing'][0])) { ?>
 					  <?php print_r(render($content['field_class_standing'][0]));
 					  	if(isset($content['field_class_standing'][3])) {
-					 			print("- ");
+					 			print("– ");
 								print_r( render($content['field_class_standing'][3]));
 							}elseif(isset($content['field_class_standing'][2])) {
-					  		print("- ");
+					  		print("– ");
 								print_r( render($content['field_class_standing'][2]));
 						  }elseif(isset($content['field_class_standing'][1])) {
-								print("- ");
+								print("– ");
 								print_r( render($content['field_class_standing'][1]));
 					}else{ }; } ?>
 				</div>
@@ -140,7 +140,7 @@
 							}
 					  }else{  // If the value isn't set, print no credit Available
 						    print "No credit available.
-						    <br/><small class='small'>See below for more info</small>";
+						    <br/><small class='small'>See below for more info.</small>";
 					}?>
 				</div>
 			</div>
@@ -155,7 +155,7 @@
 	<?php // Save class standin ?>
 	<div class="box action-box">
 	  <div class="action-item-1-2">
-			<p><?php print render($content['links']); ?></p>
+			<?php print render($content['links']); ?>
 			<?php print("<p><small class='small'>Compare offerings and share your lists with others.</small></p>");?>
 	  </div>
 	  <div class="action-item-2-2">
@@ -172,7 +172,7 @@
 
 	<?php
 	/**
-	 * What is This?
+	 * [bug] What is This?
 	 *
 	 * Someone describe to me what I’m seeing here. —jkm
 	 */
@@ -250,6 +250,20 @@
 			 * Program Details
 			 */
 			?>
+			
+			<?php // Study abroad standin ?>
+			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+				<div class="compound">
+					<div class="compound-img">
+						<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+					</div>
+					<div class="compound-body">
+						<p><b>Study Abroad:</b></p>
+						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+					</div>
+				</div>
+			<?php }; ?>
+			
 			<?php // Fields of study standin
 			// field_fields_of_study (NEED TO TEST WITH ONE THAT ACTUALLY HAS THIS FIELD) ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
