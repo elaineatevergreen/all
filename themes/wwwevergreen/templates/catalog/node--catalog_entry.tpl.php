@@ -253,7 +253,7 @@
 			<?php // Fields of study standin
 			// field_fields_of_study (NEED TO TEST WITH ONE THAT ACTUALLY HAS THIS FIELD) ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
-	     	<!-- [bug] It looks like this is only printing out one field of study. -->
+	     	<!-- [bug] It looks like this is only printing out one field of study. See the catalog index for a good example on how this kind of thing is structured in HTML. -->
 				<p><b><?php print ("Fields of Study:")?></b> <?php print_r(render($content['group_details']['field_fields_of_study'][0])); ?></p>
 	    <?php }; ?>
 	    
