@@ -55,6 +55,7 @@
 		<div class="catalog-entry-header-item">
 			<div class="compound">
 				<div class="compound-img">
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
 				</div>
 				<div class="compound-body">
 					<?php print render($quarters_intro) ?>
@@ -66,6 +67,7 @@
 			<?php // Campus location standin ?>
 			<div class="compound">
 				<div class="compound-img">
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
 				</div>
 				<div class="compound-body">
 					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
@@ -77,6 +79,7 @@
 			<?php // Time offered standin ?>
 			<div class="compound">
 				<div class="compound-img">
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
 				</div>
 				<div class="compound-body">
 					<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
@@ -90,8 +93,10 @@
 			<?php // Class standing standin ?>
 			<div class="compound">
 				<div class="compound-img">
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
 				</div>
 				<div class="compound-body">
+					<!-- [bug] This does not appear to be working. The content is left blank. -->
 					<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable ?>
 					<?php if(isset($content['field_class_standing'][0])) { ?>
 					  <?php print_r(render($content['field_class_standing'][0]));
@@ -113,6 +118,7 @@
 			<?php // Credits amount standin ?>
 			<div class="compound">
 				<div class="compound-img">
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
 				</div>
 				<div class="compound-body">
 					<!-- [bug] It looks like this always prints out “No credit available.” —jkm -->
