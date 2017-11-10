@@ -3,7 +3,14 @@ print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
 print render($content['field_effective_date']);
-print render($content['field_archived']);
+
+
+$test1 = $content$content['field_archived'][0];
+$test2 = $content$content['field_archived'][1];
+print render($test1 . $test2);
+<br>
+<br>
+// print render($content['field_archived']);
 print render($content['field_updated_version']);
 print render($content['field_external_policy']);
 print render($content['body']);
