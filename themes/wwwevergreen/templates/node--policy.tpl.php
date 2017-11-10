@@ -1,5 +1,5 @@
 <?php 
-
+print render("test");
 print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
@@ -19,13 +19,3 @@ print render($content['field_approval_authority']);
 print render($content['field_signature_file']);
 print render($content['field_steward']);
 ?>
-
-
-<?php print render($content[0]); ?>
-<?php print render($content[1]); ?>
-<?php print render($content[2]); ?>
-
-
-
-<?php print render($content); ?>
-<?php print render($content); ?>
