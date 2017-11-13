@@ -268,7 +268,7 @@
 						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					</div>
 					<div class="compound-body">
-						<p><b>Study Abroad:</b></p>
+						<p><b>Study abroad:</b></p>
 						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
 					</div>
 				</div>
@@ -278,7 +278,7 @@
 			// field_fields_of_study (NEED TO TEST WITH ONE THAT ACTUALLY HAS THIS FIELD) ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
 	     	<!-- [bug] It looks like this is only printing out one field of study. See the catalog index for a good example on how this kind of thing is structured in HTML. -->
-				<p><b><?php print ("Fields of Study:")?></b> <?php print_r(render($content['group_details']['field_fields_of_study'][0])); ?></p>
+				<p><b><?php print ("Fields of study:")?></b> <?php print_r(render($content['group_details']['field_fields_of_study'][0])); ?></p>
 	    <?php }; ?>
 	    
 	    <?php // Preparatory Fields standin
@@ -314,8 +314,35 @@
 	    <?php // Upper Div Sci credit standin
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
-				<p><b><?php print ("Upper Division Science Credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
+				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
 	    <?php }; ?>
+	    
+	    
+	    <?php
+			/**
+			 * Location and Schedule
+			 */
+			?>
+	    <h2>Location and schedule</h2>
+	    <?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
+				<p><b>Final schedule and room assignment:</b></p>
+				<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+			<?php }; ?>
+			
+			<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
+				<p><b>Advertised schedule:</b></p>
+				<?php print render($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
+			<?php }; ?>
+			
+			<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
+				<p><b>Additional details:</b></p>
+				<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+			<?php }; ?>
+			
+			<!-- [Bug] Add the “May be offered again” standin here. Try to make it look like this demo, below. -->
+			<div class="box note">
+				<p><i>[Bug] This program may be offered again in 2020 – 2021.</i></p>
+			</div>
 
 			<section class="catalog-listing-registration">
 				<?php
