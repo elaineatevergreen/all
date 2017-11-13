@@ -54,7 +54,7 @@
 		<?php // Month/Year standin ?>
 		<div class="listing-property">
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
 			</div>
 			<div class="listing-property-body">
 				<?php print render($quarters_intro) ?>
@@ -64,11 +64,11 @@
 		<div class="listing-property">
 			<?php // Campus location standin ?>
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
 				<?php // Study abroad standin with additional details ?>
 				<?php // Include Study Abroad icon, if relevant
 					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
 				<?php }; ?>
 			</div>
 			<div class="listing-property-body">
@@ -84,7 +84,7 @@
 		<div class="listing-property">
 			<?php // Time offered standin ?>
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
 			</div>
 			<div class="listing-property-body">
 				<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
@@ -96,7 +96,7 @@
 		<div class="listing-property">
 			<?php // Class standing standin ?>
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
 			</div>
 			<div class="listing-property-body">
 				<!-- [bug] This does not appear to be working. The content is left blank. -->
@@ -313,25 +313,46 @@
 			 * Location and Schedule
 			 */
 			?>
-	    <h2>Location and schedule</h2>
-	    <?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
-				<p><b>Final schedule and room assignment:</b></p>
-				<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
-			<?php }; ?>
-			
-			<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
-				<p><b>Advertised schedule:</b></p>
-				<?php print render($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
-			<?php }; ?>
-			
-			<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
-				<p><b>Additional details:</b></p>
-				<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
-			<?php }; ?>
+	    <div class="listing-property">
+		    <div class="listing-property-img">
+			    <img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
+		    </div>
+		    <div class="listing-property-body">
+			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
+			    <?php if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
+						<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+					<?php }; ?>
+		    </div>
+	    </div>
+	    
+	    <div class="listing-property">
+		    <div class="listing-property-img">
+			    <img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
+		    </div>
+		    <div class="listing-property-body">
+			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
+						<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+					<?php }; ?>
+			    <?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
+						<p><b>Final schedule and room assignment:</b></p>
+						<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+					<?php }; ?>
+					
+					<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
+						<p><b>Advertised schedule:</b></p>
+						<?php print render($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
+					<?php }; ?>
+					
+					<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
+						<p><b>Additional details:</b></p>
+						<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+					<?php }; ?>
+		    </div>
+	    </div>
 			
 			<!-- [Bug] Add the “May be offered again” standin here. Try to make it look like this demo, below. -->
 			<div class="box note">
-				<p><i>[Bug] This program may be offered again in 2020 – 2021.</i></p>
+				<p><i>[bug] This program may be offered again in 2020 – 2021.</i></p>
 			</div>
 
 			<section class="catalog-listing-registration">

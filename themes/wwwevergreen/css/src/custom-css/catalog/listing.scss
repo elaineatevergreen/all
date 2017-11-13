@@ -6,20 +6,32 @@
  *
  * Table of Contents
  *
- * A. Catalog Entry Header
+ * A. Catalog Entry Header (Listing Property)
  */
 
 /**
  * A. Catalog Entry Header
  *
- * A component that minimally displays critical information for students
- * to quickly find the right offering for him or her.
+ * A component that minimally displays critical information for students to
+ * quickly find the right offering for him or her.
+ */
+/**
+ * Listing Property
+ *
+ * This new segment is an alternative to the .compound segment. It is
+ * intended to be more icon-based, setting a fixed width, and favors
+ * clumping multiple segments together horizontally, rather than  assuming
+ * that it will take up a full line.
+ *
+ * At this point, this segment is very generic, not catalog-specific
+ * (though currently only exists in the catalgo) so we ought to move this
+ * into the default style sheet at our convenience.
  */
 .listing-header{
 	// box model
 	margin: 0 -1ch;
 	// layout
-	align-items: center;
+	align-items: baseline;
 	display: flex;
 	flex-wrap: wrap;
 	// typography
@@ -36,9 +48,12 @@
 }
 
 .listing-property-img{
+	// box model
 	margin: 0;
 	padding-right: 1ch;
 	max-width: none;
+	// layout
+	align-self: flex-start;
 }
 
 .listing-property-img img{
