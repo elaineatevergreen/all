@@ -68,9 +68,19 @@
 			<div class="compound">
 				<div class="compound-img">
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
+					<?php // Study abroad standin with additional details ?>
+					<?php // Include Study Abroad icon, if relevant
+						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+					<?php }; ?>
 				</div>
 				<div class="compound-body">
 					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
+					<?php // Include Study Abroad label, if relevant
+						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) {
+							print " + " render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+						};
+					?>
 				</div>
 			</div>
 		</div>
@@ -149,7 +159,7 @@
 	
 	<?php
 	/**
-	 * Call to Action
+	 * Call to Action (Save to List)
 	 */
 	?>
 	<?php // Save class standin ?>
@@ -247,11 +257,11 @@
 			
 			<?php
 			/**
-			 * Program Details
+			 * Additional Program Details
 			 */
 			?>
 			
-			<?php // Study abroad standin ?>
+			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="compound">
 					<div class="compound-img">
