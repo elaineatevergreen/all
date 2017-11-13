@@ -1,13 +1,8 @@
-
-  <?php for ($i = 0; $i < count($content['field_archived']); $i++): ?>
+<?php for ($i = 0; $i < count($content['field_archived']); $i++): ?>
     <div class="content">
-      <div>
-         <?php print render($content['field_archived'][$i]); ?>
-         <br>
-         <br>
-      </div>
+        <?php print render($content['field_archived'][$i]); ?>
     </div>
-  <?php endfor; ?>
+<?php endfor; ?>
 
 <?php 
 print render($content['field_prefix']);
