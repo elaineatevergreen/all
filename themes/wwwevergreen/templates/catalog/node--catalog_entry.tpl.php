@@ -55,7 +55,7 @@
 		<div class="catalog-listing-header-item">
 			<div class="compound">
 				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"/>
 				</div>
 				<div class="compound-body">
 					<?php print render($quarters_intro) ?>
@@ -67,7 +67,7 @@
 			<?php // Campus location standin ?>
 			<div class="compound">
 				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
 				</div>
 				<div class="compound-body">
 					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
@@ -255,7 +255,7 @@
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="compound">
 					<div class="compound-img">
-						<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					</div>
 					<div class="compound-body">
 						<p><b>Study Abroad:</b></p>
