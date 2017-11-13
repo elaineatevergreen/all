@@ -32,11 +32,11 @@
 	if(count($quarters) == 1) {
 		$quarters_intro = $quarters[0];
 	}elseif(count($quarters) == 2) {
-		$quarters_intro .= $quarters[0] . ' and ' . $quarters[1];
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1];
 	}elseif(count($quarters) == 3) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1] . ', and ' . $quarters[2];
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 	}elseif(count($quarters) == 4) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] ;
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
 	};
 	if(render($content['field_summer_session']) != '') {
 		$quarters_intro .= " (" . trim(hide($content['field_summer_session'])) . " Session)";
