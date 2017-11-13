@@ -50,9 +50,9 @@
 	
 	
 	<?php // TESTING HEADER ZONE ?>
-	<header class="catalog-entry-header">
+	<header class="catalog-listing-header">
 		<?php // Month/Year standin ?>
-		<div class="catalog-entry-header-item">
+		<div class="catalog-listing-header-item">
 			<div class="compound">
 				<div class="compound-img">
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 
-		<div class="catalog-entry-header-item">
+		<div class="catalog-listing-header-item">
 			<?php // Campus location standin ?>
 			<div class="compound">
 				<div class="compound-img">
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 
-		<div class="catalog-entry-header-item">
+		<div class="catalog-listing-header-item">
 			<?php // Time offered standin ?>
 			<div class="compound">
 				<div class="compound-img">
@@ -89,7 +89,7 @@
 			</div>
 		</div>
 
-		<div class="catalog-entry-header-item">
+		<div class="catalog-listing-header-item">
 			<?php // Class standing standin ?>
 			<div class="compound">
 				<div class="compound-img">
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		
-		<div class="catalog-entry-header-item">
+		<div class="catalog-listing-header-item">
 			<?php // Credits amount standin ?>
 			<div class="compound">
 				<div class="compound-img">
@@ -307,7 +307,7 @@
 				<p><b><?php print ("Upper Division Science Credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
 	    <?php }; ?>
 
-			<section class="catalog-entry-registration">
+			<section class="catalog-listing-registration">
 				<?php
 				/**
 				 * Registration
@@ -446,7 +446,7 @@
 						</div>
 					</div>
 				<?php }; ?>
-			</section><!-- /.catalog-entry-registration -->
+			</section><!-- /.catalog-listing-registration -->
 		</div> <!-- /.program-description -->
 		
 		<?php
