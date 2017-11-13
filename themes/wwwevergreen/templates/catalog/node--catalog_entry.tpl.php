@@ -71,14 +71,14 @@
 					<?php // Study abroad standin with additional details ?>
 					<?php // Include Study Abroad icon, if relevant
 						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					<?php }; ?>
 				</div>
 				<div class="compound-body">
 					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
 					<?php // Include Study Abroad label, if relevant
 						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) {
-							print " + " render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+							print " + " render($content['group_details']['group_location_schedule']['field_study_abroad']);
 						};
 					?>
 				</div>
