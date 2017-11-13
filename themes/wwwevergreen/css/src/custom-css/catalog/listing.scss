@@ -15,7 +15,7 @@
  * A component that minimally displays critical information for students
  * to quickly find the right offering for him or her.
  */
-.catalog-listing-header{
+.listing-header{
 	// box model
 	margin: 0 -1ch;
 	// layout
@@ -27,26 +27,28 @@
 	@include base-type;
 }
 
-/*.catalog-listing-header-item{
-	margin: 0 1ch;
-}*/
-
-.catalog-listing-header-item .compound{
+.listing-property{
 	// box model
 	margin: calc(15 / 16 * 1rem) 1ch;
+	// layout
+	display: flex;
 	align-items: center;
 }
 
-.catalog-listing-header-item .compound-img{
+.listing-property-img{
 	margin: 0;
 	padding-right: 1ch;
-	max-width: 6ch;
+	max-width: none;
 }
 
-.catalog-listing-header-item .compound-img img{
+.listing-property-img img{
+	// box model
 	margin: 0;
+	width: 6ch;
+	// layout
+	display: inline-block;
 }
 
-.catalog-listing-header-item .compound-body{
+/*.listing-property-body{
 	align-content: center;
-}
+}*/
