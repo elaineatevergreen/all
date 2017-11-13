@@ -1,4 +1,4 @@
-
+<?php
 print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
