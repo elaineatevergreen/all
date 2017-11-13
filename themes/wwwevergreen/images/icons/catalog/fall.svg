@@ -1,1 +1,27 @@
-<?xml version="1.0" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 16 16" width="16" height="16"><defs><clipPath id="_clipPath_1NNq2p0bBisgyA8KHNlLDmFDRHfFDojH"><rect width="16" height="16"/></clipPath></defs><g clip-path="url(#_clipPath_1NNq2p0bBisgyA8KHNlLDmFDRHfFDojH)"><path d=" M 15.802 13.914 C 14.072 15.226 11.409 16.01 8.678 16.01 C 5.301 16.01 2.549 14.83 1.129 12.772 C 0.462 11.806 0.093 10.661 0.032 9.37 C -0.022 8.221 0.171 6.95 0.605 5.583 C 2.087 10.031 6.227 13.514 11 13.514 C 11 13.514 6.534 12.337 3.726 8.693 C 3.724 8.691 3.687 8.645 3.623 8.557 C 3.059 7.802 2.568 6.943 2.2 5.971 C 1.577 4.487 1 2.452 1 0 L 3 0 C 3 0 2.696 1.912 3.224 4.11 C 4.097 3.992 4.878 3.933 5.581 3.933 C 7.42 3.933 8.727 4.331 9.696 5.186 C 10.564 5.952 11.043 6.982 11.55 8.071 C 12.324 9.736 13.201 11.622 15.748 13.078 C 15.894 13.161 15.988 13.312 15.999 13.48 C 16.01 13.649 15.936 13.81 15.802 13.912 L 15.802 13.914 Z " fill="rgb(255,255,255)"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C09A00;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{fill:#FFFFFF;}
+</style>
+<circle class="st0" cx="12" cy="12" r="12"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="4" y="4.5" width="16" height="16"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st1">
+		<path class="st2" d="M19.802,18.414c-1.73,1.312-4.393,2.096-7.124,2.096c-3.377,0-6.129-1.18-7.549-3.238
+			c-0.667-0.966-1.036-2.111-1.097-3.402c-0.054-1.149,0.139-2.42,0.573-3.787c1.482,4.448,5.622,7.931,10.395,7.931
+			c0,0-4.466-1.177-7.274-4.821c-0.002-0.002-0.039-0.048-0.103-0.136c-0.564-0.755-1.055-1.614-1.423-2.586
+			C5.577,8.987,5,6.952,5,4.5h2c0,0-0.304,1.912,0.224,4.11c0.873-0.118,1.654-0.177,2.357-0.177c1.839,0,3.146,0.398,4.115,1.253
+			c0.868,0.766,1.347,1.796,1.854,2.885c0.774,1.665,1.651,3.551,4.198,5.007c0.146,0.083,0.24,0.234,0.251,0.402
+			c0.011,0.169-0.063,0.33-0.197,0.432V18.414z"/>
+	</g>
+</g>
+</svg>
