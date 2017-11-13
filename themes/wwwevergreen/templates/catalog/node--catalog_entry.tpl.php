@@ -32,11 +32,11 @@
 	if(count($quarters) == 1) {
 		$quarters_intro = $quarters[0];
 	}elseif(count($quarters) == 2) {
-		$quarters_intro .= $quarters[0] . ' and ' . $quarters[1];
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1];
 	}elseif(count($quarters) == 3) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1] . ', and ' . $quarters[2];
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 	}elseif(count($quarters) == 4) {
-		$quarters_intro .= $quarters[0] . ', ' . $quarters[1]  . ', ' . $quarters[2] . ', and ' . $quarters[3] ;
+		$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
 	};
 	if(render($content['field_summer_session']) != '') {
 		$quarters_intro .= " (" . trim(hide($content['field_summer_session'])) . " Session)";
@@ -50,110 +50,99 @@
 	
 	
 	<?php // TESTING HEADER ZONE ?>
-	<header class="catalog-listing-header">
+	<header class="listing-header">
 		<?php // Month/Year standin ?>
-		<div class="catalog-listing-header-item">
-			<div class="compound">
-				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"/>
-				</div>
-				<div class="compound-body">
-					<?php print render($quarters_intro) ?>
-				</div>
+		<div class="listing-property">
+			<div class="listing-property-img">
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"/>
+			</div>
+			<div class="listing-property-body">
+				<?php print render($quarters_intro) ?>
 			</div>
 		</div>
 
-		<div class="catalog-listing-header-item">
+		<div class="listing-property">
 			<?php // Campus location standin ?>
-			<div class="compound">
-				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
-					<?php // Study abroad standin with additional details ?>
-					<?php // Include Study Abroad icon, if relevant
-						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
-					<?php }; ?>
-				</div>
-				<div class="compound-body">
-					<?php print render($content['group_details']['group_location_schedule']['field_location']); ?>
-					<?php // Include Study Abroad label, if relevant
-						if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) {
-							print " + " ;
-							print render($content['group_details']['group_location_schedule']['field_study_abroad']);
-						};
-					?>
-				</div>
+			<div class="listing-property-img">
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
+				<?php // Study abroad standin with additional details ?>
+				<?php // Include Study Abroad icon, if relevant
+					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+				<?php }; ?>
+			</div>
+			<div class="listing-property-body">
+				<?php print render($content['group_details']['group_location_schedule']['field_location']);
+					// Include Study Abroad label, if relevant
+					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) {
+						print "&nbsp;+<br/>study abroad option";
+					};
+				?>
 			</div>
 		</div>
 
-		<div class="catalog-listing-header-item">
+		<div class="listing-property">
 			<?php // Time offered standin ?>
-			<div class="compound">
-				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
-				</div>
-				<div class="compound-body">
-					<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-						<?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
-					<?php }; ?>
-				</div>
+			<div class="listing-property-img">
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+			</div>
+			<div class="listing-property-body">
+				<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
+					<?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+				<?php }; ?>
 			</div>
 		</div>
 
-		<div class="catalog-listing-header-item">
+		<div class="listing-property">
 			<?php // Class standing standin ?>
-			<div class="compound">
-				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
-				</div>
-				<div class="compound-body">
-					<!-- [bug] This does not appear to be working. The content is left blank. -->
-					<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable ?>
-					<?php if(isset($content['field_class_standing'][0])) { ?>
-					  <?php print_r(render($content['field_class_standing'][0]));
-					  	if(isset($content['field_class_standing'][3])) {
-					 			print("– ");
-								print_r( render($content['field_class_standing'][3]));
-							}elseif(isset($content['field_class_standing'][2])) {
-					  		print("– ");
-								print_r( render($content['field_class_standing'][2]));
-						  }elseif(isset($content['field_class_standing'][1])) {
-								print("– ");
-								print_r( render($content['field_class_standing'][1]));
-					}else{ }; } ?>
-				</div>
+			<div class="listing-property-img">
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+			</div>
+			<div class="listing-property-body">
+				<!-- [bug] This does not appear to be working. The content is left blank. -->
+				<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable ?>
+				<?php if(isset($content['field_class_standing'][0])) { ?>
+				  <?php print_r(render($content['field_class_standing'][0]));
+				  	if(isset($content['field_class_standing'][3])) {
+				 			print("– ");
+							print_r( render($content['field_class_standing'][3]));
+						}elseif(isset($content['field_class_standing'][2])) {
+				  		print("– ");
+							print_r( render($content['field_class_standing'][2]));
+					  }elseif(isset($content['field_class_standing'][1])) {
+							print("– ");
+							print_r( render($content['field_class_standing'][1]));
+				}else{ }; } ?>
 			</div>
 		</div>
 		
-		<div class="catalog-listing-header-item">
+		<div class="listing-property">
 			<?php // Credits amount standin ?>
-			<div class="compound">
-				<div class="compound-img">
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
-				</div>
-				<div class="compound-body">
-					<!-- [bug] It looks like this always prints out “No credit available.” —jkm -->
-					<?php if(isset($content['field_credits'][0])) {
-							// check to see if credit data value is 0, and if set, display v credits
-					    if(render($content['field_credits'][0]) == '0'){
-								print(
-									"Variable credit.
-									<br/><small class='small'>See below for more info.</small>"
-								);
-								// if it's 1 credit, say "credit" and not "credits"
-							}elseif(render($content['field_credits'][0]) !== '1'){
-								print_r( render($content['field_credits'][0]));
-								print "Credit per quarter";
-							
-							}else {  // printing plural credits
-								print_r( render($content['field_credits'][0]));
-								print "Credits per quarter";
-							}
-					  }else{  // If the value isn't set, print no credit Available
-						    print "No credit available.
-						    <br/><small class='small'>See below for more info.</small>";
-					}?>
-				</div>
+			<div class="listing-property-img">
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png"/>
+			</div>
+			<div class="listing-property-body">
+				<!-- [bug] It looks like this always prints out “No credit available.” —jkm -->
+				<?php if(isset($content['field_credits'][0])) {
+						// check to see if credit data value is 0, and if set, display v credits
+				    if(render($content['field_credits'][0]) == '0'){
+							print(
+								"Variable credit.
+								<br/><small class='small'>See below for more info.</small>"
+							);
+							// if it's 1 credit, say "credit" and not "credits"
+						}elseif(render($content['field_credits'][0]) !== '1'){
+							print_r( render($content['field_credits'][0]));
+							print "Credit per quarter";
+						
+						}else {  // printing plural credits
+							print_r( render($content['field_credits'][0]));
+							print "Credits per quarter";
+						}
+				  }else{  // If the value isn't set, print no credit Available
+					    print "No credit available.
+					    <br/><small class='small'>See below for more info.</small>";
+				}?>
 			</div>
 		</div>
 	</header>
@@ -264,11 +253,11 @@
 			
 			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				<div class="compound">
-					<div class="compound-img">
+				<div class="listing-property">
+					<div class="listing-property-img">
 						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					</div>
-					<div class="compound-body">
+					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
 						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
 					</div>
