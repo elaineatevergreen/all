@@ -3,13 +3,18 @@ print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
 print render($content['field_effective_date']);
+?>
 
 //print render($content['field_archived']);
 <?php if (!empty($content['field_archived'])): ?>
-    <?php print render($content['field_archived']); ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_archived'][$i]); ?>
+      </div>
+    </div>
 <?php endif;?>
 
-
+<?php
 print render($content['field_updated_version']);
 print render($content['field_external_policy']);
 print render($content['body']);
