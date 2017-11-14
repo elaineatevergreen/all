@@ -5,7 +5,10 @@ print render($content['field_categories']);
 print render($content['field_effective_date']);
 
 //print render($content['field_archived']);
-hide($content['field_archived']);
+<?php if (!empty($content['field_archived'])): ?>
+    <?php print render($content['field_archived']); ?>
+<?php endif;?>
+
 
 print render($content['field_updated_version']);
 print render($content['field_external_policy']);
@@ -23,6 +26,3 @@ print render($content['field_steward']);
 ?>
 
 
-<?php if (!empty($content['field_archived'])): ?>
-    <?php print render($content['field_archived']); ?>
-<?php endif;?>
