@@ -22,9 +22,25 @@ print render($content['field_related_documents']);
 print render($content['field_related_policies']);
 print render($content['field_previous_version']);
 print render($content['field_stub']);
-print render($content['path']);
-print render($content['field_approval_date']);
-print render($content['field_approval_authority']);
+print render($content['path']); ?>
+
+<?php if (!empty($content['field_approval_date'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_approval_date']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
+<?php if (!empty($content['field_approval_authority'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_approval_authority']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
+<?php
 print render($content['field_signature_file']);
 print render($content['field_steward']);
 ?>
