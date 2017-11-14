@@ -2,8 +2,17 @@
 print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
-print render($content['field_effective_date']);
 ?>
+
+
+<?php if (!empty($content['field_effective_date'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_effective_date']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
 
 <?php if (!empty($content['field_archived'])): ?>
     <div class="content">
