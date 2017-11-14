@@ -3,7 +3,7 @@ print render($content['field_prefix']);
 print render($content['title']);
 print render($content['field_categories']);
 print render($content['field_effective_date']);
-print render($content['field_archived']);
+print strip_tags(render($content['field_archived']));
 print render($content['field_updated_version']);
 print render($content['field_external_policy']);
 print render($content['body']);
