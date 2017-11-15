@@ -83,8 +83,9 @@
 
 		<div class="listing-property">
 			<?php // Time offered standin ?>
+			<!-- [bug] This can have multiple properties, for example, Day, Evening, and Weekend. -->
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 			</div>
 			<div class="listing-property-body">
 				<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
@@ -99,7 +100,9 @@
 				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
 			</div>
 			<div class="listing-property-body">
-				<!-- [bug] This does not appear to be working. The content is left blank. -->
+				<!-- [bug] This does not appear to be working. The content is left blank. 
+					   [bug] This field also needs to make sure to indicate the percentage reserved for freshmen, if applicable.
+				-->
 				<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable ?>
 				<?php if(isset($content['field_class_standing'][0])) { ?>
 				  <?php print_r(render($content['field_class_standing'][0]));
@@ -283,7 +286,20 @@
 				<p><b><?php print ("Maximum enrollment:")?></b> <?php print_r(render($content['field_maximum_enrollment'][0])); ?></p>
 	    <?php }; ?>
 	    
-			<?php // Online Learning standin
+			<?php
+				/**
+				 * Online Learning standin
+				 *
+				 * [bug] This can be multiple values, but currently this standin
+				 *       doesn’t support that? See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
+				 *       for an example. —jkm
+				 *
+				 * Options:
+				 * * No Required Online Learning
+				 * * Hybrid Online Learning < 25% Delivered Online
+				 * * Hybrid Online Learning 25 - 49% Delivered Online
+				 * * Enhanced Online Learning
+				 */
 			// field_online_learning ?>
 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
 				<div><b><?php print ("Online learning:")?></b> <?php print_r(render($content['group_details']['group_more']['field_online_learning'][0])); ?></div>
@@ -319,7 +335,8 @@
 		    </div>
 		    <div class="listing-property-body">
 			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
-			    <?php if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
+			    <?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
+				    if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
 						<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
 					<?php }; ?>
 		    </div>
@@ -327,7 +344,7 @@
 	    
 	    <div class="listing-property">
 		    <div class="listing-property-img">
-			    <img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
+			    <img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 		    </div>
 		    <div class="listing-property-body">
 			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
