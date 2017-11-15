@@ -60,7 +60,14 @@
     </div>
 <?php endif;?>
 
-<?php print render($content['field_categories']); ?>
+<?php if (!empty($content['field_categories'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_categories']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
 <?php print render($content['body']); ?>
 
 
