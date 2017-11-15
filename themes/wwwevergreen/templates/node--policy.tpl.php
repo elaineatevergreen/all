@@ -43,7 +43,14 @@
     </div>
 <?php endif;?>
 
-<?php print render($content['field_signature_file']); ?>
+<?php if (!empty($content['field_signature_filed'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_signature_file']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
 
 <?php if (!empty($content['field_steward'])): ?>
     <div class="content">
