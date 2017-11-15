@@ -84,7 +84,7 @@
 		<div class="listing-property">
 			<?php // Time offered standin ?>
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 			</div>
 			<div class="listing-property-body">
 				<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
@@ -327,7 +327,7 @@
 	    
 	    <div class="listing-property">
 		    <div class="listing-property-img">
-			    <img alt="" src="/sites/all/themes/wwwevergreen/images/directory/_blank-square.png" title=""/>
+			    <img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 		    </div>
 		    <div class="listing-property-body">
 			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
