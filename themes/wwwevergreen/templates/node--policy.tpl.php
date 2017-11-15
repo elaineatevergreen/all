@@ -23,10 +23,8 @@
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
-          
-         <?php $signature_test = strip_tags($content['field_signature_file']); ?>
-         <a href=<?php echo $signature_test>;?>Click here</a>; 
          <?php print render($content['field_external_policy']); ?>
+         <?php print render("test test test")
       </div>
     </div>
 <?php endif;?>
