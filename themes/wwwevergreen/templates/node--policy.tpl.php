@@ -1,5 +1,4 @@
-
-<?phpprint render($content['title']);?>
+<?php print render($content['title']);?>
 
 
 <?php if (!empty($content['field_archived'])): ?>
@@ -10,17 +9,17 @@
     </div>
 <?php endif;?>
 
+<?php if (!empty($content['field_effective_date'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_effective_date']); ?>
+      </div>
+    </div>
+<?php endif;?>
 
 <?phpprint render($content['field_prefix']);?>
-
-
-
-
-
-
 <?php print render($content['field_updated_version']); ?>
 <?php print render($content['field_external_policy']); ?>
-
 <?php print render($content['group_related']); ?>
 <?php print render($content['field_related_documents']); ?>
 <?php print render($content['field_related_policies']); ?>
@@ -46,7 +45,6 @@
 
 <?php print render($content['field_signature_file']); ?>
 <?php print render($content['field_steward']); ?>
-
 <?php print render($content['field_categories']); ?>
 <?php print render($content['body']); ?>
 
