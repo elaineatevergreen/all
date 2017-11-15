@@ -44,7 +44,15 @@
 <?php endif;?>
 
 <?php print render($content['field_signature_file']); ?>
-<?php print render($content['field_steward']); ?>
+
+<?php if (!empty($content['field_steward'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_steward']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
 <?php print render($content['field_categories']); ?>
 <?php print render($content['body']); ?>
 
