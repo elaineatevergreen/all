@@ -46,6 +46,8 @@
 <?php if (!empty($content['field_signature_filed'])): ?>
     <div class="content">
       <div>
+         <?php $signature_test = ($content['field_signature_file']); ?>
+         <a href=$signature_test>Click here</a>";
          <?php print render($content['field_signature_file']); ?>
       </div>
     </div>
