@@ -19,7 +19,21 @@
 
 <?phpprint render($content['field_prefix']);?>
 <?php print render($content['field_updated_version']); ?>
-<?php print render($content['field_external_policy']); ?>
+
+<?php if (!empty($content['field_external_policy'])): ?>
+    <div class="content">
+      <div>
+          
+         <?php $signature_test = strip_tags($content['field_signature_file']); ?>
+         <a href=<?php echo $signature_test>;?>Click here</a>; 
+         <?php print render($content['field_external_policy']); ?>
+      </div>
+    </div>
+<?php endif;?>
+
+<?php print render($content['']); ?>
+
+
 <?php print render($content['group_related']); ?>
 <?php print render($content['field_related_documents']); ?>
 <?php print render($content['field_related_policies']); ?>
@@ -46,8 +60,6 @@
 <?php if (!empty($content['field_signature_filed'])): ?>
     <div class="content">
       <div>
-         <?php $signature_test = strip_tags($content['field_signature_file']); ?>
-         <a href="www.google.com">Click here</a>;
          <?php print render($content['field_signature_file']); ?>
       </div>
     </div>
