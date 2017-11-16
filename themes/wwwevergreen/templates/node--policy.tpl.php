@@ -24,7 +24,6 @@
     <div class="content">
       <div>
          <?php print render($content['field_external_policy']); ?>
-         <?php print render("test test test")
       </div>
     </div>
 <?php endif;?>
