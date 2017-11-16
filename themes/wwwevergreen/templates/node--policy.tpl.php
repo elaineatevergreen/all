@@ -17,17 +17,12 @@
     </div>
 <?php endif;?>
 
-<?phpprint render($content['field_prefix']);?>
+<?php print render($content['field_prefix']);?>
 <?php print render($content['field_updated_version']); ?>
 
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
-         <?php foreach($content['field_external_policy'] as $key) {
-             foreach ($key as $value){
-             print($value . '<br>');
-             }
-                } ?>
          <?php print render($content['field_external_policy']); ?>
          <?php print render(print_r($content['field_external_policy'])); ?>
       </div>
