@@ -24,8 +24,8 @@
     <div class="content">
       <div>
          <?php foreach($content['field_external_policy'] as $key => $value) {
-             echo("key:", $key);
-             echo("value:", $value);
+             echo($key);
+             echo($value);
                 } ?>
         <?php $content['field_external_policy']['title'] = "Test"); ?>
 
