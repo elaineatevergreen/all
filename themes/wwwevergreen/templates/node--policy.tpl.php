@@ -87,5 +87,5 @@
 
 <?php print render($content['body']); ?>
 
-<?php print dpm($content['field_external_policy']); ?>
+<?php print render(dpm($content['field_external_policy'])); ?>
 
