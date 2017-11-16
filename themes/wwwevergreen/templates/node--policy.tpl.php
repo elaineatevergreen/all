@@ -23,6 +23,8 @@
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
+         <?php testvar = $content['field_external_policy']['und'][0]['url']; ?>
+         <?php print $testvar; ?>
          <?php print render($content['field_external_policy']); ?>
       </div>
     </div>
