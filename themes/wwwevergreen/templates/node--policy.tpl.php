@@ -36,8 +36,6 @@
     </div>
 <?php endif;?>
 
-<?php print render($content['']); ?>
-
 
 <?php print render($content['group_related']); ?>
 <?php print render($content['field_related_documents']); ?>
