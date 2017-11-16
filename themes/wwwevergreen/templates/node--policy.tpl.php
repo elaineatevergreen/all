@@ -29,7 +29,7 @@
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
-         <?php $content['field_external_policy'][0][0][1] = "test"; ?>
+         <?php $content['field_external_policy'][0][1] = "test"; ?>
          <?php print render($content['field_external_policy']); ?>
       </div>
     </div>
