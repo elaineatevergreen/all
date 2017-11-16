@@ -23,7 +23,9 @@
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
-         <?php $content['field_external_policy'][0][0]['url'] = "www.google.com"; ?>
+         <?php foreach($content['field_external_policy'] as $key => $value) {
+             echo($key);
+                } ?>
          <?php print render($content['field_external_policy']); ?>
       </div>
     </div>
