@@ -30,7 +30,6 @@
     <div class="content">
       <div>
          <?php print render($content['field_external_policy']); ?>
-         <?php print render(print($content['field_external_policy'])); ?>
       </div>
     </div>
 <?php endif;?>
@@ -88,4 +87,5 @@
 
 <?php print render($content['body']); ?>
 
+<?php dpm($content['field_external_policy']); ?>
 
