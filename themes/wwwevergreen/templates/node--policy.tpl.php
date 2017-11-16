@@ -25,7 +25,7 @@
       <div>
          <?php foreach($content['field_external_policy'] as $key) {
              foreach ($key as $value){
-             print($value . '<br/>');
+             print($value . '<br>');
              }
                 } ?>
          <?php print render($content['field_external_policy']); ?>
