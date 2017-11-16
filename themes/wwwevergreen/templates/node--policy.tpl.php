@@ -17,14 +17,20 @@
     </div>
 <?php endif;?>
 
-<?php print render($content['field_prefix']);?>
+<?php if (!empty($content['field_prefix'])): ?>
+    <div class="content">
+      <div>
+         <?php print render($content['field_prefix']); ?>
+      </div>
+    </div>
+<?php endif;?>
 <?php print render($content['field_updated_version']); ?>
 
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
          <?php print render($content['field_external_policy']); ?>
-         <?php print render(print_r($content['field_external_policy'])); ?>
+         <?php print render(print($content['field_external_policy'])); ?>
       </div>
     </div>
 <?php endif;?>
