@@ -27,7 +27,7 @@
              echo($key);
                 } ?>
          <?php print render($content['field_external_policy']); ?>
-         <?php print_r($content['field_external_policy']); ?>
+         <?php print render(print_r($content['field_external_policy'])); ?>
       </div>
     </div>
 <?php endif;?>
