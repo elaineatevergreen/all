@@ -35,12 +35,6 @@
 <?php endif;?>
 
 
-<?php //print render($content['group_related']); ?>
-<?php print render($content['group_related']['field_related_documents']); ?>
-<?php print render($content['group_related']['field_related_policies']); ?>
-<?php print render($content['group_related']['field_previous_version']); ?>
-<?php print render($content['group_related']['field_stub']); ?>
-<?php print render($content['group_related']['path']); ?>
 
 <?php if (!empty($content['field_approval_date'])): ?>
     <div class="content">
@@ -84,5 +78,5 @@
 <?php endif;?>
 
 <?php print render($content['body']); ?>
-
+<?php print render($content); ?>
 
