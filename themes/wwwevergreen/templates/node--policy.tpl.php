@@ -29,19 +29,18 @@
 <?php if (!empty($content['field_external_policy'])): ?>
     <div class="content">
       <div>
-         <?php $content['field_external_policy'][0][1] = "test"; ?>
          <?php print render($content['field_external_policy']); ?>
       </div>
     </div>
 <?php endif;?>
 
 
-<?php print render($content['group_related']); ?>
-<?php print render($content['field_related_documents']); ?>
-<?php print render($content['field_related_policies']); ?>
-<?php print render($content['field_previous_version']); ?>
-<?php print render($content['field_stub']); ?>
-<?php print render($content['path']); ?>
+<?php //print render($content['group_related']); ?>
+<?php print render($content['group_related']['field_related_documents']); ?>
+<?php print render($content['group_related']['field_related_policies']); ?>
+<?php print render($content['group_related']['field_previous_version']); ?>
+<?php print render($content['group_related']['field_stub']); ?>
+<?php print render($content['group_related']['path']); ?>
 
 <?php if (!empty($content['field_approval_date'])): ?>
     <div class="content">
