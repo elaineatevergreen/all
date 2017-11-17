@@ -1,10 +1,5 @@
 <?php print render($content['title']);?>
 
-<?php print render($content['group_related']['field_related_policies']); ?>
-<?php print render($content['field_related_policies']); ?>
-<?php print render($content['group_related']); ?>
-
-
 <?php if (!empty($content['field_archived'])): ?>
     <div class="content">
       <div>
@@ -56,7 +51,7 @@
     </div>
 <?php endif;?>
 
-<?php if (!empty($content['field_signature_filed'])): ?>
+<?php if (!empty($content['field_signature_file'])): ?>
     <div class="content">
       <div>
          <?php print render($content['field_signature_file']); ?>
@@ -82,5 +77,8 @@
 <?php endif;?>
 
 <?php print render($content['body']); ?>
+
+<?php print render($content['group_related']['field_related_policies']); ?>
+<?php print render($content['group_related']['field_related_documents']); ?>
 
 
