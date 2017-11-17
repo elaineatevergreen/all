@@ -78,5 +78,5 @@
 <?php endif;?>
 
 <?php print render($content['body']); ?>
-<?php print render($content); ?>
+<?php print render($content['group_related']['field_related_policies']); ?>
 
