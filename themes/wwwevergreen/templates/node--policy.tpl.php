@@ -1,6 +1,13 @@
 <?php print render($content['title']);?>
 
 
+<?php print render($content['group_related']); ?>
+<?php print render($content['group_related']['field_related_policies']); ?>
+<?php print render($content['group_related']['field_previous_version']); ?>
+
+
+
+
 <?php if (!empty($content['field_archived'])): ?>
     <div class="content">
       <div>
@@ -78,7 +85,5 @@
 <?php endif;?>
 
 <?php print render($content['body']); ?>
-<?php print render($content['group_related']); ?>
-<?php print render($content['group_related']['field_related_policies']); ?>
-<?php print render($content['group_related']['field_previous_version']); ?>
+
 
