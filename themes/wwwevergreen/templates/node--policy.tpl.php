@@ -81,5 +81,5 @@
 <?php print render($content['group_related']['field_related_policies']); ?>
 <?php print render($content['field_related_policies']); ?>
 <?php print render($content['group_related']); ?>
-<?php print render($content['group_related']['field_previous_version']); ?>
+<?php print render($content['field_previous_version']); ?>
 
