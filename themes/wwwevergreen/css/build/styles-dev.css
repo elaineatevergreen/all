@@ -8050,17 +8050,76 @@ p.alert,
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
  */
-/* line 490, ../src/smacss/_modules.scss */
+/**
+ * T. CMS
+ *
+ * Styles to make the CMS WYSIWYG editor look nice. Not seen on
+ * published site.
+ *
+ * Table of Contents
+ *
+ * 1. TinyMCE
+ * 2. In-page User Interface
+ */
+/**
+ * 1. TinyMCE
+ *
+ * The WYSIWYG editor.
+ */
+/* line 18, ../src/smacss/modules/_cms.scss */
 #tinymce {
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 4ch;
   max-width: 48em;
   display: block;
 }
 
-/* line 499, ../src/smacss/_modules.scss */
+/**
+ * 2. In-page User Interface
+ *
+ * The interface seen by logged-in content owners with various site editing
+ * privileges.
+ */
+/* line 33, ../src/smacss/modules/_cms.scss */
 #toolbar {
   box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
+}
+
+/* line 37, ../src/smacss/modules/_cms.scss */
+#tertiary-nav + a {
+  padding: 0 1.5ch;
+  display: block;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  background-color: rgba(194, 220, 241, 0.95);
+  border-radius: 2px 0 0 2px;
+}
+
+/* line 50, ../src/smacss/modules/_cms.scss */
+.tabs.primary {
+  border-bottom-width: 0;
+  margin: 0;
+  padding-left: 1ch;
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.33928571428571;
+}
+
+/* line 60, ../src/smacss/modules/_cms.scss */
+.tabs.primary a {
+  font-weight: normal;
+  border-radius: 2px 2px 0 0;
+}
+
+/* line 67, ../src/smacss/modules/_cms.scss */
+div.workbench-info-block {
+  font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.33928571428571;
+  background-color: #f5f3e3;
+  border-color: #c8c1cd;
+  border-radius: 2px;
+  border-style: solid;
 }
 
 /**
