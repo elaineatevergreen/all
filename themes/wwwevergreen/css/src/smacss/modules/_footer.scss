@@ -89,8 +89,9 @@
 	border-width: 0;
 }*/
 
-.motto-footer p{
-	color: mix($tint, $shade, 15%);
+.tagline-footer p{
+	color: mix($tint, $shade, 33.3333333333%);
+	font-weight: bold;
 	text-align: center;
 
 	@include breakpoint($lil-groot){
@@ -106,9 +107,4 @@
 		font-size: 1.82rem;  // Step 3
 		line-height: 1.03007828594973;  // 30 / 29.124
 	}
-}
-
-.motto-footer i{
-	font-style: normal;
-	font-weight: bold;
 }
