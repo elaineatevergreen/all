@@ -4427,13 +4427,14 @@ input:checked + .header-dropdown {
 	border-width: 0;
 }*/
 /* line 92, ../src/smacss/modules/_footer.scss */
-.motto-footer p {
-  color: #242424;
+.tagline-footer p {
+  color: #515151;
+  font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
   /* line 92, ../src/smacss/modules/_footer.scss */
-  .motto-footer p {
+  .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -4443,16 +4444,10 @@ input:checked + .header-dropdown {
 }
 @media screen and (min-width: 32em) {
   /* line 92, ../src/smacss/modules/_footer.scss */
-  .motto-footer p {
+  .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
-}
-
-/* line 111, ../src/smacss/modules/_footer.scss */
-.motto-footer i {
-  font-style: normal;
-  font-weight: bold;
 }
 
 /**

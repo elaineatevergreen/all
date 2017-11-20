@@ -93,9 +93,7 @@
 					</ul><!-- /.element-list.text-list-alt -->
 				</div><!--/.unit-1-5-->
 				<div class="unit-1-1">
-					<div class="motto-footer">
-						<p>
-							<i>—Omnia Extares—</i>
-						</p>
+					<div class="tagline-footer">
+						<p>—Your way to the world—</p>
 					</div>
 				</div>
