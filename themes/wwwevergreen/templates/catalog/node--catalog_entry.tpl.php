@@ -97,7 +97,7 @@
 		<div class="listing-property">
 			<?php // Class standing standin ?>
 			<div class="listing-property-img">
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/images/icons/catalog/so-sr.svg" title="Sophomore – Senior"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/so-sr.svg" title="Sophomore – Senior"/>
 			</div>
 			<div class="listing-property-body">
 				<!-- [bug] This does not appear to be working. The content is left blank. 
