@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Code for the Promoted Search Result feature.
+ */
+
+include_once 'evergreen_promoted_result.features.inc';
+
+/**
+ * Implements hook_views_api().
+ */
+function evergreen_promoted_result_views_api() {
+  return array(
+    'api' => 3.0,
+    'path' => drupal_get_path('module', 'evergreen_promoted_result') . '/views',
+  );
+}
+
+///**
+// * Implements hook_entity_info_alter().
+// */
+//function evergreen_promoted_result_entity_info_alter(&$entity_info) {
+//  // This will expose a "search_result" viewmode for all node entities.
+//  $entity_info['node']['view modes']['search_result'] = array(
+//    'label' => t('Search result'),
+//    'custom settings' => TRUE,
+//  );
+//}
+
+///**
+// * Implements hook_preprocess_HOOK().
+// */
+//function evergreen_promoted_result_preprocess_node(&$vars) {
+//  if ($vars['view_mode'] === 'search_result') {
+//    // This will allow a template like "node--search-result.tpl.php" to be used
+//    // for all nodes being rendered using this viewmode.
+//    $vars['theme_hook_suggestions'][] = 'node__search_result';
+//  }
+//}

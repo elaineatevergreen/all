@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for earch_api_solr_booster.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function search_api_solr_booster_schema() {
+
+  $schema['search_api_solr_booster'] = array(
+    'description' => 'The base table for boost data.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The primary reference to node.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'vid' => array(
+        'description' => 'The node version.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'text' => array(
+        'description' => 'The words that should with dynimic boost text for the node.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+      'factor' => array(
+        'description' => 'The dynamic boost factor',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+    ),
+   'indexes' => array(
+      'nid' => array('nid'),
+    ),
+    'primary key' => array('vid'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function search_api_solr_booster_uninstall() {
+  variable_del('search_api_solr_booster');
+}

@@ -1,0 +1,14 @@
+name = Search API Solr Booster
+description = Allows users to boost nodes indexed by Solr..
+core = 7.x
+package = Search
+dependencies[] = search_api
+
+configure = admin/config/search/solr_booster
+
+; Information added by Drupal.org packaging script on 2016-12-01
+version = "7.x-1.0-beta3"
+core = "7.x"
+project = "search_api_solr_booster"
+datestamp = "1480578493"
+

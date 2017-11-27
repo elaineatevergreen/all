@@ -25,7 +25,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="https://instagram.com/TheEvergreenStateCollege" title="Instagram">
+									<a href="https://instagram.com/EvergreenStCol" title="Instagram">
 										<img alt="Instagram" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/instagram.png"/>
 									</a>
 								</li>
