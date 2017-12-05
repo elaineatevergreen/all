@@ -55,7 +55,7 @@ if(render($content['field_summer_session']) != '') {
 			// Drawing the images for the different quarters?>
 			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
 				<img alt="" class="listing-icon-quarter listing-icon-fall" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
-		  <?php } ?>
+			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
 				<img alt="" class="listing-icon-quarter listing-icon-winter" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
 			<?php } ?>
@@ -63,7 +63,7 @@ if(render($content['field_summer_session']) != '') {
 				<img alt="" class="listing-icon-quarter listing-icon-spring" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-				<img alt="listing-icon-quarter listing-icon-summer-full" class="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+				<img alt="" class="listing-icon-quarter listing-icon-summer-full" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
 				<!--
 					[bug] Summer session logic is missing.
 					
