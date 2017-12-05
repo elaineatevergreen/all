@@ -83,7 +83,7 @@ if(render($content['field_summer_session']) != '') {
 	<div class="listing-property">
 	<?php // Campus location standin ?>
 		<div class="listing-property-img">
-			<!-- Printing the location based on where we are -->
+			<!-- Print the location based on where we are -->
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
 			<?php } ?>
@@ -91,7 +91,7 @@ if(render($content['field_summer_session']) != '') {
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
 			<?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/Grays Harbor.svg" title="Grays Harbor"/>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
 			<?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
