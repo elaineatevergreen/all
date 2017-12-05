@@ -54,16 +54,16 @@ if(render($content['field_summer_session']) != '') {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
+				<img alt="" class="listing-icon-quarter listing-icon-fall" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
 		  <?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
+				<img alt="" class="listing-icon-quarter listing-icon-winter" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Spring"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
+				<img alt="" class="listing-icon-quarter listing-icon-spring" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+				<img alt="listing-icon-quarter listing-icon-summer-full" class="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
 				<!--
 					[bug] Summer session logic is missing.
 					
@@ -121,13 +121,13 @@ if(render($content['field_summer_session']) != '') {
 	<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
 		<div class="listing-property-img">
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					<img alt="" class="listing-icon-time-offered listing-icon-day" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 		  <?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+					<img alt="" class="listing-icon-time-offered listing-icon-evening" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
 			<?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+					<img alt="" class="listing-icon-time-offered listing-icon-weekend" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
 			<?php } ?>
 		</div>
 
