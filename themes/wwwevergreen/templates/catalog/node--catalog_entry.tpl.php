@@ -64,6 +64,15 @@ if(render($content['field_summer_session']) != '') {
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+				<!--
+					[bug] Summer session logic is missing.
+					
+					Summer sessions can be the full quarter, but most often they are
+					either first or second session. We ought to be able to tell which
+					session we’re in at a glance. Currently, there are no icons
+					designed for this, but you should be able to get started and I'll
+					add them in later. —jkm
+				-->
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
