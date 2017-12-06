@@ -11,8 +11,17 @@
  * @file
  */
 //dpm($content['field_summer_session']);
-// For catalog entries, let's make a nice-looking description of the quarters offered.
 
+// TODO
+// bolding issues /inconsistant inputted content with advertised schedule:
+
+// edge cases being thought about:
+// Tribal MPA classes
+// graduate courses in general need to be added
+
+
+
+// For catalog entries, let's make a nice-looking description of the quarters offered.
 //getting the current year for the course, and year -1 for our fall course
 $threequarters = $content['field_academic_year']['#items'][0]['safe_value'];
 $fall = $threequarters-1;
@@ -54,25 +63,16 @@ if(render($content['field_summer_session']) != '') {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
-				<img alt="" class="listing-icon-quarter listing-icon-fall" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
-			<?php } ?>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
+		  <?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
-				<img alt="" class="listing-icon-quarter listing-icon-winter" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Spring"))>0) { ?>
-				<img alt="" class="listing-icon-quarter listing-icon-spring" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-				<img alt="" class="listing-icon-quarter listing-icon-summer-full" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
-				<!--
-					[bug] Summer session logic is missing.
-					
-					Summer sessions can be the full quarter, but most often they are
-					either first or second session. We ought to be able to tell which
-					session we’re in at a glance. Currently, there are no icons
-					designed for this, but you should be able to get started and I'll
-					add them in later. —jkm
-				-->
+					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
@@ -83,7 +83,7 @@ if(render($content['field_summer_session']) != '') {
 	<div class="listing-property">
 	<?php // Campus location standin ?>
 		<div class="listing-property-img">
-			<!-- Print the location based on where we are -->
+			<!-- Printing the location based on where we are -->
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
 			<?php } ?>
@@ -121,13 +121,19 @@ if(render($content['field_summer_session']) != '') {
 	<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
 		<div class="listing-property-img">
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
-					<img alt="" class="listing-icon-time-offered listing-icon-day" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					<img alt=""
+					class="listing-icon-time-offered listing-icon-day"
+					src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 		  <?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
-					<img alt="" class="listing-icon-time-offered listing-icon-evening" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+					<img alt=""
+					class="listing-icon-time-offered listing-icon-evening"
+					src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
 			<?php } ?>
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
-					<img alt="" class="listing-icon-time-offered listing-icon-weekend" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+					<img alt=""
+					class="listing-icon-time-offered listing-icon-weekend"
+					src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
 			<?php } ?>
 		</div>
 
@@ -221,22 +227,22 @@ if(render($content['field_summer_session']) != '') {
 <?php // END TESTING HEADER ZONE ?>
 
 <?php
-	/**
-	 * [bug] What is This?
-	 *
-	 * Someone describe to me what I’m seeing here. —jkm
-	 */
-print render($title_prefix);
-if (!$page){ ?>
-	<h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-<?php }
-print render($title_suffix); ?>
+//* - $title_prefix (array): An array containing additional output populated by
+//*   modules, intended to be displayed in front of the main title tag that
+//*   appears in the template. ?>
+<?php print render($title_prefix); ?>
 
-<?php if ($display_submitted){ ?>
-	<div class="submitted">
-	<?php print $submitted; ?>
-	</div>
+<?php
+//* - $title: The page title, for use in the actual HTML content. ?>
+<?php if (!$page){ ?>
+	<h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
 <?php } ?>
+
+<?php
+//* - $title_suffix (array): An array containing additional output populated by
+//*   modules, intended to be displayed after the main title tag that appears in
+//*   the template. ?>
+<?php print render($title_suffix); ?>
 
 <div class="content"<?php print $content_attributes; ?>>
   <?php
@@ -261,7 +267,9 @@ print render($title_suffix); ?>
 
 	if($updatestatus != '') { ?>
 		<div class="box note program-status">
-			<p class="program-status-revised"><?php print $updatestatus ?></p>
+			<p class="program-status-revised">
+				<?php print $updatestatus ?>
+			</p>
 		</div>
 	<?php }; ?>
 
@@ -308,11 +316,13 @@ print render($title_suffix); ?>
 					</div>
 				</div>
 			<?php };
-			// Fields of study standin
-			// field_fields_of_study (NEED TO TEST WITH ONE THAT ACTUALLY HAS THIS FIELD) ?>
+			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
-	     	<!-- [bug] It looks like this is only printing out one field of study. See the catalog index for a good example on how this kind of thing is structured in HTML. -->
-				<p><b><?php print ("Fields of study:")?></b> <?php print_r(render($content['group_details']['field_fields_of_study'][0])); ?></p>
+				<div class="fos keyword-list">
+					<b><?php print ("Fields of study:")?></b>
+					<?php print(render($content['group_details']['field_fields_of_study'])); ?>
+
+				</div>
 	    <?php }; ?>
 
 	    <?php
@@ -331,24 +341,23 @@ print render($title_suffix); ?>
 			<?php
 				/**
 				 * Online Learning standin
-				 *
-				 * [bug] This can be multiple values, different for each quarter,
-				 *       but currently this standin doesn’t support that? See
-				 *       http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
+				 * TODO is this still a bug? It seems to be displaying the correct result -sm
+				 * [bug] This can be multiple values, but currently this standin
+				 *       doesn’t support that? See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
 				 *       for an example. —jkm
 				 *
 				 * Options:
-				 * * No Required Online Learning
-				 * * Hybrid Online Learning < 25% Delivered Online
-				 * * Hybrid Online Learning 25 - 49% Delivered Online
-				 * * Enhanced Online Learning
+				 *  * No Required Online Learning
+				 *  * Hybrid Online Learning < 25% Delivered Online
+				 *  * Hybrid Online Learning 25 - 49% Delivered Online
+				 *  * Enhanced Online Learning
 				 */
 			// field_online_learning ?>
 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
 				<div><b><?php print ("Online learning:")?></b> <?php print_r(render($content['group_details']['group_more']['field_online_learning'][0])); ?></div>
 	    <?php }; ?>
 
-	    <?php // Special expenses standin
+	    <?php // Special expenses
      	// field_special_expenses ?>
      	<?php if(isset($content['group_details']['group_more']['field_special_expenses'][0])) { ?>
 				<div><b><?php print ("Special expenses:")?></b> <?php print_r(render($content['group_details']['group_more']['field_special_expenses'][0])); ?></div>
@@ -360,7 +369,7 @@ print render($title_suffix); ?>
 				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b> <?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
 	    <?php }; ?>
 
-	    <?php // Upper division science credit standin
+	    <?php // Upper Div Sci credit standin
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
 				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
@@ -374,7 +383,7 @@ print render($title_suffix); ?>
 			?>
 	    <div class="listing-property">
 		    <div class="listing-property-img">
-			    <!-- Print the location based on where we are -->
+					<!-- Printing the location based on where we are -->
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
 					<?php } ?>
@@ -390,6 +399,11 @@ print render($title_suffix); ?>
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 					<?php } ?>
+					<?php // Study abroad standin with additional details ?>
+					<?php // Include Study Abroad icon, if relevant
+					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+					<?php }; ?>
 		    </div>
 		    <div class="listing-property-body">
 			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
@@ -399,10 +413,20 @@ print render($title_suffix); ?>
 					<?php }; ?>
 		    </div>
 	    </div>
-
+			<?php // Image for the Scheduled for: section in body ?>
 	    <div class="listing-property">
+				<?php // [bug] there is an issue of if there is more than one drawn, they drop down below each other, and shift the text body
+				      // to no longer be in line with the rest of the stuff above?>
 		    <div class="listing-property-img">
-			    <img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+				  <?php } ?>
+					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+					<?php } ?>
+					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+					<?php } ?>
 		    </div>
 		    <div class="listing-property-body">
 			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
@@ -415,7 +439,7 @@ print render($title_suffix); ?>
 
 					<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
 						<p><b>Advertised schedule:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
+						<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
 					<?php }; ?>
 
 					<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
@@ -425,9 +449,11 @@ print render($title_suffix); ?>
 		    </div>
 	    </div>
 
-			<!-- [Bug] Add the “May be offered again” standin here. Try to make it look like this demo, below. -->
+			<!--The “May be offered again” standin here. -->
 			<div class="box note">
-				<p><i>[bug] This program may be offered again in 2020 – 2021.</i></p>
+				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
+					<p><i><?php print render($content['group_details']['group_more']['field_next_offered']); ?></i></p>
+				<?php }; ?>
 			</div>
 
 			<section class="catalog-listing-registration">
