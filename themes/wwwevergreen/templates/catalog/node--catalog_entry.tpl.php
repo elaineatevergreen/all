@@ -63,16 +63,16 @@ if(render($content['field_summer_session']) != '') {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
-		  <?php } ?>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
+			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Spring"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
@@ -209,7 +209,7 @@ if(render($content['field_summer_session']) != '') {
 					print " Credits per quarter";
 				}
 			}else{  // If the value isn't set, print no credit Available
-				print ("No credit available.<br/><small class='small'>See below for more info.</small>");
+				print ("Credit information not available.<br/><small class='small'>See below for more info.</small>");
 			}?>
 		</div>
 	</div>
@@ -388,7 +388,7 @@ if(render($content['field_summer_session']) != '') {
 				<div><b><?php print ("Online learning:")?></b> <?php print_r(render($content['group_details']['group_more']['field_online_learning'][0])); ?></div>
 	    <?php }; ?>
 
-	    <?php // Special expenses
+	    <?php // Special expenses standin
      	// field_special_expenses ?>
      	<?php if(isset($content['group_details']['group_more']['field_special_expenses'][0])) { ?>
 				<div><b><?php print ("Special expenses:")?></b> <?php print_r(render($content['group_details']['group_more']['field_special_expenses'][0])); ?></div>
@@ -400,7 +400,7 @@ if(render($content['field_summer_session']) != '') {
 				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b> <?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
 	    <?php }; ?>
 
-	    <?php // Upper Div Sci credit standin
+	    <?php // Upper division science credit standin
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
 				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
