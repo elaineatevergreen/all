@@ -145,7 +145,11 @@ if(render($content['field_summer_session']) != '') {
 	</div>
 
 	<div class="listing-property">
-	<?php // Class standing standin ?>
+	<?php
+		/**
+		 * [bug] This standin does not display on dev.
+		 */
+		// Class standing standin ?>
 		<div class="listing-property-img">
 			<?php // take the first element and the last element, and use them to make the file name for the class standing range?>
 			<img alt=""
@@ -175,19 +179,24 @@ if(render($content['field_summer_session']) != '') {
 	</div>
 
 	<div class="listing-property">
-	<?php // Credits amount standin ?>
+	<?php
+		/**
+		 * [bug] This standin displays only as 0 credits on dev.
+		 */
+		// Credits amount standin ?>
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-				<?php 	// if it's 1 credit, say "credit" and not "credits"
-			}else{  // printing plural credits ?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
+			<!-- [bug] Is this right? If it’s set to 0 that means variable credits? -->
+			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+		<?php }else{ ?>
+			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
 		<?php } ?>
 
 		</div>
 		<div class="listing-property-body"> <?php
 			if(isset($content['group_details']['field_credits'][0])) {
 				// check to see if credit data value is 0, and if set, display v credits
+				// [bug] Is this right? If it’s set to 0 that means variable credits?
 				if(render($content['group_details']['field_credits'][0]) == '0'){
 					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
 				// if it's 1 credit, say "credit" and not "credits"
@@ -315,11 +324,26 @@ if(render($content['field_summer_session']) != '') {
 						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
 					</div>
 				</div>
-			<?php };
+			<?php }; ?>
+			
+			<?php
+			/**
+			 * [bug] “Fields of study” h3 needs to be removed.
+			 *
+			 *        Try to get the fields of study value to immediately follow
+			 *        the key, all on one line.
+			 *
+			 *        For example:
+			 *        Fields of study: community study  cultural studies  government  history  law
+			 *
+			 *        Also, can the fields be wrapped in a ul.element-list (and
+			 *        subsequent li elements, of course)?
+			 */
+			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
 				<div class="fos keyword-list">
-					<b><?php print ("Fields of study:")?></b>
+					<b><?php print ("Fields of study:")?></b> 
 					<?php print(render($content['group_details']['field_fields_of_study'])); ?>
 
 				</div>
@@ -341,10 +365,17 @@ if(render($content['field_summer_session']) != '') {
 			<?php
 				/**
 				 * Online Learning standin
-				 * TODO is this still a bug? It seems to be displaying the correct result -sm
-				 * [bug] This can be multiple values, but currently this standin
-				 *       doesn’t support that? See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
-				 *       for an example. —jkm
+				 * [bug] This can be multiple values, different for each quarter,
+				 *       but currently this standin doesn’t support that.
+				 *
+				 *       See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
+				 *       for a potential example, although this is, in fact, broken
+				 *       on the live server, as well.
+				 *       
+				 *       The online learning value should be listed as follows:
+				 *        * Fall: Hybrid Online Learning < 25% Delivered Online
+				 *        * Winter and Spring: Enhanced Online Learning
+				 * —jkm
 				 *
 				 * Options:
 				 *  * No Required Online Learning
@@ -451,8 +482,18 @@ if(render($content['field_summer_session']) != '') {
 
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
+				<?php
+					/**
+					 * [bug] “May be offered again in” h3 needs to be removed.
+					 *
+					 *        Try to make this a single continuous sentence.
+					 *
+					 *        For example:
+					 *        May be offered again in 2018–19.
+					 */
+				?>
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
-					<p><i><?php print render($content['group_details']['group_more']['field_next_offered']); ?></i></p>
+					<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
 				<?php }; ?>
 			</div>
 
