@@ -39,16 +39,12 @@
 	@include base-type;
 }
 
-.listing-property{
+.listing-property:not(:last-child){
 	// box model
-	margin: calc(15 / 16 * 1rem) 1ch 0 0;
+	margin: calc(15 / 16 * 1rem) 2ch 0 0;
 	// layout
 	display: flex;
 	align-items: center;
-}
-
-.listing-property:last-child{
-	margin-right: 0;
 }
 
 .listing-property-img{
@@ -69,11 +65,9 @@
 }
 
 .listing-icon-fall{
-	// box model
-	margin-left: -20px;
 	// position
 	position: relative;
-	z-index: 3;
+	z-index: 4;
 }
 
 .listing-icon-winter{
@@ -81,7 +75,7 @@
 	margin-left: -20px;
 	// position
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 .listing-icon-spring{
@@ -90,6 +84,30 @@
 	// position
 	position: relative;
 	z-index: 2;
+}
+
+// NOTE: Don’t collapse in summer, because it is an outlier and should be emphasized.
+
+.listing-icon-day{
+	// position
+	position: relative;
+	z-index: 3;	
+}
+
+.listing-icon-evening{
+	// box model
+	margin-left: -20px;
+	// position
+	position: relative;
+	z-index: 2;
+}
+
+.listing-icon-weekend{
+	// box model
+	margin-left: -20px;
+	// position
+	position: relative;
+	z-index: 1;
 }
 
 /*.listing-property-body{
