@@ -112,29 +112,29 @@
 	display: inline-block;
 }
 
-.keyword-list ul > li > a{
+.keyword-list a{
 	// box model
 	border-bottom-width: 0;
 	// layout
 	display: block;
 }
 
-.keyword-list ul > li > a,
-.keyword-list ul > li > a:visited{
+.keyword-list a,
+.keyword-list a:visited{
 	// typography
 	color: mix($tint, $blueberry-susan, 50%);
 	font-weight: normal;
 }
 
-.keyword-list ul > li > a:hover{
+.keyword-list a:hover{
 	color: $blueberry-susan;
 }
 
-.keyword-list ul > li > a:before{
+.keyword-list a:before{
 	content: "#";
 }
 
-.keyword-list ul > li > a:after{
+.keyword-list a:after{
 	@media print{
 		content: "";  // Hide appended URLs from print styles
 	}
