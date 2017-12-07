@@ -102,7 +102,7 @@ if(render($content['field_summer_session']) != '') {
 			<?php // Study abroad standin with additional details ?>
 			<?php // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
 			<?php }; ?>
 		</div>
 
