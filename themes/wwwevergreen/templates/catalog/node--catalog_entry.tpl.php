@@ -201,7 +201,7 @@ if(render($content['field_summer_session']) != '') {
 					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
-					print_r( render($content['group_details']['field_credits'][0]));
+					print_r( render($content['group_details']['field_credits'][0]));  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
