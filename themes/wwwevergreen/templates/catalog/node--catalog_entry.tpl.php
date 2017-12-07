@@ -102,7 +102,7 @@ if(render($content['field_summer_session']) != '') {
 			<?php // Study abroad standin with additional details ?>
 			<?php // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
 			<?php }; ?>
 		</div>
 
@@ -201,7 +201,7 @@ if(render($content['field_summer_session']) != '') {
 					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
-					print_r( render($content['group_details']['field_credits'][0]));
+					print_r( render($content['group_details']['field_credits'][0]));  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
@@ -430,11 +430,6 @@ if(render($content['field_summer_session']) != '') {
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 					<?php } ?>
-					<?php // Study abroad standin with additional details ?>
-					<?php // Include Study Abroad icon, if relevant
-					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
-					<?php }; ?>
 		    </div>
 		    <div class="listing-property-body">
 			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
