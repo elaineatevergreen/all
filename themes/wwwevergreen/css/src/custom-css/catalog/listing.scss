@@ -28,8 +28,6 @@
  * into the default style sheet at our convenience.
  */
 .listing-header{
-	// box model
-	margin: 0 -1ch;
 	// layout
 	align-items: baseline;
 	display: flex;
@@ -39,12 +37,17 @@
 	@include base-type;
 }
 
-.listing-property:not(:last-child){
+.listing-property{
 	// box model
 	margin: calc(15 / 16 * 1rem) 2ch 0 0;
 	// layout
 	display: flex;
 	align-items: center;
+}
+
+.listing-property:not(:last-child){
+	// box model
+	margin: calc(15 / 16 * 1rem) 2ch 0 0;
 }
 
 .listing-property-img{
