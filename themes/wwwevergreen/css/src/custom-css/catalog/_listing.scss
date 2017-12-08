@@ -57,14 +57,18 @@
 	max-width: none;
 	// layout
 	align-self: flex-start;
+	display: flex;
+}
+
+.listing-property-img-alt{
+	display: flex;
+	flex-direction: column;
 }
 
 .listing-property-img img{
 	// box model
 	margin: 0;
-	width: 5ch;
-	// layout
-	display: inline-block;
+	width: 4ch;
 }
 
 .listing-icon-fall{
