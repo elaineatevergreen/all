@@ -63,16 +63,16 @@ if(render($content['field_summer_session']) != '') {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
+				<img alt="" class="listing-icon-fall" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
+				<img alt="" class="listing-icon-winter" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Spring"))>0) { ?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
+				<img alt="" class="listing-icon-spring" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
 			<?php } ?>
 			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+				<img alt="" class="listing-icon-summer" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
@@ -412,7 +412,7 @@ if(render($content['field_summer_session']) != '') {
 			 * Location and Schedule
 			 */
 			?>
-	    <div class="listing-property">
+	    <div class="listing-property-alt">
 		    <div class="listing-property-img">
 					<!-- Printing the location based on where we are -->
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
