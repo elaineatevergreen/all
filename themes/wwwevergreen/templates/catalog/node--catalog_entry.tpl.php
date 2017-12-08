@@ -2,11 +2,7 @@
 /**
  * Catalog Listing Page
  *
- * IMPORTANT: This catalog listing page is still missing details that
- * were not accounted for in the comp. These details must be accounted
- * for before this page goes live. Steven Meaney put them in a
- * supplementary “cutoff.php” file, so go looking for that first.
- */
+ **/
 /**
  * @file
  */
