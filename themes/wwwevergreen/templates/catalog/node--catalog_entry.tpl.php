@@ -146,15 +146,12 @@ if(render($content['field_summer_session']) != '') {
 
 	<div class="listing-property">
 	<?php
-		/**
-		 * [bug] This standin does not display on dev.
-		 */
 		// Class standing standin ?>
 		<div class="listing-property-img">
 			<?php // take the first element and the last element, and use them to make the file name for the class standing range?>
 			<img alt=""
 			src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
-			title="<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
+			title="<?php print(render($content['group_whowhenwhere']['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
 		</div>
 		<div class="listing-property-body">
 			<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
@@ -180,13 +177,10 @@ if(render($content['field_summer_session']) != '') {
 
 	<div class="listing-property">
 	<?php
-		/**
-		 * [bug] This standin displays only as 0 credits on dev.
-		 */
 		// Credits amount standin ?>
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<!-- [bug] Is this right? If it’s set to 0 that means variable credits? -->
+			<!-- [bug] Is this right? If it’s set to 0 that means variable credits? Yeah that's right since as variable we don't know the #-->
 			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
 			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
@@ -201,11 +195,12 @@ if(render($content['field_summer_session']) != '') {
 					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
-					print_r( render($content['group_details']['field_credits'][0]));  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
+					//print_r( render($content['group_details']['field_credits'][0]));
+					  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
-					print_r( render($content['group_details']['field_credits'][0]));
+					//print_r( render($content['group_details']['field_credits'][0]));
 					print " Credits per quarter";
 				}
 			}else{  // If the value isn't set, print no credit Available
@@ -325,7 +320,7 @@ if(render($content['field_summer_session']) != '') {
 					</div>
 				</div>
 			<?php }; ?>
-			
+
 			<?php
 			/**
 			 * [bug] “Fields of study” h3 needs to be removed.
@@ -333,19 +328,23 @@ if(render($content['field_summer_session']) != '') {
 			 *        Try to get the fields of study value to immediately follow
 			 *        the key, all on one line.
 			 *
-			 *        For example:
-			 *        Fields of study: community study  cultural studies  government  history  law
 			 *
-			 *        Also, can the fields be wrapped in a ul.element-list (and
-			 *        subsequent li elements, of course)?
-			 */
+			 *
+			 *
+			 *
+			 *        -fixed?
+			 **/
 			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
 				<div class="fos keyword-list">
 					<b><?php print ("Fields of study:")?></b> 
-					<?php print(render($content['group_details']['field_fields_of_study'])); ?>
 
+					<ul class="field-fields-of-study element-list">
+						<?php for($i = 0; $i < count($content['group_details']['field_fields_of_study'][0]); ++$i){?>
+							<li><?php print(render($content['group_details']['field_fields_of_study'][$i])); ?> </li>
+						<?php } ?>
+					</ul>
 				</div>
 	    <?php }; ?>
 
@@ -371,11 +370,14 @@ if(render($content['field_summer_session']) != '') {
 				 *       See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
 				 *       for a potential example, although this is, in fact, broken
 				 *       on the live server, as well.
-				 *       
+				 *
 				 *       The online learning value should be listed as follows:
 				 *        * Fall: Hybrid Online Learning < 25% Delivered Online
 				 *        * Winter and Spring: Enhanced Online Learning
 				 * —jkm
+				 *
+				 *
+				 *
 				 *
 				 * Options:
 				 *  * No Required Online Learning
@@ -430,6 +432,11 @@ if(render($content['field_summer_session']) != '') {
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 					<?php } ?>
+					<?php // Study abroad standin with additional details ?>
+					<?php // Include Study Abroad icon, if relevant
+					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+					<?php }; ?>
 		    </div>
 		    <div class="listing-property-body">
 			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
