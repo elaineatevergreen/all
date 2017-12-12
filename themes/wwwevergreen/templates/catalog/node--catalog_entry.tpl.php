@@ -387,19 +387,19 @@ if(render($content['field_summer_session']) != '') {
 							<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
-							<li><?php print("Fall-Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
+							<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
 							<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
-							<li><?php print("Winter-Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
+							<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
 							<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
-							<li><?php print("Fall-Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
+							<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
 						<?php } ?>
 						<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
 							<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
