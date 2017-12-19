@@ -27,17 +27,18 @@ Node Processor Settings:
     Effective Date	Effective Date (field_effective_date:start)
     External Policy	External Policy: URL (field_external_policy:url)
     Prefix	Prefix (field_prefix)
-    Previous Version	Previous Version (Entity reference by Feeds GUID) (field_previous_version)
-    Related Policies	Related Policies (Entity reference by Feeds GUID) (field_related_policies)
     Signature File	Signature File: URI (field_signature_file:uri)  (rename if exists)
     Steward	Steward (field_steward)
     Stub	Stub (field_stub)
-    Updated Version	Updated Version (Entity reference by Feeds GUID) (field_updated_version)
     Nid	GUID (guid)  (Used as unique)
     Title	Title (title)
     Related Documents	Related Documents: URI (field_related_documents:uri)
+    Previous Version	Previous Version (Entity reference by Entity label) (field_previous_version:label)
+    Related Policies	Related Policies (Entity reference by Entity label) (field_related_policies:label)
+    Updated Version	Updated Version (Entity reference by Entity label) (field_updated_version:label)
 
-Make sure you set the explode csv tamper for categories, signature file,
+
+Make sure you set the explode csv tamper for categories, signature file, related documents, previous version
 Make sure you set the tamper for archived to:
     Find Replace Archived -> 1
     Find Replace Active -> 0
