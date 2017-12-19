@@ -20,6 +20,7 @@ deploy_d7_library libraries/flowplayer5 $WWW_CODE
 deploy_d7_theme themes/wwwevergreen $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_policies $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_promoted_result $WWW_CODE
 deploy_d7_custom_module modules/custom/search_api_solr_booster $WWW_CODE
