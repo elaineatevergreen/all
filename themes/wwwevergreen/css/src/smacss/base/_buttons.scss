@@ -96,7 +96,8 @@ input[type="submit"]:active,
 .prime:visited,
 input.prime,
 .box .prime,
-.box .prime:visited{
+.box .prime:visited,
+.webform-client-form .button-primary{  // Drupal Webform
 	// typography
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
@@ -108,7 +109,8 @@ input.prime,
 
 .prime:hover,
 input.prime:hover,
-.box .prime:hover{
+.box .prime:hover,
+.webform-client-form .button-primary:hover{  // Drupal Webform
 	// typography
 	color: $tint;
 	//text-shadow: 0 1px 0 $highlight;
@@ -119,7 +121,8 @@ input.prime:hover,
 
 .prime:focus,
 input.prime:focus,
-.box .prime:focus{
+.box .prime:focus,
+.webform-client-form .button-primary:focus{  // Drupal Webform
 	// typography
 	color: $tint;
 	//text-shadow: 0 1px 0 $highlight;
@@ -130,7 +133,8 @@ input.prime:focus,
 
 .prime:active,
 input.prime:active,
-.box .prime:active{
+.box .prime:active,
+.webform-client-form .button-primary:active{  // Drupal Webform
 	// typography
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
@@ -172,6 +176,8 @@ input.is-disabled:hover{
 .prime[disabled],
 .prime[disabled]:hover,
 input.prime.is-disabled,
-input.prime.is-disabled:hover{
+input.prime.is-disabled:hover,
+.webform-client-form .button-primary[disabled],  // Drupal Webform
+.webform-client-form .button-primary[disabled]:hover{  // Drupal
 	background: mix($tint, $evergreen-neue, 20%) none;
 }
