@@ -123,10 +123,11 @@
 /**
  * e. Buttons
  */
-.webform-client-form .button-primary{
+/* See "base/buttons" */
+/*.webform-client-form .button-primary{
 	@extend input.prime;
 }
 
 .webform-client-form .button-primary[disabled]{
 	@extend .prime[disabled];
-}
+}*/

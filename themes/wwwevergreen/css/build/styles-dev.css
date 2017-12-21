@@ -1183,7 +1183,7 @@ input {
 }
 
 /* line 94, ../src/smacss/base/_forms.scss */
-input[type="text"], .form-type-select {
+input[type="text"] {
   width: 100%;
   max-width: calc(45ch + 1em);
 }
@@ -1337,12 +1337,18 @@ input[type="radio"] + label {
   margin-bottom: 0;
 }
 
-/* line 49, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 45, ../src/smacss/base/forms/_drupal-views.scss */
+.form-type-select {
+  width: 100%;
+  max-width: calc(45ch + 1em);
+}
+
+/* line 50, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .form-type-select select {
   width: 100%;
 }
 
-/* line 53, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 54, ../src/smacss/base/forms/_drupal-views.scss */
 div[id$="-range-wrapper"] .slider-filter-processed {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -1355,13 +1361,13 @@ div[id$="-range-wrapper"] .slider-filter-processed {
           justify-content: space-between;
 }
 
-/* line 59, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 60, ../src/smacss/base/forms/_drupal-views.scss */
 div[class$="-range-min"],
 div[class$="-range-max"] {
   width: 6ch;
 }
 
-/* line 64, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 65, ../src/smacss/base/forms/_drupal-views.scss */
 input[id$="-range-max"] {
   text-align: right;
 }
@@ -1369,18 +1375,18 @@ input[id$="-range-max"] {
 /**
  * b. Buttons
  */
-/* line 71, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 72, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-submit-button,
 .views-exposed-form .views-reset-button {
   display: inline-block;
 }
 
-/* line 76, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 77, ../src/smacss/base/forms/_drupal-views.scss */
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: calc(20 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 76, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 77, ../src/smacss/base/forms/_drupal-views.scss */
   .views-exposed-form .views-exposed-widget .form-submit {
     margin-top: calc(22.5 / 16 * 1rem);
   }
@@ -1395,13 +1401,13 @@ input[id$="-range-max"] {
  * See the Catalog Filter’s “Advanced Opportunities” for an example:
  * http://wwwtest.evergreen.edu/catalog/index?year=1
  */
-/* line 93, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 94, ../src/smacss/base/forms/_drupal-views.scss */
 .bef-checkboxes .form-item,
 .bef-secondary-options .form-item {
   margin-bottom: calc(15 / 16 * 1rem);
 }
 
-/* line 98, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 99, ../src/smacss/base/forms/_drupal-views.scss */
 .bef-checkboxes .form-type-bef-checkbox {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1411,7 +1417,7 @@ input[id$="-range-max"] {
   display: flex;
 }
 
-/* line 104, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 105, ../src/smacss/base/forms/_drupal-views.scss */
 .form-type-bef-checkbox input + label {
   margin-bottom: 0;
 }
@@ -1419,19 +1425,19 @@ input[id$="-range-max"] {
 /**
  * d. Tertiary Nav Filter Styles
  */
-/* line 111, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 112, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-form {
   margin: 0.535714285714286em 0 1.071428571428571em;
 }
 @media screen and (min-width: 43em) {
-  /* line 111, ../src/smacss/base/forms/_drupal-views.scss */
+  /* line 112, ../src/smacss/base/forms/_drupal-views.scss */
   .tertiary-nav-wrapper .views-exposed-form {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 
-/* line 119, ../src/smacss/base/forms/_drupal-views.scss */
+/* line 120, ../src/smacss/base/forms/_drupal-views.scss */
 .tertiary-nav-wrapper .views-exposed-widget {
   padding: 0;
   clear: left;
@@ -1472,7 +1478,7 @@ input[id$="-range-max"] {
 }
 
 /* line 31, ../src/smacss/base/forms/_drupal-webform.scss */
-.webform-client-form input[type="text"], .webform-client-form .form-type-select,
+.webform-client-form input[type="text"],
 .webform-client-form select {
   margin: 0;
 }
@@ -1577,6 +1583,14 @@ input[id$="-range-max"] {
 /**
  * e. Buttons
  */
+/* See "base/buttons" */
+/*.webform-client-form .button-primary{
+	@extend input.prime;
+}
+
+.webform-client-form .button-primary[disabled]{
+	@extend .prime[disabled];
+}*/
 /**
  * 4. Search
  */
@@ -1742,9 +1756,9 @@ input[type="submit"]:active,
 .prime,
 .prime:visited,
 input.prime,
-.webform-client-form .button-primary,
 .box .prime,
-.box .prime:visited {
+.box .prime:visited,
+.webform-client-form .button-primary {
   color: #f2f2f2;
   text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #50762e;
@@ -1753,33 +1767,33 @@ input.prime,
   border-color: #46502b;
 }
 
-/* line 109, ../src/smacss/base/_buttons.scss */
+/* line 110, ../src/smacss/base/_buttons.scss */
 .prime:hover,
 input.prime:hover,
-.webform-client-form .button-primary:hover,
-.box .prime:hover {
+.box .prime:hover,
+.webform-client-form .button-primary:hover {
   color: #f2f2f2;
   background-color: #64933a;
   background-image: -webkit-linear-gradient(#83a653 0, #64933a 20%, #50762e 80%);
   background-image: linear-gradient(#83a653 0, #64933a 20%, #50762e 80%);
 }
 
-/* line 120, ../src/smacss/base/_buttons.scss */
+/* line 122, ../src/smacss/base/_buttons.scss */
 .prime:focus,
 input.prime:focus,
-.webform-client-form .button-primary:focus,
-.box .prime:focus {
+.box .prime:focus,
+.webform-client-form .button-primary:focus {
   color: #f2f2f2;
   background-color: #64933a;
   background-image: -webkit-linear-gradient(#a1ba6c 0, #64933a 20%, #50762e 80%);
   background-image: linear-gradient(#a1ba6c 0, #64933a 20%, #50762e 80%);
 }
 
-/* line 131, ../src/smacss/base/_buttons.scss */
+/* line 134, ../src/smacss/base/_buttons.scss */
 .prime:active,
 input.prime:active,
-.webform-client-form .button-primary:active,
-.box .prime:active {
+.box .prime:active,
+.webform-client-form .button-primary:active {
   color: #f2f2f2;
   text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
   background-color: #3c5823;
@@ -1795,7 +1809,7 @@ input.prime:active,
  * buttons should have their actions taken away from them, or have
  * the disabled attribute.
  */
-/* line 151, ../src/smacss/base/_buttons.scss */
+/* line 155, ../src/smacss/base/_buttons.scss */
 .is-disabled,
 .is-disabled:visited,
 .is-disabled:hover,
@@ -1811,18 +1825,16 @@ input.is-disabled:hover {
   cursor: not-allowed;
 }
 
-/* line 169, ../src/smacss/base/_buttons.scss */
+/* line 173, ../src/smacss/base/_buttons.scss */
 .prime.is-disabled,
 .prime.is-disabled:hover,
 .prime.is-disabled:visited,
 .prime[disabled],
-.webform-client-form .button-primary[disabled],
 .prime[disabled]:hover,
-.webform-client-form .button-primary[disabled]:hover,
 input.prime.is-disabled,
-.webform-client-form .is-disabled.button-primary,
 input.prime.is-disabled:hover,
-.webform-client-form .is-disabled.button-primary:hover {
+.webform-client-form .button-primary[disabled],
+.webform-client-form .button-primary[disabled]:hover {
   background: #80a65f none;
 }
 
@@ -2796,46 +2808,45 @@ a:link,
  * 1. Mobile Header Widgets
  * 2. Logo
  * 3. Header Search
- * 4. Primary Nav
- * 5. Secondary Nav
- * 6. Site Name
+ * 4. Navigation
+ * 5. Site Name
  */
 /**
  * 1. Mobile Header Widgets
  *
  * Togglable dropdowns for internal user links and search bar.
  */
-/* line 21, ../src/smacss/modules/_header.scss */
+/* line 20, ../src/smacss/modules/_header.scss */
 .header-dropdowns {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 21, ../src/smacss/modules/_header.scss */
+  /* line 20, ../src/smacss/modules/_header.scss */
   .header-dropdowns {
     width: calc(50% - 1ch);
     float: right;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 21, ../src/smacss/modules/_header.scss */
+  /* line 20, ../src/smacss/modules/_header.scss */
   .header-dropdowns {
     width: 40%;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 21, ../src/smacss/modules/_header.scss */
+  /* line 20, ../src/smacss/modules/_header.scss */
   .header-dropdowns {
     width: 20%;
   }
 }
 
-/* line 40, ../src/smacss/modules/_header.scss */
+/* line 39, ../src/smacss/modules/_header.scss */
 input[name="header-toggle"] {
   position: absolute;
   visibility: hidden;
 }
 
-/* line 46, ../src/smacss/modules/_header.scss */
+/* line 45, ../src/smacss/modules/_header.scss */
 input + .header-dropdown {
   max-height: 0;
   overflow: hidden;
@@ -2843,20 +2854,20 @@ input + .header-dropdown {
   transition: 0.5s all ease;
 }
 
-/* line 52, ../src/smacss/modules/_header.scss */
+/* line 51, ../src/smacss/modules/_header.scss */
 input:checked + .header-dropdown {
   max-height: 8em;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
-/* line 57, ../src/smacss/modules/_header.scss */
+/* line 56, ../src/smacss/modules/_header.scss */
 .internal-users,
 .header-dropdown .search {
   width: 100%;
 }
 
-/* line 63, ../src/smacss/modules/_header.scss */
+/* line 62, ../src/smacss/modules/_header.scss */
 .internal-users {
   margin-top: 0;
   overflow: hidden;
@@ -2864,40 +2875,40 @@ input:checked + .header-dropdown {
   background-color: #d0cad4;
 }
 @media screen and (min-width: 70em) {
-  /* line 63, ../src/smacss/modules/_header.scss */
+  /* line 62, ../src/smacss/modules/_header.scss */
   .internal-users {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 
-/* line 78, ../src/smacss/modules/_header.scss */
+/* line 77, ../src/smacss/modules/_header.scss */
 .internal-users > li {
   padding: 0.9375rem 1em;
   width: 50%;
   float: left;
 }
 
-/* line 86, ../src/smacss/modules/_header.scss */
+/* line 85, ../src/smacss/modules/_header.scss */
 .internal-users img {
   width: 1.5ch;
   display: inline-block;
 }
 @media screen and (min-width: 43em) {
-  /* line 86, ../src/smacss/modules/_header.scss */
+  /* line 85, ../src/smacss/modules/_header.scss */
   .internal-users img {
     width: 1ch;
   }
 }
 
 @media screen and (min-width: 43em) {
-  /* line 97, ../src/smacss/modules/_header.scss */
+  /* line 96, ../src/smacss/modules/_header.scss */
   #search-flag + .header-dropdown {
     max-height: none;
     overflow: visible;
   }
 }
 
-/* line 105, ../src/smacss/modules/_header.scss */
+/* line 104, ../src/smacss/modules/_header.scss */
 .header-dropdown .search,
 .header-dropdown #search-block-form {
   margin: 0;
@@ -2906,7 +2917,7 @@ input:checked + .header-dropdown {
   background-color: #d6dfcd;
 }
 @media screen and (min-width: 43em) {
-  /* line 105, ../src/smacss/modules/_header.scss */
+  /* line 104, ../src/smacss/modules/_header.scss */
   .header-dropdown .search,
   .header-dropdown #search-block-form {
     padding: 0.9375rem 1em 0.9375rem 0;
@@ -2915,12 +2926,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 122, ../src/smacss/modules/_header.scss */
+/* line 121, ../src/smacss/modules/_header.scss */
 .page-header {
   width: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 122, ../src/smacss/modules/_header.scss */
+  /* line 121, ../src/smacss/modules/_header.scss */
   .page-header {
     width: calc(50% + 1ch);
     -webkit-box-align: center;
@@ -2932,7 +2943,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 122, ../src/smacss/modules/_header.scss */
+  /* line 121, ../src/smacss/modules/_header.scss */
   .page-header {
     width: 60%;
   }
@@ -2941,27 +2952,27 @@ input:checked + .header-dropdown {
 /**
  * 2. Logo
  */
-/* line 141, ../src/smacss/modules/_header.scss */
+/* line 140, ../src/smacss/modules/_header.scss */
 .logo {
   margin: 0.46875rem 1ch;
   width: calc(100% - 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 141, ../src/smacss/modules/_header.scss */
+  /* line 140, ../src/smacss/modules/_header.scss */
   .logo {
     width: calc(60% - 1ch);
     float: left;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 141, ../src/smacss/modules/_header.scss */
+  /* line 140, ../src/smacss/modules/_header.scss */
   .logo {
     width: 100%;
     float: none;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 141, ../src/smacss/modules/_header.scss */
+  /* line 140, ../src/smacss/modules/_header.scss */
   .logo {
     margin-right: auto;
     margin-bottom: 1em;
@@ -2979,19 +2990,19 @@ input:checked + .header-dropdown {
 		}
 	}
 }*/
-/* line 181, ../src/smacss/modules/_header.scss */
+/* line 180, ../src/smacss/modules/_header.scss */
 .logo a,
 .logo a:visited,
 .logo a:hover {
   border-bottom-width: 0;
 }
 
-/* line 187, ../src/smacss/modules/_header.scss */
+/* line 186, ../src/smacss/modules/_header.scss */
 .logo img {
   max-height: 4em;
 }
 @media screen and (min-width: 125em) {
-  /* line 187, ../src/smacss/modules/_header.scss */
+  /* line 186, ../src/smacss/modules/_header.scss */
   .logo img {
     margin: 0 auto;
     max-height: none;
@@ -3004,7 +3015,7 @@ input:checked + .header-dropdown {
  *
  * @section mod-header-search
  */
-/* line 202, ../src/smacss/modules/_header.scss */
+/* line 201, ../src/smacss/modules/_header.scss */
 [for="q"] {
   height: 0;
   width: 0;
@@ -3013,18 +3024,18 @@ input:checked + .header-dropdown {
   position: absolute;
 }
 
-/* line 210, ../src/smacss/modules/_header.scss */
+/* line 209, ../src/smacss/modules/_header.scss */
 .off-canvas {
   margin-right: 1ch;
 }
 @media screen and (min-width: 43em) {
-  /* line 210, ../src/smacss/modules/_header.scss */
+  /* line 209, ../src/smacss/modules/_header.scss */
   .off-canvas {
     margin-right: 0;
   }
 }
 
-/* line 218, ../src/smacss/modules/_header.scss */
+/* line 217, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   padding: 0 0.618em;
@@ -3034,37 +3045,37 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 218, ../src/smacss/modules/_header.scss */
+  /* line 217, ../src/smacss/modules/_header.scss */
   .search-toggle,
   .student-toggle {
     display: none;
   }
 }
 
-/* line 234, ../src/smacss/modules/_header.scss */
+/* line 233, ../src/smacss/modules/_header.scss */
 .search-toggle {
   border-radius: 0 0 4.5px;
 }
 
-/* line 238, ../src/smacss/modules/_header.scss */
+/* line 237, ../src/smacss/modules/_header.scss */
 .student-toggle {
   border-right: 1px solid #303030;
   border-radius: 0 0 0 4.5px;
 }
 
-/* line 243, ../src/smacss/modules/_header.scss */
+/* line 242, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   border-bottom-width: 0;
 }
 
-/* line 248, ../src/smacss/modules/_header.scss */
+/* line 247, ../src/smacss/modules/_header.scss */
 .search-toggle:hover,
 .student-toggle:hover {
   cursor: pointer;
 }
 
-/* line 256, ../src/smacss/modules/_header.scss */
+/* line 255, ../src/smacss/modules/_header.scss */
 .search-toggle > img,
 .student-toggle > img {
   margin: 0.46875rem auto;
@@ -3072,35 +3083,35 @@ input:checked + .header-dropdown {
   display: block;
 }
 
-/* line 263, ../src/smacss/modules/_header.scss */
+/* line 262, ../src/smacss/modules/_header.scss */
 #top-search-query,
 #q,
 .top-search button {
   margin-bottom: 0;
 }
 
-/* line 269, ../src/smacss/modules/_header.scss */
+/* line 268, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* line 273, ../src/smacss/modules/_header.scss */
+/* line 272, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-moz-placeholder {
   color: transparent;
 }
 
-/* line 277, ../src/smacss/modules/_header.scss */
+/* line 276, ../src/smacss/modules/_header.scss */
 [placeholder]:focus:-ms-placeholder {
   color: transparent;
 }
 
-/* line 281, ../src/smacss/modules/_header.scss */
+/* line 280, ../src/smacss/modules/_header.scss */
 .internal-users,
 .search-tools {
   margin-bottom: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 281, ../src/smacss/modules/_header.scss */
+  /* line 280, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.125rem;
@@ -3108,7 +3119,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 281, ../src/smacss/modules/_header.scss */
+  /* line 280, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
@@ -3116,7 +3127,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 294, ../src/smacss/modules/_header.scss */
+/* line 293, ../src/smacss/modules/_header.scss */
 .search-tools {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3130,13 +3141,13 @@ input:checked + .header-dropdown {
   white-space: nowrap;
 }
 @media screen and (min-width: 70em) {
-  /* line 294, ../src/smacss/modules/_header.scss */
+  /* line 293, ../src/smacss/modules/_header.scss */
   .search-tools {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 294, ../src/smacss/modules/_header.scss */
+  /* line 293, ../src/smacss/modules/_header.scss */
   .search-tools {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3145,51 +3156,51 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 312, ../src/smacss/modules/_header.scss */
+/* line 311, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
 @media screen and (min-width: 125em) {
-  /* line 312, ../src/smacss/modules/_header.scss */
+  /* line 311, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 318, ../src/smacss/modules/_header.scss */
+  /* line 317, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
 }
 
-/* line 324, ../src/smacss/modules/_header.scss */
+/* line 323, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 324, ../src/smacss/modules/_header.scss */
+  /* line 323, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 324, ../src/smacss/modules/_header.scss */
+  /* line 323, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 336, ../src/smacss/modules/_header.scss */
+/* line 335, ../src/smacss/modules/_header.scss */
 .search-tools img {
   width: 1.5ch;
   display: inline-block;
 }
 @media screen and (min-width: 43em) {
-  /* line 336, ../src/smacss/modules/_header.scss */
+  /* line 335, ../src/smacss/modules/_header.scss */
   .search-tools img {
     width: 1ch;
   }
 }
 
-/* line 347, ../src/smacss/modules/_header.scss */
+/* line 346, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3197,7 +3208,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 354, ../src/smacss/modules/_header.scss */
+/* line 353, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3209,23 +3220,37 @@ input:checked + .header-dropdown {
 }
 
 /**
- * 4. Primary Nav
+ * 4. Navigation
+ *
+ * The primary and secondary navigation in the header.
+ */
+/**
+ * 4. Navigation
+ *
+ * The primary and secondary navigation in the header.
+ *
+ * Table of Contents
+ *
+ *  i. Primary Nav
+ * ii. Secondary Nav
+ */
+/**
+ * i. Primary Nav
  *
  * The green nav at the top of every page.
  */
-/* line 369, ../src/smacss/modules/_header.scss */
+/* line 17, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list {
   margin: 0 auto;
   margin-top: 0;
   width: 100%;
-  min-height: 45px;
   position: relative;
   text-align: center;
   list-style-type: none;
   /* Necessary for float-based fallback layouts. */
 }
 @media screen and (min-width: 20em) {
-  /* line 369, ../src/smacss/modules/_header.scss */
+  /* line 17, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -3237,18 +3262,18 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 369, ../src/smacss/modules/_header.scss */
+  /* line 17, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list {
     letter-spacing: 0.075ch;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 369, ../src/smacss/modules/_header.scss */
+  /* line 17, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list {
     letter-spacing: normal;
   }
 }
-/* line 401, ../src/smacss/modules/_header.scss */
+/* line 48, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3258,31 +3283,32 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 20em) {
-    /* line 415, ../src/smacss/modules/_header.scss */
+    /* line 62, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       display: grid;
       grid-template-columns: repeat(5, auto);
     }
   }
   @media screen and (min-width: 32em) {
-    /* line 415, ../src/smacss/modules/_header.scss */
+    /* line 62, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       grid-template-columns: repeat(5, 20%);
     }
   }
 
-  /* line 428, ../src/smacss/modules/_header.scss */
+  /* line 75, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list::before,
   .top-nav-list::after {
     content: none;
   }
 }
-/* line 434, ../src/smacss/modules/_header.scss */
+/* line 81, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list > li {
+  min-height: 45px;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 434, ../src/smacss/modules/_header.scss */
+  /* line 81, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-box-align: stretch;
@@ -3296,13 +3322,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 446, ../src/smacss/modules/_header.scss */
+  /* line 96, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 434, ../src/smacss/modules/_header.scss */
+  /* line 81, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-box-flex: 1;
@@ -3313,7 +3339,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 434, ../src/smacss/modules/_header.scss */
+  /* line 81, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     height: auto;
   }
@@ -3321,13 +3347,13 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 32em) {
-    /* line 468, ../src/smacss/modules/_header.scss */
+    /* line 118, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list > li {
       width: auto;
     }
   }
 }
-/* line 476, ../src/smacss/modules/_header.scss */
+/* line 126, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .secondary-nav-list a {
   padding: calc(7.5 / 16 * 1rem) 1ch;
@@ -3335,7 +3361,7 @@ input:checked + .header-dropdown {
   display: block;
   text-decoration: none;
 }
-/* line 486, ../src/smacss/modules/_header.scss */
+/* line 136, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:hover,
 .secondary-nav-list a:hover {
   color: #f2f2f2;
@@ -3344,13 +3370,13 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 497, ../src/smacss/modules/_header.scss */
+/* line 147, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:focus,
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 476, ../src/smacss/modules/_header.scss */
+  /* line 126, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding: calc(7.5 / 16 * 1rem) 0.5ch;
@@ -3367,7 +3393,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 476, ../src/smacss/modules/_header.scss */
+  /* line 126, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding-right: 0.6666666667ch;
@@ -3375,7 +3401,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 476, ../src/smacss/modules/_header.scss */
+  /* line 126, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     font-size: inherit;
@@ -3383,21 +3409,21 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 524, ../src/smacss/modules/_header.scss */
+/* line 174, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .top-nav-list a:visited {
   color: #f2f2f2;
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 524, ../src/smacss/modules/_header.scss */
+  /* line 174, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     text-shadow: none;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 524, ../src/smacss/modules/_header.scss */
+  /* line 174, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     font-weight: bold;
@@ -3405,11 +3431,11 @@ input:checked + .header-dropdown {
 }
 
 /**
- * 5. Secondary Nav
+ * ii. Secondary Nav
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 544, ../src/smacss/modules/_header.scss */
+/* line 194, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -3419,7 +3445,7 @@ input:checked + .header-dropdown {
   background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 544, ../src/smacss/modules/_header.scss */
+  /* line 194, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -3433,7 +3459,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 544, ../src/smacss/modules/_header.scss */
+  /* line 194, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3442,33 +3468,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 544, ../src/smacss/modules/_header.scss */
+  /* line 194, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 578, ../src/smacss/modules/_header.scss */
+/* line 228, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 578, ../src/smacss/modules/_header.scss */
+  /* line 228, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     margin: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 578, ../src/smacss/modules/_header.scss */
+  /* line 228, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 578, ../src/smacss/modules/_header.scss */
+  /* line 228, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3476,7 +3502,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 578, ../src/smacss/modules/_header.scss */
+  /* line 228, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3484,7 +3510,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 605, ../src/smacss/modules/_header.scss */
+/* line 255, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a, .secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
@@ -3494,7 +3520,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 605, ../src/smacss/modules/_header.scss */
+  /* line 255, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3508,7 +3534,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 605, ../src/smacss/modules/_header.scss */
+  /* line 255, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -ms-flex-preferred-size: auto;
@@ -3516,26 +3542,26 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 605, ../src/smacss/modules/_header.scss */
+  /* line 255, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 605, ../src/smacss/modules/_header.scss */
+  /* line 255, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 605, ../src/smacss/modules/_header.scss */
+  /* line 255, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 647, ../src/smacss/modules/_header.scss */
+/* line 297, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
@@ -3543,23 +3569,23 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 657, ../src/smacss/modules/_header.scss */
+/* line 307, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 
 /**
- * 6. Site Name
+ * 5. Site Name
  *
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 669, ../src/smacss/modules/_header.scss */
+/* line 377, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @media screen and (min-width: 70em) {
-  /* line 669, ../src/smacss/modules/_header.scss */
+  /* line 377, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3569,12 +3595,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 686, ../src/smacss/modules/_header.scss */
+/* line 394, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 686, ../src/smacss/modules/_header.scss */
+  /* line 394, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
