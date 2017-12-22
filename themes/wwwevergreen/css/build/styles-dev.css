@@ -2709,8 +2709,8 @@ a:link,
  */
 /* line 233, ../src/smacss/layout/_content.scss */
 .theme--pattern {
+  padding: 0 1.5ch;
   background-attachment: fixed;
-  background-clip: content-box;
   background-image: url("/sites/all/themes/wwwevergreen/images/pattern-1.svg");
   background-size: 10vw;
   background-size: 10vmax;
