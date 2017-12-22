@@ -252,6 +252,14 @@ p.alert,  // WYSIWYG
 	flex-basis: calc(50% - 1ch);
 }
 
+// An action box that allows more flexible content within (e.g. not an .action-item-)
+.action-box-alt{
+	// layout
+	display: block;
+	// typography
+	text-align: inherit;
+}
+
 .action-box-full{
 	// box model
 	width: 100%;
