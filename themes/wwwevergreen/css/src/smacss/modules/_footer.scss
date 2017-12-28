@@ -28,6 +28,26 @@
 	}
 }
 
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE syntax.
+	
+	@include breakpoint($drax){
+		.page-footer > .wrapper > .grid{
+			display: grid;
+			grid-gap: 2ch;
+			grid-template-columns: 1fr 0 3fr 0 1fr;
+		}
+		
+		.page-footer-unit{
+			padding-left: 0;
+			width: auto;
+		}
+		
+		.page-footer-unit--placeholder{
+			display: none;
+		}
+	}
+}
+
 .page-footer-unit-central{
 	text-align: center;  // Keep it centered, even at large sizes
 }
