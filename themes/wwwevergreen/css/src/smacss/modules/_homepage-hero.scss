@@ -43,7 +43,7 @@
 	}
 }
 
-.homepage-hero-picture img{  // .homepage-hero-picture is the picturefill image
+.homepage-hero-picture img{  // .homepage-hero-picture is the fallback image
 	display: block;
 
 	@include breakpoint($starlord){
@@ -89,9 +89,13 @@
 .homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
 .homepage-hero a:visited,
 .homepage-hero a:hover{
-	border-width: 0;
+	// box model
+	//border-width: 0;
+	// typography
 	color: inherit;
 	font-weight: inherit;
+	// decoration
+	text-decoration: none;
 }
 
 .homepage-hero .call-to-action{
@@ -118,7 +122,7 @@
 .homepage-hero-content{  // Holds the .caption-box and .homepage-hero-copy
 	// box model
 	width: 100%;
-	max-width: 82em;
+	max-width: 77em;
 	// decoration
 	background-color: $blueberry-susan;
 

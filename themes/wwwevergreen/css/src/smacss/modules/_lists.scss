@@ -92,7 +92,14 @@
 	}
 }
 
-.pager{  // Drupal pagination navigation, (e.g. «First ‹Previous 1 2 3 Next› Last»)
+/**
+ * Pager is used by Drupal pagination navigation, and Google search engine
+ * result pages.
+ *
+ * (E.g. «First ‹Previous 1 2 3 Next› Last»)
+ */
+.pager,
+.item-list .pager{  // Drupal (see Faculty Directory, for example)
 	// box model
 	margin-left: 0;
 	// layout
@@ -101,10 +108,14 @@
 	justify-content: flex-start;
 	// typography
 	font-variant-numeric: lining-nums;
-	
+
 	@include breakpoint($starlord){
 		justify-content: center;
 	}
+}
+
+.item-list .pager li{  // Drupal (see Faculty Directory, for example)
+	padding: 0 0.5ch;
 }
 
 /**
@@ -148,10 +159,12 @@
 
 .accordion dt a{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	width: 100%;
 	// layout
 	display: block;
+	// decoration
+	text-decoration: none;
 }
 
 .accordion dt a:before{
@@ -181,6 +194,14 @@
 		// misc
 		cursor: pointer;
 	}
+}
+
+/**
+ * Graphical accordions use graphics as titles instead of text, and the
+ * dropdown arrows get in the way of making that look nice.
+ */
+.accordion-graphical dt a:before{
+	content: "";
 }
 
 /**
@@ -409,7 +430,7 @@
 .alpha-label{
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	margin-bottom: -1px;
 	padding: 0 1ch;
 	// layout
@@ -419,6 +440,7 @@
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px 2px 0 0;
+	text-decoration: none;
 }
 
 .alpha-index{
@@ -428,14 +450,13 @@
 	padding-left: 0;
 	// layout
 	display: block;
-	// position
 	// typography
 	word-wrap: break-word;
+	// lists
+	list-style-type: none;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
-	// lists
-	list-style-type: none;
 
 	@media screen and (min-width: 32em){
 		// layout

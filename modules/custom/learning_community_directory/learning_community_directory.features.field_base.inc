@@ -195,25 +195,6 @@ function learning_community_directory_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_intro'.
-  $field_bases['field_intro'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_intro',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
   // Exported field_base: 'field_number_of_communities'.
   $field_bases['field_number_of_communities'] = array(
     'active' => 1,
@@ -366,25 +347,6 @@ function learning_community_directory_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_secondary_content'.
-  $field_bases['field_secondary_content'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_secondary_content',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_two_or_four_year'.

@@ -49,6 +49,7 @@ rules:
     - 2
     -
       exclude:
+       - background-size
        - display
   no-empty-rulesets: 2
   no-invalid-hex: 2
@@ -184,7 +185,6 @@ rules:
         - letter-spacing
         - line-height
         - text-align
-        - text-decoration
         - text-indent
         - text-rendering
         - text-shadow
@@ -192,10 +192,19 @@ rules:
         - vertical-align
         - white-space
         - word-wrap
+        # list
+        - counter-reset
+        - list-style
+        - list-style-type
         # decoration
         - background
+        - background-attachment
+        - background-clip
         - background-color
         - background-image
+        - background-position
+        - background-position-x
+        - background-position-y
         - background-repeat
         - background-size
         - border-color
@@ -219,7 +228,13 @@ rules:
         - counter-increment
         - fill
         - outline
+        - outline-color
+        - outline-offset
+        - outline-style
         - outline-width
+        - text-decoration
+        - text-decoration-color
+        - text-decoration-skip
         # behavior
         - animation
         - touch-action

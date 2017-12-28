@@ -15,11 +15,19 @@ fi
 deploy_d7_library libraries/iCalcreator $WWW_CODE
 deploy_d7_library libraries/plupload $WWW_CODE
 deploy_d7_library libraries/juicebox $WWW_CODE
+deploy_d7_library libraries/flowplayer5 $WWW_CODE
 # Feature modules
 deploy_d7_theme themes/wwwevergreen $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_content $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_migration $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_policies $WWW_CODE
 deploy_d7_custom_module modules/custom/evergreen_cas $WWW_CODE
+deploy_d7_custom_module modules/custom/evergreen_promoted_result $WWW_CODE
+deploy_d7_custom_module modules/custom/basic_content $WWW_CODE
+deploy_d7_custom_module modules/custom/learning_community_directory $WWW_CODE
+deploy_d7_custom_module modules/custom/native_cases $WWW_CODE
+deploy_d7_custom_module modules/custom/simple_events $WWW_CODE
+deploy_d7_custom_module modules/custom/search_api_solr_booster $WWW_CODE
 rsync .htaccess $WWW_CODE/
 
 # Perform Production updates.

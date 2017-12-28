@@ -8,15 +8,28 @@ display office information as a "contact block" usually on a page.
 <div class="content">
     <h2>Contact Information</h2>
     <div class="extended-address">
+	    <?php if (isset($content['field_building_alt']) or isset($content['field_room'])) { ?>
         <div><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </div>
+        <?php }; ?>
+        
+        <?php if (isset($content['field_mailstop'])) { ?>
         <span class="field-label">Mailstop:</span>
         <span class="field-mailstop"><?php print render($content['field_mailstop']) ?></span>
+        <?php }; ?>
+        
+        
+        <?php 
+	    //because everyone has their country set via feeds, we actually need to check for the existence of state ("administrative area" in Address Field parlance)
+	    if(isset($content['field_location_off_campus']['#items'][0]['administrative_area']) and strlen($content['field_location_off_campus']['#items'][0]['administrative_area']) > 0) { ?>
+		<div><?php print render($content['field_location_off_campus']); ?></div>
+	<?php	}; 	?>
+        
     </div>
+    
+    
+    
+    
     <div class="required-fields group-phone field-group-html-element">
-        
-        
-        
-        
         <?php if (isset($content['group_phone']['field_phone'])) {
 	        ?>
 	        <div class="p-tel">

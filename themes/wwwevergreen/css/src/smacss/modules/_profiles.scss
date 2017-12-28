@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * P. Profiles
+ *
+ * Profiles with photos, names, bios, etc.
+ *
+ * Table of Contents
+ *
+ * 1. General Profiles
+ * 2. Faces of Evergreen
+ */
+
+@import "../../tools";
+
+/**
+ * 1. General Profiles
+ */
+.profile .portrait-1-1{  // portrait with 1:1 ratio.
+	border-radius: 50%;
+	// shape
+	shape-margin: 1em;
+	shape-outside: circle() border-box;
+}
+
+.profession{
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	@include breakpoint($starlord){
+		@include base-type;
+		font-weight: bold;
+	}
+}
+
+.mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
+.mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
+	// box model
+	border: 1px solid mix($shade, $sky-blue, 60%);
+	height: 3rem;
+	// decoration
+	border-radius: 50%;
+}
+
+/**
+ * 2. Faces of Evergreen
+ */
+.faces-header{
+	border-bottom: 1px solid mix($tint, $blueberry-susan, 60%);
+}
+
+.faces-grad-year{
+	@include small-type;
+	letter-spacing: 0.2ch;
+	text-transform: uppercase;
+}
+
+.field-subjects-studied{
+	// box model
+	margin: 0 0 calc(3.75 / 16 * 1rem);
+	// typography
+	color: mix($tint, $black, 40%);
+	font-family: $text-face-alt;
+	@include base-type-lg;
+
+	@include breakpoint($gamora){
+		@include base-type-xxl-alt;
+	}
+
+	@include breakpoint($groot){
+		@include base-type-xxxl-alt;
+	}
+}

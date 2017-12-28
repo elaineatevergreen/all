@@ -32,7 +32,7 @@ Displays contact information for an individual for use in a contact block on a p
 	        if(isset($content['field_staff_page']) or render($content['field_staff_page']) != '') {
 	        	$staffURL = $base_path . "/node/" . trim(render($content['field_staff_page']));
 	    ?>
-        <p><a href="<?php print $staffURL ?>">Our staff.</a> (test: <?php render($content['field_staff_page']) ?>)</p>
+        <p><a href="<?php print $staffURL ?>">Our staff.</a></p>
         
         <?php 
 	        };

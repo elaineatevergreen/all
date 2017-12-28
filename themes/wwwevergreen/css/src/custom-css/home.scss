@@ -6,8 +6,9 @@
  *
  * Table of Contents
  * 1. Unpublished Content
- * 2. SVG Transporter
- * 3. Slick Slider
+ * 2. Marketing Grid
+ * 3. SVG Transporter
+ * 4. Slick Slider
  */
 @import "../tools";
 
@@ -31,7 +32,101 @@
 }
 
 /**
- * 2. SVG Transporter
+ * 2. Hype Grid
+ */
+.hype-grid{
+
+	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include breakpoint($lil-groot){
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include breakpoint($gamora){
+			grid-template-columns: repeat(7, 1fr);
+			grid-gap: 1em 2ch;
+		}
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+	.grid.hype-grid{
+		margin-left: auto;
+	}
+
+	.hype-grid > *{
+		padding-left: 0;
+		width: auto;
+	}
+}
+
+.hype-segment{
+
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+
+	@include breakpoint($gamora){
+		grid-column-end: span 3;
+	}
+}
+
+.hype-segment-alt{
+
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+
+	@include breakpoint($gamora){
+		grid-column-end: span 6;
+	}
+}
+
+.hype-segment--magazine{
+
+	@include breakpoint($lil-groot){
+		grid-column-end: span 2;
+	}
+
+	@include breakpoint($gamora){
+		grid-column-end: span 6;
+	}
+}
+
+.hype-grid--magazine{
+
+	@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+		// box model
+		margin-left: 0;  // Overrides .grid fallback styling
+		// layout
+		display: grid;
+		grid-gap: 1em 2ch;
+		grid-template-columns: 1fr;
+
+		@include breakpoint($gamora){
+			grid-column-end: span 6;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+	.grid.hype-grid,
+	.grid.hype-segment--magazine{
+		margin-left: 0;
+	}
+
+	.hype-grid > *,
+	.hype-grid--magazine > *{
+		padding-left: 0;
+		width: auto;
+	}
+}
+
+/**
+ * 3. SVG Transporter
  *
  * We’d like to have SVG icons that can be themed with CSS, but browsers
  * make this very challenging.
@@ -42,7 +137,7 @@
 //@import "home/svg-transporter";
 
 /**
- * 3. Slick Slider
+ * 4. Slick Slider
  *
  * Slick Slider is used on the homepage for Upcoming Events Calendar at
  * smaller screen sizes.

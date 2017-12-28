@@ -5,7 +5,7 @@
 
 $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
+$slick-loader-path: "./themes/wwwevergreen/images/icons/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -42,7 +42,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+        background: #fff slick-image-url("spinner.svg") center center no-repeat;
     }
 }
 
@@ -102,6 +102,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
 	//left: -25px;
+	z-index: 1;
 	
 	[dir="rtl"] & {
 		left: auto;

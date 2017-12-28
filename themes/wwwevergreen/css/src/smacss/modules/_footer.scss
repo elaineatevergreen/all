@@ -13,16 +13,23 @@
 	// typography
 	color: $tint;
 	@include base-type;
+	text-align: center;
 	// decoration
 	background-color: $shade;
+	box-shadow: 0 0 3px $drop-shadow;
 
 	@include breakpoint($drax){
 		@include base-type-lg;
+		text-align: left;
 	}
 
 	@include breakpoint($groot){
 		@include base-type-xl;
 	}
+}
+
+.page-footer-unit-central{
+	text-align: center;  // Keep it centered, even at large sizes
 }
 
 .page-footer:after,
@@ -40,35 +47,53 @@
 	// typography
 	color: $evergreen-neue;
 	// decoration
-	border-color: mix($shade, $evergreen-neue, 40%);
+	text-decoration-color: mix($shade, $evergreen-neue, 40%);
 }
 
 .page-footer a:hover{
 	// typography
 	color: $sky-blue;
 	// decoration
-	border-color: $sky-blue;
+	text-decoration-color: $sky-blue;
 }
 
-.footer-map{
+.page-footer a:focus{
+	// decoration
+	background-color: transparentize($tint, .9);
+	outline-color: $tint;
+	outline-offset: 1px;
+	outline-style: dotted;
+	outline-width: 1px;
+}
+
+.page-footer-unit .lineup{
+	justify-content: center;
+
+	@include breakpoint($drax){
+		justify-content: flex-start;
+	}
+}
+
+/*.footer-map{
 	// layout
 	display: block;
 	// typography
 	text-align: center;
-}
+}*/
 
 .footer-map img{
 	max-height: calc(150 / 16 * 1rem);
 }
 
-.footer-map a{
+/*.footer-map a{
 	border-width: 0;
-}
+}*/
 
-.motto-footer p{
-	color: mix($tint, $shade, 15%);
+.tagline-footer p{
+	color: mix($tint, $shade, 40%);
+	font-weight: bold;
 	text-align: center;
-	
+
 	@include breakpoint($lil-groot){
 		// layout
 		margin: calc(30 / 16 * 1rem) 0;
@@ -77,14 +102,9 @@
 		letter-spacing: 0.3333333333ch;
 		text-transform: uppercase;
 	}
-	
+
 	@include breakpoint($starlord){
 		font-size: 1.82rem;  // Step 3
 		line-height: 1.03007828594973;  // 30 / 29.124
 	}
-}
-
-.motto-footer i{
-	font-style: normal;
-	font-weight: bold;
 }

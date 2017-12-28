@@ -17,7 +17,10 @@ html{
 	box-sizing: border-box;
 }
 
-*,
+*{
+	box-sizing: inherit;
+}
+
 *::before,
 *::after{
 	box-sizing: inherit;
@@ -53,14 +56,6 @@ svg{
 	max-width: 100%;
 }
 
-img[height="0"][width="0"]{  // For the poorly implemented trkn.us pixels
-	// box model
-	height: 0;
-	width: 0;
-	// layout
-	display: block;
-}
-
 audio{
 	max-width: 100%;
 }
@@ -74,10 +69,17 @@ iframe{
 	width: 100%;
 }
 
+.iframe-ratio-9-6{  // 9:6 ratio
+	// box model
+	height: 0;
+	padding-bottom: 66.6666666667%;
+	// position
+	position: relative;
+}
+
 .iframe-ratio-16-9{  // 16:9 ratio
 	// box model
 	height: 0;
-	//padding-top: 25px;
 	padding-bottom: 56.25%;
 	// position
 	position: relative;

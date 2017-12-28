@@ -754,6 +754,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'supplement' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -816,6 +822,12 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'supplement' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -867,11 +879,11 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
+      'supplement' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'wysiwyg' => array(
         'label' => 'above',
@@ -933,7 +945,7 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
+      'supplement' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -994,11 +1006,11 @@ function evergreen_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
-        'label' => 'above',
+      'supplement' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'wysiwyg' => array(
         'label' => 'above',
@@ -1634,12 +1646,8 @@ function evergreen_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'teaser' => array(

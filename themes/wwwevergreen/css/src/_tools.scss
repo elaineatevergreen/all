@@ -28,7 +28,9 @@ $display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, A
 $display-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 $text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 $text-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+$text-face-extra-condensed: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 $small-face: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$small-face-alt: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 $monospace-face: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 
 /**
@@ -132,20 +134,47 @@ $groot:     (min: 125em);
  */
 @mixin base-type{
 	font-size: 0.875rem;  // 14px  Step 0.5
-	line-height: 1.42857142857143;  //20/14
+	line-height: 1.33928571428571;  //18.75/14
 }
+
 @mixin base-type-lg{
 	font-size: 1.125rem;  // 18px  Step 1
 	line-height: 1.38888888888889;  // 25/18
 }
+
 @mixin base-type-xl{
 	font-size: 1.202rem;  // 19.229px  Step 2
-	line-height: 1.30011961100421;  // 25/19.229
+	line-height: 1.36512559155442;  // 26.25/19.229
 }
+
+@mixin base-type-xxl{
+	font-size: 1.82rem;  // 29.124px
+	line-height: 1.15883807169345;  // 33.75/29.124
+}
+
+@mixin base-type-xxl-alt{
+	font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
+	line-height: 1.10603155876714;  // 30/27.124
+}
+
+@mixin base-type-xxxl{
+	font-size: 1.945rem;  // 31.112px  Step 4
+	line-height: 1.20532270506557;  // 37.5/31.112
+}
+
+@mixin base-type-xxxl-alt{
+	font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
+	line-height: 1.2881286067601;  // 37.5/29.112
+}
+
 @mixin small-type{
 	font-family: $small-face;
 	font-size: 0.695rem;  // 11.12px  Step -1
 	line-height: 1.34831460674157;  // 15/11.125
+
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi){  // Safari 12, W3C, IE 11
+		font-family: $small-face-alt;
+	}
 }
 
 /**

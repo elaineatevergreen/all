@@ -8,9 +8,8 @@
  * 1. Mobile Header Widgets
  * 2. Logo
  * 3. Header Search
- * 4. Primary Nav
- * 5. Secondary Nav
- * 6. Site Name
+ * 4. Navigation
+ * 5. Site Name
  */
 
 /**
@@ -65,8 +64,14 @@ input:checked + .header-dropdown{
 	margin-top: 0;
 	// layout
 	overflow: hidden;
+	// typography
+	font-family: $display-face-alt;
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);
+
+	@include breakpoint($drax){
+		font-family: $display-face;
+	}
 }
 
 .internal-users > li{
@@ -79,13 +84,17 @@ input:checked + .header-dropdown{
 
 .internal-users img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 10px;  // magic-number; visually fits with text height
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+
+	@include breakpoint($gamora){
+		width: 1ch;
+	}
 }
 
 #search-flag + .header-dropdown{
+
 	@include breakpoint($gamora){
 		max-height: none;
 		overflow: visible;
@@ -116,8 +125,8 @@ input:checked + .header-dropdown{
 		// box model
 		width: calc(50% + 1ch);
 		// layout
-		display: flex;
 		align-items: center;
+		display: flex;
 	}
 
 	@include breakpoint($drax){
@@ -129,7 +138,7 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.46875rem 1ch 0;  // 7.5px 7px 7px
+	margin: 0.46875rem 1ch;  // 7.5px
 	width: calc(100% - 1em);
 
 	@include breakpoint($lil-groot){
@@ -178,6 +187,7 @@ input:checked + .header-dropdown{
 	max-height: 4em;
 
 	@include breakpoint($groot){
+		margin: 0 auto;
 		max-height: none;  // max-height doesn't center correctly in Blink.
 		max-width: 20em;
 	}
@@ -197,7 +207,11 @@ input:checked + .header-dropdown{
 }
 
 .off-canvas{
-	margin-right: 2%;
+	margin-right: 1ch;
+
+	@include breakpoint($gamora){
+		margin-right: 0;
+	}
 }
 
 .search-toggle,   // button to reveal search
@@ -241,12 +255,8 @@ input:checked + .header-dropdown{
 .search-toggle > img,
 .student-toggle > img{
 	margin: 0.46875rem auto;  // 7.5px
-	width: 17px;
+	width: 18px;
 	display: block;
-}
-
-.student-toggle > img{
-	padding-top: 1px;  // Compensate for matching search icon height
 }
 
 #top-search-query,  // deprecated, use #q
@@ -281,38 +291,31 @@ input:checked + .header-dropdown{
 }
 
 .search-tools{
-	// box model
-	margin-left: 0;  // Can be removed once .element-list propogates on .search-tools
-	padding-left: 0;  // Can be removed once .element-list propogates on .search-tools
+	// layout
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	// typography
 	font-family: $display-face-alt;
 	white-space: nowrap;  // Prevents Directories from sitting down on the next line; not super-important.
-	
+
 	@include breakpoint($drax){
 		font-family: $display-face;
+	}
+
+	@include breakpoint($groot){
+		flex-direction: column;
 	}
 }
 
 .search-tools li{
 	display: inline;
 
-	&::after{
-		content: " | ";
-	}
-
-	&:last-child::after{
-		content: "";
-	}
-
 	@include breakpoint($groot){
 		display: block;
 
 		&:after{
 			content: "";
-		}
-
-		&:not(:first-child){
-			margin-left: 19px;  // magic-number; should fit with .internal-users img
 		}
 	}
 }
@@ -329,12 +332,15 @@ input:checked + .header-dropdown{
 	}
 }
 
-.internal-users-alt img{
+.search-tools img{
 	// box model
-	margin-right: 5px;  // magic-number
-	width: 14px;  // magic-number; visually fits with text height
+	width: 1.5ch;
 	// layout
 	display: inline-block;
+
+	@include breakpoint($gamora){
+		width: 1ch;
+	}
 }
 
 .menu-button,
@@ -355,322 +361,14 @@ input:checked + .header-dropdown{
 }
 
 /**
- * 4. Primary Nav
+ * 4. Navigation
  *
- * The green nav at the top of every page.
+ * The primary and secondary navigation in the header.
  */
-.top-nav-list{
-	// box model
-	margin: 0 auto;
-	margin-top: 0;
-	width: 100%;
-	min-height: 45px;
-	// layout
-	position: relative;
-	// tyopography
-	text-align: center;
-	// list
-	list-style-type: none;
-
-	@include breakpoint($lil-groot){
-		// layout
-		align-items: stretch;
-		display: flex;
-		// typography
-		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
-	}
-
-	/**
-	 * See Typekit override for breakpoint($rocket), below.
-	 */
-
-	@include breakpoint($starlord){
-		// typography
-		letter-spacing: normal;
-	}
-
-	/* Necessary except for float-based fallback layouts. */
-	&::before,
-	&::after{
-		// box model
-		width: 0;
-		// layout
-		clear: both;
-		display: table;
-		// miscellaneous
-		content: "";
-	}
-}
-
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
-
-	.top-nav-list{
-		@include breakpoint($lil-groot){
-			// layout
-			display: grid;
-			grid-template-columns: repeat(5, auto);
-		}
-
-		@include breakpoint($starlord){
-			// layout
-			grid-template-columns: repeat(5, 20%);
-		}
-	}
-
-	.top-nav-list::before,
-	.top-nav-list::after{
-		content: none;
-	}
-}
+@import "header/navigation";
 
 /**
- * Typekit Override
- */
-.wf-active .top-nav-list{
-	
-	@include breakpoint($rocket){
-		// typography
-		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
-	}
-}
-
-.top-nav-list > li{
-	display: inline-block;
-
-	@include breakpoint($lil-groot){
-		// box model
-		border-left: 1px solid mix($tint, $shade, 20%);
-		// layout
-		align-items: stretch;
-		display: flex;
-		flex-grow: 1;
-		overflow: hidden;
-
-		&:first-child{
-			// box model
-			border-left-width: 0;
-		}
-	}
-
-	@include breakpoint($starlord){
-		// box model
-		width: 20%;
-		// layout
-		flex-grow: 1;
-		// typography
-		font-family: $text-face;
-		letter-spacing: normal;
-	}
-
-	@include breakpoint($gamora){
-		height: auto;
-	}
-}
-
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
-	.top-nav-list > li{
-		
-		@include breakpoint($starlord){
-			width: auto;
-		}
-	}
-}
-
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.secondary-nav-link{
-	// box model
-	border-bottom-width: 0;
-	padding: calc(7.5 / 16 * 1rem) 1ch;
-	width: 100%;
-	// layout
-	display: block;
-
-	&:hover{
-		// typography
-		color: $tint;
-		// decoration
-		background-color: mix($tint, $blueberry-susan, 40%);
-		// misc
-		box-shadow: 0 0 1px $highlight inset,
-		/*        */0 0 1em transparentize($highlight, 0.75) inset;
-		transition: all 0.1s ease-out;
-	}
-
-	&:focus{
-		background-color: $blueberry-susan;
-	}
-
-	@include breakpoint($lil-groot){
-		// box model
-		padding: calc(7.5 / 16 * 1rem) 0.5ch;
-		// layout
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		// misc
-		text-shadow: 0 2px 0 $drop-shadow;
-	}
-
-	@include breakpoint($rocket){
-		// box model
-		padding-right: 0.6666666667ch;
-		padding-left: 0.6666666667ch;
-	}
-
-	@include breakpoint($drax){
-		font-size: inherit;
-		line-height: inherit;
-	}
-}
-
-.top-nav-link,  // Deprecated in Drupal
-.top-nav-link:visited,  // Deprecated in Drupal
-.top-nav-list a,  // Drupal
-.top-nav-list a:visited{  // Drupal
-	// typography
-	color: $tint;
-	font-weight: 600;
-
-	@include breakpoint($starlord){
-		text-shadow: none;
-	}
-
-	@include breakpoint($gamora){
-		font-weight: bold;
-	}
-}
-
-/**
- * 5. Secondary Nav
- *
- * The textured nav immediately below the primary nav on the homepage only.
- */
-.secondary-nav-list{
-	// box model
-	border-top: 1px solid $evergreen-old-style;
-	margin: 0;
-	padding: 0;
-	// typography
-	text-align: center;
-	// decoration
-	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
-	// list
-	list-style-type: none;
-
-	@include breakpoint($lil-groot){
-		// layout
-		align-items: stretch;
-		display: flex;
-		// typography
-		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
-	}
-
-	@include breakpoint($rocket){
-		// layout
-		justify-content: flex-end;
-		// typography
-		letter-spacing: normal;
-	}
-
-	@include breakpoint($starlord){
-		font-family: $text-face;
-		line-height: 2.14285714285714;  // 30/14 - Edge doesn't support unitless calc() line-heights
-	}
-}
-
-.secondary-nav-list > li{
-	// box model
-	margin-right: 1ch;
-	// layout
-	display: inline-block;
-
-	@include breakpoint($lil-groot){
-		margin: 0;
-		// layout
-		flex-basis: 25%;
-	}
-
-	@include breakpoint($rocket){
-	}
-	
-	@include breakpoint($starlord){
-		flex-basis: auto;
-	}
-
-	@include breakpoint($gamora){
-		@include base-type;
-		line-height: 3.21428571428571;  // 45/14 - Edge doesn't support unitless calc() line-heights
-	}
-
-	@include breakpoint($groot){
-		@include base-type-lg;
-		line-height: 2.5;  // 45/18
-	}
-}
-
-.secondary-nav-link,  // Deprecated in Drupal
-.secondary-nav-list a{  // Drupal
-
-	&,
-	&:visited{
-		// box model
-		border-bottom: 0;
-		padding: calc(7.5 / 16 * 1rem) 0.5ch;
-		height: 100%;
-		width: 100%;
-		// layout
-		//display: block;
-		// typography
-		color: $tint;
-		font-weight: normal;
-
-		@include breakpoint($lil-groot){
-			align-items: center;
-			display: flex;
-			justify-content: center;
-		}
-
-		@include breakpoint($rocket){
-			// layout
-			display: inline-block;
-			flex-basis: auto;
-		}
-
-		@include breakpoint($starlord){
-			padding: 0 1ch;
-		}
-		
-		@include breakpoint($gamora){
-			// box model
-			padding: 0 2ch;
-			// typography
-			font-weight: bold;
-		}
-
-		@include breakpoint($drax){
-			font-size: inherit;
-			line-height: inherit;
-		}
-	}
-
-	&:hover{
-		// typography
-		color: $tint;
-		// decoration
-		background-color: mix($tint, $blueberry-susan, 40%);
-		// misc
-		box-shadow: 0 0 2px $highlight inset;
-		transition: all 0.1s ease-out;
-	}
-
-	&:focus{
-		background-color: $blueberry-susan;
-	}
-}
-
-/**
- * 6. Site Name
+ * 5. Site Name
  *
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration

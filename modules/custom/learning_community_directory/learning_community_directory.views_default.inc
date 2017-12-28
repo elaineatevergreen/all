@@ -204,6 +204,7 @@ function learning_community_directory_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Program Search';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -212,8 +213,30 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
+      'input_required' => 0,
+      'text_input_required' => array(
+        'text_input_required' => array(
+          'value' => 'Select any filter and click on Apply to see results',
+          'format' => 'full_html',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'bef_filter_description' => NULL,
+        'any_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
       'allow_secondary' => 0,
       'secondary_label' => 'Advanced options',
+      'secondary_collapse_override' => '0',
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
       'reset_label' => NULL,
@@ -224,6 +247,7 @@ function learning_community_directory_views_default_views() {
     'title' => array(
       'bef_format' => 'default',
       'more_options' => array(
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -272,6 +296,7 @@ function learning_community_directory_views_default_views() {
     'field_address_administrative_area' => array(
       'bef_format' => 'default',
       'more_options' => array(
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -322,6 +347,7 @@ function learning_community_directory_views_default_views() {
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -372,6 +398,7 @@ function learning_community_directory_views_default_views() {
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -418,10 +445,11 @@ function learning_community_directory_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_population_served_value' => array(
-      'bef_format' => 'bef',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -468,10 +496,11 @@ function learning_community_directory_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_type_of_program_value' => array(
-      'bef_format' => 'default',
+      'bef_format' => 'bef',
       'more_options' => array(
         'bef_select_all_none' => 0,
         'bef_collapsible' => 0,
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -518,10 +547,11 @@ function learning_community_directory_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_focus_value' => array(
-      'bef_format' => 'default',
+      'bef_format' => 'bef',
       'more_options' => array(
         'bef_select_all_none' => 0,
         'bef_collapsible' => 0,
+        'autosubmit' => 0,
         'is_secondary' => 0,
         'any_label' => '',
         'bef_filter_description' => '',
@@ -575,10 +605,11 @@ function learning_community_directory_views_default_views() {
     'any_label' => NULL,
     'filter_rewrite_values' => NULL,
   );
-  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
-  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'plain_text';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'table';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_institution_target_id']['id'] = 'field_institution_target_id';
@@ -597,6 +628,13 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['fields']['field_institution']['settings'] = array(
     'link' => 1,
   );
+  /* Field: Field: Address - Administrative area (i.e. State / Province) */
+  $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
+  $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
+  $handler->display->display_options['fields']['field_address_administrative_area']['relationship'] = 'field_institution_target_id';
+  $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'State / Province';
+  $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -647,6 +685,7 @@ function learning_community_directory_views_default_views() {
   $handler->display->display_options['filters']['field_address_administrative_area']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['operator_id'] = 'field_address_administrative_area_op';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['label'] = 'State or Province Name';
+  $handler->display->display_options['filters']['field_address_administrative_area']['expose']['description'] = 'Type the full name of the state or province.';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['operator'] = 'field_address_administrative_area_op';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['identifier'] = 'field_address_administrative_area';
   $handler->display->display_options['filters']['field_address_administrative_area']['expose']['remember_roles'] = array(
@@ -745,82 +784,10 @@ function learning_community_directory_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Content: Type of communities offered (field_type_of_program) */
-  $handler->display->display_options['filters']['field_type_of_program_value']['id'] = 'field_type_of_program_value';
-  $handler->display->display_options['filters']['field_type_of_program_value']['table'] = 'field_data_field_type_of_program';
-  $handler->display->display_options['filters']['field_type_of_program_value']['field'] = 'field_type_of_program_value';
-  $handler->display->display_options['filters']['field_type_of_program_value']['group'] = 2;
-  $handler->display->display_options['filters']['field_type_of_program_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_program_value']['expose']['operator_id'] = 'field_type_of_program_value_op';
-  $handler->display->display_options['filters']['field_type_of_program_value']['expose']['label'] = 'Type of communities offered (field_type_of_program)';
-  $handler->display->display_options['filters']['field_type_of_program_value']['expose']['operator'] = 'field_type_of_program_value_op';
-  $handler->display->display_options['filters']['field_type_of_program_value']['expose']['identifier'] = 'field_type_of_program_value';
-  $handler->display->display_options['filters']['field_type_of_program_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_program_value']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_program_value']['group_info']['label'] = 'Type of communities';
-  $handler->display->display_options['filters']['field_type_of_program_value']['group_info']['identifier'] = 'field_type_of_program_value';
-  $handler->display->display_options['filters']['field_type_of_program_value']['group_info']['widget'] = 'radios';
-  $handler->display->display_options['filters']['field_type_of_program_value']['group_info']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_type_of_program_value']['group_info']['group_items'] = array(
-    1 => array(
-      'title' => 'Linked/paired courses',
-      'operator' => '=',
-      'value' => 'Linked/paired courses',
-    ),
-    2 => array(
-      'title' => 'First-year programs',
-      'operator' => '=',
-      'value' => 'First-year programs',
-    ),
-    3 => array(
-      'title' => 'Coordinated studies',
-      'operator' => '=',
-      'value' => 'Coordinated studies',
-    ),
-    4 => array(
-      'title' => 'Living-learning communities',
-      'operator' => '=',
-      'value' => 'Living-learning communities',
-    ),
-  );
-  /* Filter criterion: Content: Focus (field_focus) */
-  $handler->display->display_options['filters']['field_focus_value']['id'] = 'field_focus_value';
-  $handler->display->display_options['filters']['field_focus_value']['table'] = 'field_data_field_focus';
-  $handler->display->display_options['filters']['field_focus_value']['field'] = 'field_focus_value';
-  $handler->display->display_options['filters']['field_focus_value']['group'] = 2;
-  $handler->display->display_options['filters']['field_focus_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_focus_value']['expose']['operator_id'] = 'field_focus_value_op';
-  $handler->display->display_options['filters']['field_focus_value']['expose']['label'] = 'Focus (field_focus)';
-  $handler->display->display_options['filters']['field_focus_value']['expose']['operator'] = 'field_focus_value_op';
-  $handler->display->display_options['filters']['field_focus_value']['expose']['identifier'] = 'field_focus_value';
-  $handler->display->display_options['filters']['field_focus_value']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_focus_value']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_focus_value']['group_info']['label'] = 'Focus';
-  $handler->display->display_options['filters']['field_focus_value']['group_info']['identifier'] = 'field_focus_value';
-  $handler->display->display_options['filters']['field_focus_value']['group_info']['widget'] = 'radios';
-  $handler->display->display_options['filters']['field_focus_value']['group_info']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_focus_value']['group_info']['group_items'] = array(
-    1 => array(
-      'title' => 'General education',
-      'operator' => '=',
-      'value' => 'General education',
-    ),
-    2 => array(
-      'title' => 'Developmental/pre-college',
-      'operator' => '=',
-      'value' => 'Developmental/pre-college',
-    ),
-    3 => array(
-      'title' => 'Majors',
-      'operator' => '=',
-      'value' => 'Majors',
-    ),
-    4 => array(
-      'title' => 'Honors',
-      'operator' => '=',
-      'value' => 'Honors',
-    ),
-  );
+  /* Filter criterion: Field: Address (field_address:data) */
+  $handler->display->display_options['filters']['field_address_data']['id'] = 'field_address_data';
+  $handler->display->display_options['filters']['field_address_data']['table'] = 'field_data_field_address';
+  $handler->display->display_options['filters']['field_address_data']['field'] = 'field_address_data';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

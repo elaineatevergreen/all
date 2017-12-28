@@ -10,81 +10,33 @@
 function native_cases_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-article-body'.
-  $field_instances['node-article-body'] = array(
-    'bundle' => 'article',
+  // Exported field_instance: 'node-case_study-field_abstract'.
+  $field_instances['node-case_study-field_abstract'] = array(
+    'bundle' => 'case_study',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 31,
-    ),
-  );
-
-  // Exported field_instance: 'node-case_study-body'.
-  $field_instances['node-case_study-body'] = array(
-    'bundle' => 'case_study',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This is a short description of the case study so that visitors can understand what it is about.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
+    'field_name' => 'field_abstract',
     'label' => 'Abstract',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
-      'display_summary' => 1,
+      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -93,10 +45,9 @@ function native_cases_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
-        'summary_rows' => 5,
       ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'type' => 'text_textarea',
+      'weight' => 4,
     ),
   );
 
@@ -180,7 +131,7 @@ function native_cases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -235,7 +186,7 @@ function native_cases_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -338,7 +289,7 @@ function native_cases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -382,154 +333,7 @@ function native_cases_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-body'.
-  $field_instances['node-event-body'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_date'.
-  $field_instances['node-event-field_date'] = array(
-    'bundle' => 'event',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => 0,
-        ),
-        'type' => 'date_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_date',
-    'label' => 'Date',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'display_all_day' => 1,
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'none',
-        'no_fieldset' => 0,
-        'text_parts' => array(),
-        'year_range' => '-1:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-body'.
-  $field_instances['node-page-body'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 8,
     ),
   );
 
@@ -537,9 +341,6 @@ function native_cases_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Abstract');
   t('Authors');
-  t('Body');
-  t('Date');
-  t('Description');
   t('Disciplines');
   t('Documents');
   t('Featured Image');
@@ -547,7 +348,6 @@ function native_cases_field_default_field_instances() {
   t('Themes');
   t('These are the actual case study file and the teaching notes.');
   t('This image will be used with the description, and on the home page if the case study is featured there.');
-  t('This is a short description of the case study so that visitors can understand what it is about.');
   t('Tribes');
 
   return $field_instances;

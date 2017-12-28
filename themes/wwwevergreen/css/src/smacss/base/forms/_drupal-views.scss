@@ -42,8 +42,9 @@
 	margin-bottom: 0;
 }
 
-.form-type-select{
-	@extend input[type="text"]; // Drupal select box wrapper, sets a context for determining max-width of a select box
+.form-type-select{ // Drupal select box wrapper, sets a context for determining max-width of a select box; this should match input[type="text"]
+	width: 100%;
+	max-width: calc(45ch + 1em);
 }
 
 .tertiary-nav-wrapper .form-type-select select{

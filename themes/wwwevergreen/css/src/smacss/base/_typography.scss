@@ -57,6 +57,7 @@ button{
 body,
 .base{
 	@include base-type;  // Step 0.5
+	font-size-adjust: 0.4825;  // Set fallback fonts to match x-height of Proxima Nova
 
 	@include breakpoint($gamora){
 		@include base-type-lg;  // Step 1
@@ -86,10 +87,9 @@ figure,
 }
 
 /**
- * Removing hyphen rules for now.
- * English doesn't have long enough words to warrant this,
- * and we’re not justifying text,
- * but consider it for narrow columns.
+ * Removing hyphen rules for now. English doesn't have long enough words to
+ * warrant this, and we’re not justifying text, but consider it for
+ * narrower columns.
  */
 /*p{
 	hyphens: auto;
@@ -106,9 +106,9 @@ h1{
 	margin: 0.96401028277635em 0 0;  // 30/31.12
 	// typography
 	font-family: $display-face-alt;
-	font-size: 1.945rem;  // 31.12px  Step 4
+	font-size: 1.945rem;  // 31.112px  Step 4
 	font-weight: normal;
-	line-height: 1.44601542416452;  // 45/31.12
+	line-height: 1.16514528156338;  // 36.25/31.112
 
 	@include breakpoint($starlord){
 		// box model
@@ -124,7 +124,7 @@ h1{
 		margin-top: 0.63663179339176em;   // 30/47.123
 		// typography
 		font-size: 2.945rem;  // 47.123px  Step 5
-		line-height: 0.95494769008764;  // 45/47.123
+		line-height: 1.11410563843558;  // 52.5/47.123
 	}
 
 	@include breakpoint($drax){
@@ -146,11 +146,10 @@ h2{
 	margin-top: 1.56014353320505em;  // 30/19.229
 	// typography
 	color: mix($tint, $black, 40%);
+	@include base-type-xl;
 	font-family: $display-face-alt;
-	font-size: 1.202rem;  // 19.229px  Step 2
 	font-weight: bold;
-	line-height: 1.56014353320505;  // 30/19.229
-	
+
 	@include breakpoint($rocket){
 		font-family: $display-face;
 	}
@@ -159,16 +158,14 @@ h2{
 		// box model
 		margin-top: 1.03007828594973em;  // 30/29.124
 		// typography
-		font-size: 1.82rem;  // 29.124px  Step 3
-		line-height: 1.03007828594973; // 30/29.124
+		@include base-type-xxl;
 	}
 
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.44638724607868em;  // 45/31.112
 		// typography
-		font-size: 1.945rem;  // 31.112px  Step 4
-		line-height: 0.96425816405246;  // 30/31.112
+		@include base-type-xxxl;
 	}
 }
 
@@ -180,7 +177,7 @@ h3{
 	font-family: $display-face-alt;
 	@include base-type-lg;
 	font-weight: normal;
-	
+
 	@include breakpoint($rocket){
 		font-family: $display-face;
 	}
@@ -189,16 +186,14 @@ h3{
 		// box model
 		margin-top: 1.10603155876714em;  // 30/27.124
 		// typography
-		font-size: 1.69525rem;  // 27.124px - otherwise appears optically taller than h2; Step 3 - 2px
-		line-height: 1.10603155876714;  // 30/27.124
+		@include base-type-xxl-alt;
 	}
 
 	@include breakpoint($groot){
 		// box model
 		margin-top: 1.54575432811212em;  // 45/29.112
 		// typography
-		font-size: 1.8195rem;  // 29.112px - otherwise appears optically taller than h2; Step 4 - 3px
-		line-height: 1.03050288540808;  // 30/29.112
+		@include base-type-xxxl-alt;
 	}
 }
 
@@ -217,14 +212,6 @@ h4{
 		font-size: 1.202rem;  // 19.229px  Step 2
 		line-height: 1.56014353320505;  // 30/19.229
 	}
-
-	/*@include breakpoint($groot){
-	// box model
-	margin-top: 1.5451174289246em;  // 45/29.124
-	// typography
-	font-size: 1.82rem;  // 29.124px  Step 3
-	line-height: 1.03007828594973; // 30/29.124
-	}*/
 }
 
 h5{
@@ -354,11 +341,13 @@ a,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
 	//box model
-	border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
+	//border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
 	//typography
 	color: $blueberry-susan;
 	font-weight: bold;
-	text-decoration: none;
+	// decoration
+	text-decoration: underline mix($tint, $blueberry-susan, 75%);
+	text-decoration-skip: ink;
 	// movement
 	transition: color 0.2s, border-color 0.2s ease;
 }
@@ -367,7 +356,8 @@ a:visited{
 	// typography
 	color: $wine;
 	// decoration
-	border-bottom-color: mix($tint, $wine, 75%);
+	//border-bottom-color: mix($tint, $wine, 75%);
+	text-decoration-color: mix($tint, $wine, 75%);
 }
 
 a:hover,
@@ -377,7 +367,8 @@ a:hover,
 	// typography
 	color: $sky-blue;
 	// decoration
-	border-bottom-color: $sky-blue;
+	//border-bottom-color: $sky-blue;
+	text-decoration-color: $sky-blue;
 }
 
 a:focus,
@@ -393,7 +384,10 @@ a:active{
  * @section a-site-name
  */
 .site-name a{
-	border-bottom-width: 0;
+	// box model
+	//border-bottom-width: 0;
+	// decoration
+	text-decoration: none;
 
 	&,
 	&:visited{
@@ -520,6 +514,6 @@ hr{
 	height: 5px;
 	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
 	width: 100%;
-	// backgrounds & borders
+	// decoration
 	background-color: $evergreen-neue;
 }

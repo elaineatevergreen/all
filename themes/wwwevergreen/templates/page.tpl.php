@@ -157,7 +157,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		</div>
 	</header>
 
-	<main id="main-row" class="main-row row wrapper" role="main">
+	<main id="main-row" class="main-row row wrapper">
 		<div class="grid main-row-grid">
 		
 			<div class="tertiary-nav-wrapper unit-1-7">
@@ -186,7 +186,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	        	<?php 
 		        	print render($title_prefix); 
 		        	
-			        if ($title and $title!='Home'): 
+			        if ($title and substr($title,-4)!='Home'): 
 				?>
 						<h1 class="title" id="page-title"><?php print $title; ?></h1>
 				<?php 

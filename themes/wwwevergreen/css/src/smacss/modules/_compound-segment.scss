@@ -11,8 +11,10 @@
  *
  * 1. Default
  * 2. Alternate
- * 3. Vertically-Centered
- * 4. Column And Squishy
+ * 3. Spacing
+ * 4. Vertically-Centered
+ * 5. Column And Squishy
+ * 6. SVG Images
  */
 /**
  * 1. Default
@@ -37,10 +39,9 @@
 .compound-img,
 .compound-img:link{
 	// box model
-	border-bottom-width: 0;
-	margin-bottom: 1.071428571428571em;  // 15px
-	padding-right: 1.071428571428571em;  // 15px
-	max-width: 31.3333333333%;
+	margin-bottom: calc(15 / 16 * 1rem);
+	padding-right: 2ch;
+	max-width: 33.3333333333%;
 	// layout
 	flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
 
@@ -78,7 +79,7 @@
  *
  * Put .compound-img on the right. Extends .compound
  *
- * .compound
+ * .compound.compound-alt
  * +---------------------+ +------------+
  * |                     | |            |
  * | .compound-body      | | .compound- |
@@ -97,11 +98,29 @@
 .media-alt .media-img,  // deprecated
 .compound-alt .compound-img{
 	padding-right: 0;
-	padding-left: 1.071428571428571em;
+	padding-left: 2ch;
 }
 
 /**
- * 3. Vertically-Centered
+ * 3. Spacing
+ *
+ * Separate compounds with extra spacing. Extends .compound
+ */
+.compound-space-l{
+	margin: calc(30 / 16 * 1rem) auto;
+}
+
+.compound-space-l .compound-img{
+	padding-right: 4ch;
+}
+
+.compound-space-l.compound-alt .compound-img{
+	padding-right: 0;
+	padding-left: 4ch;
+}
+
+/**
+ * 4. Vertically-Centered
  * 
  * Vertically center .compound-child-alt with the rest of the compound.
  * Extends .compound-img or .compound-body.
@@ -141,7 +160,7 @@
 }
 
 /**
- * 4. Column And Squishy
+ * 5. Column And Squishy
  *
  * .compound-column puts .compound-img on the top. Extends .compound.
  *
@@ -197,15 +216,11 @@
 .compound-squishy > .compound-img{
 
 	@include breakpoint($starlord){
-		margin-bottom: 1.071428571428571em;  // 15px
-		padding-right: 1.071428571428571em;  // 15px
-		max-width: 31.3333333333%;
+		margin-bottom: calc(30 / 16 * 1rem);
+		padding-right: 2ch;
+		max-width: 33.3333333333%;
 		// layout
 		flex-shrink: 0;  // Do not allow the image to shrink. Note: this does respect the max-width property.
-	}
-
-	@include breakpoint($gamora){
-		padding-right: 0.882352941176471em;  // 15px
 	}
 }
 
@@ -214,4 +229,20 @@
 .compound-column > .compound-img img,
 .compound-sqishy > .compound-img img{
 	margin: 0 auto;
+}
+
+/**
+ * 6. SVG Images
+ *
+ * SVGs are tricky because they don’t come with intrinsic dimensions and
+ * therefore lack flexibility.
+ *
+ * These styles make sure they size up to the maximum available width of
+ * the .compound-img container.
+ */
+.compound-img-full{
+	// box model
+	width: 100%;  // for .compound-column with SVG inside (see /about --> 1,000 for example)
+	// layout
+	flex-basis: 100%;
 }

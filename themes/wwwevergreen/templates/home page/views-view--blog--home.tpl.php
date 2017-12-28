@@ -29,7 +29,7 @@
 ?>
 <!--Evergreen News-->
 <section class="news row">
-	<div class="news-wrapper">
+	<div class="wrapper-full">
 		<div class="wrapper">
 			<h3>Evergreen News</h3>
 				<div class="grid">

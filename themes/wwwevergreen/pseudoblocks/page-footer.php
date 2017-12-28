@@ -1,36 +1,36 @@
-				<div class="do-not-print unit-1-5">
+				<div class="do-not-print page-footer-unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
-							<a href="http://evergreen.edu/employment">Jobs at Evergreen</a>
+							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
 						</li>
 						<li>
-							<a href="http://evergreen.edu/tour">Tours and Maps</a>
+							<a href="https://evergreen.edu/tour">Tours and Maps</a>
 						</li>
 						<li>
 							<p>Stay connected:</p>
 							<ul class="element-list lineup">
 								<li>
-									<a href="http://facebook.com/TheEvergreenStateCollege" title="Facebook">
+									<a href="https://facebook.com/TheEvergreenStateCollege" title="Facebook">
 										<img alt="Facebook" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/facebook.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://twitter.com/EvergreenStCol" title="Twitter">
+									<a href="https://twitter.com/EvergreenStCol" title="Twitter">
 										<img alt="Twitter" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/twitter.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://youtube.com/user/evergreen" title="YouTube">
+									<a href="https://youtube.com/user/evergreen" title="YouTube">
 										<img alt="YouTube" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/youtube.svg"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://instagram.com/TheEvergreenStateCollege" title="Instagram">
+									<a href="https://instagram.com/EvergreenStCol" title="Instagram">
 										<img alt="Instagram" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/instagram.png"/>
 									</a>
 								</li>
 								<li>
-									<a href="http://www.linkedin.com/edu/school?id=19655" title="LinkedIn">
+									<a href="https://www.linkedin.com/edu/school?id=19655" title="LinkedIn">
 										<img alt="LinkedIn" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/linkedin.svg"/>
 									</a>
 								</li>
@@ -41,9 +41,9 @@
 				<div class="do-not-print unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
-				<div class="unit-1-5">
+				<div class="page-footer-unit page-footer-unit-central unit-1-5">
 					<p class="footer-map">
-						<a href="http://evergreen.edu/tour">
+						<a href="https://evergreen.edu/tour">
 							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
 						</a><!--<br/>
 						<small>
@@ -56,45 +56,44 @@
 						<div class="adr">
 							<div class="street-address">2700 Evergreen Parkway&nbsp;NW</div>
 							<div class="location">
-								<span class="locality">Olympia</span>,
-								<span class="region">Washington</span>
-								<span class="postal-code">98505</span>
+								<span class="locality">Olympia</span>, <span class="region">Washington</span> <span class="postal-code">98505</span>
 							</div>
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
 						<div>
-							<a href="http://evergreen.edu/directory">Phone &amp; Email Directories</a>
+							<a href="https://evergreen.edu/directory">Phone &amp; Email Directories</a>
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
 				<div class="do-not-print unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
-				<div class="unit-1-5">
+				<div class="page-footer-unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li class="do-not-print">
 							<p>
-								<a href="http://www.evergreen.edu/news/weatherdelays">Emergency Information</a>
-								<small>(Includes alerts about delays and closures.)</small>
+								<a href="https://evergreen.edu/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
 							</p>
 						</li>
 						<li class="do-not-print">
 							<p>
-								<a href="http://www.evergreen.edu/about/privacy">Privacy Policy</a>
+								<a href="https://evergreen.edu/about/privacy">Privacy Policy</a>
+							</p>
+						</li>
+						<li class="do-not-print">
+							<p>
+								<a href="https://www.evergreen.edu/about/accessibility">Report Accessibility Issues</a>
 							</p>
 						</li>
 						<li>
-							<p class="copyright">
-								©
-								<?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College
+							<p class="copyright small">
+								<small>© <?php echo date("Y") ?> The&nbsp;Evergreen State&nbsp;College</small>
 							</p>
 						</li>
 					</ul><!-- /.element-list.text-list-alt -->
 				</div><!--/.unit-1-5-->
 				<div class="unit-1-1">
-					<div class="motto-footer">
-						<p>
-							<i>—Omnia Extares—</i>
-						</p>
+					<div class="tagline-footer">
+						<p>—Your way to the world—</p>
 					</div>
 				</div>

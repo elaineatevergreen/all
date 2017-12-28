@@ -127,12 +127,14 @@
 @import "modules/homepage-hero";
 
 .location-transporter{
-  margin: calc(30 / 18 * 1em) 1ch;
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 1.38888888888889;
-  text-align: center;
-  
+	// box model
+	margin: calc(30 / 18 * 1em) 1ch;
+	// typography
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 1.38888888888889;
+	text-align: center;
+
 	@include breakpoint($starlord){
 		// box model
 		margin: calc(30 / 19.229 * 1em) 1ch;
@@ -199,6 +201,7 @@
 .intro-alt{
 	color: mix($tint, $shade, 20%);
 	font-weight: bold;
+	text-shadow: 2px 2px 1px $tint;
 }
 
 .byline{
@@ -206,6 +209,10 @@
 	@include small-type;
 	letter-spacing: 0.1ch;
 	text-transform: uppercase;
+
+	@include breakpoint($groot){
+		@include base-type;
+	}
 }
 
 .big-fact{
@@ -222,9 +229,42 @@
 	}
 }
 
+.fast-fact,
+.fast-fact-alt{
+	// box model
+	border: 0.25ch solid $evergreen-neue;
+	height: 100%;
+	padding: 0 1ch;
+	// layout
+	overflow: hidden;
+	// typography
+	font-family: $text-face-alt;
+
+	@include breakpoint($gamora){
+		padding: 0;
+	}
+}
+
+.fast-fact{
+
+	@include breakpoint($gamora){
+		border-width: 0 0.5ch 0 0;
+		padding-right: 2ch;
+	}
+}
+
+.fast-fact-alt{
+
+	@include breakpoint($gamora){
+		// box model
+		border-width: 0 0 0 0.5ch;
+		padding-left: 2ch;
+	}
+}
+
 .key-number{  // e.g. http://www.evergreen.edu/about/facts
 	// box model
-	margin: 0.818419903972065em 0 0;
+	//margin: 0.818419903972065em 0 0;
 	// layout
 	display: block;
 	// typography
@@ -255,6 +295,13 @@
 	content: "\00A0" url("/sites/all/themes/wwwevergreen/images/endnote.png");
 
 	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 150dpi){
+		// box model
+		width: 16.414px;  // makes height equal to 18px
+		// layout
+		display: inline-block;  // Chrome, Safari
+		// typography
+		vertical-align: middle;
+		// micellaneous
 		content: "\00A0" url("/sites/all/themes/wwwevergreen/images/endnote.svg");
 	}
 }
@@ -266,14 +313,12 @@
 
 /**
  * H. Tables
+ *
+ * There are currently no table modules. I am leaving this here, because it
+ * seems likely that there might be in the future, and I don’t want to have
+ * to re-order the table of contents in such an event. Feel free to add the
+ * first one!
  */
-.dataTable{
-	//font-family: "Proxima Nova Condensed", "Avenir Next Condensed", "Avenir", Helvetica, Arial, sans-serif;
-
-	/*@include breakpoint($starlord){
-		font-family: $text-face;
-	}*/
-}
 
 /**
  * I. Icons
@@ -310,32 +355,8 @@
  * O. News
  */
 .news{
-	// box model
-	//border-top: 1px solid mix($tint, $blueberry-susan, 80%);
-	//border-bottom: 1px solid #d1cad6;
 	// layout
 	overflow: hidden;
-	// backgrounds & borders
-	//background-color: mix($tint, $blueberry-susan, 90%);
-}
-
-.news-wrapper{
-	// box model
-	margin: 0 auto;
-	width: calc(100% - 4ch);
-}
-
-/**
- * Override news title links to make them look like regular, unlinked h4s
- * again. While I normally don't like to make links not look like links, I
- * think in this case, it’s warranted because there is a link under every
- * article. See also: nytimes.com and washingtonpost.com.
- */
-.news-title-link a{
-	// box model
-	border-bottom-width: 0;
-	// typography
-	color: $black;
 }
 
 .news-story{
@@ -364,31 +385,7 @@
 /**
  * P. Profiles
  */
-.profile .portrait-1-1{  // portrait with 1:1 ratio.
-	border-radius: 50%;
-	// shape
-	shape-margin: 1em;
-	shape-outside: circle() border-box;
-}
-
-.profession{
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-
-	@include breakpoint($starlord){
-		@include base-type;
-		font-weight: bold;
-	}
-}
-
-.mini-bio-photo,  // deprecated, use .mini-profile-photo instead.
-.mini-profile-photo{  // Deprecates .program-faculty in catalog.css; use this instead.
-	// box model
-	border: 1px solid mix($shade, $sky-blue, 60%);
-	height: 3rem;
-	// decoration
-	border-radius: 50%;
-}
+@import "modules/profiles";
 
 /**
  * Q. Directories
@@ -403,7 +400,7 @@
  */
 .lazy-load{
 	// box model
-	border-bottom-width: 0;
+	//border-bottom-width: 0;
 	max-width: 100%;
 	// layout
 	display: block;
@@ -424,7 +421,7 @@
 		top: 0;
 		// typography
 		text-align: center;
-		// backgrounds & borders
+		// decoration
 		background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 		// misc
 		content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
@@ -490,15 +487,4 @@
  * published site.
  */
 
-#tinymce{  // WYSIWYG
-	// box model
-	margin: 0 auto;
-	padding: 0 2em;
-	max-width: 48em;
-	// layout
-	display: block;
-}
-
-#toolbar{  // Drupal
-	box-shadow: 0 1px 0.25em $drop-shadow;
-}
+@import "modules/cms";
