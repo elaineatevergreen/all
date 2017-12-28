@@ -153,6 +153,11 @@ rules:
         - flex-shrink
         - flex-wrap
         - float
+        - grid-gap
+        - grid-template
+        - grid-template-area
+        - grid-template-columns
+        - grid-template-rows
         - justify-content
         - overflow
         - overflow-x

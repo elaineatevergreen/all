@@ -7,7 +7,6 @@
 							<a href="https://evergreen.edu/tour">Tours and Maps</a>
 						</li>
 						<li>
-							<p>Stay connected:</p>
 							<ul class="element-list lineup">
 								<li>
 									<a href="https://facebook.com/TheEvergreenStateCollege" title="Facebook">
@@ -38,7 +37,7 @@
 						</li>
 					</ul>
 				</div><!-- /.do-not-print.unit-1-5 -->
-				<div class="do-not-print unit-1-5">
+				<div class="do-not-print page-footer-unit--placeholder unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
 				<div class="page-footer-unit page-footer-unit-central unit-1-5">
@@ -65,7 +64,7 @@
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
-				<div class="do-not-print unit-1-5">
+				<div class="do-not-print page-footer-unit--placeholder unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
 				<div class="page-footer-unit unit-1-5">

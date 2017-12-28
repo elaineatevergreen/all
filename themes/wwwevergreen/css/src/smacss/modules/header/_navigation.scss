@@ -57,7 +57,7 @@
 	}
 }
 
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE syntax.
 
 	.top-nav-list{
 		@include breakpoint($lil-groot){
@@ -114,7 +114,7 @@
 	}
 }
 
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE syntax.
 	.top-nav-list > li{
 
 		@include breakpoint($starlord){
