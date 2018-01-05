@@ -144,22 +144,33 @@ if(render($content['field_summer_session']) != '') {
 	<?php
 		// Class standing standin ?>
 		<div class="listing-property-img">
-			<?php if ($content['group_whowhenwhere']['field_class_standing'][0] == "GR"){
-				# if it's a graduate course, load a special graduate image ?>
+			<?php if (print($content['group_whowhenwhere']['field_class_standing'][0]) == "Graduate"){
+				# if it's a graduate course, load a special graduate image
+        # "Masters in Teaching", "Master of Enviromental Studies","Master of Public Administration"
+        # Renaming them to match the shortened versions used elsewhere in the catalog
+        if (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters in Teaching") {
+          $grad_img_name = "mit";
+        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters of Enviromental Studies") {
+          $grad_img_name = "mes";
+        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters of Public Administration") {
+          $grad_img_name = "mpa";
+        }
+        // rendering our grad image + title?>
 				<img alt=""
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>.svg"
+					src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg"
 					title="<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>" />
 					<?php
+
 					}else {
 					// if it's an undergrad course
 					// take the first element and the last element, and use them to make the file name for the class standing range
-					?>
+					// Render our undergrad image and title?>
 					<img alt=""
 						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
 						title="<?php print(render($content['group_whowhenwhere']['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
 					<?php } ?>
 		</div>
-		
+
 		<div class="listing-property-body">
 			<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
 			if(isset($content['field_class_standing'])) {
