@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Evergreen Policies feature.
- */
-
-include_once 'evergreen_policies.features.inc';

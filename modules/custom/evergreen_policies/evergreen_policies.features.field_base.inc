@@ -114,6 +114,9 @@ function evergreen_policies_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_categories',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -125,6 +128,12 @@ function evergreen_policies_field_default_field_bases() {
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
+          'field_default_token' => array(
+            'status' => TRUE,
+          ),
           'views-select-list' => array(
             'status' => 0,
           ),
@@ -135,7 +144,7 @@ function evergreen_policies_field_default_field_bases() {
           'type' => 'property',
         ),
         'target_bundles' => array(
-          'categories' => 'categories',
+          'policy_categories' => 'policy_categories',
         ),
       ),
       'target_type' => 'taxonomy_term',
