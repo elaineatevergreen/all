@@ -474,7 +474,7 @@ if(render($content['field_summer_session']) != '') {
 			 * Location and Schedule
 			 */
 			?>
-	    <div class="listing-property-alt">
+	    <div class="listing-property">
 		    <div class="listing-property-img">
 					<!-- Printing the location based on where we are -->
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
@@ -548,7 +548,9 @@ if(render($content['field_summer_session']) != '') {
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
-					<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+					<p>
+						<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+					</p>
 				<?php }; ?>
 			</div>
       <!-- cutout of all content that is in the sidebar for now.
