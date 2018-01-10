@@ -67,7 +67,6 @@
 
 .listing-property-img img{
 	// box model
-	margin: 0;
 	width: 4ch;
 	height: 100%;  // Sizes height appropriately for Chrome.
 }
@@ -78,17 +77,17 @@
 	z-index: 4;
 }
 
-.listing-icon-winter{
+.listing-icon-fall + .listing-icon-winter{
 	// box model
-	margin-left: -20px;
+	margin-left: -1ch;
 	// position
 	position: relative;
 	z-index: 3;
 }
 
-.listing-icon-spring{
+.listin-icon-winter + .listing-icon-spring{
 	// box model
-	margin-left: -20px;
+	margin-left: -1ch;
 	// position
 	position: relative;
 	z-index: 2;
@@ -102,17 +101,19 @@
 	z-index: 3;	
 }
 
-.listing-icon-evening{
+// NOTE: Day-evening-weekend can be any combination.
+.listing-icon-day + .listing-icon-evening,
+.listing-icon-day + .listing-icon-weekend{
 	// box model
-	margin-left: -20px;
+	margin-left: -1ch;
 	// position
 	position: relative;
 	z-index: 2;
 }
 
-.listing-icon-weekend{
+.listing-icon-evening + .listing-icon-weekend{
 	// box model
-	margin-left: -20px;
+	margin-left: -1ch;
 	// position
 	position: relative;
 	z-index: 1;

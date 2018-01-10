@@ -198,7 +198,6 @@ if(render($content['field_summer_session']) != '') {
 		// Credits amount standin ?>
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<!-- [bug] Is this right? If it’s set to 0 that means variable credits? Yeah that's right since as variable we don't know the #-->
 			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
 			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
@@ -213,7 +212,6 @@ if(render($content['field_summer_session']) != '') {
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
 					//print_r( render($content['group_details']['field_credits'][0]));
-					  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
@@ -339,18 +337,6 @@ if(render($content['field_summer_session']) != '') {
 			<?php }; ?>
 
 			<?php
-			/**
-			 * [bug] “Fields of study” h3 needs to be removed.
-			 *
-			 *        Try to get the fields of study value to immediately follow
-			 *        the key, all on one line.
-			 *
-			 *
-			 *
-			 *
-			 *
-			 *        -fixed?
-			 **/
 			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
@@ -391,12 +377,18 @@ if(render($content['field_summer_session']) != '') {
 				 *       The online learning value should be listed as follows:
 				 *        * Fall: Hybrid Online Learning < 25% Delivered Online
 				 *        * Winter and Spring: Enhanced Online Learning
-				 * —jkm
+				 *      —jkm
+				 *
 				 * Options:
 				 *  * No Required Online Learning
 				 *  * Hybrid Online Learning < 25% Delivered Online
 				 *  * Hybrid Online Learning 25 - 49% Delivered Online
 				 *  * Enhanced Online Learning
+				 *
+				 * [bug] Furthermore, this looks like it’s maybe not working. See
+				 *       this page for what I’m talking about:
+				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
+				 *      —jkm
 				 */
 			// field_online_learning ?>
 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
@@ -482,7 +474,7 @@ if(render($content['field_summer_session']) != '') {
 			 * Location and Schedule
 			 */
 			?>
-	    <div class="listing-property-alt">
+	    <div class="listing-property">
 		    <div class="listing-property-img">
 					<!-- Printing the location based on where we are -->
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
@@ -511,8 +503,14 @@ if(render($content['field_summer_session']) != '') {
 	    </div>
 			<?php // Image for the Scheduled for: section in body ?>
 	    <div class="listing-property">
-				<?php // [bug] there is an issue of if there is more than one drawn, they drop down below each other, and shift the text body
-				      // to no longer be in line with the rest of the stuff above?>
+				<?php
+					/**
+					 * [bug] If there is more than one icon, they drop down below
+					 *       each other, and shift the text body to no longer be left
+					 *       aligned with the paragraphs above.
+					 *      —jkm
+					 */
+				?>
 		    <div class="listing-property-img">
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
@@ -549,18 +547,10 @@ if(render($content['field_summer_session']) != '') {
 
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
-				<?php
-					/**
-					 * [bug] “May be offered again in” h3 needs to be removed.
-					 *
-					 *        Try to make this a single continuous sentence.
-					 *
-					 *        For example:
-					 *        May be offered again in 2018–19.
-					 */
-				?>
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
-					<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+					<p>
+						<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+					</p>
 				<?php }; ?>
 			</div>
       <!-- cutout of all content that is in the sidebar for now.
