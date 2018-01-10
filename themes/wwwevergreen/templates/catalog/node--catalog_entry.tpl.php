@@ -95,6 +95,11 @@ if(render($content['field_summer_session']) != '') {
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 			<?php } ?>
+			<?php // Study abroad standin with additional details ?>
+			<?php // Include Study Abroad icon, if relevant
+			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+			<?php }; ?>
 		</div>
 
 
@@ -495,11 +500,6 @@ if(render($content['field_summer_session']) != '') {
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 					<?php } ?>
-					<?php // Study abroad standin with additional details ?>
-					<?php // Include Study Abroad icon, if relevant
-					if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-						&nbsp;<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
-					<?php }; ?>
 		    </div>
 		    <div class="listing-property-body">
 			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
