@@ -29,7 +29,7 @@
  */
 .listing-header{
 	// layout
-	align-items: baseline;
+	align-items: flex-start;
 	display: flex;
 	flex-wrap: wrap;
 	// typography
@@ -85,7 +85,7 @@
 	z-index: 3;
 }
 
-.listin-icon-winter + .listing-icon-spring{
+.listing-icon-winter + .listing-icon-spring{
 	// box model
 	margin-left: -1ch;
 	// position
