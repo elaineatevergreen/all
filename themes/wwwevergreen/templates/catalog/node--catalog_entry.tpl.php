@@ -198,7 +198,6 @@ if(render($content['field_summer_session']) != '') {
 		// Credits amount standin ?>
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<!-- [bug] Is this right? If it’s set to 0 that means variable credits? Yeah that's right since as variable we don't know the #-->
 			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
 			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
@@ -213,7 +212,6 @@ if(render($content['field_summer_session']) != '') {
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
 					//print_r( render($content['group_details']['field_credits'][0]));
-					  // [bug] Do we want to say the number of credits if the icon shows a giant number (with alt text)? —jkm
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
@@ -339,18 +337,6 @@ if(render($content['field_summer_session']) != '') {
 			<?php }; ?>
 
 			<?php
-			/**
-			 * [bug] “Fields of study” h3 needs to be removed.
-			 *
-			 *        Try to get the fields of study value to immediately follow
-			 *        the key, all on one line.
-			 *
-			 *
-			 *
-			 *
-			 *
-			 *        -fixed?
-			 **/
 			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
@@ -549,16 +535,6 @@ if(render($content['field_summer_session']) != '') {
 
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
-				<?php
-					/**
-					 * [bug] “May be offered again in” h3 needs to be removed.
-					 *
-					 *        Try to make this a single continuous sentence.
-					 *
-					 *        For example:
-					 *        May be offered again in 2018–19.
-					 */
-				?>
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
 					<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
 				<?php }; ?>
