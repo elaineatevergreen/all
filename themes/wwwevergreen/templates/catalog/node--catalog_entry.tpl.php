@@ -142,33 +142,36 @@ if(render($content['field_summer_session']) != '') {
 
 	<div class="listing-property">
 	<?php
+		/**
+		 * [bug] This is showing up as MiT in the undergraduate catalog. See:
+		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
+		 */
 		// Class standing standin ?>
 		<div class="listing-property-img">
 			<?php if (print($content['group_whowhenwhere']['field_class_standing'][0]) == "Graduate"){
 				# if it's a graduate course, load a special graduate image
         # "Masters in Teaching", "Master of Enviromental Studies","Master of Public Administration"
         # Renaming them to match the shortened versions used elsewhere in the catalog
-        if (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters in Teaching") {
+        if (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master in Teaching") {
           $grad_img_name = "mit";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters of Enviromental Studies") {
+        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Environmental Studies") {
           $grad_img_name = "mes";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Masters of Public Administration") {
+        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Public Administration") {
           $grad_img_name = "mpa";
         }
-        // rendering our grad image + title?>
-				<img alt=""
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg"
-					title="<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>" />
-					<?php
-
-					}else {
+	        // rendering our grad image + title?>
+					<img alt=""
+						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg"
+						title="<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>" />
+				
+				<?php } else {
 					// if it's an undergrad course
 					// take the first element and the last element, and use them to make the file name for the class standing range
 					// Render our undergrad image and title?>
 					<img alt=""
 						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
 						title="<?php print(render($content['group_whowhenwhere']['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
-					<?php } ?>
+				<?php } ?>
 		</div>
 
 		<div class="listing-property-body">
