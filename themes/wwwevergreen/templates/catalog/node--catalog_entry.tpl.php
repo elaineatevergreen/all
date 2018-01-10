@@ -143,7 +143,8 @@ if(render($content['field_summer_session']) != '') {
 	<div class="listing-property">
 	<?php
 		/**
-		 * [bug] This is showing up as MiT in the undergraduate catalog. See:
+		 * [bug][blocking]
+		 *       This is showing up as MiT in the undergraduate catalog. See:
 		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 		 */
 		// Class standing standin ?>
@@ -370,7 +371,8 @@ if(render($content['field_summer_session']) != '') {
 			<?php
 				/**
 				 * Online Learning standin
-				 * [bug] This can be multiple values, different for each quarter,
+				 * [bug][blocking? - fix blocking bug below to see]
+				 *       This can be multiple values, different for each quarter,
 				 *       but currently this standin doesn’t support that.
 				 *
 				 *       See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
@@ -388,7 +390,8 @@ if(render($content['field_summer_session']) != '') {
 				 *  * Hybrid Online Learning 25 - 49% Delivered Online
 				 *  * Enhanced Online Learning
 				 *
-				 * [bug] Furthermore, this looks like it’s maybe not working. See
+				 * [bug][blocking]
+				 *       Furthermore, this looks like it’s maybe not working. See
 				 *       this page for what I’m talking about:
 				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 				 *      —jkm
