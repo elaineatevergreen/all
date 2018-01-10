@@ -142,6 +142,10 @@ if(render($content['field_summer_session']) != '') {
 
 	<div class="listing-property">
 	<?php
+		/**
+		 * [bug] This is showing up as MiT in the undergraduate catalog. See:
+		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
+		 */
 		// Class standing standin ?>
 		<div class="listing-property-img">
 			<?php if (print($content['group_whowhenwhere']['field_class_standing'][0]) == "Graduate"){
