@@ -377,12 +377,18 @@ if(render($content['field_summer_session']) != '') {
 				 *       The online learning value should be listed as follows:
 				 *        * Fall: Hybrid Online Learning < 25% Delivered Online
 				 *        * Winter and Spring: Enhanced Online Learning
-				 * —jkm
+				 *      —jkm
+				 *
 				 * Options:
 				 *  * No Required Online Learning
 				 *  * Hybrid Online Learning < 25% Delivered Online
 				 *  * Hybrid Online Learning 25 - 49% Delivered Online
 				 *  * Enhanced Online Learning
+				 *
+				 * [bug] Furthermore, this looks like it’s maybe not working. See
+				 *       this page for what I’m talking about:
+				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
+				 *      —jkm
 				 */
 			// field_online_learning ?>
 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
@@ -497,8 +503,14 @@ if(render($content['field_summer_session']) != '') {
 	    </div>
 			<?php // Image for the Scheduled for: section in body ?>
 	    <div class="listing-property">
-				<?php // [bug] there is an issue of if there is more than one drawn, they drop down below each other, and shift the text body
-				      // to no longer be in line with the rest of the stuff above?>
+				<?php
+					/**
+					 * [bug] If there is more than one icon, they drop down below
+					 *       each other, and shift the text body to no longer be left
+					 *       aligned with the paragraphs above.
+					 *      —jkm
+					 */
+				?>
 		    <div class="listing-property-img">
 					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
