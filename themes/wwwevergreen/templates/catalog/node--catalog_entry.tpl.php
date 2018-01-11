@@ -149,29 +149,28 @@ if(render($content['field_summer_session']) != '') {
 		 */
 		// Class standing standin ?>
 		<div class="listing-property-img">
-			<?php if (print($content['group_whowhenwhere']['field_class_standing'][0]) == "Graduate"){
+			<?php if (render($content['field_class_standing'][0]) == "Graduate"){
 				# if it's a graduate course, load a special graduate image
         # "Masters in Teaching", "Master of Enviromental Studies","Master of Public Administration"
         # Renaming them to match the shortened versions used elsewhere in the catalog
-        if (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master in Teaching") {
+        if (print($content['field_curricular_area'][0]) == "Master in Teaching") {
           $grad_img_name = "mit";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Environmental Studies") {
+        } elseif (print($content['field_curricular_area'][0]) == "Master of Environmental Studies") {
           $grad_img_name = "mes";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Public Administration") {
+        } elseif (print($content['field_curricular_area'][0]) == "Master of Public Administration") {
           $grad_img_name = "mpa";
         }
 	        // rendering our grad image + title?>
-					<img alt=""
-						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg"
-						title="<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>" />
-				
-				<?php } else {
+					<img alt="<?php print(render($content['field_curricular_area'][0]))?>"
+						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+
+			<?php } else {
 					// if it's an undergrad course
 					// take the first element and the last element, and use them to make the file name for the class standing range
 					// Render our undergrad image and title?>
 					<img alt=""
 						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
-						title="<?php print(render($content['group_whowhenwhere']['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
+						title="<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
 				<?php } ?>
 		</div>
 
@@ -371,7 +370,7 @@ if(render($content['field_summer_session']) != '') {
 			<?php
 				/**
 				 * Online Learning standin
-				 * [bug][blocking? - fix blocking bug below to see]
+				 * [bug][blocking? - fix blocking bug below to see] ---> is now actually displaying the working behaviors -stevenm
 				 *       This can be multiple values, different for each quarter,
 				 *       but currently this standin doesn’t support that.
 				 *
@@ -390,42 +389,53 @@ if(render($content['field_summer_session']) != '') {
 				 *  * Hybrid Online Learning 25 - 49% Delivered Online
 				 *  * Enhanced Online Learning
 				 *
-				 * [bug][blocking]
+				 * [bug][blocking] --> fixed, works for both multi-option and non-special cases -stevenm
 				 *       Furthermore, this looks like it’s maybe not working. See
 				 *       this page for what I’m talking about:
 				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 				 *      —jkm
 				 */
-			// field_online_learning ?>
-			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
-				<div><b><?php print ("Online learning:"); ?></b>
-					<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
-					<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
-					<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
-					<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
-						<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
-							<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
-							<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
-							<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
-							<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
-							<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
-							<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
-							<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
-						<?php } ?>
-				<?php } ?>
-			<?php }; ?></div>
+				 // field_online_learning ?>
+	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
+	 				<div><b><?php print ("Online learning:"); ?></b>
+	 				<?php $ol_format_flag = False; //using a flag to find if we've applied any of our custom formatting rules?>
+	 						<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
+	 						<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
+	 						<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
+	 						<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
+	 							<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
+	 								<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
+	 								<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
+	 								<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
+	 								<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
+	 								<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
+	 								<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
+	 								<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 					<?php } // end formatting loop ?>
+	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
+	 						print(render($content['group_details']['group_more']['field_online_learning'][0]));
+	 					} ?>
+	 			<?php }; ?></div>
 
 	    <?php
 			// Special expenses standin
