@@ -50,6 +50,33 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 <html dir="<?php print $language->dir; ?>" lang="<?php print $language->language; ?>">
 
 <head profile="<?php print $grddl_profile; ?>">
+  <meta charset="utf-8" />
+  <!-- Google Analytics Experiment: CTA Buttons vs Links -->
+  <?php
+		if ($node = menu_get_object()) {
+			$nid = $node->nid;
+		}
+			if (isset($nid)) {
+				if ($nid == 19197) {  // /admissions/visit
+	?>
+			<!-- Google Analytics provided script block -->
+			<script>function utmx_section(){}function utmx(){}(function(){var
+			k='734515-20',d=document,l=d.location,c=d.cookie;
+			if(l.search.indexOf('utm_expid='+k)>0)return;
+			function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+			indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+			length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+			'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+			'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+			'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+			valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+			'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+			</script><script>utmx('url','A/B');</script>
+	<?php
+			}
+		}
+	?>
+	<!-- End of Google Analytics Content Experiment code -->
   <?php print $head; ?>
   <title>
   	<?php print $head_title; ?>
