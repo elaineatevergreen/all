@@ -17,10 +17,7 @@
 .top-nav-list{
 	// box model
 	margin: 0 auto;
-	margin-top: 0;
 	width: 100%;
-	// layout
-	position: relative;
 	// tyopography
 	text-align: center;
 	// list
@@ -149,8 +146,6 @@
 	}
 
 	@include breakpoint($lil-groot){
-		// box model
-		padding: calc(7.5 / 16 * 1rem) 0.5ch;
 		// layout
 		align-items: center;
 		display: flex;

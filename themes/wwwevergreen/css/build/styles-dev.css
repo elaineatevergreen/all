@@ -3252,9 +3252,7 @@ input:checked + .header-dropdown {
 /* line 17, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list {
   margin: 0 auto;
-  margin-top: 0;
   width: 100%;
-  position: relative;
   text-align: center;
   list-style-type: none;
   /* Necessary for float-based fallback layouts. */
@@ -3283,7 +3281,7 @@ input:checked + .header-dropdown {
     letter-spacing: normal;
   }
 }
-/* line 48, ../src/smacss/modules/header/_navigation.scss */
+/* line 45, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3293,32 +3291,32 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 20em) {
-    /* line 62, ../src/smacss/modules/header/_navigation.scss */
+    /* line 59, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       display: grid;
       grid-template-columns: repeat(5, auto);
     }
   }
   @media screen and (min-width: 32em) {
-    /* line 62, ../src/smacss/modules/header/_navigation.scss */
+    /* line 59, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       grid-template-columns: repeat(5, 20%);
     }
   }
 
-  /* line 75, ../src/smacss/modules/header/_navigation.scss */
+  /* line 72, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list::before,
   .top-nav-list::after {
     content: none;
   }
 }
-/* line 81, ../src/smacss/modules/header/_navigation.scss */
+/* line 78, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list > li {
   min-height: 45px;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-box-align: stretch;
@@ -3332,13 +3330,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 96, ../src/smacss/modules/header/_navigation.scss */
+  /* line 93, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-box-flex: 1;
@@ -3349,7 +3347,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     height: auto;
   }
@@ -3357,13 +3355,13 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 32em) {
-    /* line 118, ../src/smacss/modules/header/_navigation.scss */
+    /* line 115, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list > li {
       width: auto;
     }
   }
 }
-/* line 126, ../src/smacss/modules/header/_navigation.scss */
+/* line 123, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .secondary-nav-list a {
   padding: calc(7.5 / 16 * 1rem) 1ch;
@@ -3371,7 +3369,7 @@ input:checked + .header-dropdown {
   display: block;
   text-decoration: none;
 }
-/* line 136, ../src/smacss/modules/header/_navigation.scss */
+/* line 133, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:hover,
 .secondary-nav-list a:hover {
   color: #f2f2f2;
@@ -3380,16 +3378,15 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 147, ../src/smacss/modules/header/_navigation.scss */
+/* line 144, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:focus,
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
-    padding: calc(7.5 / 16 * 1rem) 0.5ch;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3403,7 +3400,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding-right: 0.6666666667ch;
@@ -3411,7 +3408,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     font-size: inherit;
@@ -3419,21 +3416,21 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 174, ../src/smacss/modules/header/_navigation.scss */
+/* line 169, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .top-nav-list a:visited {
   color: #f2f2f2;
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 174, ../src/smacss/modules/header/_navigation.scss */
+  /* line 169, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     text-shadow: none;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 174, ../src/smacss/modules/header/_navigation.scss */
+  /* line 169, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     font-weight: bold;
@@ -3445,7 +3442,7 @@ input:checked + .header-dropdown {
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 194, ../src/smacss/modules/header/_navigation.scss */
+/* line 189, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -3455,7 +3452,7 @@ input:checked + .header-dropdown {
   background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -3469,7 +3466,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3478,33 +3475,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 228, ../src/smacss/modules/header/_navigation.scss */
+/* line 223, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     margin: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3512,7 +3509,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3520,7 +3517,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 255, ../src/smacss/modules/header/_navigation.scss */
+/* line 250, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a, .secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
@@ -3530,7 +3527,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3544,7 +3541,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -ms-flex-preferred-size: auto;
@@ -3552,26 +3549,26 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 297, ../src/smacss/modules/header/_navigation.scss */
+/* line 292, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
@@ -3579,7 +3576,7 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 307, ../src/smacss/modules/header/_navigation.scss */
+/* line 302, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
