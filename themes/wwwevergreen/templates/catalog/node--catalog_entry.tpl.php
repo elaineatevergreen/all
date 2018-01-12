@@ -143,34 +143,34 @@ if(render($content['field_summer_session']) != '') {
 	<div class="listing-property">
 	<?php
 		/**
-		 * [bug] This is showing up as MiT in the undergraduate catalog. See:
+		 * [bug][blocking] -- fixed stevenm
+		 *       This is showing up as MiT in the undergraduate catalog. See:
 		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 		 */
 		// Class standing standin ?>
 		<div class="listing-property-img">
-			<?php if (print($content['group_whowhenwhere']['field_class_standing'][0]) == "Graduate"){
+			<?php if (render($content['field_class_standing'][0]) == "Graduate"){
 				# if it's a graduate course, load a special graduate image
         # "Masters in Teaching", "Master of Enviromental Studies","Master of Public Administration"
         # Renaming them to match the shortened versions used elsewhere in the catalog
-        if (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master in Teaching") {
+        if (print($content['field_curricular_area'][0]) == "Master in Teaching") {
           $grad_img_name = "mit";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Environmental Studies") {
+        } elseif (print($content['field_curricular_area'][0]) == "Master of Environmental Studies") {
           $grad_img_name = "mes";
-        } elseif (print($content['group_whowhenwhere']['field_curricular_area'][0]) == "Master of Public Administration") {
+        } elseif (print($content['field_curricular_area'][0]) == "Master of Public Administration") {
           $grad_img_name = "mpa";
         }
 	        // rendering our grad image + title?>
-					<img alt=""
-						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg"
-						title="<?php print(render($content['group_whowhenwhere']['field_curricular_area'][0]))?>" />
-				
-				<?php } else {
+					<img alt="<?php print(render($content['field_curricular_area'][0]))?>"
+						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+
+			<?php } else {
 					// if it's an undergrad course
 					// take the first element and the last element, and use them to make the file name for the class standing range
 					// Render our undergrad image and title?>
 					<img alt=""
 						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
-						title="<?php print(render($content['group_whowhenwhere']['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
+						title="<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
 				<?php } ?>
 		</div>
 
@@ -370,7 +370,8 @@ if(render($content['field_summer_session']) != '') {
 			<?php
 				/**
 				 * Online Learning standin
-				 * [bug] This can be multiple values, different for each quarter,
+				 * [bug][blocking? - fix blocking bug below to see] ---> is now actually displaying the working behaviors -stevenm
+				 *       This can be multiple values, different for each quarter,
 				 *       but currently this standin doesn’t support that.
 				 *
 				 *       See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
@@ -388,41 +389,53 @@ if(render($content['field_summer_session']) != '') {
 				 *  * Hybrid Online Learning 25 - 49% Delivered Online
 				 *  * Enhanced Online Learning
 				 *
-				 * [bug] Furthermore, this looks like it’s maybe not working. See
+				 * [bug][blocking] --> fixed, works for both multi-option and non-special cases -stevenm
+				 *       Furthermore, this looks like it’s maybe not working. See
 				 *       this page for what I’m talking about:
 				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 				 *      —jkm
 				 */
-			// field_online_learning ?>
-			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
-				<div><b><?php print ("Online learning:"); ?></b>
-					<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
-					<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
-					<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
-					<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
-						<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
-							<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
-							<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
-							<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
-							<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
-							<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
-							<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
-						<?php } ?>
-						<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
-							<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
-						<?php } ?>
-				<?php } ?>
-			<?php }; ?></div>
+				 // field_online_learning ?>
+	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
+	 				<div><b><?php print ("Online learning:"); ?></b>
+	 				<?php $ol_format_flag = False; //using a flag to find if we've applied any of our custom formatting rules?>
+	 						<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
+	 						<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
+	 						<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
+	 						<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
+	 							<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
+	 								<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
+	 								<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
+	 								<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
+	 								<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
+	 								<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
+	 								<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 							<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
+	 								<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
+	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
+	 							<?php } ?>
+	 					<?php } // end formatting loop ?>
+	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
+	 						print(render($content['group_details']['group_more']['field_online_learning'][0]));
+	 					} ?>
+	 			<?php }; ?></div>
 
 	    <?php
 			// Special expenses standin
@@ -472,82 +485,98 @@ if(render($content['field_summer_session']) != '') {
 
 
 
-	    <?php
-			/**
-			 * Location and Schedule
-			 */
-			?>
-	    <div class="listing-property">
-		    <div class="listing-property-img">
-					<!-- Printing the location based on where we are -->
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
-					<?php } ?>
-		    </div>
-		    <div class="listing-property-body">
-			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
-			    <?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
-				    if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
-						<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
-					<?php }; ?>
-		    </div>
-	    </div>
+
 			<?php // Image for the Scheduled for: section in body ?>
-	    <div class="listing-property">
 				<?php
 					/**
 					 * [bug] If there is more than one icon, they drop down below
 					 *       each other, and shift the text body to no longer be left
 					 *       aligned with the paragraphs above.
 					 *      —jkm
+				   * -- fixed for now? -stevenm
 					 */
 				?>
-		    <div class="listing-property-img">
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
-				  <?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
-					<?php } ?>
-		    </div>
-		    <div class="listing-property-body">
-			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-						<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
-					<?php }; ?>
-			    <?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
-						<p><b>Final schedule and room assignment:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
-					<?php }; ?>
+				<div class="listing-property">
+				<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
+					<div class="listing-property-img">
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-day"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					  <?php } ?>
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-evening"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+						<?php } ?>
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-weekend"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+						<?php } ?>
+					</div>
 
-					<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
-						<p><b>Advertised schedule:</b></p>
-						<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
-					<?php }; ?>
-
-					<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
-						<p><b>Additional details:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
-					<?php }; ?>
-
-
+					<div class="listing-property-body">
+						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
+							<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+						<?php }; ?>
+						</div>
+					</div>
+					<div class="listing-property">
+						<div class="listing-property-img">
+							<!-- Printing the location based on where we are -->
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
+							<?php } ?>
+						</div>
+						<div class="listing-property-body">
+							<p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
+							<?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
+								if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
+								<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+							<?php }; ?>
+						</div>
 				</div>
-	    </div>
 
+				<?php
+			 /**
+				* Location and Schedule
+				*/
+			 ?>
+
+		<div class="listing-property">
+			<div class="listing-property-body">
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
+					<p><b>Final schedule and room assignment:</b></p>
+					<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+				<?php }; ?>
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
+					<p><b>Advertised schedule:</b></p>
+					<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
+				<?php }; ?>
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
+					<p><b>Additional details:</b></p>
+					<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+				<?php }; ?>
+
+
+			</div>
+		</div>
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
