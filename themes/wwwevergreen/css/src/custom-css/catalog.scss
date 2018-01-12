@@ -169,26 +169,23 @@
 	float: left;
 }
 
-/*.title{
-	margin: 0 2%;
-}*/
+
+// .message is for flags like “Canceled”, “Updated”, or even “Tacoma”.
+.catalog-title .message{
+	// box model
+	padding: 0 0.3125rem;
+	// typography
+	color: $wine;
+	letter-spacing: 0.2ch;
+	text-transform: uppercase;
+	// decoration
+	background-color: $highlight;
+}
 
 .program-title{
-	//@include base-type-lg;
 
 	@media screen and (min-width: 55em){
 		@include base-type-lg;
-	}
-
-	.message{
-		//box model
-		padding: 0 0.3125rem;
-		//typography
-		color: $wine;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		//backgrounds & borders
-		background-color: $highlight;
 	}
 }
 
