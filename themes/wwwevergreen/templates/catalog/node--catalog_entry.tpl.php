@@ -143,7 +143,7 @@ if(render($content['field_summer_session']) != '') {
 	<div class="listing-property">
 	<?php
 		/**
-		 * [bug][blocking]
+		 * [bug][blocking] -- fixed stevenm
 		 *       This is showing up as MiT in the undergraduate catalog. See:
 		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 		 */
