@@ -485,82 +485,98 @@ if(render($content['field_summer_session']) != '') {
 
 
 
-	    <?php
-			/**
-			 * Location and Schedule
-			 */
-			?>
-	    <div class="listing-property">
-		    <div class="listing-property-img">
-					<!-- Printing the location based on where we are -->
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
-					<?php } ?>
-		    </div>
-		    <div class="listing-property-body">
-			    <p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
-			    <?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
-				    if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
-						<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
-					<?php }; ?>
-		    </div>
-	    </div>
+
 			<?php // Image for the Scheduled for: section in body ?>
-	    <div class="listing-property">
 				<?php
 					/**
 					 * [bug] If there is more than one icon, they drop down below
 					 *       each other, and shift the text body to no longer be left
 					 *       aligned with the paragraphs above.
 					 *      —jkm
+				   * -- fixed for now? -stevenm
 					 */
 				?>
-		    <div class="listing-property-img">
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
-				  <?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
-					<?php } ?>
-					<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
-					<?php } ?>
-		    </div>
-		    <div class="listing-property-body">
-			    <?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-						<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
-					<?php }; ?>
-			    <?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
-						<p><b>Final schedule and room assignment:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
-					<?php }; ?>
+				<div class="listing-property">
+				<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
+					<div class="listing-property-img">
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-day"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					  <?php } ?>
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-evening"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+						<?php } ?>
+						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
+								<img alt=""
+								class="listing-icon-time-offered listing-icon-weekend"
+								src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+						<?php } ?>
+					</div>
 
-					<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
-						<p><b>Advertised schedule:</b></p>
-						<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
-					<?php }; ?>
-
-					<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
-						<p><b>Additional details:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
-					<?php }; ?>
-
-
+					<div class="listing-property-body">
+						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
+							<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+						<?php }; ?>
+						</div>
+					</div>
+					<div class="listing-property">
+						<div class="listing-property-img">
+							<!-- Printing the location based on where we are -->
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
+							<?php } ?>
+							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
+									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
+							<?php } ?>
+						</div>
+						<div class="listing-property-body">
+							<p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
+							<?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
+								if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
+								<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+							<?php }; ?>
+						</div>
 				</div>
-	    </div>
 
+				<?php
+			 /**
+				* Location and Schedule
+				*/
+			 ?>
+
+		<div class="listing-property">
+			<div class="listing-property-body">
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
+					<p><b>Final schedule and room assignment:</b></p>
+					<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+				<?php }; ?>
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
+					<p><b>Advertised schedule:</b></p>
+					<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
+				<?php }; ?>
+
+				<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
+					<p><b>Additional details:</b></p>
+					<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+				<?php }; ?>
+
+
+			</div>
+		</div>
 			<!--The “May be offered again” standin here. -->
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
