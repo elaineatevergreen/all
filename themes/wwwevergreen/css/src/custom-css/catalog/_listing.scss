@@ -69,6 +69,11 @@
 	// box model
 	width: 4ch;
 	height: 100%;  // Sizes height appropriately for Chrome.
+	max-width: none;  // Sizes width appropriately for Chrome.
+}
+
+.listing-property-body{
+	//max-width: calc(100% - 5ch);  // Large text blocks will compress .listing-property-img in Chrome.
 }
 
 .listing-icon-fall{
