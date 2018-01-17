@@ -38,16 +38,6 @@ body{
 	background-color: $tint;
 }
 
-@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
-	body{
-		// layout
-		align-items: start;
-		display: grid;
-		// ----------  #skip-link  #sitewide-alert  header  .site-content  footer    column
-		grid-template:  auto        auto            auto     1fr           auto    / auto;
-	}
-}
-
 img,
 svg{
 	border-width: 0;
