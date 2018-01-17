@@ -118,20 +118,14 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 </section>
 
 <!-- Page Footer -->
-<footer class="row page-footer" role="contentinfo">
-	<div class="wrapper">
-		<div class="grid">
-			<?php 
-				/* 
-					another place where we switch between the standard Evergreen footer 
-					and possible service center footers.
-				*/
-				if ($evergreen_blocks == 1): 
-					staticblocks('page-footer');
-				else: 
-					print render($page['footer']); 
-				endif; 
-			?>
-		</div><!--/.grid-->
-	</div><!--/.wrapper-->
-</footer>
+<?php 
+	/*
+		Choose either the standard Evergreen footer or a custom footers
+		(e.g. for service centers).
+	*/
+	if ($evergreen_blocks == 1): 
+		staticblocks('page-footer');
+	else: 
+		print render($page['footer']); 
+	endif; 
+?>

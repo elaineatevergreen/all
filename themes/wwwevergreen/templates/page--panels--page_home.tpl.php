@@ -114,37 +114,31 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 		?>
 	</div>-->
 	<?php /* for Panels pages, there are no wrapping grid divs. */ ?>
-			<?php print $messages; ?>
-	        <?php if ($page['highlighted']): ?>
-	        	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
-	        <?php endif; ?>
-	        <a id="main-content"></a>
-	        <?php print render($title_prefix); ?>
-	        <?php if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-	        <?php print render($title_suffix); ?>
-	        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-	        <?php print render($page['help']); ?>
-	        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-	        <?php print render($page['content']); ?>
-	        <?php print $feed_icons; ?>
+	<?php print $messages; ?>
+  <?php if ($page['highlighted']): ?>
+  	<div id="highlighted"><?php print render($page['highlighted']); ?></div>
+  <?php endif; ?>
+  <a id="main-content"></a>
+  <?php print render($title_prefix); ?>
+  <?php if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+  <?php print render($title_suffix); ?>
+  <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+  <?php print render($page['content']); ?>
+  <?php print $feed_icons; ?>
 
 </section>
 
 <!-- Page Footer -->
-<footer class="row page-footer" role="contentinfo">
-	<div class="wrapper">
-		<div class="grid">
-			<?php 
-				/* 
-					another place where we switch between the standard Evergreen footer 
-					and possible service center footers.
-				*/
-				if ($evergreen_blocks == 1): 
-					staticblocks('page-footer');
-				else: 
-					print render($page['footer']); 
-				endif; 
-			?>
-			</div><!--/.grid-->
-	</div><!--/.wrapper-->
-</footer>
+<?php 
+	/*
+		Choose either the standard Evergreen footer or a custom footers
+		(e.g. for service centers).
+	*/
+	if ($evergreen_blocks == 1): 
+		staticblocks('page-footer');
+	else: 
+		print render($page['footer']); 
+	endif; 
+?>
