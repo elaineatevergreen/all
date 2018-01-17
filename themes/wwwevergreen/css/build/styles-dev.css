@@ -4389,29 +4389,30 @@ input:checked + .header-dropdown {
   @media screen and (min-width: 70em) {
     /* line 34, ../src/smacss/modules/_footer.scss */
     .page-footer-grid {
+      margin-left: 0;
       display: grid;
       grid-gap: 2ch;
       grid-template-columns: 1fr 3fr 1fr;
     }
 
-    /* line 40, ../src/smacss/modules/_footer.scss */
+    /* line 43, ../src/smacss/modules/_footer.scss */
     .page-footer-unit {
       padding-left: 0;
       width: auto;
     }
 
-    /* line 45, ../src/smacss/modules/_footer.scss */
+    /* line 48, ../src/smacss/modules/_footer.scss */
     .page-footer-unit--placeholder {
       display: none;
     }
   }
 }
-/* line 51, ../src/smacss/modules/_footer.scss */
+/* line 54, ../src/smacss/modules/_footer.scss */
 .page-footer-unit-central {
   text-align: center;
 }
 
-/* line 55, ../src/smacss/modules/_footer.scss */
+/* line 58, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4419,7 +4420,7 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-/* line 64, ../src/smacss/modules/_footer.scss */
+/* line 67, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
@@ -4428,14 +4429,14 @@ input:checked + .header-dropdown {
           text-decoration-color: #3c5823;
 }
 
-/* line 73, ../src/smacss/modules/_footer.scss */
+/* line 76, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   -webkit-text-decoration-color: #0086ee;
           text-decoration-color: #0086ee;
 }
 
-/* line 80, ../src/smacss/modules/_footer.scss */
+/* line 83, ../src/smacss/modules/_footer.scss */
 .page-footer a:focus {
   background-color: rgba(242, 242, 242, 0.1);
   outline-color: #f2f2f2;
@@ -4444,14 +4445,14 @@ input:checked + .header-dropdown {
   outline-width: 1px;
 }
 
-/* line 89, ../src/smacss/modules/_footer.scss */
+/* line 92, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 89, ../src/smacss/modules/_footer.scss */
+  /* line 92, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4465,7 +4466,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 104, ../src/smacss/modules/_footer.scss */
+/* line 107, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4473,14 +4474,14 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 112, ../src/smacss/modules/_footer.scss */
+/* line 115, ../src/smacss/modules/_footer.scss */
 .tagline-footer p {
   color: #616161;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 112, ../src/smacss/modules/_footer.scss */
+  /* line 115, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4490,7 +4491,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 112, ../src/smacss/modules/_footer.scss */
+  /* line 115, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
