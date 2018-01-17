@@ -31,10 +31,10 @@
 @supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE syntax.
 	
 	@include breakpoint($drax){
-		.page-footer > .wrapper > .grid{
+		.page-footer-grid{
 			display: grid;
 			grid-gap: 2ch;
-			grid-template-columns: 1fr 0 3fr 0 1fr;
+			grid-template-columns: 1fr 3fr 1fr;
 		}
 		
 		.page-footer-unit{
