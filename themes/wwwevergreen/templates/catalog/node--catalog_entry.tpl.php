@@ -43,7 +43,7 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
 };
 if(render($content['field_summer_session']) != '') {
-	$quarters_intro .= " (" . trim(hide($content['field_summer_session'])) . " Session)";
+	$quarters_intro .= " (" . render($content['field_summer_session']) . " Session)";
 };?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
