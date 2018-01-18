@@ -60,7 +60,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -1;
+	z-index: -1;  // IE 11
 }
 
 .main-background .main-background-img,  // deprecated, use main-background2
@@ -81,8 +81,11 @@
 	}
 }
 
-.main-background2{
-	position: sticky;
+@supports (position: sticky) {
+	.main-background2{
+		position: sticky;
+		z-index: auto;
+	}
 }
 
 /**

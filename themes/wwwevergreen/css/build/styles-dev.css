@@ -3242,9 +3242,7 @@ input:checked + .header-dropdown {
 /* line 17, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list {
   margin: 0 auto;
-  margin-top: 0;
   width: 100%;
-  position: relative;
   text-align: center;
   list-style-type: none;
   /* Necessary for float-based fallback layouts. */
@@ -3273,7 +3271,7 @@ input:checked + .header-dropdown {
     letter-spacing: normal;
   }
 }
-/* line 48, ../src/smacss/modules/header/_navigation.scss */
+/* line 45, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list::before, .top-nav-list::after {
   width: 0;
   clear: both;
@@ -3283,32 +3281,32 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 20em) {
-    /* line 62, ../src/smacss/modules/header/_navigation.scss */
+    /* line 59, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       display: grid;
       grid-template-columns: repeat(5, auto);
     }
   }
   @media screen and (min-width: 32em) {
-    /* line 62, ../src/smacss/modules/header/_navigation.scss */
+    /* line 59, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list {
       grid-template-columns: repeat(5, 20%);
     }
   }
 
-  /* line 75, ../src/smacss/modules/header/_navigation.scss */
+  /* line 72, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list::before,
   .top-nav-list::after {
     content: none;
   }
 }
-/* line 81, ../src/smacss/modules/header/_navigation.scss */
+/* line 78, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list > li {
   min-height: 45px;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     border-left: 1px solid #303030;
     -webkit-box-align: stretch;
@@ -3322,13 +3320,13 @@ input:checked + .header-dropdown {
             flex-grow: 1;
     overflow: hidden;
   }
-  /* line 96, ../src/smacss/modules/header/_navigation.scss */
+  /* line 93, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li:first-child {
     border-left-width: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     width: 20%;
     -webkit-box-flex: 1;
@@ -3339,7 +3337,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 81, ../src/smacss/modules/header/_navigation.scss */
+  /* line 78, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list > li {
     height: auto;
   }
@@ -3347,13 +3345,13 @@ input:checked + .header-dropdown {
 
 @supports (grid-template: none) {
   @media screen and (min-width: 32em) {
-    /* line 118, ../src/smacss/modules/header/_navigation.scss */
+    /* line 115, ../src/smacss/modules/header/_navigation.scss */
     .top-nav-list > li {
       width: auto;
     }
   }
 }
-/* line 126, ../src/smacss/modules/header/_navigation.scss */
+/* line 123, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .secondary-nav-list a {
   padding: calc(7.5 / 16 * 1rem) 1ch;
@@ -3361,7 +3359,7 @@ input:checked + .header-dropdown {
   display: block;
   text-decoration: none;
 }
-/* line 136, ../src/smacss/modules/header/_navigation.scss */
+/* line 133, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:hover,
 .secondary-nav-list a:hover {
   color: #f2f2f2;
@@ -3370,16 +3368,15 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 147, ../src/smacss/modules/header/_navigation.scss */
+/* line 144, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a:focus,
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
-    padding: calc(7.5 / 16 * 1rem) 0.5ch;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3393,7 +3390,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     padding-right: 0.6666666667ch;
@@ -3401,7 +3398,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 126, ../src/smacss/modules/header/_navigation.scss */
+  /* line 123, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .secondary-nav-list a {
     font-size: inherit;
@@ -3409,21 +3406,21 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 174, ../src/smacss/modules/header/_navigation.scss */
+/* line 169, ../src/smacss/modules/header/_navigation.scss */
 .top-nav-list a,
 .top-nav-list a:visited {
   color: #f2f2f2;
   font-weight: 600;
 }
 @media screen and (min-width: 32em) {
-  /* line 174, ../src/smacss/modules/header/_navigation.scss */
+  /* line 169, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     text-shadow: none;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 174, ../src/smacss/modules/header/_navigation.scss */
+  /* line 169, ../src/smacss/modules/header/_navigation.scss */
   .top-nav-list a,
   .top-nav-list a:visited {
     font-weight: bold;
@@ -3435,7 +3432,7 @@ input:checked + .header-dropdown {
  *
  * The textured nav immediately below the primary nav on the homepage only.
  */
-/* line 194, ../src/smacss/modules/header/_navigation.scss */
+/* line 189, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list {
   border-top: 1px solid #46502b;
   margin: 0;
@@ -3445,7 +3442,7 @@ input:checked + .header-dropdown {
   background: #64933a url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 }
 @media screen and (min-width: 20em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -3459,7 +3456,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3468,33 +3465,33 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 194, ../src/smacss/modules/header/_navigation.scss */
+  /* line 189, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
     line-height: 2.14285714285714;
   }
 }
 
-/* line 228, ../src/smacss/modules/header/_navigation.scss */
+/* line 223, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list > li {
   margin-right: 1ch;
   display: inline-block;
 }
 @media screen and (min-width: 20em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     margin: 0;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
@@ -3502,7 +3499,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 228, ../src/smacss/modules/header/_navigation.scss */
+  /* line 223, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list > li {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
@@ -3510,7 +3507,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 255, ../src/smacss/modules/header/_navigation.scss */
+/* line 250, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a, .secondary-nav-list a:visited {
   border-bottom: 0;
   height: 100%;
@@ -3520,7 +3517,7 @@ input:checked + .header-dropdown {
   font-weight: normal;
 }
 @media screen and (min-width: 20em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3534,7 +3531,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 22em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     display: inline-block;
     -ms-flex-preferred-size: auto;
@@ -3542,26 +3539,26 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 1ch;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     padding: 0 2ch;
     font-weight: bold;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 255, ../src/smacss/modules/header/_navigation.scss */
+  /* line 250, ../src/smacss/modules/header/_navigation.scss */
   .secondary-nav-list a, .secondary-nav-list a:visited {
     font-size: inherit;
     line-height: inherit;
   }
 }
-/* line 297, ../src/smacss/modules/header/_navigation.scss */
+/* line 292, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
@@ -3569,7 +3566,7 @@ input:checked + .header-dropdown {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 307, ../src/smacss/modules/header/_navigation.scss */
+/* line 302, ../src/smacss/modules/header/_navigation.scss */
 .secondary-nav-list a:focus {
   background-color: #492c5d;
 }
@@ -3584,6 +3581,12 @@ input:checked + .header-dropdown {
 .site-name {
   margin-top: 3.75rem;
 }
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  /* line 377, ../src/smacss/modules/_header.scss */
+  .site-name {
+    z-index: 0;
+  }
+}
 @media screen and (min-width: 70em) {
   /* line 377, ../src/smacss/modules/_header.scss */
   .site-name {
@@ -3595,12 +3598,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 394, ../src/smacss/modules/_header.scss */
+/* line 396, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 394, ../src/smacss/modules/_header.scss */
+  /* line 396, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -3653,23 +3656,25 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 84, ../src/smacss/_modules.scss */
-.main-background2 {
-  position: -webkit-sticky;
-  position: sticky;
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  /* line 85, ../src/smacss/_modules.scss */
+  .main-background2 {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: auto;
+  }
 }
-
 /**
  * This, in particular, probably can be simplified down to a single
  * declaration.
  */
-/* line 92, ../src/smacss/_modules.scss */
+/* line 95, ../src/smacss/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > :first-child {
   position: absolute;
 }
 @media screen and (min-width: 43em) {
-  /* line 92, ../src/smacss/_modules.scss */
+  /* line 95, ../src/smacss/_modules.scss */
   .main-background2 > .main-background-img,
   .main-background2 > :first-child {
     width: auto;
@@ -3677,7 +3682,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 104, ../src/smacss/_modules.scss */
+/* line 107, ../src/smacss/_modules.scss */
 .main-background2 > div > :first-child {
   max-height: 100vh;
   display: block;
@@ -3691,7 +3696,7 @@ input:checked + .header-dropdown {
 	//will-change: filter;
 }
 */
-/* line 120, ../src/smacss/_modules.scss */
+/* line 123, ../src/smacss/_modules.scss */
 .main-background2-enhanced #main-background-img {
   -webkit-filter: none;
           filter: none;
@@ -4059,7 +4064,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 129, ../src/smacss/_modules.scss */
+/* line 132, ../src/smacss/_modules.scss */
 .location-transporter {
   margin: calc(30 / 18 * 1em) 1ch;
   font-size: 1.125rem;
@@ -4068,7 +4073,7 @@ input:checked + .header-dropdown {
   text-align: center;
 }
 @media screen and (min-width: 32em) {
-  /* line 129, ../src/smacss/_modules.scss */
+  /* line 132, ../src/smacss/_modules.scss */
   .location-transporter {
     margin: calc(30 / 19.229 * 1em) 1ch;
     font-size: 1.202rem;
@@ -4076,7 +4081,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 129, ../src/smacss/_modules.scss */
+  /* line 132, ../src/smacss/_modules.scss */
   .location-transporter {
     margin: calc(30 / 29.124 * 1em) 1ch;
     font-size: 1.82rem;
@@ -4481,17 +4486,17 @@ input:checked + .header-dropdown {
  *
  * Special, non-base element typography.
  */
-/* line 168, ../src/smacss/_modules.scss */
+/* line 171, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 172, ../src/smacss/_modules.scss */
+/* line 175, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 176, ../src/smacss/_modules.scss */
+/* line 179, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4500,7 +4505,7 @@ input:checked + .header-dropdown {
   line-height: 1.36512559155442;
 }
 @media screen and (min-width: 43em) {
-  /* line 176, ../src/smacss/_modules.scss */
+  /* line 179, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4509,7 +4514,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 176, ../src/smacss/_modules.scss */
+  /* line 179, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4518,14 +4523,14 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 201, ../src/smacss/_modules.scss */
+/* line 204, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
   text-shadow: 2px 2px 1px #f2f2f2;
 }
 
-/* line 207, ../src/smacss/_modules.scss */
+/* line 210, ../src/smacss/_modules.scss */
 .byline {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -4535,40 +4540,40 @@ input:checked + .header-dropdown {
   text-transform: uppercase;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 210, ../src/smacss/_modules.scss */
   .byline {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 207, ../src/smacss/_modules.scss */
+  /* line 210, ../src/smacss/_modules.scss */
   .byline {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 
-/* line 218, ../src/smacss/_modules.scss */
+/* line 221, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.36512559155442;
 }
 @media screen and (min-width: 70em) {
-  /* line 218, ../src/smacss/_modules.scss */
+  /* line 221, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 218, ../src/smacss/_modules.scss */
+  /* line 221, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 232, ../src/smacss/_modules.scss */
+/* line 235, ../src/smacss/_modules.scss */
 .fast-fact,
 .fast-fact-alt {
   border: 0.25ch solid #64933a;
@@ -4578,7 +4583,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 43em) {
-  /* line 232, ../src/smacss/_modules.scss */
+  /* line 235, ../src/smacss/_modules.scss */
   .fast-fact,
   .fast-fact-alt {
     padding: 0;
@@ -4586,7 +4591,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 248, ../src/smacss/_modules.scss */
+  /* line 251, ../src/smacss/_modules.scss */
   .fast-fact {
     border-width: 0 0.5ch 0 0;
     padding-right: 2ch;
@@ -4594,14 +4599,14 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 256, ../src/smacss/_modules.scss */
+  /* line 259, ../src/smacss/_modules.scss */
   .fast-fact-alt {
     border-width: 0 0 0 0.5ch;
     padding-left: 2ch;
   }
 }
 
-/* line 265, ../src/smacss/_modules.scss */
+/* line 268, ../src/smacss/_modules.scss */
 .key-number {
   display: block;
   color: #64933a;
@@ -4610,24 +4615,24 @@ input:checked + .header-dropdown {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 265, ../src/smacss/_modules.scss */
+  /* line 268, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 282, ../src/smacss/_modules.scss */
+/* line 285, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 286, ../src/smacss/_modules.scss */
+/* line 289, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 290, ../src/smacss/_modules.scss */
+/* line 293, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -4636,7 +4641,7 @@ input:checked + .header-dropdown {
   content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 290, ../src/smacss/_modules.scss */
+  /* line 293, ../src/smacss/_modules.scss */
   .main-content .content > p:last-child::after,
   .main-content .content > ul:last-child > li:last-child::after,
   .main-content .content > ol:last-child > li:last-child::after,
@@ -7636,12 +7641,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 357, ../src/smacss/_modules.scss */
+/* line 360, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 362, ../src/smacss/_modules.scss */
+/* line 365, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7662,7 +7667,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 379, ../src/smacss/_modules.scss */
+/* line 382, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7988,14 +7993,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 401, ../src/smacss/_modules.scss */
+/* line 404, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 411, ../src/smacss/_modules.scss */
+/* line 414, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8014,24 +8019,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 430, ../src/smacss/_modules.scss */
+/* line 433, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 434, ../src/smacss/_modules.scss */
+/* line 437, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 442, ../src/smacss/_modules.scss */
+/* line 445, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 450, ../src/smacss/_modules.scss */
+/* line 453, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8042,30 +8047,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 461, ../src/smacss/_modules.scss */
+/* line 464, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 465, ../src/smacss/_modules.scss */
+/* line 468, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 465, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 465, ../src/smacss/_modules.scss */
+  /* line 468, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 478, ../src/smacss/_modules.scss */
+/* line 481, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
