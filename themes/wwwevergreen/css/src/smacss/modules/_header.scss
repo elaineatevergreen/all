@@ -376,16 +376,18 @@ input:checked + .header-dropdown{
 
 .site-name{
 	// box model
-	//border-bottom: 4px solid $evergreen-old-style;
 	margin-top: 3.75rem;  // 60/16
-	//margin-bottom: -4px;  // Compensates for 4px border and maintains 15px vertical cadence.
+	
+	@supports (position: sticky){
+		z-index: 0;  // Brings the site title ahead of the background-image (and fixes background juddering in Edge).
+	}
 
 	@include breakpoint($drax){
 		// box model
 		margin-right: 1em;
 		margin-left: 1em;
 		width: 100%;
-		// backgrounds and borders
+		// decoration
 		background-color: transparentize($tint, 0.33);
 		border-radius: 2px 2px 0 0;
 	}
