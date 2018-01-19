@@ -7,8 +7,8 @@
 
 # ignore built and build artifacts
 themes/wwwwevergreen/css/build/*
-themes/wwwwevergreen/css/dist/*.ss
-themes/wwwwevergreen/css/dist/custom-css/*.ss
+themes/wwwwevergreen/css/dist/*.css
+themes/wwwwevergreen/css/dist/custom-css/*.css
 themes/wwwwevergreen/js/build/*
 themes/wwwwevergreen/js/dist/*.js
 themes/wwwwevergreen/js/dist/init/*.js
