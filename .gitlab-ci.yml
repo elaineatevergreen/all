@@ -73,6 +73,7 @@ build:
     #- master
   script:
     - echo "Building the app"
+    - cd themes/wwwevergreen/
     - npm install grunt-cli
     - npm install grunt
     - npm install grunt-postcss
@@ -93,7 +94,6 @@ build:
     - npm install
     - export LC_ALL=en_US.UTF-8
     - export LANG=en_US.UTF-8
-    - cd themes/wwwevergreen/
     - grunt
   tags:
     - scss-docker
