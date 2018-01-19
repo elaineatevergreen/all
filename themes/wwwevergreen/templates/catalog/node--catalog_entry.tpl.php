@@ -43,7 +43,7 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
 };
 if(render($content['field_summer_session']) != '') {
-	$quarters_intro .= " (" . trim(hide($content['field_summer_session'])) . " Session)";
+	$quarters_intro .= " (" . render($content['field_summer_session']) . " Session)";
 };?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -147,31 +147,31 @@ if(render($content['field_summer_session']) != '') {
 		 *       This is showing up as MiT in the undergraduate catalog. See:
 		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
 		 */
-		// Class standing standin ?>
-		<div class="listing-property-img">
-			<?php if (render($content['field_class_standing'][0]) == "Graduate"){
-				# if it's a graduate course, load a special graduate image
-        # "Masters in Teaching", "Master of Enviromental Studies","Master of Public Administration"
-        # Renaming them to match the shortened versions used elsewhere in the catalog
-        if (print($content['field_curricular_area'][0]) == "Master in Teaching") {
-          $grad_img_name = "mit";
-        } elseif (print($content['field_curricular_area'][0]) == "Master of Environmental Studies") {
-          $grad_img_name = "mes";
-        } elseif (print($content['field_curricular_area'][0]) == "Master of Public Administration") {
-          $grad_img_name = "mpa";
-        }
-	        // rendering our grad image + title?>
-					<img alt="<?php print(render($content['field_curricular_area'][0]))?>"
-						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+		// Class standing standin
+		//Translating our curricular area into our image path name for grad courses
+		$grad_img_name = "";
+		$field_curr_area = (render($content['field_curricular_area'][0]));
+		if($field_curr_area == "Master in Teaching"){
+			$grad_img_name = "mit"; }
+		if($field_curr_area == "Master of Environmental Studies"){
+			$grad_img_name = "mes"; }
+		if($field_curr_area == "Master of Public Administration"){
+			$grad_img_name = "mpa"; }?>
 
-			<?php } else {
-					// if it's an undergrad course
-					// take the first element and the last element, and use them to make the file name for the class standing range
-					// Render our undergrad image and title?>
-					<img alt=""
-						src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>.svg"
-						title="<?php print(render($content['field_class_standing'][0]))?>-<?php print(render(end($content['field_class_standing'])))?>" />
-				<?php } ?>
+		<div class="listing-property-img">
+		 <?php // if graduate
+		 if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
+		 	  <img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+		 	  <?php // printing our word Graduate
+		 		print(render($content['field_class_standing'][0]));
+		 } else {
+				// if it's an undergrad course
+			  // take the first element and the last element, and use them to make the file name for the class standing range
+			  // Render our undergrad image and title?>
+			  <img alt=""
+			  	src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
+			  	title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+
 		</div>
 
 		<div class="listing-property-body">
@@ -192,7 +192,8 @@ if(render($content['field_summer_session']) != '') {
 			if(isset($content['field_percent_freshman'])){
 				$test = (render($content['field_percent_freshman'][0]));
 				print("<br/><small class='small'> " . $test . "% Reserved for Freshmen</small>");
-			} ?>
+			}
+		}?>
 		</div>
 	</div>
 
