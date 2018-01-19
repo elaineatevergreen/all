@@ -64,8 +64,8 @@ build:
     name: registry.git.evergreen.edu/tas/docker-images/sassdevbuild
   artifacts:
     paths:
-       - themes/wwwwevergreen/css/dist
-       - themes/wwwwevergreen/js/dist
+       - themes/wwwevergreen/css/dist
+       - themes/wwwevergreen/js/dist
   only:
     - /^munge.*$/
     #- /dev/
@@ -89,7 +89,6 @@ build:
     - npm install grunt-imageoptim
     - npm install grunt-newer
     - npm install grunt-perfbudget
-    - npm install grunt-sass-lint
     - npm install grunt-svgstore
     - npm install
     - export LC_ALL=en_US.UTF-8
