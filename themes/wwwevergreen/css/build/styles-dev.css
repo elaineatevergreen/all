@@ -4367,6 +4367,7 @@ input:checked + .header-dropdown {
   margin-top: auto;
   padding: 1em 1em 0;
   clear: left;
+  z-index: 0;
   color: #f2f2f2;
   font-size: 0.875rem;
   line-height: 1.33928571428571;
@@ -4390,12 +4391,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 31, ../src/smacss/modules/_footer.scss */
+/* line 32, ../src/smacss/modules/_footer.scss */
 .page-footer-unit-central {
   text-align: center;
 }
 
-/* line 35, ../src/smacss/modules/_footer.scss */
+/* line 36, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4403,7 +4404,7 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-/* line 44, ../src/smacss/modules/_footer.scss */
+/* line 45, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
@@ -4412,14 +4413,14 @@ input:checked + .header-dropdown {
           text-decoration-color: #3c5823;
 }
 
-/* line 53, ../src/smacss/modules/_footer.scss */
+/* line 54, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   -webkit-text-decoration-color: #0086ee;
           text-decoration-color: #0086ee;
 }
 
-/* line 60, ../src/smacss/modules/_footer.scss */
+/* line 61, ../src/smacss/modules/_footer.scss */
 .page-footer a:focus {
   background-color: rgba(242, 242, 242, 0.1);
   outline-color: #f2f2f2;
@@ -4428,14 +4429,14 @@ input:checked + .header-dropdown {
   outline-width: 1px;
 }
 
-/* line 69, ../src/smacss/modules/_footer.scss */
+/* line 70, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 69, ../src/smacss/modules/_footer.scss */
+  /* line 70, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4449,7 +4450,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 84, ../src/smacss/modules/_footer.scss */
+/* line 85, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4457,14 +4458,14 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 92, ../src/smacss/modules/_footer.scss */
+/* line 93, ../src/smacss/modules/_footer.scss */
 .tagline-footer p {
   color: #616161;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 92, ../src/smacss/modules/_footer.scss */
+  /* line 93, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4474,7 +4475,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 92, ../src/smacss/modules/_footer.scss */
+  /* line 93, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
