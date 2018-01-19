@@ -204,7 +204,7 @@ if(render($content['field_summer_session']) != '') {
 
 			if(isset($content['field_percent_freshman'])){
 				$test = (render($content['field_percent_freshman'][0]));
-				print("<br/><small class='small'> " . $test . "% Reserved for Freshmen</small>");
+				print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
 			}
 		}?>
 		</div>
