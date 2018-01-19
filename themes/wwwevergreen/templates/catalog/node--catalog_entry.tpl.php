@@ -162,8 +162,12 @@ if(render($content['field_summer_session']) != '') {
 		 <?php // if graduate
 		 if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 		 	  <img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
-		 	  <?php // printing our word Graduate
-		 		print(render($content['field_class_standing'][0]));
+		</div>
+				<div class="listing-property-body">
+			 	<?php // printing our word Graduate
+		 		print(render($content['field_class_standing'][0])); ?>
+				</div>
+		 <?php
 		 } else {
 				// if it's an undergrad course
 			  // take the first element and the last element, and use them to make the file name for the class standing range
