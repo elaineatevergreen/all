@@ -34,52 +34,8 @@ module.exports = function(grunt) {
                         dest: 'js/dist/init',
                         filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
                     }
-                ],
-            }//,
-            // to_local: {
-            //     files: [
-            //         {
-            //             cwd: 'css/dist/',
-            //             expand: true,
-            //             src: ['**'],
-            //             dest: '../../../devdesktop/drupal-7.53/sites/all/themes/wwwevergreen/css/dist/',
-            //         },
-            //     ],
-            // },
-            // to_banner: {
-            //     files: [
-            //         {
-            //             expand: true,
-            //             flatten: true,  // Only copies the file, not the folder structure, too
-            //             src: ['css/src/_tools.scss'],
-            //             dest: '../../../themes/banner/css/src/',
-            //             filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
-            //         },
-            //
-            //         /*{
-            //             expand: true,
-            //             cwd: 'css/dist/',
-            //             src: 'styles.css',
-            //             dest: '../www-drupal/themes/wwwevergreen/css/dist/',
-            //             //rename: function(dest){
-            //                 //return dest + 'screen.css';
-            //             //},
-            //             filter: 'isFile',	 // Make sure it's a file, not a directory or something else (I think)
-            //         },*/
-            //
-            //         /*// includes files within path
-            //         {expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
-            //
-            //         // includes files within path and its sub-directories
-            //         {expand: true, src: ['path/**'], dest: 'dest/'},
-            //
-            //         // makes all src relative to cwd
-            //         {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-            //
-            //         // flattens results to a single level
-            //         {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},*/
-            //     ],
-            // },
+                ]
+            }
         },
 
         imagemin: {                          // Task
@@ -96,12 +52,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
-        // imageoptim: {
-        //     optimizeDefaultSrc: {
-        //         src: ['../../../evergreen-edu/imageoptim/src'],
-        //     },
-        // },
 
         /**
          * Give hints on fixing bugs in JavaScript.
@@ -192,11 +142,7 @@ module.exports = function(grunt) {
             dev_styles: {
                 src: 'css/build/styles-dev.css',
                 dest: 'css/build/styles-dev.css'
-            },
-            // r25_styles: {
-            //     src: 'r25/r25.css',
-            //     dest: 'r25/build/r25.css'
-            // }
+            }
         },
 
         /**
@@ -217,7 +163,7 @@ module.exports = function(grunt) {
                         src: ['*.scss'],
                         dest: 'css/dist/custom-css',  // destination folder
                         ext: '.css'
-                    },
+                    }
                 ]
             },
             dev: {  // process specific files
@@ -267,27 +213,9 @@ module.exports = function(grunt) {
                     //xmlns: 'http://www.w3.org/2000/svg'
                 },
                 inheritviewbox: true,
-            },
-            // transporter: {
-            //     /*files: {
-            //         '' : [''],  // dest : src
-            //     }*/
-            //     src: ['images/src/icons/transporter/*.svg'],
-            //     dest: 'images/build/transporter.svg',
-            // },
+            }
+
         },
-        /*svgsprite: {
-            options: {
-                //cleanwith: 'svgo',	//SVG optimizer
-            },
-            transporter: {
-                src: ['images/src/icons'],
-                dest: 'images/build/icons',
-                options: {
-                    sprite: 'transporter',  //filename
-                }
-            },
-      },*/
 
         /**
          * Compress JS by removing whitespace. Different from
@@ -305,7 +233,7 @@ module.exports = function(grunt) {
             scripts_to_dist: {
                 src: 'js/build/scripts-dev.js',
                 dest: 'js/dist/scripts.min.js'
-            },
+            }
         },
 
         /**
@@ -328,8 +256,8 @@ module.exports = function(grunt) {
             js: {  // Concatenate and uglify JavaScript.
                 files: ['js/src/**/*.js'],
                 tasks: ['jshint', 'newer:concat', 'newer:uglify', 'copy:js_init_to_dist'],
-            },
-        },
+            }
+        }
 
     });
 
