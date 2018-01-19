@@ -20,11 +20,12 @@ function evergreen_content_entityqueue_default_queues() {
   $queue->target_type = 'node';
   $queue->settings = array(
     'target_bundles' => array(
+      'basic_page' => 'basic_page',
       'article' => 'article',
     ),
     'min_size' => '0',
     'max_size' => '0',
-    'act_as_queue' => 0,
+    'act_as_queue' => 1,
   );
   $export['evergreen_magazine'] = $queue;
 

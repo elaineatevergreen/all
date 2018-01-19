@@ -9,6 +9,29 @@
  */
 function evergreen_content_taxonomy_default_vocabularies() {
   return array(
+    'article_tags' => array(
+      'name' => 'Article Tags',
+      'machine_name' => 'article_tags',
+      'description' => 'These are used to add extra categorization to news/blog posts.',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'calendar_categories' => array(
       'name' => 'Calendar Categories',
       'machine_name' => 'calendar_categories',
@@ -105,7 +128,7 @@ function evergreen_content_taxonomy_default_vocabularies() {
       'name' => 'Fields of Study',
       'machine_name' => 'fields_of_study',
       'description' => 'Handles the subject areas for the college catalog and ways of describing the curriculum.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

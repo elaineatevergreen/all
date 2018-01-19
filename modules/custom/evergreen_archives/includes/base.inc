@@ -8,7 +8,7 @@ abstract class ArchivesMigration extends Migration {
     // Add database connection info
     Database::addConnectionInfo('for_migration', 'default', array(
       'driver' => 'mysql',
-      'database' => 'archives_content',
+      'database' => 'at_db',
       'username' => 'danu',
       'password' => 'ev_archives!',
       'host' => '127.0.0.1',

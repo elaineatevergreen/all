@@ -4,10 +4,14 @@ Includes:
 * Campus Calendar feature 
 * Learning Communities feature 
 * Curriculum for the Bioregion feature
+* Basic Content feature
 
 # Collab Sites  
 The following sites are using the drupal7 code tree and are updated by  
-scripts in site_updates_collab_
+scripts in site_updates_collab
+
+If updates should only be applied to a specific site, then add "cd sites/collab${SITE_SUFFIX}.evergreen.edu.[subsite]" before any drush commands.
+
 * default - Splash site (collabtest.evergreen.edu/splash)
 * collab.evergreen.edu.acadessay - Hight School Academic Essay Contest
 * collab.evergreen.edu.acadstatement - Academic Statement contest (deans area)
@@ -28,9 +32,7 @@ scripts in site_updates_collab_
 * collab.evergreen.edu.wacenter - Old Washington center site 
 * collabtest.evergreen.edu.washingtoncenter - New washington center site. 
 
-# Collab Sites (www7)
-The following sites are using the www7 code tree and are updated by 
-site_updates_www
-* default - www site (collabtest.evergreen.edu/www
-* collabtest.evergreen.edu.calendar - Calendar
+# www.evergreen.edu
+The main Evergreen website is using the www7 code tree and is updated by 
+site_updates_www. This includes wwwdev and wwwtest.
 

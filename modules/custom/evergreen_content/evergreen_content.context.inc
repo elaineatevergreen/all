@@ -56,9 +56,9 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_title',
           'weight' => '-9',
         ),
-        'bean-calendar-nav' => array(
+        'bean-section-navigation-calendar' => array(
           'module' => 'bean',
-          'delta' => 'calendar-nav',
+          'delta' => 'section-navigation-calendar',
           'region' => 'section_nav',
           'weight' => '-10',
         ),
@@ -95,9 +95,15 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-7' => array(
+        'bean-section-navigation-calendar' => array(
+          'module' => 'bean',
+          'delta' => 'section-navigation-calendar',
+          'region' => 'section_nav',
+          'weight' => '-10',
+        ),
+        'block-61' => array(
           'module' => 'block',
-          'delta' => '7',
+          'delta' => '61',
           'region' => 'secondary_content',
           'weight' => '-10',
         ),
@@ -125,7 +131,24 @@ function evergreen_content_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-section-navigation-calendar' => array(
+          'module' => 'bean',
+          'delta' => 'section-navigation-calendar',
+          'region' => 'section_nav',
+          'weight' => '-10',
+        ),
+        'cas-login' => array(
+          'module' => 'cas',
+          'delta' => 'login',
+          'region' => 'secondary_content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
@@ -168,11 +191,11 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-4' => array(
+        'block-3' => array(
           'module' => 'block',
-          'delta' => '4',
+          'delta' => '3',
           'region' => 'section_title',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
         'bean-section-navigation-catalog' => array(
           'module' => 'bean',
@@ -260,7 +283,7 @@ function evergreen_content_context_default_contexts() {
           'module' => 'views',
           'delta' => '-exp-catalog-page',
           'region' => 'filters',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -310,9 +333,9 @@ function evergreen_content_context_default_contexts() {
           'region' => 'section_title',
           'weight' => '-10',
         ),
-        'bean-directory-menu' => array(
+        'bean-section-navigation-directory' => array(
           'module' => 'bean',
-          'delta' => 'directory-menu',
+          'delta' => 'section-navigation-directory',
           'region' => 'section_nav',
           'weight' => '-10',
         ),
@@ -320,12 +343,6 @@ function evergreen_content_context_default_contexts() {
           'module' => 'views',
           'delta' => 'catalog-offerings_by_faculty',
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-faculty_update-block' => array(
-          'module' => 'views',
-          'delta' => 'faculty_update-block',
-          'region' => 'secondary_content',
           'weight' => '-10',
         ),
         'bean-section-background-directory' => array(
@@ -374,11 +391,11 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-3' => array(
+        'block-4' => array(
           'module' => 'block',
-          'delta' => '3',
+          'delta' => '4',
           'region' => 'section_title',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'bean-section-navigation-fields-of-stu' => array(
           'module' => 'bean',
@@ -436,7 +453,7 @@ function evergreen_content_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'home';
-  $context->description = 'Adds design elements/CSS for home page';
+  $context->description = 'Adds design elements and CSS for home page';
   $context->tag = 'design';
   $context->conditions = array(
     'node' => array(
@@ -447,48 +464,13 @@ function evergreen_content_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-alerts-only_alerts' => array(
-          'module' => 'views',
-          'delta' => 'alerts-only_alerts',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-home_page_hero-block' => array(
-          'module' => 'views',
-          'delta' => 'home_page_hero-block',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-8',
-        ),
-        'views-news_o_matic-block' => array(
-          'module' => 'views',
-          'delta' => 'news_o_matic-block',
-          'region' => 'content',
-          'weight' => '-6',
-        ),
-        'views-blog-home' => array(
-          'module' => 'views',
-          'delta' => 'blog-home',
-          'region' => 'content',
-          'weight' => '-5',
-        ),
-        'views-calendar-homelist' => array(
-          'module' => 'views',
-          'delta' => 'calendar-homelist',
-          'region' => 'content',
-          'weight' => '-7',
-        ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
       ),
     ),
+  );
+  $context->reactions = array(
     'css' => array(
       'www.evergreen.edu' => array(
         'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css' => 'sites/all/themes/wwwevergreen/css/dist/custom-css/home.css',
@@ -499,7 +481,7 @@ function evergreen_content_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Adds design elements/CSS for home page');
+  t('Adds design elements and CSS for home page');
   t('design');
   $export['home'] = $context;
 
@@ -519,11 +501,11 @@ function evergreen_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-8' => array(
+        'block-41' => array(
           'module' => 'block',
-          'delta' => '8',
+          'delta' => '41',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-68',
         ),
       ),
     ),

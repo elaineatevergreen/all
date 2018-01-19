@@ -138,11 +138,11 @@ function evergreen_content_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'evergreen_content',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
@@ -380,7 +380,7 @@ function evergreen_content_node_info() {
     'home_page' => array(
       'name' => t('Home Page'),
       'base' => 'node_content',
-      'description' => t('It\'s the <em>HOME PAGE</em>, y\'all.'),
+      'description' => t('Deprecated, DO NOT USE. Replaced by Panels Pages.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

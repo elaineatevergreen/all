@@ -24,9 +24,9 @@ function evergreen_content_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'body',
-      1 => 'field_members',
-      2 => 'field_other_members',
-      3 => 'field_charge',
+      1 => 'field_charge',
+      2 => 'field_members',
+      3 => 'field_other_members',
       4 => 'field_contact_information',
     ),
     'format_type' => 'html-element',
@@ -60,8 +60,8 @@ function evergreen_content_field_group_info() {
     'weight' => '7',
     'children' => array(
       0 => 'body',
-      1 => 'field_short_description',
-      2 => 'field_charge',
+      1 => 'field_charge',
+      2 => 'field_short_description',
       3 => 'field_contact_information',
     ),
     'format_type' => 'fieldset',
@@ -118,7 +118,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced Opportunities',
-    'weight' => '13',
+    'weight' => '12',
     'children' => array(
       0 => 'field_internship_boolean',
       1 => 'field_research_boolean',
@@ -127,13 +127,14 @@ function evergreen_content_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Advanced Opportunities',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-advanced field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-advanced field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_advanced|node|catalog_entry|form'] = $field_group;
@@ -213,9 +214,9 @@ function evergreen_content_field_group_info() {
     'label' => 'Archived Materials',
     'weight' => '6',
     'children' => array(
-      0 => 'field_historical_agendas',
-      1 => 'field_historical_minutes',
-      2 => 'field_web_page_reports',
+      0 => 'field_web_page_reports',
+      1 => 'field_historical_agendas',
+      2 => 'field_historical_minutes',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -243,11 +244,11 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Archived Materials',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
-      0 => 'field_historical_agendas',
-      1 => 'field_historical_minutes',
-      2 => 'field_web_page_reports',
+      0 => 'field_web_page_reports',
+      1 => 'field_historical_agendas',
+      2 => 'field_historical_minutes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -399,31 +400,29 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Basics',
-    'weight' => '0',
+    'weight' => '2',
     'children' => array(
       0 => 'body',
       1 => 'field_cmd_id',
-      2 => 'field_faculty',
-      3 => 'field_maximum_credits',
-      4 => 'field_minimum_credits',
-      5 => 'field_offering_type',
-      6 => 'field_status_date',
-      7 => 'field_fields_of_study',
-      8 => 'field_preparatory_for',
-      9 => 'field_offering_status',
-      10 => 'field_credits',
-      11 => 'field_non_directory_faculty',
-      12 => 'title',
+      2 => 'field_maximum_credits',
+      3 => 'field_minimum_credits',
+      4 => 'field_offering_type',
+      5 => 'field_status_date',
+      6 => 'field_fields_of_study',
+      7 => 'field_preparatory_for',
+      8 => 'field_offering_status',
+      9 => 'field_credits',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Basics',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-basics field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-basics field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_basics|node|catalog_entry|form'] = $field_group;
@@ -734,6 +733,8 @@ function evergreen_content_field_group_info() {
       0 => 'body',
       1 => 'field_image',
       2 => 'field_related_pieces',
+      3 => 'field_profile_collection',
+      4 => 'field_quote',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1100,6 +1101,36 @@ function evergreen_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_faculty|node|catalog_entry|form';
+  $field_group->group_name = 'group_faculty';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Faculty',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_faculty',
+      1 => 'field_faculty_name_search',
+      2 => 'field_non_directory_faculty',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-faculty field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_faculty|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_faculty|node|directory_individual|form';
   $field_group->group_name = 'group_faculty';
   $field_group->entity_type = 'node';
@@ -1114,8 +1145,8 @@ function evergreen_content_field_group_info() {
       1 => 'field_expertise',
       2 => 'field_interests',
       3 => 'field_is_faculty',
-      4 => 'field_related_subjects_directory',
-      5 => 'field_faculty_directory_subject_',
+      4 => 'field_faculty_directory_subject_',
+      5 => 'field_related_subjects_directory',
       6 => 'field_planning_unit_puc',
       7 => 'body',
     ),
@@ -1147,7 +1178,6 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_eligibility',
       1 => 'field_upcoming_deadlines',
-      2 => 'webform',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1181,6 +1211,7 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_eligibility',
       1 => 'field_upcoming_deadlines',
+      2 => 'field_funded_projects',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1607,8 +1638,8 @@ function evergreen_content_field_group_info() {
     'label' => 'Meetings',
     'weight' => '2',
     'children' => array(
-      0 => 'field_meetings',
-      1 => 'field_agendas',
+      0 => 'field_agendas',
+      1 => 'field_meetings',
       2 => 'field_minutes',
     ),
     'format_type' => 'fieldset',
@@ -1635,7 +1666,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Misc Options',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_next_offered',
       1 => 'field_prerequisites',
@@ -1643,20 +1674,22 @@ function evergreen_content_field_group_info() {
       3 => 'field_study_abroad',
       4 => 'field_upper_division',
       5 => 'field_fees',
-      6 => 'field_variable_credit_options',
-      7 => 'field_enrollment_conditions',
-      8 => 'field_research_opportunities',
+      6 => 'field_enrollment_conditions',
+      7 => 'field_variable_credit_options',
+      8 => 'field_websites',
       9 => 'field_internship_opportunities',
+      10 => 'field_research_opportunities',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Misc Options',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-misc field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-misc field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_misc|node|catalog_entry|form'] = $field_group;
@@ -1887,6 +1920,7 @@ function evergreen_content_field_group_info() {
     'children' => array(
       0 => 'field_headshot',
       1 => 'field_square_portrait',
+      2 => 'field_photo_notes',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -1971,7 +2005,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Quarters',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_academic_year',
       1 => 'field_begin_term',
@@ -1980,8 +2014,8 @@ function evergreen_content_field_group_info() {
       4 => 'field_quarters_offered',
       5 => 'field_quarters_open',
       6 => 'field_fall_registration',
-      7 => 'field_winter_registration',
-      8 => 'field_spring_registration',
+      7 => 'field_spring_registration',
+      8 => 'field_winter_registration',
       9 => 'field_quarters_signature',
       10 => 'field_quarters_conditional',
       11 => 'field_quarters_closed',
@@ -1991,16 +2025,50 @@ function evergreen_content_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
+      'label' => 'Quarters',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-quarters field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_quarters|node|catalog_entry|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_registration_information|node|catalog_entry|default';
+  $field_group->group_name = 'group_registration_information';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'catalog_entry';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Registration Information',
+    'weight' => '31',
+    'children' => array(
+      0 => 'field_fall_registration',
+      1 => 'field_spring_registration',
+      2 => 'field_winter_registration',
+    ),
+    'format_type' => 'hidden',
+    'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-quarters field-group-fieldset',
-        'required_fields' => 1,
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-registration-information field-group-div',
         'id' => '',
       ),
     ),
   );
-  $field_groups['group_quarters|node|catalog_entry|form'] = $field_group;
+  $field_groups['group_registration_information|node|catalog_entry|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -2280,7 +2348,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Who, When, and Where',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_advertised_schedule',
       1 => 'field_class_standing',
@@ -2298,13 +2366,14 @@ function evergreen_content_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Who, When, and Where',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-whowhenwhere field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-whowhenwhere field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_whowhenwhere|node|catalog_entry|form'] = $field_group;
@@ -2325,6 +2394,7 @@ function evergreen_content_field_group_info() {
       0 => 'field_proposal',
       1 => 'field_reports',
       2 => 'field_documents',
+      3 => 'field_funded_projects',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -2353,7 +2423,7 @@ function evergreen_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Work Products',
-    'weight' => '9',
+    'weight' => '8',
     'children' => array(
       0 => 'field_proposal',
       1 => 'field_reports',
@@ -2398,6 +2468,7 @@ function evergreen_content_field_group_info() {
   t('Donor Info');
   t('Entrepreneur Info');
   t('Extended Subject Details');
+  t('Faculty');
   t('Faculty Information');
   t('Find Online');
   t('Funding');
@@ -2421,6 +2492,7 @@ function evergreen_content_field_group_info() {
   t('Program Details');
   t('Prospective Student Nav');
   t('Quarters');
+  t('Registration Information');
   t('Secondary Content');
   t('Sponsor');
   t('Studies');

@@ -1,0 +1,129 @@
+/**
+ * III. Drupal Catalog Listing
+ *
+ * Styles specific to the Drupal catalog listing pages with details
+ * about each available offering.
+ *
+ * Table of Contents
+ *
+ * A. Catalog Entry Header (Listing Property)
+ */
+
+/**
+ * A. Catalog Entry Header
+ *
+ * A component that minimally displays critical information for students to
+ * quickly find the right offering for him or her.
+ */
+/**
+ * Listing Property
+ *
+ * This new segment is an alternative to the .compound segment. It is
+ * intended to be more icon-based, setting a fixed width, and favors
+ * clumping multiple segments together horizontally, rather than  assuming
+ * that it will take up a full line.
+ *
+ * At this point, this segment is very generic, not catalog-specific
+ * (though currently only exists in the catalgo) so we ought to move this
+ * into the default style sheet at our convenience.
+ */
+.listing-header{
+	// layout
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	// typography
+	font-family: $text-face-alt;
+	@include base-type;
+}
+
+.listing-property{
+	// box model
+	margin: calc(15 / 16 * 1rem) 2ch 0 0;
+	// layout
+	display: flex;
+	align-items: center;
+}
+
+.listing-property:not(:last-child){
+	// box model
+	margin: calc(15 / 16 * 1rem) 2ch 0 0;
+}
+
+.listing-property-img{
+	// box model
+	margin: 0;
+	padding-right: 1ch;
+	max-width: none;
+	// layout
+	align-self: flex-start;
+	display: flex;
+}
+
+.listing-property-img-alt{
+	display: flex;
+	flex-direction: column;
+}
+
+.listing-property-img img{
+	// box model
+	width: 4ch;
+	height: 100%;  // Sizes height appropriately for Chrome.
+	max-width: none;  // Sizes width appropriately for Chrome.
+}
+
+.listing-property-body{
+	//max-width: calc(100% - 5ch);  // Large text blocks will compress .listing-property-img in Chrome.
+}
+
+.listing-icon-fall{
+	// position
+	position: relative;
+	z-index: 4;
+}
+
+.listing-icon-fall + .listing-icon-winter{
+	// box model
+	margin-left: -1ch;
+	// position
+	position: relative;
+	z-index: 3;
+}
+
+.listing-icon-winter + .listing-icon-spring{
+	// box model
+	margin-left: -1ch;
+	// position
+	position: relative;
+	z-index: 2;
+}
+
+// NOTE: Don’t collapse in summer, because it is an outlier and should be emphasized.
+
+.listing-icon-day{
+	// position
+	position: relative;
+	z-index: 3;	
+}
+
+// NOTE: Day-evening-weekend can be any combination.
+.listing-icon-day + .listing-icon-evening,
+.listing-icon-day + .listing-icon-weekend{
+	// box model
+	margin-left: -1ch;
+	// position
+	position: relative;
+	z-index: 2;
+}
+
+.listing-icon-evening + .listing-icon-weekend{
+	// box model
+	margin-left: -1ch;
+	// position
+	position: relative;
+	z-index: 1;
+}
+
+/*.listing-property-body{
+	align-content: center;
+}*/

@@ -16,7 +16,7 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Basic tags',
     'cache' => 0,
     'status' => 1,
-    'weight' => -8,
+    'weight' => -10,
     'filters' => array(
       'media_filter' => array(
         'weight' => -49,
@@ -34,7 +34,7 @@ function evergreen_content_filter_default_formats() {
         'weight' => -47,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <aside> <blockquote> <br> <code> <cite> <div> <em> <figcaption> <figure> <h2> <h3> <h4> <iframe> <img> <li> <ol> <p> <pre> <q> <span> <strong> <table> <tbody> <td> <th> <thead> <tr> <ul> <!--',
+          'allowed_html' => '<a> <aside> <b> <br> <blockquote> <caption> <cite> <code> <div> <em> <figcaption> <figure> <h2> <h3> <h4> <i> <iframe> <img> <li> <ol> <p> <pre> <q> <span> <small> <strong> <table> <tbody> <td> <th> <thead> <tr> <ul> <!--',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
@@ -58,13 +58,13 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Extended tags',
     'cache' => 0,
     'status' => 1,
-    'weight' => -10,
+    'weight' => -9,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <figcaption> <figure> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <pre> <q> <table> <tbody> <td> <th> <thead> <tr> <aside><br><iframe><form><input><section><button><!--',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <small> <span> <figure> <figcaption> <table> <caption> <tr> <th> <td> <tbody> <thead> <aside> <pre> <br> <iframe> <audio> <video> <form> <input> <section> <button> <q> <!--',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
@@ -100,7 +100,7 @@ function evergreen_content_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 0,
     'status' => 1,
-    'weight' => -9,
+    'weight' => -8,
     'filters' => array(
       'insert_view' => array(
         'weight' => 0,
@@ -132,7 +132,7 @@ function evergreen_content_filter_default_formats() {
         'weight' => -10,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <br><!--',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <img> <h2> <h3> <h4> <div> <p> <span> <br> <!--',
           'filter_html_help' => 0,
           'filter_html_nofollow' => 0,
         ),
