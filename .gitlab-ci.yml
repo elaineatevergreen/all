@@ -1,3 +1,8 @@
+stages:
+  - build
+  - deploy
+
+
 deploy_collab:
   script:
     - chmod uog+x bin/*
@@ -51,3 +56,44 @@ deploy_wwwdev:
     - wwwdev
   only:
     - dev
+
+build:
+  stage: build
+  image:
+    name: registry.git.evergreen.edu/tas/docker-images/sassdevbuild
+  artifacts:
+    paths:
+        themes/wwwwevergreen/css/dist
+        themes/wwwwevergreen/js/dist
+  only:
+    - /^munge.*$/
+    #- /dev/
+    #- test
+    #- master
+  script:
+    - echo "Building the app"
+    - npm install grunt-cli
+    - npm install grunt
+    - npm install grunt-postcss
+    - npm install autoprefixer
+    - npm install postcss-reporter
+    - npm install grunt-contrib-concat
+    - npm install grunt-contrib-copy
+    - npm install grunt-contrib-imagemin
+    - npm install grunt-contrib-jshint
+    - npm install grunt-contrib-sass 
+    - npm install grunt-contrib-uglify
+    - npm install grunt-contrib-watch
+    - npm install grunt-imageoptim
+    - npm install grunt-newer
+    - npm install grunt-perfbudget
+    - npm install grunt-sass-lint
+    - npm install grunt-svgstore
+    - npm install
+    - export LC_ALL=en_US.UTF-8
+    - export LANG=en_US.UTF-8
+    - cd themes/wwwevergreen/
+    - grunt
+  tags:
+    - scss-docker
+
