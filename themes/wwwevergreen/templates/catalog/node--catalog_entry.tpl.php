@@ -75,7 +75,7 @@ if(count($quarters) == 1) {
 				print(" (");
 				//getting the summer session variable without the mystical leading ghost space
 				print_r($content['field_summer_session']['#items'][0]["value"]);
-				print(")");
+				print(" Session)");
 			}else{
 				print render($quarters_intro);
 			} ?>
