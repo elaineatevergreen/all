@@ -68,9 +68,9 @@ build:
        - themes/wwwevergreen/js/dist
   only:
     - /^munge.*$/
-    #- /dev/
-    #- test
-    #- master
+    - /dev/
+    - test
+    - master
   script:
     - echo "Building the app"
     - cd themes/wwwevergreen/
