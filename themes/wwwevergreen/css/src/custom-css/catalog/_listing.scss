@@ -107,8 +107,8 @@
 }
 
 // NOTE: Day-evening-weekend can be any combination.
-.listing-icon-day + .listing-icon-evening,
-.listing-icon-day + .listing-icon-weekend{
+.listing-icon-evening,
+.listing-icon-weekend{
 	// box model
 	margin-left: -1ch;
 	// position
