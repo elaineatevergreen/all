@@ -72,7 +72,16 @@ if(render($content['field_summer_session']) != '') {
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
-			<?php print render($quarters_intro) ?>
+			<?php
+			if(render($content['field_summer_session']) != '') {
+				print(render($quarters_intro)); // print "summer"
+				print(" (");
+				//getting the summer session variable without the mystical leading ghost space
+				print_r($content['field_summer_session']['#items'][0]["value"]);
+				print(")");
+			}else{
+				print render($quarters_intro);
+			} ?>
 		</div>
 	</div>
 
@@ -195,7 +204,7 @@ if(render($content['field_summer_session']) != '') {
 
 			if(isset($content['field_percent_freshman'])){
 				$test = (render($content['field_percent_freshman'][0]));
-				print("<br/><small class='small'> " . $test . "% Reserved for Freshmen</small>");
+				print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
 			}
 		}?>
 		</div>
