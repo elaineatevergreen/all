@@ -5,6 +5,15 @@
 #=================================
 .sass-cache
 
+# ignore built and build artifacts
+themes/wwwwevergreen/css/build/*
+themes/wwwwevergreen/css/dist/*.css
+themes/wwwwevergreen/css/dist/custom-css/*.css
+themes/wwwwevergreen/js/build/*
+themes/wwwwevergreen/js/dist/*.js
+themes/wwwwevergreen/js/dist/init/*.js
+themes/wwwwevergreen/r25/build/r25.css
+
 lib-cov
 *.seed
 *.log
