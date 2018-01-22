@@ -85,8 +85,8 @@ if(render($content['field_summer_session']) != '') {
 		</div>
 	</div>
 
-	<div class="listing-property">
 	<?php // Campus location standin ?>
+	<div class="listing-property">
 		<div class="listing-property-img">
 			<!-- Printing the location based on where we are -->
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
@@ -122,8 +122,8 @@ if(render($content['field_summer_session']) != '') {
 
 	</div>
 
-	<div class="listing-property">
 	<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
+	<div class="listing-property">
 		<div class="listing-property-img">
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
 					<img alt=""
@@ -149,15 +149,9 @@ if(render($content['field_summer_session']) != '') {
 		</div>
 	</div>
 
+	<?php // Class standing standin ?>
 	<div class="listing-property">
-	<?php
-		/**
-		 * [bug][blocking] -- fixed stevenm
-		 *       This is showing up as MiT in the undergraduate catalog. See:
-		 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
-		 */
-		// Class standing standin
-		//Translating our curricular area into our image path name for grad courses
+		<?php //Translating our curricular area into our image path name for grad courses
 		$grad_img_name = "";
 		$field_curr_area = (render($content['field_curricular_area'][0]));
 		if($field_curr_area == "Master in Teaching"){
@@ -167,52 +161,51 @@ if(render($content['field_summer_session']) != '') {
 		if($field_curr_area == "Master of Public Administration"){
 			$grad_img_name = "mpa"; }?>
 
-		<div class="listing-property-img">
-		 <?php // if graduate
-		 if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
-		 	  <img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
-		</div>
-				<div class="listing-property-body">
-			 	<?php // printing our word Graduate
-		 		print(render($content['field_class_standing'][0])); ?>
-				</div>
-		 <?php
-		 } else {
-				// if it's an undergrad course
-			  // take the first element and the last element, and use them to make the file name for the class standing range
-			  // Render our undergrad image and title?>
+		<?php // if graduate
+		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
+			<div class="listing-property-img">
+				<img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+			</div>
+			<div class="listing-property-body">
+				<?php // printing our word Graduate
+					print(render($content['field_class_standing'][0]));
+				?>
+			</div>
+		<?php
+		} else {
+			// if it's an undergrad course
+		  // take the first element and the last element, and use them to make the file name for the class standing range
+		  // Render our undergrad image and title?>
+		  <div class="listing-property-img">
 			  <img alt=""
-			  	src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
-			  	title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
-
-		</div>
-
-		<div class="listing-property-body">
-			<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
-			if(isset($content['field_class_standing'])) {
-				print_r(render($content['field_class_standing'][0]));
-			if(isset($content['field_class_standing'][3])) {
-				print("–");
-				print_r( render($content['field_class_standing'][3]));
-			}elseif(isset($content['field_class_standing'][2])) {
-				print("–");
-				print_r( render($content['field_class_standing'][2]));
-			}elseif(isset($content['field_class_standing'][1])) {
-				print("–");
-				print_r( render($content['field_class_standing'][1]));
-			}else{ }; }
-
-			if(isset($content['field_percent_freshman'])){
-				$test = (render($content['field_percent_freshman'][0]));
-				print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
-			}
-		}?>
-		</div>
+					src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
+					title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+			</div>
+			<div class="listing-property-body">
+				<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
+					if(isset($content['field_class_standing'])) {
+						print_r(render($content['field_class_standing'][0]));
+					if(isset($content['field_class_standing'][3])) {
+						print("–");
+						print_r( render($content['field_class_standing'][3]));
+					}elseif(isset($content['field_class_standing'][2])) {
+						print("–");
+						print_r( render($content['field_class_standing'][2]));
+					}elseif(isset($content['field_class_standing'][1])) {
+						print("–");
+						print_r( render($content['field_class_standing'][1]));
+					}else{ }; }
+		
+					if(isset($content['field_percent_freshman'])){
+						$test = (render($content['field_percent_freshman'][0]));
+						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
+					} ?>
+			</div>
+		<?php	}?>
 	</div>
 
+	<?php // Credits amount standin ?>
 	<div class="listing-property">
-	<?php
-		// Credits amount standin ?>
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
 			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
@@ -243,9 +236,9 @@ if(render($content['field_summer_session']) != '') {
 </header>
 
 <?php
-	/**
-	 * Call to Action (Save to List)
-	 */
+/**
+ * Call to Action (Save to List)
+ */
 ?>
 
 <?php // Save class standin ?>
@@ -271,7 +264,9 @@ if(render($content['field_summer_session']) != '') {
 <?php
 //* - $title: The page title, for use in the actual HTML content. ?>
 <?php if (!$page){ ?>
-	<h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+	<h2<?php print $title_attributes; ?>>
+		<a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+	</h2>
 <?php } ?>
 
 <?php
