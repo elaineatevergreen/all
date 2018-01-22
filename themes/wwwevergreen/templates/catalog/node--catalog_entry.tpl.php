@@ -41,7 +41,7 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 }elseif(count($quarters) == 4) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
-};
+}; ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php print $user_picture; ?>
@@ -192,7 +192,7 @@ if(count($quarters) == 1) {
 						print("–");
 						print_r( render($content['field_class_standing'][1]));
 					}else{ }; }
-		
+
 					if(isset($content['field_percent_freshman'])){
 						$test = (render($content['field_percent_freshman'][0]));
 						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
