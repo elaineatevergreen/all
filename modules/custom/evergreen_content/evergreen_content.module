@@ -7,9 +7,9 @@
 include_once 'evergreen_content.features.inc';
 
 //this might work around a bug in Feeds?
-function evergreen_content_cron() {
+/*function evergreen_content_cron() {
   $name = 'people_directory';
   $source = feeds_source($name);
   $source->import();
-}
+}*/
 
