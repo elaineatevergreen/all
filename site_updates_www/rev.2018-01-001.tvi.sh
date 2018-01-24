@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-drush --yes dl unique_field
+drush --yes dl tvi 
 drush cc all
