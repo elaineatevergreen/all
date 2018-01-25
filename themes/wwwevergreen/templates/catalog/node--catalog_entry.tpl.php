@@ -78,7 +78,7 @@ if(render($content['field_summer_session']) != '') {
 				print(" (");
 				//getting the summer session variable without the mystical leading ghost space
 				print_r($content['field_summer_session']['#items'][0]["value"]);
-				print(")");
+				print(" Session)");
 			}else{
 				print render($quarters_intro);
 			} ?>
@@ -195,7 +195,7 @@ if(render($content['field_summer_session']) != '') {
 						print("–");
 						print_r( render($content['field_class_standing'][1]));
 					}else{ }; }
-		
+
 					if(isset($content['field_percent_freshman'])){
 						$test = (render($content['field_percent_freshman'][0]));
 						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
