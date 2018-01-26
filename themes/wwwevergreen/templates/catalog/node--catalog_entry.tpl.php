@@ -41,9 +41,6 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 }elseif(count($quarters) == 4) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
-};
-if(render($content['field_summer_session']) != '') {
-	$quarters_intro .= " (" . render($content['field_summer_session']) . " Session)";
 };?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -78,7 +75,7 @@ if(render($content['field_summer_session']) != '') {
 				print(" (");
 				//getting the summer session variable without the mystical leading ghost space
 				print_r($content['field_summer_session']['#items'][0]["value"]);
-				print(")");
+				print(" Session)");
 			}else{
 				print render($quarters_intro);
 			} ?>
@@ -195,7 +192,7 @@ if(render($content['field_summer_session']) != '') {
 						print("–");
 						print_r( render($content['field_class_standing'][1]));
 					}else{ }; }
-		
+
 					if(isset($content['field_percent_freshman'])){
 						$test = (render($content['field_percent_freshman'][0]));
 						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
