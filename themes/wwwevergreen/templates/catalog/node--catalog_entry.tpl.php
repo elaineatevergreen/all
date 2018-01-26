@@ -332,6 +332,27 @@ if(count($quarters) == 1) {
 			 */
 			?>
 
+			<?// credits amount (text body) ?>
+			<div>
+				<?php
+					if(isset($content['group_details']['field_credits'][0])) {
+						// check to see if credit data value is 0, and if set, display v credits
+						if(render($content['group_details']['field_credits'][0]) == '0'){
+							print("<b>Credits per quarter: </b>Variable credit.");
+						// if it's 1 credit, say "credit" and not "credits"
+						}elseif(render($content['group_details']['field_credits'][0]) == '1'){
+							print("<b>Credit per quarter: </b>");
+							print(render($content['group_details']['field_credits'][0]));
+						// printing plural credits
+						}else {
+							print "<b>Credits per quarter: </b>";
+							print(render($content['group_details']['field_credits'][0]));
+						}
+					}else{  // If the value isn't set, print no credit Available
+						print ("Credit information not available.");
+					}?>
+				</div>
+
 			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="listing-property">
