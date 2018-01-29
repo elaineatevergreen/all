@@ -10,6 +10,7 @@
 	padding: 1em 1em 0;
 	// layout
 	clear: left;
+	z-index: 0;
 	// typography
 	color: $tint;
 	@include base-type;
