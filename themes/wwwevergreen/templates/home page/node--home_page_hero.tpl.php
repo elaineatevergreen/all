@@ -100,7 +100,12 @@
 								<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 							</picture>
 						</h1>
-						<p class="call-to-action"><?php print $call_to_action ?> →</p>
+						<?php 
+							/* the call-to-action shouldn't appear on Your Way to the World */
+							if($field_home_page_version == 'graduation' or $field_home_page_version == 'orientation') { 
+							?>
+							<p class="call-to-action"><?php print $call_to_action ?> →</p>
+						<?php }; //end check for call-to-action ?>
 					</div>
 				</div>
 			</a>
