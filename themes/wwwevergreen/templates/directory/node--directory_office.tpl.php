@@ -10,10 +10,10 @@ display office information as a "contact block" usually on a page.
 	<?php 
 
 //check whether this is a real entry
-if(isset($content['field_reference'])) {
-	
-	print render($content['field_reference']);
-	
+if(isset($content['field_reference'])) { ?>
+
+<p>See <?php print render($content['field_reference']); ?></p>
+<?php	
 		
 	} else {
 ?>	
