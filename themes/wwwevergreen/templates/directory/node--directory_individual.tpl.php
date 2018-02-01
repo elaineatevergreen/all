@@ -48,15 +48,8 @@ theme for individual person pages
 <?php 
 	
 	//only show contact information for individuals if user is logged in
-	  //or if this person is a faculty member who has chosen to make their contact info public
-	//this doesn't actually do what it used to do, unfortunately
-	
-	if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { 
-	    //we'll want this later
-	    $is_faculty = TRUE;
-    };
-		  
-	  
+	//or if this person has chosen to make their contact info public (currently just faculty)
+  
 	  
 	  //but do all this stuff only if there's any contact info to speak of
 	  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']) or isset($content['group_contact']['field_location_off_campus'])) { ?>
@@ -64,7 +57,7 @@ theme for individual person pages
 	  
 <?php
 		//now check to see if we should show the stuff
-		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
+		if($promote == TRUE or user_is_logged_in()) {
 ?>
   
     <?php 
