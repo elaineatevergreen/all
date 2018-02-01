@@ -379,6 +379,10 @@
 	border-radius: 2px;
 }
 
+.news-date{
+	@include base-type;
+}
+
 .news-story footer{  // Drupal styles
 	display: flex;
 	flex-direction: column;
