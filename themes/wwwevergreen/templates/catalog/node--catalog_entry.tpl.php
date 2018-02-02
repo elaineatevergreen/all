@@ -210,6 +210,12 @@ if(count($quarters) == 1) {
 			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
 		<?php } ?>
 
+		<?php 		// adding the variable credit V if we already havent (credit = 0)
+		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
+			<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+		<?php } ?>
+
+
 		</div>
 		<div class="listing-property-body"> <?php
 			if(isset($content['group_details']['field_credits'][0])) {
@@ -218,16 +224,19 @@ if(count($quarters) == 1) {
 					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
 				// if it's 1 credit, say "credit" and not "credits"
 				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
-					//print_r( render($content['group_details']['field_credits'][0]));
 					print " Credit per quarter";
 				// printing plural credits
 				}else {
-					//print_r( render($content['group_details']['field_credits'][0]));
 					print " Credits per quarter";
 				}
 			}else{  // If the value isn't set, print no credit Available
 				print ("Credit information not available.<br/><small class='small'>See below for more info.</small>");
-			}?>
+			}
+			# if the variable credit option exists, but it's not (0cred) version, print the text below the default credit value text
+			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) {
+					print ("</br><small class='small'>Variable Credit Options Available</small>");
+				}
+			?>
 		</div>
 	</div>
 </header>
@@ -352,7 +361,12 @@ if(count($quarters) == 1) {
 						print ("Credit information not available.");
 					}?>
 				</div>
-
+				<?php // variable credits standin if not 0credits version of variable
+				if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) {
+						print("<b>Variable Credit Options: </b>" . );
+						print(render($content['field_variable_credit_options'][0]));
+					}
+				?>
 			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="listing-property">
