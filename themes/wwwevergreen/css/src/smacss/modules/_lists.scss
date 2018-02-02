@@ -366,8 +366,8 @@
 }
 
 .icon-facebook::before{
-	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook32x32.png");
 	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook.svg");
 	// miscellaneous
 	content: "Facebook";
 }
@@ -387,8 +387,8 @@
 }
 
 .icon-twitter::before{
-	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter32x32.png");
 	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter.svg");
 	// miscellaneous
 	content: "Twitter";
 }
