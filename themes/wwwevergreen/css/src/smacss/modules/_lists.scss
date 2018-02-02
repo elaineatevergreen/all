@@ -379,6 +379,13 @@
 	content: "Instagram";
 }
 
+.icon-linkedin::before{
+	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/linkedin.svg");
+	// miscellaneous
+	content: "LinkedIn";
+}
+
 .icon-pinterest::before{
 	// decoration
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/pinterest32x32.png");
