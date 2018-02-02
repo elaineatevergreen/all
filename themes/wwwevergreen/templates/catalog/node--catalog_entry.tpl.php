@@ -363,7 +363,7 @@ if(count($quarters) == 1) {
 				</div>
 				<?php // variable credits standin if not 0credits version of variable
 				if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) {
-						print("<b>Variable Credit Options: </b>" . );
+						print("<b>Variable Credit Options: </b>");
 						print(render($content['field_variable_credit_options'][0]));
 					}
 				?>
