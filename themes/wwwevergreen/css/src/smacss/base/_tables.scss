@@ -118,7 +118,6 @@ td > ol:last-child li:last-child > p:last-child{
 }
 
 table a{
-	//border-bottom-width: 0;  // Link borders clash with table borders and bring in extra complexity.
 	text-decoration: none;  // Link underlines clash with table borders and bring in extra complexity.
 }
 
