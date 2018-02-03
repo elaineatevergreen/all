@@ -148,20 +148,10 @@ if(count($quarters) == 1) {
 
 	<?php // Class standing standin ?>
 	<div class="listing-property">
-		<?php //Translating our curricular area into our image path name for grad courses
-		$grad_img_name = "";
-		$field_curr_area = (render($content['field_curricular_area'][0]));
-		if($field_curr_area == "Master in Teaching"){
-			$grad_img_name = "mit"; }
-		if($field_curr_area == "Master of Environmental Studies"){
-			$grad_img_name = "mes"; }
-		if($field_curr_area == "Master of Public Administration"){
-			$grad_img_name = "mpa"; }?>
-
 		<?php // if graduate
 		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 			<div class="listing-property-img">
-				<img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print($grad_img_name);?>.svg" />
+				<img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
 			</div>
 			<div class="listing-property-body">
 				<?php // printing our word Graduate
