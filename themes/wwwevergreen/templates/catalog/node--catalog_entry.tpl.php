@@ -101,8 +101,8 @@ if(count($quarters) == 1) {
 			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
 					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
 			<?php } ?>
-			<?php // Study abroad standin with additional details ?>
-			<?php // Include Study Abroad icon, if relevant
+			<?php // Study abroad standin with additional details
+			      // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
 			<?php }; ?>
@@ -148,7 +148,8 @@ if(count($quarters) == 1) {
 
 	<?php // Class standing standin ?>
 	<div class="listing-property">
-		<?php // if graduate
+		<?php //Translating our curricular area into our image path name for grad courses
+		      // if graduate
 		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 			<div class="listing-property-img">
 				<img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
@@ -182,7 +183,7 @@ if(count($quarters) == 1) {
 						print("–");
 						print_r( render($content['field_class_standing'][1]));
 					}else{ }; }
-
+					// if there is a % freshmen, display it
 					if(isset($content['field_percent_freshman'])){
 						$test = (render($content['field_percent_freshman'][0]));
 						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
@@ -235,31 +236,27 @@ if(count($quarters) == 1) {
 /**
  * Call to Action (Save to List)
  */
-?>
-
-<?php // Save class standin ?>
+ ?>
 <div class="box action-box">
 	<div class="action-item-1-2">
 		<?php print render($content['links']); ?>
 		<?php print("<p><small class='small'>Compare offerings and share your lists with others.</small></p>");?>
 	</div>
 	<div class="action-item-2-2">
-		<?php // Make sure this link is actually correct… ?>
 		<p><a href="/catalog/index?flagged=1">See all saved items</a></p>
 	</div>
 </div>
 
-<?php // END TESTING HEADER ZONE ?>
-
 <?php
+// "Header" ends here
 //* - $title_prefix (array): An array containing additional output populated by
 //*   modules, intended to be displayed in front of the main title tag that
-//*   appears in the template. ?>
-<?php print render($title_prefix); ?>
+//*   appears in the template.
+print render($title_prefix);
 
-<?php
-//* - $title: The page title, for use in the actual HTML content. ?>
-<?php if (!$page){ ?>
+//* - $title: The page title, for use in the actual HTML content.
+
+if (!$page){ ?>
 	<h2<?php print $title_attributes; ?>>
 		<a href="<?php print $node_url; ?>"><?php print $title; ?></a>
 	</h2>
@@ -401,30 +398,7 @@ if(count($quarters) == 1) {
 			<?php
 				/**
 				 * Online Learning standin
-				 * [bug][blocking? - fix blocking bug below to see] ---> is now actually displaying the working behaviors -stevenm
-				 *       This can be multiple values, different for each quarter,
-				 *       but currently this standin doesn’t support that.
-				 *
-				 *       See http://wwwdev.evergreen.edu/catalog/offering/native-pathways-program-rebuilding-native-nations-strategies-governance-and
-				 *       for a potential example, although this is, in fact, broken
-				 *       on the live server, as well.
-				 *
-				 *       The online learning value should be listed as follows:
-				 *        * Fall: Hybrid Online Learning < 25% Delivered Online
-				 *        * Winter and Spring: Enhanced Online Learning
-				 *      —jkm
-				 *
-				 * Options:
-				 *  * No Required Online Learning
-				 *  * Hybrid Online Learning < 25% Delivered Online
-				 *  * Hybrid Online Learning 25 - 49% Delivered Online
-				 *  * Enhanced Online Learning
-				 *
-				 * [bug][blocking] --> fixed, works for both multi-option and non-special cases -stevenm
-				 *       Furthermore, this looks like it’s maybe not working. See
-				 *       this page for what I’m talking about:
-				 *       http://wwwdev.evergreen.edu/catalog/offering/greece-and-italy-artistic-and-literary-odyssey-15978
-				 *      —jkm
+				 * TODO: move this out of the template to a tamper or something]
 				 */
 				 // field_online_learning ?>
 	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
