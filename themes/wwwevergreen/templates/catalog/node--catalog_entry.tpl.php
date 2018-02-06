@@ -55,17 +55,29 @@ if(count($quarters) == 1) {
 			if($content)
 
 			// Drawing the images for the different quarters?>
-			<?php if (strlen(strstr($quarters_intro,"Fall"))>0) {?>
-				<img alt="" class="listing-icon-fall" src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg" title="Fall"/>
+			<?php if (strpos($quarters_intro,"Fall") !== false) {?>
+				<img alt=""
+				     class="listing-icon-fall"
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"
+						 title="Fall"/>
 			<?php } ?>
-			<?php if (strlen(strstr($quarters_intro,"Winter"))>0) { ?>
-				<img alt="" class="listing-icon-winter" src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg" title="Winter"/>
+			<?php if (strpos($quarters_intro,"Winter") !== false) { ?>
+				<img alt=""
+				     class="listing-icon-winter"
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg"
+						 title="Winter"/>
 			<?php } ?>
-			<?php if (strlen(strstr($quarters_intro,"Spring"))>0) { ?>
-				<img alt="" class="listing-icon-spring" src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg" title="Spring"/>
+			<?php if (strpos($quarters_intro,"Spring") !== false) { ?>
+				<img alt=""
+				     class="listing-icon-spring"
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg"
+						 title="Spring"/>
 			<?php } ?>
-			<?php if (strlen(strstr($quarters_intro,"Summer"))>0) { ?>
-				<img alt="" class="listing-icon-summer" src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg" title="Summer"/>
+			<?php if (strpos($quarters_intro,"Summer") !== false) { ?>
+				<img alt=""
+				     class="listing-icon-summer"
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
+						 title="Summer"/>
 			<?php } ?>
 		</div>
 		<div class="listing-property-body">
@@ -86,25 +98,40 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 			<!-- Printing the location based on where we are -->
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia")!== false) {?>
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
+							 title="Olympia"/>
 			<?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma")!== false) {?>
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
+							 title="Tacoma"/>
 			<?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor")!== false) {?>
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
+							 title="Grays Harbor"/>
 			<?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal")!== false) {?>
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+							 title="Tribal"/>
 			<?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
-					<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA")!== false) {?>
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+							 title="Tribal MPA"/>
 			<?php } ?>
+
+
+
 			<?php // Study abroad standin with additional details
 			      // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" title="Study Abroad"/>
+				<img alt=""
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"
+						 title="Study Abroad"/>
 			<?php }; ?>
 		</div>
 
@@ -122,20 +149,20 @@ if(count($quarters) == 1) {
 	<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
 					<img alt=""
-					class="listing-icon-time-offered listing-icon-day"
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					     class="listing-icon-time-offered listing-icon-day"
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 		  <?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
 					<img alt=""
-					class="listing-icon-time-offered listing-icon-evening"
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+					     class="listing-icon-time-offered listing-icon-evening"
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
 			<?php } ?>
-			<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
+			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend")!== false) {?>
 					<img alt=""
-					class="listing-icon-time-offered listing-icon-weekend"
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+					     class="listing-icon-time-offered listing-icon-weekend"
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
 			<?php } ?>
 		</div>
 
@@ -152,7 +179,8 @@ if(count($quarters) == 1) {
 		      // if graduate
 		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 			<div class="listing-property-img">
-				<img alt="<?php print($field_curr_area)?>"src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
+				<img alt="<?php print($field_curr_area)?>"
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
 			</div>
 			<div class="listing-property-body">
 				<?php // printing our word Graduate
@@ -166,13 +194,14 @@ if(count($quarters) == 1) {
 		  // Render our undergrad image and title?>
 		  <div class="listing-property-img">
 			  <img alt=""
-					src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
-					title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+					   src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
+					   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
 			</div>
 			<div class="listing-property-body">
 				<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
 					if(isset($content['field_class_standing'])) {
 						print_r(render($content['field_class_standing'][0]));
+
 					if(isset($content['field_class_standing'][3])) {
 						print("–");
 						print_r( render($content['field_class_standing'][3]));
@@ -196,14 +225,17 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<img alt="0" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<img alt="0"
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
-			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
+			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>"
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
 		<?php } ?>
 
 		<?php 		// adding the variable credit V if we already havent (credit = 0)
 		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
-			<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<img alt=""
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php } ?>
 
 
@@ -358,7 +390,8 @@ if (!$page){ ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="listing-property">
 					<div class="listing-property-img">
-						<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+						<img alt=""
+						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					</div>
 					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
@@ -504,20 +537,20 @@ if (!$page){ ?>
 				<div class="listing-property">
 				<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
 					<div class="listing-property-img">
-						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day"))>0) {?>
+						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
 								<img alt=""
-								class="listing-icon-time-offered listing-icon-day"
-								src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+								     class="listing-icon-time-offered listing-icon-day"
+								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 					  <?php } ?>
-						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening"))>0) {?>
+						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
 								<img alt=""
-								class="listing-icon-time-offered listing-icon-evening"
-								src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+								     class="listing-icon-time-offered listing-icon-evening"
+								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
 						<?php } ?>
-						<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend"))>0) {?>
+						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend")!== false) {?>
 								<img alt=""
-								class="listing-icon-time-offered listing-icon-weekend"
-								src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+								     class="listing-icon-time-offered listing-icon-weekend"
+								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
 						<?php } ?>
 					</div>
 
@@ -530,20 +563,30 @@ if (!$page){ ?>
 					<div class="listing-property">
 						<div class="listing-property-img">
 							<!-- Printing the location based on where we are -->
-							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia"))>0) {?>
-									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg" title="Olympia"/>
+							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia")!== false) {?>
+									<img alt=""
+									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
+											 title="Olympia"/>
 							<?php } ?>
-							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma"))>0) {?>
-									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" title="Tacoma"/>
+							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma")!== false) {?>
+									<img alt=""
+									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
+											 title="Tacoma"/>
 							<?php } ?>
-							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor"))>0) {?>
-									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg" title="Grays Harbor"/>
+							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor")!== false) {?>
+									<img alt=""
+									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
+											 title="Grays Harbor"/>
 							<?php } ?>
-							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal"))>0) {?>
-									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal"/>
+							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal")!== false) {?>
+									<img alt=""
+									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+											 title="Tribal"/>
 							<?php } ?>
-							<?php if (strlen(strstr(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA"))>0) {?>
-									<img alt="" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg" title="Tribal MPA"/>
+							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA")!== false) {?>
+									<img alt=""
+									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+											 title="Tribal MPA"/>
 							<?php } ?>
 						</div>
 						<div class="listing-property-body">
