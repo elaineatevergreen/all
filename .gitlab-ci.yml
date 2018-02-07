@@ -61,7 +61,7 @@ deploy_wwwdev:
 build:
   stage: build
   image:
-    name: registry.git.evergreen.edu/tas/docker-images/sassdevbuild
+    name: registry.git.evergreen.edu/web-team/docker-images/sassdevbuild
   artifacts:
     paths:
        - themes/wwwevergreen/css/dist
@@ -76,6 +76,7 @@ build:
     - cd themes/wwwevergreen/
     - npm install grunt-cli
     - npm install grunt
+    - npm install ajv
     - npm install grunt-postcss
     - npm install autoprefixer
     - npm install postcss-reporter
