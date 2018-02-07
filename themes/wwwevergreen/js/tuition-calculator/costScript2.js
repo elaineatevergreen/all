@@ -105,6 +105,7 @@ function createTable(costRate, cred) {
   myTable += '<tfoot><tr><th>Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';  
   if (summerBool) {    myTable += '<td>'                + format(tSummerTotal, '$') + '</td></tr></tfoot>';  }  else {    myTable += '</tr></tfoot>';  }
   myTable += '</table>';
+  myTable += '<p><strong>&ast;&ast;Summer tuition is different from Fall, Winter, Spring tuition.</strong></p>';
   document.getElementById('tuitionTable').innerHTML = myTable;  // prints myTable into the HTML in the div 'tuitionTable'
 }
 //End table building section
