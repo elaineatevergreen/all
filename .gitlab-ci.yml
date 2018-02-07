@@ -74,24 +74,24 @@ build:
   script:
     - echo "Building the app"
     - cd themes/wwwevergreen/
-    - npm install grunt-cli
+    - #npm install grunt-cli
     - npm install grunt
-    - npm install ajv
-    - npm install grunt-postcss
-    - npm install autoprefixer
-    - npm install postcss-reporter
-    - npm install grunt-contrib-concat
-    - npm install grunt-contrib-copy
-    - npm install grunt-contrib-imagemin
-    - npm install grunt-contrib-jshint
-    - npm install grunt-contrib-sass
-    - npm install grunt-contrib-uglify
-    - npm install grunt-contrib-watch
-    - npm install grunt-imageoptim
-    - npm install grunt-newer
-    - npm install grunt-perfbudget
-    - npm install grunt-svgstore
-    - npm install
+    - #npm install ajv
+    - #npm install grunt-postcss
+    - #npm install autoprefixer
+    - #npm install postcss-reporter
+    - #npm install grunt-contrib-concat
+    - #npm install grunt-contrib-copy
+    - #npm install grunt-contrib-imagemin
+    - #npm install grunt-contrib-jshint
+    - #npm install grunt-contrib-sass
+    - #npm install grunt-contrib-uglify
+    - #npm install grunt-contrib-watch
+    - #npm install grunt-imageoptim
+    - #npm install grunt-newer
+    - #npm install grunt-perfbudget
+    - #npm install grunt-svgstore
+    - #npm install
     - export LC_ALL=en_US.UTF-8
     - export LANG=en_US.UTF-8
     - grunt
