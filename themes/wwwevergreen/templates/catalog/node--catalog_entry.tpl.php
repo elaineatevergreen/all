@@ -198,20 +198,15 @@ if(count($quarters) == 1) {
 					   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
 			</div>
 			<div class="listing-property-body">
-				<?php // Printing youngest class standing, putting the dash and oldest class standing, if applicable
+				<?php // Printing youngest class standing
 					if(isset($content['field_class_standing'])) {
 						print_r(render($content['field_class_standing'][0]));
-
-					if(isset($content['field_class_standing'][3])) {
+						// if our eldest class standing is not also the same thing as our youngest, put a dash and display the range ex: freshman-senior
+					if(end($content['field_class_standing']) != ($content['field_class_standing']) ){
 						print("–");
-						print_r( render($content['field_class_standing'][3]));
-					}elseif(isset($content['field_class_standing'][2])) {
-						print("–");
-						print_r( render($content['field_class_standing'][2]));
-					}elseif(isset($content['field_class_standing'][1])) {
-						print("–");
-						print_r( render($content['field_class_standing'][1]));
-					}else{ }; }
+						print_r( render(end($content['field_class_standing'])));
+					};
+				}
 					// if there is a % freshmen, display it
 					if(isset($content['field_percent_freshman'])){
 						$test = (render($content['field_percent_freshman'][0]));
