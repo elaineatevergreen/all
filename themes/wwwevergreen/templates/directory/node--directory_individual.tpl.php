@@ -7,7 +7,7 @@ theme for individual person pages
 //dpm($variables['content']['group_contact']['field_location_off_campus']);
 ?>
 
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="content <?php print $classes; ?>"<?php print $attributes; ?>>
 	
 	
 <?php 
@@ -15,7 +15,7 @@ theme for individual person pages
 //check whether this is a real entry
 if(isset($content['field_reference'])) { ?>
 
-<p>See <?php print render($content['field_reference']); ?></p>
+<p>See <?php print render($content['field_reference']); ?>.</p>
 <?php	
 		
 	} else {
