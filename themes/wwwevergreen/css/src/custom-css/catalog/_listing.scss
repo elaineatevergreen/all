@@ -41,8 +41,8 @@
 	// box model
 	margin: calc(15 / 16 * 1rem) 2ch 0 0;
 	// layout
-	display: flex;
 	align-items: center;
+	display: flex;
 }
 
 .listing-property:not(:last-child){
@@ -55,6 +55,7 @@
 	margin: 0;
 	padding-right: 1ch;
 	max-width: none;
+	min-height: 4ch;  // Sizes height appropriately for uncached icons in Chrome and Safari; should match img height
 	// layout
 	align-self: flex-start;
 	display: flex;
@@ -67,14 +68,14 @@
 
 .listing-property-img img{
 	// box model
-	width: 4ch;
 	height: 100%;  // Sizes height appropriately for Chrome.
+	width: 4ch;
 	max-width: none;  // Sizes width appropriately for Chrome.
 }
 
-.listing-property-body{
+/*.listing-property-body{
 	//max-width: calc(100% - 5ch);  // Large text blocks will compress .listing-property-img in Chrome.
-}
+}*/
 
 .listing-icon-fall{
 	// position
@@ -103,7 +104,7 @@
 .listing-icon-day{
 	// position
 	position: relative;
-	z-index: 3;	
+	z-index: 3;
 }
 
 // NOTE: Day-evening-weekend can be any combination.

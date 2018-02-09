@@ -365,7 +365,7 @@
 .cancelled .qi-na{
 	/* decoration */
 	background: transparent none;
-	border-color: #aaa;
+	border-color: mix($tint, $blueberry-susan, 60%);
 }
 
 /**
