@@ -55,6 +55,7 @@
 	margin: 0;
 	padding-right: 1ch;
 	max-width: none;
+	min-height: 4ch;  // Sizes height appropriately for uncached icons in Chrome and Safari; should match img height
 	// layout
 	align-self: flex-start;
 	display: flex;
