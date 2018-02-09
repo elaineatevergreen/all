@@ -7,8 +7,19 @@ theme for individual person pages
 //dpm($variables['content']['group_contact']['field_location_off_campus']);
 ?>
 
-<!-- need to add back faculty information -->
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="content <?php print $classes; ?>"<?php print $attributes; ?>>
+	
+	
+<?php 
+
+//check whether this is a real entry
+if(isset($content['field_reference'])) { ?>
+
+<p>See <?php print render($content['field_reference']); ?>.</p>
+<?php	
+		
+	} else {
+?>
     
     <div class="p-job-title"><?php print render($content['field_job_title']) ?></div>
     <?php if(isset($content['field_department'])) { ?>
@@ -133,6 +144,7 @@ theme for individual person pages
 	  <?php 
 		}; //end check for authentication
 	}; //end check for *any* contact information 
+}; //end check for reference type
 ?>
   
 </div>
