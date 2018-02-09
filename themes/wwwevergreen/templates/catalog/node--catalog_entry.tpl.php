@@ -196,9 +196,23 @@ if(render($content['field_summer_session']) != '') {
 		  // take the first element and the last element, and use them to make the file name for the class standing range
 		  // Render our undergrad image and title?>
 		  <div class="listing-property-img">
-			  <img alt=""
-					   src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>.svg"
-					   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+				<?php // If we have  undergrad course that extends through graduate, print the logos together with the correct title ?>
+				<?php if(render(end($content['field_class_standing'])) == "Graduate" ){
+					//printing the undergrad bars from the first through senior?>
+					<img alt=""
+							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-Senior.svg";?>"
+							 title="<?php print(render($content['field_class_standing'][0]));?>-Senior" />
+
+					<?php // adding the grad+ icon after our bars for undergrad years?>
+					<img alt=""
+						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/grad.svg"
+							 title="Graduate" />
+				<?php } else { // if it's a normal undergrad course?>
+					<img alt=""
+						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-" . render(end($content['field_class_standing']));?>.svg"
+						   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+
+				<?php }?>
 			</div>
 			<div class="listing-property-body">
 				<?php // Printing youngest class standing
