@@ -3,11 +3,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#44693D;}
+	.st0{fill:#47502B;}
 	.st1{clip-path:url(#SVGID_2_);}
 	.st2{fill:#FFFFFF;}
 </style>
-<circle class="st0" cx="12" cy="12" r="12"/>
+<path class="st0" d="M-0.00137,0l12.00001,0c6.62741,0,11.99999,5.37258,11.99999,11.99999v0.00002
+	C23.99863,18.62742,18.62605,24,11.99864,24H-0.00137L-0.00137,0z"/>
 <g>
 	<g>
 		<defs>
