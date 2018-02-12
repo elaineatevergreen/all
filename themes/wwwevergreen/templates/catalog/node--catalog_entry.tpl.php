@@ -219,7 +219,7 @@ if(count($quarters) == 1) {
 					if(end($content['field_class_standing']) != ($content['field_class_standing']) ){
 						print("–");
 						print_r( render(end($content['field_class_standing'])));
-					}else{
+					} else {
 						print(" Only");
 					};
 				}
