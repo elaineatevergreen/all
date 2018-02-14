@@ -493,15 +493,17 @@
 	border-bottom-left-radius: 0;
 }
 
+// sass-lint:disable no-color-literals
 .qi-fall{
-	/* decoration */
-	background-color: #c09a00;
-	border-color: #c09a00;
+	// decoration
+	background-color: #c09a00;  // Off-brand Gold
+	border-color: #c09a00;  // Off-brand Gold
 }
 
 .cancelled .qi-fall{
-	background-color: #e5d8a3;
+	background-color: #e5d8a3;  // Off-brand Gold, disabled state
 }
+// sass-lint:enable no-color-literals
 
 .qi-winter{
 	background-color: mix($shade, $sky-blue, 20%);
@@ -619,9 +621,9 @@
 
 .qi-na,
 .cancelled .qi-na{
-	/* decoration */
+	// decoration
 	background: transparent none;
-	border-color: #aaa;
+	border-color: mix($tint, $blueberry-susan, 60%);
 }
 
 /**
