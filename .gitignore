@@ -37,10 +37,8 @@ themes/wwwevergreen/css/dist/custom-css/jquery.css
 # Ignore third-party libraries
 themes/wwwevergreen/js/files/
 
-# Ignore image and sprite stuff for now
-themes/wwwevergreen/images/src/
-themes/wwwevergreen/images/build/
-themes/wwwevergreen/campus-life.html
+# Ignore reports (e.g. sass-lint's report)
+report.html
 
 #================
 #

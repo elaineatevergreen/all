@@ -83,7 +83,7 @@
 
 .page-footer a:focus{
 	// decoration
-	background-color: transparentize($tint, .9);
+	background-color: transparentize($tint, 0.9);
 	outline-color: $tint;
 	outline-offset: 1px;
 	outline-style: dotted;

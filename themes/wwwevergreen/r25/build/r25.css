@@ -105,12 +105,12 @@ Once we can change this in the HTML, we can take this out. */
 	border-bottom: 7px solid #64933a;
 	background: #f3f3f3;
 	display:-webkit-box;
-	display:-ms-flexbox;
+	display:-webkit-flex;
 	display:flex;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
 }
    
 #ContentBox {
@@ -165,7 +165,7 @@ html>body #SelectionBox {
 
 #Logo {
 	-webkit-box-ordinal-group:1;
-	    -ms-flex-order:0;
+	-webkit-order:0;
 	        order:0;
 }
 
@@ -177,14 +177,14 @@ html>body #SelectionBox {
 
 #Tabs {
 	-webkit-box-ordinal-group:2;
-	    -ms-flex-order:1;
+	-webkit-order:1;
 	        order:1;
 	line-height: 32px; 
 }
 
 #SuperTabs {
 	-webkit-box-ordinal-group:4;
-	    -ms-flex-order:3;
+	-webkit-order:3;
 	        order:3;
 }
 
@@ -194,7 +194,7 @@ html>body #SelectionBox {
 
 #ContactName {
 	-webkit-box-ordinal-group: 3;
-	    -ms-flex-order: 2;
+	-webkit-order: 2;
 	        order: 2;
 	font-size: 10px;
    color: #F7DF9C;

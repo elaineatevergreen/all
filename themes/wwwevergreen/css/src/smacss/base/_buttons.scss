@@ -29,13 +29,12 @@ input[type="submit"],
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
 	background-image: linear-gradient(
-	/*                              */mix($morning-light, $blueberry-susan, 90%),
-	/*                              */mix($tint,          $blueberry-susan, 90%) 40%,
-	/*                              */mix($tint,          $blueberry-susan, 80%) 80%);
+		/*                           */ mix($morning-light, $blueberry-susan, 90%),
+		/*                           */ mix($tint,          $blueberry-susan, 90%) 40%,
+		/*                           */ mix($tint,          $blueberry-susan, 80%) 80%);
 	border-radius: 0.2em;
-	text-decoration: none;
-	// miscelaneous
 	box-shadow: 0 0.2em 0.2em $drop-shadow;
+	text-decoration: none;
 
 	@include breakpoint($gamora){
 		margin-bottom: 0.83333333333333em; // 15/18
@@ -51,9 +50,9 @@ input[type="submit"]:hover,
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(
-	/*                              */mix($morning-light, $blueberry-susan, 95%),
-	/*                              */mix($tint,          $blueberry-susan, 90%) 40%,
-	/*                              */mix($tint,          $blueberry-susan, 85%) 80%);
+		/*                           */ mix($morning-light, $blueberry-susan, 95%),
+		/*                           */ mix($tint,          $blueberry-susan, 90%) 40%,
+		/*                           */ mix($tint,          $blueberry-susan, 85%) 80%);
 	border-color: mix($tint, $blueberry-susan, 40%);
 }
 
