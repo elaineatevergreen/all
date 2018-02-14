@@ -3965,13 +3965,14 @@ input:checked + .header-dropdown {
 
 /* line 236, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy h1 {
-  font-size: 1.202rem;
-  line-height: 1.169925124792013;
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 1.945rem;
+  line-height: 1.20532270506557;
 }
 @media screen and (min-width: 20em) {
   /* line 236, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy h1 {
-    color: #f2f2f2;
     text-shadow: 0 2px 1px #0f0913;
   }
 }
@@ -3990,7 +3991,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 259, ../src/smacss/modules/_homepage-hero.scss */
+/* line 261, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-copy img {
   width: 100%;
 }
@@ -4007,7 +4008,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 276, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
             align-self: flex-end;
@@ -4015,7 +4016,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 276, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero-copy {
     -webkit-align-self: flex-end;
             align-self: flex-end;
@@ -4023,7 +4024,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 289, ../src/smacss/modules/_homepage-hero.scss */
+/* line 291, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero-copy {
   height: 100%;
   margin: 0;
@@ -4033,32 +4034,31 @@ input:checked + .header-dropdown {
   border-radius: 2px;
 }
 @media screen and (min-width: 22em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 291, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 291, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
-    height: auto;
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 291, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(15 / 17 * 1em);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 291, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     width: calc(3 / 7 * 100%);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 289, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 291, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero-copy {
     padding: 0 calc(30 / 19.23333333333 * 1em);
   }
@@ -4391,12 +4391,34 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 32, ../src/smacss/modules/_footer.scss */
+@supports (grid-template: none) {
+  @media screen and (min-width: 70em) {
+    /* line 35, ../src/smacss/modules/_footer.scss */
+    .page-footer-grid {
+      margin-left: 0;
+      display: grid;
+      grid-gap: 2ch;
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    /* line 44, ../src/smacss/modules/_footer.scss */
+    .page-footer-unit {
+      padding-left: 0;
+      width: auto;
+    }
+
+    /* line 49, ../src/smacss/modules/_footer.scss */
+    .page-footer-unit--placeholder {
+      display: none;
+    }
+  }
+}
+/* line 55, ../src/smacss/modules/_footer.scss */
 .page-footer-unit-central {
   text-align: center;
 }
 
-/* line 36, ../src/smacss/modules/_footer.scss */
+/* line 59, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4404,7 +4426,7 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-/* line 45, ../src/smacss/modules/_footer.scss */
+/* line 68, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
@@ -4413,14 +4435,14 @@ input:checked + .header-dropdown {
           text-decoration-color: #3c5823;
 }
 
-/* line 54, ../src/smacss/modules/_footer.scss */
+/* line 77, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   -webkit-text-decoration-color: #0086ee;
           text-decoration-color: #0086ee;
 }
 
-/* line 61, ../src/smacss/modules/_footer.scss */
+/* line 84, ../src/smacss/modules/_footer.scss */
 .page-footer a:focus {
   background-color: rgba(242, 242, 242, 0.1);
   outline-color: #f2f2f2;
@@ -4429,14 +4451,14 @@ input:checked + .header-dropdown {
   outline-width: 1px;
 }
 
-/* line 70, ../src/smacss/modules/_footer.scss */
+/* line 93, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 70, ../src/smacss/modules/_footer.scss */
+  /* line 93, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -4450,7 +4472,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 85, ../src/smacss/modules/_footer.scss */
+/* line 108, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4458,14 +4480,14 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 93, ../src/smacss/modules/_footer.scss */
+/* line 116, ../src/smacss/modules/_footer.scss */
 .tagline-footer p {
   color: #616161;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 93, ../src/smacss/modules/_footer.scss */
+  /* line 116, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4475,7 +4497,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 93, ../src/smacss/modules/_footer.scss */
+  /* line 116, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
