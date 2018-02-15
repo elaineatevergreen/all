@@ -11,9 +11,6 @@
 // TODO
 // bolding issues /inconsistant inputted content with advertised schedule:
 
-// edge cases being thought about:
-// Tribal MPA classes
-// graduate courses in general need to be added
 
 
 
@@ -41,7 +38,7 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 }elseif(count($quarters) == 4) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
-};?>
+}; ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php print $user_picture; ?>
@@ -375,32 +372,7 @@ if (!$page){ ?>
 			 */
 			?>
 
-			<?// credits amount (text body) ?>
-			<div>
-				<?php
-					if(isset($content['group_details']['field_credits'][0])) {
-						// check to see if credit data value is 0, and if set, display v credits
-						if(render($content['group_details']['field_credits'][0]) == '0'){
-							print("<b>Credits per quarter: </b>Variable credit.");
-						// if it's 1 credit, say "credit" and not "credits"
-						}elseif(render($content['group_details']['field_credits'][0]) == '1'){
-							print("<b>Credit per quarter: </b>");
-							print(render($content['group_details']['field_credits'][0]));
-						// printing plural credits
-						}else {
-							print "<b>Credits per quarter: </b>";
-							print(render($content['group_details']['field_credits'][0]));
-						}
-					}else{  // If the value isn't set, print no credit Available
-						print ("Credit information not available.");
-					}?>
-				</div>
-				<?php // variable credits standin if not 0credits version of variable
-				if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) {
-						print("<b>Variable Credit Options: </b>");
-						print(render($content['field_variable_credit_options'][0]));
-					}
-				?>
+
 			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="listing-property">
