@@ -231,15 +231,11 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<img alt="Variable"
+			<img alt="0"
 			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
-			<?php for($i = 0; $i < 6; ++$i){ ?>
-	 			<? if(isset($content['group_details']['field_credits'][$i])){ ?>
-		 						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
-										 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
-	 			<?php }
- 				} ?>
+			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>"
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
 		<?php } ?>
 
 		<?php 		// adding the variable credit V if we already havent (credit = 0)
