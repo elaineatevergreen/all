@@ -234,7 +234,7 @@ if(count($quarters) == 1) {
 	<?php // Credits amount standin ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
+		<?php if(print(render($content['group_details']['field_credits'][0])) == '0'){?>
 			<img alt="Variable"
 			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php }else{ ?>
@@ -242,7 +242,6 @@ if(count($quarters) == 1) {
 				<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>"
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
 			<?php } ?>
-		
 
 
 		<?php } ?>
