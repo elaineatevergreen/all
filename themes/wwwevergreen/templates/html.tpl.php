@@ -104,6 +104,8 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
+	<!-- SVG -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox -->
 	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9+ -->
 	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
 	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
