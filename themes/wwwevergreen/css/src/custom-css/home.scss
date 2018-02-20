@@ -107,7 +107,7 @@
 
 		@include breakpoint($gamora){
 			grid-column-end: span 6;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 }

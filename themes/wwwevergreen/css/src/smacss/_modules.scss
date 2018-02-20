@@ -81,7 +81,7 @@
 	}
 }
 
-@supports (position: sticky) {
+@supports (position: sticky){
 	.main-background2{
 		position: sticky;
 		z-index: auto;
@@ -324,9 +324,11 @@
  * See: https://www.evergreen.edu/financialservices/tuition-2017-18
  */
 .fulltime-cutoff-row td{
+	// box model
+	border-bottom-width: 3px;
+	// decoration
 	border-bottom-color: mix($tint, $shade, 60%);
 	border-bottom-style: double;
-	border-bottom-width: 3px;
 }
 
 /**

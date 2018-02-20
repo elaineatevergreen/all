@@ -377,7 +377,7 @@ input:checked + .header-dropdown{
 .site-name{
 	// box model
 	margin-top: 3.75rem;  // 60/16
-	
+
 	@supports (position: sticky){
 		z-index: 0;  // Brings the site title ahead of the background-image (and fixes background juddering in Edge).
 	}
