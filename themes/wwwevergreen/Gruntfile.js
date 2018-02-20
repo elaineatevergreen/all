@@ -198,6 +198,73 @@ module.exports = function(grunt) {
 				dest: 'r25/build/r25.css'
 			}
 		},
+		
+		realFavicon: {
+			favicons: {
+				src: 'images/favicons/src',
+				dest: 'images/favicons/dist',
+				options: {
+					iconsPath: '<?php print base_path() . path_to_theme() ?>/images/favicons/dist/',
+					html: [ 'images/favicons/dist/sample-markup.html' ],
+					design: {
+						ios: {
+							pictureAspect: 'backgroundAndMargin',
+							backgroundColor: '#44693d',
+							margin: '14%',
+							assets: {
+								ios6AndPriorIcons: false,
+								ios7AndLaterIcons: false,
+								precomposedIcons: false,
+								declareOnlyDefaultIcon: true
+							},
+							appName: 'Evergreen'
+						},
+						desktopBrowser: {},
+						windows: {
+							pictureAspect: 'whiteSilhouette',
+							backgroundColor: '#44693d',
+							onConflict: 'override',
+							assets: {
+								windows80Ie10Tile: false,
+								windows10Ie11EdgeTiles: {
+									small: true,
+									medium: true,
+									big: true,
+									rectangle: true
+								}
+							},
+							appName: 'Evergreen'
+						},
+						androidChrome: {
+							pictureAspect: 'shadow',
+							themeColor: '#44693d',
+							manifest: {
+								name: 'Evergreen',
+								display: 'browser',
+								orientation: 'notSet',
+								onConflict: 'override',
+								declared: true
+							},
+							assets: {
+								legacyIcon: true,
+								lowResolutionIcons: false
+							}
+						},
+						safariPinnedTab: {
+							pictureAspect: 'silhouette',
+							themeColor: '#44693d'
+						}
+					},
+					settings: {
+						scalingAlgorithm: 'Lanczos',
+						errorOnImageTooSmall: false,
+						readmeFile: true,
+						htmlCodeFile: true,
+						usePathAsIs: false
+					}
+				}
+			}
+		},
 
 		/**
 		 * Process Sass into CSS.
@@ -345,6 +412,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-perfbudget');
+	grunt.loadNpmTasks('grunt-real-favicon');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-svgstore');
 	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
