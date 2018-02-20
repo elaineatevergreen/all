@@ -58,13 +58,13 @@
 			break;
 		//this covers both "Normal" and for older hero images, any blank value
 		default:
-			$destination = "/academics";
+			$destination = "/yourwaytotheworld";
 			$content_class = "";
 			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
-			$slogan_svg_wide = "go-beyond/slogan-wide";
-			$slogan_svg_mobile = "go-beyond/slogan-mobile";
-			$slogan_alt = "Go beyond majors, classes, &amp; grades and experience your education the way you imagine.";
-			$call_to_action = "See for yourself";
+			$slogan_svg_wide = "your-way-to-the-world/slogan";
+			$slogan_svg_mobile = "your-way-to-the-world/slogan";
+			$slogan_alt = "Your way to the world";
+			$call_to_action = "";
 			break;
 	};
 
@@ -100,7 +100,12 @@
 								<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 							</picture>
 						</h1>
-						<p class="call-to-action"><?php print $call_to_action ?> →</p>
+						<?php 
+							/* the call-to-action shouldn't appear on Your Way to the World */
+							if($field_home_page_version == 'graduation' or $field_home_page_version == 'orientation') { 
+							?>
+							<p class="call-to-action"><?php print $call_to_action ?> →</p>
+						<?php }; //end check for call-to-action ?>
 					</div>
 				</div>
 			</a>

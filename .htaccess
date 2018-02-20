@@ -19,30 +19,30 @@ Redirect 301 /exchange https://webmail.evergreen.edu/owa
 RewriteRule ^washingtoncenter(.*)$ http://wacenter.evergreen.edu$1 [NC,R,L]
 
 # policies
-	RewriteRule ^policies/home.htm http://collab.evergreen.edu/policies/  [NC,R,L]
-	RewriteRule ^policies/az/home.htm http://collab.evergreen.edu/policies/az [NC,R,L]
-	RewriteRule ^policies/search/home.htm http://collab.evergreen.edu/policies/ [NC,R,L]
-	RewriteRule ^policies/steward_tools.htm http://collab.evergreen.edu/policies/content/tools-stewards [NC,R,L]
-	RewriteRule ^policies/policydefinitions.htm http://collab.evergreen.edu/policies/content/definitions-college-policies [NC,R,L]
+#	RewriteRule ^policies/home.htm http://collab.evergreen.edu/policies/  [NC,R,L]
+#	RewriteRule ^policies/az/home.htm http://collab.evergreen.edu/policies/az [NC,R,L]
+#	RewriteRule ^policies/search/home.htm http://collab.evergreen.edu/policies/ [NC,R,L]
+#	RewriteRule ^policies/steward_tools.htm http://collab.evergreen.edu/policies/content/tools-stewards [NC,R,L]
+#	RewriteRule ^policies/policydefinitions.htm http://collab.evergreen.edu/policies/content/definitions-college-policies [NC,R,L]
 	
 	#policy categories
-	RewriteRule ^policies/category/board.htm http://collab.evergreen.edu/policies/categories/board-trustees [NC,R,L]
-	RewriteRule ^policies/category/budget.htm http://collab.evergreen.edu/policies/categories/budget-and-planning [NC,R,L]
-	RewriteRule ^policies/category/advancement.htm http://collab.evergreen.edu/policies/categories/college-advancement [NC,R,L]
-	RewriteRule ^policies/category/employment.htm http://collab.evergreen.edu/policies/categories/employment-policies [NC,R,L]
-	RewriteRule ^policies/category/faculty.htm http://collab.evergreen.edu/policies/categories/faculty-handbook [NC,R,L]
-	RewriteRule ^policies/category/fad.htm http://collab.evergreen.edu/policies/categories/finance-and-administration [NC,R,L]
-	RewriteRule ^policies/category/governance.htm http://collab.evergreen.edu/policies/categories/governance-and-grievance-procedures [NC,R,L]
-	RewriteRule ^policies/category/healthsafety.htm http://collab.evergreen.edu/policies/categories/health-and-safety [NC,R,L]
-	RewriteRule ^policies/category/planning.htm http://collab.evergreen.edu/policies/categories/planning-documents [NC,R,L]
-	RewriteRule ^policies/category/presidentsoffice.htm http://collab.evergreen.edu/policies/categories/presidents-office [NC,R,L]
-	RewriteRule ^policies/category/studentaffairs.htm http://collab.evergreen.edu/policies/categories/student-affairs [NC,R,L]
+#	RewriteRule ^policies/category/board.htm http://collab.evergreen.edu/policies/categories/board-trustees [NC,R,L]
+#	RewriteRule ^policies/category/budget.htm http://collab.evergreen.edu/policies/categories/budget-and-planning [NC,R,L]
+#	RewriteRule ^policies/category/advancement.htm http://collab.evergreen.edu/policies/categories/college-advancement [NC,R,L]
+#	RewriteRule ^policies/category/employment.htm http://collab.evergreen.edu/policies/categories/employment-policies [NC,R,L]
+#	RewriteRule ^policies/category/faculty.htm http://collab.evergreen.edu/policies/categories/faculty-handbook [NC,R,L]
+#	RewriteRule ^policies/category/fad.htm http://collab.evergreen.edu/policies/categories/finance-and-administration [NC,R,L]
+#	RewriteRule ^policies/category/governance.htm http://collab.evergreen.edu/policies/categories/governance-and-grievance-procedures [NC,R,L]
+#	RewriteRule ^policies/category/healthsafety.htm http://collab.evergreen.edu/policies/categories/health-and-safety [NC,R,L]
+#	RewriteRule ^policies/category/planning.htm http://collab.evergreen.edu/policies/categories/planning-documents [NC,R,L]
+#	RewriteRule ^policies/category/presidentsoffice.htm http://collab.evergreen.edu/policies/categories/presidents-office [NC,R,L]
+#	RewriteRule ^policies/category/studentaffairs.htm http://collab.evergreen.edu/policies/categories/student-affairs [NC,R,L]
 	
 	#individual policies
-	RewriteRule ^policies/policy/(.*) http://collab.evergreen.edu/policies/policy/$1 [NC,R,L]
+#	RewriteRule ^policies/policy/(.*) http://collab.evergreen.edu/policies/policy/$1 [NC,R,L]
 	
 	#catchall for the policy home page
-	RewriteRule ^policies/ http://collab.evergreen.edu/policies/  [NC,R,L]
+#	RewriteRule ^policies/ http://collab.evergreen.edu/policies/  [NC,R,L]
 
 # Protect files and directories from prying eyes.
 <FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\..*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">
