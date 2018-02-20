@@ -1,10 +1,5 @@
 <?php
-
 /**
-	
-Right now I think the only difference from the default html.tpl.php is the inclusion of a whole bunch of favicon links.
-	
-	
  * @file
  * Default theme implementation to display the basic html structure of a single
  * Drupal page.
