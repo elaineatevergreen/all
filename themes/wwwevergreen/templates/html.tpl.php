@@ -100,6 +100,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $styles; ?>
   
   <meta content="width=device-width, minimum-scale=1.0" name="viewport" />
+  <meta content="Evergreen" name="application-name" />
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
@@ -107,6 +108,7 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
 	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
+	<link rel="manifest" href="<?php print base_path() . path_to_theme() ?>/images/favicons/site.webmanifest" type="application/manifest+json"/><!-- Android Chrome -->
 	<!-- favicons for everybody else -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png" rel="icon" sizes="24x24" type="image/png"/>
