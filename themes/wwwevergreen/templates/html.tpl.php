@@ -99,8 +99,8 @@
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<!-- SVG -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox -->
 	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9+ -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox -->
 	<!-- Windows, Edge -->
 	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows, Edge -->
 	<meta content="#64933a" name="theme-color"><!-- Windows, Edge -->
