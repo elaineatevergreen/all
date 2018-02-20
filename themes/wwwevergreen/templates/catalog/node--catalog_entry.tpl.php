@@ -53,26 +53,22 @@ if(count($quarters) == 1) {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strpos($quarters_intro,"Fall") !== false) {?>
-				<img alt=""
-				     class="listing-icon-fall"
+				<img class="listing-icon-fall"
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"
 						 title="Fall"/>
 			<?php } ?>
 			<?php if (strpos($quarters_intro,"Winter") !== false) { ?>
-				<img alt=""
-				     class="listing-icon-winter"
+				<img class="listing-icon-winter"
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg"
 						 title="Winter"/>
 			<?php } ?>
 			<?php if (strpos($quarters_intro,"Spring") !== false) { ?>
-				<img alt=""
-				     class="listing-icon-spring"
+				<img class="listing-icon-spring"
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg"
 						 title="Spring"/>
 			<?php } ?>
 			<?php if (strpos($quarters_intro,"Summer") !== false) { ?>
-				<img alt=""
-				     class="listing-icon-summer"
+				<img class="listing-icon-summer"
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
 						 title="Summer"/>
 			<?php } ?>
@@ -96,28 +92,23 @@ if(count($quarters) == 1) {
 		<div class="listing-property-img">
 			<!-- Printing the location based on where we are -->
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
 							 title="Olympia"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
 							 title="Tacoma"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
 							 title="Grays Harbor"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 							 title="Tribal"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 							 title="Tribal MPA"/>
 			<?php } ?>
 
@@ -126,8 +117,7 @@ if(count($quarters) == 1) {
 			<?php // Study abroad standin with additional details
 			      // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				<img alt=""
-				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"
+				<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"
 						 title="Study Abroad"/>
 			<?php }; ?>
 		</div>
@@ -147,20 +137,17 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
-					<img alt=""
-					     class="listing-icon-time-offered listing-icon-day"
+					<img class="listing-icon-time-offered listing-icon-day"
 					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg"
 							 title="Daytime"/>
 		  <?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
-					<img alt=""
-					     class="listing-icon-time-offered listing-icon-evening"
+					<img class="listing-icon-time-offered listing-icon-evening"
 					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg"
 							 title="Evening"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend")!== false) {?>
-					<img alt=""
-					     class="listing-icon-time-offered listing-icon-weekend"
+					<img class="listing-icon-time-offered listing-icon-weekend"
 					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg"
 							 title="Weekend"/>
 			<?php } ?>
@@ -179,8 +166,7 @@ if(count($quarters) == 1) {
 		      // if graduate
 		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 			<div class="listing-property-img">
-				<img alt="<?php print($field_curr_area)?>"
-				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
+				<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
 			</div>
 			<div class="listing-property-body">
 				<?php // printing our word Graduate
@@ -196,17 +182,14 @@ if(count($quarters) == 1) {
 				<?php // If we have  undergrad course that extends through graduate, print the logos together with the correct title ?>
 				<?php if(render(end($content['field_class_standing'])) == "Graduate" ){
 					//printing the undergrad bars from the first through senior?>
-					<img alt=""
-							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-Senior.svg";?>"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-Senior.svg";?>"
 							 title="<?php print(render($content['field_class_standing'][0]));?>-Senior" />
 
 					<?php // adding the grad+ icon after our bars for undergrad years?>
-					<img alt=""
-						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/grad.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/grad.svg"
 							 title="Graduate" />
 				<?php } else { // if it's a normal undergrad course?>
-					<img alt=""
-						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-" . render(end($content['field_class_standing']));?>.svg"
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-" . render(end($content['field_class_standing']));?>.svg"
 						   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
 
 				<?php }?>
@@ -235,13 +218,11 @@ if(count($quarters) == 1) {
 		<div class="listing-property-img">
 
 <?php 		 if(render($content['group_details']['field_credits'][0]) == '0'){?>
-					<img alt="Variable"
-			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 <?php    } else {
 			 		  for($i = 0; $i < 6; ++$i){
 				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
-							 			<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
-							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+							 			<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
 
 							<?php }
 						}
@@ -251,8 +232,7 @@ if(count($quarters) == 1) {
 
 		<?php 		// adding the variable credit V if we already havent (credit = 0)
 		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
-			<img alt=""
-			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php } ?>
 
 
@@ -382,8 +362,7 @@ if (!$page){ ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
 				<div class="listing-property">
 					<div class="listing-property-img">
-						<img alt=""
-						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+						<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
 					</div>
 					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
@@ -530,18 +509,15 @@ if (!$page){ ?>
 				<?php // Time offered, This can have multiple properties, for example, Day, Evening, and Weekend. ?>
 					<div class="listing-property-img">
 						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
-								<img alt=""
-								     class="listing-icon-time-offered listing-icon-day"
+								<img class="listing-icon-time-offered listing-icon-day"
 								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
 					  <?php } ?>
 						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
-								<img alt=""
-								     class="listing-icon-time-offered listing-icon-evening"
+								<img class="listing-icon-time-offered listing-icon-evening"
 								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
 						<?php } ?>
 						<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend")!== false) {?>
-								<img alt=""
-								     class="listing-icon-time-offered listing-icon-weekend"
+								<img class="listing-icon-time-offered listing-icon-weekend"
 								     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
 						<?php } ?>
 					</div>
@@ -556,28 +532,23 @@ if (!$page){ ?>
 						<div class="listing-property-img">
 							<!-- Printing the location based on where we are -->
 							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia")!== false) {?>
-									<img alt=""
-									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
+									<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
 											 title="Olympia"/>
 							<?php } ?>
 							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma")!== false) {?>
-									<img alt=""
-									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
+									<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
 											 title="Tacoma"/>
 							<?php } ?>
 							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor")!== false) {?>
-									<img alt=""
-									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
+									<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
 											 title="Grays Harbor"/>
 							<?php } ?>
 							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal")!== false) {?>
-									<img alt=""
-									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+									<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 											 title="Tribal"/>
 							<?php } ?>
 							<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA")!== false) {?>
-									<img alt=""
-									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
+									<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 											 title="Tribal MPA"/>
 							<?php } ?>
 						</div>
@@ -625,152 +596,6 @@ if (!$page){ ?>
 					</p>
 				<?php }; ?>
 			</div>
-      <!-- cutout of all content that is in the sidebar for now.
-
-      <section class="catalog-listing-registration">
-        <?php
-        /**
-         * Registration
-         */
-        ?>
-        <h2>Register for this offering</h2>
-        <?php
-        // Variable credit
-        // field_variable_credit_options (field_upper_division_boolean seems to be 1 on classes without upper credit too?)
-        ?>
-        <?php if(isset($content['field_variable_credit_options'][0])) { ?>
-          <h3>Variable Credit Options</h3>
-          <?php print_r(render($content['field_variable_credit_options'][0])); ?>
-        <?php }; ?>
-        <h3>How to Register</h3>
-        <ol>
-          <li>
-            <p>Copy the course reference number (CRN) for your class standing and desired number of credits.</p>
-          </li>
-          <li>
-            <p>Use your CRN at <a href="https://my.evergreen.edu">my.evergreen.edu</a> during your registration window. Check the academic calendar for <a href="/calendar/academic">upcoming registration deadlines</a>.</p>
-          </li>
-        </ol>
-        <p>Learn more about <a href="/registration/how-to">how to register</a>, including information about registering as a non-admitted (special) student.</p>
-
-        <?php
-        /**
-         * Course Reference Numbers
-         */
-        ?>
-        <?php // Course Reference Numbers Standin
-        // sidebar stuff here ?>
-        <h3>Course Reference Numbers</h3>
-        <?php //variable for dropping the H4 signature required to a nice italics version with a colon if needed?>
-        <?php $sig_required_h4 = "<h4>Signature Required</h4>"?>
-        <?php $sig_required_h4_italics = "<p><i>Signature Required:</i>"?>
-
-        <?php //Fall Registration ?>
-        <?php if(isset($content['field_fall_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Fall quarter</h4>
-              <?php
-                $fallref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_fall_registration'][0])));
-                // find out if our post actually has <p> tags in it at all
-                if ((strpos($fallref, "<p>")) !== false) {
-                  // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                  $fallref = substr_replace($fallref, "", (intval(strpos($fallref, "<p>"))), 3);
-                } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                  // that we added an opening one when we put our italics at the front of the paragraph
-                  $fallref = $fallref . "</p>";
-                };
-                if (strpos($fallref , $sig_required_h4) !== false) {
-                  $fallref = str_replace($sig_required_h4,$sig_required_h4_italics,$fallref);
-                };
-                // finally, print our result
-                print($fallref)
-              ?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Winter Registration ?>
-        <?php if(isset($content['field_winter_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Winter quarter</h4>
-              <?php
-                $winterref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_winter_registration'][0])));
-                // find out if our post actually has <p> tags in it at all
-                if ((strpos($winterref, "<p>")) !== false) {
-                  // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                  $winterref = substr_replace($winterref, "", (intval(strpos($winterref, "<p>"))), 3);
-                } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                  // that we added an opening one when we put our italics at the front of the paragraph
-                  $winterref = $winterref . "</p>";
-                };
-                if (strpos($winterref , $sig_required_h4) !== false) {
-                  $winterref = str_replace($sig_required_h4,$sig_required_h4_italics,$winterref);
-                };
-                //finally print our result
-                print($winterref)?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Spring Registration ?>
-        <?php if(isset($content['field_spring_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Spring quarter</h4>
-              <?php $springref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_spring_registration'][0])));
-              // find out if our post actually has <p> tags in it at all
-              if ((strpos($springref, "<p>")) !== false) {
-                // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                $springref = substr_replace($springref, "", (intval(strpos($springref, "<p>"))), 3);
-              } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                // that we added an opening one when we put our italics at the front of the paragraph
-                $springref = $springref . "</p>";
-              };
-              if (strpos($springref , $sig_required_h4) !== false) {
-                  $springref = str_replace($sig_required_h4,$sig_required_h4_italics,$springref);
-              };
-              //finally print our result
-              print($springref)?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Summer Registration ?>
-        <?php if(isset($content['field_summer_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Summer quarter</h4>
-              <?php $summerref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_summer_registration'][0])));
-              // find out if our post actually has <p> tags in it at all
-              if ((strpos($summerref, "<p>")) !== false) {
-                // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                $summerref = substr_replace($summerref, "", (intval(strpos($summerref, "<p>"))), 3);
-              } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                // that we added an opening one when we put our italics at the front of the paragraph
-                $summerref = $summerref . "</p>";
-              };
-              if (strpos($summerref , $sig_required_h4) !== false) {
-                $summerref = str_replace($sig_required_h4,$sig_required_h4_italics,$summerref);
-              };
-              //finally print our result
-              print($summerref)?>
-            </div>
-          </div>
-        <?php }; ?>
-      </section><?php ///.catalog-listing-registration ?>
-
-      end cutout for duplicate content in sidebar for now-->
-
 		</div> <!-- /.program-description -->
 
 		<?php
@@ -781,6 +606,4 @@ if (!$page){ ?>
 		<?php // revisions, do we want these in the new design? ?>
 		<?php print render($content['field_revisions']); ?>
 	</div> <!-- /.content -->
-	<?php // do we even need this? ?>
-	<?php // print render($content['comments']); ?>
 </div>
