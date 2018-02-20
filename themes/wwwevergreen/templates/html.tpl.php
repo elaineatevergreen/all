@@ -106,9 +106,11 @@ Right now I think the only difference from the default html.tpl.php is the inclu
 	<!-- SVG -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox -->
 	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9+ -->
-	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
-	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
+	<!-- Windows, Edge -->
+	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows, Edge -->
+	<meta content="#64933a" name="theme-color"><!-- Windows, Edge -->
+	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows, Edge -->
+	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/browserconfig.xml" name="msapplication-config"/><!-- Windows, Edge -->
 	<!-- PNG -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon" sizes="276x276"/><!-- Homescreen icon, iOS, Android -->
 	<link rel="manifest" href="<?php print base_path() . path_to_theme() ?>/images/favicons/site.webmanifest" type="application/manifest+json"/><!-- Android Chrome -->
