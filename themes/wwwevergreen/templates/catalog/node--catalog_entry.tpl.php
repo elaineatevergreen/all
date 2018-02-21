@@ -228,11 +228,13 @@ if(count($quarters) == 1) {
 		<div class="listing-property-img">
 
 <?php 		 if(render($content['group_details']['field_credits'][0]) == '0'){?>
-					<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+					<img alt=""
+			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 <?php    } else {
 			 		  for($i = 0; $i < 6; ++$i){
 				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
-							 			<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+							 			<img alt=""
+							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
 
 							<?php }
 						}
@@ -242,7 +244,8 @@ if(count($quarters) == 1) {
 
 		<?php 		// adding the variable credit V if we already havent (credit = 0)
 		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
-			<img src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<img alt=""
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 		<?php } ?>
 
 
