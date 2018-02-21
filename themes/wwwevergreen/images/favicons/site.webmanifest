@@ -4,7 +4,7 @@
 	"dir": "ltr",
 	"icons": [
 		{
-			"src": "/images/favicons/site-icon.png",
+			"src": "/sites/all/themes/wwwevergreen/images/favicons/site-icon.png",
 			"sizes": "276x276",
 			"type": "image/png"
 		}
