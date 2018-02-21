@@ -1,10 +1,5 @@
 <?php
-
 /**
-	
-Right now I think the only difference from the default html.tpl.php is the inclusion of a whole bunch of favicon links.
-	
-	
  * @file
  * Default theme implementation to display the basic html structure of a single
  * Drupal page.
@@ -100,19 +95,24 @@ Right now I think the only difference from the default html.tpl.php is the inclu
   <?php print $styles; ?>
   
   <meta content="width=device-width, minimum-scale=1.0" name="viewport" />
+  <meta content="Evergreen" name="application-name" />
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png" rel="apple-touch-icon"/><!-- Homescreen icon -->
-	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg" rel="mask-icon"/><!-- Safari 9+ -->
-	<meta content="#64933a" name="msapplication-TileColor"/><!-- Windows 8, IE10 -->
-	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/mstile-144x144.png" name="msapplication-TileImage"/><!-- Windows 8, IE10 -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- IE and hi-dpi favicon -->
-	<!-- favicons for everybody else -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png" rel="icon" sizes="16x16" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png" rel="icon" sizes="24x24" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg" rel="icon" type="image/svg+xml"/><!-- Firefox 41+ -->
+	<!-- SVG -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg?cache=1" rel="icon" type="image/svg+xml"/><!-- Firefox -->
+	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg?cache=1" rel="mask-icon"/><!-- Safari 9+ -->
+	<!-- Config -->
+	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/browserconfig.xml" name="msapplication-config"/><!-- Windows, Edge -->
+	<link rel="manifest" href="<?php print base_path() . path_to_theme() ?>/images/favicons/site.webmanifest?cache=1" type="application/manifest+json"/><!-- Android Chrome -->
+	<!-- PNG -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png?cache=1" rel="apple-touch-icon" sizes="276x276"/><!-- Homescreen icon, iOS, Android -->
+	<!-- Favicons for everybody else -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png?cache=1" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=1" rel="icon" sizes="24x24" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=1" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-64.png?cache=1" rel="icon" sizes="64x64" type="image/png"/>
+	<!-- ICO -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
