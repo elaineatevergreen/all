@@ -238,7 +238,8 @@ if(count($quarters) == 1) {
 					<img alt=""
 			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 <?php    } else {
-			 		  for($i = 0; $i < 6; ++$i){
+
+			 		  for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
 				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
 							 			<img alt=""
 							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
