@@ -46,13 +46,13 @@ module.exports = function(grunt) {
 					},
 				],
 			},
-		  to_banner: {
+		  to_banner_themes: {
 			  files: [
 				  {
 					  expand: true,
 					  flatten: true,  // Only copies the file, not the folder structure, too
 			      src: ['css/src/_tools.scss'],
-			      dest: '../../../themes/banner/css/src/',
+			      dest: '../../../banner-themes/css/src/',
 			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
 		      },
 		      
@@ -379,7 +379,7 @@ module.exports = function(grunt) {
 			},
 			tools: {  // Copy latest version of _tools to Banner theme
 				files: '_tools.scss',
-				tasks: ['copy:to_banner']
+				tasks: ['copy:to_banner_themes']
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['css/src/styles.scss', 'css/src/print.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/*.scss'],
