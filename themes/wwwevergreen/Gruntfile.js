@@ -256,6 +256,7 @@ module.exports = function(grunt) {
 						}
 					},
 					settings: {
+						compression: 5,
 						scalingAlgorithm: 'Lanczos',
 						errorOnImageTooSmall: false,
 						readmeFile: true,
