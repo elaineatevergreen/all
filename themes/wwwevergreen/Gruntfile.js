@@ -46,13 +46,13 @@ module.exports = function(grunt) {
 					},
 				],
 			},
-		  to_banner: {
+		  to_banner_themes: {
 			  files: [
 				  {
 					  expand: true,
 					  flatten: true,  // Only copies the file, not the folder structure, too
 			      src: ['css/src/_tools.scss'],
-			      dest: '../../../themes/banner/css/src/',
+			      dest: '../../../banner-themes/css/src/',
 			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
 		      },
 		      
@@ -256,6 +256,7 @@ module.exports = function(grunt) {
 						}
 					},
 					settings: {
+						compression: 5,
 						scalingAlgorithm: 'Lanczos',
 						errorOnImageTooSmall: false,
 						readmeFile: true,
@@ -362,13 +363,6 @@ module.exports = function(grunt) {
      * function names, which is easier to debug.
      */
 		uglify: {
-			//options: {
-				//banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			//},
-			/*scripts: {
-				src: 'js/build/scripts-dev.js',
-				dest: 'js/build/scripts.min.js'  // Deprecated; use scripts_to_dist instead
-			},*/
 			scripts_to_dist: {
 				src: 'js/build/scripts-dev.js',
 				dest: 'js/dist/scripts.min.js'
@@ -385,7 +379,7 @@ module.exports = function(grunt) {
 			},
 			tools: {  // Copy latest version of _tools to Banner theme
 				files: '_tools.scss',
-				tasks: ['copy:to_banner']
+				tasks: ['copy:to_banner_themes']
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['css/src/styles.scss', 'css/src/print.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/*.scss'],
