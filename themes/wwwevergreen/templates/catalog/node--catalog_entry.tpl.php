@@ -518,7 +518,8 @@ if (!$page){ ?>
 			// prereq field standin
 			// field_prerequisites ?>
 			<?php if(isset($content['group_prerequisites']['field_prerequisites'][0])) { ?>
-				<div><b><?php print ("Prerequisites:")?></b> <?php printEach($content['group_prerequisites']['field_prerequisites']); ?></div>
+				<div><b><?php print ("Prerequisites:")?></b>
+					<?php printEach($content['group_prerequisites']['field_prerequisites']); ?></div>
 			<?php }; ?>
 
 
@@ -556,7 +557,8 @@ if (!$page){ ?>
 
 					<div class="listing-property-body">
 						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-							<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+							<p><b>Scheduled for:</b>
+								<?php printEach($content['group_details']['group_location_schedule']['field_time_offered']); ?>
 						<?php }; ?>
 						</div>
 					</div>
@@ -641,7 +643,7 @@ if (!$page){ ?>
 		 */
 		?>
 		<?php // revisions, do we want these in the new design? ?>
-		<?php print render($content['field_revisions']); ?>
+		<?php printEach($content['field_revisions']); ?>
 
 
 		<?php
