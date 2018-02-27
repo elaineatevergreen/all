@@ -496,7 +496,7 @@ if (!$page){ ?>
 			// field_websites ?>
 			<?php if(isset($content['group_details']['field_websites'][0])) { ?>
 				<div><b><?php print ("Website:")?></b> <?
-					PrintEach($content['group_details']['field_websites']);?>
+					printEach($content['group_details']['field_websites']);?>
 					</div>
 				<?php }; ?>
 
