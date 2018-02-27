@@ -388,7 +388,7 @@ if (!$page){ ?>
 					</div>
 					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+						<?php printEach($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
 					</div>
 				</div>
 			<?php }; ?>
@@ -399,12 +399,9 @@ if (!$page){ ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
 				<div class="fos keyword-list">
 					<b><?php print ("Fields of study:")?></b> 
-
 					<ul class="field-fields-of-study element-list">
-						<?php for($i = 0; $i < count($content['group_details']['field_fields_of_study'][0]); ++$i){?>
-							<li><?php print(render($content['group_details']['field_fields_of_study'][$i])); ?> </li>
-						<?php } ?>
-					</ul>
+					<?php printEach($content['group_details']['field_fields_of_study'], "<li>", "</li>"); ?>
+				</ul>
 				</div>
 	    <?php }; ?>
 
@@ -412,13 +409,15 @@ if (!$page){ ?>
 			// Preparatory Fields standin
 			// field_preparatory_for ?>
 			<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
-				<p><b><?php print ("This offering will prepare you for careers and advanced study in:")?></b> <?php print_r(render($content['group_details']['field_preparatory_for'][0])); ?></p>
+				<p><b><?php print ("This offering will prepare you for careers and advanced study in:")?></b>
+					<?php printEach($content['group_details']['field_preparatory_for']); ?></p>
 			<?php }; ?>
 
 			<?php // Maximum enrollment standin
 			// field_maximum_enrollment ?>
 			<?php if(isset($content['field_maximum_enrollment'][0])) { ?>
-				<p><b><?php print ("Maximum enrollment:")?></b> <?php print_r(render($content['field_maximum_enrollment'][0])); ?></p>
+				<p><b><?php print ("Maximum enrollment:")?></b>
+					<?php printEach($content['field_maximum_enrollment']); ?></p>
 	    <?php }; ?>
 
 			<?php
@@ -464,7 +463,7 @@ if (!$page){ ?>
 	 							<?php } ?>
 	 					<?php } // end formatting loop ?>
 	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
-	 						print(render($content['group_details']['group_more']['field_online_learning'][0]));
+	 						printEach($content['group_details']['group_more']['field_online_learning']);
 	 					} ?>
 	 			<?php }; ?></div>
 
@@ -472,46 +471,54 @@ if (!$page){ ?>
 			// Special expenses standin
      	// field_special_expenses ?>
      	<?php if(isset($content['group_details']['group_more']['field_special_expenses'][0])) { ?>
-				<div><b><?php print ("Special expenses:")?></b> <?php print_r(render($content['group_details']['group_more']['field_special_expenses'][0])); ?></div>
+				<div><b><?php print ("Special expenses:")?></b>
+					<?php printEach($content['group_details']['group_more']['field_special_expenses']); ?></div>
 	    <?php }; ?>
 
 			<?php
 			// Fees standin
-			// field_fees (can be 0?) ?>
+			// field_fees (can be 0?) TODO fix p tags?>
 			<?php if(isset($content['group_details']['group_more']['field_fees'][0])) { ?>
-				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b> <?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
+				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b>
+					<?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
 	    <?php }; ?>
 
 	    <?php
-			// Upper division science credit standin
+			// Upper division science credit standin TODO fix p tags
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
-				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
+				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b>
+					 <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
 	    <?php }; ?>
 
 			<?php
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['group_details']['field_websites'][0])) { ?>
-				<div><b><?php print ("Website:")?></b> <?php print_r(render($content['group_details']['field_websites'][0])); ?></div>
-			<?php }; ?>
+				<div><b><?php print ("Website:")?></b> <?
+					PrintEach($content['group_details']['field_websites']);?>
+					</div>
+				<?php }; ?>
+
 			<?php
 			// Internship op field standin
 			// field_internship_opportunities ?>
 			<?php if(isset($content['field_internship_opportunities'][0])) { ?>
-				<div><b><?php print ("Internship Opportunities:")?></b> <?php print(render($content['field_internship_opportunities'][0])); ?></div>
+				<div><b><?php print ("Internship Opportunities:")?></b>
+					<?php printEach($content['field_internship_opportunities']); ?></div>
 			<?php }; ?>
 			<?php
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['field_research_opportunities'][0])) { ?>
-				<div><b><?php print ("Research Opportunities:")?></b> <?php print(render($content['field_research_opportunities'][0])); ?></div>
+				<div><b><?php print ("Research Opportunities:")?></b>
+					<?php printEach($content['field_research_opportunities']); ?></div>
 			<?php }; ?>
 			<?php
 			// prereq field standin
 			// field_prerequisites ?>
 			<?php if(isset($content['group_prerequisites']['field_prerequisites'][0])) { ?>
-				<div><b><?php print ("Prerequisites:")?></b> <?php print(render($content['group_prerequisites']['field_prerequisites'][0])); ?></div>
+				<div><b><?php print ("Prerequisites:")?></b> <?php printEach($content['group_prerequisites']['field_prerequisites']); ?></div>
 			<?php }; ?>
 
 
@@ -583,10 +590,10 @@ if (!$page){ ?>
 							<?php } ?>
 						</div>
 						<div class="listing-property-body">
-							<p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
+							<p><b>Located in:</b> <?php printEach($content['group_details']['group_location_schedule']['field_location']); ?></p>
 							<?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
 								if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
-								<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+								<p><b>Off-campus location:</b> <?php printEach($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
 							<?php }; ?>
 						</div>
 				</div>
@@ -602,17 +609,17 @@ if (!$page){ ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
 					<p><b>Final schedule and room assignment:</b></p>
-					<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
 				<?php }; ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
 					<p><b>Advertised schedule:</b></p>
-					<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
 				<?php }; ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
 					<p><b>Additional details:</b></p>
-					<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
 				<?php }; ?>
 
 
@@ -622,7 +629,7 @@ if (!$page){ ?>
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
 					<p>
-						<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+						<?php printEach($content['group_details']['group_more']['field_next_offered']); ?>
 					</p>
 				<?php }; ?>
 			</div>
@@ -635,5 +642,23 @@ if (!$page){ ?>
 		?>
 		<?php // revisions, do we want these in the new design? ?>
 		<?php print render($content['field_revisions']); ?>
+
+
+		<?php
+		function printEach($passedcontent, $put_front = "", $put_after= "")
+		//takes a content (not yet rendered) renderable array and prints all the items out
+		// put_front will be put in front of each element, and put after, after
+		// front and after are optional parameters and default to ""
+		{
+			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
+				if(isset($passedcontent[$i])){
+					print($put_front);
+					print(render($passedcontent[$i]));
+					print($put_after);
+				}
+			}
+		}
+		?>
 	</div> <!-- /.content -->
+
 </div>
