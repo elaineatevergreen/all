@@ -409,7 +409,7 @@ if (!$page){ ?>
 			// Preparatory Fields standin
 			// field_preparatory_for ?>
 			<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
-				<p><b><?php print ("This offering will prepare you for careers and advanced study in:")?></b>
+				<p><b><?php print ("This offering will prepare you for careers and advanced study in: ")?></b>
 					<?php printEach($content['group_details']['field_preparatory_for']); ?></p>
 			<?php }; ?>
 
