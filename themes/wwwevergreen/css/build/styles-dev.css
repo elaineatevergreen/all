@@ -904,7 +904,7 @@ table {
 
 /* line 31, ../src/smacss/base/_tables.scss */
 caption {
-  margin: 0 0 0.41666666666667em;
+  margin: 0 0 0.83333333em;
   font-size: 1.125rem;
   line-height: 1.38888888888889;
   font-style: italic;
@@ -912,7 +912,7 @@ caption {
 @media screen and (min-width: 43em) {
   /* line 31, ../src/smacss/base/_tables.scss */
   caption {
-    margin: 0 0 0.39003588330126em;
+    margin: 0 0 0.78007177em;
     font-size: 1.202rem;
     line-height: 1.36512559155442;
   }
@@ -920,7 +920,7 @@ caption {
 @media screen and (min-width: 125em) {
   /* line 31, ../src/smacss/base/_tables.scss */
   caption {
-    margin-top: 0.51503914297487em;
+    margin-bottom: 0.51503914297487em;
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
@@ -943,7 +943,7 @@ td {
 /* line 66, ../src/smacss/base/_tables.scss */
 th {
   border-bottom-width: 0;
-  padding: 0 1.111111111111111em 0 0;
+  padding: 0 2ch 0 0;
   color: black;
   vertical-align: bottom;
 }
@@ -953,7 +953,7 @@ tbody th,
 td {
   border: 0 solid #c2c2c2;
   border-top-width: 1px;
-  padding: 0.37037037037037em 1.111111111111111em 1.111111111111111em 0;
+  padding: 0.53571429em 2ch 1.07142857em 0;
   color: #303030;
   -webkit-font-feature-settings: "lnum", "tnum";
           font-feature-settings: "lnum", "tnum";
