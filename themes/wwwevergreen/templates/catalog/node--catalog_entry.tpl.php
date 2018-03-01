@@ -233,29 +233,23 @@ if(count($quarters) == 1) {
 	<?php // Credits amount standin ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
+			<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
+				<img alt=""
+			       src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<?php } else {
+				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
+					if(isset($content['group_details']['field_credits'][$i])){  ?>
+						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
+						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+					<?php }
+				}
+			} ?>
 
-<?php 		 if(render($content['group_details']['field_credits'][0]) == '0'){?>
-					<img alt=""
-			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-<?php    } else {
-
-			 		  for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
-				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
-							 			<img alt=""
-							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
-
-							<?php }
-						}
-					} ?>
-
-
-
-		<?php 		// adding the variable credit V if we already havent (credit = 0)
-		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
-			<img alt=""
-			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-		<?php } ?>
-
+			<?php 		// adding the variable credit V if we already havent (credit = 0)
+			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
+				<img alt="Variable"
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<?php } ?>
 
 		</div>
 		<div class="listing-property-body"> <?php
@@ -409,7 +403,7 @@ if (!$page){ ?>
 			// Preparatory Fields standin
 			// field_preparatory_for ?>
 			<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
-				<p><b><?php print ("This offering will prepare you for careers and advanced study in:")?></b>
+				<p><b><?php print ("This offering will prepare you for careers and advanced study in: ")?></b>
 					<?php printEach($content['group_details']['field_preparatory_for']); ?></p>
 			<?php }; ?>
 
