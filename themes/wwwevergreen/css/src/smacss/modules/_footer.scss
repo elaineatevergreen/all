@@ -10,6 +10,7 @@
 	padding: 1em 1em 0;
 	// layout
 	clear: left;
+	z-index: 0;
 	// typography
 	color: $tint;
 	@include base-type;
@@ -59,7 +60,7 @@
 
 .page-footer a:focus{
 	// decoration
-	background-color: transparentize($tint, .9);
+	background-color: transparentize($tint, 0.9);
 	outline-color: $tint;
 	outline-offset: 1px;
 	outline-style: dotted;

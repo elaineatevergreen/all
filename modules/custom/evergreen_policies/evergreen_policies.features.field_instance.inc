@@ -337,6 +337,7 @@ function evergreen_policies_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_categories',
     'label' => 'Categories',
     'required' => 0,
@@ -346,6 +347,7 @@ function evergreen_policies_field_default_field_instances() {
           'status' => TRUE,
         ),
       ),
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -355,6 +357,7 @@ function evergreen_policies_field_default_field_instances() {
       'type' => 'options_buttons',
       'weight' => 2,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Exported field_instance: 'node-policy-field_effective_date'.

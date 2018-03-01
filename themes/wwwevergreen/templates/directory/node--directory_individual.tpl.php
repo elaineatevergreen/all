@@ -7,8 +7,19 @@ theme for individual person pages
 //dpm($variables['content']['group_contact']['field_location_off_campus']);
 ?>
 
-<!-- need to add back faculty information -->
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="content <?php print $classes; ?>"<?php print $attributes; ?>>
+	
+	
+<?php 
+
+//check whether this is a real entry
+if(isset($content['field_reference'])) { ?>
+
+<p>See <?php print render($content['field_reference']); ?>.</p>
+<?php	
+		
+	} else {
+?>
     
     <div class="p-job-title"><?php print render($content['field_job_title']) ?></div>
     <?php if(isset($content['field_department'])) { ?>
@@ -21,15 +32,10 @@ theme for individual person pages
 		    print render($content['field_headshot']);
 		    
 	    }; ?>
-    
-<?php 
-	
-	//extra detail for faculty member pages
-	if (isset($content['field_is_faculty']) and render($content['field_is_faculty']) == 1) { 
-	    //we'll want this later
-	    $is_faculty = TRUE;
 	    
-	    //now show all the stuff that really only applies to faculty
+	    <?php
+	    
+	    //show all the faculty details
 	    print render($content['body']);
 	    if(isset($content['field_background'])) {
 		    print "<p>" . render($content['field_background']) . "</p>";
@@ -41,25 +47,20 @@ theme for individual person pages
 			print "<p>" . render($content['field_interests']) . "</p>";
 		};
    
+		if (isset($content['field_related_subjects_directory'])) { 
 ?>
-
-	    
-	    
-	    <?php if (isset($content['field_related_subjects_directory'])) { ?>
 	    <h2>Related Subject Areas</h2>
 	    
 	    <?php 
 		    print render($content['field_related_subjects_directory']); 
 		}; ?>
-	    
-	    
-	    
-	<?php }; ?>
     
 <div>    
-<?php 	  
-	  //only show contact information for individuals if user is logged in
-	  //or if this person is a faculty member who has chosen to make their contact info public
+<?php 
+	
+	//only show contact information for individuals if user is logged in
+	//or if this person has chosen to make their contact info public (currently just faculty)
+  
 	  
 	  //but do all this stuff only if there's any contact info to speak of
 	  if(isset($content['group_contact']['field_email']) or isset($content['group_contact']['field_phone']) or isset($content['group_contact']['field_mailstop']) or isset($content['group_contact']['field_location_off_campus'])) { ?>
@@ -67,7 +68,7 @@ theme for individual person pages
 	  
 <?php
 		//now check to see if we should show the stuff
-		if(($is_faculty and $promote == TRUE) or user_is_logged_in()) {
+		if($promote == TRUE or user_is_logged_in()) {
 ?>
   
     <?php 
@@ -143,6 +144,7 @@ theme for individual person pages
 	  <?php 
 		}; //end check for authentication
 	}; //end check for *any* contact information 
+}; //end check for reference type
 ?>
   
 </div>

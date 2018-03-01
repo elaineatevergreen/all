@@ -60,7 +60,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -1;
+	z-index: -1;  // IE 11
 }
 
 .main-background .main-background-img,  // deprecated, use main-background2
@@ -81,8 +81,11 @@
 	}
 }
 
-.main-background2{
-	position: sticky;
+@supports (position: sticky){
+	.main-background2{
+		position: sticky;
+		z-index: auto;
+	}
 }
 
 /**
@@ -313,12 +316,20 @@
 
 /**
  * H. Tables
- *
- * There are currently no table modules. I am leaving this here, because it
- * seems likely that there might be in the future, and I don’t want to have
- * to re-order the table of contents in such an event. Feel free to add the
- * first one!
  */
+/**
+ * On Financial Services (Bursar) tuition tables, we want to indicate where
+ * the cutoff is for a fulltime course load.
+ * 
+ * See: https://www.evergreen.edu/financialservices/tuition-2017-18
+ */
+.fulltime-cutoff-row td{
+	// box model
+	border-bottom-width: 3px;
+	// decoration
+	border-bottom-color: mix($tint, $shade, 60%);
+	border-bottom-style: double;
+}
 
 /**
  * I. Icons
@@ -374,6 +385,10 @@
 	// decoration
 	background-color: $tint;
 	border-radius: 2px;
+}
+
+.news-date{
+	@include base-type;
 }
 
 .news-story footer{  // Drupal styles

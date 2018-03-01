@@ -1,0 +1,305 @@
+/**
+ * 4. Navigation
+ *
+ * The primary and secondary navigation in the header.
+ *
+ * Table of Contents
+ *
+ *  i. Primary Nav
+ * ii. Secondary Nav
+ */
+
+/**
+ * i. Primary Nav
+ *
+ * The green nav at the top of every page.
+ */
+.top-nav-list{
+	// box model
+	margin: 0 auto;
+	width: 100%;
+	// tyopography
+	text-align: center;
+	// list
+	list-style-type: none;
+
+	@include breakpoint($lil-groot){
+		// layout
+		align-items: stretch;
+		display: flex;
+		// typography
+		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
+	}
+
+	@include breakpoint($rocket){
+		// typography
+		letter-spacing: 0.075ch;  // Gives shaded letters a touch more breathing room
+	}
+
+	@include breakpoint($starlord){
+		// typography
+		letter-spacing: normal;
+	}
+
+	/* Necessary for float-based fallback layouts. */
+	&::before,
+	&::after{
+		// box model
+		width: 0;
+		// layout
+		clear: both;
+		display: table;
+		// miscellaneous
+		content: "";
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+
+	.top-nav-list{
+		@include breakpoint($lil-groot){
+			// layout
+			display: grid;
+			grid-template-columns: repeat(5, auto);
+		}
+
+		@include breakpoint($starlord){
+			// layout
+			grid-template-columns: repeat(5, 20%);
+		}
+	}
+
+	.top-nav-list::before,
+	.top-nav-list::after{
+		content: none;
+	}
+}
+
+.top-nav-list > li{
+	// box model
+	min-height: 45px;
+	// layout
+	display: inline-block;
+
+	@include breakpoint($lil-groot){
+		// box model
+		border-left: 1px solid mix($tint, $shade, 20%);
+		// layout
+		align-items: stretch;
+		display: flex;
+		flex-grow: 1;
+		overflow: hidden;
+
+		&:first-child{
+			// box model
+			border-left-width: 0;
+		}
+	}
+
+	@include breakpoint($starlord){
+		// box model
+		width: 20%;
+		// layout
+		flex-grow: 1;
+		// typography
+		font-family: $text-face;
+		letter-spacing: normal;
+	}
+
+	@include breakpoint($gamora){
+		height: auto;
+	}
+}
+
+@supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE/Edge syntax.
+	.top-nav-list > li{
+
+		@include breakpoint($starlord){
+			width: auto;
+		}
+	}
+}
+
+.top-nav-list a,
+.secondary-nav-list a{
+	// box model
+	padding: calc(7.5 / 16 * 1rem) 1ch;
+	width: 100%;
+	// layout
+	display: block;
+	// typography
+	text-decoration: none;
+
+	&:hover{
+		// typography
+		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
+		// misc
+		box-shadow: 0 0 1px $highlight inset,
+		/*        */0 0 1em transparentize($highlight, 0.75) inset;
+		transition: all 0.1s ease-out;
+	}
+
+	&:focus{
+		background-color: $blueberry-susan;
+	}
+
+	@include breakpoint($lil-groot){
+		// layout
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		// misc
+		text-shadow: 0 2px 0 $drop-shadow;
+	}
+
+	@include breakpoint($rocket){
+		// box model
+		padding-right: 0.6666666667ch;
+		padding-left: 0.6666666667ch;
+	}
+
+	@include breakpoint($drax){
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
+
+.top-nav-list a,
+.top-nav-list a:visited{
+	// typography
+	color: $tint;
+	font-weight: 600;
+
+	@include breakpoint($starlord){
+		text-shadow: none;
+	}
+
+	@include breakpoint($gamora){
+		font-weight: bold;
+	}
+}
+
+/**
+ * ii. Secondary Nav
+ *
+ * The textured nav immediately below the primary nav on the homepage only.
+ */
+.secondary-nav-list{
+	// box model
+	border-top: 1px solid $evergreen-old-style;
+	margin: 0;
+	padding: 0;
+	// typography
+	text-align: center;
+	// list
+	list-style-type: none;
+	// decoration
+	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
+
+	@include breakpoint($lil-groot){
+		// layout
+		align-items: stretch;
+		display: flex;
+		justify-content: space-around;
+		// typography
+		letter-spacing: -0.05ch;  // Gives margins a touch more breathing room
+	}
+
+	@include breakpoint($rocket){
+		// layout
+		justify-content: flex-end;
+		// typography
+		letter-spacing: normal;
+	}
+
+	@include breakpoint($starlord){
+		font-family: $text-face;
+		line-height: 2.14285714285714;  // 30/14 - Edge doesn't support unitless calc() line-heights
+	}
+}
+
+.secondary-nav-list > li{
+	// box model
+	margin-right: 1ch;
+	// layout
+	display: inline-block;
+
+	@include breakpoint($lil-groot){
+		margin: 0;
+	}
+
+	@include breakpoint($starlord){
+		flex-basis: auto;
+	}
+
+	@include breakpoint($gamora){
+		@include base-type;
+		line-height: 3.21428571428571;  // 45/14 - Edge doesn't support unitless calc() line-heights
+	}
+
+	@include breakpoint($groot){
+		@include base-type-lg;
+		line-height: 2.5;  // 45/18
+	}
+}
+
+.secondary-nav-list a{
+
+	&,
+	&:visited{
+		// box model
+		border-bottom: 0;
+		height: 100%;
+		padding: calc(7.5 / 16 * 1rem) 0.5ch;
+		width: 100%;
+		// layout
+		//display: block;
+		// typography
+		color: $tint;
+		font-weight: normal;
+
+		@include breakpoint($lil-groot){
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		@include breakpoint($rocket){
+			// layout
+			display: inline-block;
+			flex-basis: auto;
+		}
+
+		@include breakpoint($starlord){
+			padding: 0 1ch;
+		}
+
+		@include breakpoint($gamora){
+			// box model
+			padding: 0 2ch;
+			// typography
+			font-weight: bold;
+		}
+
+		@include breakpoint($drax){
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	&:hover{
+		// typography
+		color: $tint;
+		// decoration
+		background-color: mix($tint, $blueberry-susan, 40%);
+		// misc
+		box-shadow: 0 0 2px $highlight inset;
+		transition: all 0.1s ease-out;
+	}
+
+	&:focus{
+		background-color: $blueberry-susan;
+	}
+}

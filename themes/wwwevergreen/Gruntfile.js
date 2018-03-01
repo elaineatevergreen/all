@@ -56,13 +56,13 @@ module.exports = function(grunt) {
 					},
 				],
 			},
-		  to_banner: {
+		  to_banner_themes: {
 			  files: [
 				  {
 					  expand: true,
 					  flatten: true,  // Only copies the file, not the folder structure, too
 			      src: ['css/src/_tools.scss'],
-			      dest: '../../../themes/banner/css/src/',
+			      dest: '../../../banner-themes/css/src/',
 			      filter: 'isFile',  // Make sure it's a file, not a directory or something else (I think)
 		      },
 		      
@@ -208,6 +208,74 @@ module.exports = function(grunt) {
 				dest: 'r25/build/r25.css'
 			}
 		},
+		
+		realFavicon: {
+			favicons: {
+				src: 'images/favicons/src',
+				dest: 'images/favicons/dist',
+				options: {
+					iconsPath: '<?php print base_path() . path_to_theme() ?>/images/favicons/dist/',
+					html: [ 'images/favicons/dist/sample-markup.html' ],
+					design: {
+						ios: {
+							pictureAspect: 'backgroundAndMargin',
+							backgroundColor: '#44693d',
+							margin: '14%',
+							assets: {
+								ios6AndPriorIcons: false,
+								ios7AndLaterIcons: false,
+								precomposedIcons: false,
+								declareOnlyDefaultIcon: true
+							},
+							appName: 'Evergreen'
+						},
+						desktopBrowser: {},
+						windows: {
+							pictureAspect: 'whiteSilhouette',
+							backgroundColor: '#44693d',
+							onConflict: 'override',
+							assets: {
+								windows80Ie10Tile: false,
+								windows10Ie11EdgeTiles: {
+									small: true,
+									medium: true,
+									big: true,
+									rectangle: true
+								}
+							},
+							appName: 'Evergreen'
+						},
+						androidChrome: {
+							pictureAspect: 'shadow',
+							themeColor: '#44693d',
+							manifest: {
+								name: 'Evergreen',
+								display: 'browser',
+								orientation: 'notSet',
+								onConflict: 'override',
+								declared: true
+							},
+							assets: {
+								legacyIcon: true,
+								lowResolutionIcons: false
+							}
+						},
+						safariPinnedTab: {
+							pictureAspect: 'silhouette',
+							themeColor: '#44693d'
+						}
+					},
+					settings: {
+						compression: 5,
+						scalingAlgorithm: 'Lanczos',
+						errorOnImageTooSmall: false,
+						readmeFile: true,
+						htmlCodeFile: true,
+						usePathAsIs: false
+					}
+				}
+			}
+		},
 
 		/**
 		 * Process Sass into CSS.
@@ -305,13 +373,6 @@ module.exports = function(grunt) {
      * function names, which is easier to debug.
      */
 		uglify: {
-			//options: {
-				//banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			//},
-			/*scripts: {
-				src: 'js/build/scripts-dev.js',
-				dest: 'js/build/scripts.min.js'  // Deprecated; use scripts_to_dist instead
-			},*/
 			scripts_to_dist: {
 				src: 'js/build/scripts-dev.js',
 				dest: 'js/dist/scripts.min.js'
@@ -328,7 +389,7 @@ module.exports = function(grunt) {
 			},
 			tools: {  // Copy latest version of _tools to Banner theme
 				files: '_tools.scss',
-				tasks: ['copy:to_banner']
+				tasks: ['copy:to_banner_themes']
 			},
 			css: {  // Autoprefix, then process Sass into CSS.
 				files: ['css/src/styles.scss', 'css/src/print.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/*.scss'],
@@ -355,6 +416,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-perfbudget');
+	grunt.loadNpmTasks('grunt-real-favicon');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-svgstore');
 	/*grunt.loadNpmTasks('grunt-svg-sprite');*/

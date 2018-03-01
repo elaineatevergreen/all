@@ -29,13 +29,12 @@ input[type="submit"],
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 80%);  // IE 9
 	background-image: linear-gradient(
-	/*                              */mix($morning-light, $blueberry-susan, 90%),
-	/*                              */mix($tint,          $blueberry-susan, 90%) 40%,
-	/*                              */mix($tint,          $blueberry-susan, 80%) 80%);
+		/*                           */ mix($morning-light, $blueberry-susan, 90%),
+		/*                           */ mix($tint,          $blueberry-susan, 90%) 40%,
+		/*                           */ mix($tint,          $blueberry-susan, 80%) 80%);
 	border-radius: 0.2em;
-	text-decoration: none;
-	// miscelaneous
 	box-shadow: 0 0.2em 0.2em $drop-shadow;
+	text-decoration: none;
 
 	@include breakpoint($gamora){
 		margin-bottom: 0.83333333333333em; // 15/18
@@ -51,9 +50,9 @@ input[type="submit"]:hover,
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 90%);  // IE 9
 	background-image: linear-gradient(
-	/*                              */mix($morning-light, $blueberry-susan, 95%),
-	/*                              */mix($tint,          $blueberry-susan, 90%) 40%,
-	/*                              */mix($tint,          $blueberry-susan, 85%) 80%);
+		/*                           */ mix($morning-light, $blueberry-susan, 95%),
+		/*                           */ mix($tint,          $blueberry-susan, 90%) 40%,
+		/*                           */ mix($tint,          $blueberry-susan, 85%) 80%);
 	border-color: mix($tint, $blueberry-susan, 40%);
 }
 
@@ -96,7 +95,8 @@ input[type="submit"]:active,
 .prime:visited,
 input.prime,
 .box .prime,
-.box .prime:visited{
+.box .prime:visited,
+.webform-client-form .button-primary{  // Drupal Webform
 	// typography
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
@@ -108,7 +108,8 @@ input.prime,
 
 .prime:hover,
 input.prime:hover,
-.box .prime:hover{
+.box .prime:hover,
+.webform-client-form .button-primary:hover{  // Drupal Webform
 	// typography
 	color: $tint;
 	//text-shadow: 0 1px 0 $highlight;
@@ -119,7 +120,8 @@ input.prime:hover,
 
 .prime:focus,
 input.prime:focus,
-.box .prime:focus{
+.box .prime:focus,
+.webform-client-form .button-primary:focus{  // Drupal Webform
 	// typography
 	color: $tint;
 	//text-shadow: 0 1px 0 $highlight;
@@ -130,7 +132,8 @@ input.prime:focus,
 
 .prime:active,
 input.prime:active,
-.box .prime:active{
+.box .prime:active,
+.webform-client-form .button-primary:active{  // Drupal Webform
 	// typography
 	color: $tint;
 	text-shadow: 0 -1px 0 $drop-shadow;
@@ -172,6 +175,8 @@ input.is-disabled:hover{
 .prime[disabled],
 .prime[disabled]:hover,
 input.prime.is-disabled,
-input.prime.is-disabled:hover{
+input.prime.is-disabled:hover,
+.webform-client-form .button-primary[disabled],  // Drupal Webform
+.webform-client-form .button-primary[disabled]:hover{  // Drupal
 	background: mix($tint, $evergreen-neue, 20%) none;
 }

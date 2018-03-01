@@ -234,12 +234,14 @@
 }
 
 .homepage-hero-copy h1{
-	font-size: 1.202rem;
-	line-height: 1.169925124792013;  //22.5/19.232
+	// box model
+	margin: 0;
+	// typopgraphy
+	color: $tint;
+	@include base-type-xxxl;
 
 	@include breakpoint($lil-groot){
 		//typography
-		color: $tint;
 		text-shadow: 0 2px 1px mix($shade, $blueberry-susan, 80%);
 	}
 
@@ -274,15 +276,15 @@
 .homepage-hero-copy-alt .homepage-hero-copy{
 
 	@include breakpoint($lil-groot){
-		//layout
+		// layout
 		align-self: flex-end;
 		float: right;
 	}
 
 	@include breakpoint($starlord){
 		//layout
-		align-self: flex-end;  //W3C
-		float: right;  //IE9
+		align-self: flex-end;  // W3C
+		float: right;  // IE9
 	}
 }
 
@@ -301,7 +303,6 @@
 	}
 
 	@include breakpoint($starlord){
-		height: auto;
 		width: 50%;
 	}
 

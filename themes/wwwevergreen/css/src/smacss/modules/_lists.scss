@@ -334,8 +334,8 @@
 .link-icon::before,
 .link-icon-alt::before{
 	// box model
-	height: 1rem;
-	width: 1rem;
+	height: 1em;
+	width: 1em;
 	// layout
 	display: inline-block;
 	overflow: hidden;
@@ -345,58 +345,65 @@
 	white-space: nowrap;
 	// decoration
 	background-repeat: no-repeat;
-	background-size: 1rem 1rem;
+	background-size: 1em 1em;
 	// misc
 	content: "";
 }
 
 .link-icon::after{
-	margin-left: 0.5em;
+	margin-left: 1ch;
 }
 
 .link-icon-alt::before{
-	margin-right: 0.5em;
+	margin-right: 1ch;
 }
 
 .icon-blog::before{
-	// backgrounds & borders
+	// decoration
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/blog32x32.png");
-	// misc
+	// miscellaneous
 	content: "Blog";
 }
 
 .icon-facebook::before{
-	// backgrounds & borders
-	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook32x32.png");
-	// misc
+	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/facebook.svg");
+	// miscellaneous
 	content: "Facebook";
 }
 
 .icon-instagram::before{
-	// backgrounds & borders
+	// decoration
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/instagram32x32.png");
-	// misc
+	// miscellaneous
 	content: "Instagram";
 }
 
+.icon-linkedin::before{
+	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/linkedin.svg");
+	// miscellaneous
+	content: "LinkedIn";
+}
+
 .icon-pinterest::before{
-	// backgrounds & borders
+	// decoration
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/pinterest32x32.png");
-	// misc
+	// miscellaneous
 	content: "Pinterest";
 }
 
 .icon-twitter::before{
-	// backgrounds & borders
-	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter32x32.png");
-	// misc
+	// decoration
+	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/twitter.svg");
+	// miscellaneous
 	content: "Twitter";
 }
 
 .icon-youtube::before{
-	// backgrounds & borders
+	// decoration
 	background-image: url("/sites/all/themes/wwwevergreen/images/icons/external/youtube32x32.png");
-	// misc
+	// miscellaneous
 	content: "YouTube";
 }
 
