@@ -38,7 +38,7 @@ if(count($quarters) == 1) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1] . '<br/>' . $quarters[2];
 }elseif(count($quarters) == 4) {
 	$quarters_intro .= $quarters[0] . '<br/>' . $quarters[1]  . '<br/>' . $quarters[2] . '<br/>' . $quarters[3] ;
-};?>
+}; ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php print $user_picture; ?>
@@ -149,17 +149,20 @@ if(count($quarters) == 1) {
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
 					<img alt=""
 					     class="listing-icon-time-offered listing-icon-day"
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg" title="Daytime"/>
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg"
+							 title="Daytime"/>
 		  <?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
 					<img alt=""
 					     class="listing-icon-time-offered listing-icon-evening"
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg" title="Evening"/>
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/evening.svg"
+							 title="Evening"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Weekend")!== false) {?>
 					<img alt=""
 					     class="listing-icon-time-offered listing-icon-weekend"
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg" title="Weekend"/>
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/weekend.svg"
+							 title="Weekend"/>
 			<?php } ?>
 		</div>
 
@@ -176,7 +179,7 @@ if(count($quarters) == 1) {
 		      // if graduate
 		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
 			<div class="listing-property-img">
-				<img alt="<?php print($field_curr_area)?>"
+				<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
 			</div>
 			<div class="listing-property-body">
@@ -216,27 +219,36 @@ if(count($quarters) == 1) {
 					if(end($content['field_class_standing']) != ($content['field_class_standing']) ){
 						print("–");
 						print_r( render(end($content['field_class_standing'])));
+					}else{
+						print(" Only");
 					};
 				}
 					// if there is a % freshmen, display it
 					if(isset($content['field_percent_freshman'])){
-						$test = (render($content['field_percent_freshman'][0]));
-						print("<br/><small class='small'> " . $test . " Reserved for Freshmen</small>");
+						print("<br/><small class='small'> " . render($content['field_percent_freshman'][0]) . " Reserved for Freshmen</small>");
 					} ?>
 			</div>
 		<?php	}?>
 	</div>
-
 	<?php // Credits amount standin ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-		<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-			<img alt="0"
-			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-		<?php }else{ ?>
-			<img alt="<?php print(render($content['group_details']['field_credits'][0]))?>"
-			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][0]))?>.svg"/>
-		<?php } ?>
+
+<?php 		 if(render($content['group_details']['field_credits'][0]) == '0'){?>
+					<img alt=""
+			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+<?php    } else {
+
+			 		  for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
+				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
+							 			<img alt=""
+							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+
+							<?php }
+						}
+					} ?>
+
+
 
 		<?php 		// adding the variable credit V if we already havent (credit = 0)
 		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
@@ -376,7 +388,7 @@ if (!$page){ ?>
 					</div>
 					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
-						<?php print render($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+						<?php printEach($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
 					</div>
 				</div>
 			<?php }; ?>
@@ -386,13 +398,10 @@ if (!$page){ ?>
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
 				<div class="fos keyword-list">
-					<b><?php print ("Fields of study:")?></b>
-
+					<b><?php print ("Fields of study:")?></b> 
 					<ul class="field-fields-of-study element-list">
-						<?php for($i = 0; $i < count($content['group_details']['field_fields_of_study'][0]); ++$i){?>
-							<li><?php print(render($content['group_details']['field_fields_of_study'][$i])); ?> </li>
-						<?php } ?>
-					</ul>
+					<?php printEach($content['group_details']['field_fields_of_study'], "<li>", "</li>"); ?>
+				</ul>
 				</div>
 	    <?php }; ?>
 
@@ -400,13 +409,15 @@ if (!$page){ ?>
 			// Preparatory Fields standin
 			// field_preparatory_for ?>
 			<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
-				<p><b><?php print ("This offering will prepare you for careers and advanced study in:")?></b> <?php print_r(render($content['group_details']['field_preparatory_for'][0])); ?></p>
+				<p><b><?php print ("This offering will prepare you for careers and advanced study in: ")?></b>
+					<?php printEach($content['group_details']['field_preparatory_for']); ?></p>
 			<?php }; ?>
 
 			<?php // Maximum enrollment standin
 			// field_maximum_enrollment ?>
 			<?php if(isset($content['field_maximum_enrollment'][0])) { ?>
-				<p><b><?php print ("Maximum enrollment:")?></b> <?php print_r(render($content['field_maximum_enrollment'][0])); ?></p>
+				<p><b><?php print ("Maximum enrollment:")?></b>
+					<?php printEach($content['field_maximum_enrollment']); ?></p>
 	    <?php }; ?>
 
 			<?php
@@ -452,7 +463,7 @@ if (!$page){ ?>
 	 							<?php } ?>
 	 					<?php } // end formatting loop ?>
 	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
-	 						print(render($content['group_details']['group_more']['field_online_learning'][0]));
+	 						printEach($content['group_details']['group_more']['field_online_learning']);
 	 					} ?>
 	 			<?php }; ?></div>
 
@@ -460,46 +471,55 @@ if (!$page){ ?>
 			// Special expenses standin
      	// field_special_expenses ?>
      	<?php if(isset($content['group_details']['group_more']['field_special_expenses'][0])) { ?>
-				<div><b><?php print ("Special expenses:")?></b> <?php print_r(render($content['group_details']['group_more']['field_special_expenses'][0])); ?></div>
+				<div><b><?php print ("Special expenses:")?></b>
+					<?php printEach($content['group_details']['group_more']['field_special_expenses']); ?></div>
 	    <?php }; ?>
 
 			<?php
 			// Fees standin
-			// field_fees (can be 0?) ?>
+			// field_fees (can be 0?) TODO fix p tags?>
 			<?php if(isset($content['group_details']['group_more']['field_fees'][0])) { ?>
-				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b> <?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
+				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b>
+					<?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
 	    <?php }; ?>
 
 	    <?php
-			// Upper division science credit standin
+			// Upper division science credit standin TODO fix p tags
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
-				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b> <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
+				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b>
+					 <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
 	    <?php }; ?>
 
 			<?php
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['group_details']['field_websites'][0])) { ?>
-				<div><b><?php print ("Special expenses:")?></b> <?php print_r(render($content['group_details']['field_websites'][0])); ?></div>
-			<?php }; ?>
+				<div><b><?php print ("Website:")?></b> <?
+					printEach($content['group_details']['field_websites']);?>
+					</div>
+				<?php }; ?>
+
 			<?php
 			// Internship op field standin
 			// field_internship_opportunities ?>
 			<?php if(isset($content['field_internship_opportunities'][0])) { ?>
-				<div><b><?php print ("Internship Opportunities:")?></b> <?php print(render($content['field_internship_opportunities'][0])); ?></div>
+				<div><b><?php print ("Internship Opportunities:")?></b>
+					<?php printEach($content['field_internship_opportunities']); ?></div>
 			<?php }; ?>
 			<?php
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['field_research_opportunities'][0])) { ?>
-				<div><b><?php print ("Research Opportunities:")?></b> <?php print(render($content['field_research_opportunities'][0])); ?></div>
+				<div><b><?php print ("Research Opportunities:")?></b>
+					<?php printEach($content['field_research_opportunities']); ?></div>
 			<?php }; ?>
 			<?php
 			// prereq field standin
 			// field_prerequisites ?>
 			<?php if(isset($content['group_prerequisites']['field_prerequisites'][0])) { ?>
-				<div><b><?php print ("Prerequisites:")?></b> <?php print(render($content['group_prerequisites']['field_prerequisites'][0])); ?></div>
+				<div><b><?php print ("Prerequisites:")?></b>
+					<?php printEach($content['group_prerequisites']['field_prerequisites']); ?></div>
 			<?php }; ?>
 
 
@@ -537,7 +557,8 @@ if (!$page){ ?>
 
 					<div class="listing-property-body">
 						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-							<p><b>Scheduled for:</b> <?php print render($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+							<p><b>Scheduled for:</b>
+								<?php printEach($content['group_details']['group_location_schedule']['field_time_offered']); ?>
 						<?php }; ?>
 						</div>
 					</div>
@@ -571,10 +592,10 @@ if (!$page){ ?>
 							<?php } ?>
 						</div>
 						<div class="listing-property-body">
-							<p><b>Located in:</b> <?php print render($content['group_details']['group_location_schedule']['field_location']); ?></p>
+							<p><b>Located in:</b> <?php printEach($content['group_details']['group_location_schedule']['field_location']); ?></p>
 							<?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
 								if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
-								<p><b>Off-campus location:</b> <?php print render($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+								<p><b>Off-campus location:</b> <?php printEach($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
 							<?php }; ?>
 						</div>
 				</div>
@@ -590,17 +611,17 @@ if (!$page){ ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
 					<p><b>Final schedule and room assignment:</b></p>
-					<?php print render($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
 				<?php }; ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
 					<p><b>Advertised schedule:</b></p>
-					<?php print (render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
 				<?php }; ?>
 
 				<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
 					<p><b>Additional details:</b></p>
-					<?php print render($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
+					<?php printEach($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
 				<?php }; ?>
 
 
@@ -610,156 +631,10 @@ if (!$page){ ?>
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
 					<p>
-						<?php print render($content['group_details']['group_more']['field_next_offered']); ?>
+						<?php printEach($content['group_details']['group_more']['field_next_offered']); ?>
 					</p>
 				<?php }; ?>
 			</div>
-      <!-- cutout of all content that is in the sidebar for now.
-
-      <section class="catalog-listing-registration">
-        <?php
-        /**
-         * Registration
-         */
-        ?>
-        <h2>Register for this offering</h2>
-        <?php
-        // Variable credit
-        // field_variable_credit_options (field_upper_division_boolean seems to be 1 on classes without upper credit too?)
-        ?>
-        <?php if(isset($content['field_variable_credit_options'][0])) { ?>
-          <h3>Variable Credit Options</h3>
-          <?php print_r(render($content['field_variable_credit_options'][0])); ?>
-        <?php }; ?>
-        <h3>How to Register</h3>
-        <ol>
-          <li>
-            <p>Copy the course reference number (CRN) for your class standing and desired number of credits.</p>
-          </li>
-          <li>
-            <p>Use your CRN at <a href="https://my.evergreen.edu">my.evergreen.edu</a> during your registration window. Check the academic calendar for <a href="/calendar/academic">upcoming registration deadlines</a>.</p>
-          </li>
-        </ol>
-        <p>Learn more about <a href="/registration/how-to">how to register</a>, including information about registering as a non-admitted (special) student.</p>
-
-        <?php
-        /**
-         * Course Reference Numbers
-         */
-        ?>
-        <?php // Course Reference Numbers Standin
-        // sidebar stuff here ?>
-        <h3>Course Reference Numbers</h3>
-        <?php //variable for dropping the H4 signature required to a nice italics version with a colon if needed?>
-        <?php $sig_required_h4 = "<h4>Signature Required</h4>"?>
-        <?php $sig_required_h4_italics = "<p><i>Signature Required:</i>"?>
-
-        <?php //Fall Registration ?>
-        <?php if(isset($content['field_fall_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Fall quarter</h4>
-              <?php
-                $fallref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_fall_registration'][0])));
-                // find out if our post actually has <p> tags in it at all
-                if ((strpos($fallref, "<p>")) !== false) {
-                  // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                  $fallref = substr_replace($fallref, "", (intval(strpos($fallref, "<p>"))), 3);
-                } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                  // that we added an opening one when we put our italics at the front of the paragraph
-                  $fallref = $fallref . "</p>";
-                };
-                if (strpos($fallref , $sig_required_h4) !== false) {
-                  $fallref = str_replace($sig_required_h4,$sig_required_h4_italics,$fallref);
-                };
-                // finally, print our result
-                print($fallref)
-              ?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Winter Registration ?>
-        <?php if(isset($content['field_winter_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Winter quarter</h4>
-              <?php
-                $winterref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_winter_registration'][0])));
-                // find out if our post actually has <p> tags in it at all
-                if ((strpos($winterref, "<p>")) !== false) {
-                  // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                  $winterref = substr_replace($winterref, "", (intval(strpos($winterref, "<p>"))), 3);
-                } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                  // that we added an opening one when we put our italics at the front of the paragraph
-                  $winterref = $winterref . "</p>";
-                };
-                if (strpos($winterref , $sig_required_h4) !== false) {
-                  $winterref = str_replace($sig_required_h4,$sig_required_h4_italics,$winterref);
-                };
-                //finally print our result
-                print($winterref)?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Spring Registration ?>
-        <?php if(isset($content['field_spring_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Spring quarter</h4>
-              <?php $springref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_spring_registration'][0])));
-              // find out if our post actually has <p> tags in it at all
-              if ((strpos($springref, "<p>")) !== false) {
-                // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                $springref = substr_replace($springref, "", (intval(strpos($springref, "<p>"))), 3);
-              } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                // that we added an opening one when we put our italics at the front of the paragraph
-                $springref = $springref . "</p>";
-              };
-              if (strpos($springref , $sig_required_h4) !== false) {
-                  $springref = str_replace($sig_required_h4,$sig_required_h4_italics,$springref);
-              };
-              //finally print our result
-              print($springref)?>
-            </div>
-          </div>
-        <?php }; ?>
-
-        <?php //Summer Registration ?>
-        <?php if(isset($content['field_summer_registration'])) { ?>
-          <div class="compound">
-            <div class="compound-img">
-            </div>
-            <div class="compound-body">
-              <h4>Summer quarter</h4>
-              <?php $summerref = (str_replace("<h4>Course Reference Numbers</h4>","",render($content['field_summer_registration'][0])));
-              // find out if our post actually has <p> tags in it at all
-              if ((strpos($summerref, "<p>")) !== false) {
-                // if it does, we're just going to remove the first <p> tag since we put it in front of "Signature Required"
-                $summerref = substr_replace($summerref, "", (intval(strpos($summerref, "<p>"))), 3);
-              } else { // else we have a quarter description that doesn't have any <p> tags, and we need to add a closing one now
-                // that we added an opening one when we put our italics at the front of the paragraph
-                $summerref = $summerref . "</p>";
-              };
-              if (strpos($summerref , $sig_required_h4) !== false) {
-                $summerref = str_replace($sig_required_h4,$sig_required_h4_italics,$summerref);
-              };
-              //finally print our result
-              print($summerref)?>
-            </div>
-          </div>
-        <?php }; ?>
-      </section><?php ///.catalog-listing-registration ?>
-
-      end cutout for duplicate content in sidebar for now-->
-
 		</div> <!-- /.program-description -->
 
 		<?php
@@ -768,8 +643,24 @@ if (!$page){ ?>
 		 */
 		?>
 		<?php // revisions, do we want these in the new design? ?>
-		<?php print render($content['field_revisions']); ?>
+		<?php printEach($content['field_revisions']); ?>
+
+
+		<?php
+		function printEach($passedcontent, $put_front = "", $put_after= "")
+		//takes a content (not yet rendered) renderable array and prints all the items out
+		// put_front will be put in front of each element, and put after, after
+		// front and after are optional parameters and default to ""
+		{
+			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
+				if(isset($passedcontent[$i])){
+					print($put_front);
+					print(render($passedcontent[$i]));
+					print($put_after);
+				}
+			}
+		}
+		?>
 	</div> <!-- /.content -->
-	<?php // do we even need this? ?>
-	<?php // print render($content['comments']); ?>
+
 </div>
