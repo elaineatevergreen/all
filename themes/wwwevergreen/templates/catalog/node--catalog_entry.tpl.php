@@ -474,7 +474,7 @@ if (!$page){ ?>
 			// field_fees (can be 0?) TODO fix p tags?>
 			<?php if(isset($content['group_details']['group_more']['field_fees'][0])) { ?>
 				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b>
-					<?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
+					<?php printEach($content['group_details']['group_more']['field_fees']); ?></div>
 	    <?php }; ?>
 
 	    <?php
@@ -482,7 +482,7 @@ if (!$page){ ?>
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
 				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b>
-					 <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
+					 <?php printEach($content['field_upper_division']); ?></p>
 	    <?php }; ?>
 
 			<?php
