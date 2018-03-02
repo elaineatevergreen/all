@@ -99,18 +99,17 @@
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<!-- SVG -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg?cache=1" rel="icon" type="image/svg+xml"/><!-- Firefox -->
-	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg?cache=1" rel="mask-icon"/><!-- Safari 9+ -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg?cache=2" rel="icon" type="image/svg+xml"/><!-- Firefox -->
+	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg?cache=2" rel="mask-icon"/><!-- Safari 9+ -->
 	<!-- Config -->
 	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/browserconfig.xml" name="msapplication-config"/><!-- Windows, Edge -->
-	<link rel="manifest" href="<?php print base_path() . path_to_theme() ?>/images/favicons/site.webmanifest?cache=1" type="application/manifest+json"/><!-- Android Chrome -->
+	<link rel="manifest" href="<?php print base_path() . path_to_theme() ?>/images/favicons/site.webmanifest?cache=2" type="application/manifest+json"/><!-- Android Chrome -->
 	<!-- PNG -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png?cache=1" rel="apple-touch-icon" sizes="276x276"/><!-- Homescreen icon, iOS, Android -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png?cache=2" rel="apple-touch-icon" sizes="276x276"/><!-- Homescreen icon, iOS, Android -->
 	<!-- Favicons for everybody else -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png?cache=1" rel="icon" sizes="16x16" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=1" rel="icon" sizes="24x24" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=1" rel="icon" sizes="32x32" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-64.png?cache=1" rel="icon" sizes="64x64" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png?cache=2" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=2" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-48.png?cache=2" rel="icon" sizes="48x48" type="image/png"/>
 	<!-- ICO -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
 	
