@@ -551,8 +551,7 @@ if (!$page){ ?>
 
 					<div class="listing-property-body">
 						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-							<p><b>Scheduled for:</b>
-								<?php printEach($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+							<p><b>Scheduled for:</b> <?php printEach($content['group_details']['group_location_schedule']['field_time_offered']); ?>
 						<?php }; ?>
 						</div>
 					</div>
