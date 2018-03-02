@@ -233,23 +233,29 @@ if(count($quarters) == 1) {
 	<?php // Credits amount standin ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-			<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-				<img alt=""
-			       src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-			<?php } else {
-				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
-					if(isset($content['group_details']['field_credits'][$i])){  ?>
-						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
-						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
-					<?php }
-				}
-			} ?>
 
-			<?php 		// adding the variable credit V if we already havent (credit = 0)
-			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
-				<img alt="Variable"
-				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-			<?php } ?>
+<?php 		 if(render($content['group_details']['field_credits'][0]) == '0'){?>
+					<img alt=""
+			     		 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+<?php    } else {
+
+			 		  for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
+				 	  	if(isset($content['group_details']['field_credits'][$i])){  ?>
+							 			<img alt=""
+							 					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+
+							<?php }
+						}
+					} ?>
+
+
+
+		<?php 		// adding the variable credit V if we already havent (credit = 0)
+		if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
+			<img alt=""
+			     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+		<?php } ?>
+
 
 		</div>
 		<div class="listing-property-body"> <?php
@@ -474,7 +480,7 @@ if (!$page){ ?>
 			// field_fees (can be 0?) TODO fix p tags?>
 			<?php if(isset($content['group_details']['group_more']['field_fees'][0])) { ?>
 				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b>
-					<?php print (substr(render($content['group_details']['group_more']['field_fees'][0]), 3, -4)); ?></div>
+					<?php printEach($content['group_details']['group_more']['field_fees']); ?></div>
 	    <?php }; ?>
 
 	    <?php
@@ -482,7 +488,7 @@ if (!$page){ ?>
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
 				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b>
-					 <?php print (substr(render($content['field_upper_division'][0]), 3, -4)); ?></p>
+					 <?php printEach($content['field_upper_division']); ?></p>
 	    <?php }; ?>
 
 			<?php
