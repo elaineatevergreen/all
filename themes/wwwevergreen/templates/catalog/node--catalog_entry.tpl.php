@@ -583,6 +583,7 @@ if (!$page){ ?>
 									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 											 title="Tribal MPA"/>
 							<?php } ?>
+						</p>
 						</div>
 						<div class="listing-property-body">
 							<p><b>Located in:</b> <?php printEach($content['group_details']['group_location_schedule']['field_location']); ?></p>
