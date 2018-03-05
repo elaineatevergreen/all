@@ -234,7 +234,7 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 			<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-				<img alt=""
+				<img alt="Variable"
 			       src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 			<?php } else {
 				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
