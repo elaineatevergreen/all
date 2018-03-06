@@ -4638,7 +4638,7 @@ input:checked + .header-dropdown {
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
 .main-content .content > dl:last-child > dd:last-child::after {
-  width: 16.414px;
+  height: 18px;
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -5196,7 +5196,7 @@ input:checked + .header-dropdown {
  * 
  * See: https://www.evergreen.edu/financialservices/tuition-2017-18
  */
-/* line 322, ../src/smacss/_modules.scss */
+/* line 323, ../src/smacss/_modules.scss */
 .fulltime-cutoff-row td {
   border-bottom-width: 3px;
   border-bottom-color: #919191;
@@ -7647,12 +7647,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 364, ../src/smacss/_modules.scss */
+/* line 365, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 369, ../src/smacss/_modules.scss */
+/* line 370, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7673,13 +7673,13 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 386, ../src/smacss/_modules.scss */
+/* line 387, ../src/smacss/_modules.scss */
 .news-date {
   font-size: 0.875rem;
   line-height: 1.33928571428571;
 }
 
-/* line 390, ../src/smacss/_modules.scss */
+/* line 391, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8005,14 +8005,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 412, ../src/smacss/_modules.scss */
+/* line 413, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 422, ../src/smacss/_modules.scss */
+/* line 423, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8031,24 +8031,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 441, ../src/smacss/_modules.scss */
+/* line 442, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 445, ../src/smacss/_modules.scss */
+/* line 446, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 453, ../src/smacss/_modules.scss */
+/* line 454, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 461, ../src/smacss/_modules.scss */
+/* line 462, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8059,30 +8059,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 472, ../src/smacss/_modules.scss */
+/* line 473, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 476, ../src/smacss/_modules.scss */
+/* line 477, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 476, ../src/smacss/_modules.scss */
+  /* line 477, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 476, ../src/smacss/_modules.scss */
+  /* line 477, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 489, ../src/smacss/_modules.scss */
+/* line 490, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
