@@ -46,9 +46,8 @@
 	<div class="logo h-card">
 		<a class="u-url" href="/">
 			<picture>
-				<source media="(min-width: 125em)" srcset="<?php echo($imagepath) ?>evergreen-wide-tree-oly.svg" type="image/svg+xml"/>
-				<source srcset="<?php echo($imagepath) ?>evergreen-long-tree-oly.svg" type="image/svg+xml"/>
-				<img alt="Logo of The Evergreen State College&#8212;Olympia, Washington" class="p-name p-org u-logo" src="<?php echo($imagepath) ?>logo.png" srcset="<?php echo($imagepath) ?>evergreen-long-tree-oly.svg"/>
+				<source media="(min-width: 125em)" srcset="<?php echo($imagepath) ?>evergreen-logo-primary.svg" type="image/svg+xml"/>
+				<img alt="Logo of The Evergreen State College&#8212;Olympia, Washington" class="p-name p-org u-logo" src="<?php echo($imagepath) ?>logo.png" srcset="<?php echo($imagepath) ?>evergreen-logo-secondary.svg"/>
 			</picture>
 		</a>
 	</div>
