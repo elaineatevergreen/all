@@ -185,26 +185,23 @@ input:checked + .header-dropdown{
 
 .logo img{
 	// box sizing
-	min-height: 2.25em;  // “evergreen” is 18px tall (i.e. step 1)
-	max-height: 4.21428571em;  // “evergreen is 29px tall (i.e. step 3)
+	min-height: 3.42857143em;  // “evergreen” is 18px tall (i.e. step 1)
+	max-height: 5.42857143em;  // “evergreen is ~29.233px tall (i.e. step 3)
 	// layout
 	display: block;
 
 	@include breakpoint($gamora){
-		//height: 3.38888889em;  // “olympia” is 18px tall (i.e. step 1)
-		height: 3.61111111em;  // “olympia” is 19px tall (i.e. step 2)
-		//min-height: 3.27777778em;  // “evergreen” is 29px tall (i.e. step 3)
-		//max-height: 3.44444444em;  // “evergreen” is 31px tall (i.e. step 4)
+		height: 4.3333333333em;  // “olympia” is 18px tall (i.e. step 1)
 	}
 
 	/*@include breakpoint($drax){
-		min-height: 3.44444444em;  // “evergreen” is 31px tall (i.e. step 4)
-		max-height: 5.27777778em;  // “evergreen” is 47px tall (i.e. step 5)
+		min-height: 3.44444444em;  // “evergreen” is ~31px tall (i.e. step 4)
+		max-height: 5.27777778em;  // “evergreen” is ~47px tall (i.e. step 5)
 	}*/
 
 	@include breakpoint($groot){
 		margin: 0 auto;
-		height: 6.34315426em;  // 122px; “olympia” is 19px tall (i.e. step 2)
+		height: 7.53899481em;  // 145px; “evergreen” is ~29.233px tall (i.e. step 2)
 		//min-height: 6.13518199em;  // 118px; “evergreen” is 31px tall (i.e. step 4)
 		//max-height: 6.34315426em;  // 122px; “olympia” is 19px tall (i.e. step 2)
 		max-height: none;  // max-height doesn't center correctly in Blink.
