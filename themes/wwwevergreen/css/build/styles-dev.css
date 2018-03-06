@@ -2960,7 +2960,7 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 20em) {
   /* line 140, ../src/smacss/modules/_header.scss */
   .logo {
-    width: calc(60% - 1ch);
+    width: calc(60% - 2ch);
     float: left;
   }
 }
@@ -2999,12 +2999,25 @@ input:checked + .header-dropdown {
 
 /* line 186, ../src/smacss/modules/_header.scss */
 .logo img {
-  max-height: 4em;
+  min-height: 2.25em;
+  max-height: 4.21428571em;
+  display: block;
+  /*@include breakpoint($drax){
+  	min-height: 3.44444444em;  // “evergreen” is 31px tall (i.e. step 4)
+  	max-height: 5.27777778em;  // “evergreen” is 47px tall (i.e. step 5)
+  }*/
+}
+@media screen and (min-width: 43em) {
+  /* line 186, ../src/smacss/modules/_header.scss */
+  .logo img {
+    height: 3.61111111em;
+  }
 }
 @media screen and (min-width: 125em) {
   /* line 186, ../src/smacss/modules/_header.scss */
   .logo img {
     margin: 0 auto;
+    height: 6.34315426em;
     max-height: none;
     max-width: 20em;
   }
@@ -3015,7 +3028,7 @@ input:checked + .header-dropdown {
  *
  * @section mod-header-search
  */
-/* line 201, ../src/smacss/modules/_header.scss */
+/* line 220, ../src/smacss/modules/_header.scss */
 [for="q"] {
   height: 0;
   width: 0;
@@ -3024,18 +3037,18 @@ input:checked + .header-dropdown {
   position: absolute;
 }
 
-/* line 209, ../src/smacss/modules/_header.scss */
+/* line 228, ../src/smacss/modules/_header.scss */
 .off-canvas {
   margin-right: 1ch;
 }
 @media screen and (min-width: 43em) {
-  /* line 209, ../src/smacss/modules/_header.scss */
+  /* line 228, ../src/smacss/modules/_header.scss */
   .off-canvas {
     margin-right: 0;
   }
 }
 
-/* line 217, ../src/smacss/modules/_header.scss */
+/* line 236, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   padding: 0 0.618em;
@@ -3045,37 +3058,37 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 217, ../src/smacss/modules/_header.scss */
+  /* line 236, ../src/smacss/modules/_header.scss */
   .search-toggle,
   .student-toggle {
     display: none;
   }
 }
 
-/* line 233, ../src/smacss/modules/_header.scss */
+/* line 252, ../src/smacss/modules/_header.scss */
 .search-toggle {
   border-radius: 0 0 4.5px;
 }
 
-/* line 237, ../src/smacss/modules/_header.scss */
+/* line 256, ../src/smacss/modules/_header.scss */
 .student-toggle {
   border-right: 1px solid #303030;
   border-radius: 0 0 0 4.5px;
 }
 
-/* line 242, ../src/smacss/modules/_header.scss */
+/* line 261, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   border-bottom-width: 0;
 }
 
-/* line 247, ../src/smacss/modules/_header.scss */
+/* line 266, ../src/smacss/modules/_header.scss */
 .search-toggle:hover,
 .student-toggle:hover {
   cursor: pointer;
 }
 
-/* line 255, ../src/smacss/modules/_header.scss */
+/* line 274, ../src/smacss/modules/_header.scss */
 .search-toggle > img,
 .student-toggle > img {
   margin: 0.46875rem auto;
@@ -3083,35 +3096,35 @@ input:checked + .header-dropdown {
   display: block;
 }
 
-/* line 262, ../src/smacss/modules/_header.scss */
+/* line 281, ../src/smacss/modules/_header.scss */
 #top-search-query,
 #q,
 .top-search button {
   margin-bottom: 0;
 }
 
-/* line 268, ../src/smacss/modules/_header.scss */
+/* line 287, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* line 272, ../src/smacss/modules/_header.scss */
+/* line 291, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-moz-placeholder {
   color: transparent;
 }
 
-/* line 276, ../src/smacss/modules/_header.scss */
+/* line 295, ../src/smacss/modules/_header.scss */
 [placeholder]:focus:-ms-placeholder {
   color: transparent;
 }
 
-/* line 280, ../src/smacss/modules/_header.scss */
+/* line 299, ../src/smacss/modules/_header.scss */
 .internal-users,
 .search-tools {
   margin-bottom: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 280, ../src/smacss/modules/_header.scss */
+  /* line 299, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.125rem;
@@ -3119,7 +3132,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 280, ../src/smacss/modules/_header.scss */
+  /* line 299, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
@@ -3127,7 +3140,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 293, ../src/smacss/modules/_header.scss */
+/* line 312, ../src/smacss/modules/_header.scss */
 .search-tools {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3141,13 +3154,13 @@ input:checked + .header-dropdown {
   white-space: nowrap;
 }
 @media screen and (min-width: 70em) {
-  /* line 293, ../src/smacss/modules/_header.scss */
+  /* line 312, ../src/smacss/modules/_header.scss */
   .search-tools {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 293, ../src/smacss/modules/_header.scss */
+  /* line 312, ../src/smacss/modules/_header.scss */
   .search-tools {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3156,51 +3169,51 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 311, ../src/smacss/modules/_header.scss */
+/* line 330, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
 @media screen and (min-width: 125em) {
-  /* line 311, ../src/smacss/modules/_header.scss */
+  /* line 330, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 317, ../src/smacss/modules/_header.scss */
+  /* line 336, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
 }
 
-/* line 323, ../src/smacss/modules/_header.scss */
+/* line 342, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 323, ../src/smacss/modules/_header.scss */
+  /* line 342, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 323, ../src/smacss/modules/_header.scss */
+  /* line 342, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 335, ../src/smacss/modules/_header.scss */
+/* line 354, ../src/smacss/modules/_header.scss */
 .search-tools img {
   width: 1.5ch;
   display: inline-block;
 }
 @media screen and (min-width: 43em) {
-  /* line 335, ../src/smacss/modules/_header.scss */
+  /* line 354, ../src/smacss/modules/_header.scss */
   .search-tools img {
     width: 1ch;
   }
 }
 
-/* line 346, ../src/smacss/modules/_header.scss */
+/* line 365, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3208,7 +3221,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 353, ../src/smacss/modules/_header.scss */
+/* line 372, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3577,18 +3590,18 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 377, ../src/smacss/modules/_header.scss */
+/* line 396, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  /* line 377, ../src/smacss/modules/_header.scss */
+  /* line 396, ../src/smacss/modules/_header.scss */
   .site-name {
     z-index: 0;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 377, ../src/smacss/modules/_header.scss */
+  /* line 396, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3598,12 +3611,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 396, ../src/smacss/modules/_header.scss */
+/* line 415, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 396, ../src/smacss/modules/_header.scss */
+  /* line 415, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
