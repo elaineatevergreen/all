@@ -138,14 +138,18 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.46875rem 1ch;  // 7.5px
+	margin: 0.46875rem 0.9375rem;  // 7.5px 15px
 	width: calc(100% - 1em);
 
 	@include breakpoint($lil-groot){
 		// box model
-		width: calc(60% - 2ch);
+		width: calc(60% - 1.875rem);  // 30px
 		// layout
 		float: left;
+	}
+	
+	@include breakpoint($starlord){
+		margin:  0.9375rem 0.9375rem 1.40625rem;  // 15px 15px 22.5px
 	}
 
 	@include breakpoint($gamora){
