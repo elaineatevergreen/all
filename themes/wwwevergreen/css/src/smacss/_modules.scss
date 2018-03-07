@@ -294,9 +294,6 @@
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
 .main-content .content > dl:last-child > dd:last-child::after{
-	// box model
-	height: 18px;
-	//width: 16.414px;  // makes height equal to 18px
 	// layout
 	display: inline-block;  // Chrome, Safari
 	// typography
