@@ -460,10 +460,13 @@ if (!$page){ ?>
 	 					<?php } // end formatting loop ?>
 	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
 	 						printEach($content['group_details']['group_more']['field_online_learning']);
-	 					} ?>
-	 			<?php };*/
+	 					}*/ ?>
+	 			<?php 
+		 		print(render($content['group_details']['group_more']['field_online_learning']));	
+		 			
+		 		}; // end check for existence of online learning field
 	 			
-	 			print(render($content['group_details']['group_more']['field_online_learning']));
+	 			
 	 			
 	 			?></div>
 
