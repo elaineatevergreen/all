@@ -6,7 +6,7 @@
 /**
  * @file
  */
-dpm($content['group_details']['group_more']['field_online_learning']);
+dpm($content['group_details']);
 
 // TODO
 // bolding issues /inconsistant inputted content with advertised schedule:
