@@ -420,7 +420,9 @@ if (!$page){ ?>
 				 * TODO: move this out of the template to a tamper or something]
 				 */
 				 // field_online_learning ?>
-	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
+	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { 
+		 			/*
+	 			?>
 	 				<div><b><?php print ("Online learning:"); ?></b>
 	 				<?php $ol_format_flag = False; //using a flag to find if we've applied any of our custom formatting rules?>
 	 						<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
@@ -459,7 +461,11 @@ if (!$page){ ?>
 	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
 	 						printEach($content['group_details']['group_more']['field_online_learning']);
 	 					} ?>
-	 			<?php }; ?></div>
+	 			<?php };*/
+	 			
+	 			print(render($content['group_details']['group_more']['field_online_learning']));
+	 			
+	 			?></div>
 
 	    <?php
 			// Special expenses standin
