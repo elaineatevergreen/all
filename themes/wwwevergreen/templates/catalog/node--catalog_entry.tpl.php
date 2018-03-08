@@ -6,7 +6,8 @@
 /**
  * @file
  */
-dpm($content['group_details']);
+// why isn't the dpm working?
+//dpm($content['group_details']);
 
 // TODO
 // bolding issues /inconsistant inputted content with advertised schedule:
@@ -422,48 +423,9 @@ if (!$page){ ?>
 				 // field_online_learning ?>
 	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
 	 				<div><b><?php print ("Online learning:"); ?></b>
-	 				<?php
-		 				
-		 				/* $ol_format_flag = False; //using a flag to find if we've applied any of our custom formatting rules?>
-	 						<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
-	 						<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
-	 						<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
-	 						<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
-	 							<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
-	 								<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
-	 								<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
-	 								<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
-	 								<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
-	 								<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
-	 								<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
-	 								<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 					<?php } // end formatting loop ?>
-	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
-	 						printEach($content['group_details']['group_more']['field_online_learning']);
-	 					}*/ ?>
 	 			<?php 
-		 			if(count($content['group_details']['group_more']['field_online_learning']) == 1) { print "just one."; };
-		 		print(render($content['group_details']['group_more']['field_online_learning']));	
+		 			/* please add an if/then so if there's multiples just do a regular render, if only one, no list */
+		 			print(render($content['group_details']['group_more']['field_online_learning']));	
 		 			
 		 		}; // end check for existence of online learning field
 	 			
