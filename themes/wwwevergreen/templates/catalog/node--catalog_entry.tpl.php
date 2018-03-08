@@ -462,7 +462,7 @@ if (!$page){ ?>
 	 						printEach($content['group_details']['group_more']['field_online_learning']);
 	 					}*/ ?>
 	 			<?php 
-		 			if(count($content['group_details']['group_more']['field_online_learning']) == 1) { print "just one."; };
+		 			print("<h2>" . count($content['group_details']['group_more']['field_online_learning']) . "</h2>");
 		 		print(render($content['group_details']['group_more']['field_online_learning']));	
 		 			
 		 		}; // end check for existence of online learning field
