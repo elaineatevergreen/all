@@ -130,7 +130,7 @@ function clickFunction() {
     var CSV;
     if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
         CSV = document.getElementById('selCSV');
-        CSV = CSV.options[CSV.selectedIndex].value;
+        CSV = CSV.options[1].value; 
         CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
         //console.log(CSV);
         //gets file name from selected csv 
