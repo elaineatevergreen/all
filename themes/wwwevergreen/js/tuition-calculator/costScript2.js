@@ -127,8 +127,8 @@ function clickFunction() {
   
   
   jQuery(document).ready(function ($) {
-    var CSV;
-    if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
+    var CSV = "notdefined";
+    if(CSV == "notdefined" ){
         CSV = document.getElementById('selCSV');
         CSV = CSV.options[1].value; 
         CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
