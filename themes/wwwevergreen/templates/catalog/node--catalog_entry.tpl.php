@@ -415,22 +415,23 @@ if (!$page){ ?>
 					<?php printEach($content['field_maximum_enrollment']); ?></p>
 	    <?php }; ?>
 
-			<?php
-				/**
-				 * Online Learning standin
-				 * TODO: move this out of the template to a tamper or something]
-				 */
+	 <?php //Online Learning standin
 				 // field_online_learning ?>
 	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
 	 				<div><b><?php print ("Online learning:"); ?></b>
-	 			<?php 
-		 			/* please add an if/then so if there's multiples just do a regular render, if only one, no list */
-		 			print(render($content['group_details']['group_more']['field_online_learning']));	
-		 			
+	 			<?php
+				if(sizeof($content['group_details']['group_more']['field_online_learning']['#items']) > 1 ){
+					// if ther eis multiples do regular render
+					print(render($content['group_details']['group_more']['field_online_learning']));
+
+				}else{ // if it's a single just do the single no list field
+					printEach($content['group_details']['group_more']['field_online_learning']);
+
+				}
 		 		}; // end check for existence of online learning field
-	 			
-	 			
-	 			
+
+
+
 	 			?></div>
 
 	    <?php
