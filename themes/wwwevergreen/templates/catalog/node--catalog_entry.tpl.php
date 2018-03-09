@@ -6,11 +6,7 @@
 /**
  * @file
  */
-// why isn't the dpm working?
 //dpm($content['group_details']);
-
-// TODO
-// bolding issues /inconsistant inputted content with advertised schedule:
 
 
 
