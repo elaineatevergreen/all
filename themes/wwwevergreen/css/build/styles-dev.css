@@ -2975,7 +2975,7 @@ input:checked + .header-dropdown {
 @media screen and (min-width: 20em) {
   /* line 140, ../src/smacss/modules/_header.scss */
   .logo {
-    width: calc(60% - 1ch);
+    width: calc(60% - 2ch);
     float: left;
   }
 }
@@ -3014,12 +3014,25 @@ input:checked + .header-dropdown {
 
 /* line 186, ../src/smacss/modules/_header.scss */
 .logo img {
-  max-height: 4em;
+  min-height: 3.42857143em;
+  max-height: 5.42857143em;
+  display: block;
+  /*@include breakpoint($drax){
+  	min-height: 3.44444444em;  // “evergreen” is ~31px tall (i.e. step 4)
+  	max-height: 5.27777778em;  // “evergreen” is ~47px tall (i.e. step 5)
+  }*/
+}
+@media screen and (min-width: 43em) {
+  /* line 186, ../src/smacss/modules/_header.scss */
+  .logo img {
+    height: 4.3333333333em;
+  }
 }
 @media screen and (min-width: 125em) {
   /* line 186, ../src/smacss/modules/_header.scss */
   .logo img {
     margin: 0 auto;
+    height: 7.53899481em;
     max-height: none;
     max-width: 20em;
   }
@@ -3030,7 +3043,7 @@ input:checked + .header-dropdown {
  *
  * @section mod-header-search
  */
-/* line 201, ../src/smacss/modules/_header.scss */
+/* line 217, ../src/smacss/modules/_header.scss */
 [for="q"] {
   height: 0;
   width: 0;
@@ -3039,18 +3052,18 @@ input:checked + .header-dropdown {
   position: absolute;
 }
 
-/* line 209, ../src/smacss/modules/_header.scss */
+/* line 225, ../src/smacss/modules/_header.scss */
 .off-canvas {
   margin-right: 1ch;
 }
 @media screen and (min-width: 43em) {
-  /* line 209, ../src/smacss/modules/_header.scss */
+  /* line 225, ../src/smacss/modules/_header.scss */
   .off-canvas {
     margin-right: 0;
   }
 }
 
-/* line 217, ../src/smacss/modules/_header.scss */
+/* line 233, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   padding: 0 0.618em;
@@ -3060,37 +3073,37 @@ input:checked + .header-dropdown {
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 217, ../src/smacss/modules/_header.scss */
+  /* line 233, ../src/smacss/modules/_header.scss */
   .search-toggle,
   .student-toggle {
     display: none;
   }
 }
 
-/* line 233, ../src/smacss/modules/_header.scss */
+/* line 249, ../src/smacss/modules/_header.scss */
 .search-toggle {
   border-radius: 0 0 4.5px;
 }
 
-/* line 237, ../src/smacss/modules/_header.scss */
+/* line 253, ../src/smacss/modules/_header.scss */
 .student-toggle {
   border-right: 1px solid #67973b;
   border-radius: 0 0 0 4.5px;
 }
 
-/* line 242, ../src/smacss/modules/_header.scss */
+/* line 258, ../src/smacss/modules/_header.scss */
 .search-toggle,
 .student-toggle {
   border-bottom-width: 0;
 }
 
-/* line 247, ../src/smacss/modules/_header.scss */
+/* line 263, ../src/smacss/modules/_header.scss */
 .search-toggle:hover,
 .student-toggle:hover {
   cursor: pointer;
 }
 
-/* line 255, ../src/smacss/modules/_header.scss */
+/* line 271, ../src/smacss/modules/_header.scss */
 .search-toggle > img,
 .student-toggle > img {
   margin: 0.46875rem auto;
@@ -3098,35 +3111,35 @@ input:checked + .header-dropdown {
   display: block;
 }
 
-/* line 262, ../src/smacss/modules/_header.scss */
+/* line 278, ../src/smacss/modules/_header.scss */
 #top-search-query,
 #q,
 .top-search button {
   margin-bottom: 0;
 }
 
-/* line 268, ../src/smacss/modules/_header.scss */
+/* line 284, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-/* line 272, ../src/smacss/modules/_header.scss */
+/* line 288, ../src/smacss/modules/_header.scss */
 [placeholder]:focus::-moz-placeholder {
   color: transparent;
 }
 
-/* line 276, ../src/smacss/modules/_header.scss */
+/* line 292, ../src/smacss/modules/_header.scss */
 [placeholder]:focus:-ms-placeholder {
   color: transparent;
 }
 
-/* line 280, ../src/smacss/modules/_header.scss */
+/* line 296, ../src/smacss/modules/_header.scss */
 .internal-users,
 .search-tools {
   margin-bottom: 0;
 }
 @media screen and (min-width: 32em) {
-  /* line 280, ../src/smacss/modules/_header.scss */
+  /* line 296, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.125rem;
@@ -3134,7 +3147,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 280, ../src/smacss/modules/_header.scss */
+  /* line 296, ../src/smacss/modules/_header.scss */
   .internal-users,
   .search-tools {
     font-size: 1.202rem;
@@ -3142,7 +3155,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 293, ../src/smacss/modules/_header.scss */
+/* line 309, ../src/smacss/modules/_header.scss */
 .search-tools {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3156,13 +3169,13 @@ input:checked + .header-dropdown {
   white-space: nowrap;
 }
 @media screen and (min-width: 70em) {
-  /* line 293, ../src/smacss/modules/_header.scss */
+  /* line 309, ../src/smacss/modules/_header.scss */
   .search-tools {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 293, ../src/smacss/modules/_header.scss */
+  /* line 309, ../src/smacss/modules/_header.scss */
   .search-tools {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3171,51 +3184,51 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 311, ../src/smacss/modules/_header.scss */
+/* line 327, ../src/smacss/modules/_header.scss */
 .search-tools li {
   display: inline;
 }
 @media screen and (min-width: 125em) {
-  /* line 311, ../src/smacss/modules/_header.scss */
+  /* line 327, ../src/smacss/modules/_header.scss */
   .search-tools li {
     display: block;
   }
-  /* line 317, ../src/smacss/modules/_header.scss */
+  /* line 333, ../src/smacss/modules/_header.scss */
   .search-tools li:after {
     content: "";
   }
 }
 
-/* line 323, ../src/smacss/modules/_header.scss */
+/* line 339, ../src/smacss/modules/_header.scss */
 .search-tools .internal-users-alt {
   display: none;
 }
 @media screen and (min-width: 43em) {
-  /* line 323, ../src/smacss/modules/_header.scss */
+  /* line 339, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: inline;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 323, ../src/smacss/modules/_header.scss */
+  /* line 339, ../src/smacss/modules/_header.scss */
   .search-tools .internal-users-alt {
     display: block;
   }
 }
 
-/* line 335, ../src/smacss/modules/_header.scss */
+/* line 351, ../src/smacss/modules/_header.scss */
 .search-tools img {
   width: 1.5ch;
   display: inline-block;
 }
 @media screen and (min-width: 43em) {
-  /* line 335, ../src/smacss/modules/_header.scss */
+  /* line 351, ../src/smacss/modules/_header.scss */
   .search-tools img {
     width: 1ch;
   }
 }
 
-/* line 346, ../src/smacss/modules/_header.scss */
+/* line 362, ../src/smacss/modules/_header.scss */
 .menu-button,
 .search-toggle,
 .student-toggle {
@@ -3223,7 +3236,7 @@ input:checked + .header-dropdown {
   line-height: 1.66666666666667;
 }
 
-/* line 353, ../src/smacss/modules/_header.scss */
+/* line 369, ../src/smacss/modules/_header.scss */
 .top-nav,
 .top-nav-list,
 .menu-button,
@@ -3592,18 +3605,18 @@ input:checked + .header-dropdown {
  * The name of the department’s site, e.g. About Evergreen, Web
  * Resources, or Registration
  */
-/* line 377, ../src/smacss/modules/_header.scss */
+/* line 393, ../src/smacss/modules/_header.scss */
 .site-name {
   margin-top: 3.75rem;
 }
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  /* line 377, ../src/smacss/modules/_header.scss */
+  /* line 393, ../src/smacss/modules/_header.scss */
   .site-name {
     z-index: 0;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 377, ../src/smacss/modules/_header.scss */
+  /* line 393, ../src/smacss/modules/_header.scss */
   .site-name {
     margin-right: 1em;
     margin-left: 1em;
@@ -3613,12 +3626,12 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 396, ../src/smacss/modules/_header.scss */
+/* line 412, ../src/smacss/modules/_header.scss */
 .site-name h1 {
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-height: 35em) {
-  /* line 396, ../src/smacss/modules/_header.scss */
+  /* line 412, ../src/smacss/modules/_header.scss */
   .site-name h1 {
     margin-bottom: calc(30 / 16 * 1rem);
   }
@@ -4406,12 +4419,34 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 32, ../src/smacss/modules/_footer.scss */
+@supports (grid-template: none) {
+  @media screen and (min-width: 70em) {
+    /* line 35, ../src/smacss/modules/_footer.scss */
+    .page-footer-grid {
+      margin-left: 0;
+      display: grid;
+      grid-gap: 2ch;
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    /* line 44, ../src/smacss/modules/_footer.scss */
+    .page-footer-unit {
+      padding-left: 0;
+      width: auto;
+    }
+
+    /* line 49, ../src/smacss/modules/_footer.scss */
+    .page-footer-unit--placeholder {
+      display: none;
+    }
+  }
+}
+/* line 55, ../src/smacss/modules/_footer.scss */
 .page-footer-unit-central {
   text-align: center;
 }
 
-/* line 36, ../src/smacss/modules/_footer.scss */
+/* line 59, ../src/smacss/modules/_footer.scss */
 .page-footer:after,
 .page-footer:before {
   clear: both;
@@ -4419,7 +4454,7 @@ input:checked + .header-dropdown {
   content: "";
 }
 
-/* line 45, ../src/smacss/modules/_footer.scss */
+/* line 68, ../src/smacss/modules/_footer.scss */
 .page-footer a,
 .page-footer a:link,
 .page-footer a:visited {
@@ -4428,14 +4463,14 @@ input:checked + .header-dropdown {
           text-decoration-color: #3c5823;
 }
 
-/* line 54, ../src/smacss/modules/_footer.scss */
+/* line 77, ../src/smacss/modules/_footer.scss */
 .page-footer a:hover {
   color: #0086ee;
   -webkit-text-decoration-color: #0086ee;
           text-decoration-color: #0086ee;
 }
 
-/* line 61, ../src/smacss/modules/_footer.scss */
+/* line 84, ../src/smacss/modules/_footer.scss */
 .page-footer a:focus {
   background-color: rgba(242, 242, 242, 0.1);
   outline-color: #f2f2f2;
@@ -4444,14 +4479,14 @@ input:checked + .header-dropdown {
   outline-width: 1px;
 }
 
-/* line 70, ../src/smacss/modules/_footer.scss */
+/* line 93, ../src/smacss/modules/_footer.scss */
 .page-footer-unit .lineup {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 70, ../src/smacss/modules/_footer.scss */
+  /* line 93, ../src/smacss/modules/_footer.scss */
   .page-footer-unit .lineup {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -4465,7 +4500,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 85, ../src/smacss/modules/_footer.scss */
+/* line 108, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4473,14 +4508,14 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 93, ../src/smacss/modules/_footer.scss */
+/* line 116, ../src/smacss/modules/_footer.scss */
 .tagline-footer p {
   color: #616161;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 93, ../src/smacss/modules/_footer.scss */
+  /* line 116, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4490,7 +4525,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 93, ../src/smacss/modules/_footer.scss */
+  /* line 116, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
@@ -4660,20 +4695,10 @@ input:checked + .header-dropdown {
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
 .main-content .content > dl:last-child > dd:last-child::after {
+  display: inline-block;
+  vertical-align: middle;
   white-space: nowrap;
-  content: " " url("/sites/all/themes/wwwevergreen/images/endnote.png");
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5625), (min-resolution: 150dpi) {
-  /* line 300, ../src/smacss/_modules.scss */
-  .main-content .content > p:last-child::after,
-  .main-content .content > ul:last-child > li:last-child::after,
-  .main-content .content > ol:last-child > li:last-child::after,
-  .main-content .content > dl:last-child > dd:last-child::after {
-    width: 16.414px;
-    display: inline-block;
-    vertical-align: middle;
-    content: " " url("/sites/all/themes/wwwevergreen/images/endnote.svg");
-  }
+  content: " " url("/sites/all/themes/wwwevergreen/images/endnote.svg");
 }
 
 /**
@@ -5227,7 +5252,7 @@ input:checked + .header-dropdown {
  * 
  * See: https://www.evergreen.edu/financialservices/tuition-2017-18
  */
-/* line 333, ../src/smacss/_modules.scss */
+/* line 327, ../src/smacss/_modules.scss */
 .fulltime-cutoff-row td {
   border-bottom-width: 3px;
   border-bottom-color: #707f89;
@@ -7678,12 +7703,12 @@ p.alert,
 /**
  * O. News
  */
-/* line 375, ../src/smacss/_modules.scss */
+/* line 369, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 380, ../src/smacss/_modules.scss */
+/* line 374, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #e7dade;
   height: calc(100% - 1em);
@@ -7704,13 +7729,13 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 397, ../src/smacss/_modules.scss */
+/* line 391, ../src/smacss/_modules.scss */
 .news-date {
   font-size: 0.875rem;
   line-height: 1.33928571428571;
 }
 
-/* line 401, ../src/smacss/_modules.scss */
+/* line 395, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8047,14 +8072,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 423, ../src/smacss/_modules.scss */
+/* line 417, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 433, ../src/smacss/_modules.scss */
+/* line 427, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8073,24 +8098,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 452, ../src/smacss/_modules.scss */
+/* line 446, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 456, ../src/smacss/_modules.scss */
+/* line 450, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 464, ../src/smacss/_modules.scss */
+/* line 458, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 472, ../src/smacss/_modules.scss */
+/* line 466, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8101,30 +8126,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 483, ../src/smacss/_modules.scss */
+/* line 477, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 487, ../src/smacss/_modules.scss */
+/* line 481, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 487, ../src/smacss/_modules.scss */
+  /* line 481, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 487, ../src/smacss/_modules.scss */
+  /* line 481, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 500, ../src/smacss/_modules.scss */
+/* line 494, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
