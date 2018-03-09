@@ -18,9 +18,9 @@
  */
 .is-current-section{
 	// typography
-	color: $tint;
+	color: $cloud;
 	// decoration
-	background-color: $evergreen-old-style;
+	background-color: $moss;
 }
 
 .is-current-section a,
@@ -29,7 +29,7 @@
 .is-current-section .is-explored-section:hover,
 .is-current-section .is-explored-section:focus,
 .is-current-section .is-explored-section:active{
-	background-color: $evergreen-old-style;
+	background-color: $moss;
 }
 
 /**
@@ -54,7 +54,7 @@
 	color: $tint;
 	font-weight: bold;
 	// decoration
-	background-color: $blueberry-susan;
+	background-color: $oregon-grape-dark;
 }
 
 .is-hidden{

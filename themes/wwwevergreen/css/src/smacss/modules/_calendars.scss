@@ -40,13 +40,13 @@
 	// layout
 	display: block;
 	// typography
-	color: $tint;
+	color: $cloud;
 	@include small-type;
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	// decoration
-	background-color: $wine;
+	background-color: $blush-dark;
 }
 
 .calendar-dt-mini{  // A calendar that starts small and then expands to normal size.

@@ -1,5 +1,141 @@
 /**
- * 2012 Colors
+ * Color Swatches
+ *
+ * Color swatches in the style guide.
+ *
+ * See: http://wwwtest.evergreen.edu/styleguide/color-tables
+ *
+ * Table of Contents
+ *
+ *  I. 2018 Colors
+ * II. 2012 Colors (Deprecated)
+ */
+
+/**
+ * I. 2018 Colors
+ *
+ * Color palette developed by GMMB.
+ */
+.table__swatch--forest{
+	background-color: $forest;
+}
+
+.table__swatch--stone{
+	background-color: $stone;
+}
+
+.table__swatch--cloud{
+	background-color: $cloud;
+}
+
+.table__swatch--moss{
+	background-color: $moss;
+}
+
+.table__swatch--moss-light{
+	background-color: $moss-light;
+}
+
+.table__swatch--forest-dark{
+	background-color: $forest-dark;
+}
+
+.table__swatch--salmonberry{
+	background-color: $salmonberry;
+}
+
+.table__swatch--salmonberry-light{
+	background-color: $salmonberry-light;
+}
+
+.table__swatch--salmonberry-medium{
+	background-color: $salmonberry-medium;
+}
+
+.table__swatch--salmonberry-dark{
+	background-color: $salmonberry-dark;
+}
+
+.table__swatch--rubber-geoducky{
+	background-color: $rubber-geoducky;
+}
+
+.table__swatch--rubber-geoducky-light{
+	background-color: $rubber-geoducky-light;
+}
+
+.table__swatch--rubber-geoducky-medium{
+	background-color: $rubber-geoducky-medium;
+}
+
+.table__swatch--rubber-geoducky-dark{
+	background-color: $rubber-geoducky-dark;
+}
+
+.table__swatch--sky{
+	background-color: $sky;
+}
+
+.table__swatch--sky-light{
+	background-color: $sky-light;
+}
+
+.table__swatch--sky-medium{
+	background-color: $sky-medium;
+}
+
+.table__swatch--sky-dark{
+	background-color: $sky-dark;
+}
+
+.table__swatch--oregon-grape{
+	background-color: $oregon-grape;
+}
+
+.table__swatch--oregon-grape-light{
+	background-color: $oregon-grape-light;
+}
+
+.table__swatch--oregon-grape-medium{
+	background-color: $oregon-grape-medium;
+}
+
+.table__swatch--oregon-grape-dark{
+	background-color: $oregon-grape-dark;
+}
+
+.table__swatch--blush{
+	background-color: $blush;
+}
+
+.table__swatch--blush-light{
+	background-color: $blush-light;
+}
+
+.table__swatch--blush-medium{
+	background-color: $blush-medium;
+}
+
+.table__swatch--blush-dark{
+	background-color: $blush-dark;
+}
+
+.table__swatch--stone-light{
+	background-color: $stone-light;
+}
+
+.table__swatch--stone-medium{
+	background-color: $stone-medium;
+}
+
+.table__swatch--stone-dark{
+	background-color: $stone-dark;
+}
+
+
+
+/**
+ * II. 2012 Colors
  */
 // sass-lint:disable no-color-literals
 .morning-light{
@@ -237,91 +373,4 @@
 
 .wine-s-80{
 	background-color: mix(black, $wine, 80%);
-}
-
-/**
- * Pre-2012 Colors
- *
- * This color palette is deprecated, but do note that Evergreen Old Style
- * and Black are held over to the new colors.
- */
-$red-old-style: #7c1300;
-$gold-old-style: #960;
-$blue-old-style: #205f7a;
-
-.red-old-style{
-	background-color: #7c1300;
-}
-
-.gold-old-style{
-	background-color: #960;
-}
-
-.blue-old-style{
-	background-color: #205f7a;
-}
-
-//20% Tint
-.red-old-style-t-20{
-	background-color: mix(white, $red-old-style, 20%);
-}
-
-.gold-old-style-t-20{
-	background-color: mix(white, $gold-old-style, 20%);
-}
-
-.blue-old-style-t-20{
-	background-color: mix(white, $blue-old-style, 20%);
-}
-
-//40% Tint
-.red-old-style-t-40{
-	background-color: mix(white, $red-old-style, 40%);
-}
-
-.gold-old-style-t-40{
-	background-color: mix(white, $gold-old-style, 40%);
-}
-
-.blue-old-style-t-40{
-	background-color: mix(white, $blue-old-style, 40%);
-}
-
-//60% Tint
-.red-old-style-t-60{
-	background-color: mix(white, $red-old-style, 60%);
-}
-
-.gold-old-style-t-60{
-	background-color: mix(white, $gold-old-style, 60%);
-}
-
-.blue-old-style-t-60{
-	background-color: mix(white, $blue-old-style, 60%);
-}
-
-//80% Tint
-.red-old-style-t-80{
-	background-color: mix(white, $red-old-style, 80%);
-}
-
-.gold-old-style-t-80{
-	background-color: mix(white, $gold-old-style, 80%);
-}
-
-.blue-old-style-t-80{
-	background-color: mix(white, $blue-old-style, 80%);
-}
-
-//90% Tint
-.red-old-style-t-90{
-	background-color: mix(white, $red-old-style, 90%);
-}
-
-.gold-old-style-t-90{
-	background-color: mix(white, $gold-old-style, 90%);
-}
-
-.blue-old-style-t-90{
-	background-color: mix(white, $blue-old-style, 90%);
 }

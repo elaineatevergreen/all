@@ -181,7 +181,7 @@
 	// box model
 	margin: 1.17010764990379em 0;  // 22.5/19.229
 	// typography
-	color: mix($shade, $evergreen-neue, 20%);
+	color: $forest;
 	@include base-type-xl;
 
 	@include breakpoint($gamora){
@@ -202,13 +202,13 @@
 }
 
 .intro-alt{
-	color: mix($tint, $shade, 20%);
+	color: $stone-medium;
 	font-weight: bold;
-	text-shadow: 2px 2px 1px $tint;
+	text-shadow: 2px 2px 1px $cloud;
 }
 
 .byline{
-	color: mix($shade, $evergreen-neue, 60%);
+	color: $forest;
 	@include small-type;
 	letter-spacing: 0.1ch;
 	text-transform: uppercase;
@@ -218,6 +218,12 @@
 	}
 }
 
+/**
+ * Fast Facts - Deprecated
+ *
+ * A style for presenting “fast facts” in an attractive way. I don't think
+ * we're using these styles anymore. —jkm
+ */
 .big-fact{
 	@include base-type-xl;
 
@@ -235,7 +241,7 @@
 .fast-fact,
 .fast-fact-alt{
 	// box model
-	border: 0.25ch solid $evergreen-neue;
+	border: 0.25ch solid $moss;
 	height: 100%;
 	padding: 0 1ch;
 	// layout
@@ -271,7 +277,7 @@
 	// layout
 	display: block;
 	// typography
-	color: $evergreen-neue;
+	color: $forest;
 	font-size: 1.945rem;  // 31.112px  Step 4
 	font-weight: normal;
 	line-height: 1.44638724607868;  // 45/31.112
@@ -281,6 +287,7 @@
 		line-height: 1.27326358678352;  // 60/47.123
 	}
 }
+/* End Fast Facts section */
 
 .p-tel{
 	white-space: nowrap;
@@ -321,7 +328,7 @@
 	// box model
 	border-bottom-width: 3px;
 	// decoration
-	border-bottom-color: mix($tint, $shade, 60%);
+	border-bottom-color: $stone;
 	border-bottom-style: double;
 }
 
@@ -366,7 +373,7 @@
 
 .news-story{
 	// box model
-	border: 1px solid mix($tint, $blueberry-susan, 80%);
+	border: 1px solid $oregon-grape-light;
 	height: calc(100% - 1em);
 	margin-bottom: 1em;
 	padding: 1em 1em 0;
@@ -375,9 +382,9 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	// typography
-	color: mix($tint, $shade, 20%);
+	color: $stone-medium;
 	// decoration
-	background-color: $tint;
+	background-color: $cloud;
 	border-radius: 2px;
 }
 

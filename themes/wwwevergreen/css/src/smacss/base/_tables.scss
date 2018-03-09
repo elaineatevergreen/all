@@ -68,7 +68,7 @@ th{
 	border-bottom-width: 0;  // Drupal theme override
 	padding: 0 2ch 0 0;
 	// typography
-	color: $shade;
+	color: $stone-dark;
 	vertical-align: bottom;
 }
 
@@ -87,7 +87,7 @@ td{
 
 tbody > tr:first-child > th,
 tbody > tr:first-child > td{
-	border-top-color: $shade;
+	border-top-color: $stone-dark;
 }
 
 th:last-child,
@@ -97,7 +97,7 @@ td:last-child{
 
 td strong,
 tfoot td{
-	color: $shade;
+	color: $stone-dark;
 	font-weight: bold;
 }
 
@@ -140,7 +140,7 @@ table a{
 
 .horizontal-table tr:first-child th{
 	// box model
-	border-top: 1px solid $shade;
+	border-top: 1px solid $stone-dark;
 }
 
 .horizontal-table:last-child{
@@ -167,7 +167,7 @@ table a{
 }
 
 .striped-table > tbody > tr:nth-child(odd){
-	background-color: mix($tint, $blueberry-susan, 90%);
+	background-color: $oregon-grape-light;
 }
 
 /**
