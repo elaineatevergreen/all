@@ -128,7 +128,7 @@ h1{
 	}
 
 	@include breakpoint($drax){
-		color: mix($tint, $shade, 33.33333%);
+		color: $stone;
 		font-weight: bold;
 	}
 
@@ -145,7 +145,7 @@ h2{
 	// box model
 	margin-top: 1.56014353320505em;  // 30/19.229
 	// typography
-	color: mix($tint, $black, 40%);
+	color: $stone;
 	@include base-type-xl;
 	font-family: $display-face-alt;
 	font-weight: bold;
@@ -173,7 +173,7 @@ h3{
 	// box model
 	margin-top: 1.66666666666667em;  // 30/18
 	// typography
-	color: mix($tint, $black, 20%);
+	color: $stone-medium;
 	font-family: $display-face-alt;
 	@include base-type-lg;
 	font-weight: normal;
@@ -218,7 +218,7 @@ h5{
 	// box model
 	margin-top: 2.14285714285714em;  // 30/14
 	// typography
-	color: mix($tint, $black, 40%);
+	color: $stone;
 	font-size: 0.875rem;  // 14px  Step 0.5
 	font-weight: bold;
 	letter-spacing: 0.1em;
@@ -238,7 +238,7 @@ h6{
 	margin-top: 2.69784172661871em;  // 30/11.12
 	margin-bottom: 1.34892086330935em;  // 15/11.12
 	// typography
-	color: mix($tint, $black, 40%);
+	color: $stone;
 	@include small-type;
 	font-weight: normal;
 	letter-spacing: 0.1em;
@@ -343,21 +343,21 @@ a,
 	//box model
 	//border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
 	//typography
-	color: $blueberry-susan;
+	color: $oregon-grape-dark;
 	font-weight: bold;
 	// decoration
-	text-decoration: underline mix($tint, $blueberry-susan, 75%);
+	text-decoration: underline $oregon-grape-light;
 	text-decoration-skip: ink;
 	// movement
-	transition: color 0.2s, border-color 0.2s ease;
+	transition: color 0.2s ease,
+	/*.      */ text-decoration 0.2s ease;
 }
 
 a:visited{
 	// typography
 	color: $wine;
 	// decoration
-	//border-bottom-color: mix($tint, $wine, 75%);
-	text-decoration-color: mix($tint, $wine, 75%);
+	text-decoration-color: $blush-dark;
 }
 
 a:hover,
@@ -365,16 +365,15 @@ a:hover,
 .search-tools a:hover,
 .tertiary-nav-list a:hover{
 	// typography
-	color: $sky-blue;
+	color: $sky;
 	// decoration
-	//border-bottom-color: $sky-blue;
-	text-decoration-color: $sky-blue;
+	text-decoration-color: $sky;
 }
 
 a:focus,
 a:active{
 	// decoration
-	background-color: transparentize($blueberry-susan, 0.9);
+	background-color: transparentize($oregon-grape-dark, 0.9);
 	outline-width: 0;
 }
 
@@ -392,7 +391,7 @@ a:active{
 	&,
 	&:visited{
 		color: $tint;
-		text-shadow: 0 1px 3px mix($shade, $blueberry-susan, 60%);
+		text-shadow: 0 1px 3px $oregon-grape-dark;
 
 		/*@include breakpoint($drax){
 			text-shadow:
@@ -406,7 +405,7 @@ a:active{
     }*/
 
 		@include breakpoint($drax){
-			color: $evergreen-old-style;
+			color: $stone-medium;
 			font-weight: normal;
 			text-shadow: 0 1px 2px $tint;
 		}
@@ -444,10 +443,11 @@ figcaption p{
 	margin-bottom: 1.34892086330935em;  // 15/11.12
 }
 
+/* Small text in the footer. */
 small{
 
 	[role="contentinfo"] &{
-		color: mix($tint, $shade, 80%);
+		color: $stone-light;
 	}
 }
 
@@ -461,7 +461,7 @@ small{
 
 abbr{
 	// box model
-	border-bottom: 1px dotted mix($tint, $black, 75%);
+	border-bottom: 1px dotted $stone-light;
 	// typography
 	text-decoration: none;
 	// misc
@@ -515,5 +515,5 @@ hr{
 	margin: 2.65625rem 0;  // 42.5/16 - So, 42.5 * 2 + 5 = 90
 	width: 100%;
 	// decoration
-	background-color: $evergreen-neue;
+	background-color: $moss-light;
 }

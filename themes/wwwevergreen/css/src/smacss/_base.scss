@@ -34,8 +34,10 @@ body{
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	// typography
+	color: $stone-dark;
 	// decoration
-	background-color: $tint;
+	background-color: $cloud;
 }
 
 img,

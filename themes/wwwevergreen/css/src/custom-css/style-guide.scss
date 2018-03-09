@@ -73,6 +73,10 @@ ul.banned-list{
 	color: $tint;
 }
 
+.is-low-contrast{
+	font-weight: bold;
+}
+
 /*body::after{
 	padding: 0 1em;
 	position: fixed;

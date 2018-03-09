@@ -83,7 +83,7 @@
 
 	@include breakpoint($lil-groot){
 		// box model
-		border-left: 1px solid mix($tint, $shade, 20%);
+		border-left: 1px solid $moss;
 		// layout
 		align-items: stretch;
 		display: flex;
@@ -134,7 +134,7 @@
 		// typography
 		color: $tint;
 		// decoration
-		background-color: mix($tint, $blueberry-susan, 40%);
+		background-color: $sky-medium;
 		// misc
 		box-shadow: 0 0 1px $highlight inset,
 		/*        */0 0 1em transparentize($highlight, 0.75) inset;
@@ -142,7 +142,7 @@
 	}
 
 	&:focus{
-		background-color: $blueberry-susan;
+		background-color: $sky-dark;
 	}
 
 	@include breakpoint($lil-groot){
@@ -188,7 +188,7 @@
  */
 .secondary-nav-list{
 	// box model
-	border-top: 1px solid $evergreen-old-style;
+	border-top: 1px solid $moss;
 	margin: 0;
 	padding: 0;
 	// typography
@@ -196,7 +196,7 @@
 	// list
 	list-style-type: none;
 	// decoration
-	background: $evergreen-neue url("/sites/all/themes/wwwevergreen/images/texture-1.png");
+	background: $forest url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 
 	@include breakpoint($lil-groot){
 		// layout
@@ -293,13 +293,13 @@
 		// typography
 		color: $tint;
 		// decoration
-		background-color: mix($tint, $blueberry-susan, 40%);
+		background-color: $sky;
 		// misc
 		box-shadow: 0 0 2px $highlight inset;
 		transition: all 0.1s ease-out;
 	}
 
 	&:focus{
-		background-color: $blueberry-susan;
+		background-color: $sky-medium;
 	}
 }

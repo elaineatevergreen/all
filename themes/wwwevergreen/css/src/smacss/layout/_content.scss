@@ -29,7 +29,7 @@
 
 	@include breakpoint($drax){
 		// box model
-		border-top: 4px solid $evergreen-old-style;
+		border-top: 4px solid $stone;
 		margin-top: -4px;  // Compensates for 4px top border and maintains 15px vertical cadence.
 		// decoration
 		border-radius: 2px;
@@ -39,12 +39,12 @@
 .index-wrapper,
 .primary-content-wrapper{
 	// box model
-	border-top: 5px solid $evergreen-old-style;
+	border-top: 5px solid $stone;
 	margin: -5px 0 0 2ch;  // Compensate for 5px border
 	padding: 0;
 	width: calc(100% - 3ch);
 	// decoration
-	background-color: transparentize($tint, 0.05);
+	background-color: transparentize($cloud, 0.05);
 	border-radius: 2px;
 
 	@include breakpoint($gamora){
@@ -79,7 +79,7 @@
 // Wraps all the content on most pages on the site.
 .primary-content-wrapper{
 	// box model
-	border-bottom: 2px dashed $evergreen-neue;
+	border-bottom: 2px dashed $moss;
 
 	@include breakpoint($drax){
 		border-bottom: 0;
@@ -96,7 +96,7 @@
 	// layout
 	overflow: hidden;
 	// decoration
-	background-color: transparentize($tint, 0.05);
+	background-color: transparentize($cloud, 0.05);
 
 	@include breakpoint($gamora){
 		// box model
@@ -181,12 +181,12 @@
 
 	@include breakpoint($drax){
 		//box model
-		border-left: 1px solid mix($tint, $shade, 80%);
+		border-left: 1px solid $stone;
 		margin: calc(45 / 16 * 1rem) 1em 0 0;
 		padding-left: 1em;
 		//typography
 		@include base-type;
-		color: mix($tint, $shade, 20%);
+		color: $stone-medium;
 	}
 
 	@include breakpoint($groot){

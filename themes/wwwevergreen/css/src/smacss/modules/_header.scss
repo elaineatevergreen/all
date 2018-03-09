@@ -67,7 +67,7 @@ input:checked + .header-dropdown{
 	// typography
 	font-family: $display-face-alt;
 	// decoration
-	background-color: mix($tint, $blueberry-susan, 80%);
+	background-color: $oregon-grape-light;
 
 	@include breakpoint($drax){
 		font-family: $display-face;
@@ -106,7 +106,7 @@ input:checked + .header-dropdown{
 	margin: 0;
 	padding: 0.9375rem 1em;  // 15px
 	overflow: hidden;
-	background-color: mix($tint, $evergreen-neue, 80%);
+	background-color: $moss-light;
 
 	@include breakpoint($gamora){
 		// box model
@@ -235,7 +235,7 @@ input:checked + .header-dropdown{
 }
 
 .student-toggle{
-	border-right: 1px solid mix($tint, $shade, 20%);
+	border-right: 1px solid $moss;
 	border-radius: 0 0 0 4.5px;
 }
 
@@ -247,7 +247,7 @@ input:checked + .header-dropdown{
 .search-toggle:hover,
 .student-toggle:hover{
 	// backgrounds & borders
-	//background-color: $blueberry-susan; // Causes a weird bug on mobile that keeps active link purple
+	//background-color: $oregon-grape-dark; // Causes a weird bug on mobile that keeps active link purple
 	// misc
 	cursor: pointer;
 }
@@ -356,8 +356,8 @@ input:checked + .header-dropdown{
 .search-toggle,
 .student-toggle,
 .top-nav-list .active{
-	color: $tint;
-	background-color: $evergreen-neue;
+	color: $cloud;
+	background-color: $forest;
 }
 
 /**
