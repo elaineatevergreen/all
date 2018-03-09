@@ -6,10 +6,7 @@
 /**
  * @file
  */
-//dpm($content['field_summer_session']);
-
-// TODO
-// bolding issues /inconsistant inputted content with advertised schedule:
+//dpm($content['group_details']);
 
 
 
@@ -414,52 +411,24 @@ if (!$page){ ?>
 					<?php printEach($content['field_maximum_enrollment']); ?></p>
 	    <?php }; ?>
 
-			<?php
-				/**
-				 * Online Learning standin
-				 * TODO: move this out of the template to a tamper or something]
-				 */
+	 <?php //Online Learning standin
 				 // field_online_learning ?>
 	 			<?php if(isset($content['group_details']['group_more']['field_online_learning'][0])) { ?>
 	 				<div><b><?php print ("Online learning:"); ?></b>
-	 				<?php $ol_format_flag = False; //using a flag to find if we've applied any of our custom formatting rules?>
-	 						<?php render($content['group_details']['group_more']['field_online_learning'][0]); #making this accessible?>
-	 						<?php $ol_content_array = explode(",",$content['group_details']['group_more']['field_online_learning'][0]['#children']); ?>
-	 						<?php $ol_content_array[0] = " " . $ol_content_array[0] # adding a space to the first value so they're consistant ?>
-	 						<?php for($i = 0; $i < count($ol_content_array); ++$i){?>
-	 							<?php if (strpos($ol_content_array[$i], '(F)') !== false) {  # if it says fall ?>
-	 								<li><?php print("Fall:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (F) ?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(FW)') !== false) {  # if it says fall-winter ?>
-	 								<li><?php print("Fall and Winter:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (FW)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(W)') !== false) {  # if it says winter ?>
-	 								<li><?php print("Winter:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (W) ?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(WS)') !== false) {  # if it says winter-spring ?>
-	 								<li><?php print("Winter and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4))); #remove the (WS)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(S)') !== false) {  # if it says spring ?>
-	 								<li><?php print("Spring:")?><?php print(render(substr($ol_content_array[$i],0,-3))); #remove the (S)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(FS)') !== false) {  # if it says fall-spring ?>
-	 								<li><?php print("Fall and Spring:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (FS)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 							<?php if (strpos($ol_content_array[$i], '(SU)') !== false) {  # if it says summer ?>
-	 								<li><?php print("Summer:")?><?php print(render(substr($ol_content_array[$i],0,-4)));  #remove the (SU)?></li>
-	 								<?php $ol_format_flag = True; //flag if we've custom formatted?>
-	 							<?php } ?>
-	 					<?php } // end formatting loop ?>
-	 					<?php if ($ol_format_flag == False){ // if we had no custom formatting applied, print the whole thing normally
-	 						printEach($content['group_details']['group_more']['field_online_learning']);
-	 					} ?>
-	 			<?php }; ?></div>
+	 			<?php
+				if(sizeof($content['group_details']['group_more']['field_online_learning']['#items']) > 1 ){
+					// if ther eis multiples do regular render
+					print(render($content['group_details']['group_more']['field_online_learning']));
+
+				}else{ // if it's a single just do the single no list field
+					printEach($content['group_details']['group_more']['field_online_learning']);
+
+				}
+		 		}; // end check for existence of online learning field
+
+
+
+	 			?></div>
 
 	    <?php
 			// Special expenses standin
@@ -583,6 +552,7 @@ if (!$page){ ?>
 									     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
 											 title="Tribal MPA"/>
 							<?php } ?>
+						</p>
 						</div>
 						<div class="listing-property-body">
 							<p><b>Located in:</b> <?php printEach($content['group_details']['group_location_schedule']['field_location']); ?></p>
@@ -624,7 +594,7 @@ if (!$page){ ?>
 			<div class="box note">
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
 					<p>
-						<?php printEach($content['group_details']['group_more']['field_next_offered']); ?>
+						<?php print(render($content['group_details']['group_more']['field_next_offered'])); ?>
 					</p>
 				<?php }; ?>
 			</div>
@@ -644,6 +614,7 @@ if (!$page){ ?>
 		//takes a content (not yet rendered) renderable array and prints all the items out
 		// put_front will be put in front of each element, and put after, after
 		// front and after are optional parameters and default to ""
+		// this function does not print the key, only the elements recursively.
 		{
 			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
 				if(isset($passedcontent[$i])){
