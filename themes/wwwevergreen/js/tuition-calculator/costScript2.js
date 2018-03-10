@@ -137,6 +137,7 @@ function clickFunction() {
         $.ajax({
           type: 'GET',
           url: CSV,
+          async: false,
           // The name of the CSV currently being used.
           dataType: 'text',
           error: function () {
