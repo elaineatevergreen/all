@@ -421,7 +421,7 @@ if (!$page){ ?>
 					print(render($content['group_details']['group_more']['field_online_learning']));
 
 				}else{ // if it's a single just do the single no list field
-					printEach($content['group_details']['group_more']['field_online_learning']);
+					print(render($content['group_details']['group_more']['field_online_learning']));
 
 				}
 		 		}; // end check for existence of online learning field
