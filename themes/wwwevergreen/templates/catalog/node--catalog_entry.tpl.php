@@ -93,29 +93,19 @@ if(count($quarters) == 1) {
 		<div class="listing-property-img">
 			<!-- Printing the location based on where we are -->
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Olympia")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"
-							 title="Olympia"/>
+					<img alt="Olympia" src="/sites/all/themes/wwwevergreen/images/icons/catalog/olympia.svg"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tacoma")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg"
-							 title="Tacoma"/>
+					<img alt="Tacoma" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tacoma.svg" />
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Grays Harbor")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"
-							 title="Grays Harbor"/>
+					<img alt="Grays Harbor" src="/sites/all/themes/wwwevergreen/images/icons/catalog/grays-harbor.svg"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
-							 title="Tribal"/>
+					<img alt="Tribal" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"/>
 			<?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_location'][0]),"Tribal MPA")!== false) {?>
-					<img alt=""
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"
-							 title="Tribal MPA"/>
+					<img alt="Tribal MPA" src="/sites/all/themes/wwwevergreen/images/icons/catalog/tribal.svg"/>
 			<?php } ?>
 
 
@@ -123,9 +113,7 @@ if(count($quarters) == 1) {
 			<?php // Study abroad standin with additional details
 			      // Include Study Abroad icon, if relevant
 			if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				<img alt=""
-				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"
-						 title="Study Abroad"/>
+				<img alt="Study Abroad" src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg" />
 			<?php }; ?>
 		</div>
 
@@ -227,29 +215,39 @@ if(count($quarters) == 1) {
 			</div>
 		<?php	}?>
 	</div>
+	
 	<?php // Credits amount standin ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-			<?php if(render($content['group_details']['field_credits'][0]) == '0'){?>
-				<img alt="Variable"
-			       src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-			<?php } else {
+			<?php 
+				// if the only amount of credits is 0, that means this is a purely variable credits offering.
+				if(render($content['group_details']['field_credits'][0]) == '0'){
+			?>
+				<img alt="Variable" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<?php 
+				// otherwise, iterate through the credit options and get the svg for that number
+				} else {
 				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
 					if(isset($content['group_details']['field_credits'][$i])){  ?>
 						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
 						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
-					<?php }
-				}
-			} ?>
+			<?php 
+					} // end check for whether value exists
+				} //end loop for values
+			} // end check for 0 credits
+		?>
 
-			<?php 		// adding the variable credit V if we already havent (credit = 0)
+			<?php 		
+			// if there's a variable credit option in an offering with other credit options, display variable credit image	
+			// adding the variable credit V if we already haven't (credit = 0)
 			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
 				<img alt="Variable"
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 			<?php } ?>
-
-		</div>
-		<div class="listing-property-body"> <?php
+		</div> <!-- end #listing-property-image -->
+		
+		<div class="listing-property-body"> 
+		<?php
 			if(isset($content['group_details']['field_credits'][0])) {
 				// check to see if credit data value is 0, and if set, display v credits
 				if(render($content['group_details']['field_credits'][0]) == '0'){
@@ -261,7 +259,7 @@ if(count($quarters) == 1) {
 				}else {
 					print " Credits per quarter";
 				}
-			}else{  // If the value isn't set, print no credit Available
+			}else{  // If the value isn't set, print no credit available
 				print ("Credit information not available.<br/><small class='small'>See below for more info.</small>");
 			}
 			# if the variable credit option exists, but it's not (0cred) version, print the text below the default credit value text
@@ -269,8 +267,8 @@ if(count($quarters) == 1) {
 					print ("</br><small class='small'>Variable Credit Options Available</small>");
 				}
 			?>
-		</div>
-	</div>
+		</div> <!-- end #listing-property-image -->
+	</div> <!-- end #listing-property (credits) -->
 </header>
 
 <?php
@@ -423,12 +421,9 @@ if (!$page){ ?>
 				}else{ // if it's a single just do the single no list field
 					print(render($content['group_details']['group_more']['field_online_learning']));
 
-				}
-		 		}; // end check for existence of online learning field
-
-
-
-	 			?></div>
+				}?>
+				</div>
+		 		<?php }; // end check for existence of online learning field ?>
 
 	    <?php
 			// Special expenses standin
