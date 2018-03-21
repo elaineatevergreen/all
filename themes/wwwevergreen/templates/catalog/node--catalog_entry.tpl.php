@@ -421,12 +421,9 @@ if (!$page){ ?>
 				}else{ // if it's a single just do the single no list field
 					print(render($content['group_details']['group_more']['field_online_learning']));
 
-				}
-		 		}; // end check for existence of online learning field
-
-
-
-	 			?></div>
+				}?>
+				</div>
+		 		<?php }; // end check for existence of online learning field ?>
 
 	    <?php
 			// Special expenses standin
