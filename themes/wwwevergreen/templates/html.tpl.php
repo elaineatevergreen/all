@@ -99,7 +99,7 @@
 	<meta content="Evergreen" name="apple-mobile-web-app-title" />
 	
 	<!-- SVG -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg?cache=2" rel="icon" type="image/svg+xml"/><!-- Firefox -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.svg?cache=3" rel="icon" type="image/svg+xml"/><!-- Firefox -->
 	<link color="#64933a" href="<?php print base_path() . path_to_theme() ?>/images/favicons/apple-pinned-tab.svg?cache=2" rel="mask-icon"/><!-- Safari 9+ -->
 	<!-- Config -->
 	<meta content="<?php print base_path() . path_to_theme() ?>/images/favicons/browserconfig.xml" name="msapplication-config"/><!-- Windows, Edge -->
@@ -111,7 +111,7 @@
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=2" rel="icon" sizes="32x32" type="image/png"/>
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-48.png?cache=2" rel="icon" sizes="48x48" type="image/png"/>
 	<!-- ICO -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico?cache=2" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
