@@ -107,11 +107,11 @@
 	<!-- PNG -->
 	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/site-icon.png?cache=2" rel="apple-touch-icon" sizes="276x276"/><!-- Homescreen icon, iOS, Android -->
 	<!-- Favicons for everybody else -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png?cache=3" rel="icon" sizes="16x16" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=3" rel="icon" sizes="32x32" type="image/png"/>
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-48.png?cache=3" rel="icon" sizes="48x48" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-16.png?cache=2" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-32.png?cache=2" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon-48.png?cache=2" rel="icon" sizes="48x48" type="image/png"/>
 	<!-- ICO -->
-	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico?cache=3" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
+	<link href="<?php print base_path() . path_to_theme() ?>/images/favicons/favicon.ico?cache=2" rel="shortcut icon" type="image/x-icon"/><!-- Legacy -->
 	
 	<link href="<?php print base_path() . path_to_theme() ?>/css/dist/print.css" media="print" rel="stylesheet" />
 	
