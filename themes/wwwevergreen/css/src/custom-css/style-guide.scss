@@ -73,39 +73,8 @@ ul.banned-list{
 	color: $tint;
 }
 
-/*body::after{
-	padding: 0 1em;
-	position: fixed;
-	top: 1em;
-	right: 1em;
-	font-style: italic;
-	text-shadow: 0px -1px 0 $highlight;
-	background-color: rgba($evergreen-neue, .2);
-	box-shadow: 0px 1px 2px $drop-shadow;
-	content: "Min";
+.is-low-contrast{
+	font-weight: bold;
 }
-@media screen and (min-width:20em){
-	body::after{
-		content: "20em";
-	}
-}
-@media screen and (min-width:22em){
-	body::after{
-		content: "22em";
-	}
-}
-@media screen and (min-width:32em){
-	body::after{
-		content: "32em";
-	}
-}
-@media screen and (min-width:43em){
-	body::after{
-		content: "43em";
-	}
-}@media screen and (min-width:70em){
-	body::after{
-		content: "Max";
-	}
-}*/
+
 /*This file was written by Justin McDowell. ((O)O)*/
