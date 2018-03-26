@@ -5,7 +5,7 @@
  */
 
 /**
- * Colors
+ * 2012 Colors - Deprecated
  */
 $morning-light: #fdf4b6;
 $sky-blue: #0086ee;
@@ -15,23 +15,60 @@ $blueberry-susan: #492c5d;
 $wine: #600f21;
 $black: #000;
 
-$highlight: transparentize($morning-light, 0.5);
-
 $tint: hsl(0, 0%, 95%);
 $shade: hsl(0, 0%, 0%);
 
 $legacy-tint: #fff;  // For use when graphics have a white background, so they look wrong against the off-white $tint; used in Banner theme
 
-$drop-shadow: transparentize(mix($shade, $blueberry-susan, 60%), 0.75);
+/**
+ * 2018 Colors
+ *
+ * Color palette developed by GMMB.
+ */
 
-$display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-$display-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
-$text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-$text-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
-$text-face-extra-condensed: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
-$small-face: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-$small-face-alt: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
-$monospace-face: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
+/* Core Palette */
+$forest: hsl(120, 46%, 28%);
+$stone: hsl(205, 10, 49);
+$cloud: hsl(0, 0%, 100%);
+
+/* Greenery Palette */
+$moss-light: hsl(88, 48%, 80%);
+$moss: hsl(91, 44%, 41%);
+$forest-dark: hsl(156, 100%, 14%);
+
+/* Vibrant Palette */
+$salmonberry-light: hsl(14, 68%, 84%);
+$salmonberry: hsl(21, 71%, 58%);
+$salmonberry-medium: hsl(18, 73%, 47%);
+$salmonberry-dark: hsl(21, 100%, 22%);
+
+$rubber-geoducky-light: hsl(48, 87%, 85%);
+$rubber-geoducky: hsl(54, 73%, 57%);
+$rubber-geoducky-medium: hsl(42, 98%, 54%);
+$rubber-geoducky-dark: hsl(38, 61%, 44%);
+
+$sky-light: hsl(209, 65%, 86%);
+$sky: hsl(204, 69%, 46%);
+$sky-medium: hsl(210, 100%, 30%);
+$sky-dark: hsl(206, 100%, 19%);
+
+$oregon-grape-light: hsl(342, 21%, 88%);
+$oregon-grape: hsl(311, 28%, 50%);
+$oregon-grape-medium: hsl(309, 39%, 27%);
+$oregon-grape-dark: hsl(268, 43%, 24%);
+
+$blush-light: hsl(351, 84%, 93%);
+$blush: hsl(351, 84%, 67%);
+$blush-medium: hsl(348, 58%, 48%);
+$blush-dark: hsl(337, 80%, 23%);
+
+$stone-light: hsl(165, 5%, 86%);
+$stone-medium: hsl(207, 11%, 40%);
+$stone-dark: hsl(240, 100%, 4%);
+
+$highlight: transparentize($rubber-geoducky-light, 0.5);
+
+$drop-shadow: transparentize($oregon-grape-dark, 0.75);
 
 /**
  * Breakpoints
@@ -60,6 +97,18 @@ $groot:     (min: 125em);
 		@content;
 	}
 }
+
+/**
+ * Typography
+ */
+$display-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$display-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+$text-face: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$text-face-alt: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+$text-face-extra-condensed: proxima-nova-extra-condensed, "Proxima Nova Extra Condensed", "Proxima Nova Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
+$small-face: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$small-face-alt: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
+$monospace-face: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 
 /**
  * Deprecated Modular Scale - Do not use!
