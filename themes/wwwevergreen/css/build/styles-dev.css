@@ -73,12 +73,23 @@
  * @section sass-constants
  */
 /**
- * Colors
+ * 2012 Colors - Deprecated
  */
+/**
+ * 2018 Colors
+ *
+ * Color palette developed by GMMB.
+ */
+/* Core Palette */
+/* Greenery Palette */
+/* Vibrant Palette */
 /**
  * Breakpoints
  *
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Typography
  */
 /**
  * Deprecated Modular Scale - Do not use!
@@ -1163,7 +1174,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 2px 1px rgba(29, 18, 37, 0.25);
+  box-shadow: 0 0 2px 1px rgba(59, 35, 88, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 62, ../src/smacss/base/_forms.scss */
@@ -1205,8 +1216,8 @@ input[type="tel"] {
 select {
   height: calc(30 / 16 * 1rem);
   padding: 0 0.5em;
-  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
-  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
+  text-shadow: 0 1px 0 rgba(250, 237, 183, 0.5);
+  box-shadow: 0 0.1em 0.1em rgba(59, 35, 88, 0.25) inset;
   cursor: pointer;
 }
 /* line 121, ../src/smacss/base/_forms.scss */
@@ -1684,12 +1695,12 @@ input[type="submit"],
   font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   font-size: 1.068277777777778em;
   font-weight: normal;
-  text-shadow: 0 1px 0 rgba(253, 244, 182, 0.5);
+  text-shadow: 0 1px 0 rgba(250, 237, 183, 0.5);
   background-color: #d0cad4;
   background-image: -webkit-linear-gradient(#ebe0ad, #e1dee3 40%, #d0cad4 80%);
   background-image: linear-gradient(#ebe0ad, #e1dee3 40%, #d0cad4 80%);
   border-radius: 0.2em;
-  box-shadow: 0 0.2em 0.2em rgba(29, 18, 37, 0.25);
+  box-shadow: 0 0.2em 0.2em rgba(59, 35, 88, 0.25);
   text-decoration: none;
 }
 @media screen and (min-width: 43em) {
@@ -1738,7 +1749,7 @@ button:active,
 input[type="button"]:active,
 input[type="submit"]:active,
 .box .button:active {
-  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(59, 35, 88, 0.25);
   background-color: #8d7b99;
   background-image: -webkit-linear-gradient(#d0cad4, #e1dee3);
   background-image: linear-gradient(#d0cad4, #e1dee3);
@@ -1760,7 +1771,7 @@ input.prime,
 .box .prime:visited,
 .webform-client-form .button-primary {
   color: #f2f2f2;
-  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(59, 35, 88, 0.25);
   background-color: #50762e;
   background-image: -webkit-linear-gradient(#64933a, #50762e 80%);
   background-image: linear-gradient(#64933a, #50762e 80%);
@@ -1795,7 +1806,7 @@ input.prime:active,
 .box .prime:active,
 .webform-client-form .button-primary:active {
   color: #f2f2f2;
-  text-shadow: 0 -1px 0 rgba(29, 18, 37, 0.25);
+  text-shadow: 0 -1px 0 rgba(59, 35, 88, 0.25);
   background-color: #3c5823;
   background-image: -webkit-linear-gradient(#3c5823, #50762e);
   background-image: linear-gradient(#3c5823, #50762e);
@@ -1818,10 +1829,10 @@ button[disabled]:hover,
 input.is-disabled,
 input.is-disabled:hover {
   color: #616161;
-  text-shadow: 0 0.05em 0 rgba(253, 244, 182, 0.5);
+  text-shadow: 0 0.05em 0 rgba(250, 237, 183, 0.5);
   background: #aea3b6 none;
   border-color: #919191;
-  box-shadow: 0 0.1em 0.1em rgba(29, 18, 37, 0.25) inset;
+  box-shadow: 0 0.1em 0.1em rgba(59, 35, 88, 0.25) inset;
   cursor: not-allowed;
 }
 
@@ -2368,7 +2379,7 @@ a:link,
           flex-wrap: wrap;
   overflow: hidden;
   background-color: #f2f2f2;
-  box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
+  box-shadow: 0 0 3px rgba(59, 35, 88, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 86, ../src/smacss/_layout.scss */
@@ -3384,7 +3395,7 @@ input:checked + .header-dropdown {
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
-  box-shadow: 0 0 1px rgba(253, 244, 182, 0.5) inset, 0 0 1em rgba(253, 244, 182, 0) inset;
+  box-shadow: 0 0 1px rgba(250, 237, 183, 0.5) inset, 0 0 1em rgba(250, 237, 183, 0) inset;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
@@ -3406,7 +3417,7 @@ input:checked + .header-dropdown {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
             justify-content: center;
-    text-shadow: 0 2px 0 rgba(29, 18, 37, 0.25);
+    text-shadow: 0 2px 0 rgba(59, 35, 88, 0.25);
   }
 }
 @media screen and (min-width: 22em) {
@@ -3582,7 +3593,7 @@ input:checked + .header-dropdown {
 .secondary-nav-list a:hover {
   color: #f2f2f2;
   background-color: #8d7b99;
-  box-shadow: 0 0 2px rgba(253, 244, 182, 0.5) inset;
+  box-shadow: 0 0 2px rgba(250, 237, 183, 0.5) inset;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
@@ -4301,7 +4312,7 @@ input:checked + .header-dropdown {
   overflow: hidden;
   list-style-type: none;
   background-color: rgba(242, 242, 242, 0.25);
-  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25) inset;
+  box-shadow: 0 2px 2px rgba(59, 35, 88, 0.25) inset;
 }
 @media screen and (min-width: 43em) {
   /* line 168, ../src/smacss/modules/_tertiary-nav.scss */
@@ -4393,7 +4404,7 @@ input:checked + .header-dropdown {
   line-height: 1.33928571428571;
   text-align: center;
   background-color: black;
-  box-shadow: 0 0 3px rgba(29, 18, 37, 0.25);
+  box-shadow: 0 0 3px rgba(59, 35, 88, 0.25);
 }
 @media screen and (min-width: 70em) {
   /* line 7, ../src/smacss/modules/_footer.scss */
@@ -5359,7 +5370,7 @@ input:checked + .header-dropdown {
 }
 /* line 118, ../src/smacss/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
-  box-shadow: 0 0 0.2em rgba(253, 244, 182, 0.5) inset;
+  box-shadow: 0 0 0.2em rgba(250, 237, 183, 0.5) inset;
 }
 
 /* line 126, ../src/smacss/modules/_icons.scss */
@@ -6015,7 +6026,7 @@ p.box,
 p.alert,
 .alert-alt {
   color: #600f21;
-  background-color: rgba(253, 244, 182, 0.5);
+  background-color: rgba(250, 237, 183, 0.5);
   border-radius: 0;
 }
 
@@ -6417,7 +6428,7 @@ p.alert,
   color: #f2f2f2;
   background-color: #00365f;
   border-radius: 2px;
-  box-shadow: 0 2px 2px rgba(29, 18, 37, 0.25);
+  box-shadow: 0 2px 2px rgba(59, 35, 88, 0.25);
 }
 
 /* line 42, ../src/smacss/modules/_images.scss */
@@ -6722,7 +6733,7 @@ p.alert,
   position: absolute;
   top: 0;
   right: -100%;
-  box-shadow: -0.25em 0 1em rgba(29, 18, 37, 0.25);
+  box-shadow: -0.25em 0 1em rgba(59, 35, 88, 0.25);
   content: "";
 }
 @media screen and (min-width: 43em) {
@@ -7731,12 +7742,23 @@ p.alert,
  * @section sass-constants
  */
 /**
- * Colors
+ * 2012 Colors - Deprecated
  */
+/**
+ * 2018 Colors
+ *
+ * Color palette developed by GMMB.
+ */
+/* Core Palette */
+/* Greenery Palette */
+/* Vibrant Palette */
 /**
  * Breakpoints
  *
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Typography
  */
 /**
  * Deprecated Modular Scale - Do not use!
@@ -7940,7 +7962,7 @@ p.alert,
   overflow: hidden;
   background-color: #e1dee3;
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(29, 18, 37, 0.25);
+  box-shadow: 0 1px 1px rgba(59, 35, 88, 0.25);
 }
 @media screen and (min-width: 43em) {
   /* line 21, ../src/smacss/modules/_directories.scss */
@@ -8145,7 +8167,7 @@ p.alert,
  */
 /* line 33, ../src/smacss/modules/_cms.scss */
 #toolbar {
-  box-shadow: 0 1px 0.25em rgba(29, 18, 37, 0.25);
+  box-shadow: 0 1px 0.25em rgba(59, 35, 88, 0.25);
 }
 
 /* line 37, ../src/smacss/modules/_cms.scss */

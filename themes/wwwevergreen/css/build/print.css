@@ -33,12 +33,23 @@
  * @section sass-constants
  */
 /**
- * Colors
+ * 2012 Colors - Deprecated
  */
+/**
+ * 2018 Colors
+ *
+ * Color palette developed by GMMB.
+ */
+/* Core Palette */
+/* Greenery Palette */
+/* Vibrant Palette */
 /**
  * Breakpoints
  *
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+ */
+/**
+ * Typography
  */
 /**
  * Deprecated Modular Scale - Do not use!
