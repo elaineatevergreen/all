@@ -18,6 +18,8 @@ Redirect 301 /exchange https://webmail.evergreen.edu/owa
 # redirect to subdomain for rehosting
 RewriteRule ^washingtoncenter(.*)$ http://wacenter.evergreen.edu$1 [NC,R,L]
 
+# redirect WACLA to new site at Gonzaga March 2018
+RewriteRule ^wacla(.*)$ https://www.gonzaga.edu/college-of-arts-sciences/about/wacla [NC,R,L]
 
 
 # Protect files and directories from prying eyes.
