@@ -99,7 +99,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	        <?php endif; ?>
 	        <a id="main-content"></a>
 	        <?php print render($title_prefix); ?>
-	        <?php if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+	        <?php /*if ($title and $title!='Home'): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; */ ?>
 	        <?php print render($title_suffix); ?>
 	        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 	        <?php print render($page['help']); ?>
