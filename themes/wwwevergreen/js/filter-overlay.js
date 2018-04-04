@@ -8,11 +8,11 @@ jQuery(document).ready(function($) {
 	
 	//make button to show form
 	
-	$("#views-exposed-form-articles-page").before("<button id='open-filter'>Search</button>");
+	$("#views-exposed-form-catalog-page").before("<button id='open-filter'>Search</button>");
 	
 	//open dialog
 	
-	dialog = $( "#views-exposed-form-articles-page" ).dialog({
+	dialog = $( "#views-exposed-form-catalog-page" ).dialog({
       autoOpen: false,
       height: 400,
       width: 350,
