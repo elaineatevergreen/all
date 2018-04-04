@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	dialog = $( "#views-exposed-form-catalog-page" ).dialog({
       autoOpen: false,
       height: auto,
-      width: auto,
+      width: 400,
       modal: true
     });
     
