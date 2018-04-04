@@ -1,10 +1,8 @@
 jQuery(document).ready(function($) {
 	
-	console.log("is this thing on?");
+	//console.log("is this thing on?");
 	
 	var dialog;
-	
-	//hide form
 	
 	//make button to show form
 	
@@ -14,6 +12,7 @@ jQuery(document).ready(function($) {
 	
 	dialog = $( "#views-exposed-form-catalog-page" ).dialog({
       autoOpen: false,
+      title: 'Filter the Catalog', //this should probably come from the actual form title? which means there should be one
       height: 'auto',
       width: 600,
       modal: true
