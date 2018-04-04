@@ -224,6 +224,7 @@ function wwwevergreen_theme_media_element($variables) {
  * THEME_PREPROCESS_VIEWS_VIEW
  * @param type $vars
  * Adds category to title for the calendar. I hope. Taken from https://www.drupal.org/node/658566#comment-8278349
+ * Adds jquery ui to the catalog for overlay filters
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
@@ -245,6 +246,11 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     	}
 	        	
     }; //end if view and category set
+    
+    if($vars['view']->name == 'catalog') {
+	    drupal_add_library('system', 'ui');
+		drupal_add_library('system', 'ui.dialog');
+    }; //end check for catalog view
 }
 
 /**
