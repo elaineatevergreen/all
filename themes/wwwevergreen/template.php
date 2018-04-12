@@ -1,5 +1,22 @@
 <?php
 	
+//this is just used on the catalog node page
+//we should find a way to use standard Drupal rendering to get the correct effect instead, thanks
+function printEach($passedcontent, $put_front = "", $put_after= "")
+		//takes a content (not yet rendered) renderable array and prints all the items out
+		// put_front will be put in front of each element, and put after, after
+		// front and after are optional parameters and default to ""
+		// this function does not print the key, only the elements recursively.
+		{
+			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
+				if(isset($passedcontent[$i])){
+					print($put_front);
+					print(render($passedcontent[$i]));
+					print($put_after);
+				}
+			}
+		}
+	
 // allow per-node-type and panel page template files
 // rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
