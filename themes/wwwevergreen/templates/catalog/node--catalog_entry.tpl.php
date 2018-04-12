@@ -1,5 +1,5 @@
 <?php
-		function printEach($passedcontent, $put_front = "", $put_after= "")
+		/*function printEach($passedcontent, $put_front = "", $put_after= "")
 		//takes a content (not yet rendered) renderable array and prints all the items out
 		// put_front will be put in front of each element, and put after, after
 		// front and after are optional parameters and default to ""
@@ -12,7 +12,7 @@
 					print($put_after);
 				}
 			}
-		}
+		}*/
 		?>
 <?php
 /**
