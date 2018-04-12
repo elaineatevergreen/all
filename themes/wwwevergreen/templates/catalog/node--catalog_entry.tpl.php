@@ -1,4 +1,20 @@
 <?php
+		function printEach($passedcontent, $put_front = "", $put_after= "")
+		//takes a content (not yet rendered) renderable array and prints all the items out
+		// put_front will be put in front of each element, and put after, after
+		// front and after are optional parameters and default to ""
+		// this function does not print the key, only the elements recursively.
+		{
+			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
+				if(isset($passedcontent[$i])){
+					print($put_front);
+					print(render($passedcontent[$i]));
+					print($put_after);
+				}
+			}
+		}
+		?>
+<?php
 /**
  * Catalog Listing Page
  *
@@ -604,22 +620,7 @@ if (!$page){ ?>
 		<?php printEach($content['field_revisions']); ?>
 
 
-		<?php
-		function printEach($passedcontent, $put_front = "", $put_after= "")
-		//takes a content (not yet rendered) renderable array and prints all the items out
-		// put_front will be put in front of each element, and put after, after
-		// front and after are optional parameters and default to ""
-		// this function does not print the key, only the elements recursively.
-		{
-			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
-				if(isset($passedcontent[$i])){
-					print($put_front);
-					print(render($passedcontent[$i]));
-					print($put_after);
-				}
-			}
-		}
-		?>
+		
 	</div> <!-- /.content -->
 
 </div>
