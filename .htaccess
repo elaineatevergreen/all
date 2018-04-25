@@ -1,6 +1,7 @@
 #
 # Apache/PHP/Drupal settings:
 # note this file should be updated when manually updating drupal on live
+# like a reminder or something?!
 #
 
 Redirect 301 /wv3 http://www2.evergreen.edu/wv3
