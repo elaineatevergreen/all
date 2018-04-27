@@ -22,10 +22,8 @@ jQuery(document).ready(function ($) {
   "        </div>" + 
   "      </li>" + 
   "      <li>" + 
-  "        <h3>Birthday</h3>" + 
-  "      </li>" + 
-  "      <fieldset>" + 
-  "        <li>" + 
+  "        <fieldset>" + 
+  "          <h3>Birthday</h3>" + 
   "          <div class=\"grid\">" + 
   "            <div class=\"unit-1-3\">" + 
   "              <label for=\"monthselect\">Month:</label><br/>" + 
@@ -206,10 +204,10 @@ jQuery(document).ready(function ($) {
   "              </select>" + 
   "            </div>" + 
   "          </div>" + 
-  "        </li>" + 
-  "      </fieldset>" + 
-  "      <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
+  "        </fieldset>" + 
+  "      </li>" + 
   "    </ul>" + 
+  "    <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
   "  </form>";
 });
 
