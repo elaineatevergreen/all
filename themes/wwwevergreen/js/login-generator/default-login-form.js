@@ -1,12 +1,7 @@
 jQuery(document).ready(function ($) {
  //Following string contains all of the html displayed on the page before the user does anything.
   document.getElementById('LoginGenerator').innerHTML = "" +
-  "  <div class=\"ui-group\">" +
-  "    <div class=\"ui-group__header\">" +
-  "      <h2>Login Generator</h2>" +
-  "    </div>" +
-  "    <div class=\"ui-group__inner\">" +
-  "    <form action=\"LoginGenerator\" method=\"get\">" + 
+  "  <form action=\"LoginGenerator\" method=\"get\">" + 
   "    <ul class=\"element-list\">" + 
   "      <li>" + 
   "        <p>Automatically determine your Evergreen login credentials.</p>" + 
@@ -215,9 +210,7 @@ jQuery(document).ready(function ($) {
   "      </fieldset>" + 
   "      <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
   "    </ul>" + 
-  "    </form>" +
-  "    </div>" +
-  "  </div>";
+  "  </form>";
 });
 
 window.writeValues = function(form) {
