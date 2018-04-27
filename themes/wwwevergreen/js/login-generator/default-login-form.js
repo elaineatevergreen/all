@@ -221,13 +221,13 @@ window.writeValues = function(form) {
   lname = lname.toLowerCase();
   month = month.toLowerCase();
   if (fname == "") {
-    document.getElementById('alertcontainer').innerHTML = "Error<ul> <li>Your First Name is Required</li> </ul>";
+    document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your First Name is Required</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
     return false;
   } else if (lname == "") {
-    document.getElementById('alertcontainer').innerHTML = "Error<ul> <li>Your Last Name is Required</li> </ul>";
+    document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your Last Name is Required</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
