@@ -1,35 +1,40 @@
 jQuery(document).ready(function ($) {
  //Following string contains all of the html displayed on the page before the user does anything.
   document.getElementById('LoginGenerator').innerHTML = "" +
-  "  <form action=\"LoginGenerator\" method=\"get\">" + 
-  "  <ul style=\"list-style: none;\">" + 
-  "    <li>" + 
-  "      <p>Automatically determine your Evergreen login credentials. </p>" + 
-  "    </li>" + 
-  "    <li>" + 
-  "      <h3>Name</h3>" + 
-  "    </li>" + 
-  "    <li>" + 
-  "      <div class=\"container\">" + 
-  "        <div class=\"fixed\">" + 
-  "          <label for=\"fname\">First name:</label>" + 
-  "          <input type=\"text\" name=\"fname\" id=\"fname\" placeholder=\"John\" required=\"required\" size=\"1\">" + 
-  "        </div>" + 
-  "        <div class=\"flex-item\">" + 
-  "          <label for=\"lname\">Last name:</label>" + 
-  "          <input type=\"text\" name=\"lname\" id=\"lname\" placeholder=\"Doe\" required=\"required\" size=\"1\">" + 
-  "        </div>" + 
-  "      </div>" + 
-  "    </li>" + 
-  "    <li>" + 
-  "      <h3>Birthday</h3>" + 
-  "    </li>" + 
-  "    <fieldset>" + 
+  "  <div class=\"ui-group\">" +
+  "    <div class=\"ui-group__header\">" +
+  "      <h2>Login Generator</h2>" +
+  "    </div>" +
+  "    <div class=\"ui-group__inner\">" +
+  "    <form action=\"LoginGenerator\" method=\"get\">" + 
+  "    <ul class=\"element-list\">" + 
   "      <li>" + 
-  "        <div class=\"container\">" + 
-  "          <div class=\"fixed\">" + 
-  "            <label for=\"monthselect\">Month:</label>" + 
-  "            <select id=\"monthselect\" name=\"month\" required>" + 
+  "        <p>Automatically determine your Evergreen login credentials.</p>" + 
+  "      </li>" + 
+  "      <li>" + 
+  "        <h3>Name</h3>" + 
+  "      </li>" + 
+  "      <li>" + 
+  "        <div class=\"grid\">" + 
+  "          <div class=\"unit-1-2\">" + 
+  "            <label for=\"fname\">First name:</label><br/>" + 
+  "            <input type=\"text\" name=\"fname\" id=\"fname\" placeholder=\"John\" required=\"required\" size=\"1\">" + 
+  "          </div>" + 
+  "          <div class=\"unit-1-2\">" + 
+  "            <label for=\"lname\">Last name:</label><br/>" + 
+  "            <input type=\"text\" name=\"lname\" id=\"lname\" placeholder=\"Doe\" required=\"required\" size=\"1\">" + 
+  "          </div>" + 
+  "        </div>" + 
+  "      </li>" + 
+  "      <li>" + 
+  "        <h3>Birthday</h3>" + 
+  "      </li>" + 
+  "      <fieldset>" + 
+  "        <li>" + 
+  "          <div class=\"grid\">" + 
+  "            <div class=\"unit-1-3\">" + 
+  "              <label for=\"monthselect\">Month:</label><br/>" + 
+  "              <select id=\"monthselect\" name=\"month\" required>" + 
   "        <option value=\"January\">January</option>" + 
   "        <option value=\"Febuary\">Febuary</option>" + 
   "        <option value=\"March\">March</option>" + 
@@ -42,11 +47,11 @@ jQuery(document).ready(function ($) {
   "        <option value=\"October\">October</option>" + 
   "        <option value=\"November\">November</option>" + 
   "        <option value=\"December\">December</option>" + 
-  "      </select>" + 
-  "          </div>" + 
-  "          <div class=\"flex-item\">" + 
-  "            <label for=\"dayselect\">Day:</label>" + 
-  "            <select id=\"dayselect\" name=\"day\" required>" + 
+  "              </select>" + 
+  "            </div>" + 
+  "            <div class=\"unit-1-3\">" + 
+  "              <label for=\"dayselect\">Day:</label><br/>" + 
+  "              <select id=\"dayselect\" name=\"day\" required>" + 
   "        <option value=\"01\">01</option>" + 
   "        <option value=\"02\">02</option>" + 
   "        <option value=\"03\">03</option>" + 
@@ -79,11 +84,11 @@ jQuery(document).ready(function ($) {
   "        <option value=\"30\">30</option>" + 
   "        <option value=\"31\">31</option>" + 
   "        <option value=\"32\">32</option>" + 
-  "      </select>" + 
-  "          </div>" + 
-  "          <div class=\"flex-item\">" + 
-  "            <label for=\"yearselect\">Year:</label>" + 
-  "            <select id=\"yearselect\" name=\"year\" required>" + 
+  "              </select>" + 
+  "            </div>" + 
+  "            <div class=\"unit-1-3\">" + 
+  "              <label for=\"yearselect\">Year:</label><br/>" + 
+  "              <select id=\"yearselect\" name=\"year\" required>" + 
   "        <option value=\"18\">2018</option>" + 
   "        <option value=\"17\">2017</option>" + 
   "        <option value=\"16\">2016</option>" + 
@@ -203,14 +208,16 @@ jQuery(document).ready(function ($) {
   "        <option value=\"02\">1902</option>" + 
   "        <option value=\"01\">1901</option>" + 
   "        <option value=\"00\">1900</option>" + 
-  "      </select>" + 
+  "              </select>" + 
+  "            </div>" + 
   "          </div>" + 
-  "        </div>" + 
-  "      </li>" + 
-  "    </fieldset>" + 
-  "    <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
-  "  </ul>" + 
-  "</form>";
+  "        </li>" + 
+  "      </fieldset>" + 
+  "      <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
+  "    </ul>" + 
+  "    </form>" +
+  "    </div>" +
+  "  </div>";
 });
 
 window.writeValues = function(form) {
