@@ -209,6 +209,7 @@ jQuery(document).ready(function ($) {
   "    </ul>" + 
   "    <input type=\"button\" value=\"Submit\" onClick=\"writeValues(form)\" class=\"prime\">" + 
   "  </form>";
+  document.getElementById('alertcontainer').style.display="none";
 });
 
 window.writeValues = function(form) {
