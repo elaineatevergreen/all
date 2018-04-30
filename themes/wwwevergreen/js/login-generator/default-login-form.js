@@ -221,19 +221,21 @@ window.writeValues = function(form) {
   lname = lname.toLowerCase();
   month = month.toLowerCase();
   if (fname == "") {
+    document.getElementById('alertcontainer').style.display="";
     document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your First Name is Required</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
     return false;
   } else if (lname == "") {
+    document.getElementById('alertcontainer').style.display="";
     document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your Last Name is Required</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
     return false;
   } else {
-    document.getElementById('alertcontainer').innerHTML = "";
+    document.getElementById('alertcontainer').style.display="none";
     document.getElementById('gentitle').innerHTML = "Your login credentials";
 
     document.getElementById('genuser').innerHTML = "<p>Your Username: </p>" + lname.substring(0, 3) + fname.substring(0, 3) + day;
