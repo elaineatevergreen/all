@@ -32,9 +32,9 @@ p.box,  // WYSIWYG
 	// layout
 	overflow: hidden;
 	// typography
-	color: mix($shade, $sky-blue, 66.667%);
+	color: $sky-dark;
 	// decoration
-	background-color: transparentize(mix(white, $sky-blue, 80%), 0.05);
+	background-color: transparentize($sky-light, 0.05);
 	background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
 	border-radius: 2px;
 
@@ -48,19 +48,19 @@ p.box,  // WYSIWYG
 .box h2,
 .notice h4,  // deprecated
 .box h4{
-	color: mix($shade, $sky-blue, 50%);
+	color: $sky-medium;
 }
 
 .notice h3,  // deprecated
 .box h3{
-	color: mix($shade, $sky-blue, 50%);
+	color: $sky-medium;
 }
 
 .notice h5,  // deprecated
 .box h5,
 .notice h6,  // deprecated
 .box h6{
-	color: mix($shade, $sky-blue, 33.333%);
+	color: $sky-medium;
 }
 
 .box.supplement,
@@ -89,9 +89,9 @@ p.box,  // WYSIWYG
 // Increase the contrast of hovered links in blue boxes
 .box:not(.action-box) a:not(.button):hover{
 	// typography
-	color: mix($shade, $sky-blue, 40%);
+	color: $sky-medium;
 	// decoration
-	background-color: mix($tint, $sky-blue, 90%);
+	background-color: $sky-light;
 }
 
 /**
@@ -101,7 +101,7 @@ p.box,  // WYSIWYG
  */
 .notice,  // deprecated
 .note{
-	border-left: 5px solid mix($tint, $sky-blue, 60%);
+	border-left: 5px solid $sky;
 
 	@include breakpoint($rocket){
 		padding-left: calc(1em - 5px);
@@ -444,7 +444,8 @@ p.alert,  // WYSIWYG
  * @section ui-group
  */
 
-.ui-group{
+.ui-group,
+.ui-group--full{  // A full box with a header and optional footer
 	// box model
 	border: 1px solid mix($tint, $blueberry-susan, 75%);
 	margin-bottom: 0.46875rem;  // 7.5px
@@ -454,6 +455,7 @@ p.alert,  // WYSIWYG
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
+	box-shadow: 0 1px 1px #ddd;
 
 	/*&:hover{
 		// decoration
@@ -486,4 +488,34 @@ p.alert,  // WYSIWYG
 	> :last-child{
 		margin-bottom: 0.9375rem;  // 15px
 	}
+}
+
+
+.ui-group--full{
+	padding: 0;
+}
+
+.ui-group__inner{
+	padding: 0 2ch;
+}
+
+.ui-group__header{
+	// box model
+	padding-top: 1em;
+	padding-right: 2ch;
+	padding-left: 2ch;
+	// layout
+	align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+	// decoration
+	background-color: $tint;
+}
+
+.ui-group__heading{
+	flex-grow: 1;
+}
+
+.ui-group:not(:last-child){
+	margin-bottom: 1em;
 }
