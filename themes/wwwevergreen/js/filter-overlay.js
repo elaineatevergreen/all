@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     });
     
     // set the button to open the form
-    $( "#open-filter" ).button().on( "click", function() {
+    $( "#open-filter" ).on( "click", function() {
       dialog.dialog( "open" );
       event.preventDefault();
     });
