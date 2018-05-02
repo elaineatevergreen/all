@@ -45,9 +45,9 @@ dpm($exposed_filters);
 	} elseif($filter == 'field_of_study') {
 		$term = taxonomy_term_load($value); 
 		$value = $term->name;
-	} elseif($value == 0) {
-		$value = 'Yes';
 	} elseif($value == 1) {
+		$value = 'Yes';
+	} elseif($value == 0) {
 		$value = 'No';
 	};
 	print $value; 
