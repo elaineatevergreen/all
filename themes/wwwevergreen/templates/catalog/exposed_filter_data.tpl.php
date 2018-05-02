@@ -29,24 +29,18 @@ dpm($exposed_filters);
     <div class="content">
       <?php foreach ($exposed_filters as $filter => $value): ?>
         <?php if ($value and $value != 'All'): ?>
-          <div class="filter"><div class="name"><?php print ucwords($filter); ?>: </div>
+          <div class="filter"><div class="name"><?php print ucwords(str_replace('_',' ',$filter)); ?>: </div>
           <?php if (is_array($value)): ?>
-            <div class="value">
-<?php 
-	if($filter == 'credit_range') { 
-		print implode('–', $value);
-	} else {
-		print implode(', ', $value);
-	};
-	 
-?>
-			</div>
+            <div class="value"><?php print implode(', ', $value); ?></div>
           <?php else: ?>
             <div class="value">
 <?php 
+	//formatting of values
 	if($filter == 'year') { 
-		$value = 2015+$value;
-	};
+		$value = 2015+$value . '–' . 16+$value; //this one is probably hella fragile?
+	} elseif($filter == 'credit_range') {
+		$value = str_replace(', ', '–', $value);
+	}
 	print $value; 
 ?>
 			</div>
