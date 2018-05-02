@@ -19,6 +19,8 @@ filters:
 	studyabroad: Study Abroad (if "All" don't show info)
 	upperdivision: Upper Division Science Opportunities (if "All" don't show info)
 */
+
+dpm($exposed_filters);
  
 ?>
 <?php if (isset($exposed_filters)): ?>
@@ -27,7 +29,7 @@ filters:
     <div class="content">
       <?php foreach ($exposed_filters as $filter => $value): ?>
         <?php if ($value and $value != 'All'): ?>
-          <div class="filter"><div class="name"><?php print $filter; ?>: </div>
+          <div class="filter"><div class="name"><?php print ucwords($filter); ?>: </div>
           <?php if (is_array($value)): ?>
             <div class="value">
 <?php 
@@ -40,7 +42,14 @@ filters:
 ?>
 			</div>
           <?php else: ?>
-            <div class="value"><?php print $value; ?></div>
+            <div class="value">
+<?php 
+	if($filter == 'year') { 
+		$value = 2015+$value;
+	};
+	print $value; 
+?>
+			</div>
           <?php endif; ?>
           </div>
         <?php endif; ?>
