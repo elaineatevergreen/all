@@ -28,7 +28,7 @@ dpm($exposed_filters);
     <div class="title"><?php print t('Current Catalog Filter'); ?></div>
     <div class="content">
       <?php foreach ($exposed_filters as $filter => $value): ?>
-        <?php if ($value and $value != 'All'): ?>
+        <?php if ($value and $value != 'All' and $value != '0, 16'): ?>
           <div class="filter"><div class="name"><?php print ucwords(str_replace('_',' ',$filter)); ?>: </div>
           <?php if (is_array($value)): ?>
             <div class="value"><?php print implode(', ', $value); ?></div>
