@@ -26,10 +26,19 @@ filters:
     <div class="title"><?php print t('Current Catalog Filter'); ?></div>
     <div class="content">
       <?php foreach ($exposed_filters as $filter => $value): ?>
-        <?php if ($value and !in_array('All', $value)): ?>
+        <?php if ($value and $value != 'All': ?>
           <div class="filter"><div class="name"><?php print $filter; ?>: </div>
           <?php if (is_array($value)): ?>
-            <div class="value"><?php print implode(', ', $value); ?></div>
+            <div class="value">
+<?php 
+	if($filter == 'credit_range') { 
+		print implode('–', $value);
+	} else {
+		print implode(', ', $value);
+	};
+	 
+?>
+			</div>
           <?php else: ?>
             <div class="value"><?php print $value; ?></div>
           <?php endif; ?>
