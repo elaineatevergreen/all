@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	
 	//make button to show form
 	
-	$("#views-exposed-form-catalog-page").before("<button id='open-filter'>Search</button>");
+	$("#filter-header").after("<button id='open-filter'>Create a Filter</button>");
 	
 	//open dialog
 	
