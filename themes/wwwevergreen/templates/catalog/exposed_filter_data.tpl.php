@@ -29,7 +29,9 @@ dpm($exposed_filters);
 if (isset($exposed_filters)): 
 
 	//go through all the values once to get some nice formatting
-	foreach ($exposed_filters as $filter => $value):  
+	foreach ($exposed_filters as $filter => $value): 
+		unset($printlabel);
+		unset($printvalue);
 		//only show if there's a value
 		//but don't show some of the default values
 		if ($value and $value != 'All' and $value != '0, 16'): 
@@ -71,9 +73,10 @@ if (isset($exposed_filters)):
 				} else {
 					$printvalue = $value;
 				}; //end check for specially formatted values
-				$printfilters[$printlabel] = $printvalue; 
+				$printfilters[$printlabel] = $printvalue;
 			endif; //end check for array value
 		endif; //end check for printable value
+		
 	endforeach; //end run through array
 
 
