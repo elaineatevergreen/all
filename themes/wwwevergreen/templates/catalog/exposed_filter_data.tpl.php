@@ -90,7 +90,6 @@ if (isset($exposed_filters)):
 	    	<div class="name"><?php print $label; ?>: </div>
             <div class="value"><?php print $contents; ?></div>
         </div>
-        <?php endif; //end check for whether value should be printed ?>
       <?php endforeach; //end iteration through the array ?>
     </div>
   </div>
