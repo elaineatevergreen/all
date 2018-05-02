@@ -45,10 +45,12 @@ dpm($exposed_filters);
 	} elseif($filter == 'field_of_study') {
 		$term = taxonomy_term_load($value); 
 		$value = $term->name;
-	} elseif($value == 1) {
-		$value = 'Yes';
-	} elseif($value == 0) {
-		$value = 'No';
+	} elseif($filter == 'internship_opportunities' or $filter == 'research_opportunities' or $filter == 'study_abroad' or $filter == 'upper_division_science_options') {
+		if($value == 1) {
+			$value = 'Yes';
+		} elseif($value == 0) {
+			$value = 'No';
+		};	
 	};
 	print $value; 
 ?>
