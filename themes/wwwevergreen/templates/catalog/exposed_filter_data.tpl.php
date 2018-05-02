@@ -42,6 +42,9 @@ dpm($exposed_filters);
 		$value = $value1 . '–' . $value2;
 	} elseif($filter == 'credit_range') {
 		$value = str_replace(', ', '–', $value);
+	} elseif($filter == 'field_of_study') {
+		$term = taxonomy_term_load($value); 
+		$value = $term->name;
 	}
 	print $value; 
 ?>
