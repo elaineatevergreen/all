@@ -26,7 +26,7 @@ filters:
     <div class="title"><?php print t('Current Catalog Filter'); ?></div>
     <div class="content">
       <?php foreach ($exposed_filters as $filter => $value): ?>
-        <?php if ($value and $value != 'All': ?>
+        <?php if ($value and $value != 'All'): ?>
           <div class="filter"><div class="name"><?php print $filter; ?>: </div>
           <?php if (is_array($value)): ?>
             <div class="value">
