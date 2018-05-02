@@ -44,7 +44,7 @@ if (isset($exposed_filters)):
 					$value1 = 2015+$value;
 					$value2 = 16+$value; //this one is probably hella fragile?
 					$printvalue = $value1 . '–' . $value2;
-				} elseif($filter = 'quarters_accepting_new_students') {
+				} elseif($filter =='quarters_accepting_new_students') {
 					switch($value) {
 						case 1:
 							$printvalue = 'Fall';
