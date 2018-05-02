@@ -37,7 +37,9 @@ dpm($exposed_filters);
 <?php 
 	//formatting of values
 	if($filter == 'year') { 
-		$value = 2015+$value . '–' . 16+$value; //this one is probably hella fragile?
+		$value1 = 2015+$value;
+		$value2 = 16+$value; //this one is probably hella fragile?
+		$value = $value1 . '–' . $value2;
 	} elseif($filter == 'credit_range') {
 		$value = str_replace(', ', '–', $value);
 	}
