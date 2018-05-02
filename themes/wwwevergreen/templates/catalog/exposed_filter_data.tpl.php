@@ -99,18 +99,24 @@ if (isset($exposed_filters)):
 
 //and THEN we print everything
 ?>
-  <div class="exposed_filter_data">
-    <div class="title"><?php print t('Current Catalog Filter'); ?></div>
-    <div class="content">
-<?php 
-	//now go thru all the filters with the rewritten display
-	foreach ($printfilters as $label => $contents):  
-?>
-        <div class="filter">
-	    	<div class="name"><?php print $label; ?>: </div>
-            <div class="value"><?php print $contents; ?></div>
-        </div>
-      <?php endforeach; //end iteration through the array ?>
-    </div>
+  <div class="box note exposed_filter_data">
+	  <div class="compound">
+		  <div class="compound-img">
+		  </div>
+		  <div class="compound-body">
+		    <div class="title"><?php print t('Current Catalog Filter'); ?></div>
+		    <div class="content">
+		<?php 
+			//now go thru all the filters with the rewritten display
+			foreach ($printfilters as $label => $contents):  
+		?>
+		        <div class="filter">
+			    	<div class="name"><?php print $label; ?>: </div>
+		            <div class="value"><?php print $contents; ?></div>
+		        </div>
+		      <?php endforeach; //end iteration through the array ?>
+		    </div>
+		  </div>
+	  </div>
   </div>
 <?php endif; //end check for filters ?>

@@ -10,6 +10,7 @@
  * B. Quarter Indicators
  * C. Simple Filters
  * D. Advanced Filters
+ * E. Exposed Filter Data
  */
 
 /**
@@ -492,4 +493,39 @@
 
 #views-exposed-form-catalog-grad-programs{
 	@extend #views-exposed-form-catalog-page;
+}
+
+/**
+ * E. Exposed Filter Data
+ *
+ * When a user sets a filter in the catalog, we display what filters are
+ * set so that the next time they come visit this page, they will see how
+ * their results are filtered. These styles extend existing styles dictated
+ * by .exposed_filter_data. I'm not sure where these styles are coming
+ * from—which stylesheet or module—but once we know, we should document
+ * that here.
+ */
+.exposed_filter_data{
+	border-bottom-width: 0;
+}
+
+.exposed_filter_data .filter{
+	// box model
+	//border: 1px solid mix($tint, $blueberry-susan, 80%);
+	margin: 0 1ch calc(15 / 14 * 1em) 0;
+	padding: calc(7.5 / 14 * 1em) 1ch calc(15 / 14 * 1em);
+	// layout
+	display: inline-block;
+	// decoration
+	background-color: $tint;
+	border-radius: 0.5em / 50%;
+
+	@include breakpoint($gamora){
+		margin-bottom: (15 / 18 * 1em);
+		padding: calc(7.5 / 18 * 1em) 1ch calc(15 / 18 * 1em);
+	}
+
+	&:last-child{
+		margin-right: 0;
+	}
 }
