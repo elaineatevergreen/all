@@ -79,7 +79,7 @@ if (isset($exposed_filters)):
 		
 	endforeach; //end run through array
 
-
+dpm($printfilters);
 //and THEN we print everything
 ?>
   <div class="exposed_filter_data">
