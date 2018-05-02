@@ -20,17 +20,29 @@ filters:
 	upperdivision: Upper Division Science Opportunities (if "All" don't show info)
 */
 
+//debug values
 dpm($exposed_filters);
  
 ?>
-<?php if (isset($exposed_filters)): ?>
+<?php 
+//first of all, only show if there's anything here	
+if (isset($exposed_filters)): ?>
   <div class="exposed_filter_data">
     <div class="title"><?php print t('Current Catalog Filter'); ?></div>
     <div class="content">
-      <?php foreach ($exposed_filters as $filter => $value): ?>
-        <?php if ($value and $value != 'All' and $value != '0, 16'): ?>
-          <div class="filter"><div class="name"><?php print ucwords(str_replace('_',' ',$filter)); ?>: </div>
-          <?php if (is_array($value)): ?>
+<?php 
+	//now go thru all the filters
+	foreach ($exposed_filters as $filter => $value):  
+		//only show if there's a value
+		//but don't show some of the default values
+		if ($value and $value != 'All' and $value != '0, 16'): 
+			//then make the filter name look nice
+			$printfilter = ucwords(str_replace('_',' ',$filter));
+?>
+          <div class="filter"><div class="name"><?php print $printfilter; ?>: </div>
+          <?php 
+	          //so far it never returns an array?????
+	          if (is_array($value)): ?>
             <div class="value"><?php print implode(', ', $value); ?></div>
           <?php else: ?>
             <div class="value">
@@ -39,26 +51,28 @@ dpm($exposed_filters);
 	if($filter == 'year') { 
 		$value1 = 2015+$value;
 		$value2 = 16+$value; //this one is probably hella fragile?
-		$value = $value1 . '–' . $value2;
+		$printvalue = $value1 . '–' . $value2;
 	} elseif($filter == 'credit_range') {
-		$value = str_replace(', ', '–', $value);
+		$printvalue = str_replace(', ', '–', $value);
 	} elseif($filter == 'field_of_study') {
 		$term = taxonomy_term_load($value); 
-		$value = $term->name;
+		$printvalue = $term->name;
 	} elseif($filter == 'internship_opportunities' or $filter == 'research_opportunities' or $filter == 'study_abroad' or $filter == 'upper_division_science_options') {
 		if($value == 1) {
-			$value = 'Yes';
+			$printvalue = 'Yes';
 		} elseif($value == 0) {
-			$value = 'No';
+			$printvalue = 'No';
 		};	
-	};
-	print $value; 
+	} else {
+		$printvalue = $value;
+	}; //end check for specially formatted values
+	print $printvalue; 
 ?>
 			</div>
-          <?php endif; ?>
+          <?php endif; //end check for array ?>
           </div>
-        <?php endif; ?>
-      <?php endforeach; ?>
+        <?php endif; //end check for whether value should be printed ?>
+      <?php endforeach; //end iteration through the array ?>
     </div>
   </div>
-<?php endif; ?>
+<?php endif; //end check for filters ?>
