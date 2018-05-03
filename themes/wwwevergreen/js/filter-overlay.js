@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	
 	//make button to show form
 	
-	$("#filter-header").after("<button id='open-filter'>Create a Filter</button>");
+	$("#set-filter-button").replaceWith("<button id='open-filter'><img src='/sites/all/themes/wwwevergreen/images/icons/dark/cog.svg'/> Set Filter</button>");
 	
 	//open dialog
 	
