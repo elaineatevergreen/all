@@ -405,6 +405,7 @@
 	// decoration
 	background-color: $tint;
 	border-radius: 1.5em / 50%;
+	box-shadow: 0 1px 1px $drop-shadow;
 
 	@include breakpoint($gamora){
 		margin-bottom: (15 / 18 * 1em);
