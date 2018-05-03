@@ -118,5 +118,6 @@ if (isset($exposed_filters)):
 		    </div>
 		  </div>
 	  </div>
+	  <form action="/catalog/index" method="get"><div class="views-exposed-widget views-reset-button"> <input id="edit-reset" name="op" value="Clear Filters" class="form-submit" type="submit"></div></form>
   </div>
 <?php endif; //end check for filters ?>
