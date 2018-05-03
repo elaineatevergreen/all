@@ -183,7 +183,7 @@ if(count($quarters) == 1) {
 				<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
 		<?php if($content['field_curricular_area'][1]) { //allow for cross-listing MPA and MES electives ?>
-			<img alt=""
+			&nbsp;<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][1]));?>.svg" />
 
 		<?php };?>
