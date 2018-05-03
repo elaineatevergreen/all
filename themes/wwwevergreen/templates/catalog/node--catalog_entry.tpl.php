@@ -182,6 +182,12 @@ if(count($quarters) == 1) {
 			<div class="listing-property-img">
 				<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
+		<?php if($content['field_curricular_area'][1]) { //allow for cross-listing MPA and MES electives ?>
+			<img alt=""
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][1]));?>.svg" />
+
+		<?php };?>
+
 			</div>
 			<div class="listing-property-body">
 				<?php // printing our word Graduate
