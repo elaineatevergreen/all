@@ -118,6 +118,14 @@ dpm($printfilters);
 		    </div>
 		  </div>
 	  </div>
-	  <form action="/catalog/index" method="get"><div class="views-exposed-widget views-reset-button"> <input id="edit-reset" name="op" value="Clear Filters" class="form-submit" type="submit"></div></form>
+<?php 
+	//don't show the clear button if this is the default filter
+	if(!(count($printfilters) == 1 and array_key_exists('Year', $printfilters))) {
+?>
+<form action="/catalog/index" method="get"><div class="views-exposed-widget views-reset-button"> <input id="edit-reset" name="op" value="Clear Filters" class="form-submit" type="submit"></div></form>
+<?php
+	}; //end check for default filter
+?>
+	  
   </div>
 <?php endif; //end check for filters ?>
