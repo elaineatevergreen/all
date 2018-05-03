@@ -383,9 +383,7 @@
 
 .simple-filter-label{
 	// box model
-	margin-right: 2ch;
-	// layout
-	//flex-basis: 13ch;
+	margin-right: 1ch;
 }
 
 .simple-filter-list{
@@ -429,9 +427,14 @@
 /**
  * D. Advanced Filters
  *
- * Advanced filters are the filters in the left sidebar that allow for
- * very granular filtering of catalog results.
+ * Advanced filters are the filters in the left sidebar (or now in some
+ * views in the header text area) that allow for very granular filtering of
+ * catalog results.
  */
+#open-filter{  // button that opens the filter dialogue box
+	margin-right: 1ch;
+}
+
 #views-exposed-form-catalog-page .views-exposed-widgets{
 	align-items: flex-start;
 	flex-direction: column;
