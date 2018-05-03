@@ -385,7 +385,7 @@
 	// box model
 	margin-right: 2ch;
 	// layout
-	flex-basis: 13ch;
+	//flex-basis: 13ch;
 }
 
 .simple-filter-list{
@@ -396,15 +396,15 @@
 	flex-wrap: wrap;
 }
 
-.simple-filter-list li{
+%filter{
 	// box model
-	border: 1px solid mix($tint, $blueberry-susan, 80%);
 	margin: 0 1ch calc(15 / 14 * 1em) 0;
 	padding: calc(7.5 / 14 * 1em) 1ch calc(15 / 14 * 1em);
 	// layout
 	display: inline-block;
 	// decoration
 	background-color: $tint;
+	border-radius: 1.5em / 50%;
 
 	@include breakpoint($gamora){
 		margin-bottom: (15 / 18 * 1em);
@@ -414,6 +414,11 @@
 	&:last-child{
 		margin-right: 0;
 	}
+	
+}
+
+.simple-filter-list li{
+	@extend %filter;
 }
 
 /*.simple-filter-list a{
@@ -510,22 +515,5 @@
 }
 
 .exposed_filter_data .filter{
-	// box model
-	//border: 1px solid mix($tint, $blueberry-susan, 80%);
-	margin: 0 1ch calc(15 / 14 * 1em) 0;
-	padding: calc(7.5 / 14 * 1em) 1ch calc(15 / 14 * 1em);
-	// layout
-	display: inline-block;
-	// decoration
-	background-color: $tint;
-	border-radius: 0.5em / 50%;
-
-	@include breakpoint($gamora){
-		margin-bottom: (15 / 18 * 1em);
-		padding: calc(7.5 / 18 * 1em) 1ch calc(15 / 18 * 1em);
-	}
-
-	&:last-child{
-		margin-right: 0;
-	}
+	@extend %filter;
 }
