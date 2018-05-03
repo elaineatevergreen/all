@@ -94,7 +94,7 @@ if (isset($exposed_filters)):
 	endforeach; //end run through array
 
 //debugging the printable values
-dpm($printfilters);
+//dpm($printfilters);
 
 
 //and THEN we print everything
