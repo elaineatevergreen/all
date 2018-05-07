@@ -1,6 +1,7 @@
 <?php
 	
-	
+//this is just used on the catalog node page
+//we should find a way to use standard Drupal rendering to get the correct effect instead, thanks
 function printEach($passedcontent, $put_front = "", $put_after= "")
 		//takes a content (not yet rendered) renderable array and prints all the items out
 		// put_front will be put in front of each element, and put after, after
@@ -240,6 +241,7 @@ function wwwevergreen_theme_media_element($variables) {
  * THEME_PREPROCESS_VIEWS_VIEW
  * @param type $vars
  * Adds category to title for the calendar. I hope. Taken from https://www.drupal.org/node/658566#comment-8278349
+ * Adds jquery ui to the catalog for overlay filters
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
@@ -261,6 +263,11 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     	}
 	        	
     }; //end if view and category set
+    
+    if($vars['view']->name == 'catalog') {
+	    drupal_add_library('system', 'ui');
+		drupal_add_library('system', 'ui.dialog');
+    }; //end check for catalog view
 }
 
 /**

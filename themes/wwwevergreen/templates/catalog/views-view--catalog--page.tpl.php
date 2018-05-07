@@ -36,6 +36,7 @@
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
+      <?php print get_exposed_filter_output(); ?>
     </div>
   <?php endif; ?>
   <?php if ($pager): ?>
