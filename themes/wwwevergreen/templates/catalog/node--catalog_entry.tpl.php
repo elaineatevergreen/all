@@ -1,20 +1,4 @@
 <?php
-		/*function printEach($passedcontent, $put_front = "", $put_after= "")
-		//takes a content (not yet rendered) renderable array and prints all the items out
-		// put_front will be put in front of each element, and put after, after
-		// front and after are optional parameters and default to ""
-		// this function does not print the key, only the elements recursively.
-		{
-			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
-				if(isset($passedcontent[$i])){
-					print($put_front);
-					print(render($passedcontent[$i]));
-					print($put_after);
-				}
-			}
-		}*/
-		?>
-<?php
 /**
  * Catalog Listing Page
  *
@@ -32,6 +16,7 @@
 $threequarters = $content['field_academic_year']['#items'][0]['safe_value'];
 $fall = $threequarters-1;
 $quarters_intro = ""; // init
+$summer_icon_render_flag = false;
 
 // Putting the correct year at the end of each Fall/Winter/Spring/etc
 foreach($content['field_quarters_offered']['#items'] as $q) {
@@ -83,12 +68,48 @@ if(count($quarters) == 1) {
 						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg"
 						 title="Spring"/>
 			<?php } ?>
-			<?php if (strpos($quarters_intro,"Summer") !== false) { ?>
+
+			<?php if ( (strpos($quarters_intro,"Summer") !== false) and ($summer_icon_render_flag == false) ) {
+				// so if we have a summer session, iterate through all values in field_summer_session and print
+				// them all out. Then set a flag so if "Summer" is in quarters intro twice for some reason
+				// we don't get all of the summer icons printed twice
+				$summer_icon_render_flag = true;
+				for($i = 0; $i < sizeof($content['field_summer_session']['#items'][0]["value"]); ++$i){
+					if(isset($content['field_summer_session'][$i])){
+						// if it's full session
+						if (strpos((string)$content['field_summer_session']['#items'][0]["value"] ,"Full") !== false) { ?>
+						<img alt=""
+						     class="listing-icon-summer"
+							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
+							 title="Summer"/>
+						<?php } // endif
+						// if it's session 1
+						if (strpos((string)$content['field_summer_session']['#items'][$i]["value"] ,"First") !== false) { ?>
+						<img alt=""
+						     class="listing-icon-summer"
+								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-1.svg"
+								 title="Summer"/>
+						<?php } //endif
+						// if it's session 2
+						if (strpos((string)$content['field_summer_session']['#items'][$i]["value"] ,"Second") !== false) { ?>
+						<img alt=""
+						     class="listing-icon-summer"
+								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-2.svg"
+								 title="Summer"/>
+						<?php } //endif?>
+
+				<?php } // if that value is actually set to anything?>
+			<?php } // loop going through all values in field_summer_session?>
+
+			<?php // adding extra fallback for summer sessions with no field_summer_session set but who have a quarters_intro set to "Summer"
+			if(isset($content['field_summer_session']) == false){?>
 				<img alt=""
 				     class="listing-icon-summer"
-						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
-						 title="Summer"/>
-			<?php } ?>
+					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
+					 title="Summer"/>
+				<?php } ?>
+
+		<?php } // summer is in $quarters_intro?>
 		</div>
 		<div class="listing-property-body">
 			<?php
@@ -178,21 +199,23 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<?php //Translating our curricular area into our image path name for grad courses
 		      // if graduate
-		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
+		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title	?>
 			<div class="listing-property-img">
 				<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
-		<?php if($content['field_curricular_area'][1]) { //allow for cross-listing MPA and MES electives ?>
+		<?php if($content['field_curricular_area'][1]) { //allow for cross-listed MES/MPA electives ?>
 			&nbsp;<img alt=""
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][1]));?>.svg" />
 
 		<?php };?>
-
 			</div>
 			<div class="listing-property-body">
 				<?php // printing our word Graduate
 					print(render($content['field_class_standing'][0]));
-				?>
+					// display class size
+					if(isset($content['field_maximum_enrollment'])){
+						print("<br/>" . "Class Size: ") . render($content['field_maximum_enrollment'][0]);
+					}?>
 			</div>
 		<?php
 		} else {
@@ -223,13 +246,17 @@ if(count($quarters) == 1) {
 					if(isset($content['field_class_standing'])) {
 						print_r(render($content['field_class_standing'][0]));
 						// if our eldest class standing is not also the same thing as our youngest, put a dash and display the range ex: freshman-senior
-					if(end($content['field_class_standing']) != ($content['field_class_standing']) ){
+					if(end($content['field_class_standing']) != ($content['field_class_standing'][0]) ){
 						print("–");
 						print_r( render(end($content['field_class_standing'])));
 					}else{
 						print(" Only");
 					};
 				}
+					// display class size
+					if(isset($content['field_maximum_enrollment'])){
+						print("<br/>" . "Class Size: ") . render($content['field_maximum_enrollment'][0]);
+					}
 					// if there is a % freshmen, display it
 					if(isset($content['field_percent_freshman'])){
 						print("<br/><small class='small'> " . render($content['field_percent_freshman'][0]) . " Reserved for Freshmen</small>");
@@ -237,38 +264,38 @@ if(count($quarters) == 1) {
 			</div>
 		<?php	}?>
 	</div>
-	
-	<?php // Credits amount standin ?>
+
+	<?php // Credits amount standin  ?>
 	<div class="listing-property">
 		<div class="listing-property-img">
-			<?php 
+			<?php
 				// if the only amount of credits is 0, that means this is a purely variable credits offering.
 				if(render($content['group_details']['field_credits'][0]) == '0'){
 			?>
 				<img alt="Variable" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
-			<?php 
+			<?php
 				// otherwise, iterate through the credit options and get the svg for that number
 				} else {
 				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
 					if(isset($content['group_details']['field_credits'][$i])){  ?>
 						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
 						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
-			<?php 
+			<?php
 					} // end check for whether value exists
 				} //end loop for values
 			} // end check for 0 credits
 		?>
 
-			<?php 		
-			// if there's a variable credit option in an offering with other credit options, display variable credit image	
+			<?php
+			// if there's a variable credit option in an offering with other credit options, display variable credit image
 			// adding the variable credit V if we already haven't (credit = 0)
 			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
 				<img alt="Variable"
 				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
 			<?php } ?>
 		</div> <!-- end #listing-property-image -->
-		
-		<div class="listing-property-body"> 
+
+		<div class="listing-property-body">
 		<?php
 			if(isset($content['group_details']['field_credits'][0])) {
 				// check to see if credit data value is 0, and if set, display v credits
@@ -289,7 +316,7 @@ if(count($quarters) == 1) {
 					print ("</br><small class='small'>Variable Credit Options Available</small>");
 				}
 			?>
-		</div> <!-- end #listing-property-image -->
+		</div> <!-- end #listing-property-body -->
 	</div> <!-- end #listing-property (credits) -->
 </header>
 
@@ -389,6 +416,68 @@ if (!$page){ ?>
 			 */
 			?>
 
+	<?php
+	// Preparatory Fields standin
+	// field_preparatory_for ?>
+	<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
+		<p><b><?php print ("This offering will prepare you for careers and advanced study in: ")?></b>
+			<?php print(render(($content['group_details']['field_preparatory_for']))); ?></p>
+	<?php }; ?>
+
+	<?php // Credits amount standin ?>
+	<div class="listing-property">
+		<div class="listing-property-img">
+			<?php
+				// if the only amount of credits is 0, that means this is a purely variable credits offering.
+				if(render($content['group_details']['field_credits'][0]) == '0'){
+			?>
+				<img alt="Variable" src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<?php
+				// otherwise, iterate through the credit options and get the svg for that number
+				} else {
+				for($i = 0; $i < sizeof($content['group_details']['field_credits']['#items']); ++$i){
+					if(isset($content['group_details']['field_credits'][$i])){  ?>
+						<img alt="<?php print(render($content['group_details']['field_credits'][$i]))?>"
+						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-<?php print(render($content['group_details']['field_credits'][$i]))?>.svg"/>
+
+				<?php } // end check for whether value exists
+				} //end loop for values
+			} // end check for 0 credits
+			// if there's a variable credit option in an offering with other credit options, display variable credit image
+			// adding the variable credit V if we already haven't (credit = 0)
+			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) { ?>
+				<img alt="Variable"
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/credits-variable.svg"/>
+			<?php } ?>
+		</div> <!-- end #listing-property-image -->
+		<div class="listing-property-body">
+		<?php
+			if(isset($content['group_details']['field_credits'][0])) {
+				// check to see if credit data value is 0, and if set, display v credits
+				if(render($content['group_details']['field_credits'][0]) == '0'){
+					print("Variable credit. <br/><small class='small'>See below for more info.</small>");
+				// if it's 1 credit, say "credit" and not "credits"
+				}elseif(render($content['group_details']['field_credits'][0]) == '1'){
+					print " Credit per quarter";
+				// printing plural credits
+				}else {
+					print "<p><b> Credits per quarter </b>";
+				}
+			}else{  // If the value isn't set, print no credit available
+				print ("Credit information not available.<br/><small class='small'>See below for more info.</small>");
+			}
+			# if the variable credit option exists, but it's not (0cred) version, print the text below the default credit value text
+			if(isset($content['field_variable_credit_options'][0]) and (render($content['group_details']['field_credits'][0]) != '0')) {
+					print ("</br><small class='small'>Variable Credit Options Available</small>");
+				}
+			?>
+			<?php
+			// Variable Credit standin
+			//  ?>
+			<?php if(isset($content['field_variable_credit_options'][0])) { ?>
+				<div><b><?php print ("Variable Credit Options:")?></b>
+					<?php print(render($content['field_variable_credit_options'])); ?></div>
+			<?php }; ?>
 
 			<?php // Study abroad standin with additional details ?>
 			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
@@ -399,7 +488,7 @@ if (!$page){ ?>
 					</div>
 					<div class="listing-property-body">
 						<p><b>Study abroad:</b></p>
-						<?php printEach($content['group_details']['group_location_schedule']['field_study_abroad']); ?>
+						<?php print(render($content['group_details']['group_location_schedule']['field_study_abroad'])); ?>
 					</div>
 				</div>
 			<?php }; ?>
@@ -411,25 +500,24 @@ if (!$page){ ?>
 				<div class="fos keyword-list">
 					<b><?php print ("Fields of study:")?></b> 
 					<ul class="field-fields-of-study element-list">
-					<?php printEach($content['group_details']['field_fields_of_study'], "<li>", "</li>"); ?>
-				</ul>
+
+				<?php for($i = 0; $i < sizeof($content['group_details']['field_fields_of_study']["#items"]); ++$i){
+					if(isset($content['group_details']['field_fields_of_study'][$i])){ ?>
+					<li>
+						<?php print(render($content['group_details']['field_fields_of_study'][$i]));?>
+					</li>
+					 <?php }; // end for ?>
+	    		<?php }; // end iterate through all elements ?>
+					</ul>
 				</div>
-	    <?php }; ?>
-
-	    <?php
-			// Preparatory Fields standin
-			// field_preparatory_for ?>
-			<?php if(isset($content['group_details']['field_preparatory_for'][0])) { ?>
-				<p><b><?php print ("This offering will prepare you for careers and advanced study in: ")?></b>
-					<?php printEach($content['group_details']['field_preparatory_for']); ?></p>
+		<?php }; // field fields of study?>
+			<?php
+			// prereq field standin
+			// field_prerequisites ?>
+			<?php if(isset($content['group_prerequisites']['field_prerequisites'][0])) { ?>
+				<div><b><?php print ("Prerequisites:")?></b>
+					<?php print(render($content['group_prerequisites']['field_prerequisites'])); ?></div>
 			<?php }; ?>
-
-			<?php // Maximum enrollment standin
-			// field_maximum_enrollment ?>
-			<?php if(isset($content['field_maximum_enrollment'][0])) { ?>
-				<p><b><?php print ("Maximum enrollment:")?></b>
-					<?php printEach($content['field_maximum_enrollment']); ?></p>
-	    <?php }; ?>
 
 	 <?php //Online Learning standin
 				 // field_online_learning ?>
@@ -448,27 +536,27 @@ if (!$page){ ?>
 		 		<?php }; // end check for existence of online learning field ?>
 
 	    <?php
-			// Special expenses standin
+		// Special expenses standin
      	// field_special_expenses ?>
      	<?php if(isset($content['group_details']['group_more']['field_special_expenses'][0])) { ?>
 				<div><b><?php print ("Special expenses:")?></b>
-					<?php printEach($content['group_details']['group_more']['field_special_expenses']); ?></div>
+					<?php print(render($content['group_details']['group_more']['field_special_expenses'])); ?></div>
 	    <?php }; ?>
 
 			<?php
 			// Fees standin
 			// field_fees (can be 0?) TODO fix p tags?>
 			<?php if(isset($content['group_details']['group_more']['field_fees'][0])) { ?>
-				<div><b><?php print ("Fees:") // have to do a substr to get rid of annoying paragraph tabs below ?></b>
-					<?php printEach($content['group_details']['group_more']['field_fees']); ?></div>
+				<div><b>Fees: </b><!--
+					--><?php print(render($content['group_details']['group_more']['field_fees'])); ?></div>
 	    <?php }; ?>
 
 	    <?php
-			// Upper division science credit standin TODO fix p tags
+			// Upper division science credit standin
 			// field_upper_division (field_upper_division_boolean seems to be 1 on classes without upper credit too?) ?>
 			<?php if(isset($content['field_upper_division'][0])) { ?>
 				<p><b><?php print ("Upper division science credit:") // also getting rid of annoying p tags below?></b>
-					 <?php printEach($content['field_upper_division']); ?></p>
+					 <?php print(render($content['field_upper_division'])); ?></p>
 	    <?php }; ?>
 
 			<?php
@@ -476,7 +564,7 @@ if (!$page){ ?>
 			// field_websites ?>
 			<?php if(isset($content['group_details']['field_websites'][0])) { ?>
 				<div><b><?php print ("Website:")?></b> <?
-					printEach($content['group_details']['field_websites']);?>
+					print(render($content['group_details']['field_websites']));?>
 					</div>
 				<?php }; ?>
 
@@ -485,25 +573,90 @@ if (!$page){ ?>
 			// field_internship_opportunities ?>
 			<?php if(isset($content['field_internship_opportunities'][0])) { ?>
 				<div><b><?php print ("Internship Opportunities:")?></b>
-					<?php printEach($content['field_internship_opportunities']); ?></div>
+					<?php print(render($content['field_internship_opportunities'])); ?></div>
 			<?php }; ?>
 			<?php
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['field_research_opportunities'][0])) { ?>
 				<div><b><?php print ("Research Opportunities:")?></b>
-					<?php printEach($content['field_research_opportunities']); ?></div>
-			<?php }; ?>
-			<?php
-			// prereq field standin
-			// field_prerequisites ?>
-			<?php if(isset($content['group_prerequisites']['field_prerequisites'][0])) { ?>
-				<div><b><?php print ("Prerequisites:")?></b>
-					<?php printEach($content['group_prerequisites']['field_prerequisites']); ?></div>
+					<?php print(render($content['field_research_opportunities'])); ?></div>
 			<?php }; ?>
 
 
 
+
+
+		</div> <!-- end #listing-property-body -->
+	</div> <!-- end #listing-property (credits) -->
+
+
+	<?php // Class standing standin ?>
+	<div class="listing-property">
+		<?php //Translating our curricular area into our image path name for grad courses
+		      // if graduate
+		if (render($content['field_class_standing'][0]) == "Graduate"){ // rendering our grad image + title?>
+			<div class="listing-property-img">
+				<img alt=""
+				     src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_curricular_area'][0]));?>.svg" />
+			</div>
+			<div class="listing-property-body">
+				<?php // printing our word Graduate
+					print("<b>Class Standing: </b>");
+					print(render($content['field_class_standing'][0]));
+					// display class size
+					if(isset($content['field_maximum_enrollment'])){
+						print("<br/>" . "<b>Class Size: </b>") . render($content['field_maximum_enrollment'][0]);
+					}?>
+			</div>
+		<?php
+		} else {
+			// if it's an undergrad course
+		  // take the first element and the last element, and use them to make the file name for the class standing range
+		  // Render our undergrad image and title?>
+		  <div class="listing-property-img">
+				<?php // If we have  undergrad course that extends through graduate, print the logos together with the correct title ?>
+				<?php if(render(end($content['field_class_standing'])) == "Graduate" ){
+					//printing the undergrad bars from the first through senior?>
+					<img alt=""
+							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-Senior.svg";?>"
+							 title="<?php print(render($content['field_class_standing'][0]));?>-Senior" />
+
+					<?php // adding the grad+ icon after our bars for undergrad years?>
+					<img alt=""
+						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/grad.svg"
+							 title="Graduate" />
+				<?php } else { // if it's a normal undergrad course?>
+					<img alt=""
+						   src="/sites/all/themes/wwwevergreen/images/icons/catalog/<?php print(render($content['field_class_standing'][0])) . "-" . render(end($content['field_class_standing']));?>.svg"
+						   title="<?php print(render($content['field_class_standing'][0]));?>-<?php print(render(end($content['field_class_standing'])));?>" />
+
+				<?php }?>
+			</div>
+			<div class="listing-property-body">
+				<?php // Printing youngest class standing
+					if(isset($content['field_class_standing'])) {
+						print("<b>Class Standing: </b>");
+						print_r(render($content['field_class_standing'][0]));
+						// if our eldest class standing is not also the same thing as our youngest, put a dash and display the range ex: freshman-senior
+					if(end($content['field_class_standing']) != ($content['field_class_standing'][0]) ){
+						print("–");
+						print_r( render(end($content['field_class_standing'])));
+					}else{
+						print(" Only");
+					};
+				}
+					// display class size
+					if(isset($content['field_maximum_enrollment'])){
+						print("<br/>" . "<b>Class Size: </b>") . render($content['field_maximum_enrollment'][0]);
+					}
+					// if there is a % freshmen, display it
+					if(isset($content['field_percent_freshman'])){
+						print("<br/> " . render($content['field_percent_freshman'][0]) . " Reserved for Freshmen");
+					} ?>
+			</div>
+		<?php	}?>
+	</div>
 
 			<?php // Image for the Scheduled for: section in body ?>
 				<?php
@@ -537,7 +690,21 @@ if (!$page){ ?>
 
 					<div class="listing-property-body">
 						<?php if(isset($content['group_details']['group_location_schedule']['field_time_offered'])) { ?>
-							<p><b>Scheduled for:</b> <?php printEach($content['group_details']['group_location_schedule']['field_time_offered']); ?>
+							<p><b>Scheduled for:</b> <?php print(render($content['group_details']['group_location_schedule']['field_time_offered'])); ?>
+						<?php }; ?>
+						<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
+						<p><b>Final schedule and room assignments:</b></p>
+						<?php print(render(($content['group_details']['group_location_schedule']['field_final_schedule']))); ?>
+						<?php }; ?>
+
+						<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
+							<p><b>Advertised schedule:</b></p>
+							<?php print(render($content['group_details']['group_location_schedule']['field_advertised_schedule'])); ?>
+						<?php }; ?>
+
+						<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
+							<p><b>Additional details:</b></p>
+							<?php print(render($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])); ?>
 						<?php }; ?>
 						</div>
 					</div>
@@ -572,49 +739,25 @@ if (!$page){ ?>
 						</p>
 						</div>
 						<div class="listing-property-body">
-							<p><b>Located in:</b> <?php printEach($content['group_details']['group_location_schedule']['field_location']); ?></p>
+							<p><b>Located in:</b> <?php print(render($content['group_details']['group_location_schedule']['field_location'])); ?></p>
 							<?php // Off-campus location standin - FYI, no programs in 2017–18 and ’18–19 have this flag set, so it’s kinda hard to test right now. —jkm
 								if(isset($content['group_details']['group_location_schedule']['field_off_campus_location'])) { ?>
-								<p><b>Off-campus location:</b> <?php printEach($content['group_details']['group_location_schedule']['field_off_campus_location']); ?></p>
+								<p><b>Off-campus location:</b> <?php print(render($content['group_details']['group_location_schedule']['field_off_campus_location'])); ?></p>
 							<?php }; ?>
 						</div>
 				</div>
 
-				<?php
-			 /**
-				* Location and Schedule
-				*/
-			 ?>
-
-		<div class="listing-property">
-			<div class="listing-property-body">
-
-				<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
-					<p><b>Final schedule and room assignment:</b></p>
-					<?php printEach($content['group_details']['group_location_schedule']['field_final_schedule']); ?>
-				<?php }; ?>
-
-				<?php if(isset($content['group_details']['group_location_schedule']['field_advertised_schedule'])) { ?>
-					<p><b>Advertised schedule:</b></p>
-					<?php printEach($content['group_details']['group_location_schedule']['field_advertised_schedule']); ?>
-				<?php }; ?>
-
-				<?php if(isset($content['group_details']['group_location_schedule']['field_additional_schedule_detail'])) { ?>
-					<p><b>Additional details:</b></p>
-					<?php printEach($content['group_details']['group_location_schedule']['field_additional_schedule_detail']); ?>
-				<?php }; ?>
-
-
-			</div>
-		</div>
 			<!--The “May be offered again” standin here. -->
-			<div class="box note">
+
 				<?php if(isset($content['group_details']['group_more']['field_next_offered'])) { ?>
+				<div class="box note">
 					<p>
 						<?php print(render($content['group_details']['group_more']['field_next_offered'])); ?>
 					</p>
+					</div>
 				<?php }; ?>
-			</div>
+
+
 		</div> <!-- /.program-description -->
 
 		<?php
@@ -623,10 +766,8 @@ if (!$page){ ?>
 		 */
 		?>
 		<?php // revisions, do we want these in the new design? ?>
-		<?php printEach($content['field_revisions']); ?>
+		<?php print(render($content['field_revisions'])); ?>
 
-
-		
 	</div> <!-- /.content -->
 
 </div>
