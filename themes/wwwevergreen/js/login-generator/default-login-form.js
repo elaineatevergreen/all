@@ -2,10 +2,8 @@ jQuery(document).ready(function ($) {
  //Following string contains all of the html displayed on the page before the user does anything.
   document.getElementById('LoginGenerator').innerHTML = "" +
   "  <form action=\"LoginGenerator\" method=\"get\">" + 
+  "    <p>Automatically determine your Evergreen login credentials.</p>" + 
   "    <ul class=\"element-list\">" + 
-  "      <li>" + 
-  "        <p>Automatically determine your Evergreen login credentials.</p>" + 
-  "      </li>" + 
   "      <li>" + 
   "        <h3>Name</h3>" + 
   "      </li>" + 
@@ -23,7 +21,7 @@ jQuery(document).ready(function ($) {
   "      </li>" + 
   "      <li>" + 
   "        <fieldset>" + 
-  "          <h3>Birthday</h3>" + 
+  "          <h3 class=\"follow\">Birthday</h3>" + 
   "          <div class=\"date-compound-select\">" + 
   "            <div class=\"date-compound-select__month\">" + 
   "              <label for=\"monthselect\">Month:</label><br/>" + 
@@ -223,24 +221,24 @@ window.writeValues = function(form) {
   month = month.toLowerCase();
   if (fname == "") {
     document.getElementById('alertcontainer').style.display="";
-    document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your First Name is Required</li> </ul>";
+    document.getElementById('alertcontainer').innerHTML = "<p><strong>Error</strong></p> <ul> <li>Your first name is required.</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
     return false;
   } else if (lname == "") {
     document.getElementById('alertcontainer').style.display="";
-    document.getElementById('alertcontainer').innerHTML = "<strong>Error</strong><ul> <li>Your Last Name is Required</li> </ul>";
+    document.getElementById('alertcontainer').innerHTML = "<p><strong>Error</strong></p> <ul> <li>Your last name is required.</li> </ul>";
     document.getElementById('gentitle').innerHTML = "";
     document.getElementById('genuser').innerHTML = "";
     document.getElementById('genpass').innerHTML = "";
     return false;
   } else {
     document.getElementById('alertcontainer').style.display="none";
-    document.getElementById('gentitle').innerHTML = "Your login credentials";
+    document.getElementById('gentitle').innerHTML = "<h3>Your login credentials</h3>";
 
-    document.getElementById('genuser').innerHTML = "<p>Your Username: </p>" + lname.substring(0, 3) + fname.substring(0, 3) + day;
-    document.getElementById('genpass').innerHTML = "<p>Your Password: </p>" + day + month.substring(0, 3) + year;
+    document.getElementById('genuser').innerHTML = "<p>Your Username: <span class=\"machine-text\">" + lname.substring(0, 3) + fname.substring(0, 3) + day + "</span></p>";
+    document.getElementById('genpass').innerHTML = "<p>Your Password: <span class=\"machine-text\">" + day + month.substring(0, 3) + year + "</span></p>";
 
   }
 }
