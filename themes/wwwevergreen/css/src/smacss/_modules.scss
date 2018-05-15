@@ -18,13 +18,14 @@
  * K. Spread Segment
  * L. Boxes
  * M. Images
- * N. Calendars
- * O. News
- * P. Profiles
- * Q. Directories
- * R. Embedded Content
- * S. Drupal Login
- * T. CMS
+ * N. Forms
+ * O. Calendars
+ * P. News
+ * Q. Profiles
+ * R. Directories
+ * S. Embedded Content
+ * T. Drupal Login
+ * U. CMS
  */
 
 
@@ -350,14 +351,25 @@
  */
 @import "modules/images";
 
+/**
+ * N. Forms
+ */
+.date-compound-select{
+	display: flex;
+}
+
+.date-compound-select__month,
+.date-compound-selet__day{
+	margin-right: 1ch;
+}
 
 /**
- * N. Calendars
+ * O. Calendars
  */
 @import "modules/calendars";
 
 /**
- * O. News
+ * P. News
  */
 .news{
 	// layout
@@ -392,17 +404,17 @@
 }
 
 /**
- * P. Profiles
+ * Q. Profiles
  */
 @import "modules/profiles";
 
 /**
- * Q. Directories
+ * R. Directories
  */
 @import "modules/directories";
 
 /**
- * R. Embeded Content
+ * S. Embeded Content
  */
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
@@ -462,7 +474,7 @@
 }
 
 /**
- * S. Drupal Login
+ * T. Drupal Login
  *
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
@@ -490,7 +502,7 @@
 }
 
 /**
- * T. CMS
+ * U. CMS
  *
  * Styles to make the CMS WYSIWYG editor look nice. Not seen on
  * published site.
