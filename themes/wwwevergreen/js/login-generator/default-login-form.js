@@ -24,8 +24,8 @@ jQuery(document).ready(function ($) {
   "      <li>" + 
   "        <fieldset>" + 
   "          <h3>Birthday</h3>" + 
-  "          <div class=\"grid\">" + 
-  "            <div class=\"unit-1-3\">" + 
+  "          <div class=\"date-compound-select\">" + 
+  "            <div class=\"date-compound-select__month\">" + 
   "              <label for=\"monthselect\">Month:</label><br/>" + 
   "              <select id=\"monthselect\" name=\"month\" required>" + 
   "        <option value=\"January\">January</option>" + 
@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
   "        <option value=\"December\">December</option>" + 
   "              </select>" + 
   "            </div>" + 
-  "            <div class=\"unit-1-3\">" + 
+  "            <div class=\"date-compound-select__day\">" + 
   "              <label for=\"dayselect\">Day:</label><br/>" + 
   "              <select id=\"dayselect\" name=\"day\" required>" + 
   "        <option value=\"01\">01</option>" + 
@@ -79,7 +79,7 @@ jQuery(document).ready(function ($) {
   "        <option value=\"32\">32</option>" + 
   "              </select>" + 
   "            </div>" + 
-  "            <div class=\"unit-1-3\">" + 
+  "            <div class=\"date-compound-select__year\">" + 
   "              <label for=\"yearselect\">Year:</label><br/>" + 
   "              <select id=\"yearselect\" name=\"year\" required>" + 
   "        <option value=\"18\">2018</option>" + 
