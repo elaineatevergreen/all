@@ -497,19 +497,7 @@ if (!$page){ ?>
 			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
-				<div class="fos keyword-list">
-					<b><?php print ("Fields of study:")?></b> 
-					<ul class="field-fields-of-study element-list">
-
-				<?php for($i = 0; $i < sizeof($content['group_details']['field_fields_of_study']["#items"]); ++$i){
-					if(isset($content['group_details']['field_fields_of_study'][$i])){ ?>
-					<li>
-						<?php print(render($content['group_details']['field_fields_of_study'][$i]));?>
-					</li>
-					 <?php }; // end for ?>
-	    		<?php }; // end iterate through all elements ?>
-					</ul>
-				</div>
+			<?php print(render($content['group_details']['field_fields_of_study'][$i]));?>
 		<?php }; // field fields of study?>
 			<?php
 			// prereq field standin
