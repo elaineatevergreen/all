@@ -83,9 +83,9 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 	<main id="main-row" class="main-row row wrapper">
 		<div class="grid main-row-grid">
 		
-			<div class="tertiary-nav-wrapper unit-1-7">
+			<!--<div class="tertiary-nav-wrapper unit-1-7">
 
-			</div>
+			</div>-->
 	
 	    <div id="index-wrapper" class="index-wrapper unit-6-7">
 		      
