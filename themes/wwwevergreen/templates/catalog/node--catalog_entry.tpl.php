@@ -497,7 +497,7 @@ if (!$page){ ?>
 			// Fields of study standin
 			// field_fields_of_study ?>
      	<?php if(isset($content['group_details']['field_fields_of_study'][0])) { ?>
-			<?php print(render($content['group_details']['field_fields_of_study']));?>
+			<?php print(render($content['group_details']['field_fields_of_study'][$i]));?>
 		<?php }; // field fields of study?>
 			<?php
 			// prereq field standin
