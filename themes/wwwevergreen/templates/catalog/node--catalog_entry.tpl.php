@@ -552,8 +552,8 @@ if (!$page){ ?>
 			// Website field standin
 			// field_websites ?>
 			<?php if(isset($content['group_details']['field_websites'][0])) { ?>
-				<div><b><?php print ("Website:")?></b> <?
-					print(render($content['group_details']['field_websites']));?>
+				<div><b><?php print ("Website:")?></b> 
+					<?php print(render($content['group_details']['field_websites']));?>
 					</div>
 				<?php }; ?>
 
