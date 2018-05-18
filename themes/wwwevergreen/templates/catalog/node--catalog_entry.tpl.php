@@ -410,12 +410,25 @@ if (!$page){ ?>
  	 	 // changed $content to now just print the body content without the save link attached ?>
 		 <?php print render($content['body'][0]); ?>
 
-			<?php
-			/**
-			 * Additional Program Details
-			 */
-			?>
-
+		<?php
+		/**
+		 * Additional Program Details
+		 */
+		?>
+		<?php // Study abroad standin with additional details ?>
+		<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
+			<div class="listing-property">
+				<div class="listing-property-img">
+					<img alt=""
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
+				</div>
+				<div class="listing-property-body">
+					<p><b>Study abroad:</b></p>
+					<?php print(render($content['group_details']['group_location_schedule']['field_study_abroad'])); ?>
+				</div>
+			</div>
+		<?php }; ?>
+			
 	<?php
 	// Preparatory Fields standin
 	// field_preparatory_for ?>
@@ -479,19 +492,7 @@ if (!$page){ ?>
 					<?php print(render($content['field_variable_credit_options'])); ?></div>
 			<?php }; ?>
 
-			<?php // Study abroad standin with additional details ?>
-			<?php if(isset($content['group_details']['group_location_schedule']['field_study_abroad'])) { ?>
-				<div class="listing-property">
-					<div class="listing-property-img">
-						<img alt=""
-						     src="/sites/all/themes/wwwevergreen/images/icons/catalog/study-abroad.svg"/>
-					</div>
-					<div class="listing-property-body">
-						<p><b>Study abroad:</b></p>
-						<?php print(render($content['group_details']['group_location_schedule']['field_study_abroad'])); ?>
-					</div>
-				</div>
-			<?php }; ?>
+
 
 			<?php
 			// Fields of study standin
