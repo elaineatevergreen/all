@@ -267,6 +267,7 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     if($vars['view']->name == 'catalog') {
 	    drupal_add_library('system', 'ui');
 		drupal_add_library('system', 'ui.dialog');
+		drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/filter-overlay.js');
     }; //end check for catalog view
 }
 
