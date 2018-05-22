@@ -10,7 +10,6 @@ scripts[] = js/external/matchMedia.min.js
 stylesheets[all][] = css/dist/custom-css/slick.css
 scripts[] = js/external/slick.min.js
 scripts[] = js/dist/init/slick-home-init.js
-;scripts[] = js/filter-overlay.js
 
 
 ; regions in order
