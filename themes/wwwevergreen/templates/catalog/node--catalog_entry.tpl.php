@@ -51,22 +51,19 @@ if(count($quarters) == 1) {
 
 			// Drawing the images for the different quarters?>
 			<?php if (strpos($quarters_intro,"Fall") !== false) {?>
-				<img alt=""
+				<img alt="Fall"
 				     class="listing-icon-fall"
-						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"
-						 title="Fall"/>
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/fall.svg"/>
 			<?php } ?>
 			<?php if (strpos($quarters_intro,"Winter") !== false) { ?>
-				<img alt=""
+				<img alt="Winter"
 				     class="listing-icon-winter"
-						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg"
-						 title="Winter"/>
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/winter.svg"/>
 			<?php } ?>
 			<?php if (strpos($quarters_intro,"Spring") !== false) { ?>
-				<img alt=""
+				<img alt="Spring"
 				     class="listing-icon-spring"
-						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg"
-						 title="Spring"/>
+						 src="/sites/all/themes/wwwevergreen/images/icons/catalog/spring.svg"/>
 			<?php } ?>
 
 			<?php if ( (strpos($quarters_intro,"Summer") !== false) and ($summer_icon_render_flag == false) ) {
@@ -78,24 +75,21 @@ if(count($quarters) == 1) {
 					if(isset($content['field_summer_session'][$i])){
 						// if it's full session
 						if (strpos((string)$content['field_summer_session']['#items'][0]["value"] ,"Full") !== false) { ?>
-						<img alt=""
+						<img alt="Summer"
 						     class="listing-icon-summer"
-							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
-							 title="Summer"/>
+							 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"/>
 						<?php } // endif
 						// if it's session 1
 						if (strpos((string)$content['field_summer_session']['#items'][$i]["value"] ,"First") !== false) { ?>
-						<img alt=""
+						<img alt="Summer"
 						     class="listing-icon-summer"
-								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-1.svg"
-								 title="Summer"/>
+								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-1.svg"/>
 						<?php } //endif
 						// if it's session 2
 						if (strpos((string)$content['field_summer_session']['#items'][$i]["value"] ,"Second") !== false) { ?>
-						<img alt=""
+						<img alt="Summer"
 						     class="listing-icon-summer"
-								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-2.svg"
-								 title="Summer"/>
+								 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer-session-2.svg"/>
 						<?php } //endif?>
 
 				<?php } // if that value is actually set to anything?>
@@ -103,10 +97,9 @@ if(count($quarters) == 1) {
 
 			<?php // adding extra fallback for summer sessions with no field_summer_session set but who have a quarters_intro set to "Summer"
 			if(isset($content['field_summer_session']) == false){?>
-				<img alt=""
+				<img alt="Summer"
 				     class="listing-icon-summer"
-					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"
-					 title="Summer"/>
+					 src="/sites/all/themes/wwwevergreen/images/icons/catalog/summer.svg"/>
 				<?php } ?>
 
 		<?php } // summer is in $quarters_intro?>
@@ -169,10 +162,9 @@ if(count($quarters) == 1) {
 	<div class="listing-property">
 		<div class="listing-property-img">
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Day")!== false) {?>
-					<img alt=""
+					<img alt="Daytime"
 					     class="listing-icon-time-offered listing-icon-day"
-					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg"
-							 title="Daytime"/>
+					     src="/sites/all/themes/wwwevergreen/images/icons/catalog/daytime.svg"/>
 		  <?php } ?>
 			<?php if (strpos(render($content['group_details']['group_location_schedule']['field_time_offered']),"Evening")!== false) {?>
 					<img alt=""
@@ -335,8 +327,10 @@ if(count($quarters) == 1) {
 	</div>
 </div>
 
+<?php /* "Header" ends here */ ?>
+
 <?php
-// "Header" ends here
+
 //* - $title_prefix (array): An array containing additional output populated by
 //*   modules, intended to be displayed in front of the main title tag that
 //*   appears in the template.
