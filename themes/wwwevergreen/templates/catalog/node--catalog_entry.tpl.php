@@ -41,6 +41,32 @@ if(count($quarters) == 1) {
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php print $user_picture; ?>
 
+<?php
+	
+// Show the title only if this is not a page
+// This is used for archive displays and other instances where a complete catalog entry might be embedded in content
+
+if (!$page){
+
+//* - $title_prefix (array): An array containing additional output populated by
+//*   modules, intended to be displayed in front of the main title tag that
+//*   appears in the template.
+print render($title_prefix);
+
+//* - $title: The page title, for use in the actual HTML content.
+
+ ?>
+	<h2<?php print $title_attributes; ?>>
+		<a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+	</h2>
+
+<?php
+//* - $title_suffix (array): An array containing additional output populated by
+//*   modules, intended to be displayed after the main title tag that appears in
+//*   the template. ?>
+<?php print render($title_suffix); ?>
+<?php } ?>
+
 <?php // TESTING HEADER ZONE ?>
 <header class="listing-header">
 	<?php // Month/Year standin ?>
@@ -329,26 +355,7 @@ if(count($quarters) == 1) {
 
 <?php /* "Header" ends here */ ?>
 
-<?php
 
-//* - $title_prefix (array): An array containing additional output populated by
-//*   modules, intended to be displayed in front of the main title tag that
-//*   appears in the template.
-print render($title_prefix);
-
-//* - $title: The page title, for use in the actual HTML content.
-
-if (!$page){ ?>
-	<h2<?php print $title_attributes; ?>>
-		<a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-	</h2>
-<?php } ?>
-
-<?php
-//* - $title_suffix (array): An array containing additional output populated by
-//*   modules, intended to be displayed after the main title tag that appears in
-//*   the template. ?>
-<?php print render($title_suffix); ?>
 
 <div class="content"<?php print $content_attributes; ?>>
   <?php
