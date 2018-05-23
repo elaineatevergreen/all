@@ -10,6 +10,7 @@ display office information as a "contact block" usually on a page.
         <h2>Contact</h2>
 
         <p><b class="p-name"><?php print $title; ?></b><br>
+        <?php print render($content['field_subtitle']) ?><br>
         <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </span>
         <?php if (isset($content['field_email'])) {
 	        ?><br>
