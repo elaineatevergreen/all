@@ -73,6 +73,7 @@ th{
 }
 
 tbody th,
+tfoot th,
 td{
 	// box model
 	border: 0 solid mix($tint, $shade, 80%);
