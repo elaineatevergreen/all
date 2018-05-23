@@ -961,6 +961,7 @@ th {
 
 /* line 75, ../src/smacss/base/_tables.scss */
 tbody th,
+tfoot th,
 td {
   border: 0 solid #c2c2c2;
   border-top-width: 1px;
@@ -972,26 +973,26 @@ td {
   vertical-align: top;
 }
 
-/* line 88, ../src/smacss/base/_tables.scss */
+/* line 89, ../src/smacss/base/_tables.scss */
 tbody > tr:first-child > th,
 tbody > tr:first-child > td {
   border-top-color: black;
 }
 
-/* line 93, ../src/smacss/base/_tables.scss */
+/* line 94, ../src/smacss/base/_tables.scss */
 th:last-child,
 td:last-child {
   padding-right: 0;
 }
 
-/* line 98, ../src/smacss/base/_tables.scss */
+/* line 99, ../src/smacss/base/_tables.scss */
 td strong,
 tfoot td {
   color: black;
   font-weight: bold;
 }
 
-/* line 105, ../src/smacss/base/_tables.scss */
+/* line 106, ../src/smacss/base/_tables.scss */
 th > :first-child,
 td > :first-child,
 td > ul:first-child li:first-child > p:first-child,
@@ -999,7 +1000,7 @@ td > ol:first-child li:first-child > p:first-child {
   margin-top: 0;
 }
 
-/* line 113, ../src/smacss/base/_tables.scss */
+/* line 114, ../src/smacss/base/_tables.scss */
 th > :last-child,
 td > :last-child,
 td > ul:last-child li:last-child > p:last-child,
@@ -1007,12 +1008,12 @@ td > ol:last-child li:last-child > p:last-child {
   margin-bottom: 0;
 }
 
-/* line 120, ../src/smacss/base/_tables.scss */
+/* line 121, ../src/smacss/base/_tables.scss */
 table a {
   text-decoration: none;
 }
 
-/* line 124, ../src/smacss/base/_tables.scss */
+/* line 125, ../src/smacss/base/_tables.scss */
 .tnum {
   text-align: right;
 }
@@ -1022,19 +1023,19 @@ table a {
  *
  * For tables with the th left of the tds (i.e. scope="row").
  */
-/* line 133, ../src/smacss/base/_tables.scss */
+/* line 134, ../src/smacss/base/_tables.scss */
 .horizontal-table th {
   border-top: 1px solid #c2c2c2;
   padding: 0.37037em 1.1111111111em 1.1111111111em 0;
   vertical-align: top;
 }
 
-/* line 141, ../src/smacss/base/_tables.scss */
+/* line 142, ../src/smacss/base/_tables.scss */
 .horizontal-table tr:first-child th {
   border-top: 1px solid black;
 }
 
-/* line 146, ../src/smacss/base/_tables.scss */
+/* line 147, ../src/smacss/base/_tables.scss */
 .horizontal-table:last-child {
   border-bottom-width: 0;
 }
@@ -1045,7 +1046,7 @@ table a {
  * For normal tables that need the left-padding for whatever reason
  * (e.g. background-colors that make the text look funny).
  */
-/* line 157, ../src/smacss/base/_tables.scss */
+/* line 158, ../src/smacss/base/_tables.scss */
 .padded-table th,
 .padded-table td,
 .accordion-table th,
@@ -1053,7 +1054,7 @@ table a {
 .striped-table td {
   padding-left: 1.1111111111em;
 }
-/* line 164, ../src/smacss/base/_tables.scss */
+/* line 165, ../src/smacss/base/_tables.scss */
 .padded-table th:last-child,
 .padded-table td:last-child,
 .accordion-table th:last-child,
@@ -1062,7 +1063,7 @@ table a {
   padding-right: 1.1111111111em;
 }
 
-/* line 169, ../src/smacss/base/_tables.scss */
+/* line 170, ../src/smacss/base/_tables.scss */
 .striped-table > tbody > tr:nth-child(odd) {
   background-color: #e1dee3;
 }
@@ -1072,22 +1073,22 @@ table a {
  *
  * JavaScript DataTables plugin.
  */
-/* line 179, ../src/smacss/base/_tables.scss */
+/* line 180, ../src/smacss/base/_tables.scss */
 .dataTable th:hover {
   cursor: pointer;
 }
 
-/* line 184, ../src/smacss/base/_tables.scss */
+/* line 185, ../src/smacss/base/_tables.scss */
 .sorting_asc::before {
   content: "↓\00A0";
 }
 
-/* line 188, ../src/smacss/base/_tables.scss */
+/* line 189, ../src/smacss/base/_tables.scss */
 .sorting_desc::before {
   content: "↑\00A0";
 }
 
-/* line 192, ../src/smacss/base/_tables.scss */
+/* line 193, ../src/smacss/base/_tables.scss */
 .dataTables_filter label {
   font-weight: bold;
 }
