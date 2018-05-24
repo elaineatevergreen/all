@@ -17,7 +17,7 @@ if(isset($content['field_reference'])) { ?>
 		
 	} else {
 ?>	
-	
+	<h5><?php print render($content['field_subtitle']) ?></h5>
     <h2>Contact Information</h2>
     <div class="extended-address">
 	    <?php if (isset($content['field_building_alt']) or isset($content['field_room'])) { ?>
