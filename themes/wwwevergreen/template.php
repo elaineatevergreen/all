@@ -206,6 +206,11 @@ function wwwevergreen_field__field_fax(&$variables) {
   return $output;
 }
 
+// adds class to any email type field
+function wwwevergreen_field__email(&$variables) {
+	$variables['attributes']['class'][] = "u-email";
+}
+
 /**
  * Returns HTML for a managed file element.
  *
