@@ -208,7 +208,9 @@ function wwwevergreen_field__field_fax(&$variables) {
 
 // adds class to any email type field
 function wwwevergreen_field__field_email(&$variables) {
-	$variables['attributes']['class'][] = "u-email";
+	foreach ($variables['items'] as $delta => $item) {
+		$variables['items'][$delta]['attributes']['class'][] = "u-email";
+	};
 }
 
 /**
