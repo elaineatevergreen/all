@@ -94,6 +94,7 @@ if(isset($content['field_reference'])) { ?>
 	        if (isset($content['group_social']['field_facebook'])) { print render($content['group_social']['field_facebook']); }; 
 	        if (isset($content['group_social']['field_twitter'])) { print render($content['group_social']['field_twitter']); };
 	        if (isset($content['group_social']['field_linkedin'])) { print render($content['group_social']['field_linkedin']); }; 
+	        if (isset($content['group_social']['field_instagram'])) { print render($content['group_social']['field_instagram']); }; 
 	        
 	        if (isset($content['field_members'])) { print render($content['field_members']); };  
 	        
