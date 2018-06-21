@@ -108,7 +108,7 @@ function wwwevergreen_field__field_display_name(&$variables) {
 //also adds classes on square and rectangular thumbnails
 function wwwevergreen_preprocess_image(&$variables) {
   if(isset($variables['style_name'])) {
-	if($variables['style_name'] == 'image_class' or $variables['style_name'] == 'event_image__345px_wide_') {
+	if($variables['style_name'] == 'image_class') {
       $variables['attributes']['class'][] = "image";
     };
     if($variables['style_name'] == 'portrait_thumbnail2') {
