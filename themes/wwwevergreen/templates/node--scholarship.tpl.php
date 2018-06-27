@@ -38,6 +38,8 @@
 	<?php 
 		//add the donation box if this scholarship is seeking funding
 		if(isset($content['field_funding_status'])) {
+			//not using this field anymore!
+			//at the moment all scholarships use the same donation form in the Advancement CRM
 			if(trim(render($content['field_cashnet_code'])) != '') { $cashnet = trim(render($content['field_cashnet_code'])); }
 			else { $cashnet = 'ALUMNI-SCHOL'; };
 			
@@ -49,7 +51,7 @@
 			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet fully funded."; } 
 			elseif(strstr(render($content['field_funding_status']),'Seeking donors')) { print "Keep this scholarship funded for future generations."; };
 	?>
-	</p><p><a href="https://commerce.cashnet.com/givetoevergreen?itemcode=<?php print $cashnet ?>">Please donate today.</a></p></div>
+	</p><p><a href="http://3897.thankyou4caring.org/pages/givescholarships">Please donate today.</a></p></div>
 	<?php
 		};
 		?>  
