@@ -37,13 +37,7 @@
 	    
 	<?php 
 		//add the donation box if this scholarship is seeking funding
-		if(isset($content['field_funding_status'])) {
-			//not using this field anymore!
-			//at the moment all scholarships use the same donation form in the Advancement CRM
-			if(trim(render($content['field_cashnet_code'])) != '') { $cashnet = trim(render($content['field_cashnet_code'])); }
-			else { $cashnet = 'ALUMNI-SCHOL'; };
-			
-			
+		if(isset($content['field_funding_status'])) {			
 	?>
 	<div class="box supplement"><p>
 	<?php
