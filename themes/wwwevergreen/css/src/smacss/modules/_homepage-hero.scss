@@ -43,54 +43,34 @@
 	}
 }
 
-.homepage-hero-picture img{  // .homepage-hero-picture is the fallback image
+.homepage-hero__fallback{  // This is the fallback image
+	// box model
+	width: 100%;
+	// layout
 	display: block;
-
-	@include breakpoint($starlord){
-		width: 100%;
-	}
 }
 
 // Zoom in on the center of images on small screens
-.homepage-hero-img{  // fallback image for Internet Explorer 11
-	margin-left: -50%;  // deprecated; there's no need to support this for IE 11
-	width: 200%;  // deprecated; there's no need to support this for IE 11
+.homepage-hero__img{  // fallback image for Internet Explorer 11
 	max-width: none;
 	// layout
 	display: block;
 
-	@include breakpoint($starlord){
-		.homepage-hero-img{  // deprecated; there's no need to support this for IE 11
-			// box model
-			margin-left: -25%;
-			width: 150%;
-		}
-	}
-
-	@include breakpoint($gamora){
-		.homepage-hero-img{
-			margin-left: -10%;
-			width: 120%;
-		}
-	}
-
 	@include breakpoint($drax){
-		.homepage-hero-img{
+		.homepage-hero__img{
 			margin-left: 0;
 			width: 100%;
 		}
 	}
 
-	.homepage-hero-img-alt &{
+	.homepage-hero__img--alt &{
 		margin-left: 0;
 	}
 }
 
-.homepage-hero a,  // The link so you can click basically the whole image instead of just the call-to-action button.
-.homepage-hero a:visited,
-.homepage-hero a:hover{
-	// box model
-	//border-width: 0;
+.homepage-hero__link,  // The link so you can click basically the whole image instead of just the call-to-action button.
+.homepage-hero__link:visited,
+.homepage-hero__link:hover{
 	// typography
 	color: inherit;
 	font-weight: inherit;
@@ -119,7 +99,7 @@
 	}
 }
 
-.homepage-hero-content{  // Holds the .caption-box and .homepage-hero-copy
+.homepage-hero-content{  // Holds the .caption-box and .homepage-hero__copy
 	// box model
 	width: 100%;
 	max-width: 77em;
@@ -173,7 +153,7 @@
 	display: none;
 }
 
-.homepage-hero-content-grad .homepage-hero-copy{
+.homepage-hero-content-grad .homepage-hero__copy{
 	// box model
 	width: calc(66.6666666667% - 1em);
 
@@ -193,7 +173,7 @@
 	margin: 0;
 }
 
-.homepage-hero-content-grad .homepage-hero-copy img{
+.homepage-hero-content-grad .homepage-hero__copy img{
 	max-height: calc(250 / 16 * 1rem);
 
 	@include breakpoint($gamora){
@@ -209,7 +189,7 @@
 /**
  * 3. Copy
  */
-.homepage-hero-copy{
+.homepage-hero__copy{
 	margin: 0 calc(15 / 14 * 1em);
 
 	@include breakpoint($lil-groot){
@@ -233,7 +213,7 @@
 	}
 }
 
-.homepage-hero-copy h1{
+.homepage-hero__copy h1{
 	// box model
 	margin: 0;
 	// typopgraphy
@@ -258,7 +238,7 @@
 	}
 }
 
-.homepage-hero-copy img{
+.homepage-hero__copy img{
 	width: 100%;  // IE 11
 }
 
@@ -268,12 +248,13 @@
  * Some hero images require different placement or design of the hero copy.
  * Add both of these to the .homepage-hero parent class.
  *
- * - .homepage-hero-copy-alt      Moves the copy to the right side of the
+ * - .homepage-hero__copy--alt      Moves the copy to the right side of the
  *                                image.
- * - .homepage-hero-img-detailed  Adds a violet background to make the text
+ * - .homepage-hero__img--detailed  Adds a violet background to make the text
  *                                more readable on detailed images.
  */
-.homepage-hero-copy-alt .homepage-hero-copy{
+.homepage-hero-copy-alt .homepage-hero__copy,  // deprecated, use BEM method, below
+.homepage-hero__copy--alt .homepage-hero__copy{  // BEM method
 
 	@include breakpoint($lil-groot){
 		// layout
@@ -288,7 +269,8 @@
 	}
 }
 
-.homepage-hero-img-detailed .homepage-hero-copy{
+.homepage-hero-img-detailed .homepage-hero__copy,  // deprecated, use BEM method, below
+.homepage-hero__img--detailed .homepage-hero__copy{  // BEM method
 	// box model
 	height: 100%;
 	margin: 0;
