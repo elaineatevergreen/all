@@ -64,7 +64,7 @@
 			$slogan_svg_wide = "your-way-to-the-world/slogan";
 			$slogan_svg_mobile = "your-way-to-the-world/slogan--no-flourish";
 			$slogan_alt = "Your way to the world";
-			$call_to_action = "";
+			$call_to_action = "Learn More";
 			break;
 	};
 
