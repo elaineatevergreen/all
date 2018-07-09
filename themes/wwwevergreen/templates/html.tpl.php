@@ -117,6 +117,15 @@
 	
 	<!-- Typekit -->
 	<link rel="stylesheet" href="https://use.typekit.net/kfy7nbq.css">
+	
+	<script type="text/javascript">
+		(function(window) {
+  if (window.location !== window.top.location) {
+    window.top.location = window.location;
+  }
+})(this);
+	</script>
+	
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">

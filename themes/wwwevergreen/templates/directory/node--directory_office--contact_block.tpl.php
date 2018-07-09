@@ -10,6 +10,14 @@ display office information as a "contact block" usually on a page.
         <h2>Contact</h2>
 
         <p><b class="p-name"><?php print $title; ?></b><br>
+        <?php 
+	        if(isset($content['field_subtitle'])) {
+		        print render($content['field_subtitle']); 
+		?>
+			<br>
+		<?php 
+	        };
+	    ?>
         <span class="p-adr"><?php print render($content['field_building_alt']) ?> <?php print render($content['field_room']) ?> </span>
         <?php if (isset($content['field_email'])) {
 	        ?><br>
@@ -48,7 +56,7 @@ display office information as a "contact block" usually on a page.
 	        <dd><?php print render($content['body']) ?></dd>
 	    <?php
 		    }; //end check for additional
-		    if($content['field_facebook'] or $content['field_twitter']) {  
+		    if($content['field_facebook'] or $content['field_twitter'] or $content['field_linkedin'] or $content['field_instagram']) {  
 		?>
 	        <dt>Connect With Us</dt>
 	        <dd><ul class="tertiary-nav-list">
@@ -57,6 +65,12 @@ display office information as a "contact block" usually on a page.
 		    <?php }; ?>
 		    <?php if($content['field_twitter']) { ?>
 			    <li><?php print render($content['field_twitter']) ?></li>
+		    <?php }; ?>
+		    <?php if($content['field_linkedin']) { ?>
+			    <li><?php print render($content['field_linkedin']) ?></li>
+		    <?php }; ?>
+		    <?php if($content['field_instagram']) { ?>
+			    <li><?php print render($content['field_instagram']) ?></li>
 		    <?php }; ?>
 		        
 		        </ul></dd>

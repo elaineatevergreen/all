@@ -17,7 +17,7 @@ if(isset($content['field_reference'])) { ?>
 		
 	} else {
 ?>	
-	
+	<h5><?php print render($content['field_subtitle']) ?></h5>
     <h2>Contact Information</h2>
     <div class="extended-address">
 	    <?php if (isset($content['field_building_alt']) or isset($content['field_room'])) { ?>
@@ -92,7 +92,9 @@ if(isset($content['field_reference'])) { ?>
 	        
 	        if (isset($content['body'])) { print render($content['body']); }; 
 	        if (isset($content['group_social']['field_facebook'])) { print render($content['group_social']['field_facebook']); }; 
-	        if (isset($content['group_social']['field_twitter'])) { print render($content['group_social']['field_twitter']); }; 
+	        if (isset($content['group_social']['field_twitter'])) { print render($content['group_social']['field_twitter']); };
+	        if (isset($content['group_social']['field_linkedin'])) { print render($content['group_social']['field_linkedin']); }; 
+	        if (isset($content['group_social']['field_instagram'])) { print render($content['group_social']['field_instagram']); }; 
 	        
 	        if (isset($content['field_members'])) { print render($content['field_members']); };  
 	        
