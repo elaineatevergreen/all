@@ -62,7 +62,7 @@
 			$content_class = "";
 			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
 			$slogan_svg_wide = "your-way-to-the-world/slogan";
-			$slogan_svg_mobile = "your-way-to-the-world/slogan";
+			$slogan_svg_mobile = "your-way-to-the-world/slogan--no-flourish";
 			$slogan_alt = "Your way to the world";
 			$call_to_action = "";
 			break;
