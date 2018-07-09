@@ -237,5 +237,7 @@ rules:
         - user-select
         # miscellaneous
         - content
+        - opacity
         - quotes
+        - visibility
       ignore-custom-properties: true
