@@ -3690,7 +3690,7 @@ input:checked + .header-dropdown {
  *
  * +------------------------------+
  * |                              |
- * | .homepage-hero-       /---\  |
+ * | .homepage-hero__      /---\  |
  * | content goes here.    |. .|  |
  * |  ---------------      \ - /  |
  * | [.call-to-action]     /; ;\  |
@@ -3708,7 +3708,7 @@ input:checked + .header-dropdown {
  */
 /* line 24, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero,
-.homepage-hero-content {
+.homepage-hero__content {
   height: 100%;
   overflow: hidden;
 }
@@ -3781,14 +3781,14 @@ input:checked + .header-dropdown {
 }
 
 /* line 102, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-content {
+.homepage-hero__content {
   width: 100%;
   max-width: 77em;
   background-color: #492c5d;
 }
 @media screen and (min-width: 20em) {
   /* line 102, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-content {
+  .homepage-hero__content {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -3800,25 +3800,25 @@ input:checked + .header-dropdown {
 }
 @media screen and (min-width: 25em) {
   /* line 102, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-content {
+  .homepage-hero__content {
     -webkit-justify-content: center;
             justify-content: center;
   }
 }
 @media screen and (min-width: 43em) {
   /* line 102, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-content {
+  .homepage-hero__content {
     height: 100%;
   }
 }
 
 /* line 129, ../src/smacss/modules/_homepage-hero.scss */
-.homepage-hero-content .box {
+.homepage-hero__content .box {
   margin: 0;
 }
 @media screen and (min-width: 20em) {
   /* line 129, ../src/smacss/modules/_homepage-hero.scss */
-  .homepage-hero-content .box {
+  .homepage-hero__content .box {
     position: absolute;
     bottom: 0;
   }

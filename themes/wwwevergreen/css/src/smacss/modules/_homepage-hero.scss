@@ -5,7 +5,7 @@
  *
  * +------------------------------+
  * |                              |
- * | .homepage-hero-       /---\  |
+ * | .homepage-hero__      /---\  |
  * | content goes here.    |. .|  |
  * |  ---------------      \ - /  |
  * | [.call-to-action]     /; ;\  |
@@ -22,7 +22,7 @@
  * 4. Copy Modifiers
  */
 .homepage-hero,
-.homepage-hero-content{
+.homepage-hero__content{
 	height: 100%;
 	overflow: hidden;
 }
@@ -99,7 +99,7 @@
 	}
 }
 
-.homepage-hero-content{  // Holds the .caption-box and .homepage-hero__copy
+.homepage-hero__content{  // Holds the .caption-box and .homepage-hero__copy
 	// box model
 	width: 100%;
 	max-width: 77em;
@@ -126,7 +126,7 @@
 	}
 }
 
-.homepage-hero-content .box{
+.homepage-hero__content .box{
 	margin: 0;
 
 	@include breakpoint($lil-groot){
