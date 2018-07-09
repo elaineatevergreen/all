@@ -105,7 +105,7 @@
 							?>
 							<p class="call-to-action"><?php print $call_to_action ?> →</p>
 						<?php }; //end check for call-to-action ?>
-						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--top">
+						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--bottom">
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
 						</div>
 					</div>

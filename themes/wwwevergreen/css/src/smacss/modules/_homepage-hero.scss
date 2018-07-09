@@ -127,12 +127,30 @@
 }
 
 .homepage-hero__content .box{
+	// box model
 	margin: 0;
+	// positioning
+	position: relative;
+	z-index: 1;
 
 	@include breakpoint($lil-groot){
 		position: absolute;
 		bottom: 0;
 	}
+}
+
+homepage-hero__copy-flourish{
+	margin: 0 auto;
+	max-width: 10em;
+}
+
+homepage-hero__copy-flourish--top{
+	margin-top: -50%;
+}
+
+homepage-hero__copy-flourish--bottom{
+	transform: rotate(180deg);
+	margin-bottom: -50%;
 }
 
 /**
