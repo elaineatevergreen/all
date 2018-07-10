@@ -163,14 +163,6 @@
 		margin-bottom: 1em;
 	}
 
-	@include breakpoint($gamora){
-		margin-top: -55%;
-	}
-
-	@include breakpoint($drax){
-		margin-top: -33.3333333333%;
-	}
-
 	@include breakpoint($groot){
 		margin-top: 0;
 	}
@@ -181,6 +173,10 @@
 	margin-bottom: -50%;
 	// layout
 	transform: rotate(180deg);
+
+	@include breakpoint($groot){
+		margin-bottom: 0;
+	}
 }
 
 .homepage-hero__copy-flourish img{
