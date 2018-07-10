@@ -80,6 +80,7 @@
 
 .homepage-hero .call-to-action{
 	// box model
+	margin: 1em 0;
 	padding: 1em 1ch;
 	// layout
 	display: inline-block;
@@ -93,6 +94,11 @@
 
 	&:hover{
 		background-color: $sky-blue;
+	}
+
+	@include breakpoint($lil-groot){
+		margin: 0.5em 0;
+		padding: 0.5em 1ch;
 	}
 
 	@include breakpoint($drax){
@@ -148,11 +154,20 @@
 
 .homepage-hero__copy-flourish--top{
 	margin-top: -50%;
+	margin-bottom: 1em;
+	
+	@include breakpoint($lil-groot){
+		margin-bottom: 1em;
+	}
 }
 
 .homepage-hero__copy-flourish--bottom{
 	transform: rotate(180deg);
 	margin-bottom: -50%;
+}
+
+.homepage-hero__copy-flourish img{
+	display: inherit;
 }
 
 /**
