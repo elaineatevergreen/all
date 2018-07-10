@@ -125,7 +125,7 @@
 		background-color: transparent;
 	}
 
-	@media screen and (min-width: 25em){
+	@include breakpoint($starlord){
 		justify-content: center;
 	}
 
@@ -155,15 +155,17 @@
 .homepage-hero__copy-flourish--top{
 	margin-top: -50%;
 	margin-bottom: 1em;
-	
+
 	@include breakpoint($lil-groot){
 		margin-bottom: 1em;
 	}
 }
 
 .homepage-hero__copy-flourish--bottom{
-	transform: rotate(180deg);
+	// box model
 	margin-bottom: -50%;
+	// layout
+	transform: rotate(180deg);
 }
 
 .homepage-hero__copy-flourish img{
@@ -238,14 +240,14 @@
 	@include breakpoint($starlord){
 		// box model
 		margin: 0 1em;
-		width: calc(50% - 1em);
+		width: calc((3 / 7 * 100%) - 1em);
 		color: $tint;
 		// typography
 		text-shadow: 0 1px 2px mix($shade, $blueberry-susan, 80%);
 	}
 
 	@include breakpoint($drax){
-		width: calc((3 / 7 * 100%) - 1em);  //3/7
+		width: calc((2 / 7 * 100%) - 1em);  //3/7
 	}
 }
 
@@ -324,7 +326,7 @@
 	}
 
 	@include breakpoint($starlord){
-		width: 50%;
+		width: calc(3 / 7 * 100%);
 	}
 
 	@include breakpoint($gamora){
