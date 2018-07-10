@@ -121,15 +121,12 @@
 		// layout
 		display: flex;  // W3C
 		flex-direction: column;
+		justify-content: center;
 		// positioning
 		position: absolute;
 		bottom: 0;
 		// decoration
 		background-color: transparent;
-	}
-
-	@include breakpoint($starlord){
-		justify-content: center;
 	}
 
 	@include breakpoint($gamora){
@@ -162,10 +159,6 @@
 	@include breakpoint($lil-groot){
 		margin-bottom: 1em;
 	}
-
-	/*@include breakpoint($drax){
-		margin-top: -20%;
-	}*/
 
 	@include breakpoint($groot){
 		margin-top: 0;
@@ -360,8 +353,3 @@
 		padding: 0 calc(30 / 19.23333333333 * 1em);
 	}
 }
-
-/*.homepage-hero-img-detailed .homepage-hero__copy-flourish--top,  // deprecated, use BEM method, below
-.homepage-hero__img--detailed .homepage-hero__copy-flourish--top{  // BEM method
-	
-}*/
