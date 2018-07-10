@@ -152,7 +152,7 @@
 
 .homepage-hero__copy-flourish{
 	margin: 0 auto;
-	max-width: 66.6666666667%;
+	width: 66.6666666667%;
 }
 
 .homepage-hero__copy-flourish--top{
@@ -162,6 +162,10 @@
 	@include breakpoint($lil-groot){
 		margin-bottom: 1em;
 	}
+
+	/*@include breakpoint($drax){
+		margin-top: -20%;
+	}*/
 
 	@include breakpoint($groot){
 		margin-top: 0;
@@ -245,7 +249,10 @@
 		// box model
 		width: calc(50% - 1em);
 		// layout
-		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	@include breakpoint($starlord){
@@ -265,6 +272,7 @@
 .homepage-hero__slogan{
 	// box model
 	margin: 0;
+	width: 100%;
 	// typopgraphy
 	color: $tint;
 	@include base-type-xxxl;
@@ -288,7 +296,7 @@
 }
 
 .homepage-hero__copy img{
-	width: 100%;  // IE 11
+	width: 100%;  // For SVG images, in particular
 }
 
 /**
@@ -352,3 +360,8 @@
 		padding: 0 calc(30 / 19.23333333333 * 1em);
 	}
 }
+
+/*.homepage-hero-img-detailed .homepage-hero__copy-flourish--top,  // deprecated, use BEM method, below
+.homepage-hero__img--detailed .homepage-hero__copy-flourish--top{  // BEM method
+	
+}*/
