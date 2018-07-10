@@ -455,7 +455,7 @@ p.alert,  // WYSIWYG
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 85%);
 	border-radius: 2px;
-	box-shadow: 0 1px 1px #ddd;
+	box-shadow: 0 1px 1px $drop-shadow;
 
 	/*&:hover{
 		// decoration

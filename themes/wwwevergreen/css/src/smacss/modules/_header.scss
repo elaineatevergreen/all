@@ -138,7 +138,7 @@ input:checked + .header-dropdown{
  * 2. Logo
  */
 .logo{
-	margin: 0.9375rem 3ch 0.9375rem;  // 15px
+	margin: 0.9375rem 3ch;  // 15px
 	width: calc(100% - 6ch);
 
 	@include breakpoint($lil-groot){
@@ -148,7 +148,7 @@ input:checked + .header-dropdown{
 		// layout
 		float: left;
 	}
-	
+
 	@include breakpoint($starlord){
 		margin:  0.9375rem 0 1.40625rem 1.40625rem;  // 15px 0 22.5px 22.5px
 	}
@@ -190,8 +190,8 @@ input:checked + .header-dropdown{
 
 .logo img{
 	// box sizing
-	min-height: 3.42857143em;  // “evergreen” is 18px tall (i.e. step 1)
 	max-height: 5.42857143em;  // “evergreen is ~29.233px tall (i.e. step 3)
+	min-height: 3.42857143em;  // “evergreen” is 18px tall (i.e. step 1)
 	// layout
 	display: block;
 
@@ -205,10 +205,10 @@ input:checked + .header-dropdown{
 	}*/
 
 	@include breakpoint($groot){
-		margin: 0 auto;
 		height: 7.53899481em;  // 145px; “evergreen” is ~29.233px tall (i.e. step 2)
-		//min-height: 6.13518199em;  // 118px; “evergreen” is 31px tall (i.e. step 4)
+		margin: 0 auto;
 		//max-height: 6.34315426em;  // 122px; “olympia” is 19px tall (i.e. step 2)
+		//min-height: 6.13518199em;  // 118px; “evergreen” is 31px tall (i.e. step 4)
 		max-height: none;  // max-height doesn't center correctly in Blink.
 		max-width: 20em;
 	}
