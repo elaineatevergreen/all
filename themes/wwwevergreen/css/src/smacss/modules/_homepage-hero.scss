@@ -102,8 +102,11 @@
 	}
 
 	@include breakpoint($drax){
-		font-size: 1.82rem;  // Step 3
-		line-height: 1.5451174289246; // 45 / 29.124
+		@include base-type-xl;
+	}
+
+	@include breakpoint($groot){
+		@include base-type-xxl;
 	}
 }
 
