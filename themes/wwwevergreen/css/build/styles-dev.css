@@ -4052,7 +4052,7 @@ input:checked + .header-dropdown {
 .homepage-hero-img-detailed .homepage-hero__copy,
 .homepage-hero__img--detailed .homepage-hero__copy {
   height: 100%;
-  margin: 0;
+  margin: -3em 0 0;
   padding: 0 calc(7.5 / 15 * 1em);
   background-color: rgba(73, 44, 93, 0.5);
   border-radius: 2px;
@@ -4075,6 +4075,7 @@ input:checked + .header-dropdown {
   /* line 319, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
+    margin: 0;
     width: calc(3 / 7 * 100%);
   }
 }

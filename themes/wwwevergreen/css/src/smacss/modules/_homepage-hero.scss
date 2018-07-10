@@ -320,7 +320,7 @@
 .homepage-hero__img--detailed .homepage-hero__copy{  // BEM method
 	// box model
 	height: 100%;
-	margin: 0;
+	margin: -3em 0 0;
 	padding: 0 calc(7.5 / 15 * 1em);
 	// decoration
 	background-color: transparentize($blueberry-susan, 0.5);
@@ -335,6 +335,7 @@
 	}
 
 	@include breakpoint($starlord){
+		margin: 0;
 		width: calc(3 / 7 * 100%);
 	}
 
