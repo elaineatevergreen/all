@@ -96,7 +96,7 @@
 						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--top">
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
 						</div>
-						<h1>
+						<h1 class="homepage-hero__slogan">
 							<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 						</h1>
 						<?php 
