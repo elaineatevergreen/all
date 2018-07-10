@@ -66,9 +66,20 @@ $stone-light: hsl(165, 5%, 86%);
 $stone-medium: hsl(207, 11%, 40%);
 $stone-dark: hsl(240, 100%, 4%);
 
+/**
+ * Composit Colors
+ *
+ * Prebuilt colors based on our existing color palettes.
+ */
 $highlight: transparentize($rubber-geoducky-light, 0.5);
-
 $drop-shadow: transparentize($oregon-grape-dark, 0.75);
+
+/**
+ * Custom Colors
+ *
+ * Use sparingly!
+ */
+$catalog-fall: #c09a00;  // Background color for fall quarter icon
 
 /**
  * Breakpoints

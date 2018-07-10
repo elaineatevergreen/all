@@ -240,12 +240,12 @@
 
 .qi-fall{
 	/* decoration */
-	background-color: #c09a00;
-	border-color: #c09a00;
+	background-color: $catalog-fall;
+	border-color: $catalog-fall;
 }
 
 .cancelled .qi-fall{
-	background-color: #e5d8a3;
+	background-color: mix($tint, $catalog-fall, 20%);
 }
 
 .qi-winter{

@@ -44,6 +44,16 @@
 /* Greenery Palette */
 /* Vibrant Palette */
 /**
+ * Composit Colors
+ *
+ * Prebuilt colors based on our existing color palettes.
+ */
+/**
+ * Custom Colors
+ *
+ * Use sparingly!
+ */
+/**
  * Breakpoints
  *
  * See: https://medium.com/@timknight/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
