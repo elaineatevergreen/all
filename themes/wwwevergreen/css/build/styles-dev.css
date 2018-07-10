@@ -3827,18 +3827,18 @@ input:checked + .header-dropdown {
 }
 
 /* line 142, ../src/smacss/modules/_homepage-hero.scss */
-homepage-hero__copy-flourish {
+.homepage-hero__copy-flourish {
   margin: 0 auto;
-  max-width: 10em;
+  max-width: 66.6666666667%;
 }
 
 /* line 147, ../src/smacss/modules/_homepage-hero.scss */
-homepage-hero__copy-flourish--top {
+.homepage-hero__copy-flourish--top {
   margin-top: -50%;
 }
 
 /* line 151, ../src/smacss/modules/_homepage-hero.scss */
-homepage-hero__copy-flourish--bottom {
+.homepage-hero__copy-flourish--bottom {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-bottom: -50%;
