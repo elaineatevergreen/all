@@ -80,14 +80,16 @@
 
 .homepage-hero .call-to-action{
 	// box model
-	padding: 0 2%;
+	padding: 1em 1ch;
 	// layout
 	display: inline-block;
 	// typography
 	color: $tint;
+	font-weight: bold;
 	text-shadow: none;
-	// backgrounds and borders
+	// decoration
 	background-color: $evergreen-neue;
+	border-radius: 2px;
 
 	&:hover{
 		background-color: $sky-blue;
@@ -209,6 +211,7 @@
  */
 .homepage-hero__copy{
 	margin: 0 calc(15 / 14 * 1em);
+	text-align: center;
 
 	@include breakpoint($lil-groot){
 		// box model
