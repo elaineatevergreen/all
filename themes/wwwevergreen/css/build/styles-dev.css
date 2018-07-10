@@ -3815,6 +3815,8 @@ input:checked + .header-dropdown {
 /* line 129, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero__content .box {
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 20em) {
   /* line 129, ../src/smacss/modules/_homepage-hero.scss */
@@ -3822,6 +3824,24 @@ input:checked + .header-dropdown {
     position: absolute;
     bottom: 0;
   }
+}
+
+/* line 142, ../src/smacss/modules/_homepage-hero.scss */
+homepage-hero__copy-flourish {
+  margin: 0 auto;
+  max-width: 10em;
+}
+
+/* line 147, ../src/smacss/modules/_homepage-hero.scss */
+homepage-hero__copy-flourish--top {
+  margin-top: -50%;
+}
+
+/* line 151, ../src/smacss/modules/_homepage-hero.scss */
+homepage-hero__copy-flourish--bottom {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-bottom: -50%;
 }
 
 /**
@@ -3833,53 +3853,53 @@ input:checked + .header-dropdown {
  * 4-Copy Modifiers. I think this was put here for some reason, but I’m not
  * sure why now. Check it out when you have some time sometime.)
  */
-/* line 148, ../src/smacss/modules/_homepage-hero.scss */
+/* line 166, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad {
   -webkit-justify-content: flex-end;
           justify-content: flex-end;
 }
 
-/* line 152, ../src/smacss/modules/_homepage-hero.scss */
+/* line 170, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .caption-box {
   display: none;
 }
 
-/* line 156, ../src/smacss/modules/_homepage-hero.scss */
+/* line 174, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero__copy {
   width: calc(66.6666666667% - 1em);
 }
 @media screen and (min-width: 32em) {
-  /* line 156, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 174, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero__copy {
     width: calc(50% - 1em);
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 156, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 174, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero__copy {
     width: calc(100% - 2em);
     text-align: center;
   }
 }
 
-/* line 172, ../src/smacss/modules/_homepage-hero.scss */
+/* line 190, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad h1 {
   margin: 0;
 }
 
-/* line 176, ../src/smacss/modules/_homepage-hero.scss */
+/* line 194, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-content-grad .homepage-hero__copy img {
   max-height: calc(250 / 16 * 1rem);
 }
 @media screen and (min-width: 43em) {
-  /* line 176, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 194, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero__copy img {
     margin-bottom: -2.2em;
     width: 66.6666666667%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 176, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 194, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-content-grad .homepage-hero__copy img {
     margin-bottom: -2.5em;
   }
@@ -3888,19 +3908,19 @@ input:checked + .header-dropdown {
 /**
  * 3. Copy
  */
-/* line 192, ../src/smacss/modules/_homepage-hero.scss */
+/* line 210, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero__copy {
   margin: 0 calc(15 / 14 * 1em);
 }
 @media screen and (min-width: 20em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 210, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy {
     width: calc(66.6666666667% - 1em);
     float: left;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 210, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy {
     margin: 0 1em;
     width: calc(50% - 1em);
@@ -3909,13 +3929,13 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 192, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 210, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy {
     width: calc((3 / 7 * 100%) - 1em);
   }
 }
 
-/* line 216, ../src/smacss/modules/_homepage-hero.scss */
+/* line 234, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero__copy h1 {
   margin: 0;
   color: #f2f2f2;
@@ -3923,27 +3943,27 @@ input:checked + .header-dropdown {
   line-height: 1.20532270506557;
 }
 @media screen and (min-width: 20em) {
-  /* line 216, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 234, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy h1 {
     text-shadow: 0 2px 1px #0f0913;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 216, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 234, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy h1 {
     font-size: 1.416rem;
     line-height: 1.324152542372881;
   }
 }
 @media screen and (min-width: 86em) {
-  /* line 216, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 234, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero__copy h1 {
     font-size: 2.291rem;
     line-height: 1.227629855958097;
   }
 }
 
-/* line 241, ../src/smacss/modules/_homepage-hero.scss */
+/* line 259, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero__copy img {
   width: 100%;
 }
@@ -3960,7 +3980,7 @@ input:checked + .header-dropdown {
  *                                more readable on detailed images.
  */
 @media screen and (min-width: 20em) {
-  /* line 256, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero__copy,
   .homepage-hero__copy--alt .homepage-hero__copy {
     -webkit-align-self: flex-end;
@@ -3969,7 +3989,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 256, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 274, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-copy-alt .homepage-hero__copy,
   .homepage-hero__copy--alt .homepage-hero__copy {
     -webkit-align-self: flex-end;
@@ -3978,7 +3998,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 272, ../src/smacss/modules/_homepage-hero.scss */
+/* line 290, ../src/smacss/modules/_homepage-hero.scss */
 .homepage-hero-img-detailed .homepage-hero__copy,
 .homepage-hero__img--detailed .homepage-hero__copy {
   height: 100%;
@@ -3989,35 +4009,35 @@ input:checked + .header-dropdown {
   border-radius: 2px;
 }
 @media screen and (min-width: 22em) {
-  /* line 272, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 290, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
     padding: 0 calc(15 / 14 * 1em);
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 272, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 290, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
     width: 50%;
   }
 }
 @media screen and (min-width: 43em) {
-  /* line 272, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 290, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
     padding: 0 calc(15 / 17 * 1em);
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 272, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 290, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
     width: calc(3 / 7 * 100%);
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 272, ../src/smacss/modules/_homepage-hero.scss */
+  /* line 290, ../src/smacss/modules/_homepage-hero.scss */
   .homepage-hero-img-detailed .homepage-hero__copy,
   .homepage-hero__img--detailed .homepage-hero__copy {
     padding: 0 calc(30 / 19.23333333333 * 1em);
