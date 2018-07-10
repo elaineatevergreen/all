@@ -159,6 +159,18 @@
 	@include breakpoint($lil-groot){
 		margin-bottom: 1em;
 	}
+
+	@include breakpoint($gamora){
+		margin-top: -55%;
+	}
+
+	@include breakpoint($drax){
+		margin-top: -33.3333333333%;
+	}
+
+	@include breakpoint($groot){
+		margin-top: 0;
+	}
 }
 
 .homepage-hero__copy-flourish--bottom{
@@ -334,7 +346,7 @@
 	}
 
 	@include breakpoint($drax){
-		width: calc(3 / 7 * 100%);
+		width: calc(2 / 7 * 100%);
 	}
 
 	@include breakpoint($groot){
