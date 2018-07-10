@@ -100,11 +100,11 @@
 							<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 						</h1>
 						<?php 
-							/* the call-to-action shouldn't appear on Your Way to the World */
+							/* the call-to-action shouldn't appear on Your Way to the World
 							if($field_home_page_version == 'graduation' or $field_home_page_version == 'orientation') { 
-							?>
+							*/?>
 							<p class="call-to-action"><?php print $call_to_action ?> →</p>
-						<?php }; //end check for call-to-action ?>
+						<?php /*}; //end check for call-to-action */?>
 						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--bottom">
 							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
 						</div>
