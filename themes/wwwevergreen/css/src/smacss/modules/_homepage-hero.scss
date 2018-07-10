@@ -157,19 +157,6 @@
 	margin-bottom: 1em;
 
 	@include breakpoint($lil-groot){
-		margin-top: -33.3333333333%;
-		margin-bottom: 1em;
-	}
-
-	@include breakpoint($starlord){
-		margin-top: -20%;
-	}
-
-	@include breakpoint($gamora){
-		margin-top: -10%;
-	}
-
-	@include breakpoint($groot){
 		margin-top: 0;
 	}
 }
@@ -249,12 +236,13 @@
 
 	@include breakpoint($lil-groot){
 		// box model
+		margin-top: -3em;
 		width: calc(50% - 1em);
 		// layout
+		align-items: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
 	}
 
 	@include breakpoint($starlord){
