@@ -157,7 +157,16 @@
 	margin-bottom: 1em;
 
 	@include breakpoint($lil-groot){
+		margin-top: -33.3333333333%;
 		margin-bottom: 1em;
+	}
+
+	@include breakpoint($starlord){
+		margin-top: -20%;
+	}
+
+	@include breakpoint($gamora){
+		margin-top: -10%;
 	}
 
 	@include breakpoint($groot){
@@ -171,7 +180,7 @@
 	// layout
 	transform: rotate(180deg);
 
-	@include breakpoint($groot){
+	@include breakpoint($lil-groot){
 		margin-bottom: 0;
 	}
 }
