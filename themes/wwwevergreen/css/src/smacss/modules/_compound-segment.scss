@@ -33,6 +33,7 @@
 .media,  // deprecated, conflicts with Drupal Media module
 .compound{
 	display: flex;
+	flex-direction: row;
 }
 
 .media-img,  // deprecated
@@ -96,8 +97,8 @@
 	flex-direction: row-reverse;
 }
 
-.media-alt .media-img,  // deprecated
-.compound-alt .compound-img{
+.media-alt > .media-img,  // deprecated
+.compound-alt > .compound-img{
 	padding-right: 0;
 	padding-left: 2ch;
 }
