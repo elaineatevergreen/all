@@ -5640,6 +5640,10 @@ div.ajax-progress {
 /* line 127, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon > .compound-img {
   padding-right: 1ch;
+}
+
+/* line 131, ../src/smacss/modules/_compound-segment.scss */
+.compound--icon__icon {
   width: 1em;
 }
 
@@ -5648,17 +5652,17 @@ div.ajax-progress {
  *
  * Separate compounds with extra spacing. Extends .compound
  */
-/* line 137, ../src/smacss/modules/_compound-segment.scss */
+/* line 140, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l {
   margin: calc(30 / 16 * 1rem) auto;
 }
 
-/* line 141, ../src/smacss/modules/_compound-segment.scss */
+/* line 144, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l .compound-img {
   padding-right: 4ch;
 }
 
-/* line 145, ../src/smacss/modules/_compound-segment.scss */
+/* line 148, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l.compound-alt .compound-img {
   padding-right: 0;
   padding-left: 4ch;
@@ -5697,7 +5701,7 @@ div.ajax-progress {
  * |             |
  * +-------------+
  */
-/* line 184, ../src/smacss/modules/_compound-segment.scss */
+/* line 187, ../src/smacss/modules/_compound-segment.scss */
 .media-img-alt,
 .media-child-alt,
 .compound-child-alt {
@@ -5731,7 +5735,7 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 217, ../src/smacss/modules/_compound-segment.scss */
+/* line 220, ../src/smacss/modules/_compound-segment.scss */
 .media-column,
 .media-squishy,
 .compound-column,
@@ -5743,7 +5747,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 225, ../src/smacss/modules/_compound-segment.scss */
+  /* line 228, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
     -webkit-align-items: stretch;
@@ -5753,7 +5757,7 @@ div.ajax-progress {
   }
 }
 
-/* line 234, ../src/smacss/modules/_compound-segment.scss */
+/* line 237, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img,
 .media-squishy > .media-img,
 .compound-column > .compound-img,
@@ -5764,7 +5768,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 243, ../src/smacss/modules/_compound-segment.scss */
+  /* line 246, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     margin-bottom: calc(30 / 16 * 1rem);
@@ -5775,7 +5779,7 @@ div.ajax-progress {
   }
 }
 
-/* line 255, ../src/smacss/modules/_compound-segment.scss */
+/* line 258, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5792,7 +5796,7 @@ div.ajax-progress {
  * These styles make sure they size up to the maximum available width of
  * the .compound-img container.
  */
-/* line 271, ../src/smacss/modules/_compound-segment.scss */
+/* line 274, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-full {
   width: 100%;
   -webkit-flex-basis: 100%;
