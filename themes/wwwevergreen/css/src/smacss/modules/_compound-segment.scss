@@ -11,10 +11,11 @@
  *
  * 1. Default
  * 2. Alternate
- * 3. Spacing
- * 4. Vertically-Centered
- * 5. Column And Squishy
- * 6. SVG Images
+ * 3. Icon
+ * 4. Spacing
+ * 5. Vertically-Centered
+ * 6. Column And Squishy
+ * 7. SVG Images
  */
 /**
  * 1. Default
@@ -102,7 +103,32 @@
 }
 
 /**
- * 3. Spacing
+ * 3. Icon
+ *
+ * Better spacing and sizing for icons that are roughly the same size as
+ * the font size. (This might work for slightly larger icons, as well, but
+ * I haven’t tested it yet.
+ *
+ * .compound.compound--icon
+ * +---+ +---------------------+
+ * | X | |                     |
+ * +---+ | .compound-body      |
+ *  ^    |                     |
+ *  ^    |                     |
+ *  ^    |                     |
+ *  ^    +---------------------+
+ *  .compound-img
+ */
+.compound--icon{
+	align-items: baseline;
+}
+
+.compound--icon > .compound-img{
+	padding-right: 1ch;
+}
+
+/**
+ * 4. Spacing
  *
  * Separate compounds with extra spacing. Extends .compound
  */
@@ -120,7 +146,7 @@
 }
 
 /**
- * 4. Vertically-Centered
+ * 5. Vertically-Centered
  * 
  * Vertically center .compound-child-alt with the rest of the compound.
  * Extends .compound-img or .compound-body.
@@ -160,7 +186,7 @@
 }
 
 /**
- * 5. Column And Squishy
+ * 6. Column And Squishy
  *
  * .compound-column puts .compound-img on the top. Extends .compound.
  *
@@ -232,7 +258,7 @@
 }
 
 /**
- * 6. SVG Images
+ * 7. SVG Images
  *
  * SVGs are tricky because they don’t come with intrinsic dimensions and
  * therefore lack flexibility.
