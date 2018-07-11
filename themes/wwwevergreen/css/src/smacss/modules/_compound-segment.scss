@@ -126,6 +126,7 @@
 
 .compound--icon > .compound-img{
 	padding-right: 1ch;
+	width: 1em;  // If needed, create modifier classes that pre-set icon sizes as appropriate (e.g. .compound-img--icon-small)
 }
 
 /**
