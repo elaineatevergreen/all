@@ -36,6 +36,15 @@
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
+      <?php 
+	      //this adds in the display of filtered options
+	      //only show if the function exists
+	      //because WOW I broke the heck out of this by not checking
+	      //function is currently via the "Get Exposed Filter" module
+	      if(function_exists('get_exposed_filter_output')) {
+		      print get_exposed_filter_output();
+	      };
+	       ?>
     </div>
   <?php endif; ?>
   <?php if ($pager): ?>

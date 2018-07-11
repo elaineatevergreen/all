@@ -80,12 +80,12 @@ ul.banned-list{
 .is-low-contrast > p,
 .is-low-contrast > ul{
 	padding: 0 0.5ch;
-	background-color: hsla(0, 0%, 100%, 0.3333333333);
+	background-color: hsla(0, 0%, 100%, 0.3333333333);  // sass-lint:disable-line no-color-literals
 }
 
 .is-dark.is-low-contrast > p,
 .is-dark.is-low-contrast > ul{
-	background-color: hsla(0, 0%, 0%, 0.3333333333);
+	background-color: hsla(0, 0%, 0%, 0.3333333333);  // sass-lint:disable-line no-color-literals
 }
 
 /*This file was written by Justin McDowell. ((O)O)*/

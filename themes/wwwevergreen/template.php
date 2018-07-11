@@ -1,5 +1,22 @@
 <?php
 	
+//this is just used on the catalog node page
+//we should find a way to use standard Drupal rendering to get the correct effect instead, thanks
+function printEach($passedcontent, $put_front = "", $put_after= "")
+		//takes a content (not yet rendered) renderable array and prints all the items out
+		// put_front will be put in front of each element, and put after, after
+		// front and after are optional parameters and default to ""
+		// this function does not print the key, only the elements recursively.
+		{
+			for($i = 0; $i < sizeof($passedcontent['#items']); ++$i){
+				if(isset($passedcontent[$i])){
+					print($put_front);
+					print(render($passedcontent[$i]));
+					print($put_after);
+				}
+			}
+		}
+	
 // allow per-node-type and panel page template files
 // rewrite directory pages titles
 function wwwevergreen_preprocess_page(&$variables) {
@@ -91,7 +108,7 @@ function wwwevergreen_field__field_display_name(&$variables) {
 //also adds classes on square and rectangular thumbnails
 function wwwevergreen_preprocess_image(&$variables) {
   if(isset($variables['style_name'])) {
-	if($variables['style_name'] == 'image_class') {
+	if($variables['style_name'] == 'image_class' or $variables['style_name'] == 'event_image__345px_wide_') {
       $variables['attributes']['class'][] = "image";
     };
     if($variables['style_name'] == 'portrait_thumbnail2') {
@@ -189,6 +206,8 @@ function wwwevergreen_field__field_fax(&$variables) {
   return $output;
 }
 
+
+
 /**
  * Returns HTML for a managed file element.
  *
@@ -224,6 +243,7 @@ function wwwevergreen_theme_media_element($variables) {
  * THEME_PREPROCESS_VIEWS_VIEW
  * @param type $vars
  * Adds category to title for the calendar. I hope. Taken from https://www.drupal.org/node/658566#comment-8278349
+ * Adds jquery ui to the catalog for overlay filters
  * 
  */
 function wwwevergreen_preprocess_views_view(&$vars) {
@@ -245,6 +265,12 @@ function wwwevergreen_preprocess_views_view(&$vars) {
     	}
 	        	
     }; //end if view and category set
+    
+    if($vars['view']->name == 'catalog') {
+	    drupal_add_library('system', 'ui');
+		drupal_add_library('system', 'ui.dialog');
+		drupal_add_js(drupal_get_path('theme', 'wwwevergreen') . '/js/filter-overlay.js');
+    }; //end check for catalog view
 }
 
 /**

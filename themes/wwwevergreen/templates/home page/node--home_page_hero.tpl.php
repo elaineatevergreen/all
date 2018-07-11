@@ -62,9 +62,9 @@
 			$content_class = "";
 			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
 			$slogan_svg_wide = "your-way-to-the-world/slogan";
-			$slogan_svg_mobile = "your-way-to-the-world/slogan";
+			$slogan_svg_mobile = "your-way-to-the-world/slogan--no-flourish";
 			$slogan_alt = "Your way to the world";
-			$call_to_action = "";
+			$call_to_action = "Learn More";
 			break;
 	};
 
@@ -73,17 +73,17 @@
 <div class="row">
 	<div class="homepage-hero <?php print $classes ?>">  
 		
-		<picture class="homepage-hero-picture">
-  		    <source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
+		<picture class="homepage-hero__picture">
+  		<source media="(min-width: 70em)" srcset="<?php echo $xl_hero; ?>"/>
 			<source media="(min-width: 43em)" srcset="<?php echo $large_hero; ?>"/>
 			<source media="(min-width: 32em)" srcset="<?php echo $medium_hero; ?>"/>
 			<source srcset="<?php echo $small_hero; ?>"/>
-			<img alt="<?php print $hero_alt ?>" src="<?php echo $xl_hero; ?>" />
+			<img alt="<?php print $hero_alt ?>" class="homepage-hero__fallback" src="<?php echo $xl_hero; ?>" />
 		</picture>
 		
 		<div class="wrapper">
-			<a href="<?php print $destination ?>">
-				<div class="homepage-hero-content <?php print $content_class ?>">
+			<a class="homepage-hero__link" href="<?php print $destination ?>">
+				<div class="homepage-hero__content <?php print $content_class ?>">
 					<?php 
 						/* the caption shouldn't appear on the graduation page */
 						if($field_home_page_version != 'graduation') { 
@@ -92,20 +92,22 @@
 						<p class="caption">Photo: <?php print render($title) ?></p>
 					</div>
 					<?php }; //end check for graduation ?>
-					<div class="homepage-hero-copy">
-						<h1>
-							<picture>
-								<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg"/>
-								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
-								<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
-							</picture>
+					<div class="homepage-hero__copy">
+						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--top">
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
+						</div>
+						<h1 class="homepage-hero__slogan">
+							<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 						</h1>
 						<?php 
-							/* the call-to-action shouldn't appear on Your Way to the World */
+							/* the call-to-action shouldn't appear on Your Way to the World
 							if($field_home_page_version == 'graduation' or $field_home_page_version == 'orientation') { 
-							?>
-							<p class="call-to-action"><?php print $call_to_action ?> →</p>
-						<?php }; //end check for call-to-action ?>
+							*/?>
+							<div class="call-to-action"><?php print $call_to_action ?> →</div>
+						<?php /*}; //end check for call-to-action */?>
+						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--bottom">
+							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
+						</div>
 					</div>
 				</div>
 			</a>

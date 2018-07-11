@@ -1,5 +1,7 @@
 #
 # Apache/PHP/Drupal settings:
+# note this file should be updated when manually updating drupal on live
+# like a reminder or something?!
 #
 
 Redirect 301 /wv3 http://www2.evergreen.edu/wv3
@@ -8,7 +10,7 @@ Redirect 301 /kaos http://kaosradio.org/
 Redirect 301 /athletics http://www.gogeoducks.com/
 Redirect 301 /athletic.htm    http://www.gogeoducks.com/
 Redirect 301 /bookstore https://www.evergreen-greener-bookstore.com/
-Redirect 301 /greenerstore http://www.greenerstore.org/
+Redirect 301 /greenerstore https://www.evergreen-greener-bookstore.com/
 Redirect 301 /guestcoda http://www.myinterfase.com/evergreen/student
 Redirect 301 /crc https://apm.activecommunities.com/evergreengeoducks/Home
 Redirect 301 /support https://help.evergreen.edu/
@@ -18,6 +20,8 @@ Redirect 301 /exchange https://webmail.evergreen.edu/owa
 # redirect to subdomain for rehosting
 RewriteRule ^washingtoncenter(.*)$ http://wacenter.evergreen.edu$1 [NC,R,L]
 
+# redirect WACLA to new site at Gonzaga March 2018
+RewriteRule ^wacla(.*)$ https://www.gonzaga.edu/college-of-arts-sciences/about/wacla [NC,R,L]
 
 
 # Protect files and directories from prying eyes.

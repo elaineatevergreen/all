@@ -10,6 +10,7 @@
  * B. Quarter Indicators
  * C. Simple Filters
  * D. Advanced Filters
+ * E. Exposed Filter Data
  */
 
 /**
@@ -239,12 +240,12 @@
 
 .qi-fall{
 	/* decoration */
-	background-color: #c09a00;
-	border-color: #c09a00;
+	background-color: $catalog-fall;
+	border-color: $catalog-fall;
 }
 
 .cancelled .qi-fall{
-	background-color: #e5d8a3;
+	background-color: mix($tint, $catalog-fall, 20%);
 }
 
 .qi-winter{
@@ -382,9 +383,7 @@
 
 .simple-filter-label{
 	// box model
-	margin-right: 2ch;
-	// layout
-	flex-basis: 13ch;
+	margin-right: 1ch;
 }
 
 .simple-filter-list{
@@ -395,15 +394,16 @@
 	flex-wrap: wrap;
 }
 
-.simple-filter-list li{
+%filter{
 	// box model
-	border: 1px solid mix($tint, $blueberry-susan, 80%);
 	margin: 0 1ch calc(15 / 14 * 1em) 0;
 	padding: calc(7.5 / 14 * 1em) 1ch calc(15 / 14 * 1em);
 	// layout
 	display: inline-block;
 	// decoration
 	background-color: $tint;
+	border-radius: 1.5em / 50%;
+	box-shadow: 0 1px 1px $drop-shadow;
 
 	@include breakpoint($gamora){
 		margin-bottom: (15 / 18 * 1em);
@@ -415,6 +415,10 @@
 	}
 }
 
+.simple-filter-list li{
+	@extend %filter;
+}
+
 /*.simple-filter-list a{
 	border-width: 0;  // We should do this, but it needs more thought; maybe the border re-appers on hover?
 }*/
@@ -422,9 +426,14 @@
 /**
  * D. Advanced Filters
  *
- * Advanced filters are the filters in the left sidebar that allow for
- * very granular filtering of catalog results.
+ * Advanced filters are the filters in the left sidebar (or now in some
+ * views in the header text area) that allow for very granular filtering of
+ * catalog results.
  */
+#open-filter{  // button that opens the filter dialogue box
+	margin-right: 1ch;
+}
+
 #views-exposed-form-catalog-page .views-exposed-widgets{
 	align-items: flex-start;
 	flex-direction: column;
@@ -492,4 +501,22 @@
 
 #views-exposed-form-catalog-grad-programs{
 	@extend #views-exposed-form-catalog-page;
+}
+
+/**
+ * E. Exposed Filter Data
+ *
+ * When a user sets a filter in the catalog, we display what filters are
+ * set so that the next time they come visit this page, they will see how
+ * their results are filtered. These styles extend existing styles dictated
+ * by .exposed_filter_data. I'm not sure where these styles are coming
+ * from—which stylesheet or module—but once we know, we should document
+ * that here.
+ */
+.exposed_filter_data{
+	border-bottom-width: 0;
+}
+
+.exposed_filter_data .filter{
+	@extend %filter;
 }

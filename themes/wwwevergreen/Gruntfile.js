@@ -112,38 +112,6 @@ module.exports = function(grunt) {
 		},
 		
 		/**
-		 * Perfbudget
-		 *
-		 * Performance budgeting thanks to the magic of WebPageTest
-		 * See: https://github.com/tkadlec/grunt-perfbudget
-		 *
-		 * grunt-perfbudget is a Grunt.js task for enforcing a performance budget
-		 * (more on performance budgets:
-		 * http://timkadlec.com/2013/01/setting-a-performance-budget/). It uses
-		 * the wonderful webpagetest.org and the WebPagetest API Wrapper for
-		 * NodeJS created by Marcel Duran.
-		 *
-		 * grunt-perfbudget uses either a public or private instance of
-		 * WebPagetest to perform tests on a specified URL. It compares test
-		 * results to budgets you specify. If the budget is met, the tasks
-		 * successfully completes. If it the page exceeds your performance
-		 * budgets, the task fails and informs you why.
-		 */
-		perfbudget: {
-			default: {
-				options: {
-					url: 'http://wwwdev.evergreen.edu',
-					key: 'A.71de0f32f82a2c13f3ed1f862acb6548',
-					location: 'ec2-us-west-2:Firefox',  // Oregon - EC2
-					budget: {
-						visualComplete: '4000',
-						SpeedIndex: '1500',
-					}
-				}
-			}
-		},
-		
-		/**
 		 * CSS post-processors
 		 *
 		 * autoprefixer adds support for older browsers by adding vendor
@@ -196,74 +164,6 @@ module.exports = function(grunt) {
 			r25_styles: {
 				src: 'r25/r25.css',
 				dest: 'r25/build/r25.css'
-			}
-		},
-		
-		realFavicon: {
-			favicons: {
-				src: 'images/favicons/src',
-				dest: 'images/favicons/dist',
-				options: {
-					iconsPath: '<?php print base_path() . path_to_theme() ?>/images/favicons/dist/',
-					html: [ 'images/favicons/dist/sample-markup.html' ],
-					design: {
-						ios: {
-							pictureAspect: 'backgroundAndMargin',
-							backgroundColor: '#44693d',
-							margin: '14%',
-							assets: {
-								ios6AndPriorIcons: false,
-								ios7AndLaterIcons: false,
-								precomposedIcons: false,
-								declareOnlyDefaultIcon: true
-							},
-							appName: 'Evergreen'
-						},
-						desktopBrowser: {},
-						windows: {
-							pictureAspect: 'whiteSilhouette',
-							backgroundColor: '#44693d',
-							onConflict: 'override',
-							assets: {
-								windows80Ie10Tile: false,
-								windows10Ie11EdgeTiles: {
-									small: true,
-									medium: true,
-									big: true,
-									rectangle: true
-								}
-							},
-							appName: 'Evergreen'
-						},
-						androidChrome: {
-							pictureAspect: 'shadow',
-							themeColor: '#44693d',
-							manifest: {
-								name: 'Evergreen',
-								display: 'browser',
-								orientation: 'notSet',
-								onConflict: 'override',
-								declared: true
-							},
-							assets: {
-								legacyIcon: true,
-								lowResolutionIcons: false
-							}
-						},
-						safariPinnedTab: {
-							pictureAspect: 'silhouette',
-							themeColor: '#44693d'
-						}
-					},
-					settings: {
-						compression: 5,
-						scalingAlgorithm: 'Lanczos',
-						errorOnImageTooSmall: false,
-						readmeFile: true,
-						htmlCodeFile: true,
-						usePathAsIs: false
-					}
-				}
 			}
 		},
 
@@ -323,39 +223,6 @@ module.exports = function(grunt) {
 			},
 			target: ['css/src/*.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/**/*.scss'],
     },
-		
-		/**
-		 * Create spritesheets out of SVG files in a folder.
-		 */
-		svgstore: {
-			options: {
-				prefix : 'icon-', // This will prefix each ID
-				svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-					//viewBox : '0 0 100 100',
-					//xmlns: 'http://www.w3.org/2000/svg'
-				},
-				inheritviewbox: true,
-			},
-			transporter: {
-				/*files: {
-					'' : [''],  // dest : src
-				}*/
-				src: ['images/src/icons/transporter/*.svg'],
-				dest: 'images/build/transporter.svg',
-			},
-		},
-		/*svgsprite: {
-			options: {
-				//cleanwith: 'svgo',	//SVG optimizer
-			},
-			transporter: {
-				src: ['images/src/icons'],
-				dest: 'images/build/icons',
-				options: {
-					sprite: 'transporter',  //filename
-				}
-			},
-	  },*/
     
     /**
      * Compress JS by removing whitespace. Different from
@@ -405,11 +272,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks('grunt-perfbudget');
-	grunt.loadNpmTasks('grunt-real-favicon');
 	grunt.loadNpmTasks('grunt-sass-lint');
-	grunt.loadNpmTasks('grunt-svgstore');
-	/*grunt.loadNpmTasks('grunt-svg-sprite');*/
 
 	// Default task(s) (in the order you want to run them).
 	grunt.registerTask('default', ['sass', 'postcss', 'newer:concat', 'newer:uglify', 'copy']);
