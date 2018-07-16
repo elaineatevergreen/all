@@ -29,7 +29,8 @@
 	}
 }
 
-.page-footer-unit-central{
+
+.page-footer__unit--central{
 	text-align: center;  // Keep it centered, even at large sizes
 }
 
@@ -67,7 +68,7 @@
 	outline-width: 1px;
 }
 
-.page-footer-unit .lineup{
+.page-footer__unit .lineup{
 	justify-content: center;
 
 	@include breakpoint($drax){
