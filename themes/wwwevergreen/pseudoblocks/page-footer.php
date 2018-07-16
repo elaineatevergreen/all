@@ -2,7 +2,7 @@
 					<ul class="element-list text-list-alt">
 						<li>
 							<p><b>Request info</b></p>
-							<p>Add your name and address to receive our publications, timely reminders and invitations to special events through the mail.</p>
+							<p>Get publications, timely reminders, and invitations to special events.</p>
 							<ul>
 								<li>
 									<a href="https://evergreenstatecollege.hobsonsradius.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
