@@ -1,13 +1,19 @@
 				<div class="do-not-print page-footer-unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
-							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
+							<p><b>Request info</b></p>
+							<p>Add your name and address to receive our publications, timely reminders and invitations to special events through the mail.</p>
+							<ul>
+								<li>
+									<a href="https://evergreenstatecollege.hobsonsradius.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
+								</li>
+								<li>
+									<a href="https://www.evergreen.edu/admissions/graduate">Future graduate student</a>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<a href="https://evergreen.edu/tour">Tours and Maps</a>
-						</li>
-						<li>
-							<p>Stay connected:</p>
+							<p><b>Stay connected</b></p>
 							<ul class="element-list lineup">
 								<li>
 									<a href="https://facebook.com/TheEvergreenStateCollege" title="Facebook">
@@ -35,6 +41,12 @@
 									</a>
 								</li>
 							</ul>
+						</li>
+						<li>
+							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
+						</li>
+						<li>
+							<a href="https://evergreen.edu/tour">Tours and Maps</a>
 						</li>
 					</ul>
 				</div><!-- /.do-not-print.unit-1-5 -->
