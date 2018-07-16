@@ -1,4 +1,4 @@
-				<div class="do-not-print page-footer-unit unit-1-5">
+				<div class="do-not-print page-footer__unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
 							<p>
@@ -52,10 +52,10 @@
 						</li>
 					</ul>
 				</div><!-- /.do-not-print.unit-1-5 -->
-				<div class="do-not-print unit-1-5">
+				<div class="do-not-print page-footer__placeholder unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
-				<div class="page-footer-unit page-footer-unit-central unit-1-5">
+				<div class="page-footer__unit page-footer__unit--central unit-1-5">
 					<p class="footer-map">
 						<a href="https://evergreen.edu/tour">
 							<img alt="Map of Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
@@ -79,10 +79,10 @@
 						</div>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
-				<div class="do-not-print unit-1-5">
+				<div class="do-not-print page-footer__placeholder unit-1-5">
 					<!-- This column left intentionally blank. -->
 				</div>
-				<div class="page-footer-unit unit-1-5">
+				<div class="page-footer__unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li class="do-not-print">
 							<p>
