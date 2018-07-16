@@ -1,9 +1,10 @@
 				<div class="do-not-print page-footer-unit unit-1-5">
 					<ul class="element-list text-list-alt">
 						<li>
-							<p><b>Request info</b></p>
-							<p>Get publications, timely reminders, and invitations to special events.</p>
-							<ul>
+							<p>
+								<b>Request info</b><br/>
+								Get publications, reminders, and invitations to special events.
+							</p>
 								<li>
 									<a href="https://evergreenstatecollege.hobsonsradius.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
 								</li>
