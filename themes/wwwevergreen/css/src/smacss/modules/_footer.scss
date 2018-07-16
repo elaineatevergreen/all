@@ -32,7 +32,7 @@
 @supports (grid-template: none){  // Targets browsers that support grid without autoprefixing with shitty IE syntax.
 	
 	@include breakpoint($drax){
-		.page-footer--grid{
+		.page-footer__grid{
 			// box model
 			margin-left: 0;
 			// layout

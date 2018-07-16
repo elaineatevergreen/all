@@ -131,7 +131,7 @@
 <!-- Page Footer -->
 <footer class="row page-footer" role="contentinfo">
 	<div class="wrapper">
-		<div class="grid">
+		<div class="grid page-footer__grid">
 			<?php 
 				/* 
 					another place where we switch between the standard Evergreen footer 

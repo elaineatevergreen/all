@@ -4426,7 +4426,7 @@ input:checked + .header-dropdown {
 @supports (grid-template: none) {
   @media screen and (min-width: 70em) {
     /* line 35, ../src/smacss/modules/_footer.scss */
-    .page-footer--grid {
+    .page-footer__grid {
       margin-left: 0;
       display: grid;
       grid-gap: 2ch;
