@@ -5,6 +5,7 @@
 								<b>Request info</b><br/>
 								Get publications, reminders, and invitations to special events.
 							</p>
+							<ul class="text-list">
 								<li>
 									<a href="https://evergreenstatecollege.hobsonsradius.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
 								</li>
