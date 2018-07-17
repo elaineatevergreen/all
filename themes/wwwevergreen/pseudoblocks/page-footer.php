@@ -58,7 +58,7 @@
 				<div class="page-footer__unit page-footer__unit--central unit-1-5">
 					<p class="footer-map">
 						<a href="https://evergreen.edu/tour">
-							<img alt="Visit us in beautiful Washington state" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
+							<img alt="Visit us in beautiful Olympia, Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
 						</a><!--<br/>
 						<small>
 							©
