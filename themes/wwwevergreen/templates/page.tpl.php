@@ -113,7 +113,7 @@ $evergreen_blocks = theme_get_setting('evergreen_blocks');
 					 if ($logo): 
 					 ?>
 		      <a href="<?php print $front_page; ?>" rel="home" id="logo">
-		        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
+		        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?> Home Page" />
 		      </a>
 		      	<?php else:
 			      	//what should happen if the logo doesn't exist?
