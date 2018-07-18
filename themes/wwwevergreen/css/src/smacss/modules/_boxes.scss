@@ -334,10 +334,8 @@ p.alert,  // WYSIWYG
 .pull-box{
 	// typography
 	color: $tint;
-	//-moz-osx-font-smoothing: grayscale;  // Better rendering of reverse-out text
-	//-webkit-font-smoothing: antialiased;  // Better rendering of reverse-out text
 	// decoration
-	background-color: transparentize($evergreen-neue, 0.05);
+	background-color: transparentize(mix($shade, $evergreen-neue, 15%), 0.05);
 
 	@include breakpoint($gamora){
 		margin-bottom: 1.071428571428571em;  // 15px
