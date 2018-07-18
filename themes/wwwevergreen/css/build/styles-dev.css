@@ -245,7 +245,7 @@ svg {
 }
 
 /* line 49, ../src/smacss/_base.scss */
-a img {
+a:focus img {
   outline: 1px dotted #492c5d;
 }
 
