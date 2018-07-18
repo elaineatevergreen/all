@@ -46,7 +46,7 @@ svg{
 	max-width: 100%;
 }
 
-a img{
+a:focus img{
 	outline: 1px dotted $blueberry-susan;
 }
 
