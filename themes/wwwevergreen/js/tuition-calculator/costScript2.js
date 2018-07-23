@@ -112,7 +112,7 @@ function createTable(costRate, cred) {
 
   /* ------------------------------------- HTML on page load ----------------------------------------*/
 jQuery(document).ready(function ($) {//Following string contains all of the html displayed on the page before the user does anything.
-  document.getElementById('Tuition-Box').innerHTML = '<h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    '+
+  document.getElementById('Tuition-Box').innerHTML = '<p>Tuition rates are updated annually. Rates are typically announced in June for the following academic year.</p><h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    '+
   '<select id="selCSV"><option value="-1" selected="selected">Please Select Option</option>'+
   '<option value="1718AdjustedGradHealthFee.csv">2017-18</option><option value="CostSheet1819.csv">2018-19</option></select>'+
   '</p><p><label for="creditCount">Number of credits:</label> <select id="creditCount" id="changed">'+
