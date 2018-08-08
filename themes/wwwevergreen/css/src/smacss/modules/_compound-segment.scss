@@ -58,11 +58,13 @@
 	display: block;
 }
 
-// Extends .media-img img(?)
-.media-img-icon,  // deprecated
-// Extends .compound-img img(?)
-.compound-img-icon{
+/*// Extends .media-img
+.media-img-icon,  // deprecated, use .compound-img--icon instead
+// Extends .compound-img
+.compound-img-icon,  // deprecated, use .compound-img--icon instead
+.compound-img--icon{
 	max-height: 3.75rem;
+}*/
 
 .compound-img-icon img,  // deprecated, use .compound-img__icon class on icon itself
 .compound-img__icon{
