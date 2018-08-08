@@ -63,6 +63,16 @@
 // Extends .compound-img img(?)
 .compound-img-icon{
 	max-height: 3.75rem;
+
+.compound-img-icon img,  // deprecated, use .compound-img__icon class on icon itself
+.compound-img__icon{
+	// box model
+	width: calc(45 / 16 * 1rem);
+	max-width: 100%;
+	// layout
+	display: block;
+}
+
 }
 
 .media-body,  // deprecated

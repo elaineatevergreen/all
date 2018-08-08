@@ -172,18 +172,6 @@
 	transition: transform 0.1s ease;
 }
 
-.compound-img-icon img{
-	// box model
-	width: 10ch;
-	max-width: 100%;
-	// layout
-	display: block;
-
-	/*@include breakpoint($gamora){
-		width: 12ch;  // Matches .transporter-icon img
-	}*/
-}
-
 .transporter-call .transporter-icon{
 	background-color: $evergreen-neue;
 
