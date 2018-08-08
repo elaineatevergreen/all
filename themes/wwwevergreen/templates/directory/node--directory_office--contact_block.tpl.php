@@ -50,35 +50,31 @@ display office information as a "contact block" usually on a page.
 	    <?php if ($content['field_hours']) { ?>
 	        <dt>Hours</dt><dd><?php print render($content['field_hours']) ?></dd>
 	    
-	    <?php
-		    }; //end check for hours
-			if ($content['body']) { ?>
-	        <dd><?php print render($content['body']) ?></dd>
-	    <?php
-		    }; //end check for additional
-		    if($content['field_facebook'] or $content['field_twitter'] or $content['field_linkedin'] or $content['field_instagram']) {  
-		?>
-	        <dt>Connect With Us</dt>
-	        <dd><ul class="tertiary-nav-list">
-		    <?php if($content['field_facebook']) { ?>
-			    <li><?php print render($content['field_facebook']) ?></li>
-		    <?php }; ?>
-		    <?php if($content['field_twitter']) { ?>
-			    <li><?php print render($content['field_twitter']) ?></li>
-		    <?php }; ?>
-		    <?php if($content['field_linkedin']) { ?>
-			    <li><?php print render($content['field_linkedin']) ?></li>
-		    <?php }; ?>
-		    <?php if($content['field_instagram']) { ?>
-			    <li><?php print render($content['field_instagram']) ?></li>
-		    <?php }; ?>
-		        
-		        </ul></dd>
-		<?php
-			};
-		?>
-		</dl>
-		<?php }; //end check for dl contents ?>
+				<?php }; //end check for hours
+				if ($content['body']) { ?>
+					<dd><?php print render($content['body']) ?></dd>
+				<?php }; //end check for additional
+				if($content['field_facebook'] or $content['field_twitter'] or $content['field_linkedin'] or $content['field_instagram']) { ?>
+					<dt>Connect With Us</dt>
+					<dd>
+						<ul class="element-list">
+							<?php if($content['field_facebook']) { ?>
+								<li><?php print render($content['field_facebook']) ?></li>
+							<?php }; ?>
+							<?php if($content['field_twitter']) { ?>
+								<li><?php print render($content['field_twitter']) ?></li>
+							<?php }; ?>
+							<?php if($content['field_linkedin']) { ?>
+								<li><?php print render($content['field_linkedin']) ?></li>
+							<?php }; ?>
+							<?php if($content['field_instagram']) { ?>
+								<li><?php print render($content['field_instagram']) ?></li>
+							<?php }; ?>
+						</ul>
+					</dd>
+				<?php }; ?>
+				</dl>
+			<?php }; //end check for dl contents ?>
 		
 		<!-- what about other social media? -->
 		

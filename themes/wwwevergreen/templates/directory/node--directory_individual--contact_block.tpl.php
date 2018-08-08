@@ -42,29 +42,25 @@ Displays contact information for an individual for use in a contact block on a p
 	    <?php if ($content['field_hours']) { ?>
 	        <dt>Hours</dt><dd><?php print render($content['field_hours']) ?></dd>
 	    
-	    <?php
-		    }; //end check for hours
-			if ($content['body']) { ?>
-	        <dd><?php print render($content['body']) ?></dd>
-	    <?php
-		    }; //end check for additional
-		    if($content['field_facebook'] or $content['field_twitter']) {  
-		?>
-	        <dt>Connect With Us</dt>
-	        <dd><ul class="tertiary-nav-list">
-		    <?php if($content['field_facebook']) { ?>
-			    <li><?php print render($content['field_facebook']) ?></li>
-		    <?php }; ?>
-		    <?php if($content['field_twitter']) { ?>
-			    <li><?php print render($content['field_twitter']) ?></li>
-		    <?php }; ?>
-		        
-		        </ul></dd>
-		<?php
-			};
-		?>
-		</dl>
-		<?php }; //end check for dl contents ?>
+		    <?php }; //end check for hours
+				if ($content['body']) { ?>
+					<dd><?php print render($content['body']) ?></dd>
+				<?php }; //end check for additional
+				if($content['field_facebook'] or $content['field_twitter']) { ?>
+					<dt>Connect With Us</dt>
+					<dd>
+						<ul class="tertiary-nav-list">
+							<?php if($content['field_facebook']) { ?>
+								<li><?php print render($content['field_facebook']) ?></li>
+							<?php }; ?>
+							<?php if($content['field_twitter']) { ?>
+								<li><?php print render($content['field_twitter']) ?></li>
+							<?php }; ?>
+						</ul>
+					</dd>
+				<?php }; ?>
+				</dl>
+			<?php }; //end check for dl contents ?>
 		
 		<!-- what about other social media? -->
 		
