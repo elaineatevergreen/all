@@ -88,6 +88,7 @@
 .media-body > :first-child,  // deprecated
 .compound-body > :first-child{
 	//margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
+	margin-top: 0;  // Align the .compound-body content with the .compound-img content.
 }
 
 .box > .compound:first-child{

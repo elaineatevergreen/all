@@ -5609,7 +5609,13 @@ div.ajax-progress {
           flex: 1 1 auto;
 }
 
-/* line 93, ../src/smacss/modules/_compound-segment.scss */
+/* line 88, ../src/smacss/modules/_compound-segment.scss */
+.media-body > :first-child,
+.compound-body > :first-child {
+  margin-top: 0;
+}
+
+/* line 94, ../src/smacss/modules/_compound-segment.scss */
 .box > .compound:first-child {
   margin-top: calc(7.5 / 16 * 1rem);
 }
@@ -5629,14 +5635,14 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 113, ../src/smacss/modules/_compound-segment.scss */
+/* line 114, ../src/smacss/modules/_compound-segment.scss */
 .media-alt,
 .compound-alt {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-/* line 118, ../src/smacss/modules/_compound-segment.scss */
+/* line 119, ../src/smacss/modules/_compound-segment.scss */
 .media-alt > .media-img,
 .compound-alt > .compound-img {
   padding-right: 0;
@@ -5660,18 +5666,18 @@ div.ajax-progress {
  *  ^    +---------------------+
  *  .compound-img
  */
-/* line 141, ../src/smacss/modules/_compound-segment.scss */
+/* line 142, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon {
   -webkit-align-items: baseline;
           align-items: baseline;
 }
 
-/* line 145, ../src/smacss/modules/_compound-segment.scss */
+/* line 146, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon > .compound-img {
   padding-right: 1ch;
 }
 
-/* line 149, ../src/smacss/modules/_compound-segment.scss */
+/* line 150, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon__icon {
   width: 1em;
 }
@@ -5681,17 +5687,17 @@ div.ajax-progress {
  *
  * Separate compounds with extra spacing. Extends .compound
  */
-/* line 158, ../src/smacss/modules/_compound-segment.scss */
+/* line 159, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l {
   margin: calc(30 / 16 * 1rem) auto;
 }
 
-/* line 162, ../src/smacss/modules/_compound-segment.scss */
+/* line 163, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l .compound-img {
   padding-right: 4ch;
 }
 
-/* line 166, ../src/smacss/modules/_compound-segment.scss */
+/* line 167, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l.compound-alt .compound-img {
   padding-right: 0;
   padding-left: 4ch;
@@ -5730,7 +5736,7 @@ div.ajax-progress {
  * |             |
  * +-------------+
  */
-/* line 205, ../src/smacss/modules/_compound-segment.scss */
+/* line 206, ../src/smacss/modules/_compound-segment.scss */
 .media-img-alt,
 .media-child-alt,
 .compound-child-alt {
@@ -5764,7 +5770,7 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 238, ../src/smacss/modules/_compound-segment.scss */
+/* line 239, ../src/smacss/modules/_compound-segment.scss */
 .media-column,
 .media-squishy,
 .compound-column,
@@ -5776,7 +5782,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 246, ../src/smacss/modules/_compound-segment.scss */
+  /* line 247, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
     -webkit-align-items: stretch;
@@ -5786,7 +5792,7 @@ div.ajax-progress {
   }
 }
 
-/* line 255, ../src/smacss/modules/_compound-segment.scss */
+/* line 256, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img,
 .media-squishy > .media-img,
 .compound-column > .compound-img,
@@ -5797,7 +5803,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 264, ../src/smacss/modules/_compound-segment.scss */
+  /* line 265, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     margin-bottom: calc(30 / 16 * 1rem);
@@ -5808,7 +5814,7 @@ div.ajax-progress {
   }
 }
 
-/* line 276, ../src/smacss/modules/_compound-segment.scss */
+/* line 277, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5825,7 +5831,7 @@ div.ajax-progress {
  * These styles make sure they size up to the maximum available width of
  * the .compound-img container.
  */
-/* line 292, ../src/smacss/modules/_compound-segment.scss */
+/* line 293, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-full {
   width: 100%;
   -webkit-flex-basis: 100%;
