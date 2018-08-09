@@ -5579,7 +5579,6 @@ div.ajax-progress {
 /* line 55, ../src/smacss/modules/_compound-segment.scss */
 .media-img img,
 .compound-img img {
-  margin-top: 0.46875rem;
   display: block;
 }
 
@@ -5593,14 +5592,14 @@ div.ajax-progress {
 /* line 69, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-icon img,
 .compound-img__icon {
-  width: calc(45 / 16 * 1rem);
+  width: calc(50 / 16 * 1rem);
   max-width: 100%;
   display: block;
 }
 
 /* line 78, ../src/smacss/modules/_compound-segment.scss */
 .compound-img__icon--small {
-  width: 1em;
+  width: 1.38888888888889em;
 }
 
 /* line 82, ../src/smacss/modules/_compound-segment.scss */
@@ -5610,10 +5609,9 @@ div.ajax-progress {
           flex: 1 1 auto;
 }
 
-/* line 88, ../src/smacss/modules/_compound-segment.scss */
-.media-body > :first-child,
-.compound-body > :first-child {
-  margin-top: 0.46875rem;
+/* line 93, ../src/smacss/modules/_compound-segment.scss */
+.box > .compound:first-child {
+  margin-top: calc(7.5 / 16 * 1rem);
 }
 
 /**
@@ -5631,14 +5629,14 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 109, ../src/smacss/modules/_compound-segment.scss */
+/* line 113, ../src/smacss/modules/_compound-segment.scss */
 .media-alt,
 .compound-alt {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-/* line 114, ../src/smacss/modules/_compound-segment.scss */
+/* line 118, ../src/smacss/modules/_compound-segment.scss */
 .media-alt > .media-img,
 .compound-alt > .compound-img {
   padding-right: 0;
@@ -5662,18 +5660,18 @@ div.ajax-progress {
  *  ^    +---------------------+
  *  .compound-img
  */
-/* line 137, ../src/smacss/modules/_compound-segment.scss */
+/* line 141, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon {
   -webkit-align-items: baseline;
           align-items: baseline;
 }
 
-/* line 141, ../src/smacss/modules/_compound-segment.scss */
+/* line 145, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon > .compound-img {
   padding-right: 1ch;
 }
 
-/* line 145, ../src/smacss/modules/_compound-segment.scss */
+/* line 149, ../src/smacss/modules/_compound-segment.scss */
 .compound--icon__icon {
   width: 1em;
 }
@@ -5683,17 +5681,17 @@ div.ajax-progress {
  *
  * Separate compounds with extra spacing. Extends .compound
  */
-/* line 154, ../src/smacss/modules/_compound-segment.scss */
+/* line 158, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l {
   margin: calc(30 / 16 * 1rem) auto;
 }
 
-/* line 158, ../src/smacss/modules/_compound-segment.scss */
+/* line 162, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l .compound-img {
   padding-right: 4ch;
 }
 
-/* line 162, ../src/smacss/modules/_compound-segment.scss */
+/* line 166, ../src/smacss/modules/_compound-segment.scss */
 .compound-space-l.compound-alt .compound-img {
   padding-right: 0;
   padding-left: 4ch;
@@ -5732,7 +5730,7 @@ div.ajax-progress {
  * |             |
  * +-------------+
  */
-/* line 201, ../src/smacss/modules/_compound-segment.scss */
+/* line 205, ../src/smacss/modules/_compound-segment.scss */
 .media-img-alt,
 .media-child-alt,
 .compound-child-alt {
@@ -5766,7 +5764,7 @@ div.ajax-progress {
  * |                     |
  * +---------------------+
  */
-/* line 234, ../src/smacss/modules/_compound-segment.scss */
+/* line 238, ../src/smacss/modules/_compound-segment.scss */
 .media-column,
 .media-squishy,
 .compound-column,
@@ -5778,7 +5776,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 242, ../src/smacss/modules/_compound-segment.scss */
+  /* line 246, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy,
   .compound-squishy {
     -webkit-align-items: stretch;
@@ -5788,7 +5786,7 @@ div.ajax-progress {
   }
 }
 
-/* line 251, ../src/smacss/modules/_compound-segment.scss */
+/* line 255, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img,
 .media-squishy > .media-img,
 .compound-column > .compound-img,
@@ -5799,7 +5797,7 @@ div.ajax-progress {
 }
 
 @media screen and (min-width: 32em) {
-  /* line 260, ../src/smacss/modules/_compound-segment.scss */
+  /* line 264, ../src/smacss/modules/_compound-segment.scss */
   .media-squishy > .media-img,
   .compound-squishy > .compound-img {
     margin-bottom: calc(30 / 16 * 1rem);
@@ -5810,7 +5808,7 @@ div.ajax-progress {
   }
 }
 
-/* line 272, ../src/smacss/modules/_compound-segment.scss */
+/* line 276, ../src/smacss/modules/_compound-segment.scss */
 .media-column > .media-img img,
 .media-squishy > .media-img img,
 .compound-column > .compound-img img,
@@ -5827,7 +5825,7 @@ div.ajax-progress {
  * These styles make sure they size up to the maximum available width of
  * the .compound-img container.
  */
-/* line 288, ../src/smacss/modules/_compound-segment.scss */
+/* line 292, ../src/smacss/modules/_compound-segment.scss */
 .compound-img-full {
   width: 100%;
   -webkit-flex-basis: 100%;

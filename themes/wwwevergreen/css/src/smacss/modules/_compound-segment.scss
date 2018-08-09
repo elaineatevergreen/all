@@ -54,7 +54,7 @@
 
 .media-img img,  // deprecated
 .compound-img img{
-	margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
+	//margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
 	display: block;
 }
 
@@ -69,14 +69,14 @@
 .compound-img-icon img,  // deprecated, use .compound-img__icon class on icon itself
 .compound-img__icon{
 	// box model
-	width: calc(45 / 16 * 1rem);
+	width: calc(50 / 16 * 1rem);  // matches 2x line-height
 	max-width: 100%;
 	// layout
 	display: block;
 }
 
 .compound-img__icon--small{
-	width: 1em;
+	width: 1.38888888888889em;  // 25px; matches line-height
 }
 
 .media-body,  // deprecated
@@ -87,7 +87,11 @@
 
 .media-body > :first-child,  // deprecated
 .compound-body > :first-child{
-	margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
+	//margin-top: 0.46875rem;  // Align the .compound-body content with the .compound-img content.
+}
+
+.box > .compound:first-child{
+	margin-top: calc(7.5 / 16 * 1rem);  // Gives a bit of headroom inside boxes.
 }
 
 /**
