@@ -681,7 +681,7 @@ print render($title_prefix);
 						
 						<?php if(isset($content['group_details']['group_location_schedule']['field_first_meeting_time']) or isset($content['group_details']['group_location_schedule']['field_first_meeting_location'])) { ?>
 						<p><b>First meeting:</b></p>
-						<?php print(render(($content['group_details']['group_location_schedule']['field_first_meeting_time']))); ?>
+						<?php print(render(($content['group_details']['group_location_schedule']['field_first_meeting_time']))); ?><br/>
 						<?php print(render(($content['group_details']['group_location_schedule']['field_first_meeting_location']))); ?>
 						<?php }; ?>
 
