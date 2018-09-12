@@ -675,7 +675,7 @@ print render($title_prefix);
 							<p><b>Scheduled for:</b> <?php print(render($content['group_details']['group_location_schedule']['field_time_offered'])); ?>
 						<?php }; ?>
 						<?php if(isset($content['group_details']['group_location_schedule']['field_final_schedule'])) { ?>
-						<p><b>Final schedule and room assignments (login required):</b></p>
+						<p><b>Final schedule and room assignments:</b></p>
 						<?php print(render(($content['group_details']['group_location_schedule']['field_final_schedule']))); ?>
 						<?php }; ?>
 						
