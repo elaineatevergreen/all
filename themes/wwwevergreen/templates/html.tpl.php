@@ -126,6 +126,9 @@
 })(this);
 	</script>
 	
+	<!-- Google -->
+	<!-- Verify site in Search Console -->
+	<meta name="google-site-verification" content="GPFJsInUs7A9NgB084Kk6slj-flC0PumWBhPv9VjMGc" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
