@@ -86,6 +86,14 @@ figure,
 	}
 }
 
+::selection{
+	// typography
+	color: $tint;
+	text-shadow: none;
+	// decoration
+	background-color: mix($shade, $evergreen-neue, 20%);
+}
+
 /**
  * Removing hyphen rules for now. English doesn't have long enough words to
  * warrant this, and we’re not justifying text, but consider it for
