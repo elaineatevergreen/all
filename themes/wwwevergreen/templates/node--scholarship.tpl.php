@@ -41,7 +41,7 @@
 			//MOST scholarships use a default donation link, but a few (ONE as of Oct 2018) use special donation form pages
 			//this checks which is which
 			if(isset($content['field_donation_link'])) { 
-				$donationURL = render($content['field_donation_link']; 
+				$donationURL = render($content['field_donation_link']); 
 			} else { 
 				$donationURL = 'http://3897.thankyou4caring.org/pages/givescholarships'; 
 			};
