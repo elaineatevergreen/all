@@ -37,7 +37,14 @@
 	    
 	<?php 
 		//add the donation box if this scholarship is seeking funding
-		if(isset($content['field_funding_status'])) {			
+		if(isset($content['field_funding_status'])) {
+			//MOST scholarships use a default donation link, but a few (ONE as of Oct 2018) use special donation form pages
+			//this checks which is which
+			if(isset($content['field_donation_link'])) { 
+				$donationURL = render($content['field_donation_link']; 
+			} else { 
+				$donationURL = 'http://3897.thankyou4caring.org/pages/givescholarships'; 
+			};
 	?>
 	<div class="box supplement"><p>
 	<?php
@@ -45,7 +52,7 @@
 			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet fully funded."; } 
 			elseif(strstr(render($content['field_funding_status']),'Seeking donors')) { print "Keep this scholarship funded for future generations."; };
 	?>
-	</p><p><a href="http://3897.thankyou4caring.org/pages/givescholarships">Please donate today.</a></p></div>
+	</p><p><a href="<?php print $donationURL; ?>">Please donate today.</a></p></div>
 	<?php
 		};
 		?>  
