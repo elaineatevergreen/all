@@ -41,7 +41,9 @@
 	@include margin-default;
 }
 
-.calendar-calendar th{
+.calendar-calendar th,
+.calendar-calendar th.days{
+	color: mix($tint, $blueberry-susan, 20%);
 	text-align: inherit;
 }
 
@@ -50,7 +52,10 @@
 }
 
 .calendar-calendar td{
+	// box model
 	width: auto;
+	// typography
+	color: mix($tint, $blueberry-susan, 20%);
 }
 
 .calendar-calendar td.empty{
@@ -71,7 +76,7 @@
 	border-right-width: 0;
 	padding: 0;
 	width: 100%;
-	// backgrounds and borders
+	// decoration
 	background-color: transparent;
 }
 

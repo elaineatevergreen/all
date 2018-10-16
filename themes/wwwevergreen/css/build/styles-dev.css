@@ -7260,36 +7260,39 @@ p.alert,
 }
 
 /* line 44, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
-.calendar-calendar th {
+.calendar-calendar th,
+.calendar-calendar th.days {
+  color: #6b547b;
   text-align: inherit;
 }
 
-/* line 48, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 50, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar tr {
   background-color: transparent;
 }
 
-/* line 52, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 54, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td {
   width: auto;
+  color: #6b547b;
 }
 
-/* line 56, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 61, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.empty {
   color: inherit;
 }
 
-/* line 60, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 65, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td a:hover {
   text-decoration: none;
 }
 
-/* line 64, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 69, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar div.calendar {
   font-size: inherit;
 }
 
-/* line 69, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 74, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-items div.calendar {
   border-right-width: 0;
   padding: 0;
@@ -7297,12 +7300,12 @@ p.alert,
   background-color: transparent;
 }
 
-/* line 78, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 83, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td .inner div.calendar .contents {
   padding: 0.25rem 0.25em 0.625rem;
 }
 
-/* line 82, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 87, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day div.monthview,
 .calendar-calendar .week-view .full td.single-day div.weekview,
 .calendar-calendar .day-view .full td.single-day div.dayview {
@@ -7312,23 +7315,23 @@ p.alert,
 /**
  * b. Calendar Heading
  */
-/* line 91, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 96, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-nav {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 96, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 101, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .item-list ul {
   margin: inherit;
 }
 
-/* line 100, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .item-list ul li {
   margin-left: 0;
 }
 
-/* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 110, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-heading h3,
 .date-nav div.date-heading h3,
 .date-nav-wrapper .date-heading h3 {
@@ -7338,7 +7341,7 @@ p.alert,
   line-height: 1.38888888888889;
 }
 @media screen and (min-width: 43em) {
-  /* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 110, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-heading h3,
   .date-nav div.date-heading h3,
   .date-nav-wrapper .date-heading h3 {
@@ -7348,7 +7351,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 105, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 110, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-heading h3,
   .date-nav div.date-heading h3,
   .date-nav-wrapper .date-heading h3 {
@@ -7359,44 +7362,44 @@ p.alert,
   }
 }
 
-/* line 132, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 137, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev,
 .view .date-nav-wrapper .date-next {
   position: static;
   font-size: inherit;
 }
 @media screen and (min-width: 32em) {
-  /* line 132, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 137, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view .date-nav-wrapper .date-prev,
   .view .date-nav-wrapper .date-next {
     position: absolute;
   }
 }
 
-/* line 144, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 149, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev {
   float: left;
   right: auto;
   left: 0;
 }
 
-/* line 151, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 156, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-next {
   float: right;
 }
 
-/* line 155, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 160, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a,
 .view .date-nav-wrapper .date-next a {
   margin: 0 0.25em;
   color: #492c5d;
 }
-/* line 162, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 167, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a:visited,
 .view .date-nav-wrapper .date-next a:visited {
   color: #600f21;
 }
-/* line 166, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 171, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view .date-nav-wrapper .date-prev a:hover,
 .view .date-nav-wrapper .date-next a:hover {
   color: #0086ee;
@@ -7405,27 +7408,27 @@ p.alert,
 /**
  * c. Calendar List View
  */
-/* line 175, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 180, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view td,
 .calendar-calendar .day-view td.calendar-agenda-items {
   border-width: 0;
   color: inherit;
 }
 
-/* line 183, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td .inner div,
 .calendar-calendar td .inner div a {
   background-color: transparent;
 }
 
-/* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 193, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view div.calendar,
 .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
 .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
   text-align: left;
 }
 @media screen and (min-width: 43em) {
-  /* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 193, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .day-view div.calendar,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
@@ -7434,7 +7437,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 188, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 193, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .day-view div.calendar,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-hour,
   .calendar-calendar .day-view .calendar-agenda-hour span.calendar-ampm {
@@ -7443,7 +7446,7 @@ p.alert,
   }
 }
 
-/* line 202, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 207, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-hour,
 .calendar-calendar .day-view .full .calendar-agenda-hour,
 .calendar-calendar td.calendar-agenda-items .calendar.dayview {
@@ -7453,12 +7456,12 @@ p.alert,
   padding: 0;
 }
 
-/* line 212, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 217, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .calendar-agenda-items {
   padding-left: 1em;
 }
 
-/* line 216, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 221, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full .inner .monthview,
 .calendar-calendar .week-view .full .inner .weekview,
 .calendar-calendar .day-view .full .inner .dayview {
@@ -7466,7 +7469,7 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 225, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 230, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day div.monthview,
 .calendar-calendar .week-view .full td.multi-day div.weekview,
 .calendar-calendar .day-view .full td.multi-day div.dayview,
@@ -7489,23 +7492,23 @@ p.alert,
 /**
  * c.i. Calendar List View Time Column
  */
-/* line 249, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 254, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-agenda-hour {
   white-space: nowrap;
 }
 
-/* line 253, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 258, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .all-day .calendar-agenda-hour {
   white-space: normal;
 }
 
-/* line 257, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 262, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full .calendar-agenda-hour {
   padding-top: 0.535714285714286em;
   padding-bottom: 1.071428571428571em;
 }
 
-/* line 262, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 267, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar td.calendar-agenda-hour .calendar-hour,
 .calendar-calendar td.calendar-agenda-hour .calendar-ampm {
   display: inline-block;
@@ -7513,7 +7516,7 @@ p.alert,
   font-weight: inherit;
 }
 
-/* line 274, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 279, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-hour::after {
   content: "\a0";
 }
@@ -7521,13 +7524,13 @@ p.alert,
 /**
  * c.ii. Calendar List View Items Column
  */
-/* line 283, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 288, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div,
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   margin: 0;
 }
 
-/* line 288, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 293, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .day-view .full td .inner div.calendar div a {
   padding: 0;
 }
@@ -7535,13 +7538,13 @@ p.alert,
 /**
  * d. Calendar Week and Month View
  */
-/* line 295, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 300, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .week-view .full,
 .month-view .full {
   background-color: #f2f2f2;
 }
 
-/* line 300, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 305, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view .calendar,
 .calendar-calendar .week-view .calendar-agenda-hour,
 .calendar-calendar .month-view .calendar,
@@ -7553,7 +7556,7 @@ p.alert,
   text-align: left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 300, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 305, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .calendar-calendar .week-view .calendar,
   .calendar-calendar .week-view .calendar-agenda-hour,
   .calendar-calendar .month-view .calendar,
@@ -7562,13 +7565,13 @@ p.alert,
   }
 }
 
-/* line 309, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 314, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view .full .calendar-agenda-hour {
   padding: 0 0.25em;
   width: auto;
 }
 
-/* line 314, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 319, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .week-view td,
 .calendar-calendar .week-view .full td.multi-day,
 .calendar-calendar .week-view td.calendar-agenda-items {
@@ -7578,26 +7581,26 @@ p.alert,
   color: inherit;
 }
 
-/* line 325, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 330, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td {
   padding: 0;
   min-width: 8ch;
 }
 
-/* line 330, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 335, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar-empty,
 .calendar-calendar .month-view .full td.single-day.empty,
 .calendar-calendar .month-view .full td.date-box.empty {
   background: transparent none;
 }
 
-/* line 336, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 341, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td .inner div.day,
 .calendar-calendar .month-view .full td .inner div.day a {
   width: auto;
 }
 
-/* line 341, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 346, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.today,
 .calendar-calendar .month-view .full tr td.single-day.today,
 .calendar-calendar .month-view .full tr.odd td.today,
@@ -7608,12 +7611,12 @@ p.alert,
   border-color: #46502b;
 }
 
-/* line 352, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 357, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr td.multi-day.ends-today {
   border-color: #46502b;
 }
 
-/* line 357, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 362, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full tr.date-box,
 .calendar-calendar .month-view .full tr.date-box td,
 .calendar-calendar .month-view .full tr.multi-day,
@@ -7622,7 +7625,7 @@ p.alert,
   max-height: none;
 }
 
-/* line 365, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 370, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.single-day .calendar.monthview .contents,
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
@@ -7640,13 +7643,13 @@ p.alert,
 /**
  * e. Multi-day
  */
-/* line 382, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 387, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
 .calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
   background-color: #e1dee3;
 }
 
-/* line 388, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 393, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continuation,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continuation {
   height: inherit;
@@ -7654,7 +7657,7 @@ p.alert,
   padding: 0;
 }
 
-/* line 395, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 400, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues {
   border-top: 1px solid #d0cad4;
@@ -7669,7 +7672,7 @@ p.alert,
   background-color: #e1dee3;
 }
 
-/* line 412, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 417, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
 .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
   border-top: 1px solid #d0cad4;
@@ -7684,24 +7687,24 @@ p.alert,
 /**
  * f. Events by Category
  */
-/* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 434, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .view-calendar .views-field-title {
   margin-top: 0.535714285714286em;
 }
 @media screen and (min-width: 43em) {
-  /* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 434, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.41666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 429, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 434, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .view-calendar .views-field-title {
     margin-top: 0.52004784440168em;
   }
 }
 
-/* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 446, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .date-display-range,
 .view-calendar .date-display-range,
 .date-display-single {
@@ -7709,7 +7712,7 @@ p.alert,
   display: inline;
 }
 @media screen and (min-width: 43em) {
-  /* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 446, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -7717,7 +7720,7 @@ p.alert,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 441, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+  /* line 446, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
   .date-display-range,
   .view-calendar .date-display-range,
   .date-display-single {
@@ -7725,7 +7728,7 @@ p.alert,
   }
 }
 
-/* line 458, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
+/* line 463, ../src/smacss/modules/calendars/_campus-events-calendar.scss */
 .views-exposed-form label {
   font-weight: inherit;
 }
