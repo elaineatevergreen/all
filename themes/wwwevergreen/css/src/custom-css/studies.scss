@@ -18,15 +18,15 @@
 		// box model
 		border-bottom-width: 0;
 		// typography
-		letter-spacing: 0.1em;
+		letter-spacing: 0.2ch;
 		text-transform: uppercase;
 	}
 
 	ul{
 		// box model
 		border-left: 1.5px dashed mix($tint, $blueberry-susan, 60%);
-		margin-left: 0.25em;
-		padding-left: calc(0.75em - 1.5px);
+		margin-left: 0.5ch;
+		padding-left: calc(1.5ch - 1.5px);
 		// typography
 		list-style-type: none;
 
