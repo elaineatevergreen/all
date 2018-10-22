@@ -36,26 +36,6 @@
 	}
 }
 
-.in-depth > a::after{
-	// box model
-	height: 15px;
-	margin-bottom: -3px;
-	// layout
-	display: inline-block;
-	// behavior
-	transform: scale(0.8) translateY(7px);
-	// misc
-	content: url("/sites/all/themes/wwwevergreen/images/icons/in-depth.svg");
-
-	@include breakpoint($gamora){
-		// box model
-		height: auto;
-		padding: 0 0.5em;
-		// misc
-		transform: scale(1) translateY(4px);
-	}
-}
-
 .main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
 	content: "";
 }
