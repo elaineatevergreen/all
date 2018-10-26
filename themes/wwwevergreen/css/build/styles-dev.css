@@ -236,6 +236,12 @@ body {
 }
 
 /* line 41, ../src/smacss/_base.scss */
+:focus:not(:focus-visible),
+:focus:not(:-moz-focusring) {
+  outline: none;
+}
+
+/* line 46, ../src/smacss/_base.scss */
 img,
 svg {
   border-width: 0;
@@ -244,42 +250,40 @@ svg {
   max-width: 100%;
 }
 
-/* line 49, ../src/smacss/_base.scss */
-a:focus img {
-  outline: 1px dotted #492c5d;
-}
-
-/* line 53, ../src/smacss/_base.scss */
+/*a:focus img{
+	outline: 1px dotted $blueberry-susan;
+}*/
+/* line 58, ../src/smacss/_base.scss */
 audio {
   max-width: 100%;
 }
 
-/* line 57, ../src/smacss/_base.scss */
+/* line 62, ../src/smacss/_base.scss */
 video {
   height: auto;
   width: 100%;
 }
 
-/* line 62, ../src/smacss/_base.scss */
+/* line 67, ../src/smacss/_base.scss */
 iframe {
   width: 100%;
 }
 
-/* line 66, ../src/smacss/_base.scss */
+/* line 71, ../src/smacss/_base.scss */
 .iframe-ratio-9-6 {
   height: 0;
   padding-bottom: 66.6666666667%;
   position: relative;
 }
 
-/* line 74, ../src/smacss/_base.scss */
+/* line 79, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
 }
 
-/* line 82, ../src/smacss/_base.scss */
+/* line 87, ../src/smacss/_base.scss */
 .iframe-ratio-16-9 > iframe {
   height: 100%;
   width: 100%;
@@ -744,7 +748,6 @@ a:hover,
 a:focus,
 a:active {
   background-color: rgba(73, 44, 93, 0.1);
-  outline-width: 0;
 }
 
 /**
@@ -752,11 +755,11 @@ a:active {
  *
  * @section a-site-name
  */
-/* line 394, ../src/smacss/base/_typography.scss */
+/* line 393, ../src/smacss/base/_typography.scss */
 .site-name a {
   text-decoration: none;
 }
-/* line 400, ../src/smacss/base/_typography.scss */
+/* line 399, ../src/smacss/base/_typography.scss */
 .site-name a, .site-name a:visited {
   color: #f2f2f2;
   text-shadow: 0 1px 3px #1d1225;
@@ -772,7 +775,7 @@ a:active {
       }*/
 }
 @media screen and (min-width: 70em) {
-  /* line 400, ../src/smacss/base/_typography.scss */
+  /* line 399, ../src/smacss/base/_typography.scss */
   .site-name a, .site-name a:visited {
     color: #46502b;
     font-weight: normal;
@@ -785,17 +788,17 @@ a:active {
  *
  * @section other-type
  */
-/* line 430, ../src/smacss/base/_typography.scss */
+/* line 429, ../src/smacss/base/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 434, ../src/smacss/base/_typography.scss */
+/* line 433, ../src/smacss/base/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 438, ../src/smacss/base/_typography.scss */
+/* line 437, ../src/smacss/base/_typography.scss */
 figcaption,
 small,
 .details,
@@ -805,7 +808,7 @@ small,
   line-height: 1.34831460674157;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 438, ../src/smacss/base/_typography.scss */
+  /* line 437, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -814,7 +817,7 @@ small,
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 438, ../src/smacss/base/_typography.scss */
+  /* line 437, ../src/smacss/base/_typography.scss */
   figcaption,
   small,
   .details,
@@ -825,13 +828,13 @@ small,
   }
 }
 
-/* line 450, ../src/smacss/base/_typography.scss */
+/* line 449, ../src/smacss/base/_typography.scss */
 figcaption p {
   margin-top: 0.67446043165468em;
   margin-bottom: 1.34892086330935em;
 }
 
-/* line 457, ../src/smacss/base/_typography.scss */
+/* line 456, ../src/smacss/base/_typography.scss */
 [role="contentinfo"] small {
   color: #c2c2c2;
 }
@@ -840,47 +843,47 @@ figcaption p {
  * Small (inline) text can inherit the line-height of its parent. Switching
  * to inline-block forces small to use its own line-height.
  */
-/* line 466, ../src/smacss/base/_typography.scss */
+/* line 465, ../src/smacss/base/_typography.scss */
 .small {
   display: inline-block;
 }
 
-/* line 470, ../src/smacss/base/_typography.scss */
+/* line 469, ../src/smacss/base/_typography.scss */
 abbr {
   border-bottom: 1px dotted #b6b6b6;
   text-decoration: none;
   cursor: help;
 }
 
-/* line 479, ../src/smacss/base/_typography.scss */
+/* line 478, ../src/smacss/base/_typography.scss */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 483, ../src/smacss/base/_typography.scss */
+/* line 482, ../src/smacss/base/_typography.scss */
 q::before {
   content: open-quote;
 }
 
-/* line 487, ../src/smacss/base/_typography.scss */
+/* line 486, ../src/smacss/base/_typography.scss */
 q::after {
   content: close-quote;
 }
 
-/* line 491, ../src/smacss/base/_typography.scss */
+/* line 490, ../src/smacss/base/_typography.scss */
 code,
 pre {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 496, ../src/smacss/base/_typography.scss */
+/* line 495, ../src/smacss/base/_typography.scss */
 blockquote {
   padding-left: 1em;
   font-style: italic;
 }
 
 @supports (font-variant-position: super) {
-  /* line 504, ../src/smacss/base/_typography.scss */
+  /* line 503, ../src/smacss/base/_typography.scss */
   sup {
     font-size: inherit;
     font-variant-position: super;
@@ -888,14 +891,14 @@ blockquote {
   }
 }
 @supports (font-variant-position: sub) {
-  /* line 512, ../src/smacss/base/_typography.scss */
+  /* line 511, ../src/smacss/base/_typography.scss */
   sub {
     font-size: inherit;
     font-variant-position: sub;
     vertical-align: inherit;
   }
 }
-/* line 519, ../src/smacss/base/_typography.scss */
+/* line 518, ../src/smacss/base/_typography.scss */
 hr {
   border: 0;
   height: 5px;
@@ -1875,7 +1878,7 @@ a:link,
 .big-fact{
 	hyphens: none;
 }*/
-/* line 123, ../src/smacss/_base.scss */
+/* line 128, ../src/smacss/_base.scss */
 .looong-word {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -4502,19 +4505,15 @@ input:checked + .header-dropdown {
 /* line 84, ../src/smacss/modules/_footer.scss */
 .page-footer a:focus {
   background-color: rgba(242, 242, 242, 0.1);
-  outline-color: #f2f2f2;
-  outline-offset: 1px;
-  outline-style: dotted;
-  outline-width: 1px;
 }
 
-/* line 93, ../src/smacss/modules/_footer.scss */
+/* line 89, ../src/smacss/modules/_footer.scss */
 .page-footer__unit .lineup {
   -webkit-justify-content: center;
           justify-content: center;
 }
 @media screen and (min-width: 70em) {
-  /* line 93, ../src/smacss/modules/_footer.scss */
+  /* line 89, ../src/smacss/modules/_footer.scss */
   .page-footer__unit .lineup {
     -webkit-justify-content: flex-start;
             justify-content: flex-start;
@@ -4527,7 +4526,7 @@ input:checked + .header-dropdown {
 	// typography
 	text-align: center;
 }*/
-/* line 108, ../src/smacss/modules/_footer.scss */
+/* line 104, ../src/smacss/modules/_footer.scss */
 .footer-map img {
   max-height: calc(150 / 16 * 1rem);
 }
@@ -4535,14 +4534,14 @@ input:checked + .header-dropdown {
 /*.footer-map a{
 	border-width: 0;
 }*/
-/* line 116, ../src/smacss/modules/_footer.scss */
+/* line 112, ../src/smacss/modules/_footer.scss */
 .tagline-footer p {
   color: #616161;
   font-weight: bold;
   text-align: center;
 }
 @media screen and (min-width: 20em) {
-  /* line 116, ../src/smacss/modules/_footer.scss */
+  /* line 112, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     margin: calc(30 / 16 * 1rem) 0;
     font-size: 1.125rem;
@@ -4552,7 +4551,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 116, ../src/smacss/modules/_footer.scss */
+  /* line 112, ../src/smacss/modules/_footer.scss */
   .tagline-footer p {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
@@ -5336,13 +5335,11 @@ input:checked + .header-dropdown {
 .transporter > li {
   margin: calc(15 / 16 * 1rem) 0;
   text-align: center;
-  vertical-align: top;
 }
 @media screen and (min-width: 20em) {
   /* line 53, ../src/smacss/modules/_icons.scss */
   .transporter > li {
     width: 33.3333333333%;
-    float: left;
     position: relative;
   }
 }
@@ -5354,82 +5351,82 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 76, ../src/smacss/modules/_icons.scss */
+/* line 74, ../src/smacss/modules/_icons.scss */
 .transporter > li:nth-child(1),
 .transporter > li:nth-child(3) {
   top: calc(45 / 16 * 1rem);
   z-index: 1;
 }
 
-/* line 82, ../src/smacss/modules/_icons.scss */
+/* line 80, ../src/smacss/modules/_icons.scss */
 .transporter > li:nth-child(4) {
   -webkit-order: 1;
           order: 1;
 }
 @media screen and (min-width: 20em) {
-  /* line 82, ../src/smacss/modules/_icons.scss */
+  /* line 80, ../src/smacss/modules/_icons.scss */
   .transporter > li:nth-child(4) {
     -webkit-order: initial;
             order: initial;
   }
 }
 
-/* line 90, ../src/smacss/modules/_icons.scss */
+/* line 88, ../src/smacss/modules/_icons.scss */
 .transporter > li:nth-child(5),
 .transporter > li:nth-child(7) {
   top: calc(-45 / 16 * 1rem);
 }
 
-/* line 95, ../src/smacss/modules/_icons.scss */
+/* line 93, ../src/smacss/modules/_icons.scss */
 .transporter-call {
   -webkit-flex-basis: 100%;
           flex-basis: 100%;
 }
 @media screen and (min-width: 43em) {
-  /* line 95, ../src/smacss/modules/_icons.scss */
+  /* line 93, ../src/smacss/modules/_icons.scss */
   .transporter-call {
     -webkit-flex-basis: inherit;
             flex-basis: inherit;
   }
 }
 
-/* line 103, ../src/smacss/modules/_icons.scss */
+/* line 101, ../src/smacss/modules/_icons.scss */
 .transporter a {
   display: block;
 }
-/* line 106, ../src/smacss/modules/_icons.scss */
+/* line 104, ../src/smacss/modules/_icons.scss */
 .transporter a, .transporter a:visited {
   color: #64933a;
   text-decoration: none;
 }
-/* line 115, ../src/smacss/modules/_icons.scss */
+/* line 113, ../src/smacss/modules/_icons.scss */
 .transporter a:hover {
   color: #0086ee;
 }
-/* line 118, ../src/smacss/modules/_icons.scss */
+/* line 116, ../src/smacss/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   box-shadow: 0 0 0.2em rgba(250, 237, 183, 0.5) inset;
 }
 
-/* line 126, ../src/smacss/modules/_icons.scss */
+/* line 124, ../src/smacss/modules/_icons.scss */
 .transporter-call a {
   margin: 0 auto;
   width: 33.3333333333%;
 }
 @media screen and (min-width: 43em) {
-  /* line 126, ../src/smacss/modules/_icons.scss */
+  /* line 124, ../src/smacss/modules/_icons.scss */
   .transporter-call a {
     width: 100%;
   }
 }
 
-/* line 135, ../src/smacss/modules/_icons.scss */
+/* line 133, ../src/smacss/modules/_icons.scss */
 .transporter a:hover .transporter-icon {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-/* line 139, ../src/smacss/modules/_icons.scss */
+/* line 137, ../src/smacss/modules/_icons.scss */
 .transporter-icon {
   display: inline-block;
   -webkit-transform: scale(0.8);
@@ -5440,26 +5437,26 @@ input:checked + .header-dropdown {
   transition: all 0.2s;
 }
 @media screen and (min-width: 22em) {
-  /* line 139, ../src/smacss/modules/_icons.scss */
+  /* line 137, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     margin: 0 auto;
     max-width: 80%;
   }
 }
 @media screen and (min-width: 32em) {
-  /* line 139, ../src/smacss/modules/_icons.scss */
+  /* line 137, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     max-width: 100%;
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 139, ../src/smacss/modules/_icons.scss */
+  /* line 137, ../src/smacss/modules/_icons.scss */
   .transporter-icon {
     max-width: 90%;
   }
 }
 
-/* line 165, ../src/smacss/modules/_icons.scss */
+/* line 163, ../src/smacss/modules/_icons.scss */
 .transporter-icon img {
   width: 10ch;
   max-width: 100%;
@@ -5469,16 +5466,16 @@ input:checked + .header-dropdown {
   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
-/* line 175, ../src/smacss/modules/_icons.scss */
+/* line 173, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon {
   background-color: #64933a;
 }
-/* line 178, ../src/smacss/modules/_icons.scss */
+/* line 176, ../src/smacss/modules/_icons.scss */
 .transporter-call .transporter-icon:hover {
   background-color: #0086ee;
 }
 
-/* line 183, ../src/smacss/modules/_icons.scss */
+/* line 181, ../src/smacss/modules/_icons.scss */
 .transporter-call .icon {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
@@ -5496,7 +5493,7 @@ input:checked + .header-dropdown {
  *
  * See: https://www.drupal.org/project/ajax_loader
  */
-/* line 199, ../src/smacss/modules/_icons.scss */
+/* line 197, ../src/smacss/modules/_icons.scss */
 div.ajax-progress {
   height: 100%;
   width: 100%;
@@ -5520,7 +5517,7 @@ div.ajax-progress {
             transform: rotate(360deg);
   }
 }
-/* line 218, ../src/smacss/modules/_icons.scss */
+/* line 216, ../src/smacss/modules/_icons.scss */
 .ajax-progress .throbber {
   height: 32px;
   margin-top: -16px;
