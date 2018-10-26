@@ -38,6 +38,11 @@ body{
 	background-color: $tint;
 }
 
+:focus:not(:focus-visible),
+:focus:not(:-moz-focusring) {
+	outline: none;  // Turn off outline for mouse users, but preserve it for keyboard users
+}
+
 img,
 svg{
 	border-width: 0;
@@ -46,9 +51,9 @@ svg{
 	max-width: 100%;
 }
 
-a:focus img{
+/*a:focus img{
 	outline: 1px dotted $blueberry-susan;
-}
+}*/
 
 audio{
 	max-width: 100%;
