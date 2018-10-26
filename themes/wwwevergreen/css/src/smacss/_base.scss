@@ -39,7 +39,7 @@ body{
 }
 
 :focus:not(:focus-visible),
-:focus:not(:-moz-focusring) {
+:focus:not(:-moz-focusring){
 	outline: none;  // Turn off outline for mouse users, but preserve it for keyboard users
 }
 
