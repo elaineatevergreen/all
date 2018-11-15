@@ -43,11 +43,11 @@
 	</div>
 </div>
 <div class="page-header">
-	<div class="logo h-card">
-		<a class="u-url" href="/">
+	<div class="logo h-card" itemscope itemtype="https://schema.org/School">
+		<a class="u-url" href="https://evergreen.edu" itemprop="url">
 			<picture>
 				<source media="(min-width: 125em)" srcset="<?php echo($imagepath) ?>evergreen-logo-primary.svg" type="image/svg+xml"/>
-				<img alt="The Evergreen State College&#8212;Olympia, Washington" class="p-name p-org u-logo" src="<?php echo($imagepath) ?>logo.png" srcset="<?php echo($imagepath) ?>evergreen-logo-secondary.svg"/>
+				<img alt="The Evergreen State College&#8212;Olympia, Washington" class="p-name p-org u-logo" itemprop="logo" src="<?php echo($imagepath) ?>logo.png" srcset="<?php echo($imagepath) ?>evergreen-logo-secondary.svg"/>
 			</picture>
 		</a>
 	</div>

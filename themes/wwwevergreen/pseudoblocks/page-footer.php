@@ -14,32 +14,32 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li itemscope itemtype="https://schema.org/School">
 							<p><b>Stay connected</b></p>
 							<ul class="element-list lineup">
 								<li>
 									<a href="https://facebook.com/TheEvergreenStateCollege" title="Facebook">
-										<img alt="Facebook" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/facebook.svg"/>
+										<img alt="Facebook" class="lineup-icon" itemprop="sameAs" src="<?php echo($imagepath) ?>icons/external/facebook.svg"/>
 									</a>
 								</li>
 								<li>
 									<a href="https://twitter.com/EvergreenStCol" title="Twitter">
-										<img alt="Twitter" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/twitter.svg"/>
+										<img alt="Twitter" class="lineup-icon" itemprop="sameAs" src="<?php echo($imagepath) ?>icons/external/twitter.svg"/>
 									</a>
 								</li>
 								<li>
 									<a href="https://youtube.com/user/evergreen" title="YouTube">
-										<img alt="YouTube" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/youtube.svg"/>
+										<img alt="YouTube" class="lineup-icon" itemprop="sameAs" src="<?php echo($imagepath) ?>icons/external/youtube.svg"/>
 									</a>
 								</li>
 								<li>
 									<a href="https://instagram.com/EvergreenStCol" title="Instagram">
-										<img alt="Instagram" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/instagram.png"/>
+										<img alt="Instagram" class="lineup-icon" itemprop="sameAs" src="<?php echo($imagepath) ?>icons/external/instagram.png"/>
 									</a>
 								</li>
 								<li>
 									<a href="https://www.linkedin.com/edu/school?id=19655" title="LinkedIn">
-										<img alt="LinkedIn" class="lineup-icon" src="<?php echo($imagepath) ?>icons/external/linkedin.svg"/>
+										<img alt="LinkedIn" class="lineup-icon" itemprop="sameAs" src="<?php echo($imagepath) ?>icons/external/linkedin.svg"/>
 									</a>
 								</li>
 							</ul>
