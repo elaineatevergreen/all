@@ -1076,19 +1076,21 @@ table a {
 .padded-table td,
 .accordion-table th,
 .accordion-table td,
+.striped-table th,
 .striped-table td {
   padding-left: 1.1111111111em;
 }
-/* line 165, ../src/smacss/base/_tables.scss */
+/* line 166, ../src/smacss/base/_tables.scss */
 .padded-table th:last-child,
 .padded-table td:last-child,
 .accordion-table th:last-child,
 .accordion-table td:last-child,
+.striped-table th:last-child,
 .striped-table td:last-child {
   padding-right: 1.1111111111em;
 }
 
-/* line 170, ../src/smacss/base/_tables.scss */
+/* line 171, ../src/smacss/base/_tables.scss */
 .striped-table > tbody > tr:nth-child(odd) {
   background-color: #e1dee3;
 }
@@ -1098,22 +1100,22 @@ table a {
  *
  * JavaScript DataTables plugin.
  */
-/* line 180, ../src/smacss/base/_tables.scss */
+/* line 181, ../src/smacss/base/_tables.scss */
 .dataTable th:hover {
   cursor: pointer;
 }
 
-/* line 185, ../src/smacss/base/_tables.scss */
+/* line 186, ../src/smacss/base/_tables.scss */
 .sorting_asc::before {
   content: "↓\00A0";
 }
 
-/* line 189, ../src/smacss/base/_tables.scss */
+/* line 190, ../src/smacss/base/_tables.scss */
 .sorting_desc::before {
   content: "↑\00A0";
 }
 
-/* line 193, ../src/smacss/base/_tables.scss */
+/* line 194, ../src/smacss/base/_tables.scss */
 .dataTables_filter label {
   font-weight: bold;
 }
@@ -4198,7 +4200,9 @@ input:checked + .header-dropdown {
 }
 
 /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
-#tertiary-nav, #views-exposed-form-catalog-page, #views-exposed-form-catalog-grad-programs {
+#tertiary-nav,
+#views-exposed-form-catalog-page,
+#views-exposed-form-catalog-grad-programs {
   margin: 0 auto;
   width: 100%;
   max-width: none;
@@ -4209,14 +4213,18 @@ input:checked + .header-dropdown {
 }
 @media screen and (min-width: 32em) {
   /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav, #views-exposed-form-catalog-page, #views-exposed-form-catalog-grad-programs {
+  #tertiary-nav,
+  #views-exposed-form-catalog-page,
+  #views-exposed-form-catalog-grad-programs {
     margin: 0 auto calc(15 / 16 * 1rem);
     max-width: 66.6666666666%;
   }
 }
 @media screen and (min-width: 43em) {
   /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav, #views-exposed-form-catalog-page, #views-exposed-form-catalog-grad-programs {
+  #tertiary-nav,
+  #views-exposed-form-catalog-page,
+  #views-exposed-form-catalog-grad-programs {
     padding-top: calc(45 / 16 * 1rem);
     width: calc(100% + 1em);
     max-width: none;
@@ -4224,20 +4232,24 @@ input:checked + .header-dropdown {
     border-radius: 0;
   }
   /* line 65, ../src/smacss/modules/_tertiary-nav.scss */
-  .index-wrapper #tertiary-nav,
-  .index-wrapper #views-exposed-form-catalog-page,
-  .index-wrapper #views-exposed-form-catalog-grad-programs {
+  .index-wrapper #tertiary-nav, .index-wrapper
+  #views-exposed-form-catalog-page, .index-wrapper
+  #views-exposed-form-catalog-grad-programs {
     width: 20.01953125%;
   }
 }
 @media screen and (min-width: 70em) {
   /* line 35, ../src/smacss/modules/_tertiary-nav.scss */
-  #tertiary-nav, #views-exposed-form-catalog-page, #views-exposed-form-catalog-grad-programs {
+  #tertiary-nav,
+  #views-exposed-form-catalog-page,
+  #views-exposed-form-catalog-grad-programs {
     font-size: 1.125rem;
     line-height: 1.38888888888889;
   }
   /* line 75, ../src/smacss/modules/_tertiary-nav.scss */
-  .index-wrapper #tertiary-nav, .index-wrapper #views-exposed-form-catalog-page, .index-wrapper #views-exposed-form-catalog-grad-programs {
+  .index-wrapper #tertiary-nav, .index-wrapper
+  #views-exposed-form-catalog-page, .index-wrapper
+  #views-exposed-form-catalog-grad-programs {
     margin-top: 1rem;
   }
 }
@@ -6557,7 +6569,10 @@ p.alert,
 
 @media screen and (min-width: 32em) {
   /* line 62, ../src/smacss/modules/_images.scss */
-  .left, .image, .image img, .image-alt {
+  .left,
+  .image,
+  .image img,
+  .image-alt {
     margin: 0 0 0.53571428571429em 2ch;
     max-width: calc(66.6666666667% - 1ch);
     clear: right;
@@ -6566,20 +6581,26 @@ p.alert,
 }
 @media screen and (min-width: 43em) {
   /* line 62, ../src/smacss/modules/_images.scss */
-  .left, .image, .image img, .image-alt {
+  .left,
+  .image,
+  .image img,
+  .image-alt {
     margin-bottom: 0.83333333333333em;
   }
   /* line 79, ../src/smacss/modules/_images.scss */
-  .main-content .left,
-  .main-content .image,
-  .main-content .image img,
-  .main-content .image-alt {
+  .main-content .left, .main-content
+  .image, .main-content
+  .image img, .main-content
+  .image-alt {
     margin-right: -3ch;
   }
 }
 @media screen and (min-width: 125em) {
   /* line 62, ../src/smacss/modules/_images.scss */
-  .left, .image, .image img, .image-alt {
+  .left,
+  .image,
+  .image img,
+  .image-alt {
     margin-bottom: 1.56014353320505em;
   }
 }
