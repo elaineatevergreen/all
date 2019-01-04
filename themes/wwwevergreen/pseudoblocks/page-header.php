@@ -4,11 +4,11 @@
 		<ul class="element-list header-dropdown internal-users">
 			<li>
 				<a href="https://my.evergreen.edu">
-					<img alt="Profile" src="<?php echo($imagepath) ?>icons/header/user.svg"/> my.evergreen.edu
+					<img src="<?php echo($imagepath) ?>icons/header/user.svg"/> My Evergreen
 				</a>
 			</li>
 			<li>
-				<a href="/webmail"><img alt="Email" src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail</a>
+				<a href="/webmail"><img src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail</a>
 			</li>
 		</ul>
 	</div>
@@ -24,17 +24,17 @@
 				<ul class="element-list search-tools">
 					<li class="internal-users-alt">
 						<a href="https://my.evergreen.edu">
-							<img alt="Profile" src="<?php echo($imagepath) ?>icons/header/user.svg"/> my.evergreen.edu
+							<img src="<?php echo($imagepath) ?>icons/header/user.svg"/> My Evergreen
 						</a>
 					</li>
 					<li class="internal-users-alt">
 						<a href="/webmail">
-							<img alt="Email" src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail
+							<img src="<?php echo($imagepath) ?>icons/header/webmail.svg"/> Webmail
 						</a>
 					</li>
 					<li>
 						<a href="/directory">
-							<img alt="Address Book" src="<?php echo($imagepath) ?>icons/header/address-book.svg"/> Directories
+							<img src="<?php echo($imagepath) ?>icons/header/address-book.svg"/> Directories
 						</a>
 					</li>
 				</ul>
