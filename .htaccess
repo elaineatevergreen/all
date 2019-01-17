@@ -3,7 +3,7 @@
 # note this file should be updated when manually updating drupal on live
 # like a reminder or something?!
 #
-# oh look i have to do it again because replication
+# this line intentionally useless
 
 Redirect 301 /wv3 http://www2.evergreen.edu/wv3
 Redirect 301 /webmail https://webmail.evergreen.edu/owa
