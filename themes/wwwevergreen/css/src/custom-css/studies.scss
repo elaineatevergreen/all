@@ -8,32 +8,20 @@
  */
 @import "../tools";
 
-.studies-list{
+.studies-list--item{  // Drupal breaks BEM by replacing underscores with hyphens here
+	@include margin-default;
+}
 
-	li{
-		@include margin-default;
-	}
+.studies-list__field {
+	// box model
+	border-bottom-width: 0;
+	// typography
+	letter-spacing: 0.2ch;
+	text-transform: uppercase;
+}
 
-	a{
-		// box model
-		border-bottom-width: 0;
-		// typography
-		letter-spacing: 0.2ch;
-		text-transform: uppercase;
-	}
-
-	ul{
-		// box model
-		border-left: 1.5px dashed mix($tint, $blueberry-susan, 60%);
-		margin-left: 0.5ch;
-		padding-left: calc(1.5ch - 1.5px);
-		// typography
-		list-style-type: none;
-
-		a{
-			font-weight: normal;
-		}
-	}
+.studies-list__see-also {
+	font-style: italic;
 }
 
 .main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.

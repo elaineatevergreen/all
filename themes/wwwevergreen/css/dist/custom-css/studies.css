@@ -4,4 +4,4 @@
  * Styles for the fields of study pages.
  *
  * These styles were originally developed by Justin McDowell.
- */.studies-list li{margin:0.535714285714286em 0 1.071428571428571em}.studies-list a{border-bottom-width:0;letter-spacing:0.2ch;text-transform:uppercase}.studies-list ul{border-left:1.5px dashed #aea3b6;margin-left:0.5ch;padding-left:calc(1.5ch - 1.5px);list-style-type:none}.studies-list ul a{font-weight:normal}.main-content>ul.studies-list:last-child>li:last-child::after{content:""}
+ */.studies-list--item{margin:0.535714285714286em 0 1.071428571428571em}.studies-list__field{border-bottom-width:0;letter-spacing:0.2ch;text-transform:uppercase}.studies-list__see-also{font-style:italic}.main-content>ul.studies-list:last-child>li:last-child::after{content:""}
