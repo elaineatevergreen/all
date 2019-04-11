@@ -24,6 +24,33 @@
 	font-style: italic;
 }
 
+.program-grid__table {
+	border-collapse: separate;
+	border-spacing: 1ch 1em;
+}
+
+.program-grid__heading {
+	padding-right: 1ch;
+	padding-left: 1ch;
+}
+
+.program-grid__item {
+	// box model
+	border: 1px solid mix($tint, $shade, 80%);
+	padding-right: 1ch;
+	padding-left: 1ch;
+	// decoration
+	background-color: $tint;
+}
+
+tr:first-child > .program-grid__item {
+	border-top-color: mix($tint, $shade, 80%);
+}
+
+.program-grid__item:empty {
+	visibility: hidden;
+}
+
 .main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
 	content: "";
 }
