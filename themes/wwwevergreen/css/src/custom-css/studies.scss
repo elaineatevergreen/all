@@ -54,6 +54,12 @@
 .program-grid__item--continued {
 	// box model
 	border-left-style: dashed;
+	background-image: repeating-linear-gradient(125deg,
+		transparentize($tint, 1) 0,
+		transparentize($tint, 1) 24px,
+		mix($tint, $blueberry-susan, 95%) 25px,
+		mix($tint, $blueberry-susan, 92%) 50px
+	);
 }
 
 .program-grid__item--continues {
