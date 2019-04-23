@@ -8,32 +8,71 @@
  */
 @import "../tools";
 
-.studies-list{
+.studies-list--item{  // Drupal breaks BEM by replacing underscores with hyphens here
+	@include margin-default;
+}
 
-	li{
-		@include margin-default;
+.studies-list__field {
+	// box model
+	border-bottom-width: 0;
+	// typography
+	letter-spacing: 0.2ch;
+	text-transform: uppercase;
+}
+
+.studies-list__see-also {
+	font-style: italic;
+}
+
+.program-grid__table {
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 95%);
+	border-collapse: separate;
+	border-spacing: 1ch 1em;
+	box-shadow: 0 0 0.66667ch mix($tint, $blueberry-susan, 80%) inset;
+}
+
+.program-grid__heading {
+	padding-right: 1ch;
+	padding-left: 1ch;
+	width: 33.33333%;
+}
+
+.program-grid__item {
+	// box model
+	border: 1px solid mix($tint, $shade, 80%);
+	padding-right: 1ch;
+	padding-left: 1ch;
+	// decoration
+	background-color: $tint;
+	
+	&:last-child {
+		padding-right: 1ch;
 	}
+}
 
-	a{
-		// box model
-		border-bottom-width: 0;
-		// typography
-		letter-spacing: 0.2ch;
-		text-transform: uppercase;
-	}
+.program-grid__item--continued {
+	// box model
+	border-left-style: dashed;
+	background-image: repeating-linear-gradient(125deg,
+		transparentize($tint, 1) 0,
+		transparentize($tint, 1) 24px,
+		mix($tint, $blueberry-susan, 95%) 25px,
+		mix($tint, $blueberry-susan, 92%) 50px
+	);
+}
 
-	ul{
-		// box model
-		border-left: 1.5px dashed mix($tint, $blueberry-susan, 60%);
-		margin-left: 0.5ch;
-		padding-left: calc(1.5ch - 1.5px);
-		// typography
-		list-style-type: none;
+.program-grid__item--continues {
+	// box model
+	border-right-style: dashed;
+}
 
-		a{
-			font-weight: normal;
-		}
-	}
+tr:first-child > .program-grid__item {
+	border-top-color: mix($tint, $shade, 80%);
+}
+
+.program-grid__item:empty {
+	visibility: hidden;
 }
 
 .main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
