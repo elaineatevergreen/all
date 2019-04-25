@@ -24,6 +24,21 @@
 	font-style: italic;
 }
 
+.studies-list__path {
+	// layout
+	align-items: center;
+	display: inline-flex;
+	// miscellaneous
+	transform: translateY(0.15em);
+}
+
+.studies-list__path-icon {
+	margin-top: -0.5em;
+	margin-right: 0.5ch;
+	height: 1.5em;
+	width: 1.5em;
+}
+
 .program-grid__table {
 	// decoration
 	background-color: mix($tint, $blueberry-susan, 95%);
