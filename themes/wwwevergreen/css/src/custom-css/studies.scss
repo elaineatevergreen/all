@@ -58,6 +58,17 @@
 	width: 33.33333%;
 }
 
+.program-grid__thgroup {
+	display: flex;
+	align-items: center;
+}
+
+.program-grid__thgroup-icon {
+	height: 1em;
+	margin-right: 0.5ch;
+	width: 1em;
+}
+
 .program-grid__item {
 	// box model
 	border: 1px solid mix($tint, $shade, 80%);
