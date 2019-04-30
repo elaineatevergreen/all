@@ -106,6 +106,22 @@ tr:first-child > .program-grid__item {
 	visibility: hidden;
 }
 
+.program-grid__item-contents {
+	align-items: center;
+	display: flex;
+}
+	
+[colspan] > .program-grid__item-contents::after {
+	// box-model
+	border-bottom: 2px dotted mix($tint, $shade, 75%);
+	height: 0;
+	margin-left: 1ch;
+	// layout
+	flex-grow: 1;
+	// miscellaneous
+	content: "";
+}
+
 .main-content > ul.studies-list:last-child > li:last-child::after{  // Let’s hide the endnote. It’s more of a distraction here.
 	content: "";
 }
