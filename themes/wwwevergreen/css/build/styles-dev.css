@@ -6,41 +6,25 @@
   width: device-width;
 }
 /*!*                                                       
- *                                                                   (
- *          )   )                                                   )\ )   )        )         (       (  (                  
- *    ` )  /(( /(   (    (    )     (  (   (  ( (     (   (        (()/(( /(   ) ( /(  (      )\      )\ )\  (  (  (    (   
- *     ( )(_))\()) ))\   )\  /((   ))\ )(  )\))()(   ))\ ))\ (      /(_))\()| /( )\())))\   (((_)  ( ((_|(_)))\ )\))(  ))\  
- *    (_(_()|(_)\ /((_) ((_)(_))\ /((_|()\((_))(()\ /((_)((_))\ )  (_))(_))/)(_)|_))//((_)  )\___  )\ _  _ /((_|(_))\ /((_) 
- *    |_   _| |(_|_))   | __|)((_|_))  ((_)(()(_|(_|_))(_)) _(_/(  / __| |_((_)_| |_(_))   ((/ __|((_) || (_))  (()(_|_))   
- *      | | | ' \/ -_)  | _|\ V // -_)| '_/ _` | '_/ -_) -_) ' \)) \__ \  _/ _` |  _/ -_)   | (__/ _ \ || / -_)/ _` |/ -_)  
- *      |_| |_||_\___|  |___|\_/ \___||_| \__, |_| \___\___|_||_|  |___/\__\__,_|\__\___|    \___\___/_||_\___|\__, |\___|  
- *                                        |___/                                                                |___/        
+ *     _________________________
+ *   -`__,.---------------.,_____`\
+ *  / /                          \ | The
+ * | |   .’^`.            ^      | | Evergreen
+ * | |  /(   ))          / \     | | State
+ * | :  \ `-  /         /  \     | | College
+ * ||    `--’`          /  `>    : |
+ * ||          _/^\_.^\`>  `\     || Your
+ * ||       __/,~ .~., \>  `\     || Way
+ * ||    __/ ,/ / ;   `>    `>    || To
+ * ||  _/ _,/ ,//))   `_>  _`-,_  || The
+ * || /_/’   (/ //    <-    `\. \_|| World
+ * ||     _    (/     ,/`  <-,`-._ |
+ * |`-.-`` `>        <.,_  -<,_   ||
+ * |       (         _,-`` <-./   /|
+ * |        `\-_____`-,_/||\,_>  ; /
+ *  \               ``--_||___,./ /
+ *   `---_______________,..----```
  *
- ***************************************************************************************************************************
- *
- *      _______ ___  ___   _______   _______  _______   __    _______ _____  ___   ______   _______  
- *     /"     "|"  \/"  | |   __ "\ /"     "|/"      \ |" \  /"     "(\"   \|"  \ /" _  "\ /"     "| 
- *    (: ______)\   \  /  (. |__) :(: ______|:        |||  |(: ______|.\   \    (: ( \___(: ______) 
- *     \/    |   \  \/   |:  ____/ \/    | |_____/   )|:  | \/    | |: \.   \  |\/ \     \/    |   
- *     // ___)_  /\.  \   (|  /     // ___)_ //      / |.  | // ___)_|.  \    \. |//  \ _  // ___)_  
- *    (:      "|/  \   \ /|__/ \   (:      "|:  __   \ /\  |(:      "|    \    \ (:   _) \(:      "| 
- *     \_______|___/\___(_______)   \_______|__|  \___(__\_|_\_______)\___|\____\)\_______)\_______) 
- *
- *     ___      ___    ______    _______   _______           __ ___________                          
- *    |"  \    /"  |  /    " \  /"      \ /"     "|         /""("     _   ")                         
- *     \   \  //   | // ____  \|:        (: ______)        /    )__/  \__/                          
- *     /\  \/.    |/  /    ) :|_____/   )\/    |         /' /\  \ \_ /                             
- *    |: \.        (: (____/ // //      / // ___)_       //  __'  \|.  |                             
- *    |.  \    /:  |\        / |:  __   \(:      "|     /   /  \  \:  |                             
- *    |___|\__/|___| \"_____/  |__|  \___)\_______)    (___/    \___\__|                             
-                                                                                               
- *      _______ ___      ___ _______  _______   _______   _______   _______  _______ _____  ___      
- *     /"     "|"  \    /"  /"     "|/"      \ /" _   "| /"      \ /"     "|/"     "(\"   \|"  \     
- *    (: ______)\   \  //  (: ______|:        (: ( \___)|:        (: ______(: ______|.\   \    |    
- *     \/    |   \  \/. ./ \/    | |_____/   )\/ \     |_____/   )\/    |  \/    | |: \.   \  |    
- *     // ___)_   \.    //  // ___)_ //      / //  \ ___ //      / // ___)_ // ___)_|.  \    \. |    
- *    (:      "|   \   /  (:      "|:  __   \(:   _(  _|:  __   \(:      "(:      "|    \    \ |    
- *     \_______)    \__/    \_______|__|  \___)\_______)|__|  \___)\_______)\_______)\___|\____\)    
  */
 /*!*
  * View the source and fork these styles on Gitlab:
@@ -3635,8 +3619,7 @@ input:checked + .header-dropdown {
  * .main-background, and question whether :first-child styles need to be
  * declared so vaguely. -jkm
  */
-/* line 55, ../src/smacss/_modules.scss */
-.main-background,
+/* line 56, ../src/smacss/_modules.scss */
 .main-background2 {
   width: 100%;
   max-height: 100vh;
@@ -3646,18 +3629,14 @@ input:checked + .header-dropdown {
   z-index: -1;
 }
 
-/* line 67, ../src/smacss/_modules.scss */
-.main-background .main-background-img,
-.main-background > :first-child,
+/* line 69, ../src/smacss/_modules.scss */
 .main-background2 .main-background-img,
 .main-background2 > :first-child {
   width: 100%;
   display: block;
 }
 @media screen and (min-width: 43em) {
-  /* line 67, ../src/smacss/_modules.scss */
-  .main-background .main-background-img,
-  .main-background > :first-child,
+  /* line 69, ../src/smacss/_modules.scss */
   .main-background2 .main-background-img,
   .main-background2 > :first-child {
     width: 100%;
@@ -3665,9 +3644,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 70em) {
-  /* line 67, ../src/smacss/_modules.scss */
-  .main-background .main-background-img,
-  .main-background > :first-child,
+  /* line 69, ../src/smacss/_modules.scss */
   .main-background2 .main-background-img,
   .main-background2 > :first-child {
     max-width: calc(77em * 0.57142857142857143);
@@ -3682,17 +3659,23 @@ input:checked + .header-dropdown {
     z-index: auto;
   }
 }
+@supports (position: -webkit-sticky) {
+  /* line 93, ../src/smacss/_modules.scss */
+  .main-background2 {
+    z-index: 1;
+  }
+}
 /**
  * This, in particular, probably can be simplified down to a single
  * declaration.
  */
-/* line 96, ../src/smacss/_modules.scss */
+/* line 102, ../src/smacss/_modules.scss */
 .main-background2 > .main-background-img,
 .main-background2 > :first-child {
   position: absolute;
 }
 @media screen and (min-width: 43em) {
-  /* line 96, ../src/smacss/_modules.scss */
+  /* line 102, ../src/smacss/_modules.scss */
   .main-background2 > .main-background-img,
   .main-background2 > :first-child {
     width: auto;
@@ -3700,7 +3683,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 108, ../src/smacss/_modules.scss */
+/* line 114, ../src/smacss/_modules.scss */
 .main-background2 > div > :first-child {
   max-height: 100vh;
   display: block;
@@ -3714,7 +3697,7 @@ input:checked + .header-dropdown {
 	//will-change: filter;
 }
 */
-/* line 124, ../src/smacss/_modules.scss */
+/* line 130, ../src/smacss/_modules.scss */
 .main-background2-enhanced #main-background-img {
   -webkit-filter: none;
           filter: none;
@@ -4131,7 +4114,7 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 133, ../src/smacss/_modules.scss */
+/* line 139, ../src/smacss/_modules.scss */
 .location-transporter {
   margin: calc(30 / 18 * 1em) 1ch;
   font-size: 1.125rem;
@@ -4140,7 +4123,7 @@ input:checked + .header-dropdown {
   text-align: center;
 }
 @media screen and (min-width: 32em) {
-  /* line 133, ../src/smacss/_modules.scss */
+  /* line 139, ../src/smacss/_modules.scss */
   .location-transporter {
     margin: calc(30 / 19.229 * 1em) 1ch;
     font-size: 1.202rem;
@@ -4148,7 +4131,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 133, ../src/smacss/_modules.scss */
+  /* line 139, ../src/smacss/_modules.scss */
   .location-transporter {
     margin: calc(30 / 29.124 * 1em) 1ch;
     font-size: 1.82rem;
@@ -4575,17 +4558,17 @@ input:checked + .header-dropdown {
  *
  * Special, non-base element typography.
  */
-/* line 172, ../src/smacss/_modules.scss */
+/* line 178, ../src/smacss/_modules.scss */
 .lead {
   margin-bottom: 0;
 }
 
-/* line 176, ../src/smacss/_modules.scss */
+/* line 182, ../src/smacss/_modules.scss */
 .follow {
   margin-top: 0;
 }
 
-/* line 180, ../src/smacss/_modules.scss */
+/* line 186, ../src/smacss/_modules.scss */
 .intro,
 .field-intro {
   margin: 1.17010764990379em 0;
@@ -4594,7 +4577,7 @@ input:checked + .header-dropdown {
   line-height: 1.36512559155442;
 }
 @media screen and (min-width: 43em) {
-  /* line 180, ../src/smacss/_modules.scss */
+  /* line 186, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 29.124 * 1em) 0 calc(60 / 29.124 * 1em);
@@ -4603,7 +4586,7 @@ input:checked + .header-dropdown {
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 180, ../src/smacss/_modules.scss */
+  /* line 186, ../src/smacss/_modules.scss */
   .intro,
   .field-intro {
     margin: calc(30 / 31.112 * 1em) 0 calc(60 / 31.112 * 1em);
@@ -4612,14 +4595,14 @@ input:checked + .header-dropdown {
   }
 }
 
-/* line 205, ../src/smacss/_modules.scss */
+/* line 211, ../src/smacss/_modules.scss */
 .intro-alt {
   color: #303030;
   font-weight: bold;
   text-shadow: 2px 2px 1px #f2f2f2;
 }
 
-/* line 211, ../src/smacss/_modules.scss */
+/* line 217, ../src/smacss/_modules.scss */
 .byline {
   color: #283b17;
   font-family: Verdana, proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
@@ -4629,40 +4612,40 @@ input:checked + .header-dropdown {
   text-transform: uppercase;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 217, ../src/smacss/_modules.scss */
   .byline {
     font-family: proxima-nova, "Proxima Nova", Avenir, "Avenir Next", Helvetica, Arial, sans-serif;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 211, ../src/smacss/_modules.scss */
+  /* line 217, ../src/smacss/_modules.scss */
   .byline {
     font-size: 0.875rem;
     line-height: 1.33928571428571;
   }
 }
 
-/* line 222, ../src/smacss/_modules.scss */
+/* line 228, ../src/smacss/_modules.scss */
 .big-fact {
   font-size: 1.202rem;
   line-height: 1.36512559155442;
 }
 @media screen and (min-width: 70em) {
-  /* line 222, ../src/smacss/_modules.scss */
+  /* line 228, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.82rem;
     line-height: 1.03007828594973;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 222, ../src/smacss/_modules.scss */
+  /* line 228, ../src/smacss/_modules.scss */
   .big-fact {
     font-size: 1.945rem;
     line-height: 1.44638724607868;
   }
 }
 
-/* line 236, ../src/smacss/_modules.scss */
+/* line 242, ../src/smacss/_modules.scss */
 .fast-fact,
 .fast-fact-alt {
   border: 0.25ch solid #64933a;
@@ -4672,7 +4655,7 @@ input:checked + .header-dropdown {
   font-family: proxima-nova-condensed, "Proxima Nova Condensed", "Avenir Condensed", "Avenir Next Condensed", "Helvetica Condensed", "Arial Narrow", Helvetica, Arial, sans-serif;
 }
 @media screen and (min-width: 43em) {
-  /* line 236, ../src/smacss/_modules.scss */
+  /* line 242, ../src/smacss/_modules.scss */
   .fast-fact,
   .fast-fact-alt {
     padding: 0;
@@ -4680,7 +4663,7 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 252, ../src/smacss/_modules.scss */
+  /* line 258, ../src/smacss/_modules.scss */
   .fast-fact {
     border-width: 0 0.5ch 0 0;
     padding-right: 2ch;
@@ -4688,14 +4671,14 @@ input:checked + .header-dropdown {
 }
 
 @media screen and (min-width: 43em) {
-  /* line 260, ../src/smacss/_modules.scss */
+  /* line 266, ../src/smacss/_modules.scss */
   .fast-fact-alt {
     border-width: 0 0 0 0.5ch;
     padding-left: 2ch;
   }
 }
 
-/* line 269, ../src/smacss/_modules.scss */
+/* line 275, ../src/smacss/_modules.scss */
 .key-number {
   display: block;
   color: #64933a;
@@ -4704,24 +4687,24 @@ input:checked + .header-dropdown {
   line-height: 1.44638724607868;
 }
 @media screen and (min-width: 43em) {
-  /* line 269, ../src/smacss/_modules.scss */
+  /* line 275, ../src/smacss/_modules.scss */
   .key-number {
     font-size: 2.945rem;
     line-height: 1.27326358678352;
   }
 }
 
-/* line 286, ../src/smacss/_modules.scss */
+/* line 292, ../src/smacss/_modules.scss */
 .p-tel {
   white-space: nowrap;
 }
 
-/* line 290, ../src/smacss/_modules.scss */
+/* line 296, ../src/smacss/_modules.scss */
 .machine-text {
   font-family: Consolas, "Liberation Mono", Courier, "Courier New", monospace;
 }
 
-/* line 294, ../src/smacss/_modules.scss */
+/* line 300, ../src/smacss/_modules.scss */
 .main-content .content > p:last-child::after,
 .main-content .content > ul:last-child > li:last-child::after,
 .main-content .content > ol:last-child > li:last-child::after,
@@ -5281,7 +5264,7 @@ input:checked + .header-dropdown {
  * 
  * See: https://www.evergreen.edu/financialservices/tuition-2017-18
  */
-/* line 321, ../src/smacss/_modules.scss */
+/* line 327, ../src/smacss/_modules.scss */
 .fulltime-cutoff-row td {
   border-bottom-width: 3px;
   border-bottom-color: #919191;
@@ -6666,13 +6649,13 @@ p.alert,
 /**
  * N. Forms
  */
-/* line 357, ../src/smacss/_modules.scss */
+/* line 363, ../src/smacss/_modules.scss */
 .date-compound-select {
   display: -webkit-flex;
   display: flex;
 }
 
-/* line 361, ../src/smacss/_modules.scss */
+/* line 367, ../src/smacss/_modules.scss */
 .date-compound-select__month,
 .date-compound-select__day {
   margin-right: 1ch;
@@ -7789,12 +7772,12 @@ p.alert,
 /**
  * P. News
  */
-/* line 374, ../src/smacss/_modules.scss */
+/* line 380, ../src/smacss/_modules.scss */
 .news {
   overflow: hidden;
 }
 
-/* line 379, ../src/smacss/_modules.scss */
+/* line 385, ../src/smacss/_modules.scss */
 .news-story {
   border: 1px solid #d0cad4;
   height: calc(100% - 1em);
@@ -7811,13 +7794,13 @@ p.alert,
   border-radius: 2px;
 }
 
-/* line 396, ../src/smacss/_modules.scss */
+/* line 402, ../src/smacss/_modules.scss */
 .news-date {
   font-size: 0.875rem;
   line-height: 1.33928571428571;
 }
 
-/* line 400, ../src/smacss/_modules.scss */
+/* line 406, ../src/smacss/_modules.scss */
 .news-story footer {
   display: -webkit-flex;
   display: flex;
@@ -8160,14 +8143,14 @@ p.alert,
 /**
  * Lazy-load video by only embedding it after a static image is clicked.
  */
-/* line 422, ../src/smacss/_modules.scss */
+/* line 428, ../src/smacss/_modules.scss */
 .lazy-load {
   max-width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
-/* line 432, ../src/smacss/_modules.scss */
+/* line 438, ../src/smacss/_modules.scss */
 .lazy-load::after {
   height: 100%;
   width: 100%;
@@ -8183,24 +8166,24 @@ p.alert,
   background-image: url("/sites/all/themes/wwwevergreen/images/texture-1.png");
   content: url("/sites/all/themes/wwwevergreen/images/icons/green/play.png");
 }
-/* line 451, ../src/smacss/_modules.scss */
+/* line 457, ../src/smacss/_modules.scss */
 .lazy-load:hover::after {
   opacity: 0.85;
 }
-/* line 455, ../src/smacss/_modules.scss */
+/* line 461, ../src/smacss/_modules.scss */
 .lazy-load img {
   margin: 0;
   display: block;
 }
 
-/* line 463, ../src/smacss/_modules.scss */
+/* line 469, ../src/smacss/_modules.scss */
 .blog .entries {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
 
-/* line 471, ../src/smacss/_modules.scss */
+/* line 477, ../src/smacss/_modules.scss */
 .blog .entry {
   overflow: hidden;
 }
@@ -8211,30 +8194,30 @@ p.alert,
  * Styles the Drupal login widget. This might be moved or consolidated
  * with a general Drupal section later.
  */
-/* line 482, ../src/smacss/_modules.scss */
+/* line 488, ../src/smacss/_modules.scss */
 .form-required {
   color: inherit;
 }
 
-/* line 486, ../src/smacss/_modules.scss */
+/* line 492, ../src/smacss/_modules.scss */
 .item-list ul {
   margin: 0.535714285714286em 0 1.071428571428571em;
   margin-left: 1.07142857142857em;
 }
 @media screen and (min-width: 43em) {
-  /* line 486, ../src/smacss/_modules.scss */
+  /* line 492, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.66666666666667em;
   }
 }
 @media screen and (min-width: 125em) {
-  /* line 486, ../src/smacss/_modules.scss */
+  /* line 492, ../src/smacss/_modules.scss */
   .item-list ul {
     margin-left: 1.56014353320505em;
   }
 }
 
-/* line 499, ../src/smacss/_modules.scss */
+/* line 505, ../src/smacss/_modules.scss */
 #edit-actions--2 {
   float: none;
   position: static;
