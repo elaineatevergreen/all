@@ -3662,7 +3662,7 @@ input:checked + .header-dropdown {
 @supports (position: -webkit-sticky) {
   /* line 93, ../src/smacss/_modules.scss */
   .main-background2 {
-    z-index: 1;
+    z-index: -1;
   }
 }
 /**
