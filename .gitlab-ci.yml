@@ -1,11 +1,3 @@
-deploy_collab:
-  script:
-    - chmod uog+x bin/*
-    - sudo -EHu banner bin/ci_deploy_collab.sh
-  tags:
-    - collab
-  only:
-    - master
 deploy_www:
   stage: deploy
   script:
@@ -15,15 +7,7 @@ deploy_www:
     - www
   only:
     - master
-deploy_collabtest:
-  stage: deploy
-  script:
-    - chmod uog+x bin/*
-    - sudo -EHu banner bin/ci_deploy_collab.sh
-  tags:
-    - collabtest
-  only:
-    - test
+
 deploy_wwwtest:
   stage: deploy
   script:
@@ -33,15 +17,7 @@ deploy_wwwtest:
     - wwwtest
   only:
     - test
-deploy_collabdev:
-  stage: deploy
-  script:
-    - chmod uog+x bin/*
-    - sudo -EHu banner bin/ci_deploy_collab.sh
-  tags:
-    - collabdev
-  only:
-    - dev
+
 deploy_wwwdev:
   stage: deploy
   script:
