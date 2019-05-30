@@ -61,7 +61,7 @@
 			$destination = "/yourwaytotheworld";
 			$content_class = "";
 			$hero_alt = "Go beyond majors, classes, and grades and experience your education the way you imagine. Learn more.";
-			$slogan_svg_wide = "your-way-to-the-world/slogan";
+			$slogan_svg_wide = "your-way-to-the-world/slogan--no-flourish";
 			$slogan_svg_mobile = "your-way-to-the-world/slogan--no-flourish";
 			$slogan_alt = "Your way to the world";
 			$call_to_action = "Learn More";
@@ -102,12 +102,13 @@
 							</div>
 						<?php }; //end check for graduation ?>
 						<h1 class="homepage-hero__slogan">
+							<!-- Use the picture element because Graduation still has mobile and wide versions. -->
 							<picture class="homepage-hero__picture">
 					  		<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg"/>
 								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 								<img alt="<?php print $hero_alt ?>" class="homepage-hero__fallback" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg" />
 							</picture>
-							<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
+							<!--<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>-->
 						</h1>
 						<?php 
 							/* the call-to-action shouldn't appear on Your Way to the World
