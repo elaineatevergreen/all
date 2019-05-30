@@ -93,10 +93,20 @@
 					</div>
 					<?php }; //end check for graduation ?>
 					<div class="homepage-hero__copy">
-						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--top">
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
-						</div>
+						<?php 
+							/* the flourish shouldn't appear on the graduation page */
+							if($field_home_page_version != 'graduation') { 
+							?>
+							<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--top">
+								<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
+							</div>
+						<?php }; //end check for graduation ?>
 						<h1 class="homepage-hero__slogan">
+							<picture class="homepage-hero__picture">
+					  		<source media="(min-width: 43em)" srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg"/>
+								<source srcset="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
+								<img alt="<?php print $hero_alt ?>" class="homepage-hero__fallback" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_wide ?>.svg" />
+							</picture>
 							<img alt="<?php print $slogan_alt ?>" src="<?php print base_path() . path_to_theme() ?>/images/homepage/<?php print $slogan_svg_mobile ?>.svg"/>
 						</h1>
 						<?php 
@@ -105,9 +115,14 @@
 							*/?>
 							<div class="call-to-action"><?php print $call_to_action ?> →</div>
 						<?php /*}; //end check for call-to-action */?>
-						<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--bottom">
-							<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
-						</div>
+						<?php 
+							/* the flourish shouldn't appear on the graduation page */
+							if($field_home_page_version != 'graduation') { 
+							?>
+							<div class="homepage-hero__copy-flourish homepage-hero__copy-flourish--bottom">
+								<img alt="" src="/sites/all/themes/wwwevergreen/images/homepage/your-way-to-the-world/flourish.svg">
+							</div>
+						<?php }; //end check for graduation ?>
 					</div>
 				</div>
 			</a>
