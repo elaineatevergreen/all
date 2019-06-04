@@ -214,7 +214,8 @@
 	margin: 0;
 }
 
-.homepage-hero-content-grad .homepage-hero__copy img{
+.homepage-hero-content-grad .homepage-hero__copy img,
+.homepage-hero-content-grad .homepage-hero__copy picture{
 	max-height: calc(250 / 16 * 1rem);
 
 	@include breakpoint($gamora){
@@ -285,7 +286,8 @@
 	}
 }
 
-.homepage-hero__copy img{
+.homepage-hero__copy img,
+.homepage-hero__copy picture{
 	width: 100%;  // For SVG images, in particular
 }
 
