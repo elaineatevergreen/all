@@ -289,6 +289,8 @@
 .homepage-hero__copy img,
 .homepage-hero__copy picture{
 	width: 100%;  // For SVG images, in particular
+	// layout
+	display: inline;
 }
 
 /**
