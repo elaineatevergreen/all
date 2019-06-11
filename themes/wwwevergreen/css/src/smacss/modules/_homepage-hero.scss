@@ -286,7 +286,10 @@
 }
 
 .homepage-hero__copy img{
+	// box model
 	width: 100%;  // For SVG images, in particular
+	// layout
+	display: inline;
 }
 
 /**
