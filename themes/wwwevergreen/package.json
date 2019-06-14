@@ -32,8 +32,15 @@
     "grunt-sass-lint": "0.2.x",
     "postcss-reporter": "^6.0.1"
   },
-  "_comment": "Run “npm update” in the project directory to get the latest version of dependencies.",
   "dependencies": {
     "autoprefixer": "^9.6.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 0.2% in US",
+    "not ie 4-11",
+    "not ie_mob 11",
+    "not dead"
+  ],
+  "_comment": "Run “npm update” in the project directory to get the latest version of dependencies."
 }

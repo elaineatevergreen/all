@@ -120,13 +120,7 @@ module.exports = function(grunt) {
 		postcss: {
 	    options: {
 		    processors: [
-					require('autoprefixer')(  // add vendor prefixes
-						{
-							browsers: [
-								'> 0.2% in US',
-							]
-						}
-					),
+					require('autoprefixer')(),  // add vendor prefixes
 					
 					/**
 					 * postcss-reporter
