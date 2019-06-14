@@ -355,7 +355,7 @@ a,
 	font-weight: bold;
 	// decoration
 	text-decoration: underline mix($tint, $blueberry-susan, 75%);
-	text-decoration-skip: ink;
+	text-decoration-skip-ink: auto;
 	// movement
 	transition: color 0.2s, border-color 0.2s ease;
 }
