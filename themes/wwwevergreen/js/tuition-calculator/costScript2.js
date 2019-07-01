@@ -86,23 +86,23 @@ function createTable(costRate, cred) {
   myTable += '<thead><tr><th scope="col">&nbsp;</th><th scope="col">Per Quarter</th><th scope="col">Three Quarters (F-S)</th>';
   // if there is no value in summer tuition do not display summer costs.
   if (summerBool) {   myTable += '<th scope="col">Summer</th></tr></thead>';  }                                             else {    myTable += '</tr></thead>';  }
-  myTable += '<tr><th scope="row">Credits</th><td>'                 + tCredits + '</td><td>' + 3 * tCredits + '</td>';  
+  myTable += '<tr><th scope="row">Credits</th><td>'                 + tCredits + '</td><td>' + 3 * tCredits + '</td>';
   if (summerBool) {    myTable += '<td>'                + tSummerCredits + '</td></tr>';  }                     else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Tuition</th><td>'                 + format(tTuition, '$') + '</td><td>' + format(3 *      tTuition, '$') + '</td>';  
+  myTable += '<tr><th scope="row>Tuition</th><td>'                 + format(tTuition, '$') + '</td><td>' + format(3 *      tTuition, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTuition, '$') + '</td></tr>';  }        else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Health</th><td>'                  + format(tHealth, '$') + '</td><td>' + format(3 *       tHealth, '$') + '</td>';  
+  myTable += '<tr><th scope="row>Health</th><td>'                  + format(tHealth, '$') + '</td><td>' + format(3 *       tHealth, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerHealth, '$') + '</td></tr>';  }         else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Transit &amp; Shuttle</th><td>'   + format(tTransit, '$') + '</td><td>' + format(3 *      tTransit, '$') + '</td>';  
+  myTable += '<tr><th scope="row>Transit &amp; Shuttle</th><td>'   + format(tTransit, '$') + '</td><td>' + format(3 *      tTransit, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTransit, '$') + '</td></tr>';  }        else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Clean Energy</th><td>'            + format(tCleanEnergy, '$') + '</td><td>' + format(3 *  tCleanEnergy, '$') + '</td>';  
+  myTable += '<tr><th scope="row>Clean Energy</th><td>'            + format(tCleanEnergy, '$') + '</td><td>' + format(3 *  tCleanEnergy, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerCleanEnergy, '$') + '</td></tr>';  }    else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>CAB Fee</th><td>'                 + format(tCabFee, '$') + '</td><td>' + format(3 *       tCabFee, '$') + '</td>';  
+  myTable += '<tr><th scope="row>CAB Fee</th><td>'                 + format(tCabFee, '$') + '</td><td>' + format(3 *       tCabFee, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerCabFee, '$') + '</td></tr>';  }         else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>WashPIRG (optional)</th><td>'     + format(tWashPirg, '$') + '</td><td>' + format(3 *     tWashPirg, '$') + '</td>';  
+  myTable += '<tr><th scope="row>WashPIRG (optional)</th><td>'     + format(tWashPirg, '$') + '</td><td>' + format(3 *     tWashPirg, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerWashPirg, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>GSU (optional)</th><td>'          + format(tGSU, '$') + '</td><td>' + format(3 *          tGSU, '$') + '</td>';  
-  if (summerBool) {    myTable += '<td>'                + format(tSummerGSU, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  } 
-  myTable += '<tfoot><tr><th scope="row>Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';  
+  myTable += '<tr><th scope="row>GSU (optional)</th><td>'          + format(tGSU, '$') + '</td><td>' + format(3 *          tGSU, '$') + '</td>';
+  if (summerBool) {    myTable += '<td>'                + format(tSummerGSU, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  }
+  myTable += '<tfoot><tr><th scope="row>Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTotal, '$') + '</td></tr></tfoot>';  }  else {    myTable += '</tr></tfoot>';  }
   myTable += '</table>';
   document.getElementById('tuitionTable').innerHTML = myTable;  // prints myTable into the HTML in the div 'tuitionTable'
@@ -114,7 +114,7 @@ function createTable(costRate, cred) {
 jQuery(document).ready(function ($) {//Following string contains all of the html displayed on the page before the user does anything.
   document.getElementById('Tuition-Box').innerHTML = '<p>Tuition rates are updated annually. Rates are typically announced in June for the following academic year.</p><h2>Calculate Tuition &amp; Fees</h2><form action="" name="studentStatus"><p><label for="selCSV">Academic Year:</label>    '+
   '<select id="selCSV"><option value="-1" selected="selected">Please Select Option</option>'+
-  '<option value="1718AdjustedGradHealthFee.csv">2017-18</option><option value="CostSheet1819.csv">2018-19</option></select>'+
+  '<option value="CostSheet1920.csv">2019-20</option><option value="CostSheet1819_summer.csv">2018-19</option></select>'+
   '</p><p><label for="creditCount">Number of credits:</label> <select id="creditCount" id="changed">'+
   '<option value="-1">Please Choose Credits</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>   </p>'+
   '<p><label for="resident">Resident or Non-resident:</label> <select id="resident"><option value="-1" selected="selected">Please Select Option</option><option value="0">Resident</option><option value="1">Non-resident</option></select>   </p>'+
@@ -123,8 +123,8 @@ jQuery(document).ready(function ($) {//Following string contains all of the html
 });
 function clickFunction() {
   /* -------------------------------------csv read in to fields array. ----------------------------------------*/
-  
-  
+
+
   jQuery(document).ready(function ($) {
     var CSV = "test";
     if(CSV != document.getElementById('selCSV').options[document.getElementById('selCSV').selectedIndex].value ){
@@ -132,7 +132,7 @@ function clickFunction() {
         CSV = CSV.options[CSV.selectedIndex].value;
         CSV = "/sites/all/themes/wwwevergreen/js/tuition-calculator/" + CSV;
         //console.log(CSV);
-        //gets file name from selected csv 
+        //gets file name from selected csv
         $.ajax({
           type: 'GET',
           url: CSV,
