@@ -88,21 +88,21 @@ function createTable(costRate, cred) {
   if (summerBool) {   myTable += '<th scope="col">Summer</th></tr></thead>';  }                                             else {    myTable += '</tr></thead>';  }
   myTable += '<tr><th scope="row">Credits</th><td>'                 + tCredits + '</td><td>' + 3 * tCredits + '</td>';
   if (summerBool) {    myTable += '<td>'                + tSummerCredits + '</td></tr>';  }                     else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Tuition</th><td>'                 + format(tTuition, '$') + '</td><td>' + format(3 *      tTuition, '$') + '</td>';
+  myTable += '<tr><th scope="row">Tuition</th><td>'                 + format(tTuition, '$') + '</td><td>' + format(3 *      tTuition, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTuition, '$') + '</td></tr>';  }        else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Health</th><td>'                  + format(tHealth, '$') + '</td><td>' + format(3 *       tHealth, '$') + '</td>';
+  myTable += '<tr><th scope="row">Health</th><td>'                  + format(tHealth, '$') + '</td><td>' + format(3 *       tHealth, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerHealth, '$') + '</td></tr>';  }         else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Transit &amp; Shuttle</th><td>'   + format(tTransit, '$') + '</td><td>' + format(3 *      tTransit, '$') + '</td>';
+  myTable += '<tr><th scope="row">Transit &amp; Shuttle</th><td>'   + format(tTransit, '$') + '</td><td>' + format(3 *      tTransit, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTransit, '$') + '</td></tr>';  }        else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>Clean Energy</th><td>'            + format(tCleanEnergy, '$') + '</td><td>' + format(3 *  tCleanEnergy, '$') + '</td>';
+  myTable += '<tr><th scope="row">Clean Energy</th><td>'            + format(tCleanEnergy, '$') + '</td><td>' + format(3 *  tCleanEnergy, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerCleanEnergy, '$') + '</td></tr>';  }    else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>CAB Fee</th><td>'                 + format(tCabFee, '$') + '</td><td>' + format(3 *       tCabFee, '$') + '</td>';
+  myTable += '<tr><th scope="row">CAB Fee</th><td>'                 + format(tCabFee, '$') + '</td><td>' + format(3 *       tCabFee, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerCabFee, '$') + '</td></tr>';  }         else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>WashPIRG (optional)</th><td>'     + format(tWashPirg, '$') + '</td><td>' + format(3 *     tWashPirg, '$') + '</td>';
+  myTable += '<tr><th scope="row">WashPIRG (optional)</th><td>'     + format(tWashPirg, '$') + '</td><td>' + format(3 *     tWashPirg, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerWashPirg, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  }
-  myTable += '<tr><th scope="row>GSU (optional)</th><td>'          + format(tGSU, '$') + '</td><td>' + format(3 *          tGSU, '$') + '</td>';
+  myTable += '<tr><th scope="row">GSU (optional)</th><td>'          + format(tGSU, '$') + '</td><td>' + format(3 *          tGSU, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerGSU, '$') + '</td></tr>';  }       else {    myTable += '</tr>';  }
-  myTable += '<tfoot><tr><th scope="row>Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';
+  myTable += '<tfoot><tr><th scope="row">Total</th><td>'            + format(tTotal, '$') + '</td><td>' + format(3 *        tTotal, '$') + '</td>';
   if (summerBool) {    myTable += '<td>'                + format(tSummerTotal, '$') + '</td></tr></tfoot>';  }  else {    myTable += '</tr></tfoot>';  }
   myTable += '</table>';
   document.getElementById('tuitionTable').innerHTML = myTable;  // prints myTable into the HTML in the div 'tuitionTable'
