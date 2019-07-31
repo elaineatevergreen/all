@@ -348,14 +348,14 @@ a,
 .internal-users a:visited,
 .search-tools a:visited,
 .tertiary-nav-list a:visited{
-	//box model
+	// box model
 	//border-bottom: 1px solid mix($tint, $blueberry-susan, 75%);
-	//typography
+	// typography
 	color: $blueberry-susan;
 	font-weight: bold;
 	// decoration
 	text-decoration: underline mix($tint, $blueberry-susan, 75%);
-	text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto; // sass-lint:disable-line no-misspelled-properties
 	// movement
 	transition: color 0.2s, border-color 0.2s ease;
 }

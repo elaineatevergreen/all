@@ -12,7 +12,7 @@
 	@include margin-default;
 }
 
-.studies-list__field {
+.studies-list__field{
 	// box model
 	border-bottom-width: 0;
 	// typography
@@ -20,11 +20,11 @@
 	text-transform: uppercase;
 }
 
-.studies-list__see-also {
+.studies-list__see-also{
 	font-style: italic;
 }
 
-.studies-list__path {
+.studies-list__path{
 	// layout
 	align-items: center;
 	display: inline-flex;
@@ -32,86 +32,87 @@
 	transform: translateY(0.15em);
 }
 
-.studies-list__path-icon {
+.studies-list__path-icon{
+	height: 1.5em;
 	margin-top: -0.5em;
 	margin-right: 0.5ch;
-	height: 1.5em;
 	width: 1.5em;
 }
 
-.studies-list__path-icon--illustration {  // The path icon used for the "glossary" definition near the top of the Fields of Study page
+.studies-list__path-icon--illustration{  // The path icon used for the "glossary" definition near the top of the Fields of Study page
 	height: 3em;
 	width: 3em;
 }
 
-.program-grid__table {
-	// decoration
-	background-color: mix($tint, $blueberry-susan, 95%);
+.program-grid__table{
+	// box model
 	border-collapse: separate;
 	border-spacing: 1ch 1em;
+	// decoration
+	background-color: mix($tint, $blueberry-susan, 95%);
 	box-shadow: 0 0 0.66667ch mix($tint, $blueberry-susan, 80%) inset;
 }
 
-.program-grid__heading {
+.program-grid__heading{
 	padding-right: 1ch;
 	padding-left: 1ch;
 	width: 33.33333%;
 }
 
-.program-grid__thgroup {
-	display: flex;
+.program-grid__thgroup{
 	align-items: center;
+	display: flex;
 }
 
-.program-grid__thgroup-icon {
+.program-grid__thgroup-icon{
 	height: 1em;
 	margin-right: 0.5ch;
 	width: 1em;
 }
 
-.program-grid__item {
+.program-grid__item{
 	// box model
 	border: 1px solid mix($tint, $shade, 80%);
 	padding-right: 1ch;
 	padding-left: 1ch;
 	// decoration
 	background-color: $tint;
-	
-	&:last-child {
+
+	&:last-child{
 		padding-right: 1ch;
 	}
 }
 
-.program-grid__item--continued {
-	// box model
-	border-left-style: dashed;
+.program-grid__item--continued{
+	// decoration
 	background-image: repeating-linear-gradient(125deg,
 		transparentize($tint, 1) 0,
 		transparentize($tint, 1) 24px,
 		mix($tint, $blueberry-susan, 95%) 25px,
 		mix($tint, $blueberry-susan, 92%) 50px
 	);
+	border-left-style: dashed;
 }
 
-.program-grid__item--continues {
+.program-grid__item--continues{
 	// box model
 	border-right-style: dashed;
 }
 
-tr:first-child > .program-grid__item {
+tr:first-child > .program-grid__item{
 	border-top-color: mix($tint, $shade, 80%);
 }
 
-.program-grid__item:empty {
+.program-grid__item:empty{
 	visibility: hidden;
 }
 
-.program-grid__item-contents {
+.program-grid__item-contents{
 	align-items: center;
 	display: flex;
 }
-	
-[colspan] > .program-grid__item-contents::after {
+
+[colspan] > .program-grid__item-contents::after{
 	// box-model
 	border-bottom: 2px dotted mix($tint, $shade, 75%);
 	height: 0;

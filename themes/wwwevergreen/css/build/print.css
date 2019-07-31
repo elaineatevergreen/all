@@ -166,14 +166,14 @@ body {
 
 /*a::after{
 	//typography
-	font-size: .657rem;
-	line-height: 1.427619682116684;  //15/10.507
-	    word-wrap: break-word;  //IE, Firefox
+	font-size: 0.657rem;
+	line-height: 1.427619682116684;  // 15 / 10.507
+	    word-wrap: break-word;  // IE, Firefox
 	overflow-wrap: break-word;
 	//misc
 	content: " (" attr(href) ")";
 }
-//Print internal URLs referencing the root with the root prefix.
+// Print internal URLs referencing the root with the root prefix.
 a[href^="/"]::after{
 	content: " (http://evergreen.edu" attr(href) ")";
 }*/
@@ -324,6 +324,11 @@ wrapper {
 .page-footer .location,
 .page-footer .tel {
   display: inline;
+}
+
+/* line 203, ../src/print.scss */
+.listing-header + .box {
+  display: none;
 }
 
 /**

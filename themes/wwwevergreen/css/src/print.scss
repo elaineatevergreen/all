@@ -38,23 +38,23 @@
  * @see http://smacss.com/book/type-base
  */
 body{
-	//box model
+	// box model
 	margin: 0 auto;
-	//layout
+	// layout
 	display: block;
 }
 
-//Print URLs after links
+// Print URLs after links
 /*a::after{
 	//typography
-	font-size: .657rem;
-	line-height: 1.427619682116684;  //15/10.507
-	    word-wrap: break-word;  //IE, Firefox
+	font-size: 0.657rem;
+	line-height: 1.427619682116684;  // 15 / 10.507
+	    word-wrap: break-word;  // IE, Firefox
 	overflow-wrap: break-word;
 	//misc
 	content: " (" attr(href) ")";
 }
-//Print internal URLs referencing the root with the root prefix.
+// Print internal URLs referencing the root with the root prefix.
 a[href^="/"]::after{
 	content: " (http://evergreen.edu" attr(href) ")";
 }*/
@@ -79,7 +79,7 @@ a[href^="/"]::after{
 body,
 [role=banner],
 wrapper{
-	background: transparent none;  //Don't waste ink
+	background: transparent none;  // Don’t waste ink
 }
 
 [role="banner"]{
@@ -106,23 +106,23 @@ wrapper{
 	margin: 0;
 	width: auto;
 	max-width: none;
-	// backgrounds and borders
+	// decoration
 	background: transparent none;
 }
 
 .primary-content-wrapper{
-	// backgrounds and borders
+	// decoration
 	border-color: $shade;
 }
 
 .page-footer{
-	//box model
+	// box model
 	border-top: 1px solid $shade;
 	margin: 0;
 	padding-bottom: 0;
-	//typography
+	// typography
 	color: $shade;
-	//backgrounds and borders
+	// decoration
 	background-color: transparent;
 }
 
@@ -163,11 +163,11 @@ wrapper{
 
 .hero,  //deprecated
 .supplement-alt-1-2{
-	//box model
+	// box model
 	margin-left: 2%;
 	width: auto;
 	max-width: 49%;
-	//layout
+	// layout
 	float: right;
 	position: static;
 	z-index: auto;
