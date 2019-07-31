@@ -199,6 +199,11 @@ wrapper{
 	display: inline;
 }
 
+// Do not show the “Save to List” call-to-action on catalog pages
+.listing-header + .box{
+	display: none;
+}
+
 /**
  * 4. State Styles
  *
