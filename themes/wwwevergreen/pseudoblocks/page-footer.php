@@ -7,7 +7,7 @@
 							</p>
 							<ul class="text-list">
 								<li>
-									<a href="https://evergreenstatecollege.hobsonsradius.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
+									<a href="https://evergreenstatecollege.radiusbycampusmgmt.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
 								</li>
 								<li>
 									<a href="https://www.evergreen.edu/admissions/graduate">Future graduate student</a>
