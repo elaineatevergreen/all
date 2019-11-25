@@ -74,9 +74,10 @@
 							</div>
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
-						<div>
-							<a href="https://evergreen.edu/directory">Phone &amp; Email Directories</a>
-						</div>
+						<p>
+							<a href="https://evergreen.edu/directory">Phone &amp; Email Directories</a><br />
+							<a href="https://evergreen.edu/news/media-information">Media Inquiries</a>
+						</p>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
 				<div class="do-not-print page-footer__placeholder unit-1-5">
