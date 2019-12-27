@@ -48,7 +48,7 @@ function createTable(costRate, cred) {
     tuitionType += 'Non-Resident Graduate ';
   }
 
-  var summerOffset = 27;// Summer values start at line 23
+  var summerOffset = 23;// Summer values start at line 23
   var summerBool = true;
   if (parseFloat(fullData[cred+summerOffset][costRate + 5]) <= 1) {// if summer total cost is less than 1 do not display
     summerBool = false;
