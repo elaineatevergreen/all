@@ -179,7 +179,7 @@ function clickFunction() {
           // 18 because of the +2 offset, in the case graduates become able to take 16+ credits comment out this if statement and move the else information outside of the if.
           document.getElementById('tuitionTable').innerHTML = '<p>Graduates may only take up to 16 credits.</p>' + document.getElementById('tuitionTable').innerHTML;  // append message to beginning of table
         } else {
-          createTable(costRow, selectionCr + 3);  //Create a table with the value of credits selected (+2 for the offset)
+          createTable(costRow, selectionCr + 2);  //Create a table with the value of credits selected (+2 for the offset)
         }
       } else {
         document.getElementById('tuitionTable').innerHTML = '<p>Please make sure all fields are selected.</p>';
