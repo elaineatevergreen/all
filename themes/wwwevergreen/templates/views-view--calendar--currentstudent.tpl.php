@@ -30,7 +30,7 @@
 <!--Upcoming Events-->
 <section class="row upcoming-events">
 	<div class="upcoming-events-homepage wrapper-restrained">
-		<h2>Don’t Miss These</h2>
+		<h2>Upcoming Events</h2>
 		<div class="grid">
 			<div class="unit-1-1">
 				<div class="upcoming-events-list-wrapper">
