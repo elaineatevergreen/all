@@ -49,7 +49,7 @@
 	<div class="box supplement"><p>
 	<?php
 			//switch out language depending on whether scholarship is fully funded.
-			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "This scholarship is not yet fully funded."; } 
+			if(strstr(render($content['field_funding_status']),'Not yet funded')) {  print "You can help grow this scholarship."; } 
 			elseif(strstr(render($content['field_funding_status']),'Seeking donors')) { print "Keep this scholarship funded for future generations."; };
 	?>
 	</p><p><a href="<?php print $donationURL; ?>">Please donate today.</a></p></div>
