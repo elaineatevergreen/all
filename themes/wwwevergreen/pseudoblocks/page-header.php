@@ -15,7 +15,7 @@
 	<div class="top-search">
 		<input id="search-flag" name="header-toggle" type="checkbox"/> 
 		<div class="header-dropdown">
-			<form action="https://www.evergreen.edu/search" class="search" method="get" role="search">
+			<form action="/search" class="search" method="get" role="search">
 				<label for="q">Search</label> 
 				<input id="q" name="search" placeholder="Search" type="search"/>
 				<button class="search-button">
@@ -44,7 +44,7 @@
 </div>
 <div class="page-header">
 	<div class="logo h-card" itemscope itemtype="https://schema.org/School">
-		<a class="u-url" href="https://evergreen.edu" itemprop="url">
+		<a class="u-url" href="https://www.evergreen.edu" itemprop="url">
 			<picture>
 				<source media="(min-width: 125em)" srcset="<?php echo($imagepath) ?>evergreen-logo-primary.svg" type="image/svg+xml"/>
 				<img alt="The Evergreen State College&#8212;Olympia, Washington" class="p-name p-org u-logo" itemprop="logo" src="<?php echo($imagepath) ?>logo.png" srcset="<?php echo($imagepath) ?>evergreen-logo-secondary.svg"/>
