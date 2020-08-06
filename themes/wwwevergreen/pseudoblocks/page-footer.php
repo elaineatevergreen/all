@@ -10,7 +10,7 @@
 									<a href="https://evergreenstatecollege.radiusbycampusmgmt.com/ssc/iform/C68670N68670x6700kEB00l.ssc">Future undergraduate student</a>
 								</li>
 								<li>
-									<a href="https://www.evergreen.edu/admissions/graduate">Future graduate student</a>
+									<a href="/admissions/graduate">Future graduate student</a>
 								</li>
 							</ul>
 						</li>
@@ -48,7 +48,7 @@
 							<a href="https://evergreen.peopleadmin.com">Jobs at Evergreen</a>
 						</li>
 						<li>
-							<a href="https://evergreen.edu/tour">Tours and Maps</a>
+							<a href="/tour">Tours and Maps</a>
 						</li>
 					</ul>
 				</div><!-- /.do-not-print.unit-1-5 -->
@@ -57,7 +57,7 @@
 				</div>
 				<div class="page-footer__unit page-footer__unit--central unit-1-5">
 					<p class="footer-map">
-						<a href="https://evergreen.edu/tour">
+						<a href="/tour">
 							<img alt="Visit us in beautiful Olympia, Washington" src="<?php echo($imagepath) ?>map-topo-vector.png"/>
 						</a><!--<br/>
 						<small>
@@ -75,8 +75,8 @@
 						</div><!-- /.adr -->
 						<div class="tel">(360)&nbsp;867-6000</div>
 						<p>
-							<a href="https://evergreen.edu/directory">Phone &amp; Email Directories</a><br />
-							<a href="https://evergreen.edu/news/media-information">Media Inquiries</a>
+							<a href="/directory">Phone &amp; Email Directories</a><br />
+							<a href="/news/media-information">Media Inquiries</a>
 						</p>
 					</div><!-- /.vcard -->
 				</div><!-- /.unit-1-5 -->
@@ -87,7 +87,7 @@
 					<ul class="element-list text-list-alt">
 						<li class="do-not-print">
 							<p>
-								<a href="https://evergreen.edu/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
+								<a href="/news/weatherdelays">Emergency Information</a> <small class="small">(Includes alerts about delays and closures.)</small>
 							</p>
 						</li>
 						<li class="do-not-print">
@@ -97,7 +97,7 @@
 						</li>
 						<li class="do-not-print">
 							<p>
-								<a href="https://evergreen.edu/about/privacy">Privacy Policy</a>
+								<a href="/about/privacy">Privacy Policy</a>
 							</p>
 						</li>
 						<li class="do-not-print">
@@ -112,7 +112,7 @@
 						</li>
 						<li class="do-not-print">
 							<p>
-								<a href="https://www.evergreen.edu/titleix">Title IX</a>
+								<a href="/titleix">Title IX</a>
 							</p>
 						</li>
 						
